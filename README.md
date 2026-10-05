@@ -11,7 +11,7 @@ npm run dev
 ```
 
 Renseignez `DASHBOARD_PASSWORD` dans `.env.local`.
-
+ 
 - Site: http://localhost:3000
 - Demandes: http://localhost:3000/dashboard
 - Carte de mots-clés: http://localhost:3000/dashboard/strategie
