@@ -131,6 +131,7 @@ function seed(db: DatabaseSync) {
       ["Design", "design graphique Casablanca", "commercial", "/services/design-graphique", "principal", 1, "publie", ""],
       ["Design", "identité visuelle entreprise Maroc", "commercial", "/services/design-graphique", "variante", 2, "a_creer", ""],
       ["API", "développement API sur mesure", "commercial", "/services/api-backend", "principal", 1, "publie", ""],
+      ["WordPress", "développement plugin WordPress Maroc", "commercial", "/services/plugins-wordpress", "principal", 1, "publie", ""],
     ];
     for (const row of rows) insert.run(...row, now);
   }

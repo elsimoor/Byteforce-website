@@ -5,7 +5,7 @@ import { services } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Offres",
   description:
-    "Création de sites, applications mobiles, logiciels sur mesure, SEO, hébergement, design, API et maintenance à Casablanca.",
+    "Création de sites, applications, logiciels, plugins WordPress, SEO, hébergement, design, API et maintenance à Casablanca.",
   alternates: { canonical: "/services" },
 };
 

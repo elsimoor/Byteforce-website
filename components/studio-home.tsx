@@ -452,6 +452,29 @@ export function StudioHome() {
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">For a product already in production</div>
             </div>
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">09</span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">extension</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">WordPress plugins</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  A plugin written for the WordPress site you already have, when a marketplace extension does not do the job.
+                </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>A read of the current site and its plugins</li>
+                  <li>Custom PHP, including WooCommerce when the site uses it</li>
+                  <li>Settings the team can change without editing code</li>
+                </ul>
+                <a href="/services/plugins-wordpress" className="mt-4 inline-flex text-sm font-bold text-primary">
+                  See the offer
+                </a>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">For a WordPress site that needs a specific function</div>
+            </div>
           </div>
           <a
             href="/contact"
@@ -741,7 +764,7 @@ export function StudioHome() {
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>WordPress</span>
                 <span className="text-[11px] font-mono text-outline">
-                  Sites
+                  Plugins
                 </span>
               </li>
             </ul>

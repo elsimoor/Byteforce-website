@@ -11,6 +11,7 @@ const offers = [
   { href: "/services/logiciel-sur-mesure", label: "Logiciel sur mesure" },
   { href: "/services/creation-site-web", label: "Site web" },
   { href: "/services/applications-mobiles", label: "Application mobile" },
+  { href: "/services/plugins-wordpress", label: "Plugin WordPress" },
   { href: "/services/audit-correction", label: "Audit d'un produit déjà écrit" },
 ];
 

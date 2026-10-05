@@ -183,6 +183,24 @@ export const services: Service[] = [
     audience: "Équipes qui ont déjà un produit ou un site, et un problème précis.",
     primaryKeyword: "audit site web Casablanca",
   },
+  {
+    slug: "plugins-wordpress",
+    title: "Plugins WordPress",
+    menu: "Plugins",
+    summary:
+      "Plugins WordPress écrits pour le site qui existe déjà, quand une extension du marché ne fait pas le travail.",
+    problem:
+      "Une extension générique force le site à changer, ou casse à la mise à jour. Un plugin sur mesure ajoute seulement ce qui manque, sans remplacer WordPress.",
+    includes: [
+      "Lecture du site et des extensions déjà installées",
+      "Plugin PHP branché au thème, ou à WooCommerce si le site l'utilise",
+      "Réglages que l'équipe peut utiliser sans toucher au code",
+      "Correction après la mise en ligne",
+    ],
+    audience:
+      "Entreprises qui ont déjà un site WordPress et un besoin qu'aucune extension du marché ne couvre.",
+    primaryKeyword: "développement plugin WordPress Maroc",
+  },
 ];
 
 export const projects: Project[] = [
