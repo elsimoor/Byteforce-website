@@ -1,0 +1,56 @@
+import type { Metadata } from "next";
+import { JetBrains_Mono, Public_Sans } from "next/font/google";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { OrganizationJsonLd } from "@/components/json-ld";
+import { site } from "@/lib/site";
+import "./globals.css";
+
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+  variable: "--font-public-sans",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Byte Force · Sites, applications et logiciels à Casablanca",
+    template: "%s · Byte Force",
+  },
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "fr_MA",
+    siteName: site.name,
+    title: "Byte Force · Casablanca",
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${publicSans.variable} ${jetbrains.variable}`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans antialiased">
+        <OrganizationJsonLd />
+        <Header />
+        <div className="min-h-[calc(100vh-240px)] bg-surface pt-20">{children}</div>
+        <Footer />
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,34 @@
+import type { Metadata } from "next";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Mentions légales",
+  description: "Éditeur, contact et hébergement du site Byte Force.",
+  alternates: { canonical: "/mentions-legales" },
+};
+
+export default function LegalPage() {
+  return (
+    <main className="max-w-2xl px-6 py-16 md:px-12 md:py-24">
+      <h1 className="display text-6xl">Mentions légales</h1>
+      <div className="mt-8 space-y-4 leading-relaxed">
+        <p>
+          Le site présente Byte Force, société basée à {site.street}, {site.locality},{" "}
+          {site.postal} {site.city}, {site.countryLabel}.
+        </p>
+        <p>
+          Contact: {site.email}, {site.phoneDisplay}. Horaires: {site.hoursLabel}.
+        </p>
+        <p>
+          Les textes décrivent les offres et les réalisations publiées. Ils ne
+          constituent pas un devis. Un chiffre, un avis ou un client qui n&apos;est
+          pas sur la page n&apos;est pas affirmé.
+        </p>
+        <p>
+          Les demandes envoyées par le formulaire sont enregistrées pour pouvoir
+          y répondre. Elles ne sont pas affichées publiquement.
+        </p>
+      </div>
+    </main>
+  );
+}
