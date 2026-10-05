@@ -57,7 +57,7 @@ function mailtoUrl(draft: Draft, text: string) {
   return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 }
 
-export function LeadForm() {
+export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: string; country?: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const draftRef = useRef<Draft | null>(null);
 
@@ -75,7 +75,7 @@ export function LeadForm() {
     const draft = draftRef.current;
     if (!draft) return;
     const text = projectText(draft);
-    void recordLead(draft).catch(() => {
+    void recordLead({ ...draft, city, country, pageUrl: window.location.href }).catch(() => {
       // The message still opens in email or WhatsApp if the copy could not be stored.
     });
     const url = channel === "whatsapp" ? whatsappUrl(text) : mailtoUrl(draft, text);

@@ -168,7 +168,7 @@ export default async function CityPage({ params }: Props) {
           </p>
         </div>
         <div className="md:col-span-6 md:col-start-7">
-          <LeadForm />
+          <LeadForm city={city.city} country={city.country} />
         </div>
       </section>
     </main>

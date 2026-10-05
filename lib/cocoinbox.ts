@@ -5,32 +5,52 @@ type SiteLead = {
   company: string;
   service: string;
   message: string;
+  country: string;
+  city: string;
+  pageUrl: string;
 };
+
+function clip(value: string, max: number) {
+  return value.trim().slice(0, max);
+}
 
 export async function pushLeadToCocoinbox(input: SiteLead) {
   const base = process.env.COCOINBOX_API_URL?.replace(/\/$/, "");
   const tenant = process.env.COCOINBOX_TENANT_SLUG?.trim();
-  if (!base || !tenant || !input.email) return;
-  const message = [input.service ? `Offre: ${input.service}` : "", input.message].filter(Boolean).join("\n");
+  const token = process.env.COCOINBOX_WEBHOOK_TOKEN?.trim();
+  const email = clip(input.email, 160);
+  const country = clip(input.country, 80);
+  const city = clip(input.city, 80);
+  if (!base || !tenant || !token || !email.includes("@") || !country || !city) return;
+
+  const pageUrl = /^https?:\/\//i.test(input.pageUrl.trim())
+    ? clip(input.pageUrl, 500)
+    : "https://byteforce.ma/contact";
+
   try {
-    await fetch(`${base}/public/site-form`, {
+    const response = await fetch(`${base}/public/website`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "x-tenant-slug": tenant,
+        "x-website-token": token,
       },
       body: JSON.stringify({
-        name: input.name,
-        email: input.email,
-        phone: input.phone,
-        company: input.company,
-        message,
-        country: "Maroc",
-        city: "Casablanca",
-        pageUrl: "https://byteforce.ma/contact",
-        utmSource: "byteforce.ma",
+        name: clip(input.name, 120),
+        email,
+        phone: clip(input.phone, 40),
+        company: clip(input.company, 120),
+        service: clip(input.service, 80),
+        message: clip(input.message, 4000),
+        country,
+        city,
+        pageUrl,
       }),
+      cache: "no-store",
     });
+    if (!response.ok) {
+      console.error(`Cocoinbox lead rejected (${response.status})`);
+    }
   } catch {
     // The local copy is already stored. A CRM outage must not block the visitor.
   }

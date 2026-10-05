@@ -23,6 +23,9 @@ export async function recordLead(input: {
   budget: string;
   message: string;
   company_website: string;
+  country?: string;
+  city?: string;
+  pageUrl?: string;
 }) {
   if (input.company_website.trim()) return;
   const name = input.name.trim().slice(0, 120);
@@ -31,27 +34,25 @@ export async function recordLead(input: {
   if (!name || !email || !message || !email.includes("@")) return;
   const budget = input.budget.trim().slice(0, 80);
   const storedMessage = budget ? `Budget: ${budget}\n${message}` : message;
+  const phone = input.phone.trim().slice(0, 40);
+  const company = input.company.trim().slice(0, 120);
+  const service = input.service.trim().slice(0, 80);
   getDb()
     .prepare(
       `INSERT INTO leads (name, email, phone, company, service, message, created_at)
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
     )
-    .run(
-      name,
-      email,
-      input.phone.trim().slice(0, 40),
-      input.company.trim().slice(0, 120),
-      input.service.trim().slice(0, 80),
-      storedMessage,
-      new Date().toISOString(),
-    );
+    .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
   await pushLeadToCocoinbox({
     name,
     email,
-    phone: input.phone,
-    company: input.company,
-    service: input.service,
+    phone,
+    company,
+    service,
     message: storedMessage,
+    country: input.country?.trim() || "Maroc",
+    city: input.city?.trim() || "Casablanca",
+    pageUrl: input.pageUrl?.trim() || "https://byteforce.ma/contact",
   });
 }
 
@@ -76,7 +77,17 @@ export async function createLead(formData: FormData) {
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
     )
     .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
-  await pushLeadToCocoinbox({ name, email, phone, company, service, message: storedMessage });
+  await pushLeadToCocoinbox({
+    name,
+    email,
+    phone,
+    company,
+    service,
+    message: storedMessage,
+    country: "Maroc",
+    city: "Casablanca",
+    pageUrl: "https://byteforce.ma/contact",
+  });
   redirect("/contact?sent=1");
 }
 
