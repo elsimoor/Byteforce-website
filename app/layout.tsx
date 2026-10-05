@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Public_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { OrganizationJsonLd } from "@/components/json-ld";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const publicSans = Public_Sans({
-  subsets: ["latin"],
+const publicSans = localFont({
+  src: "../fonts/public-sans-latin.woff2",
   variable: "--font-public-sans",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: "300 900",
+  display: "swap",
 });
 
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
+const jetbrains = localFont({
+  src: "../fonts/jetbrains-mono-latin.woff2",
   variable: "--font-jetbrains",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: "400 800",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
