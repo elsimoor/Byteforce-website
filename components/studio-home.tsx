@@ -1,6 +1,21 @@
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
 
+const capabilities = [
+  { kicker: "Access", title: "Authentication and permissions", text: "Who can see and do what" },
+  { kicker: "Visibility", title: "Dashboards and analytics", text: "What is happening in the business" },
+  { kicker: "Customers", title: "CRM and customer management", text: "Accounts, pipelines, history" },
+  { kicker: "Revenue", title: "Payments and subscriptions", text: "Billing inside the product" },
+  { kicker: "Intelligence", title: "AI and automation", text: "Work removed from the team" },
+  { kicker: "Connections", title: "APIs and integrations", text: "The product talks to other systems" },
+  { kicker: "Messages", title: "Notifications", text: "Email, alerts, in-product messages" },
+  { kicker: "Files", title: "Documents", text: "Files attached to the work" },
+  { kicker: "Finding", title: "Search", text: "Find records, not folders" },
+  { kicker: "Operations", title: "Admin and back office", text: "The team’s side of the product" },
+  { kicker: "Running", title: "Cloud infrastructure", text: "Hosting, deploy, monitoring" },
+  { kicker: "Scale", title: "Multi-user and multi-company", text: "Teams and tenants in one product" },
+];
+
 export function StudioHome() {
   return (
     <div className="flex flex-col w-full text-on-surface">
@@ -575,139 +590,14 @@ export function StudioHome() {
               CAPABILITIES BUILT INTO THE SYSTEM
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                ACCESS
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Authentication &amp; permissions
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Who can see and do what
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                VISIBILITY
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Dashboards &amp; analytics
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                What is happening in the business
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                CUSTOMERS
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                CRM &amp; customer management
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Accounts, pipelines, history
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                REVENUE
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Payments &amp; subscriptions
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Billing inside the product
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                INTELLIGENCE
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                AI &amp; intelligent automation
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Work removed from the team
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                CONNECTIONS
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                APIs &amp; integrations
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                The product talks to other systems
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                MESSAGES
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Notifications &amp; communication
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Email, alerts, in-product messages
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                FILES
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                File &amp; document management
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Documents attached to the work
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                FINDING
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Search &amp; data systems
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Find records, not folders
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                OPERATIONS
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Admin &amp; back-office platforms
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                The team’s side of the product
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                RUNNING
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Cloud infrastructure
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Hosting, deploy, monitoring
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                SCALE
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Multi-user &amp; multi-company
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Teams and tenants in one product
-              </span>
-            </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((item) => (
+              <div key={item.title} className="rounded-xl bg-surface-container-lowest p-6">
+                <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">{item.kicker}</p>
+                <h3 className="mt-2 font-headline text-xl font-bold leading-snug text-on-surface">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

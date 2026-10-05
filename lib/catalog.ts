@@ -56,21 +56,31 @@ export function categories() {
   });
 }
 
+export function placePhrase(city: string) {
+  if (city === "Nord") return "dans le Nord";
+  return `à ${city}`;
+}
+
 export function cities() {
   const seen = new Map<string, { city: string; country: string }>();
   for (const project of projects) {
     const slug = slugify(project.city);
     if (!seen.has(slug)) seen.set(slug, { city: project.city, country: project.country });
   }
-  return [...seen.entries()].map(([slug, place]) => ({
-    slug,
-    path: `/villes/${slug}`,
-    city: place.city,
-    country: place.country,
-    title: `Projets à ${place.city}`,
-    description: `Réalisations Byte Force à ${place.city}, ${place.country}.`,
-    projects: projects.filter((project) => slugify(project.city) === slug),
-  }));
+  return [...seen.entries()].map(([slug, place]) => {
+    const placeLabel = placePhrase(place.city);
+    const cityProjects = projects.filter((project) => slugify(project.city) === slug);
+    return {
+      slug,
+      path: `/villes/${slug}`,
+      city: place.city,
+      country: place.country,
+      placeLabel,
+      title: `Développement logiciel ${placeLabel}`,
+      description: `Byte Force conçoit un logiciel, un site ou une application pour une entreprise ${placeLabel}, depuis Casablanca. Écrire pour lancer le projet.`,
+      projects: cityProjects,
+    };
+  });
 }
 
 export function getCategory(slug: string) {
