@@ -13,12 +13,12 @@ export function StudioHome() {
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-black tracking-tight leading-[1.05] text-on-surface">
-              We build software that moves businesses forward.
+              We build software for businesses that want to move faster.
             </h1>
             <p className="text-lg lg:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-              ByteForce is a software engineering studio building custom web
-              platforms, mobile applications, AI-powered products, and digital
-              systems for ambitious companies.
+              ByteForce designs and develops custom digital products, business
+              platforms, mobile apps, AI systems and software that solve real
+              operational problems.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
@@ -40,6 +40,9 @@ export function StudioHome() {
                 </span>
               </a>
             </div>
+            <p className="text-xs font-mono tracking-wider uppercase text-on-surface-variant">
+              Custom software · SaaS · AI · Mobile · Business platforms
+            </p>
           </div>
           {/* Right Column: Interactive Active Mesh Topology Card (Span 5) */}
           <div className="lg:col-span-5 w-full">
@@ -246,131 +249,385 @@ export function StudioHome() {
         <div className="mt-14 pt-8 grid grid-cols-2 md:grid-cols-4 gap-6 bg-surface-container-low p-6 rounded-xl">
           <div className="flex flex-col">
             <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
-              20+
+              Software
             </span>
             <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Projects Shipped
+              Custom business systems
             </span>
             <span className="text-xs text-on-surface-variant">
-              Live in production environments
+              Workflows, operations and data
             </span>
           </div>
           <div className="flex flex-col">
             <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
-              4+ Years
+              SaaS
             </span>
             <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Engineering Rigor
+              Multi-user products
             </span>
             <span className="text-xs text-on-surface-variant">
-              Continuous technical reliability
+              Dashboards, billing, permissions
             </span>
           </div>
           <div className="flex flex-col">
             <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
-              Global Reach
+              AI
             </span>
             <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Europe • US • MENA
+              Inside the product
             </span>
             <span className="text-xs text-on-surface-variant">
-              Multi-region distributed systems
+              Assistants, agents, automation
             </span>
           </div>
           <div className="flex flex-col">
             <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
-              Full-Stack
+              Platforms
             </span>
             <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Web • Mobile • AI
+              Portals and marketplaces
             </span>
             <span className="text-xs text-on-surface-variant">
-              Architected for hyper-scale
+              Customers, partners, internal teams
             </span>
           </div>
         </div>
       </section>
-      {/* 2. CLIENT & ENTERPRISE TRUST SECTION */}
-      <section className="w-full bg-surface-container py-16">
+      {/* 8. ABOUT BYTEFORCE & MOROCCO HUB */}
+      <section id="about" className="w-full bg-surface-container py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7 flex flex-col space-y-4">
               <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                PARTNERS &amp; ENTERPRISE ECOSYSTEM
+                THE STARTING POINT
               </span>
-              <h2 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface mt-1">
-                Trusted by teams building what comes next
+              <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight">
+                Your business is unique. Your software should be too.
               </h2>
+              <p className="text-base text-on-surface-variant leading-relaxed">
+                Off-the-shelf tools often force businesses to adapt their workflows around the software. ByteForce does the opposite. We build software around the way your business actually works.
+              </p>
+              <p className="text-base text-on-surface-variant leading-relaxed">
+                From internal tools and CRM systems to complete SaaS platforms and AI-powered products, we turn complex business requirements into simple, reliable software.
+              </p>
+              <div className="pt-4 flex items-center gap-6">
+                <div>
+                  <div className="text-lg font-bold text-on-surface">
+                    Casablanca
+                  </div>
+                  <div className="text-xs font-mono text-outline">
+                    HQ &amp; Engineering Lab
+                  </div>
+                </div>
+                <div className="h-8 w-px bg-outline-variant" />
+                <div>
+                  <div className="text-lg font-bold text-on-surface">
+                    GMT / UTC+1
+                  </div>
+                  <div className="text-xs font-mono text-outline">
+                    Seamless EU/US Cross-Overlap
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="text-xs font-mono text-on-surface-variant">
-              ENTERPRISE IMPLEMENTATIONS • STRATEGIC PARTNERSHIPS
+            {/* Right: Casablanca Tech Hub Card */}
+            <div className="lg:col-span-5 bg-surface-container-lowest p-6 rounded-xl shadow-md">
+              <div className="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+                <span className="text-xs font-mono font-bold text-on-surface">
+                  CASABLANCA TECH HUB
+                </span>
+                <span className="text-[11px] font-mono text-primary font-semibold">
+                  33.5731° N, 7.5898° W
+                </span>
+              </div>
+              <div className="py-4 space-y-3">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-on-surface-variant font-mono">
+                    Western Europe (CET)
+                  </span>
+                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                    ±1 hr overlap
+                  </span>
+                </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-on-surface-variant font-mono">
+                    United Kingdom (GMT)
+                  </span>
+                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                    Exact timezone match
+                  </span>
+                </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-on-surface-variant font-mono">
+                    US East Coast (EST)
+                  </span>
+                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                    4-5 hrs overlap
+                  </span>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-outline-variant/30 flex items-center justify-between text-xs font-mono text-outline">
+                <span>Bilingual delivery</span>
+                <span className="text-on-surface font-semibold">
+                  English • French • Arabic
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 4. SERVICES / CAPABILITIES (Engineering Matrix) */}
+      <section id="capabilities" className="w-full bg-surface-container py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="mb-14">
+            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+              WHAT WE BUILD
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
+              What we build
+            </h2>
+            <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
+              Products built around a company&apos;s workflows, operations and data.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                GLOBAL BRAND
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Jack Daniel's
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Enterprise Web • Campaign
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* 01 Product Strategy */}
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">
+                    01
+                  </span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">strategy</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                  Custom Business Software
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Platforms built around your company&apos;s workflows, operations and data.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+                Workflows • Operations • Data
+              </div>
+            </div>
+            {/* 02 UX / UI Design */}
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">
+                    02
+                  </span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">palette</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                  SaaS Platforms
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Multi-user products with subscriptions, dashboards, permissions, billing and scalable infrastructure.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+                Subscriptions • Dashboards • Billing
+              </div>
+            </div>
+            {/* 03 Web Applications */}
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">
+                    03
+                  </span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">terminal</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                  CRM &amp; Management Systems
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Custom CRM, customer management, sales pipelines, operations and internal administration.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+                Pipelines • Customers • Admin
+              </div>
+            </div>
+            {/* 04 Mobile Applications */}
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">
+                    04
+                  </span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">
+                      smartphone
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                  AI-Powered Software
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  AI assistants, agents, intelligent search, automation and AI features integrated directly into business products.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+                Assistants • Agents • Search
+              </div>
+            </div>
+            {/* 05 AI & Automation */}
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">
+                    05
+                  </span>
+                  <div className="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">smart_toy</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                  Web &amp; Mobile Applications
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Modern applications designed for customers, employees, partners or internal teams.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+                Customers • Teams • Partners
+              </div>
+            </div>
+            {/* 06 Infrastructure & DevOps */}
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">
+                    06
+                  </span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">
+                      cloud_sync
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
+                  Digital Platforms &amp; Portals
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Marketplaces, customer portals, booking platforms, directories and complex multi-sided systems.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+                Portals • Marketplaces • Booking
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 6. METHODOLOGY (5-Step Engineering System) */}
+      <section className="w-full bg-surface-container py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="mb-14">
+            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+              HOW SOFTWARE STARTS
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
+              From business problem to working software.
+            </h2>
+            <p className="text-on-surface-variant text-base mt-2 max-w-xl">
+              Every project starts with a problem, not a technology.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {/* Step 1 */}
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
+              <div>
+                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                  01
+                </span>
+                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
+                  Understand
+                </h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed">
+                  We understand your business, users, workflows and constraints.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
+                BUSINESS • USERS
               </span>
             </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                AUTOMOTIVE
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Smeia
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                BMW / Mini Importer Portal
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                INDUSTRY
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                OCP Group
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Industrial Process Digitals
+            {/* Step 2 */}
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
+              <div>
+                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                  02
+                </span>
+                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
+                  Design
+                </h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed">
+                  We turn the requirements into a clear product experience and technical architecture.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
+                PRODUCT • ARCHITECTURE
               </span>
             </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                FMCG
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                Les Eaux Minérales d'Oulmès
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Commercial Fleet Platform
-              </span>
-            </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                EDUCATION &amp; RESEARCH
-              </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                UM6P
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                Polytechnic Research Apps
+            {/* Step 3 */}
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
+              <div>
+                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                  03
+                </span>
+                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
+                  Build
+                </h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed">
+                  We engineer the application, backend, database, integrations and infrastructure.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
+                APPLICATION • DATA
               </span>
             </div>
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
-              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
-                COMMERCIAL
+            {/* Step 4 */}
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
+              <div>
+                <span className="text-2xl font-mono font-black text-primary block mb-3">
+                  04
+                </span>
+                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
+                  Launch
+                </h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed">
+                  We deploy the software into a real production environment.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono text-primary font-bold uppercase tracking-wider">
+                PRODUCTION
               </span>
-              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
-                MyCig Group
-              </span>
-              <span className="text-[11px] text-on-surface-variant">
-                High-Volume Retail &amp; POS
+            </div>
+            {/* Step 5 */}
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
+              <div>
+                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                  05
+                </span>
+                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
+                  Improve
+                </h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed">
+                  We continue improving the product as your business grows.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
+                AFTER LAUNCH
               </span>
             </div>
           </div>
@@ -383,14 +640,13 @@ export function StudioHome() {
       >
         <div className="mb-14">
           <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-            CASE STUDIES / PRODUCTION RUNS
+            SELECTED SOFTWARE
           </span>
           <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
-            Selected work.
+            Software we&apos;ve built.
           </h2>
           <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-xl">
-            Software built around real business problems, high availability, and
-            deliberate user craft.
+            Real products. Real systems. Real businesses.
           </p>
         </div>
         <div className="space-y-16">
@@ -471,38 +727,44 @@ export function StudioHome() {
               {/* Description (Span 5) */}
               <div className="lg:col-span-5 flex flex-col space-y-4">
                 <span className="text-xs font-mono font-bold tracking-wider text-primary uppercase">
-                  SECURE COMMUNICATION &amp; CRM
+                  COMMUNICATION PLATFORM &amp; CRM
                 </span>
                 <h3 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface">
                   Cocoinbox <span className="text-primary">→</span>
                 </h3>
                 <p className="text-sm lg:text-base text-on-surface-variant leading-relaxed">
-                  High-throughput encrypted communication infrastructure and
-                  bespoke CRM designed for real-time customer workflows,
-                  compliant regulatory compliance, and mission-critical
-                  reliability.
+                  A secure business communication platform combining email, CRM,
+                  AI assistance, files and automation.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Next.js
+                    Inbox
                   </span>
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Node.js
+                    CRM
                   </span>
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    WebSockets
+                    AI summaries
                   </span>
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    PostgreSQL
+                    Email
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Contacts
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Files
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Automation
                   </span>
                 </div>
                 <div className="p-4 rounded-lg bg-primary-fixed/40 mt-2">
                   <span className="text-xs font-mono uppercase tracking-wider text-primary font-bold block mb-1">
-                    MEASURABLE IMPACT
+                    IN THE PRODUCT
                   </span>
                   <p className="text-sm font-bold text-on-primary-fixed">
-                    +340% daily active workflow volume • Zero recorded downtime
-                    during peak loads.
+                    Inbox, CRM, email, files and AI summaries in one workspace.
                   </p>
                 </div>
                 <a
@@ -523,37 +785,41 @@ export function StudioHome() {
               {/* Description (Span 5) */}
               <div className="lg:col-span-5 flex flex-col space-y-4 order-2 lg:order-1">
                 <span className="text-xs font-mono font-bold tracking-wider text-primary uppercase">
-                  ORTHODONTIC MANAGEMENT &amp; CLINICAL WORKFLOW
+                  ORTHODONTIC MANAGEMENT PLATFORM
                 </span>
                 <h3 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface">
                   YourSmile <span className="text-primary">→</span>
                 </h3>
                 <p className="text-sm lg:text-base text-on-surface-variant leading-relaxed">
-                  End-to-end clinical management portal, interactive 3D dental
-                  scan pipeline, and patient treatment tracking system for
-                  multi-clinic dental networks across Europe and North Africa.
+                  A complete digital system connecting orthodontic workflows,
+                  patients, practitioners and business operations.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    React
+                    Patient management
                   </span>
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    TypeScript
+                    Treatment workflows
                   </span>
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Three.js
+                    Clinical data
                   </span>
                   <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Cloudflare
+                    STL / 3D
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Communication
+                  </span>
+                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Administration
                   </span>
                 </div>
                 <div className="p-4 rounded-lg bg-tertiary-fixed/40 mt-2">
                   <span className="text-xs font-mono uppercase tracking-wider text-tertiary font-bold block mb-1">
-                    CLINICAL EFFICIENCY
+                    IN THE PRODUCT
                   </span>
                   <p className="text-sm font-bold text-on-tertiary-fixed">
-                    62% reduction in patient onboarding time • Sub-second 3D
-                    viewport rendering.
+                    Patients, treatment plans, clinical files and the practice in one system.
                   </p>
                 </div>
                 <a
@@ -635,7 +901,7 @@ export function StudioHome() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono font-bold tracking-widest text-inverse-primary uppercase">
-                    LOCAL DISCOVERY PLATFORM &amp; AI
+                    AI-POWERED LOCAL DISCOVERY
                   </span>
                   <span className="text-[10px] font-mono text-inverse-on-surface/60 uppercase">
                     CASABLANCA HQ
@@ -645,28 +911,33 @@ export function StudioHome() {
                   ProcheDeMoi <span className="text-inverse-primary">→</span>
                 </h3>
                 <p className="text-sm text-inverse-on-surface/80 leading-relaxed mb-6">
-                  Hyperlocal geospatial discovery engine powered by automated
-                  structured data ingestion and AI recommendation agents for
-                  urban commercial districts.
+                  A digital platform connecting users with local businesses
+                  through search, structured business data, maps and AI.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    React Native
+                    Search
                   </span>
                   <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    Next.js
+                    AI
                   </span>
                   <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    AI / LLM APIs
+                    Maps
                   </span>
                   <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    MongoDB
+                    Business profiles
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
+                    Categories
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
+                    Structured data
                   </span>
                 </div>
               </div>
               <div className="pt-4 border-t border-inverse-on-surface/10 flex items-center justify-between">
                 <span className="text-xs font-mono text-inverse-primary font-semibold">
-                  180K+ monthly active users across Morocco
+                  Search, maps and business profiles in one platform
                 </span>
                 <span className="material-symbols-outlined text-inverse-primary">
                   arrow_forward
@@ -678,39 +949,44 @@ export function StudioHome() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                    INTELLIGENT ENTERPRISE WORKFLOWS
+                    BUSINESS MANAGEMENT &amp; AUTOMATION
                   </span>
                   <span className="text-[10px] font-mono text-outline uppercase">
-                    SAAS PRODUCT
+                    CRM
                   </span>
                 </div>
                 <h3 className="text-2xl font-headline font-bold text-on-surface mb-3">
-                  Enterprise AI Orchestrator{" "}
+                  Custom CRM{" "}
                   <span className="text-primary">→</span>
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
-                  Intelligent CRM marrying human agent productivity with LLM
-                  orchestrated task dispatch, automated lead qualification, and
-                  automated multilingual knowledge base routing.
+                  A modern CRM where businesses can combine human employees with
+                  AI-powered workflows.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Python
+                    CRM
                   </span>
                   <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Next.js
+                    AI agents
                   </span>
                   <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    OpenAI APIs
+                    Workflow builder
                   </span>
                   <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    PostgreSQL
+                    Automation
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Leads
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
+                    Analytics
                   </span>
                 </div>
               </div>
               <div className="pt-4 bg-surface-container rounded-lg p-3 flex items-center justify-between">
                 <span className="text-xs font-mono text-primary font-bold">
-                  4.5x faster lead turnaround time
+                  People and AI agents working in the same CRM
                 </span>
                 <span className="material-symbols-outlined text-primary text-sm">
                   trending_up
@@ -720,19 +996,401 @@ export function StudioHome() {
           </div>
         </div>
       </section>
-      {/* 4. SERVICES / CAPABILITIES (Engineering Matrix) */}
-      <section id="capabilities" className="w-full bg-surface-container py-20 lg:py-28">
+      {/* 2. CLIENT & ENTERPRISE TRUST SECTION */}
+      <section className="w-full bg-surface-container py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+                INSIDE THE PRODUCT
+              </span>
+              <h2 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface mt-1">
+                Everything your software needs.
+              </h2>
+            </div>
+            <p className="text-xs font-mono text-on-surface-variant">
+              CAPABILITIES BUILT INTO THE SYSTEM
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                ACCESS
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Authentication &amp; permissions
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Who can see and do what
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                VISIBILITY
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Dashboards &amp; analytics
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                What is happening in the business
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                CUSTOMERS
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                CRM &amp; customer management
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Accounts, pipelines, history
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                REVENUE
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Payments &amp; subscriptions
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Billing inside the product
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                INTELLIGENCE
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                AI &amp; intelligent automation
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Work removed from the team
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                CONNECTIONS
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                APIs &amp; integrations
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                The product talks to other systems
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                MESSAGES
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Notifications &amp; communication
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Email, alerts, in-product messages
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                FILES
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                File &amp; document management
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Documents attached to the work
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                FINDING
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Search &amp; data systems
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Find records, not folders
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                OPERATIONS
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Admin &amp; back-office platforms
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                The team’s side of the product
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                RUNNING
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Cloud infrastructure
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Hosting, deploy, monitoring
+              </span>
+            </div>
+            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-28 shadow-sm hover:shadow-md transition-shadow group">
+              <span className="text-[10px] font-mono text-outline tracking-wider uppercase">
+                SCALE
+              </span>
+              <span className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">
+                Multi-user &amp; multi-company
+              </span>
+              <span className="text-[11px] text-on-surface-variant">
+                Teams and tenants in one product
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 9. INSIGHTS / THOUGHT LEADERSHIP */}
+      <section id="insights" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+              AI &amp; AUTOMATION
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
+              Make your software work harder.
+            </h2>
+            <p className="text-on-surface-variant text-base mt-2 max-w-2xl">
+              AI shouldn&apos;t be a feature added for the sake of AI. It should remove work, improve decisions and make your product more useful.
+            </p>
+          </div>
+          <a
+            className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
+            href="/contact"
+          >
+            <span>Build an AI-powered product</span>
+            <span className="material-symbols-outlined text-sm">
+              arrow_forward
+            </span>
+          </a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Article 1 */}
+          <a
+            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
+            href="/contact"
+          >
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
+                <span>IN THE PRODUCT</span>
+                <span>ASSIST</span>
+              </div>
+              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+                Assistants and agents
+              </h3>
+              <p className="text-xs text-on-surface-variant leading-relaxed">
+                AI assistants, AI agents and internal copilots inside the software people already use.
+              </p>
+            </div>
+            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
+              <span>Start a project</span>
+              <span className="material-symbols-outlined text-sm">
+                north_east
+              </span>
+            </div>
+          </a>
+          {/* Article 2 */}
+          <a
+            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
+            href="/contact"
+          >
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
+                <span>IN THE PRODUCT</span>
+                <span>CUSTOMERS</span>
+              </div>
+              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+                Customer work
+              </h3>
+              <p className="text-xs text-on-surface-variant leading-relaxed">
+                Lead qualification, automated customer responses and workflow automation.
+              </p>
+            </div>
+            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
+              <span>Start a project</span>
+              <span className="material-symbols-outlined text-sm">
+                north_east
+              </span>
+            </div>
+          </a>
+          {/* Article 3 */}
+          <a
+            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
+            href="/contact"
+          >
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
+                <span>IN THE PRODUCT</span>
+                <span>INFORMATION</span>
+              </div>
+              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+                Information and documents
+              </h3>
+              <p className="text-xs text-on-surface-variant leading-relaxed">
+                Intelligent search, document processing, data analysis and content generation.
+              </p>
+            </div>
+            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
+              <span>Start a project</span>
+              <span className="material-symbols-outlined text-sm">
+                north_east
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+      {/* 5. FOUNDATIONAL STACK */}
+      <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div className="mb-14">
+          <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+            TECHNOLOGY
+          </span>
+          <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
+            The technology behind the product.
+          </h2>
+          <p className="text-on-surface-variant text-base mt-2 max-w-2xl">
+            We choose technology based on what the product needs — scalability, performance, security and maintainability come first.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Category 1 */}
+          <div className="bg-surface-container-low p-6 rounded-xl">
+            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+              Product interface
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Next.js</span>
+                <span className="text-[11px] font-mono text-outline">
+                  App shell
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>React</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Interface
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>TypeScript</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Product code
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>WordPress</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Sites
+                </span>
+              </li>
+            </ul>
+          </div>
+          {/* Category 2 */}
+          <div className="bg-surface-container-low p-6 rounded-xl">
+            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+              Application and data
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Node.js</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Server
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>GraphQL</span>
+                <span className="text-[11px] font-mono text-outline">
+                  API
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>PostgreSQL</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Records
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>MongoDB</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Documents
+                </span>
+              </li>
+            </ul>
+          </div>
+          {/* Category 3 */}
+          <div className="bg-surface-container-low p-6 rounded-xl">
+            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+              Delivery
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Redis</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Fast state
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Firebase</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Auth
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Cloudflare</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Delivery
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Vercel</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Deploy
+                </span>
+              </li>
+            </ul>
+          </div>
+          {/* Category 4 */}
+          <div className="bg-surface-container-low p-6 rounded-xl">
+            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+              Where it runs
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>OVHcloud</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Hosting
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>AI / LLM APIs</span>
+                <span className="text-[11px] font-mono text-outline">
+                  In the product
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      {/* ENGINEERING */}
+      <section id="engineering" className="w-full bg-surface-container py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-14">
             <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-              CAPABILITIES / ENGINEERING MATRIX
+              ENGINEERING
             </span>
             <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
-              From idea to production.
+              Built for production, not just the demo.
             </h2>
             <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
-              We act as your dedicated technical partner, embedding engineering
-              rigor and deliberate product intuition into every phase.
+              A beautiful interface is only one part of good software.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -748,15 +1406,14 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Product Strategy
+                  Architecture
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Turn business requirements into a clear product and technical
-                  roadmap with architecture blueprints and scoped deliverables.
+                  Design systems that can evolve with the business.
                 </p>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Roadmaps • Architecture Spec
+                Systems that can change
               </div>
             </div>
             {/* 02 UX / UI Design */}
@@ -771,15 +1428,14 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  UX / UI Design
+                  Backend
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Design interfaces that are simple, useful, and built around
-                  real user behavior with strict multi-device design systems.
+                  Reliable APIs, business logic and data processing.
                 </p>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Design Tokens • Micro-Interactions
+                APIs • Logic • Data
               </div>
             </div>
             {/* 03 Web Applications */}
@@ -794,16 +1450,14 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Web Applications
+                  Database
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Build scalable web platforms using modern full-stack
-                  technologies with sub-second page performance and zero drift
-                  state management.
+                  Structured data models designed for real-world usage.
                 </p>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Next.js • High Concurrency
+                Models • Records • Usage
               </div>
             </div>
             {/* 04 Mobile Applications */}
@@ -820,16 +1474,14 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Mobile Applications
+                  Infrastructure
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Create polished mobile experiences connected to reliable
-                  backend systems with offline sync, biometric security, and
-                  push telemetry.
+                  Cloud hosting, deployment, security and monitoring.
                 </p>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                iOS • Android • React Native
+                Hosting • Deploy • Monitoring
               </div>
             </div>
             {/* 05 AI & Automation */}
@@ -844,16 +1496,14 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  AI &amp; Automation
+                  Integrations
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Integrate AI agents, intelligent workflows, APIs, and
-                  automation into existing or new products to create tangible
-                  operational leverage.
+                  Payments, APIs, communication tools, analytics and external services.
                 </p>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                LLM Pipelines • Vector Search
+                Payments • APIs • Tools
               </div>
             </div>
             {/* 06 Infrastructure & DevOps */}
@@ -870,270 +1520,15 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Infrastructure &amp; DevOps
+                  Security
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Build reliable cloud infrastructure, automated deployment
-                  pipelines, and scalable fail-safe multi-region systems.
+                  Authentication, permissions and secure data handling.
                 </p>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                CI/CD • Edge • Observability
+                Access • Permissions • Data
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* 5. FOUNDATIONAL STACK */}
-      <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="mb-14">
-          <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-            FOUNDATIONAL STACK
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
-            Built with technology that lasts.
-          </h2>
-          <p className="text-on-surface-variant text-base mt-2 max-w-2xl">
-            A curated modern stack optimized for developer speed, security, and
-            enterprise durability.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Category 1 */}
-          <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
-              Frontend Engineering
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Next.js</span>
-                <span className="text-[11px] font-mono text-outline">
-                  SSR / RSC
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>React</span>
-                <span className="text-[11px] font-mono text-outline">
-                  v19 Core
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>TypeScript</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Strict Type
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Tailwind CSS</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Design Tokens
-                </span>
-              </li>
-            </ul>
-          </div>
-          {/* Category 2 */}
-          <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
-              Backend &amp; Database
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Node.js / Bun</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Microservices
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>GraphQL / REST</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Federation
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>PostgreSQL</span>
-                <span className="text-[11px] font-mono text-outline">
-                  ACID Storage
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>MongoDB / Redis</span>
-                <span className="text-[11px] font-mono text-outline">
-                  In-Memory Sync
-                </span>
-              </li>
-            </ul>
-          </div>
-          {/* Category 3 */}
-          <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
-              Cloud &amp; Infrastructure
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Cloudflare Edge</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Global Anycast
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Vercel Enterprise</span>
-                <span className="text-[11px] font-mono text-outline">
-                  CD/CI Fast
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>OVHcloud</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Bare Metal
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Docker &amp; K8s</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Containers
-                </span>
-              </li>
-            </ul>
-          </div>
-          {/* Category 4 */}
-          <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
-              Intelligence &amp; AI
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>AI / LLM APIs</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Anthropic/OpenAI
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Vector Stores</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Pinecone / pgvector
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Autonomous Workflows</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Agents
-                </span>
-              </li>
-              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
-                <span>Embeddings</span>
-                <span className="text-[11px] font-mono text-outline">
-                  Semantic Search
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      {/* 6. METHODOLOGY (5-Step Engineering System) */}
-      <section className="w-full bg-surface-container py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="mb-14">
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-              METHODOLOGY
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
-              5-Step Engineering System
-            </h2>
-            <p className="text-on-surface-variant text-base mt-2 max-w-xl">
-              Structured for predictable velocity and measurable software
-              quality without endless review loops.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {/* Step 1 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
-                  01
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Discover
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Understand business, users, existing codebases, and technical
-                  constraints thoroughly.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                ALIGNMENT • AUDIT
-              </span>
-            </div>
-            {/* Step 2 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
-                  02
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Define
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Turn complexity into a focused product strategy and clear
-                  architectural specification.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                SPEC • ARCHITECTURE
-              </span>
-            </div>
-            {/* Step 3 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
-                  03
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Design
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Create user flows, component libraries, and scalable design
-                  tokens matching brand goals.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                SYSTEMS • PROTOTYPES
-              </span>
-            </div>
-            {/* Step 4 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary block mb-3">
-                  04
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Build
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Engineer the product with quality, speed, automated test
-                  coverage, and high scalability.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-primary font-bold uppercase tracking-wider">
-                CONTINUOUS DEPLOY
-              </span>
-            </div>
-            {/* Step 5 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
-                  05
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Launch &amp; Evolve
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Deploy, monitor real telemetry, improve workflows, and
-                  iteratively continue building.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                OBSERVABILITY • SCALE
-              </span>
             </div>
           </div>
         </div>
@@ -1145,51 +1540,62 @@ export function StudioHome() {
           <div className="lg:col-span-6 flex flex-col justify-between space-y-8">
             <div>
               <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                OUR PHILOSOPHY
+                WHY BYTEFORCE
               </span>
               <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight mt-1">
-                Not just another development agency.
+                A software partner, not just a development team.
               </h2>
               <p className="text-on-surface-variant text-base mt-3 leading-relaxed">
-                We don't outsource to junior contractors. We operate as embedded
-                engineering partners with skin in the game.
+                The brief, the product and the system are handled together.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-lg bg-surface-container-low">
                 <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
-                  Business-First Engineering
+                  Business first
                 </h4>
                 <p className="text-xs text-on-surface-variant">
-                  We align every pull request with your company's revenue and
-                  operation metrics.
+                  We understand the business first.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
                 <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
-                  Senior Execution
+                  Product and technology
                 </h4>
                 <p className="text-xs text-on-surface-variant">
-                  Direct work with seasoned engineers who have shipped systems
-                  handling real scale.
+                  We design the product and the technology together.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
                 <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
-                  Built for the Long Term
+                  Actual workflows
                 </h4>
                 <p className="text-xs text-on-surface-variant">
-                  Clean codebases, zero technical debt shortcuts, and clear
-                  documentation.
+                  We build around your actual workflows.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
                 <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
-                  AI-Native Thinking
+                  Decision-makers
                 </h4>
                 <p className="text-xs text-on-surface-variant">
-                  Modern machine intelligence woven naturally into workflows and
-                  architectures.
+                  We work directly with decision-makers.
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-surface-container-low">
+                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                  Built to evolve
+                </h4>
+                <p className="text-xs text-on-surface-variant">
+                  We build software that can evolve with the company.
+                </p>
+              </div>
+              <div className="p-4 rounded-lg bg-surface-container-low">
+                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                  The outcome
+                </h4>
+                <p className="text-xs text-on-surface-variant">
+                  We stay focused on the outcome, not just the deliverables.
                 </p>
               </div>
             </div>
@@ -1199,247 +1605,98 @@ export function StudioHome() {
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
             <div>
               <span className="text-xs font-mono font-bold tracking-widest text-inverse-primary uppercase">
-                MEASURABLE TRACK RECORD
+                BUSINESS IMPACT
               </span>
               <h3 className="text-2xl font-headline font-bold text-white mt-1 mb-8">
-                Production metrics that speak for themselves.
+                Good software changes how a business works.
               </h3>
             </div>
             <div className="grid grid-cols-2 gap-8 my-auto">
               <div>
                 <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  20+
+                  Manual
                 </span>
                 <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Projects Delivered
+                  Automation
                 </p>
                 <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Cross-industry zero-drift deployments
+                  Manual work becomes a workflow
                 </p>
               </div>
               <div>
                 <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  4+
+                  Scattered
                 </span>
                 <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Years Building
+                  One system
                 </p>
                 <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Refined operational software standards
+                  Scattered data in one place
                 </p>
               </div>
               <div>
                 <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  30+
+                  Sheets
                 </span>
                 <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Websites in Prod
+                  Dashboards
                 </p>
                 <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  High-traffic active customer portals
+                  Spreadsheets become live numbers
                 </p>
               </div>
               <div>
                 <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  5+
+                  Many tools
                 </span>
                 <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Sites per Client
+                  One platform
                 </p>
                 <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Long-term ongoing client retention
+                  Multiple tools become one product
+                </p>
+              </div>
+              <div>
+                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
+                  Repeat
+                </span>
+                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
+                  AI agents
+                </p>
+                <p className="text-xs text-inverse-on-surface/70 mt-1">
+                  Repetitive tasks handed to agents
+                </p>
+              </div>
+              <div>
+                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
+                  Separate
+                </span>
+                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
+                  Integrated
+                </p>
+                <p className="text-xs text-inverse-on-surface/70 mt-1">
+                  Disconnected systems in one workflow
+                </p>
+              </div>
+              <div>
+                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
+                  Idea
+                </span>
+                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
+                  Product
+                </p>
+                <p className="text-xs text-inverse-on-surface/70 mt-1">
+                  A business idea becomes software in use
                 </p>
               </div>
             </div>
-            <div className="pt-6 mt-6 border-t border-inverse-on-surface/10 flex items-center justify-between text-xs font-mono text-inverse-on-surface/70">
-              <span>ZERO RECORDED CRITICAL LEAKS</span>
+            <div className="pt-6 mt-6 border-t border-inverse-on-surface/10 flex items-center justify-between gap-6 text-xs font-mono text-inverse-on-surface/70">
+              <span>We don&apos;t measure success by lines of code.</span>
               <span className="text-inverse-primary font-bold">
-                100% IP ASSIGNMENT
+                We measure it by what the software enables your business to do.
               </span>
             </div>
           </div>
-        </div>
-      </section>
-      {/* 8. ABOUT BYTEFORCE & MOROCCO HUB */}
-      <section id="about" className="w-full bg-surface-container py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7 flex flex-col space-y-4">
-              <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                ETHOS / IDENTITY
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight">
-                Engineering from Morocco. Building globally.
-              </h2>
-              <p className="text-base text-on-surface-variant leading-relaxed">
-                Founded in Morocco and partnering with high-growth businesses
-                internationally, ByteForce bridges world-class product
-                engineering talent with global delivery standards. Small enough
-                to care. Technical enough to build anything.
-              </p>
-              <div className="pt-4 flex items-center gap-6">
-                <div>
-                  <div className="text-lg font-bold text-on-surface">
-                    Casablanca
-                  </div>
-                  <div className="text-xs font-mono text-outline">
-                    HQ &amp; Engineering Lab
-                  </div>
-                </div>
-                <div className="h-8 w-px bg-outline-variant" />
-                <div>
-                  <div className="text-lg font-bold text-on-surface">
-                    GMT / UTC+1
-                  </div>
-                  <div className="text-xs font-mono text-outline">
-                    Seamless EU/US Cross-Overlap
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Right: Casablanca Tech Hub Card */}
-            <div className="lg:col-span-5 bg-surface-container-lowest p-6 rounded-xl shadow-md">
-              <div className="flex items-center justify-between pb-4 border-b border-outline-variant/30">
-                <span className="text-xs font-mono font-bold text-on-surface">
-                  CASABLANCA TECH HUB
-                </span>
-                <span className="text-[11px] font-mono text-primary font-semibold">
-                  33.5731° N, 7.5898° W
-                </span>
-              </div>
-              <div className="py-4 space-y-3">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-on-surface-variant font-mono">
-                    Western Europe (CET)
-                  </span>
-                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-                    ±1 hr overlap
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-on-surface-variant font-mono">
-                    United Kingdom (GMT)
-                  </span>
-                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-                    Exact timezone match
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-on-surface-variant font-mono">
-                    US East Coast (EST)
-                  </span>
-                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-                    4-5 hrs overlap
-                  </span>
-                </div>
-              </div>
-              <div className="pt-4 border-t border-outline-variant/30 flex items-center justify-between text-xs font-mono text-outline">
-                <span>Bilingual delivery</span>
-                <span className="text-on-surface font-semibold">
-                  English • French • Arabic
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* 9. INSIGHTS / THOUGHT LEADERSHIP */}
-      <section id="insights" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div>
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-              PUBLICATIONS
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
-              Thinking beyond the code.
-            </h2>
-          </div>
-          <a
-            className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
-            href="/#insights"
-          >
-            <span>Read all essays</span>
-            <span className="material-symbols-outlined text-sm">
-              arrow_forward
-            </span>
-          </a>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Article 1 */}
-          <a
-            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
-            href="#insights"
-          >
-            <div>
-              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
-                <span>2026 EDITION</span>
-                <span>5 MIN READ</span>
-              </div>
-              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
-                AI and the future of business software
-              </h3>
-              <p className="text-xs text-on-surface-variant leading-relaxed">
-                Why isolated generative prompts will give way to unified agentic
-                orchestration inside transactional systems.
-              </p>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Read essay</span>
-              <span className="material-symbols-outlined text-sm">
-                north_east
-              </span>
-            </div>
-          </a>
-          {/* Article 2 */}
-          <a
-            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
-            href="#insights"
-          >
-            <div>
-              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
-                <span>ARCHITECTURE</span>
-                <span>8 MIN READ</span>
-              </div>
-              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
-                How to build a scalable web platform
-              </h3>
-              <p className="text-xs text-on-surface-variant leading-relaxed">
-                A deep-dive technical blueprint for multi-tenant Postgres
-                partitioning, edge cache purging, and sub-10ms queries.
-              </p>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Read essay</span>
-              <span className="material-symbols-outlined text-sm">
-                north_east
-              </span>
-            </div>
-          </a>
-          {/* Article 3 */}
-          <a
-            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
-            href="#insights"
-          >
-            <div>
-              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
-                <span>SYSTEMS STRATEGY</span>
-                <span>6 MIN READ</span>
-              </div>
-              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
-                What businesses should automate in 2026
-              </h3>
-              <p className="text-xs text-on-surface-variant leading-relaxed">
-                Distinguishing high-leverage business automation from frivolous
-                tool sprawl with concrete case analysis.
-              </p>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Read essay</span>
-              <span className="material-symbols-outlined text-sm">
-                north_east
-              </span>
-            </div>
-          </a>
         </div>
       </section>
       {/* 10. FINAL CTA / CONVERSION SECTION */}
@@ -1454,11 +1711,10 @@ export function StudioHome() {
             START A PROJECT
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-black text-on-surface tracking-tight leading-tight max-w-2xl">
-            Have a complex problem? Let's build the right solution.
+            Have a business problem that software could solve?
           </h2>
           <p className="text-on-surface-variant text-base lg:text-lg mt-4 max-w-xl">
-            Tell us about your product roadmap, engineering bottleneck, or new
-            venture. We respond within 24 hours.
+            Tell us what you&apos;re trying to build, improve or automate. We&apos;ll help turn it into a real digital product.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
             <a
@@ -1472,19 +1728,18 @@ export function StudioHome() {
             </a>
             <a
               className="inline-flex items-center gap-2 px-6 py-4 rounded bg-surface text-on-surface text-base font-medium hover:bg-surface-container-highest transition-colors"
-              href="mailto:hello@byteforce.ma"
+              href="mailto:contact@byteforce.ma"
             >
               <span className="material-symbols-outlined text-base text-primary">
                 mail
               </span>
-              <span>hello@byteforce.ma</span>
+              <span>Talk to ByteForce</span>
             </a>
           </div>
           <div className="mt-12 flex items-center gap-3 text-xs font-mono text-outline">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
             <span>
-              ACCEPTING NEW CLIENTS FOR Q2 / Q3 2026 • CASABLANCA • GLOBAL
-              DELIVERY
+              Web · Mobile · SaaS · AI · Business Software
             </span>
           </div>
         </div>
