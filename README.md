@@ -17,3 +17,4 @@ Renseignez `DASHBOARD_PASSWORD` dans `.env.local`.
 - Carte de mots-clés: http://localhost:3000/dashboard/strategie
 
 La base est le fichier `data/byteforce.db`. Elle reste sur la machine qui exécute Node. Un hébergement serverless sans disque durable ne conserve pas les demandes.
+ 
