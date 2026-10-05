@@ -102,6 +102,19 @@ export default async function CityPage({ params }: Props) {
           </Link>
           .
         </p>
+        <nav aria-label="Villes" className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {cities().map((item) =>
+            item.slug === city.slug ? (
+              <span key={item.slug} className="border-b border-ink">
+                {item.city}
+              </span>
+            ) : (
+              <Link key={item.slug} href={item.path} className="text-mute hover:text-ink">
+                {item.city}
+              </Link>
+            ),
+          )}
+        </nav>
       </header>
 
       <section className="grid gap-12 border-t border-line px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
