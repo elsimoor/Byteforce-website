@@ -19,7 +19,7 @@ Here's the checklist from a client's point of view, in roughly the order they de
 - [ ] Client logos, if you have them
 - [ ] Reviews on external platforms (Google, Clutch, Upwork) as independent proof
 
-Case studies on the homepage are Coco Inbox, Re Proche de moi, Dealkhir and Tourispeak. Each has a screenshot of the live site, a case-study page, and a result stated as where and when it went online. No performance percentage was added, because none is on file.
+Case studies on the homepage are Coco Inbox, Proche de moi, Dealkhir and Tourispeak. Each has a screenshot of the live site, a case-study page, and a result stated as where and when it went online. No performance percentage was added, because none is on file.
 
 Testimonials, client logo files, and review quotes are still open. A Google listing link is on the page. A testimonial needs a real name, role, company and photo from a client. Logos need files you actually have.
 

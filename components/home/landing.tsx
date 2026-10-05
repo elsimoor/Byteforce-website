@@ -178,7 +178,7 @@ export function Landing() {
             <article>
               <div className="mb-4 flex items-end justify-between gap-6">
                 <div>
-                  <h3 className="text-2xl font-medium tracking-tight">ProcheDeMoi</h3>
+                  <h3 className="text-2xl font-medium tracking-tight">Proche de moi</h3>
                   <p className="mt-1 text-sm text-white/50">AI-powered local discovery platform</p>
                 </div>
                 <Link href="/realisations/re-proche-de-moi" className="text-sm text-white/60 hover:text-white">

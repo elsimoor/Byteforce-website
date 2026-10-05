@@ -238,14 +238,14 @@ export const projects: Project[] = [
   },
   {
     slug: "re-proche-de-moi",
-    title: "Re Proche de moi",
+    title: "Proche de moi",
     category: "Plate-forme",
     year: "2024",
     city: "Lille",
     country: "France",
     description:
       "Plateforme de mise en relation et marketplace locale pour les boutiques de proximité.",
-    url: "https://re.prochedemoi.fr/",
+    url: "https://www.prochedemoi.fr/",
     serviceSlug: "logiciel-sur-mesure",
     problem:
       "Les commerces de proximité étaient difficiles à trouver dans un seul parcours.",
@@ -254,9 +254,9 @@ export const projects: Project[] = [
     result: "Le site est en ligne à Lille depuis 2024.",
     shot: "/work/proche.jpg",
     pages: [
-      { label: "Recherche", href: "https://re.prochedemoi.fr/search?q=lille" },
-      { label: "Carte", href: "https://re.prochedemoi.fr/map" },
-      { label: "Lille", href: "https://re.prochedemoi.fr/france/nord-59/lille" },
+      { label: "Recherche", href: "https://www.prochedemoi.fr/search?q=lille" },
+      { label: "Carte", href: "https://www.prochedemoi.fr/map" },
+      { label: "Lille", href: "https://www.prochedemoi.fr/france/nord-59/lille" },
     ],
   },
   {

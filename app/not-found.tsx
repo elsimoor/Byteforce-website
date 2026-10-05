@@ -1,13 +1,50 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "This address does not match a page on Byte Force.",
+  robots: { index: false, follow: false },
+};
+
+const links = [
+  { href: "/#selected-work", label: "Work" },
+  { href: "/#capabilities", label: "Services" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function NotFound() {
   return (
-    <main className="px-6 py-24 md:px-12">
-      <h1 className="display text-6xl">Page introuvable.</h1>
-      <p className="mt-4 text-muted">Cette adresse ne correspond à aucune offre ni réalisation.</p>
-      <Link href="/" className="mt-8 inline-block border-b border-ink">
-        Retour à l&apos;accueil
-      </Link>
+    <main className="mx-auto flex min-h-[70vh] w-full max-w-7xl flex-col justify-center px-6 py-20 lg:px-12">
+      <p className="font-mono text-xs font-bold tracking-widest text-primary uppercase">404</p>
+      <h1 className="mt-3 max-w-3xl font-headline text-4xl font-black tracking-tight text-on-surface sm:text-6xl">
+        This page does not exist.
+      </h1>
+      <p className="mt-4 max-w-xl text-lg text-on-surface-variant">
+        The address is wrong, or the page was moved. The studio, the work, and the contact form are still here.
+      </p>
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+        >
+          Back to the homepage
+          <span className="material-symbols-outlined text-base">arrow_forward</span>
+        </Link>
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-2 rounded bg-surface-container px-6 py-3.5 text-sm font-medium text-on-surface"
+        >
+          Start a project
+        </Link>
+      </div>
+      <ul className="mt-10 flex flex-wrap gap-6 text-sm font-semibold text-primary">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }
