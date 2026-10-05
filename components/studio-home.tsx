@@ -1,3 +1,6 @@
+import { SelectedWork } from "@/components/selected-work";
+import { projects } from "@/lib/content";
+
 export function StudioHome() {
   return (
     <div className="flex flex-col w-full text-on-surface">
@@ -16,9 +19,7 @@ export function StudioHome() {
               We build software for businesses that want to move faster.
             </h1>
             <p className="text-lg lg:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-              ByteForce designs and develops custom digital products, business
-              platforms, mobile apps, AI systems and software that solve real
-              operational problems.
+              You get a product you can launch, a fix when something breaks, and the code in your name when the work is done.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
@@ -40,209 +41,39 @@ export function StudioHome() {
                 </span>
               </a>
             </div>
-            <p className="text-xs font-mono tracking-wider uppercase text-on-surface-variant">
-              Custom software · SaaS · AI · Mobile · Business platforms
+            <p className="text-sm text-on-surface-variant">
+              We reply within one business day. You can also write on{" "}
+              <a href="https://wa.me/212666650696" className="font-semibold text-primary">
+                WhatsApp
+              </a>{" "}
+              or{" "}
+              <a href="mailto:contact@byteforce.ma" className="font-semibold text-primary">
+                contact@byteforce.ma
+              </a>
+              .
             </p>
           </div>
-          {/* Right Column: Interactive Active Mesh Topology Card (Span 5) */}
           <div className="lg:col-span-5 w-full">
-            <div className="relative bg-surface-container-lowest rounded-xl p-6 shadow-xl overflow-hidden">
-              <div className="absolute -right-16 -top-16 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-              {/* Card Header */}
-              <div className="flex items-center justify-between pb-5">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span className="text-xs font-mono font-bold tracking-widest uppercase text-on-surface">
-                    ACTIVE MESH TOPOLOGY
-                  </span>
-                </div>
-                <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-surface-container text-primary">
-                  99.98% UPTIME
-                </span>
-              </div>
-              {/* Network Diagram SVG Canvas */}
-              <div className="relative w-full h-64 bg-surface-container-low rounded-lg p-4 flex flex-col justify-between overflow-hidden">
-                <svg
-                  className="absolute inset-0 w-full h-full pointer-events-none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient
-                      id="meshGrad"
-                      x1="0%"
-                      x2="100%"
-                      y1="0%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        stopColor="#4f378a"
-                        stopOpacity="0.35"
-                      />
-                      <stop
-                        offset="100%"
-                        stopColor="#765b00"
-                        stopOpacity="0.2"
-                      />
-                    </linearGradient>
-                  </defs>
-                  <line
-                    stroke="url(#meshGrad)"
-                    strokeDasharray="3,3"
-                    strokeWidth={2}
-                    x1="20%"
-                    x2="50%"
-                    y1="35%"
-                    y2="20%"
-                  />
-                  <line
-                    stroke="url(#meshGrad)"
-                    strokeWidth={2}
-                    x1="50%"
-                    x2="80%"
-                    y1="20%"
-                    y2="35%"
-                  />
-                  <line
-                    stroke="url(#meshGrad)"
-                    strokeWidth={2}
-                    x1="20%"
-                    x2="35%"
-                    y1="35%"
-                    y2="75%"
-                  />
-                  <line
-                    className="text-primary/40"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    x1="50%"
-                    x2="50%"
-                    y1="20%"
-                    y2="55%"
-                  />
-                  <line
-                    stroke="url(#meshGrad)"
-                    strokeWidth={2}
-                    x1="50%"
-                    x2="35%"
-                    y1="55%"
-                    y2="75%"
-                  />
-                  <line
-                    stroke="url(#meshGrad)"
-                    strokeWidth={2}
-                    x1="50%"
-                    x2="68%"
-                    y1="55%"
-                    y2="75%"
-                  />
-                  <line
-                    stroke="url(#meshGrad)"
-                    strokeDasharray="3,3"
-                    strokeWidth={2}
-                    x1="80%"
-                    x2="68%"
-                    y1="35%"
-                    y2="75%"
-                  />
-                  {/* Data flow dots */}
-                  <circle cx="35%" cy="27%" fill="#4f378a" r={3}>
-                    <animate
-                      attributeName="opacity"
-                      dur="2s"
-                      repeatCount="indefinite"
-                      values="0.2;1;0.2"
-                    />
-                  </circle>
-                  <circle cx="65%" cy="27%" fill="#6750a4" r={3}>
-                    <animate
-                      attributeName="opacity"
-                      dur="2.4s"
-                      repeatCount="indefinite"
-                      values="1;0.2;1"
-                    />
-                  </circle>
-                  <circle cx="50%" cy="65%" fill="#4f378a" r={3}>
-                    <animate
-                      attributeName="opacity"
-                      dur="1.8s"
-                      repeatCount="indefinite"
-                      values="0.3;1;0.3"
-                    />
-                  </circle>
-                </svg>
-                {/* Topology Nodes */}
-                <div className="relative z-10 flex justify-between items-center px-4 pt-2">
-                  <div className="px-2.5 py-1 rounded bg-surface shadow-sm text-xs font-mono font-medium flex items-center gap-1.5 text-on-surface">
-                    <span className="material-symbols-outlined text-[14px] text-primary">
-                      devices
-                    </span>{" "}
-                    Edge Client
-                  </div>
-                  <div className="px-3 py-1.5 rounded bg-primary text-on-primary shadow-sm text-xs font-mono font-semibold flex items-center gap-1.5">
-                    <span className="material-symbols-outlined text-[14px]">
-                      alt_route
-                    </span>{" "}
-                    API Gateway
-                  </div>
-                  <div className="px-2.5 py-1 rounded bg-surface shadow-sm text-xs font-mono font-medium flex items-center gap-1.5 text-on-surface">
-                    <span className="material-symbols-outlined text-[14px] text-tertiary">
-                      memory
-                    </span>{" "}
-                    AI Core
-                  </div>
-                </div>
-                <div className="relative z-10 flex justify-center py-2">
-                  <div className="px-3 py-1 rounded bg-surface-container-high shadow-sm text-[11px] font-mono text-on-surface-variant flex items-center gap-1.5">
-                    <span className="material-symbols-outlined text-[13px] text-primary">
-                      swap_calls
-                    </span>
-                    <span>gRPC / FastEvent Bus</span>
-                  </div>
-                </div>
-                <div className="relative z-10 flex justify-around items-center px-6 pb-2">
-                  <div className="px-2.5 py-1 rounded bg-surface shadow-sm text-xs font-mono font-medium flex items-center gap-1.5 text-on-surface">
-                    <span className="material-symbols-outlined text-[14px] text-primary">
-                      database
-                    </span>{" "}
-                    PostgreSQL
-                  </div>
-                  <div className="px-2.5 py-1 rounded bg-surface shadow-sm text-xs font-mono font-medium flex items-center gap-1.5 text-on-surface">
-                    <span className="material-symbols-outlined text-[14px] text-secondary">
-                      share
-                    </span>{" "}
-                    Vector Store
-                  </div>
-                </div>
-              </div>
-              {/* Telemetry Strip */}
-              <div className="mt-4 pt-4 bg-surface-container-low rounded-lg p-3 grid grid-cols-3 gap-2 text-center">
+            <a
+              href="/realisations/coco-inbox"
+              className="block overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl"
+            >
+              <img
+                src="/work/coco-inbox.jpg"
+                alt="Coco Inbox, a live product for temporary email, encrypted files and secure notes."
+                className="aspect-[16/10] w-full object-cover object-top"
+              />
+              <div className="flex items-center justify-between gap-4 p-5">
                 <div>
-                  <div className="text-[10px] font-mono text-on-surface-variant uppercase">
-                    LATENCY
-                  </div>
-                  <div className="text-xs font-mono font-bold text-on-surface mt-0.5">
-                    12ms avg
-                  </div>
+                  <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">
+                    Live product
+                  </p>
+                  <p className="font-headline text-lg font-bold text-on-surface">Coco Inbox</p>
+                  <p className="text-sm text-on-surface-variant">Montréal · online since 2024</p>
                 </div>
-                <div>
-                  <div className="text-[10px] font-mono text-on-surface-variant uppercase">
-                    SECURITY
-                  </div>
-                  <div className="text-xs font-mono font-bold text-on-surface mt-0.5">
-                    TLS 1.3 MESH
-                  </div>
-                </div>
-                <div>
-                  <div className="text-[10px] font-mono text-on-surface-variant uppercase">
-                    ZONE
-                  </div>
-                  <div className="text-xs font-mono font-bold text-primary mt-0.5">
-                    CMN → EU-W
-                  </div>
-                </div>
+                <span className="text-sm font-bold text-primary">Case study</span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         {/* Credibility Strip */}
@@ -310,13 +141,20 @@ export function StudioHome() {
               <p className="text-base text-on-surface-variant leading-relaxed">
                 From internal tools and CRM systems to complete SaaS platforms and AI-powered products, we turn complex business requirements into simple, reliable software.
               </p>
+              <p className="text-base text-on-surface-variant leading-relaxed">
+                {projects.length} published projects. The office is at Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca.{" "}
+                <a href="/a-propos" className="font-semibold text-primary">
+                  About the studio
+                </a>
+                .
+              </p>
               <div className="pt-4 flex items-center gap-6">
                 <div>
                   <div className="text-lg font-bold text-on-surface">
                     Casablanca
                   </div>
                   <div className="text-xs font-mono text-outline">
-                    HQ &amp; Engineering Lab
+                    Technopark, Bd Dammam, Aïn Chock
                   </div>
                 </div>
                 <div className="h-8 w-px bg-outline-variant" />
@@ -387,7 +225,7 @@ export function StudioHome() {
               What we build
             </h2>
             <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
-              Products built around a company&apos;s workflows, operations and data.
+              Each offer says who it is for and what is included. The stack we ship with includes React, Next.js and Node.js.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -408,9 +246,14 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Platforms built around your company&apos;s workflows, operations and data.
                 </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>The workflow, the roles and the data the team already uses</li>
+                  <li>An interface for the people who do the work</li>
+                  <li>The repository handed over at the end</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Workflows • Operations • Data
+                For teams whose tools do not match the work
               </div>
             </div>
             {/* 02 UX / UI Design */}
@@ -421,7 +264,7 @@ export function StudioHome() {
                     02
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">palette</span>
+                    <span className="material-symbols-outlined">dashboard</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -430,9 +273,14 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Multi-user products with subscriptions, dashboards, permissions, billing and scalable infrastructure.
                 </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>Accounts, permissions and billing</li>
+                  <li>A dashboard the team can run</li>
+                  <li>A first version you can put in front of users</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Subscriptions • Dashboards • Billing
+                For founders launching a multi-user product
               </div>
             </div>
             {/* 03 Web Applications */}
@@ -443,7 +291,7 @@ export function StudioHome() {
                     03
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">terminal</span>
+                    <span className="material-symbols-outlined">group</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -452,9 +300,14 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Custom CRM, customer management, sales pipelines, operations and internal administration.
                 </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>Pipeline, history and follow-up</li>
+                  <li>Roles for the team</li>
+                  <li>Room to connect the tools you already use</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Pipelines • Customers • Admin
+                For a business that has outgrown a spreadsheet
               </div>
             </div>
             {/* 04 Mobile Applications */}
@@ -465,9 +318,7 @@ export function StudioHome() {
                     04
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">
-                      smartphone
-                    </span>
+                    <span className="material-symbols-outlined">smart_toy</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -476,9 +327,14 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   AI assistants, agents, intelligent search, automation and AI features integrated directly into business products.
                 </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>An assistant or agent inside the product</li>
+                  <li>One repeated task taken off the team</li>
+                  <li>A person still able to review the result</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Assistants • Agents • Search
+                For a product that should remove manual work
               </div>
             </div>
             {/* 05 AI & Automation */}
@@ -489,7 +345,7 @@ export function StudioHome() {
                     05
                   </span>
                   <div className="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">smart_toy</span>
+                    <span className="material-symbols-outlined">devices</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -498,9 +354,14 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Modern applications designed for customers, employees, partners or internal teams.
                 </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>A path for the customer, the employee or the partner</li>
+                  <li>Web, and iOS or Android when the use needs a phone</li>
+                  <li>The same data as the rest of the product</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Customers • Teams • Partners
+                For customers, employees or partners
               </div>
             </div>
             {/* 06 Infrastructure & DevOps */}
@@ -511,9 +372,7 @@ export function StudioHome() {
                     06
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">
-                      cloud_sync
-                    </span>
+                    <span className="material-symbols-outlined">hub</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -522,12 +381,69 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Marketplaces, customer portals, booking platforms, directories and complex multi-sided systems.
                 </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>Customer, partner and admin sides</li>
+                  <li>Search, profiles or booking</li>
+                  <li>A published platform</li>
+                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
-                Portals • Marketplaces • Booking
+                For marketplaces, portals and booking
               </div>
             </div>
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">07</span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">bug_report</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">Audit &amp; bug fixing</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  A read of an existing product: what blocks people, what is broken, and what to fix first.
+                </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>Review of the current product and code</li>
+                  <li>Bugs and risks, ordered by what blocks use</li>
+                  <li>Fixes on the points that stop the work</li>
+                </ul>
+                <a href="/contact" className="mt-4 inline-flex text-sm font-bold text-primary">
+                  Get an audit
+                </a>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">For a product or site that already exists</div>
+            </div>
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-sm font-bold text-primary">08</span>
+                  <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <span className="material-symbols-outlined">build</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">Maintenance &amp; support</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  The product stays up, backed up, and able to change after launch.
+                </p>
+                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
+                  <li>Uptime checks, backups and security updates</li>
+                  <li>Fixes and small content edits</li>
+                  <li>A direct path when the site is down</li>
+                </ul>
+                <a href="#maintenance" className="mt-4 inline-flex text-sm font-bold text-primary">
+                  See support
+                </a>
+              </div>
+              <div className="mt-6 pt-4 text-xs font-mono text-outline">For a product already in production</div>
+            </div>
           </div>
+          <a
+            href="/contact"
+            className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+          >
+            Start a project
+          </a>
         </div>
       </section>
       {/* 6. METHODOLOGY (5-Step Engineering System) */}
@@ -542,6 +458,9 @@ export function StudioHome() {
             </h2>
             <p className="text-on-surface-variant text-base mt-2 max-w-xl">
               Every project starts with a problem, not a technology.
+            </p>
+            <p className="text-on-surface-variant text-sm mt-4 max-w-2xl">
+              Day to day is email at contact@byteforce.ma and WhatsApp, with a weekly update on a shared board. We reply within one business day. Bugs in the agreed scope are fixed with the delivery. After that, a quoted fix or a monthly plan covers them. At the end, you own the code, the repository and the hosting accounts.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -631,371 +550,15 @@ export function StudioHome() {
               </span>
             </div>
           </div>
+          <a
+            href="/contact"
+            className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+          >
+            Start a project
+          </a>
         </div>
       </section>
-      {/* 3. SELECTED WORK (Desktop Editorial Portfolio) */}
-      <section
-        className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28"
-        id="selected-work"
-      >
-        <div className="mb-14">
-          <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-            SELECTED SOFTWARE
-          </span>
-          <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
-            Software we&apos;ve built.
-          </h2>
-          <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-xl">
-            Real products. Real systems. Real businesses.
-          </p>
-        </div>
-        <div className="space-y-16">
-          {/* Project 1: Cocoinbox (Split 7 / 5 Layout) */}
-          <div className="bg-surface-container-low rounded-xl p-6 lg:p-10 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Visual (Span 7) */}
-              <div className="lg:col-span-7 bg-surface-container-lowest rounded-lg p-5 shadow-inner overflow-hidden">
-                <div className="flex items-center justify-between pb-3 text-xs text-on-surface-variant font-mono">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-error/70" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-tertiary-container" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
-                    <span className="ml-2 font-mono text-[11px] text-outline">
-                      app.cocoinbox.io/workspace
-                    </span>
-                  </div>
-                  <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded text-[10px] font-bold">
-                    LIVE SOCKET
-                  </span>
-                </div>
-                {/* UI Mockup Inside */}
-                <div className="bg-surface-container-high rounded-md p-4 grid grid-cols-12 gap-3">
-                  <div className="col-span-4 bg-surface rounded p-3 flex flex-col justify-between space-y-2">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-outline font-headline">
-                      Channels
-                    </div>
-                    <div className="space-y-1 text-xs">
-                      <div className="p-1.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold flex items-center justify-between">
-                        <span># vip-support</span>
-                        <span className="text-[10px] px-1 bg-primary text-on-primary rounded">
-                          3
-                        </span>
-                      </div>
-                      <div className="p-1.5 rounded text-on-surface-variant flex items-center justify-between">
-                        <span># enterprise-crm</span>
-                        <span className="text-[10px] text-outline">12m</span>
-                      </div>
-                      <div className="p-1.5 rounded text-on-surface-variant flex items-center justify-between">
-                        <span># triage-desk</span>
-                      </div>
-                    </div>
-                    <div className="pt-2 text-[10px] text-outline font-mono">
-                      ENCRYPTED TLS 1.3
-                    </div>
-                  </div>
-                  <div className="col-span-8 bg-surface rounded p-3 flex flex-col justify-between space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span className="text-xs font-bold text-on-surface">
-                          Client: Meridian Capital SA
-                        </span>
-                      </div>
-                      <span className="text-[10px] font-mono text-outline">
-                        E2E KEY: 0x9AF4
-                      </span>
-                    </div>
-                    <div className="space-y-2 text-xs">
-                      <div className="p-2 rounded bg-surface-container-low max-w-[85%] text-on-surface-variant">
-                        Invoice batch #4819 cleared through Moroccan
-                        clearinghouse API.
-                      </div>
-                      <div className="p-2 rounded bg-primary text-on-primary ml-auto max-w-[85%]">
-                        Confirmed. Real-time reconciliation active on webhook
-                        listener.
-                      </div>
-                    </div>
-                    <div className="pt-1 flex items-center justify-between text-[11px] font-mono text-outline">
-                      <span>Throughput: 8,420 msgs/sec</span>
-                      <span className="text-primary font-bold">
-                        LATENCY 4ms
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Description (Span 5) */}
-              <div className="lg:col-span-5 flex flex-col space-y-4">
-                <span className="text-xs font-mono font-bold tracking-wider text-primary uppercase">
-                  COMMUNICATION PLATFORM &amp; CRM
-                </span>
-                <h3 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface">
-                  Cocoinbox <span className="text-primary">→</span>
-                </h3>
-                <p className="text-sm lg:text-base text-on-surface-variant leading-relaxed">
-                  A secure business communication platform combining email, CRM,
-                  AI assistance, files and automation.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Inbox
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    CRM
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    AI summaries
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Email
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Contacts
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Files
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Automation
-                  </span>
-                </div>
-                <div className="p-4 rounded-lg bg-primary-fixed/40 mt-2">
-                  <span className="text-xs font-mono uppercase tracking-wider text-primary font-bold block mb-1">
-                    IN THE PRODUCT
-                  </span>
-                  <p className="text-sm font-bold text-on-primary-fixed">
-                    Inbox, CRM, email, files and AI summaries in one workspace.
-                  </p>
-                </div>
-                <a
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-primary-container transition-colors pt-2"
-                  href="/realisations/coco-inbox"
-                >
-                  <span>View full case study</span>
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 2: YourSmile (Split 5 / 7 Reversed Layout) */}
-          <div className="bg-surface-container-low rounded-xl p-6 lg:p-10 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Description (Span 5) */}
-              <div className="lg:col-span-5 flex flex-col space-y-4 order-2 lg:order-1">
-                <span className="text-xs font-mono font-bold tracking-wider text-primary uppercase">
-                  ORTHODONTIC MANAGEMENT PLATFORM
-                </span>
-                <h3 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface">
-                  YourSmile <span className="text-primary">→</span>
-                </h3>
-                <p className="text-sm lg:text-base text-on-surface-variant leading-relaxed">
-                  A complete digital system connecting orthodontic workflows,
-                  patients, practitioners and business operations.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Patient management
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Treatment workflows
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Clinical data
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    STL / 3D
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Communication
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Administration
-                  </span>
-                </div>
-                <div className="p-4 rounded-lg bg-tertiary-fixed/40 mt-2">
-                  <span className="text-xs font-mono uppercase tracking-wider text-tertiary font-bold block mb-1">
-                    IN THE PRODUCT
-                  </span>
-                  <p className="text-sm font-bold text-on-tertiary-fixed">
-                    Patients, treatment plans, clinical files and the practice in one system.
-                  </p>
-                </div>
-                <a
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-primary-container transition-colors pt-2"
-                  href="#selected-work"
-                >
-                  <span>View full case study</span>
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              </div>
-              {/* Visual (Span 7) */}
-              <div className="lg:col-span-7 bg-surface-container-lowest rounded-lg p-5 shadow-inner overflow-hidden order-1 lg:order-2">
-                <div className="flex items-center justify-between pb-3 text-xs text-on-surface-variant font-mono">
-                  <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-primary">
-                      view_in_ar
-                    </span>
-                    <span className="font-bold text-on-surface">
-                      3D Mesh Inspector • Plan #9084
-                    </span>
-                  </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">
-                    WebGL 2.0 / 60 FPS
-                  </span>
-                </div>
-                {/* Simulated 3D viewport */}
-                <div className="relative bg-surface-container rounded-lg h-56 w-full flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#4f378a_1px,transparent_1px)] [background-size:16px_16px]" />
-                  {/* 3D Dental Arch Graphic representation */}
-                  <svg
-                    className="w-64 h-36 relative z-10"
-                    fill="none"
-                    viewBox="0 0 240 140"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M 30 110 C 30 40, 210 40, 210 110"
-                      fill="none"
-                      stroke="#6750a4"
-                      strokeLinecap="round"
-                      strokeWidth={4}
-                    />
-                    <path
-                      d="M 45 105 C 45 55, 195 55, 195 105"
-                      fill="none"
-                      stroke="#cbc4d2"
-                      strokeDasharray="2 2"
-                      strokeWidth="1.5"
-                    />
-                    {/* Teeth anchor dots */}
-                    <circle cx={36} cy={100} fill="#4f378a" r={5} />
-                    <circle cx={50} cy={80} fill="#4f378a" r={5} />
-                    <circle cx={70} cy={62} fill="#4f378a" r={5} />
-                    <circle cx={95} cy={50} fill="#4f378a" r={5} />
-                    <circle cx={120} cy={46} fill="#c9a74d" r={6} />
-                    <circle cx={145} cy={50} fill="#4f378a" r={5} />
-                    <circle cx={170} cy={62} fill="#4f378a" r={5} />
-                    <circle cx={190} cy={80} fill="#4f378a" r={5} />
-                    <circle cx={204} cy={100} fill="#4f378a" r={5} />
-                  </svg>
-                  {/* Floating overlay specs */}
-                  <div className="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-sm px-2.5 py-1.5 rounded text-[10px] font-mono text-on-surface shadow">
-                    <span>ALIGNMENT DELTA: 0.12mm (TARGET SPEC)</span>
-                  </div>
-                  <div className="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-2.5 py-1.5 rounded text-[10px] font-mono text-emerald-700 font-bold shadow">
-                    <span>SIMULATION PASS • 14 STAGES</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Projects 3 & 4 (2-Column Balanced Grid) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 3: ProcheDeMoi (Darker themed container for visual rhythm) */}
-            <div className="bg-inverse-surface text-inverse-on-surface rounded-xl p-8 shadow-lg flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute -right-12 -bottom-12 w-40 h-40 bg-inverse-primary/10 rounded-full blur-2xl" />
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono font-bold tracking-widest text-inverse-primary uppercase">
-                    AI-POWERED LOCAL DISCOVERY
-                  </span>
-                  <span className="text-[10px] font-mono text-inverse-on-surface/60 uppercase">
-                    CASABLANCA HQ
-                  </span>
-                </div>
-                <h3 className="text-2xl font-headline font-bold text-white mb-3">
-                  ProcheDeMoi <span className="text-inverse-primary">→</span>
-                </h3>
-                <p className="text-sm text-inverse-on-surface/80 leading-relaxed mb-6">
-                  A digital platform connecting users with local businesses
-                  through search, structured business data, maps and AI.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    Search
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    AI
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    Maps
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    Business profiles
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    Categories
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface/10 text-xs font-mono text-inverse-on-surface">
-                    Structured data
-                  </span>
-                </div>
-              </div>
-              <div className="pt-4 border-t border-inverse-on-surface/10 flex items-center justify-between">
-                <span className="text-xs font-mono text-inverse-primary font-semibold">
-                  Search, maps and business profiles in one platform
-                </span>
-                <span className="material-symbols-outlined text-inverse-primary">
-                  arrow_forward
-                </span>
-              </div>
-            </div>
-            {/* Project 4: Enterprise AI Orchestrator */}
-            <div className="bg-surface-container-low rounded-xl p-8 shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                    BUSINESS MANAGEMENT &amp; AUTOMATION
-                  </span>
-                  <span className="text-[10px] font-mono text-outline uppercase">
-                    CRM
-                  </span>
-                </div>
-                <h3 className="text-2xl font-headline font-bold text-on-surface mb-3">
-                  Custom CRM{" "}
-                  <span className="text-primary">→</span>
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
-                  A modern CRM where businesses can combine human employees with
-                  AI-powered workflows.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    CRM
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    AI agents
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Workflow builder
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Automation
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Leads
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-surface text-xs font-mono text-on-surface-variant">
-                    Analytics
-                  </span>
-                </div>
-              </div>
-              <div className="pt-4 bg-surface-container rounded-lg p-3 flex items-center justify-between">
-                <span className="text-xs font-mono text-primary font-bold">
-                  People and AI agents working in the same CRM
-                </span>
-                <span className="material-symbols-outlined text-primary text-sm">
-                  trending_up
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SelectedWork />
       {/* 2. CLIENT & ENTERPRISE TRUST SECTION */}
       <section className="w-full bg-surface-container py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -1699,6 +1262,147 @@ export function StudioHome() {
           </div>
         </div>
       </section>
+      <section id="maintenance" className="w-full bg-surface-container py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="mb-14">
+            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+              AFTER LAUNCH
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
+              Maintenance and support.
+            </h2>
+            <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
+              Care, Care Plus and Priority are monthly retainers. A single fix can be quoted on its own, with no retainer. Response times are business days unless a tier says otherwise.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Care</h3>
+                <p className="mt-3 text-sm text-on-surface-variant">Uptime monitoring, weekly backups, security updates.</p>
+              </div>
+              <p className="mt-8 text-xs font-mono text-primary font-bold">Reply in 2 business days</p>
+            </div>
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Care Plus</h3>
+                <p className="mt-3 text-sm text-on-surface-variant">Care, plus 5 hours a month of fixes and content edits.</p>
+              </div>
+              <p className="mt-8 text-xs font-mono text-primary font-bold">Reply in 1 business day</p>
+            </div>
+            <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Priority</h3>
+                <p className="mt-3 text-sm text-on-surface-variant">Care Plus, plus performance work and a monthly report.</p>
+              </div>
+              <p className="mt-8 text-xs font-mono text-primary font-bold">4 hours for a critical outage</p>
+            </div>
+          </div>
+          <a
+            href="https://wa.me/212666650696?text=The%20site%20is%20down"
+            className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+          >
+            Site is down? WhatsApp
+          </a>
+        </div>
+      </section>
+      <section id="pricing" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">SCOPE</span>
+        <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight mt-1">
+          What changes the price.
+        </h2>
+        <p className="text-on-surface-variant text-base mt-4 max-w-2xl">
+          There is no flat public price. The work moves with the scope, the integrations, and the number of user roles. A first 30-minute call is free. An audit is usually a few days. A first version is usually several weeks.
+        </p>
+        <div className="mt-8">
+          <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-primary text-on-primary text-sm font-medium">
+            Book the free call
+          </a>
+        </div>
+      </section>
+      <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="p-4 rounded-lg bg-surface-container-low">
+            <h3 className="font-headline font-bold text-sm">NDA on request</h3>
+            <p className="mt-1 text-xs text-on-surface-variant">The brief can stay private before any work starts.</p>
+          </div>
+          <div className="p-4 rounded-lg bg-surface-container-low">
+            <h3 className="font-headline font-bold text-sm">Staging before release</h3>
+            <p className="mt-1 text-xs text-on-surface-variant">You see the product on a staging environment before it goes live.</p>
+          </div>
+          <div className="p-4 rounded-lg bg-surface-container-low">
+            <h3 className="font-headline font-bold text-sm">You own the code</h3>
+            <p className="mt-1 text-xs text-on-surface-variant">Repository and hosting accounts are yours at the end. Changes are reviewed on staging before release. Backups sit with the support plans.</p>
+          </div>
+        </div>
+        <p className="mt-6 text-sm text-on-surface-variant">
+          Google listing:{" "}
+          <a href="https://share.google/L12w0TmJ9kkUcVBg7" className="font-semibold text-primary">
+            Byte Force Maroc
+          </a>
+          .
+        </p>
+      </section>
+      <section id="faq" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
+        <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">BEFORE THE CALL</span>
+        <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight mt-1">
+          Questions we get first.
+        </h2>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                ["What if someone else already wrote the code?", "We can audit it, fix what blocks use, or continue from it. We say so if a rewrite is the honest path."],
+                ["Can you work with the stack we already have?", "Yes, when it fits the product. If it does not, we say that before building."],
+                ["Do you stay after launch?", "Yes. Care, Care Plus and Priority cover monitoring, backups, fixes and, on the higher tiers, a faster reply."],
+                ["How do payments work?", "A deposit starts the work. The rest follows milestones tied to what has been delivered."],
+                ["What if the scope changes?", "The change is written down and agreed before it is built."],
+              ].map(([name, text]) => ({
+                "@type": "Question",
+                name,
+                acceptedAnswer: { "@type": "Answer", text },
+              })),
+            }),
+          }}
+        />
+        <dl className="mt-10 max-w-3xl divide-y divide-outline-variant/40">
+          <div className="py-6">
+            <dt className="font-headline font-bold">What if someone else already wrote the code?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">We can audit it, fix what blocks use, or continue from it. We say so if a rewrite is the honest path.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">Can you work with the stack we already have?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">Yes, when it fits the product. If it does not, we say that before building.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">Do you stay after launch?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">Yes. Care, Care Plus and Priority cover monitoring, backups, fixes and, on the higher tiers, a faster reply.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">How do payments work?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">A deposit starts the work. The rest follows milestones tied to what has been delivered.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">What if the scope changes?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">The change is written down and agreed before it is built.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">Who owns the result?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">You own the code, the repository and the hosting accounts when the work is handed over.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">How fast do you reply?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">Within one business day. A critical outage on Priority is treated in 4 hours.</dd>
+          </div>
+          <div className="py-6">
+            <dt className="font-headline font-bold">Is the first conversation free?</dt>
+            <dd className="mt-2 text-sm text-on-surface-variant">Yes. Thirty minutes, to see if the problem is one we should take.</dd>
+          </div>
+        </dl>
+      </section>
       {/* 10. FINAL CTA / CONVERSION SECTION */}
       <section className="w-full bg-surface-container-high py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
@@ -1714,7 +1418,7 @@ export function StudioHome() {
             Have a business problem that software could solve?
           </h2>
           <p className="text-on-surface-variant text-base lg:text-lg mt-4 max-w-xl">
-            Tell us what you&apos;re trying to build, improve or automate. We&apos;ll help turn it into a real digital product.
+            Tell us what you&apos;re trying to build, improve or automate. We&apos;ll help turn it into a real digital product. Reply within one business day.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
             <a
@@ -1725,6 +1429,12 @@ export function StudioHome() {
               <span className="material-symbols-outlined text-base">
                 arrow_forward
               </span>
+            </a>
+            <a
+              className="inline-flex items-center gap-2 px-6 py-4 rounded bg-surface text-on-surface text-base font-medium hover:bg-surface-container-highest transition-colors"
+              href="https://wa.me/212666650696"
+            >
+              <span>WhatsApp</span>
             </a>
             <a
               className="inline-flex items-center gap-2 px-6 py-4 rounded bg-surface text-on-surface text-base font-medium hover:bg-surface-container-highest transition-colors"

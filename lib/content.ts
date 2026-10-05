@@ -20,6 +20,10 @@ export type Project = {
   url: string;
   serviceSlug: string;
   pages: { label: string; href: string }[];
+  problem?: string;
+  solution?: string;
+  result?: string;
+  shot?: string;
 };
 
 export const services: Service[] = [
@@ -163,6 +167,22 @@ export const services: Service[] = [
     audience: "Clients Byte Force qui ont déjà un site ou un outil à faire vivre.",
     primaryKeyword: "maintenance site web Casablanca",
   },
+  {
+    slug: "audit-correction",
+    title: "Audit et correction",
+    menu: "Audit",
+    summary:
+      "Lecture d'un produit ou d'un site déjà en ligne: ce qui bloque, ce qui casse, et ce qu'il faut corriger en premier.",
+    problem:
+      "Un outil livré par quelqu'un d'autre peut être lent, fragile, ou impossible à faire évoluer. Avant de tout reprendre, il faut voir ce qui tient.",
+    includes: [
+      "Lecture du parcours et du code existant",
+      "Liste des bugs et des risques, par priorité",
+      "Correctifs sur les points qui bloquent l'usage",
+    ],
+    audience: "Équipes qui ont déjà un produit ou un site, et un problème précis.",
+    primaryKeyword: "audit site web Casablanca",
+  },
 ];
 
 export const projects: Project[] = [
@@ -227,6 +247,12 @@ export const projects: Project[] = [
       "Plateforme de mise en relation et marketplace locale pour les boutiques de proximité.",
     url: "https://re.prochedemoi.fr/",
     serviceSlug: "logiciel-sur-mesure",
+    problem:
+      "Les commerces de proximité étaient difficiles à trouver dans un seul parcours.",
+    solution:
+      "Une plateforme publiée, avec la recherche, la carte et les fiches d'établissements.",
+    result: "Le site est en ligne à Lille depuis 2024.",
+    shot: "/work/proche.jpg",
     pages: [
       { label: "Recherche", href: "https://re.prochedemoi.fr/search?q=lille" },
       { label: "Carte", href: "https://re.prochedemoi.fr/map" },
@@ -268,6 +294,10 @@ export const projects: Project[] = [
     description: "Plateforme solidaire facilitant le don et l'engagement communautaire au Maroc.",
     url: "https://www.dealkhir.ma/en",
     serviceSlug: "logiciel-sur-mesure",
+    problem: "Le don et les organisations n'avaient pas d'espace commun.",
+    solution: "Une plateforme publiée pour les organisations et les dons.",
+    result: "Le site est en ligne à Casablanca depuis 2024.",
+    shot: "/work/dealkhir.jpg",
     pages: [
       { label: "Organisations", href: "https://www.dealkhir.ma/en/organizations" },
     ],
@@ -283,6 +313,12 @@ export const projects: Project[] = [
       "Outil innovant pour la gestion et l'optimisation des flux de communication digitale.",
     url: "https://www.cocoinbox.com/",
     serviceSlug: "logiciel-sur-mesure",
+    problem:
+      "L'email, les fichiers et les notes partaient sans limite claire de durée ou de destinataire.",
+    solution:
+      "Un produit publié pour l'email temporaire, les fichiers chiffrés et les notes sécurisées.",
+    result: "Le produit est en ligne, depuis Montréal, depuis 2024.",
+    shot: "/work/coco-inbox.jpg",
     pages: [],
   },
   {
@@ -309,6 +345,10 @@ export const projects: Project[] = [
       "Réseau collaboratif dédié à l'industrie du tourisme et au partage d'expertises.",
     url: "https://tourispeak.com/",
     serviceSlug: "logiciel-sur-mesure",
+    problem: "Le réseau touristique n'avait pas de site public pour les visites.",
+    solution: "Un site publié pour des visites audio et le réseau.",
+    result: "Le site est en ligne, depuis Montréal, depuis 2024.",
+    shot: "/work/tourispeak.jpg",
     pages: [{ label: "À propos", href: "https://tourispeak.com/about-us/" }],
   },
   {

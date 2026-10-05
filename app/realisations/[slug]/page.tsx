@@ -56,7 +56,32 @@ export default async function ProjectPage({ params }: Props) {
         <h1 className="relative display max-w-[12ch] text-[clamp(3.4rem,8vw,7.5rem)]">{project.title}</h1>
       </header>
       <section className="grid gap-12 px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
-        <p className="text-2xl leading-snug md:col-span-7 md:text-3xl">{project.description}</p>
+        <div className="md:col-span-7">
+          {project.shot ? (
+            <img
+              src={project.shot}
+              alt={`${project.title}, capture du site en ligne`}
+              className="mb-8 aspect-[16/10] w-full rounded-lg object-cover object-top"
+            />
+          ) : null}
+          <p className="text-2xl leading-snug md:text-3xl">{project.description}</p>
+          {project.problem ? (
+            <div className="mt-10 space-y-4 text-base leading-relaxed">
+              <p>
+                <span className="font-semibold">Problème. </span>
+                {project.problem}
+              </p>
+              <p>
+                <span className="font-semibold">Solution. </span>
+                {project.solution}
+              </p>
+              <p>
+                <span className="font-semibold">Résultat. </span>
+                {project.result}
+              </p>
+            </div>
+          ) : null}
+        </div>
         <div className="text-sm md:col-span-4 md:col-start-9">
           <p>
             {project.city}, {project.country}

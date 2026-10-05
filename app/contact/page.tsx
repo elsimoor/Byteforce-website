@@ -24,6 +24,10 @@ export default async function ContactPage({ searchParams }: Props) {
         <p className="mt-3">
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </p>
+        <p className="mt-3">
+          <a href="https://wa.me/212666650696">WhatsApp</a>
+        </p>
+        <p className="mt-6 text-sm text-mute">Réponse sous un jour ouvré.</p>
         <p className="mt-8 text-sm text-mute">
           {site.street}
           <br />

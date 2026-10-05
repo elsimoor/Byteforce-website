@@ -34,6 +34,15 @@ export function LeadForm() {
         </select>
       </label>
       <label className="grid gap-1 text-sm">
+        Budget
+        <select name="budget" className="field" defaultValue="">
+          <option value="">Pas encore défini</option>
+          <option>Un correctif ou un audit</option>
+          <option>Un nouveau produit</option>
+          <option>Un suivi après livraison</option>
+        </select>
+      </label>
+      <label className="grid gap-1 text-sm">
         Projet
         <textarea name="message" required rows={4} className="field" />
       </label>

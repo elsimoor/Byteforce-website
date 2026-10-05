@@ -22,16 +22,18 @@ export async function createLead(formData: FormData) {
   const phone = text(formData, "phone", 40);
   const company = text(formData, "company", 120);
   const service = text(formData, "service", 80);
+  const budget = text(formData, "budget", 80);
   const message = text(formData, "message", 4000);
   if (!name || !email || !message || !email.includes("@")) {
     redirect("/contact?error=1");
   }
+  const storedMessage = budget ? `Budget: ${budget}\n${message}` : message;
   getDb()
     .prepare(
       `INSERT INTO leads (name, email, phone, company, service, message, created_at)
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
     )
-    .run(name, email, phone, company, service, message, new Date().toISOString());
+    .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
   redirect("/contact?sent=1");
 }
 

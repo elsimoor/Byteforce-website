@@ -26,7 +26,13 @@ export default function LegalPage() {
         </p>
         <p>
           Les demandes envoyées par le formulaire sont enregistrées pour pouvoir
-          y répondre. Elles ne sont pas affichées publiquement.
+          y répondre. Elles ne sont pas affichées publiquement. Le budget indiqué
+          dans le formulaire sert uniquement à préparer la réponse.
+        </p>
+        <p>
+          Un travail commence après un périmètre écrit. Le code, le dépôt et les
+          comptes d&apos;hébergement livrés reviennent au client. Le texte du site
+          n&apos;est pas un devis.
         </p>
       </div>
     </main>
