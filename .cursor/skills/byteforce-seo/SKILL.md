@@ -28,7 +28,7 @@ Byte Force Maroc is the company. The Google listing is [Byte force maroc](https:
 - This repo: the Byteforce site being built
 - Office on the Google listing: Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca, Morocco
 - Phone: +212 666 650 696
-- Email: contact@byteforce.ma
+- Email: walidmoultamis@gmail.com
 - Hours: Monday to Friday, 09:00–19:00
 - Language: French, unless the user asks for another language
 - Markets: Morocco first, plus the countries where a catalogue project already exists (France, Canada)

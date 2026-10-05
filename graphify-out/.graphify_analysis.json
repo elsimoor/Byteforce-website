@@ -1,0 +1,449 @@
+{
+  "communities": {
+    "0": [
+      "app_a_propos_page",
+      "app_a_propos_page_aboutpage",
+      "app_a_propos_page_metadata",
+      "app_llms_txt_route",
+      "app_llms_txt_route_get",
+      "app_realisations_page",
+      "app_realisations_page_metadata",
+      "app_realisations_page_workpage",
+      "app_robots",
+      "app_robots_robots",
+      "app_sitemap",
+      "app_sitemap_sitemap",
+      "app_villes_slug_page",
+      "app_villes_slug_page_citypage",
+      "app_villes_slug_page_generatemetadata",
+      "app_villes_slug_page_generatestaticparams",
+      "app_villes_slug_page_joinnames",
+      "app_villes_slug_page_offers",
+      "app_villes_slug_page_props",
+      "components_project_stage",
+      "components_project_stage_categorymark",
+      "components_project_stage_countrymark",
+      "components_project_stage_projectstage",
+      "lib_catalog",
+      "lib_catalog_catalogentry",
+      "lib_catalog_categories",
+      "lib_catalog_categorycopy",
+      "lib_catalog_cities",
+      "lib_catalog_getcity",
+      "lib_catalog_pagekind",
+      "lib_catalog_placephrase",
+      "lib_content",
+      "lib_content_project",
+      "lib_content_projects",
+      "lib_content_service",
+      "lib_site",
+      "lib_site_site"
+    ],
+    "1": [
+      "app_dashboard_app_page",
+      "app_dashboard_app_page_dashboardpage",
+      "app_dashboard_app_page_dynamic",
+      "app_dashboard_app_page_metadata",
+      "app_dashboard_app_pages_page",
+      "app_dashboard_app_pages_page_dynamic",
+      "app_dashboard_app_pages_page_groups",
+      "app_dashboard_app_pages_page_metadata",
+      "app_dashboard_app_pages_page_pagemetaadmin",
+      "app_dashboard_app_pages_page_props",
+      "app_dashboard_app_strategie_page",
+      "app_dashboard_app_strategie_page_clustersof",
+      "app_dashboard_app_strategie_page_conflicts",
+      "app_dashboard_app_strategie_page_dynamic",
+      "app_dashboard_app_strategie_page_metadata",
+      "app_dashboard_app_strategie_page_props",
+      "app_dashboard_app_strategie_page_statuslabel",
+      "app_dashboard_app_strategie_page_strategypage",
+      "lib_catalog_catalogpages",
+      "lib_db",
+      "lib_db_actionrow",
+      "lib_db_ensurepagemeta",
+      "lib_db_globalfordb",
+      "lib_db_keywordrow",
+      "lib_db_lead",
+      "lib_db_listactions",
+      "lib_db_listkeywords",
+      "lib_db_listleads",
+      "lib_db_listpagemeta",
+      "lib_db_opendatabase",
+      "lib_db_pagemeta",
+      "lib_db_seed"
+    ],
+    "2": [
+      "components_home_ecosystem",
+      "components_home_ecosystem_categories",
+      "components_home_ecosystem_ecosystem",
+      "components_home_landing",
+      "components_home_landing_engineeringnotes",
+      "components_home_landing_impact",
+      "components_home_landing_journey",
+      "components_home_landing_landing",
+      "components_home_landing_practice",
+      "components_home_landing_statements",
+      "components_home_landing_technology",
+      "components_home_screens",
+      "components_home_screens_agentpreview",
+      "components_home_screens_aipanel",
+      "components_home_screens_architecture",
+      "components_home_screens_automationplatform",
+      "components_home_screens_businesspreview",
+      "components_home_screens_businesssystem",
+      "components_home_screens_chart",
+      "components_home_screens_cocoinbox",
+      "components_home_screens_crmpanel",
+      "components_home_screens_dashboard",
+      "components_home_screens_engineeringstack",
+      "components_home_screens_frame",
+      "components_home_screens_mobileapp",
+      "components_home_screens_pipelinepreview",
+      "components_home_screens_platform",
+      "components_home_screens_portalpreview",
+      "components_home_screens_prochedemoi",
+      "components_home_screens_saaspreview",
+      "components_home_screens_workflownodes",
+      "components_home_screens_yoursmile"
+    ],
+    "3": [
+      "app_dashboard_app_layout",
+      "app_dashboard_app_layout_dashboardlayout",
+      "app_dashboard_app_layout_metadata",
+      "app_dashboard_login_page",
+      "app_dashboard_login_page_loginpage",
+      "app_dashboard_login_page_metadata",
+      "app_dashboard_login_page_props",
+      "lib_actions",
+      "lib_actions_addaction",
+      "lib_actions_addkeyword",
+      "lib_actions_createlead",
+      "lib_actions_login",
+      "lib_actions_logout",
+      "lib_actions_removekeyword",
+      "lib_actions_requireauth",
+      "lib_actions_savepagemeta",
+      "lib_actions_text",
+      "lib_actions_updateaction",
+      "lib_actions_updatekeyword",
+      "lib_auth",
+      "lib_auth_clearsession",
+      "lib_auth_expectedtoken",
+      "lib_auth_isauthed",
+      "lib_auth_passwordconfigured",
+      "lib_auth_setsession",
+      "lib_db_getdb"
+    ],
+    "4": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_start",
+      "ref_react",
+      "ref_react_dom",
+      "ref_tailwindcss",
+      "ref_tailwindcss_postcss",
+      "ref_types_node",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript"
+    ],
+    "5": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "6": [
+      "app_contact_page",
+      "app_contact_page_contactpage",
+      "app_contact_page_metadata",
+      "app_contact_page_props",
+      "app_services_page",
+      "app_services_page_metadata",
+      "app_services_page_servicespage",
+      "app_services_slug_page",
+      "app_services_slug_page_generatemetadata",
+      "app_services_slug_page_generatestaticparams",
+      "app_services_slug_page_props",
+      "app_services_slug_page_servicepage",
+      "components_lead_form",
+      "components_lead_form_leadform",
+      "lib_content_getservice",
+      "lib_content_projectsforservice",
+      "lib_content_services"
+    ],
+    "7": [
+      "app_conditions_page",
+      "app_conditions_page_metadata",
+      "app_conditions_page_termspage",
+      "app_confidentialite_page",
+      "app_confidentialite_page_metadata",
+      "app_confidentialite_page_privacypage",
+      "app_mentions_legales_page",
+      "app_mentions_legales_page_legalpage",
+      "app_mentions_legales_page_metadata",
+      "app_not_found",
+      "app_not_found_links",
+      "app_not_found_metadata",
+      "app_not_found_notfound",
+      "next_config",
+      "next_config_nextconfig",
+      "ref_next"
+    ],
+    "8": [
+      "app_categories_slug_page",
+      "app_categories_slug_page_categorypage",
+      "app_categories_slug_page_dynamic",
+      "app_categories_slug_page_generatemetadata",
+      "app_categories_slug_page_props",
+      "app_realisations_slug_page",
+      "app_realisations_slug_page_countrymark",
+      "app_realisations_slug_page_dynamic",
+      "app_realisations_slug_page_generatemetadata",
+      "app_realisations_slug_page_projectpage",
+      "app_realisations_slug_page_props",
+      "lib_catalog_getcategory",
+      "lib_catalog_slugify",
+      "lib_content_getproject",
+      "lib_db_getpagemeta"
+    ],
+    "9": [
+      "app_layout",
+      "app_layout_jetbrains",
+      "app_layout_metadata",
+      "app_layout_publicsans",
+      "app_layout_rootlayout",
+      "components_footer",
+      "components_footer_footer",
+      "components_header",
+      "components_header_header",
+      "components_header_links",
+      "components_json_ld",
+      "components_json_ld_organizationjsonld"
+    ],
+    "10": [
+      "app_page",
+      "app_page_homepage",
+      "app_page_metadata",
+      "components_selected_work",
+      "components_selected_work_english",
+      "components_selected_work_order",
+      "components_selected_work_selectedwork",
+      "components_studio_home",
+      "components_studio_home_capabilities",
+      "components_studio_home_studiohome"
+    ],
+    "11": [
+      "app_opengraph_image",
+      "app_opengraph_image_alt",
+      "app_opengraph_image_contenttype",
+      "app_opengraph_image_opengraphimage",
+      "app_opengraph_image_size"
+    ],
+    "12": [
+      "next_env_d",
+      "next_env_d_rationale_5"
+    ],
+    "13": [
+      "postcss_config",
+      "postcss_config_config"
+    ],
+    "14": [
+      "code"
+    ]
+  },
+  "cohesion": {
+    "0": 0.11711711711711711,
+    "1": 0.10080645161290322,
+    "2": 0.10483870967741936,
+    "3": 0.20307692307692307,
+    "4": 0.07692307692307693,
+    "5": 0.10526315789473684,
+    "6": 0.16176470588235295,
+    "7": 0.125,
+    "8": 0.2,
+    "9": 0.21212121212121213,
+    "10": 0.24444444444444444,
+    "11": 0.4,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0
+  },
+  "gods": [
+    {
+      "id": "ref_next",
+      "label": "next",
+      "degree": 23
+    },
+    {
+      "id": "lib_catalog_cities",
+      "label": "cities()",
+      "degree": 16
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "lib_db_getdb",
+      "label": "getDb()",
+      "degree": 15
+    },
+    {
+      "id": "lib_site_site",
+      "label": "site",
+      "degree": 12
+    },
+    {
+      "id": "lib_actions_text",
+      "label": "text()",
+      "degree": 9
+    },
+    {
+      "id": "lib_catalog_categories",
+      "label": "categories()",
+      "degree": 8
+    },
+    {
+      "id": "lib_actions_requireauth",
+      "label": "requireAuth()",
+      "degree": 8
+    },
+    {
+      "id": "lib_auth_isauthed",
+      "label": "isAuthed()",
+      "degree": 8
+    },
+    {
+      "id": "lib_content_projects",
+      "label": "projects",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AboutPage()",
+      "target": "cities()",
+      "source_files": [
+        "app/a-propos/page.tsx",
+        "lib/catalog.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `AboutPage()` unexpectedly reaches hub `cities()`"
+    },
+    {
+      "source": "GET()",
+      "target": "cities()",
+      "source_files": [
+        "app/llms.txt/route.ts",
+        "lib/catalog.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `GET()` unexpectedly reaches hub `cities()`"
+    },
+    {
+      "source": "generateMetadata()",
+      "target": "getCity()",
+      "source_files": [
+        "app/villes/[slug]/page.tsx",
+        "lib/catalog.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `generateMetadata()` unexpectedly reaches hub `getCity()`"
+    },
+    {
+      "source": "generateStaticParams()",
+      "target": "cities()",
+      "source_files": [
+        "app/villes/[slug]/page.tsx",
+        "lib/catalog.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `generateStaticParams()` unexpectedly reaches hub `cities()`"
+    },
+    {
+      "source": "DashboardLayout()",
+      "target": "isAuthed()",
+      "source_files": [
+        "app/dashboard/(app)/layout.tsx",
+        "lib/auth.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `DashboardLayout()` unexpectedly reaches hub `isAuthed()`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `next` connect `Community 7` to `Community 0`, `Community 1`, `Community 3`, `Community 4`, `Community 6`, `Community 8`, `Community 9`, `Community 10`?",
+      "why": "High betweenness centrality (0.490) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `Community 4` to `Community 2`?",
+      "why": "High betweenness centrality (0.194) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Props`, `CatalogEntry`, `PageKind` to the rest of the system?",
+      "why": "98 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11711711711711711 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10080645161290322 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10483870967741936 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 4` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

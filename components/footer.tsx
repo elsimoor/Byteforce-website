@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -52,10 +53,10 @@ export function Footer() {
               </li>
               <li className="leading-none">
                 <a
-                  href="mailto:contact@byteforce.ma"
+                  href={`mailto:${site.email}`}
                   className="text-on-surface-variant transition-colors hover:text-on-surface"
                 >
-                  contact@byteforce.ma
+                  {site.email}
                 </a>
               </li>
               <li className="leading-none">

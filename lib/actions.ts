@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { catalogPages } from "@/lib/catalog";
 import { clearSession, isAuthed, passwordConfigured, setSession } from "@/lib/auth";
 import { getDb } from "@/lib/db";
+import { pushLeadToCocoinbox } from "@/lib/cocoinbox";
 
 function text(formData: FormData, key: string, max: number) {
   return String(formData.get(key) ?? "").trim().slice(0, max);
@@ -11,6 +12,47 @@ function text(formData: FormData, key: string, max: number) {
 
 function requireAuth() {
   return isAuthed();
+}
+
+export async function recordLead(input: {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  service: string;
+  budget: string;
+  message: string;
+  company_website: string;
+}) {
+  if (input.company_website.trim()) return;
+  const name = input.name.trim().slice(0, 120);
+  const email = input.email.trim().slice(0, 160);
+  const message = input.message.trim().slice(0, 4000);
+  if (!name || !email || !message || !email.includes("@")) return;
+  const budget = input.budget.trim().slice(0, 80);
+  const storedMessage = budget ? `Budget: ${budget}\n${message}` : message;
+  getDb()
+    .prepare(
+      `INSERT INTO leads (name, email, phone, company, service, message, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)`,
+    )
+    .run(
+      name,
+      email,
+      input.phone.trim().slice(0, 40),
+      input.company.trim().slice(0, 120),
+      input.service.trim().slice(0, 80),
+      storedMessage,
+      new Date().toISOString(),
+    );
+  await pushLeadToCocoinbox({
+    name,
+    email,
+    phone: input.phone,
+    company: input.company,
+    service: input.service,
+    message: storedMessage,
+  });
 }
 
 export async function createLead(formData: FormData) {
@@ -34,6 +76,7 @@ export async function createLead(formData: FormData) {
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
     )
     .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
+  await pushLeadToCocoinbox({ name, email, phone, company, service, message: storedMessage });
   redirect("/contact?sent=1");
 }
 

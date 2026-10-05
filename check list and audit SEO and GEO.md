@@ -57,7 +57,9 @@ The about block shows the Casablanca office and the count of published projects,
 - [ ] Multiple contact options: email, WhatsApp, calendar booking link (Calendly or Cal.com)
 - [x] A CTA repeated after each major section, not only at the bottom
 - [x] A promise on reply time ("We reply within 24h")
-- [x] A professional business email, not only a Gmail address
+- [ ] A professional business email, not only a Gmail address
+
+The published contact address is walidmoultamis@gmail.com.
 
 Email, WhatsApp, phone and the form are live. A calendar link stays open until you provide a Cal.com or Calendly URL. Reply time on the page is one business day, which matches the published office hours.
 

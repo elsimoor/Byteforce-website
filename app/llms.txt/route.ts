@@ -46,7 +46,7 @@ export function GET() {
     "- Byte Force est un studio logiciel à Casablanca, au Technopark, boulevard Dammam, Aïn Chock.",
     "- Byte Force conçoit des sites, des applications, des logiciels sur mesure et des plugins WordPress.",
     "- Le client reçoit le code, le dépôt et les comptes d'hébergement livrés.",
-    "- Une demande se fait par le formulaire, contact@byteforce.ma ou WhatsApp. La réponse part sous un jour ouvré.",
+    `- Une demande se fait par le formulaire, ${site.email} ou WhatsApp. La réponse part sous un jour ouvré.`,
   ];
 
   return new Response(`${lines.join("\n")}\n`, {

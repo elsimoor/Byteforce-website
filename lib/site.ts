@@ -3,7 +3,7 @@ export const site = {
   description:
     "Byte Force conçoit des sites, des applications et des logiciels sur mesure à Casablanca, pour transformer les visites en demandes de clients.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://byteforce.ma",
-  email: "contact@byteforce.ma",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@byteforce.ma",
   phone: "+212666650696",
   phoneDisplay: "+212 666 650 696",
   street: "Technopark, Bd Dammam",

@@ -1,5 +1,6 @@
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
+import { site } from "@/lib/site";
 
 const capabilities = [
   { kicker: "Access", title: "Authentication and permissions", text: "Who can see and do what" },
@@ -62,8 +63,8 @@ export function StudioHome() {
                 WhatsApp
               </a>{" "}
               or{" "}
-              <a href="mailto:contact@byteforce.ma" className="font-semibold text-primary">
-                contact@byteforce.ma
+              <a href={`mailto:${site.email}`} className="font-semibold text-primary">
+                {site.email}
               </a>
               .
             </p>
@@ -498,7 +499,7 @@ export function StudioHome() {
               Every project starts with a problem, not a technology.
             </p>
             <p className="text-on-surface-variant text-sm mt-4 max-w-2xl">
-              Day to day is email at contact@byteforce.ma and WhatsApp, with a weekly update on a shared board. We reply within one business day. Bugs in the agreed scope are fixed with the delivery. After that, a quoted fix or a monthly plan covers them. At the end, you own the code, the repository and the hosting accounts.
+              Day to day is email at {site.email} and WhatsApp, with a weekly update on a shared board. We reply within one business day. Bugs in the agreed scope are fixed with the delivery. After that, a quoted fix or a monthly plan covers them. At the end, you own the code, the repository and the hosting accounts.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -1351,7 +1352,7 @@ export function StudioHome() {
             </a>
             <a
               className="inline-flex items-center gap-2 px-6 py-4 rounded bg-surface text-on-surface text-base font-medium hover:bg-surface-container-highest transition-colors"
-              href="mailto:contact@byteforce.ma"
+              href={`mailto:${site.email}`}
             >
               <span className="material-symbols-outlined text-base text-primary">
                 mail
