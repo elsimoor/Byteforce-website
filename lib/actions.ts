@@ -27,22 +27,16 @@ export async function recordLead(input: {
   city?: string;
   pageUrl?: string;
 }) {
-  if (input.company_website.trim()) return;
+  if (input.company_website?.trim()) return { ok: true };
   const name = input.name.trim().slice(0, 120);
   const email = input.email.trim().slice(0, 160);
   const message = input.message.trim().slice(0, 4000);
-  if (!name || !email || !message || !email.includes("@")) return;
-  const budget = input.budget.trim().slice(0, 80);
+  if (!name || !email || !message || !email.includes("@")) return { ok: false };
+  const budget = (input.budget ?? "").trim().slice(0, 80);
   const storedMessage = budget ? `Budget: ${budget}\n${message}` : message;
-  const phone = input.phone.trim().slice(0, 40);
-  const company = input.company.trim().slice(0, 120);
-  const service = input.service.trim().slice(0, 80);
-  getDb()
-    .prepare(
-      `INSERT INTO leads (name, email, phone, company, service, message, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    )
-    .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
+  const phone = (input.phone ?? "").trim().slice(0, 40);
+  const company = (input.company ?? "").trim().slice(0, 120);
+  const service = (input.service ?? "").trim().slice(0, 80);
   const saved = await pushLeadToCocoinbox({
     name,
     email,
@@ -72,13 +66,7 @@ export async function createLead(formData: FormData) {
     redirect("/contact?error=1");
   }
   const storedMessage = budget ? `Budget: ${budget}\n${message}` : message;
-  getDb()
-    .prepare(
-      `INSERT INTO leads (name, email, phone, company, service, message, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    )
-    .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
-  await pushLeadToCocoinbox({
+  const saved = await pushLeadToCocoinbox({
     name,
     email,
     phone,
@@ -89,7 +77,7 @@ export async function createLead(formData: FormData) {
     city: "Casablanca",
     pageUrl: "https://byteforce.ma/contact",
   });
-  redirect("/contact?sent=1");
+  redirect(saved ? "/contact?sent=1" : "/contact?error=1");
 }
 
 export async function login(formData: FormData) {

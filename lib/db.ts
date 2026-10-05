@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { DatabaseSync } from "node:sqlite";
+import { createRequire } from "node:module";
+import type { DatabaseSync } from "node:sqlite";
 import { catalogPages } from "@/lib/catalog";
+
+const require = createRequire(import.meta.url);
 
 export type Lead = {
   id: number;
@@ -47,6 +50,7 @@ export type PageMeta = {
 const globalForDb = globalThis as unknown as { byteforceDb?: DatabaseSync };
 
 function openDatabase() {
+  const { DatabaseSync } = require("node:sqlite") as typeof import("node:sqlite");
   const dir = path.join(process.cwd(), "data");
   fs.mkdirSync(dir, { recursive: true });
   const db = new DatabaseSync(path.join(dir, "byteforce.db"));

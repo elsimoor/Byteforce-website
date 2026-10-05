@@ -49,7 +49,8 @@ export async function pushLeadToCocoinbox(input: SiteLead): Promise<boolean> {
       cache: "no-store",
     });
     if (!response.ok) {
-      console.error(`Cocoinbox lead rejected (${response.status})`);
+      const detail = (await response.text()).slice(0, 300);
+      console.error(`Cocoinbox lead rejected (${response.status}) ${detail}`);
       return false;
     }
     return true;
