@@ -43,7 +43,7 @@ export async function recordLead(input: {
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
     )
     .run(name, email, phone, company, service, storedMessage, new Date().toISOString());
-  await pushLeadToCocoinbox({
+  const saved = await pushLeadToCocoinbox({
     name,
     email,
     phone,
@@ -54,6 +54,7 @@ export async function recordLead(input: {
     city: input.city?.trim() || "Casablanca",
     pageUrl: input.pageUrl?.trim() || "https://byteforce.ma/contact",
   });
+  return { ok: saved };
 }
 
 export async function createLead(formData: FormData) {

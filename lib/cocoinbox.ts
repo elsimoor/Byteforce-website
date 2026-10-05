@@ -14,14 +14,14 @@ function clip(value: string, max: number) {
   return value.trim().slice(0, max);
 }
 
-export async function pushLeadToCocoinbox(input: SiteLead) {
+export async function pushLeadToCocoinbox(input: SiteLead): Promise<boolean> {
   const base = process.env.COCOINBOX_API_URL?.replace(/\/$/, "");
   const tenant = process.env.COCOINBOX_TENANT_SLUG?.trim();
   const token = process.env.COCOINBOX_WEBHOOK_TOKEN?.trim();
   const email = clip(input.email, 160);
   const country = clip(input.country, 80);
   const city = clip(input.city, 80);
-  if (!base || !tenant || !token || !email.includes("@") || !country || !city) return;
+  if (!base || !tenant || !token || !email.includes("@") || !country || !city) return false;
 
   const pageUrl = /^https?:\/\//i.test(input.pageUrl.trim())
     ? clip(input.pageUrl, 500)
@@ -50,8 +50,10 @@ export async function pushLeadToCocoinbox(input: SiteLead) {
     });
     if (!response.ok) {
       console.error(`Cocoinbox lead rejected (${response.status})`);
+      return false;
     }
+    return true;
   } catch {
-    // The local copy is already stored. A CRM outage must not block the visitor.
+    return false;
   }
 }

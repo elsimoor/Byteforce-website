@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { recordLead } from "@/lib/actions";
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -52,14 +52,15 @@ function whatsappUrl(text: string) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(capped)}`;
 }
 
-function mailtoUrl(draft: Draft, text: string) {
-  const subject = `Projet Byte Force — ${draft.name}`;
-  return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
-}
-
 export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: string; country?: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const draftRef = useRef<Draft | null>(null);
+  const [status, setStatus] = useState<"choice" | "saving" | "saved" | "error">("choice");
+
+  function closeChoice() {
+    dialogRef.current?.close();
+    setStatus("choice");
+  }
 
   function openChoice(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -68,23 +69,27 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
     const next = readDraft(form);
     if (next.company_website) return;
     draftRef.current = next;
+    setStatus("choice");
     dialogRef.current?.showModal();
   }
 
-  function choose(channel: "email" | "whatsapp") {
+  async function choose(channel: "email" | "whatsapp") {
     const draft = draftRef.current;
-    if (!draft) return;
-    const text = projectText(draft);
-    void recordLead({ ...draft, city, country, pageUrl: window.location.href }).catch(() => {
-      // The message still opens in email or WhatsApp if the copy could not be stored.
-    });
-    const url = channel === "whatsapp" ? whatsappUrl(text) : mailtoUrl(draft, text);
+    if (!draft || status === "saving") return;
+    const lead = { ...draft, city, country, pageUrl: window.location.href };
     if (channel === "whatsapp") {
-      window.open(url, "_blank", "noopener,noreferrer");
-    } else {
-      window.location.href = url;
+      void recordLead(lead);
+      window.open(whatsappUrl(projectText(draft)), "_blank", "noopener,noreferrer");
+      closeChoice();
+      return;
     }
-    dialogRef.current?.close();
+    setStatus("saving");
+    try {
+      const result = await recordLead(lead);
+      setStatus(result?.ok ? "saved" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -144,23 +149,46 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
         ref={dialogRef}
         aria-labelledby="send-choice-title"
         className="m-auto w-[min(28rem,calc(100%-2rem))] border border-line bg-paper p-8 text-ink backdrop:bg-ink/40"
+        onClose={() => setStatus("choice")}
       >
         <h2 id="send-choice-title" className="text-2xl">
-          Comment envoyer la demande ?
+          {status === "saved" ? "Demande enregistrée." : "Comment envoyer la demande ?"}
         </h2>
         <p className="mt-3 text-sm text-mute">
-          Le message reprend le projet que vous venez d&apos;écrire. WhatsApp l&apos;ouvre déjà rédigé, prêt à envoyer.
+          {status === "saved"
+            ? "Elle est dans le CRM. On revient vers vous."
+            : status === "error"
+              ? "L'enregistrement dans le CRM a échoué. Réessayez."
+              : "Email enregistre la demande dans le CRM. WhatsApp ouvre le message déjà rédigé."}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <button type="button" className="border border-ink px-4 py-3 text-sm" onClick={() => choose("email")}>
-            Email
-          </button>
-          <button type="button" className="bg-ink px-4 py-3 text-sm text-paper" onClick={() => choose("whatsapp")}>
-            WhatsApp
-          </button>
-          <button type="button" className="px-4 py-3 text-sm text-mute" onClick={() => dialogRef.current?.close()}>
-            Annuler
-          </button>
+          {status === "saved" ? (
+            <button type="button" className="border border-ink px-4 py-3 text-sm" onClick={closeChoice}>
+              Fermer
+            </button>
+          ) : (
+            <>
+              <button
+                type="button"
+                className="border border-ink px-4 py-3 text-sm disabled:opacity-50"
+                disabled={status === "saving"}
+                onClick={() => choose("email")}
+              >
+                {status === "saving" ? "Enregistrement…" : "Email"}
+              </button>
+              <button
+                type="button"
+                className="bg-ink px-4 py-3 text-sm text-paper disabled:opacity-50"
+                disabled={status === "saving"}
+                onClick={() => choose("whatsapp")}
+              >
+                WhatsApp
+              </button>
+              <button type="button" className="px-4 py-3 text-sm text-mute" onClick={closeChoice}>
+                Annuler
+              </button>
+            </>
+          )}
         </div>
       </dialog>
     </>
