@@ -15,7 +15,7 @@ const links = [
 
 export default function NotFound() {
   return (
-    <main className="mx-auto flex min-h-[70vh] w-full max-w-7xl flex-col justify-center px-6 py-20 lg:px-12">
+    <main lang="en" className="mx-auto flex min-h-[70vh] w-full max-w-7xl flex-col justify-center px-6 py-20 lg:px-12">
       <p className="font-mono text-xs font-bold tracking-widest text-primary uppercase">404</p>
       <h1 className="mt-3 max-w-3xl font-headline text-4xl font-black tracking-tight text-on-surface sm:text-6xl">
         This page does not exist.

@@ -1,24 +1,45 @@
 import { site } from "@/lib/site";
 
 export function OrganizationJsonLd() {
+  const businessId = `${site.url}/#business`;
   const data = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: site.name,
-    url: site.url,
-    email: site.email,
-    telephone: site.phone,
-    image: `${site.url}/icon.svg`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.street,
-      addressLocality: site.city,
-      postalCode: site.postal,
-      addressCountry: site.country,
-    },
-    areaServed: ["MA", "FR", "CA"],
-    openingHours: "Mo-Fr 09:00-19:00",
-    description: site.description,
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${site.url}/#website`,
+        url: `${site.url}/`,
+        name: site.name,
+        description: site.description,
+        inLanguage: ["fr", "en"],
+        publisher: { "@id": businessId },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": businessId,
+        name: site.name,
+        url: site.url,
+        email: site.email,
+        telephone: site.phone,
+        image: `${site.url}/icon.svg`,
+        logo: `${site.url}/icon.svg`,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: `${site.street}, ${site.locality}`,
+          addressLocality: site.city,
+          postalCode: site.postal,
+          addressCountry: site.country,
+        },
+        areaServed: ["MA", "FR", "CA"],
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "19:00",
+        },
+        description: site.description,
+      },
+    ],
   };
 
   return (
