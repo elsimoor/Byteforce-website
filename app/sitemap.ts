@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   return [
     ...staticPaths.map((path) => ({
-      url: `${site.url}${path || "/"}`,
+      url: `${site.url}${path}`,
     })),
     ...services.map((service) => ({
       url: `${site.url}${service.href ?? `/services/${service.slug}`}`,
