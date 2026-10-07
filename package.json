@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "seo-capture": "node tools/seo-capture/server.mjs"
+    "seo-capture": "node tools/seo-capture/server.mjs",
+    "check-live": "node tools/check-live.mjs"
   },
   "dependencies": {
     "next": "^15.5.4",
