@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { entryPages } from "@/lib/money";
 import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <li key={service.slug} className="border-b border-line">
             <Link
-              href={`/services/${service.slug}`}
+              href={service.href ?? `/services/${service.slug}`}
               className="index-row grid items-baseline gap-4 px-6 py-8 md:grid-cols-12 md:px-12 md:py-12"
             >
               <span className="text-sm text-mute md:col-span-1">{String(index + 1).padStart(2, "0")}</span>
@@ -29,6 +30,19 @@ export default function ServicesPage() {
           </li>
         ))}
       </ol>
+      <section className="px-6 py-16 md:px-12">
+        <h2 className="display text-4xl">Pour un projet précis</h2>
+        <ul className="mt-8 max-w-xl">
+          {entryPages().map((page) => (
+            <li key={page.path} className="border-t border-line">
+              <Link href={`/${page.path}`} className="block py-4">
+                <span>{page.h1}</span>
+                <span className="mt-1 block text-sm text-mute">{page.group}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

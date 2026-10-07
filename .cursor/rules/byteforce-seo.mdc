@@ -1,0 +1,184 @@
+---
+description: "ByteForce commercial SEO strategy"
+globs:
+  - "app/**/*.tsx"
+  - "app/**/*.ts"
+  - "components/**/*.tsx"
+  - "lib/**/*.ts"
+alwaysApply: false
+---
+
+# ByteForce SEO Strategy
+
+## Primary business objective
+
+SEO exists to generate qualified software-development leads for ByteForce.
+
+The primary conversion is:
+
+/contact
+
+Optimize for qualified leads, not traffic volume.
+
+## Positioning
+
+ByteForce is a custom software engineering company.
+
+Primary positioning:
+
+- custom software development
+- web applications
+- SaaS development
+- CRM development
+- ERP development
+- business software
+- workflow automation
+- API/integration work
+- application modernization
+
+Do not position ByteForce as a generic low-cost web agency.
+
+## Target markets
+
+Primary:
+- Morocco
+- Casablanca
+
+Secondary:
+- France
+- French-speaking businesses
+
+## Commercial SEO principle
+
+Prioritize keywords where the searcher could realistically hire ByteForce.
+
+Commercial intent > informational traffic.
+
+A page targeting 50 highly relevant searches is potentially more valuable
+than a page targeting thousands of generic informational searches.
+
+## Page architecture
+
+The public tree lives in `lib/money`. One primary intent per URL. Nested paths are children, not copies.
+
+Roots:
+
+- `/developpement-logiciel-sur-mesure-maroc` and its CRM, ERP, métier, automatisation children
+- `/application-web-sur-mesure-maroc` and its children
+- `/developpement-saas-maroc` and its children
+- `/developpement-application-mobile-maroc` and its children
+- `/solutions/remplacer-excel`, `/solutions/remplacer-saas`, `/solutions/automatisation-entreprise`, `/solutions/moderniser-application`
+- `/solutions/logiciel-pme`, `/solutions/logiciel-entreprise`, `/solutions/digitalisation-entreprise`
+- `/developpement-logiciel-casablanca` and `/developpement-logiciel-france`, with their children
+
+Do not recreate the retired flat URLs (`/crm-sur-mesure-maroc`, `/remplacer-excel-par-logiciel`, and the other redirects in `next.config.ts`). Improve the page that already owns the intent.
+
+`/taches` is the internal board. It stays noindex.
+
+## Content rules
+
+Every SEO page must:
+
+1. Target one primary search intent.
+2. Have one clear H1.
+3. Use natural semantic keyword coverage.
+4. Explain a real business problem.
+5. Explain how ByteForce solves it.
+6. Include relevant use cases.
+7. Include process information.
+8. Include genuine ByteForce proof when available.
+9. Include useful FAQs.
+10. Link to relevant commercial pages.
+11. Link to /contact.
+12. Have a strong conversion CTA.
+13. Have unique title and meta description.
+14. Have appropriate structured data.
+15. Avoid keyword stuffing.
+16. Avoid generic AI-generated filler.
+17. Never invent clients, results, statistics, testimonials or case studies.
+
+## Conversion
+
+Every commercial page must eventually answer:
+
+"Why should this company contact ByteForce?"
+
+Primary CTA:
+
+Parler de mon projet
+
+Secondary CTA may be contextual:
+
+- Construire mon SaaS
+- Créer mon CRM sur mesure
+- Automatiser mon processus
+- Évaluer le sur-mesure
+- Discuter de mon projet
+
+All CTAs ultimately point to /contact.
+
+## Design
+
+Do NOT redesign ByteForce simply to implement SEO.
+
+Use the existing ByteForce design system.
+
+SEO content must feel like premium software engineering
+company content, not an SEO content farm.
+
+Avoid:
+
+- huge walls of text
+- repetitive cards
+- artificial keyword sections
+- generic stock-agency language
+- "In today's digital world..."
+- meaningless statistics
+- excessive gradients
+- AI-looking layouts
+
+## Technical SEO
+
+For every new page verify:
+
+- canonical
+- title
+- meta description
+- Open Graph
+- robots directives
+- sitemap inclusion
+- semantic HTML
+- H1/H2 hierarchy
+- internal links
+- image alt text
+- JSON-LD where appropriate
+- Core Web Vitals
+- mobile rendering
+- indexability
+- no duplicate intent/cannibalization
+
+## Internal linking
+
+Money pages should link to related problem pages,
+case studies and /contact.
+
+Problem pages should link back to the relevant money page.
+
+Case studies should link to the service that was actually delivered.
+
+Do not create orphan pages.
+
+## Before creating a new SEO page
+
+First determine:
+
+1. Primary keyword
+2. Search intent
+3. Existing ByteForce page that could already satisfy it
+4. Cannibalization risk
+5. Related pages
+6. Internal-link opportunities
+7. Conversion goal
+
+If an existing page already satisfies the intent,
+improve that page instead of creating another URL.

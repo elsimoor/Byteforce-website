@@ -7,6 +7,7 @@ export type Service = {
   includes: string[];
   audience: string;
   primaryKeyword: string;
+  href?: string;
 };
 
 export type Project = {
@@ -62,6 +63,7 @@ export const services: Service[] = [
     audience:
       "Entreprises qui ont déjà une offre et veulent un canal direct avec leurs clients.",
     primaryKeyword: "développement application mobile Maroc",
+    href: "/developpement-application-mobile-maroc",
   },
   {
     slug: "logiciel-sur-mesure",
@@ -80,6 +82,7 @@ export const services: Service[] = [
     audience:
       "Sociétés qui veulent un outil à leur nom, pas une pile de fichiers partagés.",
     primaryKeyword: "développement logiciel sur mesure Maroc",
+    href: "/developpement-logiciel-sur-mesure-maroc",
   },
   {
     slug: "referencement-seo",

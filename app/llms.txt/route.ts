@@ -1,5 +1,6 @@
 import { cities } from "@/lib/catalog";
 import { projects, services } from "@/lib/content";
+import { moneyPages } from "@/lib/money";
 import { site } from "@/lib/site";
 
 export function GET() {
@@ -11,8 +12,12 @@ export function GET() {
     "",
     "## Offres",
     ...services.map(
-      (service) => `- [${service.title}](${origin}/services/${service.slug}): ${service.summary}`,
+      (service) =>
+        `- [${service.title}](${origin}${service.href ?? `/services/${service.slug}`}): ${service.summary}`,
     ),
+    "",
+    "## Projets précis",
+    ...moneyPages.map((page) => `- [${page.h1}](${origin}/${page.path}): ${page.description}`),
     "",
     "## Réalisations",
     ...projects.map(

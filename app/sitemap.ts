@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { categories, cities } from "@/lib/catalog";
 import { projects, services } from "@/lib/content";
+import { moneyPages } from "@/lib/money";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,8 +20,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}${path || "/"}`,
     })),
     ...services.map((service) => ({
-      url: `${site.url}/services/${service.slug}`,
+      url: `${site.url}${service.href ?? `/services/${service.slug}`}`,
     })),
+    ...moneyPages
+      .filter((page) => {
+        const path = `/${page.path}`;
+        const already =
+          path === "/developpement-logiciel-casablanca" ||
+          services.some((service) => service.href === path);
+        return !already;
+      })
+      .map((page) => ({
+        url: `${site.url}/${page.path}`,
+      })),
     ...projects.map((project) => ({
       url: `${site.url}/realisations/${project.slug}`,
     })),

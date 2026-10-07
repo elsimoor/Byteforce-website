@@ -1,15 +1,15 @@
-# Graph Report - Byteforce-website  (2026-10-05)
+# Graph Report - Byteforce-website  (2026-10-07)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 252 nodes · 464 edges · 15 communities (12 shown, 2 thin omitted)
+- 292 nodes · 537 edges · 18 communities (14 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `74791704`
+- Built from commit: `c8f640d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,103 +28,113 @@
 - Community 11
 - Community 12
 - Community 13
+- Community 15
+- Community 16
 
 ## God Nodes (most connected - your core abstractions)
-1. `next` - 23 edges
+1. `next` - 25 edges
 2. `cities()` - 16 edges
-3. `compilerOptions` - 16 edges
-4. `getDb()` - 15 edges
-5. `site` - 12 edges
+3. `site` - 16 edges
+4. `compilerOptions` - 16 edges
+5. `getDb()` - 14 edges
 6. `text()` - 9 edges
 7. `categories()` - 8 edges
-8. `requireAuth()` - 8 edges
-9. `isAuthed()` - 8 edges
-10. `projects` - 8 edges
+8. `isAuthed()` - 8 edges
+9. `requireAuth()` - 8 edges
+10. `LeadForm()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `AboutPage()` --calls--> `cities()`  [EXTRACTED]
-  app/a-propos/page.tsx → lib/catalog.ts
-- `GET()` --calls--> `cities()`  [EXTRACTED]
-  app/llms.txt/route.ts → lib/catalog.ts
-- `generateMetadata()` --calls--> `getCity()`  [EXTRACTED]
-  app/villes/[slug]/page.tsx → lib/catalog.ts
 - `generateStaticParams()` --calls--> `cities()`  [EXTRACTED]
   app/villes/[slug]/page.tsx → lib/catalog.ts
-- `DashboardLayout()` --calls--> `isAuthed()`  [EXTRACTED]
-  app/dashboard/(app)/layout.tsx → lib/auth.ts
+- `AboutPage()` --calls--> `cities()`  [EXTRACTED]
+  app/a-propos/page.tsx → lib/catalog.ts
+- `generateMetadata()` --calls--> `getService()`  [EXTRACTED]
+  app/services/[slug]/page.tsx → lib/content.ts
+- `generateMetadata()` --calls--> `getPageMeta()`  [EXTRACTED]
+  app/realisations/[slug]/page.tsx → lib/db.ts
+- `GET()` --calls--> `cities()`  [EXTRACTED]
+  app/llms.txt/route.ts → lib/catalog.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (15 total, 2 thin omitted)
+## Communities (18 total, 2 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.12
-Nodes (26): AboutPage(), metadata, GET(), metadata, WorkPage(), sitemap(), CityPage(), generateMetadata() (+18 more)
+Cohesion: 0.09
+Nodes (34): AboutPage(), metadata, GET(), metadata, WorkPage(), countryMark, dynamic, generateMetadata() (+26 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.10
-Nodes (28): DashboardPage(), dynamic, metadata, dynamic, groups, metadata, PageMetaAdmin(), Props (+20 more)
+Cohesion: 0.08
+Nodes (17): metadata, metadata, metadata, Props, jetbrains, metadata, publicSans, metadata (+9 more)
 
 ### Community 2 - "Community 2"
+Cohesion: 0.09
+Nodes (29): DashboardPage(), dynamic, metadata, dynamic, groups, metadata, PageMetaAdmin(), Props (+21 more)
+
+### Community 3 - "Community 3"
 Cohesion: 0.10
 Nodes (26): categories, Ecosystem(), engineeringNotes, impact, journey, practice, statements, technology (+18 more)
 
-### Community 3 - "Community 3"
-Cohesion: 0.20
-Nodes (22): DashboardLayout(), metadata, LoginPage(), metadata, Props, addAction(), addKeyword(), createLead() (+14 more)
-
 ### Community 4 - "Community 4"
+Cohesion: 0.17
+Nodes (25): DashboardLayout(), metadata, LoginPage(), metadata, Props, addAction(), addKeyword(), createLead() (+17 more)
+
+### Community 5 - "Community 5"
 Cohesion: 0.08
 Nodes (25): dependencies, next, react, react-dom, devDependencies, tailwindcss, @tailwindcss/postcss, @types/node (+17 more)
 
-### Community 5 - "Community 5"
+### Community 6 - "Community 6"
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
-### Community 6 - "Community 6"
-Cohesion: 0.16
-Nodes (10): metadata, Props, metadata, generateMetadata(), Props, ServicePage(), LeadForm(), getService() (+2 more)
-
 ### Community 7 - "Community 7"
-Cohesion: 0.12
-Nodes (7): metadata, metadata, metadata, links, metadata, nextConfig, next
+Cohesion: 0.17
+Nodes (16): CityPage(), generateMetadata(), generateStaticParams(), joinNames(), offers, Props, Draft, LeadForm() (+8 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.20
-Nodes (13): CategoryPage(), dynamic, generateMetadata(), Props, countryMark, dynamic, generateMetadata(), ProjectPage() (+5 more)
+Cohesion: 0.24
+Nodes (8): CommercialRoute(), dynamicParams, generateMetadata(), Props, CommercialView(), steps, CommercialPage, getCommercialPage()
 
 ### Community 9 - "Community 9"
-Cohesion: 0.21
-Nodes (7): jetbrains, metadata, publicSans, Footer(), Header(), links, OrganizationJsonLd()
-
-### Community 10 - "Community 10"
 Cohesion: 0.24
 Nodes (6): metadata, english, order, SelectedWork(), capabilities, StudioHome()
+
+### Community 10 - "Community 10"
+Cohesion: 0.43
+Nodes (6): CategoryPage(), dynamic, generateMetadata(), Props, getCategory(), getPageMeta()
 
 ### Community 11 - "Community 11"
 Cohesion: 0.40
 Nodes (3): alt, contentType, size
 
+### Community 12 - "Community 12"
+Cohesion: 0.40
+Nodes (3): articles, metadata, setup
+
+### Community 13 - "Community 13"
+Cohesion: 0.40
+Nodes (4): money, services, taches, want
+
 ## Knowledge Gaps
-- **98 isolated node(s):** `Props`, `CatalogEntry`, `PageKind`, `Service`, `Props` (+93 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 116 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **111 isolated node(s):** `Props`, `Props`, `CatalogEntry`, `PageKind`, `Service` (+106 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 134 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `Community 7` to `Community 0`, `Community 1`, `Community 3`, `Community 4`, `Community 6`, `Community 8`, `Community 9`, `Community 10`?**
-  _High betweenness centrality (0.490) - this node is a cross-community bridge._
-- **Why does `react` connect `Community 4` to `Community 2`?**
-  _High betweenness centrality (0.194) - this node is a cross-community bridge._
-- **What connects `Props`, `CatalogEntry`, `PageKind` to the rest of the system?**
-  _98 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `next` connect `Community 1` to `Community 0`, `Community 2`, `Community 4`, `Community 5`, `Community 7`, `Community 8`, `Community 9`, `Community 10`, `Community 12`?**
+  _High betweenness centrality (0.341) - this node is a cross-community bridge._
+- **Why does `react` connect `Community 5` to `Community 3`, `Community 7`?**
+  _High betweenness centrality (0.176) - this node is a cross-community bridge._
+- **What connects `Props`, `Props`, `CatalogEntry` to the rest of the system?**
+  _111 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.11711711711711711 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08880666049953746 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.10080645161290322 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.0944741532976827 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.10483870967741936 - nodes in this community are weakly interconnected._
-- **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
