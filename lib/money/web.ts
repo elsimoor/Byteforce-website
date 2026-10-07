@@ -23,12 +23,12 @@ export const webPages: MoneyPage[] = [
         ],
       },
       {
-        h: "Quatre besoins différents",
+        h: "Quatre usages, une application",
         items: [
-          "[[/application-web-sur-mesure-maroc/application-metier|L'application métier]] porte le vocabulaire d'une activité.",
-          "[[/application-web-sur-mesure-maroc/portail-client|Le portail client]] donne au client un endroit, au lieu d'un fil WhatsApp.",
-          "[[/application-web-sur-mesure-maroc/dashboard|Le tableau de bord]] lit les données déjà là, sans les ressaisir.",
-          "[[/application-web-sur-mesure-maroc/refonte|La refonte]] reprend une application devenue dangereuse à modifier.",
+          "L'outil métier porte le vocabulaire de l'activité.",
+          "L'accès client remplace le fil de messages pour suivre une demande.",
+          "Le tableau de bord lit les données déjà enregistrées, sans les ressaisir.",
+          "Reprendre une application devenue risquée à modifier se décide avec [[/solutions/moderniser-application|moderniser l'existant]].",
         ],
       },
       {
@@ -49,7 +49,7 @@ export const webPages: MoneyPage[] = [
       { href: "/realisations/tourispeak", title: "Tourispeak", note: "Réseau et visites, en ligne depuis Montréal, 2024." },
     ],
     links: [
-      { href: "/developpement-logiciel-casablanca/application-web", label: "Application web à Casablanca" },
+      { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
       { href: "/services/creation-site-web", label: "Si le besoin est un site" },
       contact,
     ],

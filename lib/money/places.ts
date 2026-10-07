@@ -26,7 +26,7 @@ export const placePages: MoneyPage[] = [
       {
         h: "Deux demandes fréquentes sur place",
         p: [
-          "Le [[/developpement-logiciel-casablanca/crm|CRM]], quand l'équipe commerciale est dans la ville et que le suivi quitte le téléphone du directeur. L'[[/developpement-logiciel-casablanca/application-web|application web]], quand clients et employés doivent ouvrir le même état. Le cadre national est le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure au Maroc]].",
+          "Le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]], quand l'équipe commerciale est dans la ville et que le suivi quitte le téléphone du directeur. L'[[/application-web-sur-mesure-maroc|application web]], quand clients et employés doivent ouvrir le même état. Le cadre national est le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure au Maroc]].",
           "Dealkhir est en ligne à Casablanca depuis 2024 : une plateforme pour des organisations, pas une preuve que tous les métiers de la ville sont déjà livrés.",
         ],
       },
@@ -145,7 +145,7 @@ export const placePages: MoneyPage[] = [
         h: "Comment se passe un projet",
         p: [
           "Cadrage en visio, périmètre écrit, points en français sur les heures de bureau marocaines, qui couvrent la journée française. Le code et les comptes livrés sont à l'entreprise, pas hébergés « au Maroc » par principe. Il n'y a pas d'entité légale française à annoncer, et on n'en invente pas.",
-          "Deux sujets reviennent : un [[/developpement-logiciel-france/saas|SaaS]] vendu à des clients français, et un [[/developpement-logiciel-france/logiciel-sur-mesure|logiciel interne]] pour une équipe en France. Le fond technique est le même qu'au [[/developpement-logiciel-sur-mesure-maroc|Maroc]]. La différence est le rythme et la distance.",
+          "Deux sujets reviennent : un [[/developpement-saas-maroc|SaaS]] vendu à des clients français, et un [[/developpement-logiciel-sur-mesure-maroc|logiciel interne]] pour une équipe en France. Le fond technique est le même qu'au Maroc. La différence est le rythme et la distance.",
         ],
       },
     ],

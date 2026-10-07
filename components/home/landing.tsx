@@ -88,9 +88,9 @@ export function Landing() {
             <Link href="/contact" className="inline-flex h-10 items-center rounded-md bg-ink px-4 text-sm text-paper">
               Build your product →
             </Link>
-            <a href="#software" className="text-sm text-mute hover:text-ink">
+            <Link href="/services" className="text-sm text-mute hover:text-ink">
               See what we build
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative lg:col-span-7">

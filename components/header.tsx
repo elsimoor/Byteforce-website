@@ -4,10 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/#selected-work", label: "Work", match: (path: string) => path === "/" || path.startsWith("/realisations") },
-  { href: "/#capabilities", label: "Services", match: (path: string) => path.startsWith("/services") },
-  { href: "/#about", label: "About", match: (path: string) => path.startsWith("/a-propos") },
-  { href: "/#insights", label: "Insights", match: () => false },
+  { href: "/realisations", label: "Work", match: (path: string) => path.startsWith("/realisations") },
+  { href: "/services", label: "Services", match: (path: string) => path.startsWith("/services") },
+  { href: "/a-propos", label: "About", match: (path: string) => path.startsWith("/a-propos") },
+  {
+    href: "/insights",
+    label: "Insights",
+    match: (path: string) => path.startsWith("/insights") || path.startsWith("/solutions"),
+  },
 ];
 
 export function Header() {

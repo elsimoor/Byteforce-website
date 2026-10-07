@@ -8,9 +8,10 @@ export const metadata: Metadata = {
 };
 
 const links = [
-  { href: "/#selected-work", label: "Work" },
-  { href: "/#capabilities", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "/realisations", label: "Work" },
+  { href: "/services", label: "Services" },
+  { href: "/a-propos", label: "About" },
+  { href: "/insights", label: "Insights" },
 ];
 
 export default function NotFound() {

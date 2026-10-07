@@ -36,7 +36,7 @@ export const solutionPages: MoneyPage[] = [
         h: "Quand ça coûte, et quand il faut s'abstenir",
         p: [
           "Ça coûte quand une commande est perdue, un stock promis deux fois, ou une relance oubliée parce que la ligne était sur l'autre onglet. Tant que le fichier est un brouillon personnel, le changer coûte plus cher que le garder.",
-          "Les suites ne sont pas toutes un gros logiciel. [[/solutions/remplacer-excel/automatisation|Automatiser]] le passage qui fait mal. [[/solutions/remplacer-excel/centralisation-donnees|Centraliser]] si le mal est la dispersion. Un [[/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel|CRM]] si le fichier est le pipeline commercial. Un [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier/gestion|suivi de dossiers]] si le fichier est l'opération.",
+          "Les suites ne sont pas toutes un gros logiciel. On automatise la recopie si le fichier peut rester. On centralise si plusieurs classeurs se contredisent. Un [[/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel|CRM]] si le fichier est le pipeline commercial. Un [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier|logiciel métier]] si le fichier est l'opération.",
         ],
       },
     ],
@@ -154,7 +154,7 @@ export const solutionPages: MoneyPage[] = [
       {
         h: "Trois voies",
         p: [
-          "[[/solutions/remplacer-saas/reduire-couts|Réduire le coût]] sans réécrire : couper des sièges, des modules, des doublons d'outils. [[/solutions/remplacer-saas/logiciel-personnalise|Écrire le morceau]] que l'éditeur ne fera pas. Ou [[/developpement-saas-maroc/remplacer-saas|reprendre le produit]] si vous le revendez vous-même à plusieurs clients. Ces trois voies ne sont pas le même projet.",
+          "Trois voies, dans cet ordre. Couper les sièges et les outils en double avant d'écrire quoi que ce soit. Écrire seulement le morceau que l'éditeur ne fera pas, dans un [[/developpement-logiciel-sur-mesure-maroc|logiciel à vous]]. Reprendre un produit que vous revendez à plusieurs clients, c'est un [[/developpement-saas-maroc|SaaS]], pas le même projet.",
         ],
       },
     ],
@@ -254,7 +254,7 @@ export const solutionPages: MoneyPage[] = [
         h: "Le circuit que l'on voit souvent",
         p: [
           "Le client écrit sur WhatsApp. Quelqu'un note dans Excel. Un devis part par email. Le statut vit dans la tête de la personne qui a répondu. Ça marche à trois. À huit, les oublis sont le produit. La cause n'est pas l'absence d'un robot. C'est l'absence d'un état partagé.",
-          "Deux précisions : le [[/solutions/automatisation-entreprise/workflow|workflow]] est le circuit avec ses états. [[/solutions/automatisation-entreprise/integration-outils|Connecter les outils]] est le cas où les logiciels existent déjà et ne se parlent pas. La construction est sur [[/developpement-logiciel-sur-mesure-maroc/automatisation|l'automatisation logicielle]].",
+          "Le workflow, ce sont les états d'un dossier et qui a le droit de les changer, y compris le retour en arrière. Connecter les outils, c'est arrêter la ressaisie entre des logiciels que l'on garde. La construction est sur [[/developpement-logiciel-sur-mesure-maroc/automatisation|l'automatisation logicielle]].",
         ],
       },
       {
@@ -270,7 +270,7 @@ export const solutionPages: MoneyPage[] = [
     ],
     proof: [],
     links: [
-      { href: "/developpement-logiciel-sur-mesure-maroc/automatisation/entreprise", label: "Côté construction" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/automatisation", label: "Côté construction" },
       contact,
     ],
   },
@@ -356,7 +356,7 @@ export const solutionPages: MoneyPage[] = [
       {
         h: "Trois niveaux",
         p: [
-          "Un défaut localisé relève de l'[[/services/audit-correction|audit et de la correction]]. Une application web encore utile mais intouchable relève de la [[/solutions/moderniser-application/refonte-web|refonte]]. Un socle que l'on quitte, avec les données et les comptes, relève de la [[/solutions/moderniser-application/migration|migration]]. Les mélanger dans un devis unique est la façon de ne rien finir.",
+          "Un défaut localisé relève de l'[[/services/audit-correction|audit et de la correction]]. Une application encore utile mais intouchable se refait : on garde le geste quotidien, on réécrit ce que plus personne n'ose toucher. Changer de socle, c'est une migration : les dossiers ouverts arrivent une fois, pas deux. Les mélanger dans un devis unique est la façon de ne rien finir. La construction web est sur [[/application-web-sur-mesure-maroc|l'application web]].",
         ],
       },
       {
@@ -372,7 +372,7 @@ export const solutionPages: MoneyPage[] = [
     ],
     proof: [],
     links: [
-      { href: "/application-web-sur-mesure-maroc/refonte", label: "Refonte, côté construction" },
+      { href: "/application-web-sur-mesure-maroc", label: "Application web" },
       { href: "/services/maintenance", label: "Maintenance" },
       contact,
     ],
@@ -448,7 +448,7 @@ export const solutionPages: MoneyPage[] = [
   },
   {
     path: "solutions/logiciel-pme",
-    group: "Secteur",
+    group: "Audience",
     crumb: "Logiciel PME",
     keyword: "logiciel pour PME",
     title: "Logiciel pour une PME",
@@ -469,7 +469,7 @@ export const solutionPages: MoneyPage[] = [
       {
         h: "Ce qu'on refuse",
         p: [
-          "Un « digitalisation complète » sans processus nommé. C'est un slogan. La page [[/solutions/digitalisation-entreprise|digitalisation]] dit la même chose plus crûment.",
+          "Un « digitalisation complète » sans processus nommé. C'est un slogan. S'il n'y a pas un papier, un message ou un fichier qui bloque, il n'y a rien à construire.",
         ],
       },
     ],
@@ -488,7 +488,7 @@ export const solutionPages: MoneyPage[] = [
   },
   {
     path: "solutions/logiciel-entreprise",
-    group: "Secteur",
+    group: "Audience",
     crumb: "Logiciel entreprise",
     keyword: "logiciel pour entreprise",
     title: "Logiciel pour une entreprise déjà outillée",
@@ -502,7 +502,7 @@ export const solutionPages: MoneyPage[] = [
       {
         h: "Le contexte",
         p: [
-          "Il y a déjà des comptes, parfois un ERP partiel, un cabinet comptable, des habitudes de validation. Ignorer ça, c'est livrer un îlot. Le bon projet nomme la frontière : ce qui reste dans l'outil actuel, ce qui est écrit, comment les deux se parlent. Voir [[/developpement-logiciel-sur-mesure-maroc/erp|l'ERP]] si plusieurs ressources sont dans le même flux, ou [[/solutions/automatisation-entreprise/integration-outils|la connexion]] si les outils doivent seulement se parler.",
+          "Il y a déjà des comptes, parfois un ERP partiel, un cabinet comptable, des habitudes de validation. Ignorer ça, c'est livrer un îlot. Le bon projet nomme la frontière : ce qui reste dans l'outil actuel, ce qui est écrit, comment les deux se parlent. Voir [[/developpement-logiciel-sur-mesure-maroc/erp|l'ERP]] si plusieurs ressources sont dans le même flux, ou [[/developpement-logiciel-sur-mesure-maroc/automatisation|l'automatisation]] si les outils doivent seulement se parler.",
         ],
       },
       {
@@ -525,7 +525,7 @@ export const solutionPages: MoneyPage[] = [
   },
   {
     path: "solutions/digitalisation-entreprise",
-    group: "Secteur",
+    group: "Audience",
     crumb: "Digitalisation",
     keyword: "digitalisation entreprise",
     title: "Digitaliser une entreprise : par le processus, pas par le slogan",

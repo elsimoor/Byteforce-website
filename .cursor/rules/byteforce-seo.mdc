@@ -59,19 +59,28 @@ than a page targeting thousands of generic informational searches.
 
 ## Page architecture
 
-The public tree lives in `lib/money`. One primary intent per URL. Nested paths are children, not copies.
+One primary intent per URL. The public tree is the allowlist in `lib/money/index.ts`.
 
-Roots:
+Software:
 
-- `/developpement-logiciel-sur-mesure-maroc` and its CRM, ERP, métier, automatisation children
-- `/application-web-sur-mesure-maroc` and its children
-- `/developpement-saas-maroc` and its children
-- `/developpement-application-mobile-maroc` and its children
-- `/solutions/remplacer-excel`, `/solutions/remplacer-saas`, `/solutions/automatisation-entreprise`, `/solutions/moderniser-application`
-- `/solutions/logiciel-pme`, `/solutions/logiciel-entreprise`, `/solutions/digitalisation-entreprise`
-- `/developpement-logiciel-casablanca` and `/developpement-logiciel-france`, with their children
+- `/developpement-logiciel-sur-mesure-maroc`
+- CRM, then remplacer Excel and CRM personnalisé
+- ERP, then ERP personnalisé and logiciel de gestion
+- logiciel métier
+- automatisation
+- `/application-web-sur-mesure-maroc`
+- `/developpement-saas-maroc`
+- `/developpement-application-mobile-maroc`
 
-Do not recreate the retired flat URLs (`/crm-sur-mesure-maroc`, `/remplacer-excel-par-logiciel`, and the other redirects in `next.config.ts`). Improve the page that already owns the intent.
+Problems: `/solutions/remplacer-excel`, `/solutions/remplacer-saas`, `/solutions/automatisation-entreprise`, `/solutions/moderniser-application`
+
+Audiences: `/solutions/logiciel-pme`, `/solutions/logiciel-entreprise`
+
+Locations: `/developpement-logiciel-casablanca`, `/developpement-logiciel-france`
+
+Case studies stay on `/realisations`. Do not invent YourSmile. Company pages stay `/a-propos` and `/contact`.
+
+Do not add a child URL that this tree does not name. Retired URLs redirect in `next.config.ts`.
 
 `/taches` is the internal board. It stays noindex.
 

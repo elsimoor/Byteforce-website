@@ -10,6 +10,29 @@ import { webPages } from "./web";
 export type { MoneyPage } from "./types";
 export { childrenOf, crumbsFor } from "./types";
 
+const architecture = new Set([
+  "developpement-logiciel-sur-mesure-maroc",
+  "developpement-logiciel-sur-mesure-maroc/crm",
+  "developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel",
+  "developpement-logiciel-sur-mesure-maroc/crm/logiciel-crm-personnalise",
+  "developpement-logiciel-sur-mesure-maroc/erp",
+  "developpement-logiciel-sur-mesure-maroc/erp/erp-personnalise",
+  "developpement-logiciel-sur-mesure-maroc/erp/logiciel-gestion-entreprise",
+  "developpement-logiciel-sur-mesure-maroc/logiciel-metier",
+  "developpement-logiciel-sur-mesure-maroc/automatisation",
+  "application-web-sur-mesure-maroc",
+  "developpement-saas-maroc",
+  "developpement-application-mobile-maroc",
+  "solutions/remplacer-excel",
+  "solutions/remplacer-saas",
+  "solutions/automatisation-entreprise",
+  "solutions/moderniser-application",
+  "solutions/logiciel-pme",
+  "solutions/logiciel-entreprise",
+  "developpement-logiciel-casablanca",
+  "developpement-logiciel-france",
+]);
+
 export const moneyPages: MoneyPage[] = [
   ...softwarePages,
   ...webPages,
@@ -17,7 +40,7 @@ export const moneyPages: MoneyPage[] = [
   ...mobilePages,
   ...solutionPages,
   ...placePages,
-];
+].filter((page) => architecture.has(page.path));
 
 function assertPages(pages: MoneyPage[]) {
   const paths = new Set<string>();

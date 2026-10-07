@@ -49,7 +49,7 @@ export function StudioHome() {
               </a>
               <a
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-sm font-medium transition-colors"
-                href="#selected-work"
+                href="/realisations"
               >
                 <span>Explore our work</span>
                 <span className="material-symbols-outlined text-base">
@@ -447,7 +447,7 @@ export function StudioHome() {
                   <li>Fixes and small content edits</li>
                   <li>A direct path when the site is down</li>
                 </ul>
-                <a href="#maintenance" className="mt-4 inline-flex text-sm font-bold text-primary">
+                <a href="/services/maintenance" className="mt-4 inline-flex text-sm font-bold text-primary">
                   See support
                 </a>
               </div>

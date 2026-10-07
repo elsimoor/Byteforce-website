@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const groups = ["Logiciel", "Web", "SaaS", "Mobile", "Problème", "Secteur", "Lieu"];
+const groups = ["Logiciel", "Web", "SaaS", "Mobile", "Problème", "Audience", "Lieu"];
 
 export default function TasksPage() {
   return (
@@ -16,8 +16,8 @@ export default function TasksPage() {
       <p className="text-sm text-mute">Hors index · plan SEO</p>
       <h1 className="display mt-4 max-w-[14ch] text-[clamp(3rem,7vw,6rem)]">Tâches.</h1>
       <p className="mt-6 max-w-xl text-lg">
-        {moneyPages.length} pages du plan sont publiées dans le site. YourSmile n&apos;est pas dans le catalogue : aucune
-        étude de cas n&apos;a été inventée.
+        {moneyPages.length} pages suivent l&apos;arbre : logiciel, problèmes, audiences, lieux. Les réalisations
+        publiées restent sur <Link href="/realisations">/realisations</Link>. YourSmile n&apos;est pas dans le catalogue.
       </p>
       {groups.map((group) => (
         <section key={group} className="mt-16">

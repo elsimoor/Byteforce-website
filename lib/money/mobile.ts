@@ -17,12 +17,12 @@ export const mobilePages: MoneyPage[] = [
     lede: "Une application mobile est un programme installé sur le téléphone, pour un geste qui ne tient pas dans un onglet : terrain, hors-ligne, appareil photo, notifications que l'on ne peut pas rater. Si le geste tient dans le navigateur, Byte Force le dit et construit une application web. Le bureau est à Casablanca.",
     blocks: [
       {
-        h: "Trois chemins, pas un slogan",
+        h: "Le choix se fait ici",
         items: [
-          "[[/developpement-application-mobile-maroc/ios|iOS]] quand les utilisateurs sont sur iPhone et que le store Apple fait partie du contrat.",
-          "[[/developpement-application-mobile-maroc/android|Android]] quand le parc est Android, ce qui est fréquent au Maroc.",
-          "[[/developpement-application-mobile-maroc/cross-platform|Une base commune]] quand les deux stores sont exigés et que le geste est le même.",
-          "[[/developpement-application-mobile-maroc/application-metier|L'application métier]] quand ce n'est pas un produit grand public mais l'outil de l'équipe dehors.",
+          "iOS quand les utilisateurs sont sur iPhone et que le store Apple fait partie du contrat.",
+          "Android quand le parc est Android, ce qui est fréquent au Maroc.",
+          "Une base commune quand les deux stores sont exigés et que le geste est le même.",
+          "Un outil d'équipe dehors, pas un produit grand public, quand le geste est une tournée.",
         ],
       },
       {

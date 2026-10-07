@@ -20,7 +20,7 @@ export const saasPages: MoneyPage[] = [
         h: "Ce qui distingue un SaaS d'un logiciel interne",
         p: [
           "Un logiciel interne a un propriétaire. Un SaaS en a plusieurs, qui ne doivent jamais voir les dossiers des autres. L'isolation des données, l'invitation d'un utilisateur, la facturation et l'arrêt d'un compte font partie du produit. Les oublier et les ajouter « après le premier client » est la dette classique.",
-          "Les suites sont séparées : [[/developpement-saas-maroc/mvp|le MVP]], le [[/developpement-saas-maroc/saas-b2b|SaaS B2B]], le [[/developpement-saas-maroc/multi-tenant|multi-tenant]], et [[/developpement-saas-maroc/remplacer-saas|remplacer un SaaS]] que l'on subit déjà.",
+          "La première version doit déjà séparer les clients. Les rôles d'une entreprise acheteuse, la facturation et l'isolation des données font partie de ce produit. Remplacer un abonnement qui dicte le métier est un autre sujet : [[/solutions/remplacer-saas|le SaaS que l'on subit]].",
         ],
       },
       {
@@ -39,7 +39,7 @@ export const saasPages: MoneyPage[] = [
       { href: "/realisations/coco-inbox", title: "Coco Inbox", note: "Produit en ligne : email temporaire, fichiers chiffrés, notes. Montréal, 2024." },
     ],
     links: [
-      { href: "/developpement-logiciel-france/saas", label: "SaaS pour une entreprise en France" },
+      { href: "/developpement-logiciel-france", label: "Pour une entreprise en France" },
       { href: "/solutions/remplacer-saas", label: "Subir trop de SaaS" },
       contact,
     ],

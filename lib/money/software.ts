@@ -118,7 +118,7 @@ export const softwarePages: MoneyPage[] = [
     links: [
       { href: "/developpement-logiciel-sur-mesure-maroc/erp", label: "ERP sur mesure" },
       { href: "/solutions/remplacer-excel", label: "Le problème Excel, plus large" },
-      { href: "/developpement-logiciel-casablanca/crm", label: "CRM à Casablanca" },
+      { href: "/developpement-logiciel-casablanca", label: "À Casablanca" },
       contact,
     ],
   },
@@ -354,13 +354,13 @@ export const softwarePages: MoneyPage[] = [
         h: "Pourquoi le catalogue coince",
         p: [
           "Les logiciels verticaux existent, et il faut les regarder d'abord. Ils coincent quand le métier a une règle que l'éditeur traite comme une option impossible : un dossier qui change d'état selon une pièce manquante, un prix qui dépend d'une contrainte physique, une planification que le créneau standard ne sait pas dire.",
-          "Byte Force part de cette règle. Le [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier/gestion|suivi de gestion du métier]] et l'[[/developpement-logiciel-sur-mesure-maroc/logiciel-metier/outil-interne|outil interne]] ne sont pas le même projet : l'un tient les opérations, l'autre tient une tâche que seule l'équipe fait.",
+          "Byte Force part de cette règle. Le suivi des dossiers et l'outil que seule l'équipe utilise restent dans ce même logiciel : l'un tient les opérations, l'autre une tâche répétée. Ce ne sont pas deux produits.",
         ],
       },
       {
         h: "Ce qu'il ne faut pas mettre dedans",
         p: [
-          "La paie, le site vitrine et le CRM complet n'entrent pas dans la première version d'un logiciel métier. Chaque ajout dilue la règle qui justifiait le projet. On les relie plus tard, par export ou par [[/developpement-logiciel-sur-mesure-maroc/automatisation/integration-api|intégration]], s'ils existent déjà.",
+          "La paie, le site vitrine et le CRM complet n'entrent pas dans la première version d'un logiciel métier. Chaque ajout dilue la règle qui justifiait le projet. On les relie plus tard, par export ou par une [[/services/api-backend|API]], s'ils existent déjà.",
         ],
       },
     ],
@@ -373,7 +373,7 @@ export const softwarePages: MoneyPage[] = [
     ],
     links: [
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
-      { href: "/application-web-sur-mesure-maroc/application-metier", label: "Application métier, côté web" },
+      { href: "/application-web-sur-mesure-maroc", label: "Application web" },
       contact,
     ],
   },
@@ -470,7 +470,7 @@ export const softwarePages: MoneyPage[] = [
         h: "Ce qui s'automatise, et ce qui ne s'automatise pas",
         p: [
           "S'automatise : créer la fiche quand la commande est payée, envoyer la relance quand le devis a dix jours, recopier une référence d'un outil vers un autre. Ne s'automatise pas : un jugement qui change chaque semaine, une exception que seule une personne sait reconnaître et qu'elle ne peut pas décrire.",
-          "Deux pages vont plus loin. [[/developpement-logiciel-sur-mesure-maroc/automatisation/entreprise|L'automatisation pour une entreprise]] parle du périmètre. [[/developpement-logiciel-sur-mesure-maroc/automatisation/integration-api|L'intégration API]] parle du branchement technique.",
+          "Le périmètre se choisit ici : un processus que l'équipe peut décrire, et un branchement seulement s'il sert ce processus. Le même sujet, vu comme un problème d'entreprise, est sur [[/solutions/automatisation-entreprise|automatiser son entreprise]].",
         ],
       },
       {

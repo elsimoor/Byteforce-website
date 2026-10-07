@@ -22,22 +22,22 @@ export function Footer() {
             <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Studio</h2>
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
-                <Link href="/#selected-work" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/realisations" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   Work
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/#capabilities" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/services" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   Services
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/#about" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/a-propos" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   About
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/#insights" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/insights" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   Insights
                 </Link>
               </li>
