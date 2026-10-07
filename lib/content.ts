@@ -8,6 +8,9 @@ export type Service = {
   audience: string;
   primaryKeyword: string;
   href?: string;
+  sections?: { heading: string; paragraphs: string[] }[];
+  faqs?: { q: string; a: string }[];
+  links?: { href: string; label: string }[];
 };
 
 export type Project = {
@@ -30,7 +33,6 @@ export type Project = {
 export const services: Service[] = [
   {
     slug: "creation-site-web",
-    title: "Création de site web",
     menu: "Sites web",
     summary:
       "Sites vitrines et boutiques qui expliquent l'offre et recueillent une demande, pas seulement une visite.",
@@ -45,6 +47,42 @@ export const services: Service[] = [
     audience:
       "Commerces, marques et PME au Maroc qui veulent être trouvés et contactés.",
     primaryKeyword: "création site web Casablanca",
+    title: "Création de site web à Casablanca",
+    sections: [
+      {
+        heading: "Ce que la page doit obtenir",
+        paragraphs: [
+          "Byte Force construit le site pour qu'une visite devienne une demande. La première page dit qui vous êtes, ce que vous vendez, et comment écrire. Le formulaire arrive avant le bas de page.",
+          "Le bureau est au Technopark, à Casablanca. Le site peut servir une entreprise au Maroc, ou un projet déjà suivi en France.",
+        ],
+      },
+      {
+        heading: "Ce qui est livré",
+        paragraphs: [
+          "L'arborescence part des pages utiles au devis, pas d'un menu décoratif. Les textes sont en français. Les titres, la meta, le sitemap et les données structurées font partie de la livraison.",
+          "Escapade Florale et Meubles de Septentrion sont des boutiques en ligne. Nu Lille, Ambulances Valcq et Les Hauts Paysages sont des sites vitrines. UAS est le site e-commerce livré à Casablanca en 2023. Le code et les comptes d'hébergement remis reviennent au client.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Faites-vous un site vitrine et une boutique ?",
+        a: "Oui. Le choix dépend de ce que le visiteur doit pouvoir faire : demander un devis, ou commander. On ne livre pas les deux si un seul parcours suffit.",
+      },
+      {
+        q: "Le référencement est-il inclus ?",
+        a: "La base technique oui : titres, meta, sitemap, données structurées. Une stratégie de pages pour des requêtes commerciales est le service de référencement, à part.",
+      },
+      {
+        q: "À qui écrire ?",
+        a: "Le formulaire de contact, l'email ou le +212 666 650 696. Réponse sous un jour ouvré. Le bureau est au Technopark, boulevard Dammam, Aïn Chock.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler d'un site" },
+      { href: "/services/referencement-seo", label: "Référencement naturel" },
+      { href: "/realisations", label: "Travaux publiés" },
+    ],
   },
   {
     slug: "applications-mobiles",
@@ -86,7 +124,6 @@ export const services: Service[] = [
   },
   {
     slug: "referencement-seo",
-    title: "Référencement naturel",
     menu: "SEO",
     summary:
       "Pages construites pour les recherches qui précèdent une demande: service, ville, intention d'achat.",
@@ -100,11 +137,46 @@ export const services: Service[] = [
     ],
     audience:
       "Entreprises qui veulent des demandes depuis Google, au Maroc et sur les marchés déjà couverts.",
-    primaryKeyword: "agence SEO Casablanca",
+    primaryKeyword: "référencement naturel Casablanca",
+    title: "Référencement naturel à Casablanca",
+    sections: [
+      {
+        heading: "Une URL par intention d'achat",
+        paragraphs: [
+          "Byte Force ne promet pas une position. Le travail est de publier une page par requête commerciale, avec un titre, une meta et un texte qui répondent à cette requête, puis un lien vers le formulaire.",
+          "Les pages qui se font concurrence sont fusionnées ou retirées de l'index. Une ville où Byte Force n'a pas de bureau n'a pas sa propre page.",
+        ],
+      },
+      {
+        heading: "Ce qui est suivi",
+        paragraphs: [
+          "On part des recherches qui précèdent une demande : création de site, logiciel sur mesure, application, hébergement, à Casablanca ou au Maroc. Le suivi regarde les pages publiées et les sujets encore absents.",
+          "Le bureau est au Technopark, Casablanca. Écrire pour dire quelles pages doivent ramener des demandes.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Garantissez-vous la première place sur Google ?",
+        a: "Non. Personne ne peut garantir une position. On peut garantir une page claire, indexable, et dédiée à une seule intention.",
+      },
+      {
+        q: "Faut-il déjà un site ?",
+        a: "Un site existant peut être repris. S'il n'y a pas encore de pages utiles au devis, la création du site vient avant le référencement.",
+      },
+      {
+        q: "Comment démarrer ?",
+        a: "Le formulaire demande le nom, l'email et le projet. Réponse sous un jour ouvré, au +212 666 650 696 ou par email.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler du référencement" },
+      { href: "/services/creation-site-web", label: "Création de site web" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+    ],
   },
   {
     slug: "hebergement",
-    title: "Hébergement",
     menu: "Hébergement",
     summary:
       "Hébergement web et cloud pour garder le site rapide, en ligne, et simple à mettre à jour.",
@@ -118,10 +190,33 @@ export const services: Service[] = [
     ],
     audience: "Équipes qui veulent un interlocuteur unique après la mise en ligne.",
     primaryKeyword: "hébergement web Maroc",
+    title: "Hébergement web au Maroc",
+    sections: [
+      {
+        heading: "La mise en ligne fait partie du projet",
+        paragraphs: [
+          "Byte Force met le site ou l'application en ligne, avec le certificat et le nom de domaine. Les sauvegardes et la surveillance de la disponibilité évitent qu'une campagne tombe sur une page fermée.",
+          "Il n'y a pas de pourcentage de disponibilité affiché : on dit ce qui est surveillé, et on corrige quand la page ne répond plus.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Hébergez-vous seulement les sites Byte Force ?",
+        a: "Le cas le plus simple est un projet déjà livré par le studio. Un site existant peut être repris après un audit, si la reprise est le chemin honnête.",
+      },
+      {
+        q: "Où sont les serveurs ?",
+        a: "Le bureau est à Casablanca. L'hébergement est choisi pour le projet, pas pour une ville du serveur. Les comptes remis reviennent au client.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler de l'hébergement" },
+      { href: "/services/maintenance", label: "Maintenance" },
+    ],
   },
   {
     slug: "design-graphique",
-    title: "Design graphique",
     menu: "Design",
     summary:
       "Identité, pages et supports qui rendent l'offre lisible avant même le premier appel.",
@@ -135,10 +230,29 @@ export const services: Service[] = [
     ],
     audience: "Marques qui lancent ou reprennent une présence en ligne.",
     primaryKeyword: "design graphique Casablanca",
+    title: "Design graphique à Casablanca",
+    sections: [
+      {
+        heading: "Le design sert la lecture",
+        paragraphs: [
+          "Byte Force aligne la direction visuelle avec l'offre : pages d'accueil, pages service, et des supports simples pour les réseaux. Le visiteur doit comprendre ce qui est vendu avant de demander un devis.",
+          "Agency Wonderland, à Marrakech, est un site de studio visuel livré en 2024. Les fichiers réutilisables restent à l'équipe.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Le design est-il séparé du site ?",
+        a: "Il peut l'être, pour une identité ou des supports. Sur un site, le design et les pages partent ensemble, pour que le formulaire soit lisible.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler du design" },
+      { href: "/realisations/agency-wonderland", label: "Agency Wonderland" },
+    ],
   },
   {
     slug: "api-backend",
-    title: "API et backend",
     menu: "API",
     summary:
       "APIs et logique serveur pour connecter le site, l'application et les outils déjà en place.",
@@ -152,10 +266,30 @@ export const services: Service[] = [
     ],
     audience: "Projets qui ont déjà plusieurs outils et besoin de les faire parler ensemble.",
     primaryKeyword: "développement API sur mesure",
+    title: "Développement API sur mesure",
+    sections: [
+      {
+        heading: "Une seule source pour les données",
+        paragraphs: [
+          "Byte Force écrit le contrat d'API, l'authentification et les règles métier côté serveur. Le site et l'application lisent la même source : clients, commandes, contenus, droits.",
+          "Snapchat Collect, entre Marseille et Tanger, est un flux de collecte et de redirection déjà en ligne en 2024. Ce n'est pas un ERP. C'est un branchement court, documenté pour l'équipe.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Faut-il remplacer les outils déjà en place ?",
+        a: "Non, si un branchement suffit. On remplace un outil seulement quand le contournement coûte plus cher que le logiciel.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler d'une API" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/automatisation", label: "Automatisation" },
+      { href: "/realisations/snapchat-collect", label: "Snapchat Collect" },
+    ],
   },
   {
     slug: "maintenance",
-    title: "Maintenance",
     menu: "Maintenance",
     summary:
       "Corrections, mises à jour et petites évolutions pour que le site continue à produire des demandes.",
@@ -169,10 +303,29 @@ export const services: Service[] = [
     ],
     audience: "Clients Byte Force qui ont déjà un site ou un outil à faire vivre.",
     primaryKeyword: "maintenance site web Casablanca",
+    title: "Maintenance de site à Casablanca",
+    sections: [
+      {
+        heading: "Garder le formulaire ouvert",
+        paragraphs: [
+          "Byte Force corrige après la mise en ligne, met à jour ce qui concerne la sécurité, et vérifie le formulaire et les pages qui reçoivent les demandes. Une petite évolution de page fait partie du suivi.",
+          "Un correctif isolé peut être devisé sans abonnement. Le bureau est à Casablanca, la réponse part sous un jour ouvré.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "La maintenance couvre-t-elle un site fait par quelqu'un d'autre ?",
+        a: "Après un audit, oui, si le code peut être repris. Si une reprise complète est le chemin honnête, on le dit avant de corriger.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler de la maintenance" },
+      { href: "/services/audit-correction", label: "Audit et correction" },
+    ],
   },
   {
     slug: "audit-correction",
-    title: "Audit et correction",
     menu: "Audit",
     summary:
       "Lecture d'un produit ou d'un site déjà en ligne: ce qui bloque, ce qui casse, et ce qu'il faut corriger en premier.",
@@ -185,10 +338,29 @@ export const services: Service[] = [
     ],
     audience: "Équipes qui ont déjà un produit ou un site, et un problème précis.",
     primaryKeyword: "audit site web Casablanca",
+    title: "Audit et correction d'un site",
+    sections: [
+      {
+        heading: "Lire avant de tout reprendre",
+        paragraphs: [
+          "Byte Force lit le parcours et le code déjà en ligne. La liste sépare ce qui bloque l'usage, ce qui est fragile, et ce qui peut attendre. Les correctifs portent d'abord sur ce qui empêche un client de finir.",
+          "Il n'y a pas de note sur 100. Le livrable est une liste priorisée, puis les corrections convenues.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'audit oblige-t-il à refaire le site ?",
+        a: "Non. Beaucoup de blocages se corrigent sur le produit existant. La refonte n'est proposée que si le code ne peut plus évoluer.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Demander un audit" },
+      { href: "/solutions/moderniser-application", label: "Moderniser une application" },
+    ],
   },
   {
     slug: "plugins-wordpress",
-    title: "Plugins WordPress",
     menu: "Plugins",
     summary:
       "Plugins WordPress écrits pour le site qui existe déjà, quand une extension du marché ne fait pas le travail.",
@@ -203,6 +375,26 @@ export const services: Service[] = [
     audience:
       "Entreprises qui ont déjà un site WordPress et un besoin qu'aucune extension du marché ne couvre.",
     primaryKeyword: "développement plugin WordPress Maroc",
+    title: "Développement de plugin WordPress au Maroc",
+    sections: [
+      {
+        heading: "Ajouter seulement ce qui manque",
+        paragraphs: [
+          "Byte Force lit le site et les extensions déjà installées, puis écrit un plugin PHP branché au thème, ou à WooCommerce si le site l'utilise. L'équipe règle le plugin sans toucher au code.",
+          "On ne remplace pas WordPress par un autre outil si le site tient. Les corrections après la mise en ligne font partie de la livraison.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Une extension du marché ne suffit-elle pas ?",
+        a: "Souvent si. Le plugin sur mesure commence quand l'extension force le site à changer, ou casse à chaque mise à jour.",
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Parler d'un plugin" },
+      { href: "/services/creation-site-web", label: "Création de site web" },
+    ],
   },
 ];
 
@@ -331,7 +523,7 @@ export const projects: Project[] = [
     city: "Montréal",
     country: "Canada",
     description:
-      "Outil innovant pour la gestion et l'optimisation des flux de communication digitale.",
+      "Produit publié pour l'email temporaire, les fichiers chiffrés et les notes sécurisées. Montréal, 2024.",
     url: "https://www.cocoinbox.com/",
     serviceSlug: "logiciel-sur-mesure",
     problem:

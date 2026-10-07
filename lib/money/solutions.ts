@@ -11,7 +11,7 @@ export const solutionPages: MoneyPage[] = [
     title: "Remplacer Excel quand le fichier est devenu l'entreprise",
     description:
       "Doublons, versions, droits absents. Quand sortir d'Excel, et quand le garder. Byte Force, Casablanca, sans chiffre inventé.",
-    h1: "Remplacer Excel",
+    h1: "Remplacer un fichier Excel",
     cta: "Montrer comment le fichier circule",
     schema: "article",
     lede: "Excel devient un problème le jour où le fichier est la mémoire de l'entreprise et que plus personne ne peut le modifier sans risque. Le remplacer n'est pas une mode. C'est une décision, et elle est parfois mauvaise.",

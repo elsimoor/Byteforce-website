@@ -4,10 +4,17 @@ import { entryPages } from "@/lib/money";
 import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Offres",
+  title: "Services à Casablanca",
   description:
-    "Création de sites, applications, logiciels, plugins WordPress, SEO, hébergement, design, API et maintenance à Casablanca.",
+    "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    locale: "fr_FR",
+    url: "/services",
+    title: "Services à Casablanca",
+    description:
+      "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
+  },
 };
 
 export default function ServicesPage() {
@@ -24,7 +31,7 @@ export default function ServicesPage() {
               className="index-row grid items-baseline gap-4 px-6 py-8 md:grid-cols-12 md:px-12 md:py-12"
             >
               <span className="text-sm text-mute md:col-span-1">{String(index + 1).padStart(2, "0")}</span>
-              <span className="display text-4xl md:col-span-6 md:text-6xl">{service.title}</span>
+              <span className="display text-4xl md:col-span-6 md:text-6xl">{service.menu}</span>
               <span className="text-sm text-mute md:col-span-5">{service.summary}</span>
             </Link>
           </li>

@@ -8,10 +8,12 @@ export function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-3">
-              <img alt="" className="h-8 w-8 object-cover" src="/logo.png" />
+              <img alt="Byte Force" className="h-8 w-8 object-cover" src="/logo.png" />
               <span className="font-headline text-base font-bold tracking-tight text-on-surface">ByteForce</span>
             </Link>
-            <p className="max-w-sm text-sm text-on-surface-variant">Software engineering studio.</p>
+            <p className="max-w-sm text-sm text-on-surface-variant">
+              Studio logiciel à Casablanca. Sites, applications et logiciels sur mesure.
+            </p>
             <p className="pt-2 font-mono text-xs tracking-wide text-outline">
               Technopark, Bd Dammam, Aïn Chock
               <br />
@@ -23,7 +25,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
                 <Link href="/realisations" className="text-on-surface-variant transition-colors hover:text-on-surface">
-                  Work
+                  Travaux
                 </Link>
               </li>
               <li className="leading-none">
@@ -33,22 +35,22 @@ export function Footer() {
               </li>
               <li className="leading-none">
                 <Link href="/a-propos" className="text-on-surface-variant transition-colors hover:text-on-surface">
-                  About
+                  À propos
                 </Link>
               </li>
               <li className="leading-none">
                 <Link href="/insights" className="text-on-surface-variant transition-colors hover:text-on-surface">
-                  Insights
+                  Décisions
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Connect</h2>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Contact</h2>
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
                 <Link href="/contact" className="text-on-surface-variant transition-colors hover:text-on-surface">
-                  Start a project
+                  Parler d&apos;un projet
                 </Link>
               </li>
               <li className="leading-none">
@@ -78,16 +80,16 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-outline-variant/20 pt-8 text-xs text-on-surface-variant sm:flex-row">
-          <span>© {new Date().getFullYear()} ByteForce. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Byte Force. Tous droits réservés.</span>
           <span className="flex gap-4">
             <Link href="/mentions-legales" className="hover:text-on-surface">
-              Legal
+              Mentions légales
             </Link>
             <Link href="/confidentialite" className="hover:text-on-surface">
-              Privacy
+              Confidentialité
             </Link>
             <Link href="/conditions" className="hover:text-on-surface">
-              Terms
+              Conditions
             </Link>
           </span>
         </div>

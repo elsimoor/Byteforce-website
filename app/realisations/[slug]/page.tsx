@@ -104,7 +104,7 @@ export default async function ProjectPage({ params }: Props) {
           ) : null}
           {service ? (
             <p className="mt-10">
-              <Link href={`/services/${service.slug}`} className="border-b border-ink pb-1">
+              <Link href={service.href ?? `/services/${service.slug}`} className="border-b border-ink pb-1">
                 {service.title}
               </Link>
             </p>

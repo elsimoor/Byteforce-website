@@ -2,29 +2,27 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Terms",
-  description: "How a Byte Force engagement starts, how scope changes, and who owns the code.",
+  title: "Conditions",
+  description: "Comment une mission Byte Force commence, comment le périmètre change, et à qui appartient le code.",
   alternates: { canonical: "/conditions" },
 };
 
 export default function TermsPage() {
   return (
     <main className="max-w-2xl px-6 py-16 md:px-12 md:py-24">
-      <h1 className="font-headline text-5xl font-black tracking-tight">Terms</h1>
+      <h1 className="font-headline text-5xl font-black tracking-tight">Conditions</h1>
       <div className="mt-8 space-y-4 leading-relaxed text-on-surface-variant">
         <p>
-          The pages on this site describe offers. They are not a quote. A project starts after a written scope.
+          Les pages de ce site décrivent des offres. Elles ne sont pas un devis. Un projet commence après un périmètre écrit.
         </p>
-        <p>A deposit starts the work. The rest follows milestones tied to what has been delivered.</p>
-        <p>If the scope changes, the change is written down and agreed before it is built.</p>
+        <p>Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré.</p>
+        <p>Si le périmètre change, le changement est écrit et accepté avant d&apos;être construit.</p>
         <p>
-          Bugs that belong to the agreed scope are fixed with the delivery. After handover, fixes are either a quoted
-          one-off or one of the monthly support plans.
+          Les défauts du périmètre convenu sont corrigés avec la livraison. Après la remise, un correctif est soit un
+          devis isolé, soit un suivi mensuel.
         </p>
-        <p>At handover, the client owns the code, the repository and the hosting accounts that were delivered.</p>
-        <p>
-          An NDA is available on request before the brief is shared. Questions: {site.email}.
-        </p>
+        <p>À la remise, le client possède le code, le dépôt et les comptes d&apos;hébergement livrés.</p>
+        <p>Un accord de confidentialité est possible avant le brief. Questions : {site.email}.</p>
       </div>
     </main>
   );

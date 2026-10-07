@@ -3,22 +3,22 @@ import { StudioHome } from "@/components/studio-home";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Byte Force · We build software for businesses that want to move faster" },
+  title: { absolute: "Développement logiciel sur mesure à Casablanca · Byte Force" },
   description:
-    "Byte Force builds, fixes and maintains software from Casablanca. A first 30-minute call is free. We reply within one business day.",
+    "Byte Force conçoit des logiciels, des applications et des sites sur mesure à Casablanca. Écrire pour un premier échange. Réponse sous un jour ouvré.",
   alternates: { canonical: `${site.url}/` },
   openGraph: {
-    locale: "en_US",
+    locale: "fr_FR",
     url: `${site.url}/`,
-    title: "Byte Force · We build software for businesses that want to move faster",
+    title: "Développement logiciel sur mesure à Casablanca · Byte Force",
     description:
-      "Byte Force builds, fixes and maintains software from Casablanca. A first 30-minute call is free. We reply within one business day.",
+      "Byte Force conçoit des logiciels, des applications et des sites sur mesure à Casablanca. Écrire pour un premier échange. Réponse sous un jour ouvré.",
   },
 };
 
 export default function HomePage() {
   return (
-    <main lang="en">
+    <main>
       <StudioHome />
     </main>
   );

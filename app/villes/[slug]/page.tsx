@@ -8,9 +8,9 @@ import { site } from "@/lib/site";
 type Props = { params: Promise<{ slug: string }> };
 
 const offers = [
-  { href: "/services/logiciel-sur-mesure", label: "Logiciel sur mesure" },
+  { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
   { href: "/services/creation-site-web", label: "Site web" },
-  { href: "/services/applications-mobiles", label: "Application mobile" },
+  { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
   { href: "/services/plugins-wordpress", label: "Plugin WordPress" },
   { href: "/services/audit-correction", label: "Audit d'un produit déjà écrit" },
 ];
@@ -27,7 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: city.title },
     description: city.description,
     alternates: { canonical: city.path },
-    openGraph: { title: city.title, description: city.description },
+    openGraph: { title: city.title, description: city.description, locale: "fr_FR", url: city.path },
+    robots: { index: false, follow: true },
   };
 }
 

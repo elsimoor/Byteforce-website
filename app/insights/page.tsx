@@ -3,10 +3,17 @@ import Link from "next/link";
 import { moneyPages } from "@/lib/money";
 
 export const metadata: Metadata = {
-  title: "Insights",
+  title: "Décider avant de construire",
   description:
-    "Notes from Byte Force on replacing Excel, leaving a SaaS, automating a company, and modernising an application.",
+    "Pages Byte Force pour remplacer Excel, quitter un SaaS, automatiser une entreprise ou moderniser une application.",
   alternates: { canonical: "/insights" },
+  openGraph: {
+    locale: "fr_FR",
+    url: "/insights",
+    title: "Décider avant de construire",
+    description:
+      "Pages Byte Force pour remplacer Excel, quitter un SaaS, automatiser une entreprise ou moderniser une application.",
+  },
 };
 
 const groups = ["Problème", "Audience"];
@@ -15,15 +22,15 @@ export default function InsightsPage() {
   return (
     <main>
       <header className="px-6 pb-8 pt-16 md:px-12 md:pt-24">
-        <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,7rem)]">Insights.</h1>
+        <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,7rem)]">Décider.</h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed">
-          Writing for someone who already has the problem: a spreadsheet, a stack of subscriptions, a manual process, or
-          an application nobody wants to touch.
+          Pour quelqu&apos;un qui a déjà le problème : un tableur, une pile d&apos;abonnements, un processus manuel, ou
+          une application que plus personne ne veut toucher.
         </p>
       </header>
       {groups.map((group) => (
         <section key={group} className="border-t border-line">
-          <h2 className="px-6 pt-10 text-sm text-mute md:px-12">{group === "Problème" ? "Problems" : "Who it is for"}</h2>
+          <h2 className="px-6 pt-10 text-sm text-mute md:px-12">{group === "Problème" ? "Problème" : "Pour qui"}</h2>
           <ul>
             {moneyPages
               .filter((page) => page.group === group)

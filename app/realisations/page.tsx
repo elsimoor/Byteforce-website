@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 export default function WorkPage() {
-  const staged = projects.slice(0, 6);
-  const rest = projects.slice(6);
+  const staged = projects.filter((project) => project.shot);
+  const rest = projects.filter((project) => !project.shot);
 
   return (
     <main>

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
-import { categories, cities } from "@/lib/catalog";
 import { projects, services } from "@/lib/content";
 import { moneyPages } from "@/lib/money";
 import { site } from "@/lib/site";
+
+const updated = new Date("2026-10-08");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
@@ -16,13 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/confidentialite",
     "/conditions",
   ];
-  return [
-    ...staticPaths.map((path) => ({
-      url: `${site.url}${path}`,
-    })),
-    ...services.map((service) => ({
-      url: `${site.url}${service.href ?? `/services/${service.slug}`}`,
-    })),
+  const urls = [
+    ...staticPaths.map((path) => `${site.url}${path}`),
+    ...services.map((service) => `${site.url}${service.href ?? `/services/${service.slug}`}`),
     ...moneyPages
       .filter((page) => {
         const path = `/${page.path}`;
@@ -31,17 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
           services.some((service) => service.href === path);
         return !already;
       })
-      .map((page) => ({
-        url: `${site.url}/${page.path}`,
-      })),
-    ...projects.map((project) => ({
-      url: `${site.url}/realisations/${project.slug}`,
-    })),
-    ...categories().map((category) => ({
-      url: `${site.url}${category.path}`,
-    })),
-    ...cities().map((city) => ({
-      url: `${site.url}${city.path}`,
-    })),
+      .map((page) => `${site.url}/${page.path}`),
+    ...projects.map((project) => `${site.url}/realisations/${project.slug}`),
   ];
+  return [...new Set(urls)].map((url) => ({ url, lastModified: updated }));
 }

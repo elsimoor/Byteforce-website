@@ -58,7 +58,7 @@ export const softwarePages: MoneyPage[] = [
     ],
     faqs: [
       { q: "Qu'est-ce qu'un logiciel sur mesure ?", a: "C'est un logiciel conçu pour les rôles, les données et les règles d'une entreprise, plutôt qu'un produit générique paramétré après coup." },
-      { q: "Byte Force est-il une agence web généraliste ?", a: "Non. Le travail est le logiciel d'entreprise : application, métier, automatisation. Le bureau est au Technopark, boulevard Dammam, Aïn Chock, Casablanca." },
+      { q: "Byte Force est-il une agence web généraliste ?", a: "Le cœur du travail est le logiciel d'entreprise : application, métier, automatisation. Byte Force fait aussi le site, le référencement, l'hébergement et le plugin WordPress quand le projet en a besoin. Ce n'est pas une agence de sites vitrines au forfait. Le bureau est au Technopark, boulevard Dammam, Aïn Chock, Casablanca." },
       { q: "Qui possède le code ?", a: "Le client, à la remise : code, dépôt et comptes d'hébergement livrés." },
       { q: "Combien de temps faut-il ?", a: "Un audit tient en quelques jours. Une première version tient souvent en plusieurs semaines. Le délai suit le nombre de rôles et de branchements, pas une promesse fixe." },
     ],
@@ -264,7 +264,7 @@ export const softwarePages: MoneyPage[] = [
     title: "ERP personnalisé, sans les modules inutiles",
     description:
       "L'ERP personnalisé code les règles d'achat, de stock et de validation de l'entreprise. Les modules qui ne servent pas restent dehors.",
-    h1: "ERP personnalisé",
+    h1: "ERP personnalisé, sans les modules inutiles",
     cta: "Lister les règles qui bloquent",
     schema: "service",
     lede: "Un ERP personnalisé reprend les règles de gestion de l'entreprise : qui valide un achat, comment un stock est réservé, quand une fabrication démarre. Le mot personnalisé désigne ces règles, pas une couleur de tableau de bord.",
@@ -307,7 +307,7 @@ export const softwarePages: MoneyPage[] = [
     title: "Logiciel de gestion d'entreprise",
     description:
       "Le logiciel de gestion relie commandes, stocks et achats dans un seul état. Distinct d'un outil métier étroit et d'un CRM.",
-    h1: "Logiciel de gestion d'entreprise",
+    h1: "Logiciel de gestion : achats, stocks, ventes",
     cta: "Décrire ce qui n'est pas à jour",
     schema: "service",
     lede: "Un logiciel de gestion d'entreprise donne un seul état des commandes, des stocks et des achats. Les équipes disent souvent « gestion » avant de dire ERP. Le besoin est le même : arrêter les fichiers qui se contredisent entre le commercial, le dépôt et les achats.",

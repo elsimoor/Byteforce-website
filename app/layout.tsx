@@ -29,11 +29,10 @@ export const metadata: Metadata = {
   description: site.description,
   openGraph: {
     type: "website",
-    locale: "fr_MA",
+    locale: "fr_FR",
     siteName: site.name,
-    title: "Byte Force · Casablanca",
-    description: site.description,
   },
+  twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
 };
 

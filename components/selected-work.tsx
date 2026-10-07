@@ -2,26 +2,26 @@ import { projects } from "@/lib/content";
 
 const order = ["coco-inbox", "re-proche-de-moi", "dealkhir", "tourispeak"];
 
-const english: Record<string, { problem: string; solution: string; result: string }> = {
+const copy: Record<string, { problem: string; solution: string; result: string }> = {
   "coco-inbox": {
-    problem: "Email, files and notes were shared with no clear limit on who could see them, or for how long.",
-    solution: "A published product for temporary email, encrypted files and secure notes.",
-    result: "The product is online, from Montréal, since 2024.",
+    problem: "L'email, les fichiers et les notes partaient sans limite claire de durée ou de destinataire.",
+    solution: "Un produit publié pour l'email temporaire, les fichiers chiffrés et les notes sécurisées.",
+    result: "Le produit est en ligne, depuis Montréal, depuis 2024.",
   },
   "re-proche-de-moi": {
-    problem: "Nearby shops were hard to find in one place.",
-    solution: "A published platform with search, a map and business profiles.",
-    result: "The site is online in Lille, since 2024.",
+    problem: "Les commerces de proximité étaient difficiles à trouver dans un seul parcours.",
+    solution: "Une plateforme publiée, avec la recherche, la carte et les fiches d'établissements.",
+    result: "Le site est en ligne à Lille depuis 2024.",
   },
   dealkhir: {
-    problem: "Donations and organisations had no shared place.",
-    solution: "A published platform for organisations and donations.",
-    result: "The site is online in Casablanca, since 2024.",
+    problem: "Le don et les organisations n'avaient pas d'espace commun.",
+    solution: "Une plateforme publiée pour les organisations et les dons.",
+    result: "Le site est en ligne à Casablanca depuis 2024.",
   },
   tourispeak: {
-    problem: "The tourism network had no public site for the visits.",
-    solution: "A published site for audio tours and the network.",
-    result: "The site is online, from Montréal, since 2024.",
+    problem: "Le réseau touristique n'avait pas de site public pour les visites.",
+    solution: "Un site publié pour des visites audio et le réseau.",
+    result: "Le site est en ligne, depuis Montréal, depuis 2024.",
   },
 };
 
@@ -33,12 +33,12 @@ export function SelectedWork() {
   return (
     <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-12 lg:py-28" id="selected-work">
       <div className="mb-14">
-        <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">Selected software</span>
+        <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">Logiciels publiés</span>
         <h2 className="mt-1 font-headline text-3xl font-black tracking-tight text-on-surface lg:text-5xl">
-          Software we&apos;ve shipped.
+          Quatre produits déjà en ligne.
         </h2>
         <p className="mt-2 max-w-xl text-base text-on-surface-variant lg:text-lg">
-          Four published products. Each card is the live site, with the problem, what was built, and where it is online.
+          Chaque carte est le site en ligne : le problème, ce qui a été construit, et où c&apos;est publié.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -47,7 +47,7 @@ export function SelectedWork() {
             <a href={project.url} rel="noopener noreferrer">
               <img
                 src={project.shot}
-                alt={`${project.title}, the live site`}
+                alt={`${project.title}, capture du site en ligne`}
                 className="aspect-[16/10] w-full object-cover object-top"
               />
             </a>
@@ -57,21 +57,21 @@ export function SelectedWork() {
               </p>
               <h3 className="font-headline text-2xl font-bold text-on-surface">{project.title}</h3>
               <p className="text-sm leading-relaxed text-on-surface-variant">
-                <span className="font-semibold text-on-surface">Problem. </span>
-                {english[project.slug].problem}
+                <span className="font-semibold text-on-surface">Problème. </span>
+                {copy[project.slug].problem}
               </p>
               <p className="text-sm leading-relaxed text-on-surface-variant">
                 <span className="font-semibold text-on-surface">Solution. </span>
-                {english[project.slug].solution}
+                {copy[project.slug].solution}
               </p>
               <p className="text-sm leading-relaxed text-on-surface-variant">
-                <span className="font-semibold text-on-surface">Result. </span>
-                {english[project.slug].result}
+                <span className="font-semibold text-on-surface">Résultat. </span>
+                {copy[project.slug].result}
               </p>
               <div className="flex flex-wrap gap-4 pt-2 text-sm font-bold text-primary">
-                <a href={`/realisations/${project.slug}`}>Case study</a>
+                <a href={`/realisations/${project.slug}`}>Fiche</a>
                 <a href={project.url} rel="noopener noreferrer">
-                  Live site
+                  Site en ligne
                 </a>
               </div>
             </div>
@@ -82,7 +82,7 @@ export function SelectedWork() {
         href="/contact"
         className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
       >
-        Start a project
+        Parler d&apos;un projet
       </a>
     </section>
   );

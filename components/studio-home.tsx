@@ -28,21 +28,21 @@ export function StudioHome() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-container-high w-fit">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-xs font-mono tracking-wider font-semibold uppercase text-on-surface-variant">
-                PRODUCT ENGINEERING STUDIO / CASABLANCA &amp; GLOBAL
+                STUDIO LOGICIEL / CASABLANCA
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-black tracking-tight leading-[1.05] text-on-surface">
-              We build software for businesses that want to move faster.
+              Développement logiciel sur mesure, à Casablanca.
             </h1>
             <p className="text-lg lg:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-              You get a product you can launch, a fix when something breaks, and the code in your name when the work is done.
+              Byte Force conçoit le logiciel, l&apos;application ou le site, le corrige quand il casse, et remet le code au client.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-primary text-on-primary text-sm font-medium hover:bg-primary-container shadow-md hover:shadow-lg transition-all"
                 href="/contact"
               >
-                <span>Start a project</span>
+                <span>Parler d&apos;un projet</span>
                 <span className="material-symbols-outlined text-base">
                   arrow_forward
                 </span>
@@ -51,14 +51,14 @@ export function StudioHome() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-sm font-medium transition-colors"
                 href="/realisations"
               >
-                <span>Explore our work</span>
+                <span>Voir les travaux</span>
                 <span className="material-symbols-outlined text-base">
                   south
                 </span>
               </a>
             </div>
             <p className="text-sm text-on-surface-variant">
-              We reply within one business day. You can also write on{" "}
+              Réponse sous un jour ouvré. On peut aussi écrire sur{" "}
               <a href="https://wa.me/212666650696" className="font-semibold text-primary">
                 WhatsApp
               </a>{" "}
@@ -76,7 +76,7 @@ export function StudioHome() {
             >
               <img
                 src="/work/coco-inbox.jpg"
-                alt="Coco Inbox, a live product for temporary email, encrypted files and secure notes."
+                alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
                 className="aspect-[16/10] w-full object-cover object-top"
               />
               <div className="flex items-center justify-between gap-4 p-5">
@@ -146,21 +146,21 @@ export function StudioHome() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 flex flex-col space-y-4">
               <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                THE STARTING POINT
+                LE POINT DE DÉPART
               </span>
               <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight">
-                Your business is unique. Your software should be too.
+                Le logiciel suit le métier. Pas l&apos;inverse.
               </h2>
               <p className="text-base text-on-surface-variant leading-relaxed">
-                Off-the-shelf tools often force businesses to adapt their workflows around the software. ByteForce does the opposite. We build software around the way your business actually works.
+                Un outil du marché force souvent l&apos;équipe à changer sa façon de travailler. Byte Force fait l&apos;inverse : le logiciel reprend qui saisit, qui valide, qui relance.
               </p>
               <p className="text-base text-on-surface-variant leading-relaxed">
-                From internal tools and CRM systems to complete SaaS platforms and AI-powered products, we turn complex business requirements into simple, reliable software.
+                Le travail couvre l&apos;outil interne, le CRM, l&apos;application web, le SaaS et le site quand le projet en a besoin. Ce n&apos;est pas une agence de sites au forfait.
               </p>
               <p className="text-base text-on-surface-variant leading-relaxed">
-                {projects.length} published projects. The office is at Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca.{" "}
+                {projects.length} projets publiés. Le bureau est au Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca.{" "}
                 <a href="/a-propos" className="font-semibold text-primary">
-                  About the studio
+                  À propos du studio
                 </a>
                 .
               </p>
