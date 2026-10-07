@@ -17,7 +17,7 @@ export function Header() {
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
         <Link href="/" className="flex items-center gap-3">
-          <img alt="" className="h-8 w-auto object-contain" src="/mark.png" />
+          <img alt="" className="h-9 w-9 object-cover" src="/logo.png" />
           <span className="font-headline text-lg font-bold tracking-tight text-on-surface">ByteForce</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">

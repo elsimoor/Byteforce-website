@@ -21,8 +21,8 @@ export function OrganizationJsonLd() {
         url: site.url,
         email: site.email,
         telephone: site.phone,
-        image: `${site.url}/icon.svg`,
-        logo: `${site.url}/icon.svg`,
+        image: `${site.url}/logo.png`,
+        logo: `${site.url}/logo.png`,
         address: {
           "@type": "PostalAddress",
           streetAddress: `${site.street}, ${site.locality}`,

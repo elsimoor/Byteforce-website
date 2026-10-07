@@ -8,7 +8,7 @@ export function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-3">
-              <img alt="" className="h-6 w-auto object-contain" src="/mark.png" />
+              <img alt="" className="h-8 w-8 object-cover" src="/logo.png" />
               <span className="font-headline text-base font-bold tracking-tight text-on-surface">ByteForce</span>
             </Link>
             <p className="max-w-sm text-sm text-on-surface-variant">Software engineering studio.</p>
