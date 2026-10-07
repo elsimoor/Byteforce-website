@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { slugify } from "@/lib/catalog";
-import { getProject, getService } from "@/lib/content";
-import { getPageMeta } from "@/lib/db";
-
-export const dynamic = "force-dynamic";
+import { getProject, getService, projects } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
 
 const countryMark: Record<string, string> = {
   France: "FR",
@@ -20,9 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject(slug);
   if (!project) return {};
   const path = `/realisations/${project.slug}`;
-  const meta = getPageMeta(path);
-  const title = meta?.meta_title || `${project.title} · Byte Force`;
-  const description = meta?.meta_description || project.description;
+  const title = `${project.title} · Byte Force`;
+  const description = project.description;
   return {
     title: { absolute: title },
     description,

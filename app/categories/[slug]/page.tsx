@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCategory } from "@/lib/catalog";
-import { getPageMeta } from "@/lib/db";
-
-export const dynamic = "force-dynamic";
+import { categories, getCategory } from "@/lib/catalog";
 
 type Props = { params: Promise<{ slug: string }> };
+
+export function generateStaticParams() {
+  return categories().map((category) => ({ slug: category.slug }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const category = getCategory(slug);
   if (!category) return {};
-  const meta = getPageMeta(category.path);
-  const title = meta?.meta_title || `${category.title} · Byte Force`;
-  const description = meta?.meta_description || category.description;
+  const title = `${category.title} · Byte Force`;
+  const description = category.description;
   return {
     title: { absolute: title },
     description,
