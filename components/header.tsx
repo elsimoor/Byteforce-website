@@ -46,13 +46,15 @@ export function Header() {
           >
             Start a project →
           </Link>
-          <Link
-            href="/dashboard/login"
-            aria-label="Client portal"
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-primary"
-          >
-            <span className="material-symbols-outlined text-[18px] text-on-primary">person</span>
-          </Link>
+          {process.env.NODE_ENV === "development" ? (
+            <Link
+              href="/dashboard/login"
+              aria-label="Client portal"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-primary"
+            >
+              <span className="material-symbols-outlined text-[18px] text-on-primary">person</span>
+            </Link>
+          ) : null}
         </div>
       </div>
     </header>

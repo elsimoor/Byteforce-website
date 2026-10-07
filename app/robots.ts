@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      ...(process.env.NODE_ENV === "production" ? { disallow: ["/dashboard", "/dashboard/"] } : {}),
     },
     sitemap: `${site.url}/sitemap.xml`,
   };

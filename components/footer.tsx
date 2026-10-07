@@ -67,11 +67,13 @@ export function Footer() {
                   WhatsApp
                 </a>
               </li>
-              <li className="leading-none">
-                <Link href="/dashboard/login" className="text-on-surface-variant transition-colors hover:text-on-surface">
-                  Client Portal
-                </Link>
-              </li>
+              {process.env.NODE_ENV === "development" ? (
+                <li className="leading-none">
+                  <Link href="/dashboard/login" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                    Client Portal
+                  </Link>
+                </li>
+              ) : null}
             </ul>
           </div>
         </div>
