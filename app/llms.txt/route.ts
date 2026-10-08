@@ -50,6 +50,7 @@ export function GET() {
     `- [Combien coûte un CRM personnalisé](${origin}/insights/cout-crm-personnalise) : pas de montant public, la note suit le cycle.`,
     `- [CRM ou Excel, pour une entreprise](${origin}/insights/crm-ou-excel) : le fichier suffit tant qu'une seule personne l'écrit.`,
     `- [Remplacer Excel par un CRM](${origin}/insights/remplacer-excel-par-un-crm) : quand deux personnes écrasent le même dossier.`,
+    `- [Quand utiliser un CRM](${origin}/insights/quand-utiliser-un-crm) : quand la relance ne tient plus dans une tête ou un fichier.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

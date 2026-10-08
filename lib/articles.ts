@@ -1824,6 +1824,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "quand-utiliser-un-crm",
+    title: "Quand utiliser un CRM",
+    description:
+      "Quand utiliser un CRM : quand la relance ne tient plus dans une tête ou un fichier. Byte Force, Casablanca. Pas de prix public. Écrire.",
+    h1: "Quand utiliser un CRM",
+    date: "2026-10-08",
+    lede: "Quand utiliser un CRM : quand la relance, le devis ou le statut ne tiennent plus dans une tête ou dans un fichier qu'une seule personne maîtrise. Pas avant. Byte Force est à Casablanca. Pas de prix public. [[/contact|Écrire]] pour dire où la relance se perd.",
+    sections: [
+      {
+        heading: "Le moment",
+        paragraphs: [
+          "Le moment est là quand un client attend une réponse que personne ne retrouve, ou quand deux personnes annoncent deux étapes différentes pour le même dossier. Utiliser un CRM, c'est donner un endroit unique à cette étape. L'offre est le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM sur mesure]], si le cycle n'est pas celui d'un éditeur. Sinon, l'outil du marché peut suffire.",
+          "Le moment n'est pas là pour une liste de dix noms, tenue par le dirigeant seul. Un tableur reste plus court. Le premier échange sert à ne pas construire.",
+        ],
+      },
+      {
+        heading: "Ce qu'utiliser veut dire",
+        paragraphs: [
+          "Utiliser veut dire : créer le dossier, le faire avancer, voir qui doit relancer aujourd'hui. Pas installer cinquante modules. Pas remplacer la comptabilité. Les rôles sont ceux qui existent déjà. La première version s'arrête à ce geste.",
+          "À Casablanca, Technopark, boulevard Dammam, on peut dérouler trois dossiers réels. Pas de bureau en France ni au Canada. Pas de grille. Le montant suivra les étapes retenues, pas le mot CRM.",
+        ],
+      },
+      {
+        heading: "Ce qui est livré si on construit",
+        paragraphs: [
+          "Si le cycle est propre à l'entreprise, le code, le dépôt et l'hébergement livré lui reviennent. Un acompte après un périmètre écrit. Pas de délai fixe : souvent plusieurs semaines. [[/solutions/logiciel-pme|Une PME]] n'a pas besoin du CRM d'un groupe pour commencer.",
+          "On ne publie pas un taux de relance, un nombre de fiches, ou une note. Ces chiffres ne sont pas des faits du studio. Les projets en ligne ne sont pas des CRM de démonstration.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand vous pouvez raconter la dernière relance perdue. Si vous ne pouvez pas, le CRM est en avance. Si vous pouvez, apportez l'étape et qui devait la faire.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Raconter la relance]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire où la relance se perd" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM sur mesure" },
+      { href: "/solutions/logiciel-pme", label: "Pour une PME" },
+    ],
+    en: {
+      title: "When to use a CRM",
+      description:
+        "Use a CRM when the follow-up no longer fits in one head or one file. Byte Force, Casablanca. No public price. Write with the lost follow-up.",
+      h1: "When to use a CRM",
+      lede: "When to use a CRM: when the follow-up, the quote or the status no longer fit in one head or in a file one person controls. Not before. Byte Force is in Casablanca. No public price. [[/contact|Write]] and say where the follow-up gets lost.",
+      sections: [
+      {
+        heading: "The moment",
+        paragraphs: [
+          "The moment is here when a customer waits for an answer nobody can find, or when two people announce two different steps for the same file. Using a CRM means giving that step one place. The offer is a custom CRM, if the cycle is not a vendor's cycle. Otherwise the market tool can be enough.",
+          "The moment is not here for a list of ten names, kept by the owner alone. A spreadsheet stays shorter. The first conversation is there so that nothing gets built.",
+        ],
+      },
+      {
+        heading: "What using means",
+        paragraphs: [
+          "Using means: create the file, move it forward, see who must follow up today. Not installing fifty modules. Not replacing accounting. The roles are the ones that already exist. The first version stops at that action.",
+          "In Casablanca, Technopark, boulevard Dammam, three real files can be walked through. No office in France or Canada. No grid. The amount will follow the steps that were kept, not the word CRM.",
+        ],
+      },
+      {
+        heading: "What is delivered if it is built",
+        paragraphs: [
+          "If the cycle belongs to the company, the code, the repository and the delivered hosting return to it. A deposit after a written scope. No fixed schedule: often several weeks. A small company does not need a group's CRM to start.",
+          "No follow-up rate, no count of cards, and no score is published. Those figures are not facts of the studio. Projects online are not demo CRMs.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when you can tell the story of the last follow-up that was lost. If you cannot, the CRM is early. If you can, bring the step and who was supposed to do it.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Tell the follow-up]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
