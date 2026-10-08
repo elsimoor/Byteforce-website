@@ -1014,6 +1014,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "quand-creer-un-logiciel-sur-mesure",
+    title: "Quand créer un logiciel sur mesure",
+    description:
+      "Quand créer un logiciel sur mesure : quand le marché tord le métier. Byte Force, Casablanca. Pas de prix public. Premier échange gratuit.",
+    h1: "Quand créer un logiciel sur mesure",
+    date: "2026-10-08",
+    lede: "Quand créer un logiciel sur mesure : quand le travail ne rentre plus dans l'outil du marché sans tordre le métier. Pas avant. Byte Force, au Technopark à Casablanca, commence par cette question. Il n'y a pas de prix public. [[/contact|Écrire]] si le geste coince déjà chaque semaine.",
+    sections: [
+      {
+        heading: "Les signes que le moment est là",
+        paragraphs: [
+          "Le moment est là quand plusieurs personnes ressaisissent la même information, quand une validation n'existe que dans une conversation, ou quand un état ne sort pas le soir. Le coût est déjà payé en heures. Il n'est seulement pas sur une facture de logiciel. Le [[/developpement-logiciel-sur-mesure-maroc|développement]] devient raisonnable à ce moment-là, pas parce qu'un voisin a « digitalisé ».",
+          "Le moment n'est pas là pour une comptabilité standard, une messagerie, ou un tableur de dix lignes. Créer un logiciel alors, c'est payer pour reconstruire un outil déjà vendu. Le premier échange sert à le dire.",
+        ],
+      },
+      {
+        heading: "Ce qu'il faut pouvoir nommer",
+        paragraphs: [
+          "Avant d'écrire une ligne, on doit pouvoir nommer le geste, les rôles, et le branchement qui doit rester. Qui crée le dossier, qui le valide, qui l'exporte. Sans ces trois noms, le projet est une liste de souhaits. On ne promet pas un nombre de semaines : une première version tient souvent en plusieurs semaines, selon ces noms.",
+          "Le bureau est à Casablanca, boulevard Dammam, Aïn Chock, du lundi au vendredi, de 9 h à 19 h. On peut montrer le fichier autour de la table. Il n'y a pas de bureau en France ni au Canada. [[/solutions/logiciel-pme|Une PME]] et une entreprise déjà outillée ne passent pas par la même porte, mais la question de départ est la même.",
+        ],
+      },
+      {
+        heading: "Ce que créer ne veut pas dire",
+        paragraphs: [
+          "Créer ne veut pas dire tout remplacer. L'email, le paiement ou l'outil déjà payé peuvent rester branchés. Créer ne veut pas dire non plus un logiciel que l'éditeur peut fermer : à la remise, le code, le dépôt et les comptes d'hébergement livrés sont à l'entreprise.",
+          "Créer ne fixe pas un prix public. La note suit les écrans, les rôles et les branchements, après un périmètre écrit. Les pages du site ne sont pas un devis. Un « à partir de » en dirhams décrirait un forfait, pas ce circuit.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le signe est là et que le geste a un nom. Apporter un exemple de dossier, pas un cahier de cinquante pages. Dire ce qui peut attendre la version d'après.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré. [[/contact|Décrire le moment]] suffit. Le téléphone du bureau est le +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire où ça coince" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le logiciel sur mesure" },
+      { href: "/solutions/logiciel-pme", label: "Pour une PME" },
+    ],
+    en: {
+      title: "When to build custom software",
+      description:
+        "Build custom software when the market tool bends the job. Byte Force, Casablanca. No public price. The first talk is free.",
+      h1: "When to build custom software",
+      lede: "Custom software is worth building when the work no longer fits a market tool without bending the job. Not before. Byte Force, at Technopark in Casablanca, starts with that question. There is no public price. [[/contact|Write]] if the action already slips every week.",
+      sections: [
+      {
+        heading: "The signs that the moment is here",
+        paragraphs: [
+          "The moment is here when several people retype the same information, when an approval exists only in a conversation, or when a report cannot be produced in the evening. The cost is already paid in hours. It is only not on a software invoice. Development becomes reasonable then, not because a neighbour has « gone digital ».",
+          "The moment is not here for standard accounting, a mailbox, or a ten-line spreadsheet. Building software then means paying to rebuild a tool already on sale. The first conversation is there to say so.",
+        ],
+      },
+      {
+        heading: "What you must be able to name",
+        paragraphs: [
+          "Before a line is written, someone must be able to name the action, the roles, and the connection that must stay. Who creates the file, who approves it, who exports it. Without those three names, the project is a wish list. There is no promised number of weeks: a first version often takes several weeks, according to those names.",
+          "The office is in Casablanca, boulevard Dammam, Aïn Chock, Monday to Friday, 9:00 to 19:00. The file can be shown around the table. There is no office in France or Canada. A small company and a company that already has tools do not walk through the same door, but the opening question is the same.",
+        ],
+      },
+      {
+        heading: "What building does not mean",
+        paragraphs: [
+          "Building does not mean replacing everything. Email, payment, or a tool already paid for can stay connected. Building also does not mean software a vendor can switch off: at handover, the code, the repository and the delivered hosting accounts belong to the company.",
+          "Building does not set a public price. The figure follows the screens, the roles and the connections, after a written scope. The pages of the site are not a quote. An amount « from » in dirhams would describe a package, not this workflow.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the sign is there and the action has a name. Bring an example of a file, not a fifty-page specification. Say what can wait for a later version.",
+          "Thirty minutes, free. A reply within one business day. [[/contact|Describe the moment]] is enough. The office phone is +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
