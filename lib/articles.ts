@@ -2891,6 +2891,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "developpement-application-mobile-maroc",
+    title: "Développement application mobile Maroc",
+    description:
+      "Développement d'une application mobile au Maroc : le geste sur le téléphone, depuis Casablanca. Android, iOS, ou les deux. Pas de prix public.",
+    h1: "Développement application mobile Maroc",
+    date: "2026-10-08",
+    lede: "Le développement d'une application mobile au Maroc part du geste que quelqu'un doit finir sur le téléphone, pas d'une envie d'être « sur les stores ». Byte Force le fait depuis le Technopark, à Casablanca. Pas de prix public. [[/contact|Écrire]] pour dire ce geste, et si le téléphone est vraiment l'endroit.",
+    sections: [
+      {
+        heading: "Le téléphone, ou le navigateur",
+        paragraphs: [
+          "Une application mobile a un sens quand le geste se fait loin d'un bureau : un rendez-vous, une visite, une notification que la personne doit voir tout de suite. L'offre est le [[/developpement-application-mobile-maroc|développement mobile]]. Android et iOS ne sont pas le même périmètre. [[/developpement-application-mobile-maroc/android|Android]] est un choix, pas un synonyme de mobile.",
+          "Si le geste se fait devant un écran de bureau, une application web est souvent plus courte. Construire les deux « pour être complet » double le travail sans rendre le geste plus sûr. Le premier échange sert à ne garder qu'un endroit.",
+        ],
+      },
+      {
+        heading: "Ce qui est déjà en ligne",
+        paragraphs: [
+          "Zainek est une application Android, avec le site zainek.com, pour un rendez-vous beauté. Tourispeak est une application Android de visites audio, à côté du site. Les fiches Play existent. On ne publie pas leurs notes, leurs téléchargements, ou un chiffre d'affaires. Ce sont des projets, pas une grille de ce que toute application marocaine doit contenir.",
+          "Le bureau est à Casablanca, boulevard Dammam, Aïn Chock. Pas de bureau en France ni au Canada. Pas de prix public. Le montant suivra les écrans, les rôles, et le fait de viser un store ou deux. Périmètre écrit, acompte, code livré à l'entreprise. Pas de délai fixe : souvent plusieurs semaines.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne promet pas",
+        paragraphs: [
+          "Pas une place dans le store comme résultat. Pas un nombre de téléchargements. Pas une application qui fait le site, le CRM et la paie. La première version permet le geste. Le reste attend. À la remise, le code et les comptes livrés, y compris le compte développeur s'il a été ouvert pour le projet, sont traités dans le périmètre, pas improvisés le jour de la publication.",
+          "On ne copie pas les chiffres affichés sur les sites des clients. Une capture d'écran montre le produit. Elle ne devient pas une statistique de Byte Force.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste a un nom et que le téléphone est l'endroit où il se passe. Dire Android, iOS, ou pourquoi les deux. Si vous ne savez pas, apportez le geste : la plateforme se déduit.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste sur le téléphone" },
+      { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
+      { href: "/developpement-application-mobile-maroc/android", label: "Android" },
+    ],
+    en: {
+      title: "Mobile app development in Morocco",
+      description:
+        "Mobile app development in Morocco starts from the action on the phone, from Casablanca. Android, iOS, or both. No public price.",
+      h1: "Mobile app development in Morocco",
+      lede: "Mobile app development in Morocco starts from the action someone must finish on the phone, not from a wish to be « on the stores ». Byte Force does it from Technopark, in Casablanca. No public price. [[/contact|Write]] and name that action, and whether the phone is really the place.",
+      sections: [
+      {
+        heading: "The phone, or the browser",
+        paragraphs: [
+          "A mobile app makes sense when the action happens away from a desk: an appointment, a visit, a notification the person must see at once. The offer is mobile development. Android and iOS are not the same scope. Android is a choice, not a synonym for mobile.",
+          "If the action happens at a desk screen, a web application is often shorter. Building both « to be complete » doubles the work without making the action safer. The first conversation is there to keep one place.",
+        ],
+      },
+      {
+        heading: "What is already online",
+        paragraphs: [
+          "Zainek is an Android app, with the site zainek.com, for a beauty appointment. Tourispeak is an Android app of audio visits, beside the site. The Play listings exist. Their ratings, download counts, or revenue are not published. They are projects, not a grid of what every Moroccan app must contain.",
+          "The office is in Casablanca, boulevard Dammam, Aïn Chock. No office in France or Canada. No public price. The amount will follow the screens, the roles, and whether one store or two is in scope. A written scope, a deposit, the code delivered to the company. No fixed schedule: often several weeks.",
+        ],
+      },
+      {
+        heading: "What is not promised",
+        paragraphs: [
+          "Not a store ranking as a result. Not a download count. Not an app that is also the site, the CRM and payroll. The first version allows the action. The rest waits. At handover, the code and the delivered accounts, including a developer account if one was opened for the project, are in the scope, not improvised on publication day.",
+          "Figures shown on client sites are not copied. A screenshot shows the product. It does not become a Byte Force statistic.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action has a name and the phone is where it happens. Say Android, iOS, or why both. If you do not know, bring the action: the platform follows.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
