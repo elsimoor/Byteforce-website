@@ -56,7 +56,10 @@ export default function AiPage() {
           <li>
             <Link href="/insights/site-lisible-par-une-machine">Pourquoi une machine doit pouvoir citer le site</Link>. La lecture du 8 octobre 2026 est sur <Link href="/insights/quatre-lectures-a-cent">quatre lectures à 100</Link>. Puis <Link href="/contact">écrire</Link>.
           </li>
-          <li>
+                    <li>
+            <Link href="/insights/intelligence-artificielle-entreprise-maroc">L'intelligence artificielle dans une entreprise, d'abord comme une règle stable</Link>. Puis <Link href="/contact">écrire</Link>.
+          </li>
+<li>
             <Link href="/audit/json?url=https://byteforce.ma">/audit/json</Link>, le même passage en JSON.
           </li>
         </ul>
