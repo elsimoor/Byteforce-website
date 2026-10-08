@@ -431,6 +431,7 @@ export const projects: Project[] = [
       "Expérience gastronomique et événementielle haut de gamme au cœur de la métropole lilloise.",
     url: "https://nu-lille.fr/",
     serviceSlug: "creation-site-web",
+    shot: "/work/nu-lille.jpg",
     pages: [{ label: "Événements", href: "https://nu-lille.fr/evenements/" }],
   },
   {
@@ -484,6 +485,7 @@ export const projects: Project[] = [
     description: "Site vitrine pour les services de transport sanitaire professionnel à Roubaix.",
     url: "https://ambulances-valcq.fr/",
     serviceSlug: "creation-site-web",
+    shot: "/work/ambulances-valcq.jpg",
     pages: [],
   },
   {
@@ -497,6 +499,7 @@ export const projects: Project[] = [
       "Aménagements paysagers et conception d'espaces verts dans le Nord de la France.",
     url: "https://leshautspaysages.fr/",
     serviceSlug: "creation-site-web",
+    shot: "/work/les-hauts-paysages.jpg",
     pages: [{ label: "Prestations", href: "https://leshautspaysages.fr/prestations/" }],
   },
   {
@@ -547,6 +550,7 @@ export const projects: Project[] = [
       "Universal Aviation Services. Solutions e-commerce pour le secteur aéronautique au Maroc.",
     url: "https://uas.ma/",
     serviceSlug: "creation-site-web",
+    shot: "/work/uas.jpg",
     pages: [],
   },
   {
@@ -592,7 +596,7 @@ export const projects: Project[] = [
     problem: "Chercher un salon ou un nail artist et réserver n'avait pas d'application publique.",
     solution: "Zainek : une application Android sur le Play Store, et le site zainek.com.",
     result: "L'application et le site sont en ligne. La fiche Play indique une mise à jour le 30 août 2026.",
-    shot: "/work/zainek-1.webp",
+    shot: "/work/zainek-site.png",
     screens: [
       { src: "/work/zainek-1.webp", width: 265, height: 592 },
       { src: "/work/zainek-2.webp", width: 265, height: 592 },
@@ -616,6 +620,7 @@ export const projects: Project[] = [
       "Studio de création et production visuelle basé à Marrakech, explorant les frontières du design contemporain.",
     url: "http://agencywonderland.com/",
     serviceSlug: "design-graphique",
+    shot: "/work/agency-wonderland.png",
     pages: [{ label: "Galerie", href: "http://agencywonderland.com/gallery-grid/" }],
   },
   {
