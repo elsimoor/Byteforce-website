@@ -302,7 +302,7 @@ export const solutionPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/solutions/automatisation-entreprise", label: "Automatiser l'entreprise" },
-      { href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier/gestion", label: "Suivi de dossiers" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier", label: "Suivi de dossiers" },
       contact,
     ],
   },

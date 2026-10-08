@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StudioHome } from "@/components/studio-home";
+import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -7,13 +8,11 @@ export const metadata: Metadata = {
   description:
     "Byte Force conçoit des logiciels, des applications et des sites sur mesure à Casablanca. Écrire pour un premier échange. Réponse sous un jour ouvré.",
   alternates: { canonical: `${site.url}/` },
-  openGraph: {
-    locale: "fr_FR",
-    url: `${site.url}/`,
-    title: "Développement logiciel sur mesure à Casablanca · Byte Force",
-    description:
-      "Byte Force conçoit des logiciels, des applications et des sites sur mesure à Casablanca. Écrire pour un premier échange. Réponse sous un jour ouvré.",
-  },
+  openGraph: openGraph(
+    "/",
+    "Développement logiciel sur mesure à Casablanca · Byte Force",
+    "Byte Force conçoit des logiciels, des applications et des sites sur mesure à Casablanca. Écrire pour un premier échange. Réponse sous un jour ouvré.",
+  ),
 };
 
 export default function HomePage() {

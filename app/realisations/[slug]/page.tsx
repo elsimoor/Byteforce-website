@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { slugify } from "@/lib/catalog";
+import { getCity, slugify } from "@/lib/catalog";
 import { getProject, getService, projects } from "@/lib/content";
+import { openGraph } from "@/lib/open-graph";
+import { projectNotes } from "@/lib/project-notes";
+import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -27,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description,
     alternates: { canonical: path },
-    openGraph: { title, description },
+    openGraph: openGraph(path, title, description),
   };
 }
 
@@ -36,10 +39,33 @@ export default async function ProjectPage({ params }: Props) {
   const project = getProject(slug);
   if (!project) notFound();
   const service = getService(project.serviceSlug);
+  const place = getCity(slugify(project.city));
+  const notes = projectNotes[project.slug] ?? [];
   const mark = countryMark[project.country] ?? project.country;
+  const pageUrl = `${site.url}/realisations/${project.slug}`;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: project.title,
+    description: project.description,
+    inLanguage: "fr",
+    datePublished: project.year,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    image: project.shot ? `${site.url}${project.shot}` : `${site.url}/opengraph-image`,
+    author: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+      logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
+    },
+    about: { "@type": "CreativeWork", name: project.title, url: project.url },
+  };
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <header className="relative flex min-h-[78svh] flex-col justify-between overflow-hidden bg-ink px-6 py-10 text-paper md:px-12 md:py-14">
         <span className="plate-mark" aria-hidden="true">
           {mark}
@@ -49,7 +75,7 @@ export default async function ProjectPage({ params }: Props) {
           {" · "}
           <Link href={`/categories/${slugify(project.category)}`}>{project.category}</Link>
           {" · "}
-          <Link href={`/villes/${slugify(project.city)}`}>{project.city}</Link>
+          <Link href={place?.path ?? `/villes/${slugify(project.city)}`}>{project.city}</Link>
           {" · "}
           {project.year}
         </p>
@@ -79,6 +105,13 @@ export default async function ProjectPage({ params }: Props) {
                 <span className="font-semibold">Résultat. </span>
                 {project.result}
               </p>
+            </div>
+          ) : null}
+          {notes.length > 0 ? (
+            <div className="mt-10 space-y-4 text-base leading-relaxed">
+              {notes.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
           ) : null}
         </div>

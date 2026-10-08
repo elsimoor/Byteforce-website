@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LeadForm } from "@/components/lead-form";
 import { getService, projectsForService, services } from "@/lib/content";
+import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description: service.summary,
     alternates: { canonical: path },
-    openGraph: { title, description: service.summary, locale: "fr_FR", url: path },
+    openGraph: openGraph(path, title, service.summary),
   };
 }
 

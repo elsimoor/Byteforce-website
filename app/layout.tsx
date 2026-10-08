@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: site.name,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Byte Force, Casablanca" }],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },

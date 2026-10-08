@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LeadForm } from "@/components/lead-form";
+import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -7,13 +8,11 @@ export const metadata: Metadata = {
   description:
     "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel sur mesure.",
   alternates: { canonical: "/contact" },
-  openGraph: {
-    locale: "fr_FR",
-    url: "/contact",
-    title: "Contact · Byte Force",
-    description:
-      "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel sur mesure.",
-  },
+  openGraph: openGraph(
+    "/contact",
+    "Contact · Byte Force",
+    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel sur mesure.",
+  ),
 };
 
 type Props = { searchParams: Promise<{ sent?: string; error?: string }> };

@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { entryPages } from "@/lib/money";
 import { services } from "@/lib/content";
+import { entryPages } from "@/lib/money";
+import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
   title: "Services à Casablanca",
   description:
     "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
   alternates: { canonical: "/services" },
-  openGraph: {
-    locale: "fr_FR",
-    url: "/services",
-    title: "Services à Casablanca",
-    description:
-      "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
-  },
+  openGraph: openGraph(
+    "/services",
+    "Services à Casablanca",
+    "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
+  ),
 };
 
 export default function ServicesPage() {

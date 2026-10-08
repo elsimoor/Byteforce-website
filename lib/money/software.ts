@@ -315,7 +315,7 @@ export const softwarePages: MoneyPage[] = [
       {
         h: "Gestion n'est pas le mot fourre-tout",
         p: [
-          "Un [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier/gestion|logiciel de gestion sur mesure]] pour un seul métier reste côté logiciel métier. Ici, plusieurs services dépendent les uns des autres. Si seul le commerce souffre, restez sur le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]].",
+          "Un [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier|logiciel de gestion sur mesure]] pour un seul métier reste côté logiciel métier. Ici, plusieurs services dépendent les uns des autres. Si seul le commerce souffre, restez sur le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]].",
           "L'erreur fréquente est de vouloir « tout gérer » : congés, flotte, prospects, stock, paie. Le logiciel devient une coquille. On coupe jusqu'au circuit dont le décalage coûte de l'argent chaque semaine.",
         ],
       },

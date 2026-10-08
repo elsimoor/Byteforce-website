@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LeadForm } from "@/components/lead-form";
 import { cities, getCity } from "@/lib/catalog";
+import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -16,7 +17,9 @@ const offers = [
 ];
 
 export function generateStaticParams() {
-  return cities().map((city) => ({ slug: city.slug }));
+  return cities()
+    .filter((city) => city.slug !== "casablanca")
+    .map((city) => ({ slug: city.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -27,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: city.title },
     description: city.description,
     alternates: { canonical: city.path },
-    openGraph: { title: city.title, description: city.description, locale: "fr_FR", url: city.path },
+    openGraph: openGraph(city.path, city.title, city.description),
     robots: { index: false, follow: true },
   };
 }

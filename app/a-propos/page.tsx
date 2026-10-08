@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { projects, type Project } from "@/lib/content";
+import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -8,13 +9,11 @@ export const metadata: Metadata = {
   description:
     "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.",
   alternates: { canonical: "/a-propos" },
-  openGraph: {
-    locale: "fr_FR",
-    url: "/a-propos",
-    title: "Studio logiciel à Casablanca",
-    description:
-      "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.",
-  },
+  openGraph: openGraph(
+    "/a-propos",
+    "Studio logiciel à Casablanca",
+    "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.",
+  ),
 };
 
 const countries = new Set(projects.map((project) => project.country)).size;
@@ -50,22 +49,49 @@ export default function AboutPage() {
       </section>
       <section className="grid gap-10 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
         <div className="md:col-span-7">
-          <h2 className="display text-4xl">Ce qui est déjà en ligne</h2>
+          <h2 className="display text-4xl">Ce que le studio fait</h2>
+          <div className="mt-8 max-w-xl space-y-4 leading-relaxed">
+            <p>
+              Le cœur du travail est un logiciel pour une entreprise : un dossier, un circuit, une règle que le tableur
+              ou l&apos;abonnement ne sait pas tenir. Le site, le référencement, l&apos;hébergement et un plugin
+              WordPress existent quand le projet en a besoin. Ce n&apos;est pas une agence qui vend des sites au forfait,
+              avec un thème et trois pages.
+            </p>
+            <p>
+              Le bureau est au {site.street}, {site.locality}, {site.postal} {site.city}. On y répond du lundi au
+              vendredi, de 9h à 19h, au {site.phoneDisplay} ou par {site.email}. Il n&apos;y a pas de bureau en France
+              ni au Canada. Les projets lillois, roubaisiens et montréalais du catalogue ont été faits depuis
+              Casablanca.
+            </p>
+            <p>
+              On ne publie pas de biographie de fondateur, de photo d&apos;équipe, ni de témoignage. La preuve publique
+              est le site en ligne de chaque projet, avec sa ville et son année. Quand un chiffre n&apos;est pas dans le
+              dossier, il n&apos;apparaît pas.
+            </p>
+          </div>
+          <h2 className="display mt-16 text-4xl">Ce qui est déjà en ligne</h2>
           <ul className="mt-8">
-            {named.map((project) => (
+            {projects.map((project) => (
               <li key={project.slug} className="border-t border-line">
-                <Link href={`/realisations/${project.slug}`} className="flex items-baseline justify-between gap-6 py-4">
-                  <span className="text-2xl">{project.title}</span>
-                  <span className="text-sm text-mute">
-                    {project.city} · {project.year}
+                <Link href={`/realisations/${project.slug}`} className="block py-4">
+                  <span className="flex items-baseline justify-between gap-6">
+                    <span className="text-2xl">{project.title}</span>
+                    <span className="shrink-0 text-sm text-mute">
+                      {project.city} · {project.year}
+                    </span>
                   </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-mute">{project.description}</span>
                 </Link>
               </li>
             ))}
           </ul>
           <p className="mt-8 max-w-xl leading-relaxed">
-            Le catalogue compte aussi des sites vitrines et des boutiques, en France et au Maroc. Chaque fiche dit ce
-            qui a été publié, sans chiffre inventé.
+            Quatre de ces fiches ont une capture : {named.map((project) => project.title).join(", ")}. Les autres
+            restent un index, parce que le dossier n&apos;a pas de capture. Chaque fiche dit ce qui a été publié.
+          </p>
+          <p className="mt-6 max-w-xl leading-relaxed">
+            Pour commencer, le formulaire demande le nom, l&apos;email et le projet. La réponse part sous un jour ouvré.
+            Le code, le dépôt et les comptes livrés reviennent au client.
           </p>
           <p className="mt-6">
             <Link href="/contact" className="border-b border-ink pb-1">

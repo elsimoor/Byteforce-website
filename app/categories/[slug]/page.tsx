@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, getCategory } from "@/lib/catalog";
+import { openGraph } from "@/lib/open-graph";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description,
     alternates: { canonical: category.path },
-    openGraph: { title, description, locale: "fr_FR", url: category.path },
+    openGraph: openGraph(category.path, title, description),
     robots: { index: false, follow: true },
   };
 }

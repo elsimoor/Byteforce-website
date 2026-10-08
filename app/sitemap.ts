@@ -23,10 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...moneyPages
       .filter((page) => {
         const path = `/${page.path}`;
-        const already =
-          path === "/developpement-logiciel-casablanca" ||
-          services.some((service) => service.href === path);
-        return !already;
+        return !services.some((service) => service.href === path);
       })
       .map((page) => `${site.url}/${page.path}`),
     ...projects.map((project) => `${site.url}/realisations/${project.slug}`),

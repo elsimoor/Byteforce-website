@@ -45,6 +45,17 @@ function crashed(html) {
   return /Application error/i.test(html) || /Server Components render/i.test(html);
 }
 
+function words(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<(header|nav|footer)[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(Boolean).length;
+}
+
 async function get(path, { redirect = "follow", method = "GET" } = {}) {
   const url = path.startsWith("http") ? path : `${origin}${path}`;
   const res = await fetch(url, {
@@ -88,6 +99,7 @@ async function main() {
   check("sitemap omits city and category doorway URLs", !locs.some((url) => url.includes("/villes/") || url.includes("/categories/")));
   check("sitemap omits the redirecting service URLs", !locs.some((url) => url.includes("/services/logiciel-sur-mesure") || url.includes("/services/applications-mobiles")));
   check("sitemap lists the homepage without a trailing slash", locs.includes(origin));
+  check("sitemap lists the Casablanca page", locs.includes(`${origin}/developpement-logiciel-casablanca`));
 
   const cities = ["/villes/lille", "/villes/tanger"];
   for (const path of cities) {
@@ -109,7 +121,11 @@ async function main() {
     check(`${path} title`, titleOf(page.text).includes(expected), titleOf(page.text));
     check(`${path} has sections and a FAQ`, headings.length >= 2 && page.text.includes("FAQPage"), `${headings.length} H2`);
     check(`${path} did not crash`, page.status === 200 && !crashed(page.text));
+    check(`${path} has an Open Graph image`, meta(page.text, "og:image").includes("opengraph-image"));
   }
+
+  const category = await get("/categories/e-commerce");
+  check("category page is noindex", category.status === 200 && meta(category.text, "robots").includes("noindex"), meta(category.text, "robots"));
 
   const contact = await get("/contact");
   check("contact has a canonical", canonicalOf(contact.text) === `${origin}/contact`, canonicalOf(contact.text));
@@ -120,11 +136,13 @@ async function main() {
   const about = await get("/a-propos");
   check("about title names the studio", titleOf(about.text).includes("Studio logiciel à Casablanca"), titleOf(about.text));
   check("about states there is no office in France", about.text.includes("Pas de bureau en France"));
+  check("about is more than a stub", words(about.text) >= 250, `${words(about.text)} words`);
   check("about Open Graph is specific", meta(about.text, "og:description").includes("Casablanca") && !meta(about.text, "og:title").endsWith("· Casablanca"));
 
   const insights = await get("/insights");
   check("insights title is French", titleOf(insights.text).includes("Décider avant de construire"), titleOf(insights.text));
   check("insights description is French", /remplacer|entreprise|application/i.test(meta(insights.text, "description")), meta(insights.text, "description").slice(0, 80));
+  check("insights explains the published decisions", words(insights.text) >= 250, `${words(insights.text)} words`);
 
   const servicesIndex = await get("/services");
   check("services index title names Casablanca", titleOf(servicesIndex.text).includes("Services à Casablanca"), titleOf(servicesIndex.text));
@@ -137,11 +155,22 @@ async function main() {
     !coco.text.includes("/services/logiciel-sur-mesure") && !coco.text.includes("/services/applications-mobiles"),
   );
 
-  const projects = ["/realisations/nu-lille", "/realisations/dealkhir", "/realisations"];
+  const projects = ["/realisations/nu-lille", "/realisations/dealkhir", "/realisations/uas", "/realisations"];
   for (const path of projects) {
     const page = await get(path);
     check(`${path} renders`, page.status === 200 && titleOf(page.text).includes("Byte Force") && !crashed(page.text), titleOf(page.text));
+    if (path !== "/realisations") {
+      check(`${path} has locale, image and an article`, meta(page.text, "og:locale") === "fr_FR" && meta(page.text, "og:image").includes("opengraph-image") && page.text.includes('"Article"'), `${words(page.text)} words`);
+      check(`${path} is not a stub`, words(page.text) >= 250, `${words(page.text)} words`);
+    }
   }
+  const dealkhir = await get("/realisations/dealkhir");
+  check("Dealkhir links Casablanca to the money page", dealkhir.text.includes("/developpement-logiciel-casablanca") && !dealkhir.text.includes("/villes/casablanca"));
+  const gestion = await get("/developpement-logiciel-sur-mesure-maroc/erp/logiciel-gestion-entreprise");
+  check(
+    "gestion page links to the final métier URL",
+    gestion.text.includes("/developpement-logiciel-sur-mesure-maroc/logiciel-metier") && !gestion.text.includes("/logiciel-metier/gestion"),
+  );
   const listing = await get("/realisations");
   check("realisations listing shows a project screenshot", listing.text.includes("/work/coco-inbox.jpg"));
 
