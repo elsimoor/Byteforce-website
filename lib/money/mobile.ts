@@ -28,7 +28,7 @@ export const mobilePages: MoneyPage[] = [
       {
         h: "Ce que le catalogue ne montre pas",
         p: [
-          "Les projets publics de Byte Force sont des sites et des plateformes web. Il n'y a pas, dans le catalogue, d'application native publiée sur l'App Store ou le Play Store. Le présenter autrement serait faux. Le travail mobile se décide donc sur le besoin, pas sur une capture recyclée.",
+          "Deux applications Android sont publiques : [[/realisations/zainek|Zainek]], pour réserver un salon, et [[/realisations/tourispeak|Tourispeak]], pour des visites audio. Les fiches Play et les captures sont sur ces pages. Il n'y a pas d'application iOS vérifiée dans le catalogue. Le travail mobile se décide sur le geste, pas sur une capture seule.",
         ],
       },
     ],
@@ -37,7 +37,10 @@ export const mobilePages: MoneyPage[] = [
       { q: "Qui publie sur les stores ?", a: "Les comptes développeur sont au client. Byte Force peut préparer la fiche et la build. Le compte ne reste pas au nom du studio." },
       { q: "Combien de temps ?", a: "Plus long qu'une page web dès qu'il y a revue des stores et deux plateformes. On le chiffre après avoir choisi un seul geste principal." },
     ],
-    proof: [],
+    proof: [
+      { href: "/realisations/zainek", title: "Zainek", note: "Application Android et site pour un rendez-vous beauté. Fiche Play mise à jour le 30 août 2026." },
+      { href: "/realisations/tourispeak", title: "Tourispeak", note: "Application Android de visites audio, en plus du site. Montréal, 2024." },
+    ],
     links: [
       { href: "/application-web-sur-mesure-maroc", label: "Rester dans le navigateur" },
       contact,
@@ -100,7 +103,10 @@ export const mobilePages: MoneyPage[] = [
       { q: "Faut-il iOS en même temps ?", a: "Seulement si des utilisateurs réels sont sur iPhone. Ajouter une plateforme « pour faire complet » sans utilisateur est du budget perdu." },
       { q: "Les vieilles versions d'Android ?", a: "On cible ce que l'équipe a vraiment, pas la dernière version par principe. Ça se mesure avec cinq téléphones de l'équipe, pas avec une statistique mondiale." },
     ],
-    proof: [],
+    proof: [
+      { href: "/realisations/zainek", title: "Zainek", note: "Publiée sur le Play Store, avec le site zainek.com." },
+      { href: "/realisations/tourispeak", title: "Tourispeak", note: "Publiée sur le Play Store, à côté de tourispeak.com." },
+    ],
     links: [
       { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
       { href: "/developpement-application-mobile-maroc/application-metier", label: "Usage métier" },

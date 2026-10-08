@@ -96,7 +96,7 @@ export default async function ProjectPage({ params }: Props) {
       </header>
       <section className="grid gap-12 px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
         <div className="md:col-span-7">
-          {project.shot ? (
+          {project.shot && project.screens?.[0]?.src !== project.shot ? (
             <Image
               src={project.shot}
               alt={`${project.title}, capture du site en ligne`}
@@ -106,6 +106,26 @@ export default async function ProjectPage({ params }: Props) {
               sizes="(min-width: 768px) 58vw, 100vw"
               className="mb-8 aspect-[16/10] w-full rounded-lg object-cover object-top"
             />
+          ) : null}
+          {project.screens && project.screens.length > 0 ? (
+            <div className="mb-10">
+              <p className="font-mono text-xs tracking-wide text-mute">Captures de l&apos;application</p>
+              <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {project.screens.map((screen, index) => (
+                  <li key={screen.src}>
+                    <Image
+                      src={screen.src}
+                      alt={`${project.title}, capture ${index + 1} de l'application Android`}
+                      width={screen.width}
+                      height={screen.height}
+                      priority={index === 0}
+                      sizes="208px"
+                      className="h-auto w-full rounded-lg"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : null}
           <p className="text-2xl leading-snug md:text-3xl">{project.description}</p>
           {project.problem ? (

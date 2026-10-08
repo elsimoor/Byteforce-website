@@ -21,8 +21,8 @@ const copy: Record<string, { problem: string; solution: string; result: string }
   },
   tourispeak: {
     problem: "Le réseau touristique n'avait pas de site public pour les visites.",
-    solution: "Un site publié pour des visites audio et le réseau.",
-    result: "Le site est en ligne, depuis Montréal, depuis 2024.",
+    solution: "Un site publié pour des visites audio, et une application Android.",
+    result: "Le site est en ligne, depuis Montréal, depuis 2024. L'application Android est sur le Play Store.",
   },
 };
 

@@ -8,6 +8,7 @@ export const projectTitles: Record<string, string> = {
   "coco-inbox": "Coco Inbox : email temporaire à Montréal",
   uas: "UAS : boutique aéronautique à Casablanca",
   tourispeak: "Tourispeak : réseau touristique à Montréal",
+  zainek: "Zainek : rendez-vous beauté, application et site",
   "ambulances-valcq": "Ambulances Valcq : site de transport sanitaire à Roubaix",
   "les-hauts-paysages": "Les Hauts Paysages : site paysager dans le Nord",
   "agency-wonderland": "Agency Wonderland : studio visuel à Marrakech",
@@ -84,6 +85,14 @@ export const projectNotes: Record<string, string[]> = {
     "Le projet est une plateforme. Le service lié est le logiciel sur mesure. Le réseau a son propre parcours, distinct d'un modèle d'agence recopié. On ne publie pas le nombre de membres, ni un taux d'écoute des visites.",
     "Une organisation qui veut un espace du même type décrit qui publie, qui visite, et ce qu'une fiche doit contenir. On regarde ensuite si le site actuel peut être continué, ou s'il faut un parcours nouveau. La demande part par le contact, à Casablanca.",
     "La page À propos liée situe le réseau. Les visites audio se voient sur tourispeak.com, pas dans un chiffre d'écoute ajouté ici. Montréal et 2024 placent le projet. On ne le mélange pas avec une boutique, ni avec un site vitrine d'agence de voyages.",
+    "L'application Android est publique sur le Play Store, sous le nom Tourispeak. Les captures de cette fiche viennent de cette fiche Play : une liste de visites, des villes, un lecteur audio, une carte. On n'ajoute pas un nombre de téléchargements, ni une note.",
+  ],
+  zainek: [
+    "Zainek est une application Android et un site pour trouver un salon, un coiffeur ou un nail artist, et demander un rendez-vous. L'application est sur le Play Store. Le site est zainek.com. Le compte Play indique une mise à jour le 30 août 2026, et une adresse à Safi.",
+    "Le catalogue classe le projet en plateforme. Le service lié est l'application mobile, parce que le geste est sur le téléphone : chercher, choisir une catégorie, envoyer une demande. Le site existe à côté. Cette fiche ne donne pas d'adresse App Store : aucune n'a été vérifiée.",
+    "Les captures viennent de la fiche Play. Elles montrent l'accueil, une demande avec une ville, et un profil. Deux autres images de cette fiche Play montrent une autre application, Jamalii. Elles ne sont pas reprises ici.",
+    "On ne reprend pas les notes, les volumes de réservation ni les avis écrits sur zainek.com. Ces chiffres ne sont pas dans le dossier Byte Force. La preuve est l'application en ligne et le site, pas un total inventé.",
+    "Safi est la ville indiquée sur le compte Play. Les écrans montrent aussi Khemisset, Casablanca et Rabat comme lieux de recherche. On ne transforme pas ces villes en un réseau mesuré. Pour un projet du même ordre, le formulaire décrit le geste sur le téléphone, et qui tient le compte du store.",
   ],
   "agency-wonderland": [
     "Agency Wonderland est un site de studio visuel à Marrakech, publié en 2024. L'adresse est agencywonderland.com. La galerie est liée : c'est la page où le travail du studio se regarde.",

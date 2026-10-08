@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
-import { projects, type Project } from "@/lib/content";
+import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
@@ -18,9 +18,7 @@ export const metadata: Metadata = {
 };
 
 const countries = new Set(projects.map((project) => project.country)).size;
-const named = ["dealkhir", "re-proche-de-moi", "coco-inbox", "tourispeak"]
-  .map((slug) => projects.find((project) => project.slug === slug))
-  .filter((project): project is Project => Boolean(project));
+const pictured = projects.filter((project) => project.shot);
 
 export default function AboutPage() {
   return (
@@ -88,8 +86,8 @@ export default function AboutPage() {
             ))}
           </ul>
           <p className="mt-8 max-w-xl leading-relaxed">
-            Quatre de ces fiches ont une capture : {named.map((project) => project.title).join(", ")}. Les autres
-            restent un index, parce que le dossier n&apos;a pas de capture. Chaque fiche dit ce qui a été publié.
+            {pictured.map((project) => project.title).join(", ")} ont une capture. Les autres fiches restent un index,
+            parce que le dossier n&apos;a pas d&apos;image. Chaque fiche dit ce qui a été publié.
           </p>
           <p className="mt-6 max-w-xl leading-relaxed">
             Pour commencer, le formulaire demande le nom, l&apos;email et le projet. La réponse part sous un jour ouvré.

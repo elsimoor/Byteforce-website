@@ -46,9 +46,10 @@ export default function WorkPage() {
       </header>
       <section className="px-6 pb-16 md:px-12">
         <p className="max-w-2xl text-lg leading-relaxed">
-          Douze projets déjà en ligne : des boutiques, des sites vitrines et des plateformes, de Casablanca à Lille,
-          Roubaix, Marrakech, Tanger et Montréal. Quatre fiches ont une capture. Les autres restent un index, parce que
-          le dossier n&apos;a pas d&apos;image. Chaque ligne dit ce qui a été publié, sans chiffre inventé.
+          {projects.length} projets déjà en ligne : des boutiques, des sites vitrines et des plateformes, de Casablanca à
+          Lille, Roubaix, Marrakech, Tanger, Safi et Montréal. {staged.length} fiches ont une capture. Les autres restent
+          un index, parce que le dossier n&apos;a pas d&apos;image. Chaque ligne dit ce qui a été publié, sans chiffre
+          inventé.
         </p>
       </section>
       {staged.map((project, index) => (

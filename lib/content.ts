@@ -28,6 +28,7 @@ export type Project = {
   solution?: string;
   result?: string;
   shot?: string;
+  screens?: { src: string; width: number; height: number }[];
 };
 
 export const services: Service[] = [
@@ -560,10 +561,49 @@ export const projects: Project[] = [
     url: "https://tourispeak.com/",
     serviceSlug: "logiciel-sur-mesure",
     problem: "Le réseau touristique n'avait pas de site public pour les visites.",
-    solution: "Un site publié pour des visites audio et le réseau.",
-    result: "Le site est en ligne, depuis Montréal, depuis 2024.",
+    solution: "Un site publié pour des visites audio et le réseau, plus une application Android sur le Play Store.",
+    result: "Le site est en ligne, depuis Montréal, depuis 2024. L'application Android est sur le Play Store.",
     shot: "/work/tourispeak.jpg",
-    pages: [{ label: "À propos", href: "https://tourispeak.com/about-us/" }],
+    screens: [
+      { src: "/work/tourispeak-app-1.webp", width: 273, height: 592 },
+      { src: "/work/tourispeak-app-2.webp", width: 273, height: 592 },
+      { src: "/work/tourispeak-app-3.webp", width: 273, height: 592 },
+      { src: "/work/tourispeak-app-4.webp", width: 273, height: 592 },
+    ],
+    pages: [
+      { label: "À propos", href: "https://tourispeak.com/about-us/" },
+      {
+        label: "Application Android",
+        href: "https://play.google.com/store/apps/details?id=com.tourispeakApp.tourispeakApp",
+      },
+    ],
+  },
+  {
+    slug: "zainek",
+    title: "Zainek",
+    category: "Plate-forme",
+    year: "2026",
+    city: "Safi",
+    country: "Maroc",
+    description:
+      "Application Android et site pour trouver un salon, un coiffeur ou un nail artist, et demander un rendez-vous.",
+    url: "https://www.zainek.com/",
+    serviceSlug: "applications-mobiles",
+    problem: "Chercher un salon ou un nail artist et réserver n'avait pas d'application publique.",
+    solution: "Zainek : une application Android sur le Play Store, et le site zainek.com.",
+    result: "L'application et le site sont en ligne. La fiche Play indique une mise à jour le 30 août 2026.",
+    shot: "/work/zainek-1.webp",
+    screens: [
+      { src: "/work/zainek-1.webp", width: 265, height: 592 },
+      { src: "/work/zainek-2.webp", width: 265, height: 592 },
+      { src: "/work/zainek-3.webp", width: 265, height: 592 },
+    ],
+    pages: [
+      {
+        label: "Application Android",
+        href: "https://play.google.com/store/apps/details?id=com.nailsclient.zainek",
+      },
+    ],
   },
   {
     slug: "agency-wonderland",

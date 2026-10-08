@@ -36,7 +36,7 @@ export function ProjectStage({ project, variant }: { project: Project; variant: 
             alt={`${project.title}, capture du site en ligne`}
             fill
             sizes="(min-width: 768px) 58vw, 100vw"
-            className="object-cover object-top"
+            className={project.screens?.[0]?.src === project.shot ? "object-contain object-center" : "object-cover object-top"}
           />
         </div>
       </Link>
