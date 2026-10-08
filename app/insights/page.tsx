@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { articles } from "@/lib/articles";
 import { moneyPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
 
@@ -33,8 +34,8 @@ export default function InsightsPage() {
         <h2 className="display max-w-[16ch] text-4xl">Quelle page lire</h2>
         <div className="mt-8 max-w-2xl space-y-4 leading-relaxed">
           <p>
-            Il n&apos;y a pas un blog à côté. Les décisions publiées sont les six pages ci-dessous. Chacune traite un
-            seul cas, et chacune mène au formulaire si le cas est le vôtre.
+            Cinq articles répondent à une question précise : le coût, le délai, le code, la suite, le site ou le
+            logiciel. Les six pages d&apos;après traitent un cas. Chacune mène au formulaire si le cas est le vôtre.
           </p>
           <p>
             Le fichier Excel se lit en premier quand plusieurs personnes écrivent dans la même feuille, sans savoir qui
@@ -58,6 +59,19 @@ export default function InsightsPage() {
             </Link>
           </p>
         </div>
+      </section>
+      <section className="border-t border-line">
+        <h2 className="px-6 pt-10 text-sm text-mute md:px-12">Articles</h2>
+        <ul>
+          {articles.map((article) => (
+            <li key={article.slug} className="border-t border-line">
+              <Link href={`/insights/${article.slug}`} className="block px-6 py-6 md:px-12">
+                <span className="text-xl">{article.h1}</span>
+                <span className="mt-2 block max-w-2xl text-sm leading-relaxed text-mute">{article.description}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
       {groups.map((group) => (
         <section key={group} className="border-t border-line">

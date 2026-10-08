@@ -52,7 +52,7 @@ export const softwarePages: MoneyPage[] = [
         h: "Architecture, droits, suite",
         p: [
           "Une première version tient souvent en une application web, une base, des rôles et les branchements vraiment utiles. L'authentification sépare qui voit un dossier, qui le valide, qui l'exporte. L'historique dit qui a changé quoi. Ce n'est pas un décor : c'est ce qui manque le jour où deux personnes éditent le même fichier.",
-          "Après la remise, les défauts du périmètre convenu sont corrigés avec la livraison. La suite est un correctif devisé ou un suivi. Il n'y a pas de prix public : le montant suit les écrans, les rôles et les branchements. Un échange de trente minutes est gratuit.",
+          "Après la remise, les défauts du périmètre convenu sont corrigés avec la livraison. La suite est un correctif devisé ou un suivi. Il n'y a pas de prix public : le montant suit les écrans, les rôles et les branchements. Le détail est sur [[/insights/cout-logiciel-sur-mesure-maroc|combien coûte un logiciel sur mesure au Maroc]]. Un échange de trente minutes est gratuit.",
         ],
       },
     ],

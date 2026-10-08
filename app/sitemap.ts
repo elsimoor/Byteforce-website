@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { articles } from "@/lib/articles";
 import { projects, services } from "@/lib/content";
 import { moneyPages } from "@/lib/money";
 import { site } from "@/lib/site";
@@ -27,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
       .map((page) => `${site.url}/${page.path}`),
     ...projects.map((project) => `${site.url}/realisations/${project.slug}`),
+    ...articles.map((article) => `${site.url}/insights/${article.slug}`),
   ];
   return [...new Set(urls)].map((url) => ({ url, lastModified: updated }));
 }
