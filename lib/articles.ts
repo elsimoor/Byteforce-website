@@ -2310,6 +2310,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "developpement-saas-sur-mesure",
+    title: "Développement SaaS sur mesure",
+    description:
+      "Développement SaaS sur mesure : le produit suit le geste, avec des clients isolés. Byte Force, Casablanca. Pas un modèle vide. Pas de prix public.",
+    h1: "Développement SaaS sur mesure",
+    date: "2026-10-08",
+    lede: "Le développement d'un SaaS sur mesure part du geste que plusieurs clients paieraient, pas d'un modèle vide habillé d'un logo. Les données de l'un ne se montrent pas à l'autre. Byte Force le mène depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour nommer ce geste.",
+    sections: [
+      {
+        heading: "Sur mesure, pour plusieurs clients",
+        paragraphs: [
+          "Sur mesure ne veut pas dire un logiciel interne qu'on ouvre à d'autres plus tard. Dès la première version, un client ne voit pas le dossier d'un autre. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. L'isolation est la page [[/developpement-saas-maroc/multi-tenant|multi-tenant]]. Oublier cette séparation et l'ajouter après le premier contrat est le retard habituel.",
+          "Sur mesure ne veut pas dire non plus recopier un éditeur avec un autre nom. Si le geste rentre dans un produit déjà vendu, on le dit. Le développement commence quand ce geste a une règle que le marché ne porte pas.",
+        ],
+      },
+      {
+        heading: "L'ordre du travail",
+        paragraphs: [
+          "On écrit le périmètre : le geste, les rôles d'un client, ce qui est isolé, ce qui est branché. Un acompte lance le travail. Le code, le dépôt et l'hébergement livré reviennent à l'entreprise qui commande. Pas de délai fixe : souvent plusieurs semaines pour ce geste, pas pour une plateforme entière.",
+          "Le bureau est au Technopark, boulevard Dammam, Aïn Chock. Pas de bureau en France ni au Canada. Pas de grille « développement SaaS ». Coco Inbox montre un produit publié, pas le modèle de ce périmètre.",
+        ],
+      },
+      {
+        heading: "Ce qui n'est pas dans la première version",
+        paragraphs: [
+          "Pas tous les rapports. Pas tous les rôles d'un grand compte. Pas une place de marché. La personne du premier client doit pouvoir finir le geste. Le reste attend une version d'après, écrite quand la première est utilisée.",
+          "On ne publie pas un coût d'acquisition, un nombre d'abonnés, ou une note. Rien de cela n'est un fait du studio.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste est le même pour plusieurs clients, et que leurs dossiers ne doivent pas se mélanger. Dire le geste et ce qui reste dans un outil déjà payé.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Nommer le geste" },
+      { href: "/developpement-saas-maroc", label: "L'offre SaaS" },
+      { href: "/developpement-saas-maroc/multi-tenant", label: "Isoler les clients" },
+    ],
+    en: {
+      title: "Custom SaaS development",
+      description:
+        "Custom SaaS development follows the action, with customers kept apart. Byte Force, Casablanca. Not an empty template. No public price.",
+      h1: "Custom SaaS development",
+      lede: "Custom SaaS development starts from the action several customers would pay for, not from an empty template with a logo. One customer's data is not shown to another. Byte Force runs it from Casablanca. No public price. [[/contact|Write]] and name that action.",
+      sections: [
+      {
+        heading: "Custom, for several customers",
+        paragraphs: [
+          "Custom does not mean internal software opened to others later. From the first version, one customer does not see another's file. The offer is SaaS development. Isolation has its own page. Forgetting that separation and adding it after the first contract is the usual delay.",
+          "Custom also does not mean copying a vendor under another name. If the action fits a product already on sale, that is said. Development starts when the action has a rule the market does not carry.",
+        ],
+      },
+      {
+        heading: "The order of the work",
+        paragraphs: [
+          "The scope is written: the action, a customer's roles, what is isolated, what is connected. A deposit starts the work. The code, the repository and the delivered hosting return to the company that orders. No fixed schedule: often several weeks for that action, not for an entire platform.",
+          "The office is at Technopark, boulevard Dammam, Aïn Chock. No office in France or Canada. No « SaaS development » grid. Coco Inbox shows a published product, not the model of this scope.",
+        ],
+      },
+      {
+        heading: "What is not in the first version",
+        paragraphs: [
+          "Not every report. Not every role of a large account. Not a marketplace. The first customer's person must be able to finish the action. The rest waits for a later version, written when the first one is used.",
+          "No acquisition cost, no subscriber count, and no score is published. None of that is a fact of the studio.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action is the same for several customers, and their files must not mix. Name the action and what stays in a tool already paid for.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
