@@ -55,6 +55,7 @@ export function GET() {
     `- [Logiciel de gestion des clients sur mesure](${origin}/insights/logiciel-gestion-clients-sur-mesure) : la fiche suit le dossier réel, pas un modèle d'éditeur.`,
     `- [CRM personnalisé ou Salesforce](${origin}/insights/crm-personnalise-ou-salesforce) : garder le marché si le cycle rentre dedans, sinon écrire.`,
     `- [Comment choisir un CRM pour son entreprise](${origin}/insights/comment-choisir-un-crm) : par le cycle réel, pas par le nombre de modules.`,
+    `- [Création d'un SaaS au Maroc](${origin}/insights/creation-saas-maroc) : plusieurs clients, des données qui ne se mélangent pas.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

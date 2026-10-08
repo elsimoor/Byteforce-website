@@ -2229,6 +2229,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "creation-saas-maroc",
+    title: "Création SaaS Maroc",
+    description:
+      "Création d'un SaaS au Maroc : plusieurs clients, des données qui ne se mélangent pas. Byte Force, Casablanca. Pas un site avec un prix.",
+    h1: "Création SaaS Maroc",
+    date: "2026-10-08",
+    lede: "La création d'un SaaS au Maroc est la construction d'un produit que plusieurs clients utilisent, avec des comptes et des données qui ne se mélangent pas. Ce n'est pas une page vitrine avec un tarif. Byte Force le fait depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour dire le geste du premier client.",
+    sections: [
+      {
+        heading: "Ce qu'un SaaS doit déjà séparer",
+        paragraphs: [
+          "Un logiciel interne a un propriétaire. Un SaaS en a plusieurs, qui ne doivent jamais voir les dossiers des autres. L'invitation d'un utilisateur, l'arrêt d'un compte et l'isolation des données font partie du produit. Les oublier « après le premier client » est la dette classique. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. Le [[/developpement-saas-maroc/saas-b2b|SaaS pour des entreprises]] précise le cas où l'acheteur a lui-même plusieurs utilisateurs.",
+          "Mettre un prix sur une page et appeler ça un SaaS ne crée pas le produit. Coco Inbox, en ligne depuis Montréal en 2024, montre qu'un produit peut sortir : email temporaire, fichiers chiffrés, notes. Ce n'est pas la preuve d'un SaaS de facturation ou d'un outil RH. On ne lui prête pas ces fonctions.",
+        ],
+      },
+      {
+        heading: "Le geste du premier client",
+        paragraphs: [
+          "La première version doit permettre à un client d'ouvrir un compte et de finir le geste pour lequel il paierait. Pas le catalogue. La facturation, si elle fait partie du produit, se décide dans le périmètre. On ne promet pas un modèle d'abonnement universel. Pas de prix public pour « créer un SaaS ».",
+          "Le bureau est à Casablanca, Technopark, boulevard Dammam. Pas de bureau en France ni au Canada. Un produit pour des clients en France se construit depuis ici. Périmètre écrit, acompte, code et hébergement livrés à l'entreprise qui commande. Pas de délai fixe : souvent plusieurs semaines pour ce geste.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne crée pas",
+        paragraphs: [
+          "On ne crée pas un SaaS pour une comptabilité standard que le marché porte déjà, ni pour un tableur de dix lignes. On ne crée pas non plus un logiciel interne en l'appelant SaaS parce que le mot attire. Si un seul propriétaire utilise l'outil, ce n'est pas ce produit.",
+          "On ne publie pas un nombre d'utilisateurs, un revenu, ou une note. Ces chiffres ne sont pas sur le site comme résultats de Byte Force.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste du premier client est nommable, et quand plusieurs clients ne doivent pas voir les mêmes dossiers. Dire ce geste, et ce qui peut attendre.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le premier client" },
+      { href: "/developpement-saas-maroc", label: "Le développement SaaS" },
+      { href: "/developpement-saas-maroc/saas-b2b", label: "Un SaaS pour des entreprises" },
+    ],
+    en: {
+      title: "Creating a SaaS in Morocco",
+      description:
+        "Creating a SaaS in Morocco means several customers and data that does not mix. Byte Force, Casablanca. Not a brochure with a price.",
+      h1: "Creating a SaaS in Morocco",
+      lede: "Creating a SaaS in Morocco means building a product several customers use, with accounts and data that do not mix. It is not a brochure page with a tariff. Byte Force does it from Casablanca. No public price. [[/contact|Write]] and name the first customer's action.",
+      sections: [
+      {
+        heading: "What a SaaS must already separate",
+        paragraphs: [
+          "Internal software has one owner. A SaaS has several, who must never see each other's files. Inviting a user, closing an account and isolating data are part of the product. Leaving them « after the first customer » is the usual debt. The offer is SaaS development. The B2B page is the case where the buyer itself has several users.",
+          "Putting a price on a page and calling it a SaaS does not create the product. Coco Inbox, online from Montreal since 2024, shows that a product can ship: temporary email, encrypted files, notes. It is not proof of a billing SaaS or an HR tool. Those functions are not lent to it.",
+        ],
+      },
+      {
+        heading: "The first customer's action",
+        paragraphs: [
+          "The first version must let a customer open an account and finish the action they would pay for. Not the catalogue. Billing, if it is part of the product, is decided in the scope. A universal subscription model is not promised. No public price for « creating a SaaS ».",
+          "The office is in Casablanca, Technopark, boulevard Dammam. No office in France or Canada. A product for customers in France is built from here. A written scope, a deposit, code and hosting delivered to the company that orders. No fixed schedule: often several weeks for that action.",
+        ],
+      },
+      {
+        heading: "What is not created",
+        paragraphs: [
+          "A SaaS is not created for standard accounting the market already carries, nor for a ten-line spreadsheet. Internal software is not created and then called a SaaS because the word attracts. If one owner uses the tool, it is not this product.",
+          "No user count, revenue, or score is published. Those figures are not on the site as Byte Force results.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the first customer's action can be named, and when several customers must not see the same files. Name that action, and what can wait.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
