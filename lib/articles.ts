@@ -1095,6 +1095,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "logiciel-personnalise-ou-standard",
+    title: "Logiciel personnalisé vs logiciel standard",
+    description:
+      "Logiciel personnalisé vs logiciel standard : garder le marché si le métier rentre dedans. Sinon, l'écrire. Casablanca. Pas de prix public.",
+    h1: "Logiciel personnalisé vs logiciel standard",
+    date: "2026-10-08",
+    lede: "Logiciel personnalisé vs logiciel standard : la question est de savoir si le métier rentre dans l'outil déjà vendu. S'il rentre, on le garde. S'il faut le tordre chaque semaine, on écrit. Byte Force est à Casablanca. Pas de prix public. [[/contact|Écrire]] avec le geste, pas avec un logo d'éditeur.",
+    sections: [
+      {
+        heading: "Quand le standard gagne",
+        paragraphs: [
+          "Le logiciel standard gagne pour une comptabilité ordinaire, une messagerie, un tableur court, ou un cycle de vente que l'éditeur a déjà prévu. Le payer chaque mois est alors plus court que de le réécrire. Byte Force le dit au premier échange. Ce n'est pas une défaite : c'est le bon outil.",
+          "Le standard perd quand l'équipe passe son temps à contourner : champs inutiles, exports recopiés, règles du métier écrites dans un commentaire. Le [[/solutions/remplacer-saas/logiciel-personnalise|logiciel personnalisé]] commence là, pas au premier abonnement qui déplaît.",
+        ],
+      },
+      {
+        heading: "Ce que personnalisé veut dire ici",
+        paragraphs: [
+          "Personnalisé ne veut pas dire un thème, un logo, et les mêmes écrans. Ça veut dire les rôles réels, les écrans réellement ouverts, et les branchements qui doivent rester. Le [[/developpement-logiciel-sur-mesure-maroc|cadre]] est le même que pour tout logiciel écrit ici : périmètre écrit, acompte, code rendu à l'entreprise.",
+          "Personnalisé ne veut pas dire non plus un prix affiché. Deux éditeurs peuvent annoncer un abonnement. Ça ne dit pas ce que coûte le contournement chaque semaine. On ne publie pas de montant en dirhams à la place.",
+        ],
+      },
+      {
+        heading: "Ce qu'il ne faut pas comparer",
+        paragraphs: [
+          "On ne compare pas une plaquette de cinquante modules à trois écrans qui finissent le geste. On ne compare pas non plus le bureau de Casablanca à une « taxe » ou à une remise. Technopark, boulevard Dammam, Aïn Chock. Pas de bureau en France ni au Canada. La proximité ne chiffre pas le choix.",
+          "On ne promet pas que le standard est lent ou que le sur-mesure est noble. On regarde le dossier. Dealkhir ou Coco Inbox montrent des produits en ligne. Ils ne tranchent pas ce choix pour une autre entreprise, et leurs chiffres ne sont pas les nôtres.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand l'équipe peut montrer un contournement concret, ou quand elle hésite et veut qu'on dise de garder l'outil. Les deux réponses sont utiles. Apporter le nom du geste et le nom de l'outil actuel.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire l'outil actuel]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire si le métier rentre" },
+      { href: "/solutions/remplacer-saas/logiciel-personnalise", label: "Le logiciel à la place du contournement" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Écrire le logiciel" },
+    ],
+    en: {
+      title: "Custom software or a standard product",
+      description:
+        "Custom or standard software: keep the market tool if the job fits. Otherwise, write it. Casablanca. No public price.",
+      h1: "Custom software or a standard product",
+      lede: "Custom software or a standard product: the question is whether the job fits the tool already on sale. If it fits, keep it. If it must be bent every week, write. Byte Force is in Casablanca. No public price. [[/contact|Write]] with the action, not with a vendor logo.",
+      sections: [
+      {
+        heading: "When standard wins",
+        paragraphs: [
+          "Standard software wins for ordinary accounting, a mailbox, a short spreadsheet, or a sales cycle the vendor already designed. Paying for it each month is then shorter than rewriting it. Byte Force says so in the first conversation. That is not a loss: it is the right tool.",
+          "Standard loses when the team spends its time working around it: useless fields, copied exports, trade rules written in a comment. Custom software starts there, not at the first subscription someone dislikes.",
+        ],
+      },
+      {
+        heading: "What custom means here",
+        paragraphs: [
+          "Custom does not mean a theme, a logo, and the same screens. It means the real roles, the screens people actually open, and the connections that must stay. The frame is the same as for any software written here: a written scope, a deposit, the code returned to the company.",
+          "Custom also does not mean a displayed price. Two vendors can announce a subscription. That does not say what the workaround costs each week. No amount in dirhams is published instead.",
+        ],
+      },
+      {
+        heading: "What not to compare",
+        paragraphs: [
+          "Do not compare a fifty-module brochure with three screens that finish the action. Do not compare the Casablanca office with a « tax » or a discount either. Technopark, boulevard Dammam, Aïn Chock. No office in France or Canada. Being nearby does not price the choice.",
+          "There is no promise that standard is slow or that custom is noble. Look at the file. Dealkhir or Coco Inbox show products online. They do not settle this choice for another company, and their figures are not ours.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the team can show a concrete workaround, or when it is unsure and wants to be told to keep the tool. Both answers are useful. Bring the name of the action and the name of the current tool.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the current tool]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();

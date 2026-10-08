@@ -41,6 +41,7 @@ export function GET() {
     `- [Prix d'un logiciel sur mesure au Maroc](${origin}/insights/prix-logiciel-sur-mesure-maroc) : pas de montant public, la note suit le périmètre..`,
     `- [Logiciel métier sur mesure](${origin}/insights/logiciel-metier-sur-mesure) : un seul geste, avec le vocabulaire du métier.`,
     `- [Quand créer un logiciel sur mesure](${origin}/insights/quand-creer-un-logiciel-sur-mesure) : quand le marché tord le métier, pas avant.`,
+    `- [Logiciel personnalisé ou logiciel standard](${origin}/insights/logiciel-personnalise-ou-standard) : garder le marché s'il porte le métier, sinon écrire.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,
