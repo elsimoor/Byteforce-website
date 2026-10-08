@@ -933,6 +933,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "logiciel-metier-sur-mesure",
+    title: "Logiciel métier sur mesure",
+    description:
+      "Un logiciel métier sur mesure épouse un seul geste, avec son vocabulaire. Byte Force, Casablanca. Pas de prix public. Écrire.",
+    h1: "Logiciel métier sur mesure",
+    date: "2026-10-08",
+    lede: "Un logiciel métier sur mesure sert un seul geste, avec le vocabulaire de ceux qui le font. Il n'est pas un ERP qui promet tous les services, ni un tableur renommé. Byte Force l'écrit depuis le Technopark, à Casablanca. Il n'y a pas de prix public. [[/contact|Écrire]] pour nommer ce geste, et seulement celui-là.",
+    sections: [
+      {
+        heading: "Un métier, pas une suite",
+        paragraphs: [
+          "Le logiciel métier a un sens quand le vocabulaire ne se traduit pas dans un outil général sans perdre une règle. Un dossier qui change de nom selon qui le touche, une étape que seul un ancien sait, un état que le marché n'imprime pas : c'est là que le sur-mesure tient. Le [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier|logiciel métier]] a déjà sa page d'offre. Celle-ci dit comment reconnaître que le sujet est un métier, et pas un stock ou un pipeline de devis.",
+          "Il n'a pas de sens si le geste est une comptabilité standard, une messagerie, ou dix lignes dans un tableur. Acheter l'outil du marché est alors plus court. Le premier échange sert aussi à dire non.",
+        ],
+      },
+      {
+        heading: "Ce qui doit être dans la première version",
+        paragraphs: [
+          "La première version reprend le geste dont le décalage coûte chaque semaine. Les écrans sont ceux que la personne ouvre vraiment. Les rôles sont ceux qui existent déjà : qui crée, qui valide, qui exporte. Le reste du métier attend. Ajouter la paie, la flotte et les congés dans le même passage fait un autre logiciel.",
+          "Le bureau est à Casablanca, boulevard Dammam, Aïn Chock. On peut poser le dossier sur la table. Il n'y a pas de bureau en France ni au Canada. La proximité ne change pas le montant : il n'y a de toute façon pas de grille affichée.",
+        ],
+      },
+      {
+        heading: "Ce que l'entreprise garde",
+        paragraphs: [
+          "À la remise, le client possède le code, le dépôt et les comptes d'hébergement livrés. Le vocabulaire du métier reste dans le logiciel, pas dans la tête d'une seule personne ni dans un fichier que trois collègues écrasent. Un acompte lance le travail. Si le périmètre change, il est écrit avant d'être construit.",
+          "Les projets publiés montrent des produits en ligne, pas un modèle de logiciel métier universel. Tourispeak, par exemple, suit le parcours d'un réseau. On ne lui prête pas les règles d'un autre métier, et on ne publie pas ses chiffres comme s'ils étaient ceux de Byte Force.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste a un nom dans l'entreprise et qu'aucun outil du marché ne le porte sans le tordre. Dire ce nom, qui le fait, et ce qui doit rester branché. Le [[/developpement-logiciel-sur-mesure-maroc|cadre]] reste le logiciel sur mesure, pas une suite.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré, de 9 h à 19 h, du lundi au vendredi. [[/contact|Décrire le geste]] suffit. Le téléphone est le +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Nommer le geste" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier", label: "Le logiciel métier" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le cadre logiciel" },
+    ],
+    en: {
+      title: "Custom software for one trade",
+      description:
+        "Trade software follows one action and its vocabulary. Byte Force, Casablanca. No public price. Write with that action.",
+      h1: "Custom software for one trade",
+      lede: "Custom trade software serves one action, in the words of the people who do it. It is not an ERP that promises every department, and it is not a renamed spreadsheet. Byte Force writes it from Technopark, in Casablanca. There is no public price. [[/contact|Write]] and name that action, and only that one.",
+      sections: [
+      {
+        heading: "One trade, not a suite",
+        paragraphs: [
+          "Trade software makes sense when the vocabulary cannot move into a general tool without losing a rule. A file that changes name depending on who touches it, a step only a veteran knows, a report the market does not print: that is where custom work holds. The offer page already exists. This page says how to tell that the subject is one trade, not a stockroom or a quote pipeline.",
+          "It does not make sense if the action is standard accounting, a mailbox, or ten lines in a spreadsheet. Buying the market tool is shorter then. The first conversation is also there to say no.",
+        ],
+      },
+      {
+        heading: "What the first version must hold",
+        paragraphs: [
+          "The first version takes the action whose delay costs money every week. The screens are the ones the person really opens. The roles are the ones that already exist: who creates, who approves, who exports. The rest of the trade waits. Adding payroll, a fleet and leave in the same pass makes a different piece of software.",
+          "The office is in Casablanca, boulevard Dammam, Aïn Chock. The file can sit on the table. There is no office in France or Canada. Being nearby does not change the amount: there is no published grid anyway.",
+        ],
+      },
+      {
+        heading: "What the company keeps",
+        paragraphs: [
+          "At handover, the client owns the code, the repository and the hosting accounts that were delivered. The trade's vocabulary stays in the software, not in one person's head and not in a file three colleagues overwrite. A deposit starts the work. If the scope changes, it is written before it is built.",
+          "Published projects show products online, not a universal trade-software template. Tourispeak, for example, follows one network's path. It is not lent another trade's rules, and its figures are not published as Byte Force results.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action has a name inside the company and no market tool carries it without bending it. Say that name, who does it, and what must stay connected. The frame remains custom software, not a suite.",
+          "The first conversation is thirty minutes and it is free. A reply goes out within one business day, 9:00 to 19:00, Monday to Friday. [[/contact|Describe the action]] is enough. The phone is +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
