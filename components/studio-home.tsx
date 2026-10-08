@@ -38,7 +38,7 @@ export function StudioHome() {
               Développement logiciel sur mesure, à Casablanca.
             </h1>
             <p className="text-lg lg:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-              Byte Force conçoit le logiciel, l&apos;application ou le site, le corrige quand il casse, et remet le code au client.
+              Byte Force conçoit le logiciel, l&apos;application ou le site, le corrige quand il casse, et remet le code au client. Un humain et une machine doivent pouvoir trouver l&apos;offre, la comprendre, et écrire.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a

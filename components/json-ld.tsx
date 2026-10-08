@@ -1,3 +1,5 @@
+import { services } from "@/lib/content";
+import type { Project } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export function OrganizationJsonLd() {
@@ -30,6 +32,34 @@ export function OrganizationJsonLd() {
           postalCode: site.postal,
           addressCountry: site.country,
         },
+        sameAs: ["https://share.google/L12w0TmJ9kkUcVBg7", site.catalogue],
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: site.phone,
+          email: site.email,
+          contactType: "sales",
+          availableLanguage: ["French", "English"],
+          hoursAvailable: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "09:00",
+            closes: "19:00",
+          },
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Offres Byte Force",
+          itemListElement: services.map((service) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: service.title,
+              description: service.summary,
+              url: `${site.url}${service.href ?? `/services/${service.slug}`}`,
+              provider: { "@id": businessId },
+            },
+          })),
+        },
         areaServed: ["MA", "FR", "CA"],
         openingHoursSpecification: {
           "@type": "OpeningHoursSpecification",
@@ -45,6 +75,25 @@ export function OrganizationJsonLd() {
   return (
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
+}
+
+export function ProjectJsonLd({ project }: { project: Project }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.description,
+    url: `${site.url}/realisations/${project.slug}`,
+    mainEntityOfPage: `${site.url}/realisations/${project.slug}`,
+    creator: { "@id": `${site.url}/#business` },
+    about: project.problem || project.description,
+    contentLocation: {
+      "@type": "Place",
+      name: `${project.city}, ${project.country}`,
+    },
+    sameAs: project.url,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
 export function BreadcrumbJsonLd({ items }: { items: { name: string; path: string }[] }) {

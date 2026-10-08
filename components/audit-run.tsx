@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { dimensionScore, dimensions, overallScore, priorities, scoreLabel, takeaways } from "@/lib/audit/score";
+import { dimensionScore, dimensions, layerScore, machineLayers, machineNote, machineScore, overallScore, priorities, scoreLabel, takeaways } from "@/lib/audit/score";
 import { markAudit, readAudit, writeAudit } from "@/lib/audit/saved";
 import type { AuditStep } from "@/lib/site-audit";
 import { SitemapPick } from "@/components/sitemap-pick";
 
 const chapters = dimensions;
+const passage = [...dimensions, "Machine"] as const;
 const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function mark(state: AuditStep["state"]) {
@@ -19,7 +20,7 @@ function mark(state: AuditStep["state"]) {
 const ringRadius = 52;
 const ringLength = 2 * Math.PI * ringRadius;
 
-function AuditGauge({ chapter, steps }: { chapter: (typeof chapters)[number]; steps: AuditStep[] }) {
+function AuditGauge({ chapter, steps }: { chapter: (typeof passage)[number]; steps: AuditStep[] }) {
   const value = dimensionScore(steps, chapter);
   if (value === null) return null;
   const items = steps.filter((step) => step.dimension === chapter && step.state !== "running" && step.impact !== "aucun");
@@ -206,7 +207,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
   const warned = shown.filter((step) => step.state === "warn").length;
   const failed = shown.filter((step) => step.state === "fail").length;
   const listed = steps.filter((step) => step.id !== "suite");
-  const visible = chapters.filter((chapter) => listed.some((step) => step.chapter === chapter));
+  const visible = passage.filter((chapter) => listed.some((step) => step.chapter === chapter));
   const score = overallScore(shown);
   const nextSteps = priorities(shown);
   const headlines = takeaways(shown);
@@ -223,7 +224,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
         ) : null}
       </div>
       <ol className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-b border-line pb-4 text-sm" aria-label="Parties de l'audit">
-        {chapters.map((chapter) => {
+        {passage.map((chapter) => {
           const seen = steps.some((step) => step.chapter === chapter);
           const active = steps.some((step) => step.chapter === chapter && step.state === "running");
           return (
@@ -304,6 +305,38 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
                 );
               })}
             </ul>
+            {machineScore(shown) !== null ? (
+              <div className="mt-12 border-t border-line pt-10">
+                <p className="font-mono text-xs tracking-wide text-mute">Lecture machine</p>
+                <p className="display mt-3 text-[clamp(3.2rem,7vw,5.5rem)]">
+                  {machineScore(shown)}
+                  <span className="text-[0.35em] text-mute"> / 100</span>
+                </p>
+                <p className="mt-4 max-w-xl text-lg leading-relaxed">{machineNote(shown)}</p>
+                <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {machineLayers.map((layer) => {
+                    const value = layerScore(shown, layer.prefix);
+                    if (value === null) return null;
+                    return (
+                      <li key={layer.id} className="border-t border-line pt-3">
+                        <div className="flex items-baseline justify-between gap-4">
+                          <span>{layer.label}</span>
+                          <span className="font-mono text-2xl">{value}</span>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                  <a href="/contact" className="border-b border-ink pb-1">
+                    Byte Force peut corriger ce passage
+                  </a>
+                  <a href={`/audit/json?url=${encodeURIComponent(url)}`} className="border-b border-ink pb-1">
+                    Lire le JSON
+                  </a>
+                </p>
+              </div>
+            ) : null}
             <ol className="mt-12 max-w-2xl border-t border-line">
               {headlines.map((item, index) => (
                 <li key={item.dimension} className="grid grid-cols-[3rem_1fr] gap-4 border-b border-line py-5">
@@ -354,7 +387,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
               <div className="lg:col-span-7">
                 <p className="text-sm text-mute">Par partie, sur {shown.length} points lus.</p>
                 <ul className="mt-6 space-y-5">
-                  {chapters.map((chapter) => {
+                  {passage.map((chapter) => {
                     const items = shown.filter((step) => step.chapter === chapter);
                     if (!items.length) return null;
                     const partHeld = items.filter((step) => step.state === "pass").length;
@@ -417,7 +450,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
                 {held} tenu{held > 1 ? "s" : ""}, {warned} à revoir, {failed} à corriger. Technique, performance, SEO, accessibilité, GEO et conversion de ce passage.
               </p>
               <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {chapters.map((chapter) => {
+                {passage.map((chapter) => {
                   const items = shown.filter((step) => step.chapter === chapter);
                   const partOpen = items.filter((step) => step.state === "warn" || step.state === "fail");
                   return (

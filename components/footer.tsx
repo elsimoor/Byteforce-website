@@ -49,6 +49,11 @@ export function Footer() {
                   Audit gratuit
                 </Link>
               </li>
+              <li className="leading-none">
+                <Link href="/ai" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  Pour les agents
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

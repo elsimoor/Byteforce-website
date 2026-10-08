@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ProjectJsonLd } from "@/components/json-ld";
 import { getCity, slugify } from "@/lib/catalog";
 import { getProject, getService, projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
@@ -153,9 +154,35 @@ export default async function ProjectPage({ params }: Props) {
           ) : null}
         </div>
         <div className="text-sm md:col-span-4 md:col-start-9">
-          <p>
-            {project.city}, {project.country}
-          </p>
+          <ProjectJsonLd project={project} />
+          <dl className="space-y-4">
+            <div>
+              <dt className="font-mono text-xs text-mute">Lieu</dt>
+              <dd className="mt-1">
+                {project.city}, {project.country}
+              </dd>
+            </div>
+            <div>
+              <dt className="font-mono text-xs text-mute">Année affichée</dt>
+              <dd className="mt-1">{project.year}</dd>
+            </div>
+            <div>
+              <dt className="font-mono text-xs text-mute">Type</dt>
+              <dd className="mt-1">{project.category}</dd>
+            </div>
+            {project.problem ? (
+              <div>
+                <dt className="font-mono text-xs text-mute">Problème</dt>
+                <dd className="mt-1">{project.problem}</dd>
+              </div>
+            ) : null}
+            {project.solution ? (
+              <div>
+                <dt className="font-mono text-xs text-mute">Réponse</dt>
+                <dd className="mt-1">{project.solution}</dd>
+              </div>
+            ) : null}
+          </dl>
           <p className="mt-6">
             <a href={project.url} rel="noopener noreferrer" className="border-b border-ink pb-1">
               Voir le site

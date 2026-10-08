@@ -4,7 +4,7 @@ import tls from "node:tls";
 import { buildFindings, type AuditFacts } from "@/lib/audit/findings";
 
 export type AuditState = "running" | "pass" | "warn" | "fail";
-export type AuditDimension = "Technique" | "Performance" | "SEO" | "Accessibilité" | "GEO" | "Conversion";
+export type AuditDimension = "Technique" | "Performance" | "SEO" | "Accessibilité" | "GEO" | "Conversion" | "Machine";
 export type AuditImpact = "aucun" | "faible" | "moyen" | "élevé";
 export type AuditEffort = "court" | "moyen" | "long";
 

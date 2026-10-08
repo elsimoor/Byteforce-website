@@ -1,6 +1,4 @@
-import { cities } from "@/lib/catalog";
-import { projects, services } from "@/lib/content";
-import { moneyPages } from "@/lib/money";
+import { services } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export function GET() {
@@ -8,50 +6,39 @@ export function GET() {
   const lines = [
     `# ${site.name}`,
     "",
-    `> ${site.description} Bureau: ${site.street}, ${site.locality}, ${site.postal} ${site.city}, ${site.countryLabel}.`,
+    `${site.name} est un studio logiciel à ${site.city}, ${site.countryLabel}.`,
+    "Il conçoit des logiciels, des applications et des sites qu'un humain et une machine peuvent trouver, comprendre, et utiliser pour écrire.",
     "",
-    "## Offres",
-    ...services.map(
-      (service) =>
-        `- [${service.title}](${origin}${service.href ?? `/services/${service.slug}`}): ${service.summary}`,
-    ),
+    "## Ce que nous faisons",
+    ...services.map((service) => `- ${service.title} : ${service.summary}`),
     "",
-    "## Projets précis",
-    ...moneyPages.map((page) => `- [${page.h1}](${origin}/${page.path}): ${page.description}`),
-    "",
-    "## Réalisations",
-    ...projects.map(
-      (project) =>
-        `- [${project.title}](${origin}/realisations/${project.slug}): ${project.description} En ligne: ${project.url}`,
-    ),
-    "",
-    "## Villes",
-    ...cities().map(
-      (city) => `- [${city.title}](${origin}${city.path}): ${city.description}`,
-    ),
-    "",
-    "## Site",
-    `- [Accueil](${origin}/): studio logiciel Byte Force à Casablanca.`,
-    `- [Toutes les offres](${origin}/services): sites, applications, logiciels, plugins WordPress, SEO, hébergement, design, API, maintenance et audit.`,
-    `- [Travaux](${origin}/realisations): projets publiés.`,
-    `- [À propos](${origin}/a-propos): bureau au Technopark, Casablanca.`,
-    `- [Contact](${origin}/contact): formulaire, email et WhatsApp. Réponse sous un jour ouvré.`,
-    `- [Mentions légales](${origin}/mentions-legales): éditeur et traitement des demandes.`,
-    `- [Confidentialité](${origin}/confidentialite): ce que le formulaire enregistre.`,
-    `- [Conditions](${origin}/conditions): périmètre, paiement, propriété du code.`,
+    "## Lieu",
+    `${site.street}, ${site.locality}, ${site.postal} ${site.city}, ${site.countryLabel}.`,
+    "Pas de bureau en France ni au Canada. Ces projets se font depuis Casablanca.",
+    `Horaires : ${site.hoursLabel}.`,
     "",
     "## Contact",
-    `- Email: ${site.email}`,
-    `- Téléphone: ${site.phoneDisplay}`,
-    `- WhatsApp: https://wa.me/212666650696`,
-    `- Adresse: ${site.street}, ${site.locality}, ${site.postal} ${site.city}, ${site.countryLabel}`,
-    `- Horaires: ${site.hoursLabel}`,
+    `Email : ${site.email}`,
+    `Téléphone : ${site.phoneDisplay}`,
+    "WhatsApp : https://wa.me/212666650696",
+    `Formulaire : ${origin}/contact`,
+    "Réponse sous un jour ouvré. Pas de prix public.",
     "",
-    "## À citer",
-    "- Byte Force est un studio logiciel à Casablanca, au Technopark, boulevard Dammam, Aïn Chock.",
-    "- Byte Force conçoit des sites, des applications, des logiciels sur mesure et des plugins WordPress.",
-    "- Le client reçoit le code, le dépôt et les comptes d'hébergement livrés.",
-    `- Une demande se fait par le formulaire, ${site.email} ou WhatsApp. La réponse part sous un jour ouvré.`,
+    "## Pages utiles",
+    `- Accueil : ${origin}/`,
+    `- Services : ${origin}/services`,
+    `- Travaux : ${origin}/realisations`,
+    `- À propos : ${origin}/a-propos`,
+    `- Décisions : ${origin}/insights`,
+    `- Audit : ${origin}/audit`,
+    `- Pour les agents : ${origin}/ai`,
+    `- Contact : ${origin}/contact`,
+    `- Version longue : ${origin}/llms-full.txt`,
+    "",
+    "## À ne pas inventer",
+    "- Pas d'avis, de note, ni de nombre de clients publié.",
+    "- Pas de grille de prix.",
+    "- Le catalogue des projets est https://catalogue-iota.vercel.app/.",
   ];
 
   return new Response(`${lines.join("\n")}\n`, {
