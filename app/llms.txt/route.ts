@@ -60,6 +60,7 @@ export function GET() {
     `- [Combien coûte la création d'un SaaS](${origin}/insights/cout-creation-saas) : pas de montant public, la note suit le geste et l'isolation.`,
     `- [Comment créer un SaaS](${origin}/insights/comment-creer-un-saas) : nommer le geste, isoler les clients, livrer une version ouvrable.`,
     `- [MVP d'un SaaS au Maroc](${origin}/insights/mvp-saas-maroc) : une première version qui isole déjà les clients.`,
+    `- [Développement d'une application SaaS](${origin}/insights/developpement-application-saas) : le produit à comptes, pas la page qui le décrit.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

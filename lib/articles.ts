@@ -2634,6 +2634,101 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "developpement-application-saas",
+    title: "Développement application SaaS",
+    description:
+      "Développement d'une application SaaS : un produit à comptes, pas un site. Plusieurs clients, dossiers séparés. Casablanca. Pas de prix public.",
+    h1: "Développement application SaaS",
+    date: "2026-10-08",
+    lede: "Le développement d'une application SaaS construit le produit que plusieurs clients ouvrent, pas la page qui le décrit. Comptes, rôles, dossiers qui ne se mélangent pas. Byte Force le fait depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour le geste dans l'application.",
+    sections: [
+      {
+        heading: "L'application, pas la vitrine",
+        paragraphs: [
+          "L'application est l'endroit où le client finit le geste. Le site, s'il existe, dit ce que c'est et mène au compte. Les confondre, c'est livrer une plaquette et l'appeler SaaS. L'offre produit est le [[/developpement-saas-maroc|développement SaaS]]. Si le logiciel est pour une seule entreprise, dans le navigateur, c'est l'[[/application-web-sur-mesure-maroc|application web]], pas un SaaS.",
+          "Plusieurs clients, des rôles, des données isolées : sans ces trois-là, le mot application ne suffit pas. On ne les ajoute pas après la mise en ligne du premier logo.",
+        ],
+      },
+      {
+        heading: "Ce que la première version ouvre",
+        paragraphs: [
+          "Un compte. Le geste. La séparation. Pas le catalogue de rapports. Périmètre écrit, acompte, code et hébergement à l'entreprise qui commande. Pas de délai fixe : souvent plusieurs semaines. Pas de prix public.",
+          "Casablanca, Technopark, boulevard Dammam. Pas de bureau en France ni au Canada. Coco Inbox est un produit en ligne, pas le plan de cette application.",
+        ],
+      },
+      {
+        heading: "Ce qu'on refuse d'appeler ainsi",
+        paragraphs: [
+          "Un formulaire sur un site. Un tableur partagé. Un logiciel interne avec un mot de passe unique pour tout le monde. Aucun n'est une application SaaS. Le premier échange le dit, et il est gratuit.",
+          "On ne publie pas un nombre d'applications, un revenu, ou une note pour habiller le mot.",
+        ],
+      },
+      {
+        heading: "Ce qui reste à l'entreprise qui commande",
+        paragraphs: [
+          "À la remise, elle possède le code, le dépôt et les comptes d'hébergement livrés. L'application n'est pas un login que le studio peut fermer. Un acompte suit le périmètre écrit. Si le geste change, le changement est accepté avant d'être construit. Il n'y a pas de grille, et le bureau de Casablanca, Technopark, boulevard Dammam, Aïn Chock, n'en crée pas une.",
+          "Les clients du produit, eux, ont un compte. Leurs dossiers ne se mélangent pas. Ce n'est pas la même phrase que « le code appartient à l'entreprise qui a commandé ». Les deux sont vrais en même temps : l'un possède le logiciel, les autres utilisent leur espace. On ne publie pas combien ils sont.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand vous pouvez séparer la page publique et le geste dans le compte. Dire le geste. Dire si un seul client ou plusieurs.",
+          "Trente minutes. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le compte]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste dans l'application" },
+      { href: "/developpement-saas-maroc", label: "Le SaaS" },
+      { href: "/application-web-sur-mesure-maroc", label: "L'application web" },
+    ],
+    en: {
+      title: "Building a SaaS application",
+      description:
+        "A SaaS application is the product with accounts, not the site. Several customers, separate files. Casablanca. No public price.",
+      h1: "Building a SaaS application",
+      lede: "Building a SaaS application means the product several customers open, not the page that describes it. Accounts, roles, files that do not mix. Byte Force does it from Casablanca. No public price. [[/contact|Write]] for the action inside the application.",
+      sections: [
+      {
+        heading: "The application, not the brochure",
+        paragraphs: [
+          "The application is where the customer finishes the action. The site, if it exists, says what it is and leads to the account. Mixing them means shipping a leaflet and calling it a SaaS. The product offer is SaaS development. If the software is for one company, in the browser, it is a web application, not a SaaS.",
+          "Several customers, roles, isolated data: without those three, the word application is not enough. They are not added after the first logo goes online.",
+        ],
+      },
+      {
+        heading: "What the first version opens",
+        paragraphs: [
+          "An account. The action. The separation. Not the report catalogue. A written scope, a deposit, code and hosting to the company that orders. No fixed schedule: often several weeks. No public price.",
+          "Casablanca, Technopark, boulevard Dammam. No office in France or Canada. Coco Inbox is a product online, not the plan of this application.",
+        ],
+      },
+      {
+        heading: "What is not called that",
+        paragraphs: [
+          "A form on a site. A shared spreadsheet. Internal software with one password for everyone. None of these is a SaaS application. The first conversation says so, and it is free.",
+          "No count of applications, no revenue, and no score is published to dress the word.",
+        ],
+      },
+      {
+        heading: "What the ordering company keeps",
+        paragraphs: [
+          "At handover, it owns the code, the repository and the hosting accounts that were delivered. The application is not a login the studio can close. A deposit follows the written scope. If the action changes, the change is accepted before it is built. There is no grid, and the Casablanca office, Technopark, boulevard Dammam, Aïn Chock, does not create one.",
+          "The product's customers have an account. Their files do not mix. That is not the same sentence as « the code belongs to the company that ordered ». Both are true at once: one owns the software, the others use their space. How many they are is not published.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when you can separate the public page and the action inside the account. Name the action. Say whether one customer or several.",
+          "Thirty minutes. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the account]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
