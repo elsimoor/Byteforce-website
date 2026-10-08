@@ -3391,6 +3391,101 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "cout-application-web",
+    title: "Combien coûte une application web",
+    description:
+      "Combien coûte une application web : pas de prix public. La note suit le geste dans le navigateur, les rôles et les branchements. Casablanca.",
+    h1: "Combien coûte une application web",
+    date: "2026-10-08",
+    lede: "Combien coûte une application web : Byte Force ne publie pas de montant. À Casablanca, la note suit le geste dans le navigateur, les rôles, et les branchements. Ce n'est pas le prix d'une vitrine. [[/contact|Écrire]] pour le dossier, pas pour une grille.",
+    sections: [
+      {
+        heading: "Pas de tarif d'application web",
+        paragraphs: [
+          "Un montant « à partir de » décrit un forfait de pages, pas le travail dans le navigateur. Byte Force ne l'affiche pas. L'[[/application-web-sur-mesure-maroc|application web]] est l'offre. Le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]] est le cadre quand le sujet dépasse un écran. Cette page dit ce qui fait bouger la note.",
+          "Une vitrine et une application ne se chiffrent pas de la même façon, et aucune des deux n'a de grille ici. Comparer deux devis sans le geste, c'est comparer deux mots.",
+        ],
+      },
+      {
+        heading: "Ce qui change le montant",
+        paragraphs: [
+          "Le nombre d'écrans vraiment ouverts. Les rôles : qui crée, qui valide, qui exporte. Les branchements : email, paiement, outil déjà payé. Ajouter le téléphone, le CRM et la paie sur le même devis gonfle la note sans rendre le dossier plus sûr.",
+          "Le bureau au Technopark, boulevard Dammam, Aïn Chock, ne rajoute pas une ligne. Pas de bureau en France ni au Canada. Trente minutes gratuites, y compris pour dire qu'un site suffit, ou qu'il ne faut rien construire.",
+        ],
+      },
+      {
+        heading: "Ce qu'un devis devrait montrer",
+        paragraphs: [
+          "Le geste. Les rôles. Ce qui est dans la première version, et ce qui attend. Un acompte, puis des étapes liées à ce qui est livré. À la remise, le code, le dépôt et l'hébergement sont à l'entreprise. Pas de délai fixe : souvent plusieurs semaines.",
+          "On ne publie pas un temps de chargement, un score, ou un nombre d'écrans moyen. Le laboratoire d'une page de byteforce.ma ne se transfère pas au devis d'un client.",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "Le client possède le code et les comptes d'hébergement livrés. Ce n'est pas un accès loué. Si le périmètre change, c'est écrit avant d'être construit. Dealkhir montre une plateforme en ligne à Casablanca. Ce n'est pas un prix, et ce n'est pas le plan de l'application suivante.",
+          "Aucun chiffre de trafic, aucun « à partir de », aucune note. Le montant n'existe qu'après le périmètre.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand un chiffre circule sans le dossier, ou quand le projet est encore « un site qui fait tout ». Apporter le geste dans le navigateur.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le dossier]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le dossier" },
+      { href: "/application-web-sur-mesure-maroc", label: "L'application web" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le logiciel sur mesure" },
+    ],
+    en: {
+      title: "What a web application costs",
+      description:
+        "What a web application costs is not public. The figure follows the action in the browser, the roles and the connections. Casablanca.",
+      h1: "What a web application costs",
+      lede: "What a web application costs is not a published figure. In Casablanca, the amount follows the action in the browser, the roles, and the connections. It is not the price of a brochure. [[/contact|Write]] for the file, not for a grid.",
+      sections: [
+      {
+        heading: "No web-app tariff",
+        paragraphs: [
+          "An amount « from » describes a package of pages, not the work in the browser. Byte Force does not display one. The web application is the offer. Custom software is the frame when the subject is more than one screen. This page says what moves the amount.",
+          "A brochure and an application are not priced the same way, and neither has a grid here. Comparing two quotes without the action is comparing two words.",
+        ],
+      },
+      {
+        heading: "What changes the amount",
+        paragraphs: [
+          "The number of screens really opened. The roles: who creates, who approves, who exports. The connections: email, payment, a tool already paid for. Adding the phone, the CRM and payroll on the same quote raises the amount without making the file safer.",
+          "The office at Technopark, boulevard Dammam, Aïn Chock, does not add a line. No office in France or Canada. Thirty free minutes, including to say that a site is enough, or that nothing should be built.",
+        ],
+      },
+      {
+        heading: "What a quote should show",
+        paragraphs: [
+          "The action. The roles. What is in the first version, and what waits. A deposit, then steps tied to what is delivered. At handover, the code, the repository and the hosting belong to the company. No fixed schedule: often several weeks.",
+          "No load time, no score, and no average screen count is published. A lab reading of a byteforce.ma page does not transfer to a client's quote.",
+        ],
+      },
+      {
+        heading: "What is handed over",
+        paragraphs: [
+          "The client owns the code and the delivered hosting accounts. It is not a rented login. If the scope changes, it is written before it is built. Dealkhir shows a platform online in Casablanca. It is not a price, and it is not the plan of the next application.",
+          "No traffic figure, no « from », no score. The amount exists only after the scope.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when a figure is circulating without the file, or when the project is still « a site that does everything ». Bring the action in the browser.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the file]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
