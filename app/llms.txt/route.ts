@@ -44,6 +44,7 @@ export function GET() {
     `- [Logiciel personnalisé ou logiciel standard](${origin}/insights/logiciel-personnalise-ou-standard) : garder le marché s'il porte le métier, sinon écrire.`,
     `- [Avantages d'un logiciel sur mesure](${origin}/insights/avantages-logiciel-sur-mesure) : le circuit n'est pas tordu, et le code revient à l'entreprise.`,
     `- [Développement logiciel pour une entreprise au Maroc](${origin}/insights/developpement-logiciel-entreprise-maroc) : partir des outils déjà en place, pas d'une page blanche.`,
+    `- [Un studio logiciel à Casablanca](${origin}/insights/agence-developpement-logiciel-casablanca) : au Technopark, pour le logiciel, pas pour une vitrine au forfait.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

@@ -1338,6 +1338,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "agence-developpement-logiciel-casablanca",
+    title: "Agence développement logiciel Casablanca",
+    description:
+      "Agence développement logiciel Casablanca : Byte Force est un studio au Technopark, pas une agence de vitrines. Pas de prix public.",
+    h1: "Agence développement logiciel Casablanca",
+    date: "2026-10-08",
+    lede: "Agence de développement logiciel à Casablanca : le mot agence désigne ici un studio qui écrit le logiciel, au Technopark, boulevard Dammam, Aïn Chock. Pas une fabrique de sites vitrines au forfait. Pas de prix public. [[/contact|Écrire]] pour le circuit, pas pour une plaquette.",
+    sections: [
+      {
+        heading: "Ce que le mot agence ne doit pas couvrir",
+        paragraphs: [
+          "Beaucoup de recherches « agence » attendent un site vitrine, un logo, et un forfait. Byte Force n'est pas cette offre. Le studio écrit des logiciels, des applications, et des sites quand le site porte un geste. La page [[/developpement-logiciel-casablanca|développement logiciel à Casablanca]] dit le lieu. Celle-ci dit ce qu'on ne prend pas : une vitrine sans circuit, vendue « à partir de » un montant.",
+          "Le [[/services/creation-site-web|site]] existe comme offre à part, quand la page doit être trouvée et lue. Ce n'est pas le même travail qu'un CRM, un outil métier, ou un produit utilisé par plusieurs clients. Mélanger les deux dans un devis unique est le réflexe qu'on refuse.",
+        ],
+      },
+      {
+        heading: "Où l'on se voit",
+        paragraphs: [
+          "Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Lundi à vendredi, 9 h à 19 h. Pour une entreprise de la ville, le cadrage peut se faire autour de la table. On ne prétend pas avoir un bureau dans chaque quartier, ni en France, ni au Canada.",
+          "La proximité ne rajoute pas une taxe et n'en retire pas une. Il n'y a pas de grille. Le montant, quand il existe, suit les écrans, les rôles et les branchements, après un périmètre écrit. Le premier échange de trente minutes est gratuit, et il peut conclure qu'il ne faut pas construire.",
+        ],
+      },
+      {
+        heading: "Ce qui est livré",
+        paragraphs: [
+          "À la remise, le client possède le code, le dépôt et les comptes d'hébergement livrés. Ce n'est pas un accès que l'agence garde. Dealkhir est en ligne à Casablanca depuis 2024. C'est un projet publié, pas une preuve que toute entreprise de la ville a le même besoin, et pas un chiffre de Byte Force.",
+          "Il n'y a pas de délai fixe affiché pour « une agence à Casablanca ». Une première version tient souvent en plusieurs semaines. Le calendrier suit le périmètre, pas le quartier.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le besoin est un logiciel, pas une plaquette. Dire le geste, les rôles, et si un site public fait partie du même circuit ou non. Si c'est seulement une vitrine, le premier échange le dira.",
+          "Réponse sous un jour ouvré. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le circuit" },
+      { href: "/developpement-logiciel-casablanca", label: "Développement à Casablanca" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le logiciel sur mesure" },
+    ],
+    en: {
+      title: "A software studio in Casablanca",
+      description:
+        "In Casablanca, Byte Force is a software studio at Technopark, not a brochure agency. No public price. Write about the workflow.",
+      h1: "A software studio in Casablanca",
+      lede: "A software development agency in Casablanca: here the word means a studio that writes the software, at Technopark, boulevard Dammam, Aïn Chock. Not a shop for brochure sites sold as a package. No public price. [[/contact|Write]] about the workflow, not about a leaflet.",
+      sections: [
+      {
+        heading: "What the word agency should not cover",
+        paragraphs: [
+          "Many searches for « agency » expect a brochure site, a logo, and a package. Byte Force is not that offer. The studio writes software, applications, and sites when the site carries an action. The Casablanca page says the place. This page says what is not taken: a brochure with no workflow, sold « from » an amount.",
+          "A website exists as a separate offer, when the page must be found and read. That is not the same work as a CRM, a trade tool, or a product used by several customers. Mixing the two into one quote is the reflex that gets refused.",
+        ],
+      },
+      {
+        heading: "Where we meet",
+        paragraphs: [
+          "Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Monday to Friday, 9:00 to 19:00. For a company in the city, the scope can be set around the table. There is no claim of an office in every neighbourhood, nor in France, nor in Canada.",
+          "Being nearby does not add a tax and does not remove one. There is no grid. The amount, when it exists, follows the screens, the roles and the connections, after a written scope. The first thirty minutes are free, and they can end with the decision not to build.",
+        ],
+      },
+      {
+        heading: "What is delivered",
+        paragraphs: [
+          "At handover, the client owns the code, the repository and the hosting accounts that were delivered. It is not an access the studio keeps. Dealkhir has been online in Casablanca since 2024. It is a published project, not proof that every company in the city has the same need, and not a Byte Force figure.",
+          "There is no fixed public schedule for « an agency in Casablanca ». A first version often takes several weeks. The calendar follows the scope, not the neighbourhood.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the need is software, not a leaflet. Name the action, the roles, and whether a public site is part of the same workflow. If it is only a brochure, the first conversation will say so.",
+          "A reply within one business day. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
