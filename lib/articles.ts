@@ -3676,6 +3676,101 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "automatisation-entreprise-avec-ia",
+    title: "Automatisation entreprise avec IA",
+    description:
+      "Automatisation d'une entreprise avec IA : la règle stable d'abord. L'IA seulement si la règle ne suffit pas. Casablanca. Pas un synonyme.",
+    h1: "Automatisation entreprise avec IA",
+    date: "2026-10-08",
+    lede: "L'automatisation d'une entreprise avec IA commence par la règle, pas par le modèle. Avec une règle stable, le logiciel agit. L'intelligence artificielle n'est ajoutée que si cette règle ne porte pas le geste. Byte Force est à Casablanca. Pas de prix public. [[/contact|Écrire]] pour le geste répétitif.",
+    sections: [
+      {
+        heading: "Avec une règle, déjà",
+        paragraphs: [
+          "Automatiser, c'est enlever une ressaisie ou un passage manuel. Si le dossier est complet, on envoie. Si le montant dépasse un seuil, quelqu'un valide. Ça s'écrit. L'[[/developpement-logiciel-sur-mesure-maroc/automatisation|automatisation]] et la page [[/solutions/automatisation-entreprise|pour une entreprise]] disent ce travail. Y coller « avec IA » ne le rend pas plus vrai.",
+          "L'IA a une place quand la règle ne se formule pas : le texte change trop, le document n'a pas de champs fixes. Alors on le dit dans le périmètre. Sinon, on n'achète pas un modèle pour un si.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne confond pas",
+        paragraphs: [
+          "Une règle n'est pas un agent. Un branchement entre deux outils n'est pas une intelligence. Un export le soir n'est pas un modèle. Le garder clair évite un devis qui promet une entreprise « intelligente » et livre une notification.",
+          "Pas de prix public. Pas de gain en heures inventé. Casablanca, Technopark, boulevard Dammam. Pas d'autre bureau. Code livré à l'entreprise. Pas de délai fixe : souvent plusieurs semaines pour le geste nommé.",
+        ],
+      },
+      {
+        heading: "Le périmètre",
+        paragraphs: [
+          "Quel geste. Quelle règle. Où un humain valide encore. Quel outil déjà payé reste branché. Si un modèle entre, quelles données il voit, et qui reprend la main quand il se trompe. Sans cette dernière phrase, le modèle n'est pas dans le périmètre.",
+          "Le premier échange peut retirer l'IA du sujet. C'est souvent la bonne coupe. Trente minutes, gratuites.",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "Le code, le dépôt et l'hébergement livrés. La règle reste lisible. On ne publie pas un pourcentage d'automatisation, un nombre de tâches, ou une note. Snapchat Collect montre un flux déjà en ligne. Ce n'est pas une preuve d'IA, et ses chiffres ne sont pas repris.",
+          "Un changement de règle est écrit avant d'être construit. On n'ajoute pas un modèle en silence pour « faire moderne ».",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire le geste qui se répète chaque semaine. Dire si vous pouvez l'expliquer en une règle. Si oui, on part de là. Si non, apportez trois cas où la règle casse.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire la répétition]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste répétitif" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/automatisation", label: "L'automatisation" },
+      { href: "/solutions/automatisation-entreprise", label: "Automatiser un processus" },
+    ],
+    en: {
+      title: "Automating a company, with or without AI",
+      description:
+        "Automating a company with AI still starts with a stable rule. AI only if the rule cannot carry the action. Casablanca.",
+      h1: "Automating a company, with or without AI",
+      lede: "Automating a company with AI starts with the rule, not the model. With a stable rule, the software acts. Artificial intelligence is added only when that rule does not carry the action. Byte Force is in Casablanca. No public price. [[/contact|Write]] for the repeated action.",
+      sections: [
+      {
+        heading: "With a rule, already",
+        paragraphs: [
+          "To automate is to remove a retype or a manual handoff. If the file is complete, send it. If the amount passes a threshold, someone approves. That is written. The automation pages say this work. Pasting « with AI » on it does not make it truer.",
+          "AI has a place when the rule cannot be stated: the text changes too much, the document has no fixed fields. Then it is said in the scope. Otherwise a model is not bought for an if.",
+        ],
+      },
+      {
+        heading: "What is not confused",
+        paragraphs: [
+          "A rule is not an agent. A connection between two tools is not intelligence. An evening export is not a model. Keeping that clear avoids a quote that promises an « intelligent » company and delivers a notification.",
+          "No public price. No invented saving in hours. Casablanca, Technopark, boulevard Dammam. No other office. Code delivered to the company. No fixed schedule: often several weeks for the named action.",
+        ],
+      },
+      {
+        heading: "The scope",
+        paragraphs: [
+          "Which action. Which rule. Where a human still approves. Which tool already paid for stays connected. If a model enters, which data it sees, and who takes back control when it is wrong. Without that last sentence, the model is not in the scope.",
+          "The first conversation can remove AI from the subject. That is often the right cut. Thirty minutes, free.",
+        ],
+      },
+      {
+        heading: "What is handed over",
+        paragraphs: [
+          "The code, the repository and the delivered hosting. The rule stays readable. No automation percentage, no task count, and no score is published. Snapchat Collect shows a flow already online. It is not proof of AI, and its figures are not reused.",
+          "A rule change is written before it is built. A model is not added in silence to « look modern ».",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write the action that repeats every week. Say whether you can explain it as one rule. If yes, that is the start. If not, bring three cases where the rule breaks.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the repetition]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();

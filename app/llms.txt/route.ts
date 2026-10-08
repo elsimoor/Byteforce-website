@@ -72,6 +72,7 @@ export function GET() {
     `- [Combien coûte une application web](${origin}/insights/cout-application-web) : pas de prix public, la note suit le geste dans le navigateur.`,
     `- [Créer une application pour son entreprise](${origin}/insights/creer-une-application-pour-son-entreprise) : d'abord l'endroit du geste et les rôles.`,
     `- [Intelligence artificielle pour une entreprise au Maroc](${origin}/insights/intelligence-artificielle-entreprise-maroc) : d'abord une règle stable, un modèle seulement si le geste l'exige.`,
+    `- [Automatiser une entreprise, avec ou sans IA](${origin}/insights/automatisation-entreprise-avec-ia) : la règle stable d'abord, l'IA seulement si elle ne suffit pas.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

@@ -59,6 +59,9 @@ export default function AiPage() {
                     <li>
             <Link href="/insights/intelligence-artificielle-entreprise-maroc">L'intelligence artificielle dans une entreprise, d'abord comme une règle stable</Link>. Puis <Link href="/contact">écrire</Link>.
           </li>
+          <li>
+            <Link href="/insights/automatisation-entreprise-avec-ia">L'automatisation reste une règle stable, même quand on parle d'IA</Link>. Puis <Link href="/contact">écrire</Link>.
+          </li>
 <li>
             <Link href="/audit/json?url=https://byteforce.ma">/audit/json</Link>, le même passage en JSON.
           </li>
