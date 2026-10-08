@@ -1581,6 +1581,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "cout-crm-personnalise",
+    title: "Combien coûte un CRM personnalisé",
+    description:
+      "Combien coûte un CRM personnalisé : pas de montant public. La note suit les étapes, les rôles et les branchements. Casablanca.",
+    h1: "Combien coûte un CRM personnalisé",
+    date: "2026-10-08",
+    lede: "Combien coûte un CRM personnalisé : Byte Force ne publie pas de montant. À Casablanca, la note suit les étapes du cycle, les rôles, et les branchements. Le [[/insights/cout-logiciel-sur-mesure-maroc|principe est le même]] que pour tout logiciel. [[/contact|Écrire]] pour le cycle réel, pas pour une grille.",
+    sections: [
+      {
+        heading: "Il n'y a pas de tarif de CRM",
+        paragraphs: [
+          "Un CRM « à partir de » tant de dirhams par utilisateur décrit l'abonnement d'un éditeur, ou un forfait. Byte Force ne publie ni l'un ni l'autre. Les pages du site ne sont pas un devis. Un chiffre n'existe qu'après les étapes écrites : qui crée le dossier, qui le fait avancer, qui relance.",
+          "Comparer deux CRM personnalisés sans ces étapes, c'est comparer deux mots. La page [[/developpement-logiciel-sur-mesure-maroc/crm|CRM sur mesure]] dit ce qui se construit. Celle-ci dit ce qui fait bouger la note, et ce qui ne la fait pas bouger.",
+        ],
+      },
+      {
+        heading: "Ce qui change le montant",
+        paragraphs: [
+          "Le nombre d'étapes que quelqu'un utilise vraiment. Le nombre de rôles. Les branchements : la boîte mail, un outil déjà payé, un export que la comptabilité doit recevoir. Ajouter le stock, la paie et les congés sur le même devis fait monter la note sans rendre la relance plus sûre.",
+          "Le bureau à Casablanca, Technopark, boulevard Dammam, ne rajoute pas une ligne. Pas de bureau en France ni au Canada. La proximité n'est pas une remise. Un premier échange de trente minutes est gratuit, y compris s'il conclut de garder l'outil du marché.",
+        ],
+      },
+      {
+        heading: "Ce qu'un devis devrait montrer",
+        paragraphs: [
+          "Les écrans. Les rôles. Les branchements. Ce qui est dans la première version, et ce qui attend. Un acompte, puis des étapes liées à ce qui est livré. À la remise, le code, le dépôt et l'hébergement livré sont à l'entreprise. Si le périmètre change, c'est écrit avant.",
+          "Il n'y a pas de délai fixe collé au prix. Une première version tient souvent en plusieurs semaines, selon le cycle. On ne publie pas un gain, un nombre de commerciaux, ou une note pour justifier un montant qui n'est pas affiché.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand un chiffre circule sans dire les étapes, ou quand l'abonnement actuel coûte en contournements que personne n'a écrits. Apporter le cycle, pas un budget inventé.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire les étapes]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le cycle" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le logiciel sur mesure" },
+    ],
+    en: {
+      title: "What a custom CRM costs",
+      description:
+        "What a custom CRM costs is not public. The figure follows the steps, the roles and the connections. Casablanca. No grid.",
+      h1: "What a custom CRM costs",
+      lede: "What a custom CRM costs is not a published figure. In Casablanca, the amount follows the steps of the cycle, the roles, and the connections. The rule is the same as for any custom software. [[/contact|Write]] with the real cycle, not for a grid.",
+      sections: [
+      {
+        heading: "There is no CRM tariff",
+        paragraphs: [
+          "A CRM « from » so many dirhams per user describes a vendor's subscription, or a package. Byte Force publishes neither. The pages of the site are not a quote. A figure exists only after the steps are written: who creates the file, who moves it, who follows up.",
+          "Comparing two custom CRMs without those steps is comparing two words. The CRM page says what gets built. This page says what moves the amount, and what does not.",
+        ],
+      },
+      {
+        heading: "What changes the amount",
+        paragraphs: [
+          "The number of steps someone really uses. The number of roles. The connections: the mailbox, a tool already paid for, an export accounting must receive. Adding stock, payroll and leave on the same quote raises the amount without making the follow-up safer.",
+          "The office in Casablanca, Technopark, boulevard Dammam, does not add a line. No office in France or Canada. Being nearby is not a discount. A first conversation of thirty minutes is free, including when it ends with keeping the market tool.",
+        ],
+      },
+      {
+        heading: "What a quote should show",
+        paragraphs: [
+          "The screens. The roles. The connections. What is in the first version, and what waits. A deposit, then steps tied to what is delivered. At handover, the code, the repository and the delivered hosting belong to the company. If the scope changes, it is written first.",
+          "There is no fixed schedule stuck to the price. A first version often takes several weeks, according to the cycle. No gain, no count of salespeople, and no score is published to justify an amount that is not displayed.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when a figure is circulating without the steps, or when the current subscription costs in workarounds nobody has written down. Bring the cycle, not an invented budget.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the steps]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
