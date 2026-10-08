@@ -3486,6 +3486,101 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "creer-une-application-pour-son-entreprise",
+    title: "Créer une application pour son entreprise",
+    description:
+      "Créer une application pour son entreprise : d'abord l'endroit du geste, puis les rôles. Casablanca. Web ou téléphone. Pas de prix public.",
+    h1: "Créer une application pour son entreprise",
+    date: "2026-10-08",
+    lede: "Créer une application pour son entreprise commence par l'endroit du geste et par les rôles, pas par le mot application. Bureau ou téléphone. Un outil du marché ou un logiciel écrit. Byte Force est à Casablanca. Pas de prix public. [[/contact|Écrire]] avec le geste.",
+    sections: [
+      {
+        heading: "Avant de créer",
+        paragraphs: [
+          "Nommer le geste. Dire qui le fait. Dire si c'est au bureau ou sur un téléphone. Si un outil déjà payé le porte, on le garde. Le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]] est le cadre quand il ne le porte pas. [[/solutions/logiciel-entreprise|Une entreprise déjà outillée]] part de ce qui reste, pas d'une page blanche.",
+          "Créer n'est pas « être sur mobile et sur le web ». C'est permettre le geste. Le reste attend. Le premier échange de trente minutes peut conclure de ne pas créer.",
+        ],
+      },
+      {
+        heading: "Ce que la première version contient",
+        paragraphs: [
+          "Les écrans que quelqu'un ouvre vraiment. Les rôles. Le branchement qui doit rester. Pas la paie, le stock et le site dans le même passage, sauf si c'est le geste. Périmètre écrit, acompte, code et comptes livrés à l'entreprise.",
+          "Pas de délai fixe : souvent plusieurs semaines. Pas de prix public. Casablanca, Technopark, boulevard Dammam, Aïn Chock. Pas de bureau en France ni au Canada.",
+        ],
+      },
+      {
+        heading: "Web, téléphone, ou produit",
+        paragraphs: [
+          "Au bureau, l'application est dans le navigateur. En déplacement, elle est sur le téléphone. Si plusieurs clients ne doivent pas voir les mêmes dossiers, c'est un SaaS. Mélanger ces trois phrases dans un seul devis décrit trois projets.",
+          "À la remise, l'entreprise possède le code. Ce n'est pas un login. On ne publie pas un nombre d'applications créées, ni une note, ni un « à partir de ».",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "L'entreprise possède le code, le dépôt et les comptes livrés. Un acompte suit le périmètre écrit. Personne ne publie un nombre d'applications, une note, ou un délai valable pour toutes les entreprises. La première version tient souvent en plusieurs semaines, selon les rôles, pas selon le mot application.",
+          "Dealkhir, Zainek et Coco Inbox sont des projets en ligne. Ils ne décident pas à la place de l'entreprise ce qu'il faut créer, et leurs chiffres ne sont pas un devis.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire la phrase du geste et l'endroit. Si la phrase ne tient pas sans une liste de modules, l'application n'est pas encore décidée. Si elle tient, apportez-la.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Envoyer la phrase]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le logiciel sur mesure" },
+      { href: "/solutions/logiciel-entreprise", label: "Une entreprise déjà outillée" },
+    ],
+    en: {
+      title: "Building an application for a company",
+      description:
+        "Build an application for a company by naming where the action happens and who does it. Casablanca. Web or phone. No public price.",
+      h1: "Building an application for a company",
+      lede: "Building an application for a company starts with where the action happens and with the roles, not with the word application. Desk or phone. A market tool or written software. Byte Force is in Casablanca. No public price. [[/contact|Write]] with the action.",
+      sections: [
+      {
+        heading: "Before building",
+        paragraphs: [
+          "Name the action. Say who does it. Say whether it is at a desk or on a phone. If a tool already paid for carries it, keep it. Custom software is the frame when it does not. A company that already has tools starts from what stays, not from a blank page.",
+          "Building is not « being on mobile and on the web ». It is allowing the action. The rest waits. The first thirty minutes can end with not building.",
+        ],
+      },
+      {
+        heading: "What the first version contains",
+        paragraphs: [
+          "The screens someone really opens. The roles. The connection that must stay. Not payroll, stock and the site in the same pass, unless that is the action. A written scope, a deposit, code and accounts delivered to the company.",
+          "No fixed schedule: often several weeks. No public price. Casablanca, Technopark, boulevard Dammam, Aïn Chock. No office in France or Canada.",
+        ],
+      },
+      {
+        heading: "Web, phone, or product",
+        paragraphs: [
+          "At a desk, the application is in the browser. On the move, it is on the phone. If several customers must not see the same files, it is a SaaS. Mixing those three sentences in one quote describes three projects.",
+          "At handover, the company owns the code. It is not a login. No count of applications built, no score, and no « from » is published.",
+        ],
+      },
+      {
+          heading: "What is handed over",
+          paragraphs: [
+            "The company owns the code, the repository and the delivered accounts. A deposit follows the written scope. No count of applications, no score, and no schedule that fits every company is published. A first version often takes several weeks, according to the roles, not according to the word application.",
+            "Dealkhir, Zainek and Coco Inbox are projects online. They do not decide for the company what should be built, and their figures are not a quote.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write the sentence of the action and the place. If the sentence does not hold without a module list, the application is not decided yet. If it holds, bring it.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Send the sentence]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();

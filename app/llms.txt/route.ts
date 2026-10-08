@@ -70,6 +70,7 @@ export function GET() {
     `- [Application mobile sur mesure](${origin}/insights/application-mobile-sur-mesure) : le geste de l'entreprise, pas un modèle de store.`,
     `- [Application web ou application mobile](${origin}/insights/application-web-ou-mobile) : le choix suit l'endroit du geste, pas les deux par défaut.`,
     `- [Combien coûte une application web](${origin}/insights/cout-application-web) : pas de prix public, la note suit le geste dans le navigateur.`,
+    `- [Créer une application pour son entreprise](${origin}/insights/creer-une-application-pour-son-entreprise) : d'abord l'endroit du geste et les rôles.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,
