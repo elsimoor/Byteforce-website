@@ -2067,6 +2067,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "crm-personnalise-ou-salesforce",
+    title: "CRM personnalisé vs Salesforce",
+    description:
+      "CRM personnalisé vs Salesforce : garder l'outil du marché si le cycle rentre dedans. Sinon, l'écrire. Casablanca. Pas de prix comparé.",
+    h1: "CRM personnalisé vs Salesforce",
+    date: "2026-10-08",
+    lede: "CRM personnalisé vs Salesforce : on garde l'outil du marché si le cycle de l'entreprise rentre dans ses étapes. On écrit si chaque semaine il faut tordre le dossier pour qu'il y entre. Byte Force, à Casablanca, n'est pas un revendeur et ne publie pas un prix de l'un contre l'autre. [[/contact|Écrire]] avec le cycle.",
+    sections: [
+      {
+        heading: "Quand l'outil du marché suffit",
+        paragraphs: [
+          "Salesforce, comme un autre CRM déjà vendu, suffit quand les étapes prévues sont les étapes réelles : une piste, un devis, une relance, une signature. L'équipe s'en sert. Le contournement est rare. Byte Force le dit. Construire un double n'apporte rien. On ne publie pas le tarif de cet outil, ni une économie inventée à le quitter.",
+          "Le [[/developpement-logiciel-sur-mesure-maroc/crm/logiciel-crm-personnalise|CRM personnalisé]] commence quand le dossier a une étape que l'écran standard n'a pas, et que l'équipe la bricole dans un fichier à côté. Le [[/developpement-logiciel-sur-mesure-maroc/crm|cadre]] reste le cycle, pas la marque.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne met pas dans la comparaison",
+        paragraphs: [
+          "Pas de tableau de prix. Pas de nombre d'étoiles. Pas de « moins 30 % ». Ces chiffres ne sont pas des faits du studio. Pas non plus une liste de modules recopiée d'une page d'éditeur. La comparaison tient en une question : le cycle rentre-t-il sans être tordu ?",
+          "À la remise, si on écrit, le code, le dépôt et l'hébergement livré sont à l'entreprise. Ce n'est pas un argument contre un abonnement en général. C'est le fait de ce qui est livré ici. Casablanca, Technopark, boulevard Dammam. Pas de bureau ailleurs. Pas de grille.",
+        ],
+      },
+      {
+        heading: "Ce que la première version reprend",
+        paragraphs: [
+          "Si on construit, on reprend les étapes qui coincent, pas toute la panoplie. Qui crée, qui valide, qui relance. L'email ou l'outil déjà payé peuvent rester branchés. Un acompte après un périmètre écrit. Pas de délai fixe : souvent plusieurs semaines pour ce cycle.",
+          "On ne promet pas de « migrer Salesforce ». S'il y a un export utile, il porte les dossiers décidés. On n'annonce pas une bascule en un week-end.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire avec le nom de l'étape qui ne rentre pas, ou pour qu'on dise de rester sur l'outil du marché. Les deux réponses sont le travail du premier échange.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Nommer l'étape]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le cycle" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm/logiciel-crm-personnalise", label: "Le CRM personnalisé" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM sur mesure" },
+    ],
+    en: {
+      title: "A custom CRM or a market CRM",
+      description:
+        "Custom CRM or a market product: keep the market tool if the cycle fits. Otherwise write it. Casablanca. No compared prices.",
+      h1: "A custom CRM or a market CRM",
+      lede: "A custom CRM or Salesforce: keep the market tool if the company's cycle fits its stages. Write if every week the file must be bent to get in. Byte Force, in Casablanca, is not a reseller and does not publish a price of one against the other. [[/contact|Write]] with the cycle.",
+      sections: [
+      {
+        heading: "When the market tool is enough",
+        paragraphs: [
+          "Salesforce, like another CRM already on sale, is enough when the planned stages are the real stages: a lead, a quote, a follow-up, a signature. The team uses it. The workaround is rare. Byte Force says so. Building a double adds nothing. The price of that tool is not published here, nor an invented saving from leaving it.",
+          "A custom CRM starts when the file has a step the standard screen does not have, and the team patches it in a file beside it. The frame remains the cycle, not the brand.",
+        ],
+      },
+      {
+        heading: "What is not in the comparison",
+        paragraphs: [
+          "No price table. No star rating. No « minus 30 percent ». Those figures are not facts of the studio. Nor a module list copied from a vendor page. The comparison is one question: does the cycle fit without being bent?",
+          "At handover, if it is written, the code, the repository and the delivered hosting belong to the company. That is not an argument against a subscription in general. It is the fact of what is delivered here. Casablanca, Technopark, boulevard Dammam. No office elsewhere. No grid.",
+        ],
+      },
+      {
+        heading: "What the first version takes",
+        paragraphs: [
+          "If it is built, the steps that stick are taken, not the whole kit. Who creates, who approves, who follows up. Email or a tool already paid for can stay connected. A deposit after a written scope. No fixed schedule: often several weeks for that cycle.",
+          "There is no promise to « migrate Salesforce ». If an export is useful, it carries the files that were decided. A switch over a weekend is not announced.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write with the name of the step that does not fit, or so that you can be told to stay on the market tool. Both answers are the work of the first conversation.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Name the step]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
