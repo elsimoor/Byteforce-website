@@ -156,6 +156,34 @@ summary:focus-visible {
   .audit-live {
     animation: audit-blink 1.1s ease-in-out infinite;
   }
+
+  .audit-bar {
+    transform-origin: left center;
+    animation: audit-grow 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .audit-col {
+    transform-origin: center bottom;
+    animation: audit-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes audit-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes audit-rise {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 
 @keyframes audit-blink {

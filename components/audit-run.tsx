@@ -72,9 +72,13 @@ export function AuditRun({ url }: { url: string }) {
     };
   }, [url]);
 
-  const open = steps.filter((step) => step.state === "warn" || step.state === "fail");
-  const held = steps.filter((step) => step.state === "pass").length;
+  const settled = steps.filter((step) => step.state !== "running");
+  const open = settled.filter((step) => step.state === "warn" || step.state === "fail");
+  const held = settled.filter((step) => step.state === "pass").length;
+  const warned = settled.filter((step) => step.state === "warn").length;
+  const failed = settled.filter((step) => step.state === "fail").length;
   const visible = chapters.filter((chapter) => steps.some((step) => step.chapter === chapter));
+  const tallest = Math.max(held, warned, failed, 1);
 
   return (
     <div className="mt-14">
@@ -120,37 +124,145 @@ export function AuditRun({ url }: { url: string }) {
         </p>
       ) : null}
 
-      {done ? (
-        <section className="audit-step mt-20 border-t border-line pt-12" aria-labelledby="audit-open">
-          <h2 id="audit-open" className="display max-w-[12ch] text-[clamp(3rem,7vw,5.5rem)]">
-            {open.length ? "Ce qui reste ouvert." : "Rien de bloquant."}
-          </h2>
-          <p className="mt-6 font-mono text-sm text-mute">
-            {held} tenu{held > 1 ? "s" : ""} · {open.length} ouvert{open.length > 1 ? "s" : ""}
-          </p>
-          {open.length ? (
-            <ul className="mt-10 max-w-2xl border-t border-line">
-              {open.map((step) => (
-                <li key={step.id} className="border-b border-line py-5">
-                  <p className="text-lg">
-                    {step.chapter} · {step.label}
+      {done && settled.length > 0 ? (
+        <>
+          <section className="audit-step mt-20 border-t border-line pt-12" aria-labelledby="audit-charts">
+            <h2 id="audit-charts" className="display text-4xl md:text-5xl">
+              Les proportions.
+            </h2>
+            <div className="mt-10 grid items-end gap-12 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <div className="flex h-44 items-end gap-6" aria-hidden="true">
+                  {[
+                    { label: "Tenus", count: held, className: "bg-ink" },
+                    { label: "À revoir", count: warned, className: "bg-mute" },
+                    { label: "À corriger", count: failed, className: "border border-ink bg-paper" },
+                  ].map((column) => (
+                    <div key={column.label} className="flex h-full flex-1 flex-col justify-end">
+                      <div
+                        className={`audit-col w-full ${column.className}`}
+                        style={{ height: `${Math.max((column.count / tallest) * 100, column.count ? 8 : 0)}%` }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <ul className="mt-4 grid grid-cols-3 gap-6 text-sm">
+                  <li>
+                    <span className="font-mono text-2xl">{held}</span>
+                    <span className="mt-1 block text-mute">Tenus</span>
+                  </li>
+                  <li>
+                    <span className="font-mono text-2xl">{warned}</span>
+                    <span className="mt-1 block text-mute">À revoir</span>
+                  </li>
+                  <li>
+                    <span className="font-mono text-2xl">{failed}</span>
+                    <span className="mt-1 block text-mute">À corriger</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="lg:col-span-7">
+                <p className="text-sm text-mute">Par partie, sur {settled.length} points lus.</p>
+                <ul className="mt-6 space-y-5">
+                  {chapters.map((chapter) => {
+                    const items = settled.filter((step) => step.chapter === chapter);
+                    if (!items.length) return null;
+                    const partHeld = items.filter((step) => step.state === "pass").length;
+                    const partWarned = items.filter((step) => step.state === "warn").length;
+                    const partFailed = items.filter((step) => step.state === "fail").length;
+                    const share = (count: number) => `${(count / items.length) * 100}%`;
+                    return (
+                      <li key={chapter}>
+                        <div className="flex items-baseline justify-between gap-4 text-sm">
+                          <span>{chapter}</span>
+                          <span className="font-mono text-mute">
+                            {partHeld}/{items.length}
+                          </span>
+                        </div>
+                        <div
+                          className="mt-2 flex h-2 w-full bg-line"
+                          role="img"
+                          aria-label={`${chapter} : ${partHeld} tenus, ${partWarned} à revoir, ${partFailed} à corriger`}
+                        >
+                          {partHeld ? <span className="audit-bar h-full bg-ink" style={{ width: share(partHeld) }} /> : null}
+                          {partWarned ? <span className="audit-bar h-full bg-mute" style={{ width: share(partWarned) }} /> : null}
+                          {partFailed ? <span className="audit-bar h-full bg-paper ring-1 ring-ink ring-inset" style={{ width: share(partFailed) }} /> : null}
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div className="relative mt-24">
+            <section className="border border-line bg-paper px-6 py-12 md:px-12 md:pb-28" aria-labelledby="audit-whole">
+              <h2 id="audit-whole" className="display max-w-[14ch] text-[clamp(2.8rem,6vw,5rem)]">
+                Tout le passage.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed">
+                {held} tenu{held > 1 ? "s" : ""}, {warned} à revoir, {failed} à corriger. Accueil, fichiers, domaine, et les pages liées de ce passage.
+              </p>
+              <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+                {chapters.map((chapter) => {
+                  const items = settled.filter((step) => step.chapter === chapter);
+                  const partOpen = items.filter((step) => step.state === "warn" || step.state === "fail");
+                  return (
+                    <li key={chapter} className="border-t border-line pt-4">
+                      <p className="font-mono text-xs text-mute">{chapter}</p>
+                      <p className="mt-3 text-2xl tracking-tight">{items.filter((step) => step.state === "pass").length}</p>
+                      <p className="mt-2 text-sm text-mute">
+                        {partOpen.length ? partOpen.map((step) => step.label).join(", ") : "Rien d'ouvert."}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+
+            <section
+              className="relative z-10 -mt-14 border border-ink bg-ink px-6 py-12 text-paper md:ml-8 md:px-12 lg:ml-20"
+              aria-labelledby="audit-with-us"
+            >
+              <p className="font-mono text-xs tracking-wide text-paper/70">Avec Byte Force</p>
+              <h2 id="audit-with-us" className="display mt-4 max-w-[14ch] text-[clamp(2.6rem,5vw,4.5rem)]">
+                Ce que le travail change.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/80">
+                {open.length
+                  ? `Les ${open.length} point${open.length > 1 ? "s" : ""} ouverts entrent dans le chantier, pas dans un second rapport.`
+                  : "Ce passage ne bloque pas. La suite est le produit, pas un autre diagnostic."}
+              </p>
+              <ul className="mt-10 grid gap-8 md:grid-cols-3">
+                <li className="border-t border-paper/30 pt-4">
+                  <p className="text-lg">La page qui demande</p>
+                  <p className="mt-3 text-sm leading-relaxed text-paper/75">
+                    Textes en français, formulaire, titres, meta, sitemap et données structurées. Livrés avec le site, pas en option.
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-mute">{step.detail}</p>
                 </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="mt-8 max-w-md text-sm leading-relaxed text-mute">
-              L&apos;accueil, les fichiers et les pages liées tiennent sur ce passage.
-            </p>
-          )}
-          <p className="mt-8 max-w-md text-sm leading-relaxed text-mute">
-            Accueil, robots, sitemap, le domaine, et jusqu&apos;à trois pages liées. Ce n&apos;est pas un score Google, et ce n&apos;est pas tout le site.
-          </p>
-          <a href="/contact" className="mt-8 inline-block border-b border-ink pb-1 text-sm">
-            Parler de ce site
-          </a>
-        </section>
+                <li className="border-t border-paper/30 pt-4">
+                  <p className="text-lg">Le code à vous</p>
+                  <p className="mt-3 text-sm leading-relaxed text-paper/75">
+                    À la remise, le client possède le code, le dépôt et les comptes d&apos;hébergement livrés. Un acompte lance le travail. Le reste suit les étapes livrées.
+                  </p>
+                </li>
+                <li className="border-t border-paper/30 pt-4">
+                  <p className="text-lg">Quelqu&apos;un après</p>
+                  <p className="mt-3 text-sm leading-relaxed text-paper/75">
+                    Les défauts du périmètre convenu sont corrigés avec la livraison. Ensuite un correctif devisé, ou Care, Care Plus, Priority. Pas de prix public.
+                  </p>
+                </li>
+              </ul>
+              <p className="mt-10 max-w-2xl text-sm leading-relaxed text-paper/75">
+                Premier échange de trente minutes, gratuit. Réponse sous un jour ouvré, du lundi au vendredi, de 9h à 19h. Bureau au Technopark, Casablanca. Care : surveillance, sauvegardes hebdomadaires, mises à jour, réponse en 2 jours ouvrés. Care Plus : Care, plus 5 heures par mois, réponse en 1 jour ouvré. Priority : Care Plus, performance, rapport mensuel, 4 heures pour une panne critique.
+              </p>
+              <a href="/contact" className="mt-8 inline-block border-b border-paper pb-1 text-sm">
+                Parler de ce site
+              </a>
+            </section>
+          </div>
+        </>
       ) : null}
     </div>
   );
