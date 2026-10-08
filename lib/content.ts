@@ -367,7 +367,7 @@ export const services: Service[] = [
     slug: "plugins-wordpress",
     menu: "Plugins",
     summary:
-      "Byte Force écrit des plugins WordPress pour le site déjà en ligne. Quatre sont téléchargeables : Plugin Downloader, PDM Connect, PDM Ecommerce et PDM Optimize Media.",
+      "Plugins WordPress pour un site déjà en ligne au Maroc. Quatre fichiers : Downloader, Connect, Ecommerce, Optimize Media.",
     problem:
       "Une extension du marché force parfois le site à changer, ou casse à la mise à jour. Un plugin sur mesure ajoute le geste qui manque, sans remplacer WordPress.",
     includes: [

@@ -7,14 +7,14 @@ import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "Réalisations",
+  title: "Travaux publiés, Casablanca",
   description:
-    "Sites e-commerce, vitrines et plateformes livrés par Byte Force, de Casablanca à Lille et Montréal.",
+    "Sites, applications et logiciels livrés par Byte Force, de Casablanca à Lille et Montréal. Chaque fiche dit ce qui est en ligne.",
   alternates: { canonical: "/realisations" },
   openGraph: openGraph(
     "/realisations",
     "Réalisations · Byte Force",
-    "Sites e-commerce, vitrines et plateformes livrés par Byte Force, de Casablanca à Lille et Montréal.",
+    "Sites, applications et logiciels livrés par Byte Force, de Casablanca à Lille et Montréal. Chaque fiche dit ce qui est en ligne.",
   ),
 };
 
@@ -49,7 +49,7 @@ export default function WorkPage() {
           {projects.length} projets déjà en ligne : des boutiques, des sites vitrines et des plateformes, de Casablanca à
           Lille, Roubaix, Marrakech, Tanger, Safi et Montréal. {staged.length} fiches ont une capture. Les autres restent
           un index, parce que le dossier n&apos;a pas d&apos;image. Chaque ligne dit ce qui a été publié, sans chiffre
-          inventé.
+          inventé. Le code livré appartient au client.
         </p>
       </section>
       {staged.map((project, index) => (

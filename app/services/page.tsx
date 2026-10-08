@@ -8,12 +8,12 @@ import { openGraph } from "@/lib/open-graph";
 export const metadata: Metadata = {
   title: "Services à Casablanca",
   description:
-    "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
+    "Création de sites, applications, logiciels, plugins, référencement, hébergement, design et maintenance à Casablanca. Écrire.",
   alternates: { canonical: "/services" },
   openGraph: openGraph(
     "/services",
     "Services à Casablanca",
-    "Création de sites, applications, logiciels, plugins WordPress, référencement, hébergement, design, API et maintenance à Casablanca.",
+    "Création de sites, applications, logiciels, plugins, référencement, hébergement, design et maintenance à Casablanca. Écrire.",
   ),
 };
 
