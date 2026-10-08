@@ -30,6 +30,7 @@ export function GET() {
     `- [Travaux](${origin}/realisations) : projets publiés.`,
     `- [À propos](${origin}/a-propos) : le bureau et les faits.`,
     `- [Décisions](${origin}/insights) : questions avant de construire.`,
+    `- [Combien coûte un logiciel sur mesure](${origin}/insights/cout-logiciel-sur-mesure-maroc) : pas de prix public, la note suit le périmètre.`,
     `- [Un site qu'une machine peut lire](${origin}/insights/site-lisible-par-une-machine) : citer l'offre, le lieu et le contact.`,
     `- [Rouvrir l'application le lendemain](${origin}/insights/rouvrir-l-application) : le geste qui fait revenir.`,
     `- [Tester le parcours avant de le copier](${origin}/insights/tester-le-parcours) : mesurer avant de copier un accueil, un compte ou un essai.`,

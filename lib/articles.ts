@@ -24,10 +24,10 @@ export const articles: Article[] = [
     slug: "cout-logiciel-sur-mesure-maroc",
     title: "Combien coûte un logiciel sur mesure au Maroc",
     description:
-      "Byte Force ne publie pas de prix. À Casablanca, le montant suit les écrans, les rôles et les branchements. Premier échange de trente minutes, gratuit.",
+      "Combien coûte un logiciel sur mesure : pas de prix public. À Casablanca, la note suit les écrans, les rôles et les branchements.",
     h1: "Combien coûte un logiciel sur mesure au Maroc",
     date: "2026-10-08",
-    lede: "Byte Force, au Technopark à Casablanca, ne publie pas de grille de prix pour un logiciel sur mesure. Le montant suit les écrans, les rôles et les branchements. Un premier échange de trente minutes est gratuit. Cette page dit ce qui change la note, et ce qui ne la change pas.",
+    lede: "Combien coûte un logiciel sur mesure : Byte Force, au Technopark à Casablanca, ne publie pas de grille. Le montant suit les écrans, les rôles et les branchements. Un premier échange de trente minutes est gratuit. [[/contact|Écrire à Casablanca]] pour le circuit réel, pas pour une grille.",
     sections: [
       {
         heading: "Il n'y a pas de prix affiché",
@@ -59,10 +59,47 @@ export const articles: Article[] = [
       },
     ],
     links: [
+      { href: "/contact", label: "Décrire le circuit" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure" },
       { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
-      { href: "/contact", label: "Décrire le circuit" },
     ],
+    en: {
+      title: "What custom software costs in Morocco",
+      description:
+        "What custom software costs in Morocco: no public price. In Casablanca, the figure follows screens, roles and connections.",
+      h1: "What custom software costs in Morocco",
+      lede: "What custom software costs is not a public grid. Byte Force, at Technopark in Casablanca, does not publish one. The amount follows the screens, the roles and the connections. The first thirty minutes are free. [[/contact|Write to Casablanca]] with the real workflow, not for a price list.",
+      sections: [
+        {
+          heading: "There is no displayed price",
+          paragraphs: [
+            "A page that announces « from » an amount in dirhams describes a package, not one company's software. Byte Force does not do that. The pages of the site are not a quote. A project starts after a written scope.",
+            "Custom software development in Morocco is the frame. CRM, ERP, trade software and automation each have their own page, because a quote pipeline is not a stockroom.",
+          ],
+        },
+        {
+          heading: "What moves the amount up or down",
+          paragraphs: [
+            "Three things count. The number of screens someone really uses. The number of roles: who creates a file, who approves it, who exports it. The connections: email, payment, or a tool already paid for that must stay.",
+            "Wanting to manage everything at once, leave, a fleet, prospects, stock and payroll, swells the scope without making the first circuit safer. Cut back to the flow whose delay costs money every week. The rest waits.",
+          ],
+        },
+        {
+          heading: "What does not change the price",
+          paragraphs: [
+            "The office is in Casablanca. Being nearby does not add a tax, and it does not remove one. A project for a company in France is done from this office: there is no office in France or Canada.",
+            "A ten-line spreadsheet, standard accounting or a mailbox does not call for custom software. The conversation is also there to say no, and to leave the market tool in place.",
+          ],
+        },
+        {
+          heading: "How the figure is decided",
+          paragraphs: [
+            "A deposit starts the work. The rest follows steps tied to what was delivered. If the scope changes, the change is written and accepted before it is built. At handover, the client owns the code, the repository and the hosting accounts that were delivered.",
+            "Published projects, Dealkhir in Casablanca or Coco Inbox in Montreal, show what is online. They do not show a figure. A number needs the real workflow: [[/contact|write to Casablanca]]. A reply goes out within one business day.",
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "delai-logiciel-sur-mesure",
