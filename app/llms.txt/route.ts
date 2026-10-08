@@ -58,6 +58,7 @@ export function GET() {
     `- [Création d'un SaaS au Maroc](${origin}/insights/creation-saas-maroc) : plusieurs clients, des données qui ne se mélangent pas.`,
     `- [Développement d'un SaaS sur mesure](${origin}/insights/developpement-saas-sur-mesure) : le produit suit le geste, avec des clients isolés.`,
     `- [Combien coûte la création d'un SaaS](${origin}/insights/cout-creation-saas) : pas de montant public, la note suit le geste et l'isolation.`,
+    `- [Comment créer un SaaS](${origin}/insights/comment-creer-un-saas) : nommer le geste, isoler les clients, livrer une version ouvrable.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

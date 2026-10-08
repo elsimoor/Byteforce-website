@@ -2472,6 +2472,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "comment-creer-un-saas",
+    title: "Comment créer un SaaS",
+    description:
+      "Comment créer un SaaS : nommer le geste, isoler les clients, livrer une version qu'on peut ouvrir. Casablanca. Pas de prix public.",
+    h1: "Comment créer un SaaS",
+    date: "2026-10-08",
+    lede: "Comment créer un SaaS : nommer le geste qu'un client paierait, séparer ses dossiers de ceux des autres, et livrer une version qu'il peut ouvrir. Le reste est une liste. Byte Force le fait depuis Casablanca. Pas de prix public. [[/contact|Écrire]] avec ce geste.",
+    sections: [
+      {
+        heading: "Trois décisions, dans cet ordre",
+        paragraphs: [
+          "D'abord le geste. Pas le nom du produit, pas le logo, pas la liste des écrans d'un concurrent. Ensuite l'isolation : un client ne voit pas le dossier d'un autre, dès la première version. Ensuite ce qui peut attendre. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. La [[/developpement-saas-maroc/mvp|première version]] a sa page : elle doit déjà s'utiliser.",
+          "Créer ne commence pas par une levée, un business plan, ou un prix affiché sur une page vitrine. Ces sujets ne sont pas le logiciel. Byte Force ne publie pas de méthode de financement, et pas de montant.",
+        ],
+      },
+      {
+        heading: "Ce que la version doit permettre",
+        paragraphs: [
+          "Le premier client ouvre un compte et finit le geste. S'il ne peut pas, ce n'est pas encore un SaaS, c'est une maquette. Une première session qui casse ne ferme pas le projet : on corrige le geste, on n'ajoute pas dix écrans.",
+          "Périmètre écrit, acompte, code et hébergement livrés à l'entreprise qui commande. Pas de délai fixe : souvent plusieurs semaines. Casablanca, Technopark, boulevard Dammam. Pas de bureau en France ni au Canada. Coco Inbox montre un produit en ligne, pas le mode d'emploi de tous les SaaS.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne fait pas passer pour une création",
+        paragraphs: [
+          "Un thème, un formulaire, et un prix. Un logiciel interne rebaptisé. Un tableur partagé. Aucun de ces trois n'isole des clients. Si un seul propriétaire utilise l'outil, le sujet n'est pas un SaaS.",
+          "On ne publie pas d'étapes « en 30 jours », ni un coût, ni un nombre d'utilisateurs. Le calendrier suit le geste et les rôles.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste tient en une phrase, et quand vous savez que deux clients ne doivent pas voir la même chose. Apporter cette phrase. Le premier échange peut dire que le marché a déjà le produit.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Envoyer la phrase]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Nommer le geste" },
+      { href: "/developpement-saas-maroc", label: "Le développement SaaS" },
+      { href: "/developpement-saas-maroc/mvp", label: "La première version" },
+    ],
+    en: {
+      title: "How to create a SaaS",
+      description:
+        "Create a SaaS by naming the action, isolating customers, and shipping a version someone can open. Casablanca. No public price.",
+      h1: "How to create a SaaS",
+      lede: "How to create a SaaS: name the action a customer would pay for, separate their files from everyone else's, and ship a version they can open. The rest is a list. Byte Force does it from Casablanca. No public price. [[/contact|Write]] with that action.",
+      sections: [
+      {
+        heading: "Three decisions, in this order",
+        paragraphs: [
+          "First the action. Not the product name, not the logo, not a competitor's screen list. Then isolation: one customer does not see another's file, from the first version. Then what can wait. The offer is SaaS development. The first version has its own page: it must already be usable.",
+          "Creation does not start with a fundraise, a business plan, or a price on a brochure. Those subjects are not the software. Byte Force does not publish a financing method, and does not publish an amount.",
+        ],
+      },
+      {
+        heading: "What the version must allow",
+        paragraphs: [
+          "The first customer opens an account and finishes the action. If they cannot, it is not a SaaS yet, it is a mock-up. A first session that breaks does not close the project: the action is fixed, ten screens are not added.",
+          "A written scope, a deposit, code and hosting delivered to the company that orders. No fixed schedule: often several weeks. Casablanca, Technopark, boulevard Dammam. No office in France or Canada. Coco Inbox shows a product online, not the instructions for every SaaS.",
+        ],
+      },
+      {
+        heading: "What is not passed off as creation",
+        paragraphs: [
+          "A theme, a form, and a price. Internal software renamed. A shared spreadsheet. None of the three isolates customers. If one owner uses the tool, the subject is not a SaaS.",
+          "No « in 30 days » steps, no cost, and no user count is published. The calendar follows the action and the roles.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action fits in one sentence, and when you know two customers must not see the same thing. Bring that sentence. The first conversation can say the market already has the product.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Send the sentence]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
