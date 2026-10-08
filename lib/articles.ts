@@ -1419,6 +1419,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "crm-personnalise-maroc",
+    title: "CRM personnalisé Maroc",
+    description:
+      "CRM personnalisé au Maroc : le pipeline suit le cycle réel, depuis Casablanca. Pas le cycle d'un éditeur. Pas de prix public. Écrire.",
+    h1: "CRM personnalisé Maroc",
+    date: "2026-10-08",
+    lede: "Un CRM personnalisé au Maroc suit le cycle de vente de l'entreprise, pas celui dessiné dans un abonnement. Prospects, devis, relances : seulement s'ils existent vraiment. Byte Force l'écrit depuis le Technopark, à Casablanca. Pas de prix public. [[/contact|Écrire]] pour décrire le cycle, pas pour choisir un logo.",
+    sections: [
+      {
+        heading: "Le cycle, pas le catalogue",
+        paragraphs: [
+          "Un CRM personnalisé a un sens quand le cycle ne rentre pas dans les étapes de l'éditeur : un devis qui attend une validation interne, une relance qui dépend d'un chantier, un client qui n'est pas une fiche standard. La page [[/developpement-logiciel-sur-mesure-maroc/crm|CRM sur mesure]] est l'offre. Celle-ci dit quoi apporter : le nom des étapes, dans l'ordre où elles arrivent vraiment.",
+          "Il n'a pas de sens si le cycle est déjà celui de l'outil du marché et que l'équipe s'en sert. Changer de logo ne justifie pas un développement. Le premier échange peut conclure de garder l'abonnement.",
+        ],
+      },
+      {
+        heading: "Ce qui entre dans la première version",
+        paragraphs: [
+          "La première version porte le geste commercial qui coince : créer le dossier, le faire avancer, savoir qui doit relancer. Pas la comptabilité, pas la paie, pas le stock. Ces sujets ont d'autres pages. Les rôles sont ceux du bureau : qui crée, qui valide, qui exporte.",
+          "Le bureau est à Casablanca, Technopark, boulevard Dammam. On peut dérouler un vrai devis sur la table. Pas de bureau en France ni au Canada. Pas de grille de prix. La note, plus tard, suit les écrans, les rôles et les branchements.",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "À la remise, le client possède le code, le dépôt et l'hébergement livré. Le CRM n'est pas un login que l'éditeur ferme. Un acompte lance le travail après un périmètre écrit. Un changement est écrit avant d'être construit. Il n'y a pas de délai fixe : souvent plusieurs semaines pour une première version, selon le cycle.",
+          "Aucun avis, aucune note, aucun nombre de clients n'est publié pour appuyer cette page. Les projets en ligne montrent autre chose que le cycle de vente d'une entreprise précise.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand les relances vivent dans une boîte mail ou un fichier que deux personnes écrasent. Dire les étapes et qui les tient. [[/developpement-logiciel-casablanca/crm|À Casablanca]], le cadrage peut se faire au bureau.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire les étapes]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le cycle" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM sur mesure" },
+      { href: "/developpement-logiciel-casablanca/crm", label: "CRM à Casablanca" },
+    ],
+    en: {
+      title: "A custom CRM in Morocco",
+      description:
+        "A custom CRM in Morocco follows the real sales cycle, from Casablanca. Not a vendor's stages. No public price. Write with the cycle.",
+      h1: "A custom CRM in Morocco",
+      lede: "A custom CRM in Morocco follows the company's sales cycle, not the one drawn in a subscription. Prospects, quotes, follow-ups: only if they really exist. Byte Force writes it from Technopark, in Casablanca. No public price. [[/contact|Write]] to describe the cycle, not to pick a logo.",
+      sections: [
+      {
+        heading: "The cycle, not the catalogue",
+        paragraphs: [
+          "A custom CRM makes sense when the cycle does not fit the vendor's stages: a quote waiting for an internal approval, a follow-up that depends on a job site, a customer who is not a standard card. The offer page already exists. This page says what to bring: the names of the steps, in the order they actually happen.",
+          "It does not make sense if the cycle is already the market tool's cycle and the team uses it. Changing the logo does not justify development. The first conversation can end with keeping the subscription.",
+        ],
+      },
+      {
+        heading: "What enters the first version",
+        paragraphs: [
+          "The first version carries the commercial action that sticks: create the file, move it forward, know who must follow up. Not accounting, not payroll, not stock. Those subjects have other pages. The roles are the office's roles: who creates, who approves, who exports.",
+          "The office is in Casablanca, Technopark, boulevard Dammam. A real quote can be walked through on the table. No office in France or Canada. No price grid. The figure, later, follows the screens, the roles and the connections.",
+        ],
+      },
+      {
+        heading: "What is handed over",
+        paragraphs: [
+          "At handover, the client owns the code, the repository and the delivered hosting. The CRM is not a login a vendor closes. A deposit starts the work after a written scope. A change is written before it is built. There is no fixed schedule: often several weeks for a first version, according to the cycle.",
+          "No review, no score, no client count is published to support this page. Projects online show something other than one company's sales cycle.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when follow-ups live in a mailbox or in a file two people overwrite. Name the steps and who holds them. In Casablanca, the scope can be set at the office.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the steps]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();

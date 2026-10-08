@@ -45,6 +45,7 @@ export function GET() {
     `- [Avantages d'un logiciel sur mesure](${origin}/insights/avantages-logiciel-sur-mesure) : le circuit n'est pas tordu, et le code revient à l'entreprise.`,
     `- [Développement logiciel pour une entreprise au Maroc](${origin}/insights/developpement-logiciel-entreprise-maroc) : partir des outils déjà en place, pas d'une page blanche.`,
     `- [Un studio logiciel à Casablanca](${origin}/insights/agence-developpement-logiciel-casablanca) : au Technopark, pour le logiciel, pas pour une vitrine au forfait.`,
+    `- [CRM personnalisé au Maroc](${origin}/insights/crm-personnalise-maroc) : le pipeline suit le cycle réel, pas celui d'un éditeur.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,
