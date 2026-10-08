@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { projects, type Project } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
@@ -24,6 +25,7 @@ const named = ["dealkhir", "re-proche-de-moi", "coco-inbox", "tourispeak"]
 export default function AboutPage() {
   return (
     <main>
+      <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "À propos", path: "/a-propos" }]} />
       <header className="px-6 pb-16 pt-16 md:px-12 md:pt-28">
         <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,7.2rem)]">
           Un studio logiciel à Casablanca.

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getCity, slugify } from "@/lib/catalog";
 import { getProject, getService, projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
-import { projectNotes } from "@/lib/project-notes";
+import { projectNotes, projectTitles } from "@/lib/project-notes";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject(slug);
   if (!project) return {};
   const path = `/realisations/${project.slug}`;
-  const title = `${project.title} · Byte Force`;
+  const title = `${projectTitles[project.slug] ?? project.title} · Byte Force`;
   const description = project.description;
   return {
     title: { absolute: title },
@@ -45,6 +45,16 @@ export default async function ProjectPage({ params }: Props) {
   const pageUrl = `${site.url}/realisations/${project.slug}`;
   const schema = {
     "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Accueil", item: `${site.url}/` },
+          { "@type": "ListItem", position: 2, name: "Travaux", item: `${site.url}/realisations` },
+          { "@type": "ListItem", position: 3, name: project.title, item: pageUrl },
+        ],
+      },
+      {
     "@type": "Article",
     headline: project.title,
     description: project.description,
@@ -60,7 +70,9 @@ export default async function ProjectPage({ params }: Props) {
       url: site.url,
       logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
     },
-    about: { "@type": "CreativeWork", name: project.title, url: project.url },
+        about: { "@type": "CreativeWork", name: project.title, url: project.url },
+      },
+    ],
   };
 
   return (

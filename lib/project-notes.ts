@@ -1,4 +1,19 @@
 /** Public facts only: name, year, city, live URL, and the pages already listed on the fiche. */
+export const projectTitles: Record<string, string> = {
+  "escapade-florale": "Escapade Florale : boutique florale à Lille",
+  "nu-lille": "Nu Lille : site gastronomique à Lille",
+  "meubles-de-septentrion": "Meubles de Septentrion : boutique de mobilier à Marcq-en-Barœul",
+  "re-proche-de-moi": "Proche de moi : plateforme de commerces à Lille",
+  dealkhir: "Dealkhir : plateforme de dons à Casablanca",
+  "coco-inbox": "Coco Inbox : email temporaire à Montréal",
+  uas: "UAS : boutique aéronautique à Casablanca",
+  tourispeak: "Tourispeak : réseau touristique à Montréal",
+  "ambulances-valcq": "Ambulances Valcq : site de transport sanitaire à Roubaix",
+  "les-hauts-paysages": "Les Hauts Paysages : site paysager dans le Nord",
+  "agency-wonderland": "Agency Wonderland : studio visuel à Marrakech",
+  "snapchat-collect": "Snapchat Collect : collecte de campagnes à Tanger",
+};
+
 export const projectNotes: Record<string, string[]> = {
   "escapade-florale": [
     "Escapade Florale est une boutique en ligne de compositions florales, publiée en 2024 à Lille. Le site public est escapadeflorale.enconstru.fr. Depuis cette fiche, deux adresses sont ouvertes : la boutique, et une page produit, le bouquet cœur à cœur.",

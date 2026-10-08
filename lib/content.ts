@@ -273,6 +273,7 @@ export const services: Service[] = [
         paragraphs: [
           "Byte Force écrit le contrat d'API, l'authentification et les règles métier côté serveur. Le site et l'application lisent la même source : clients, commandes, contenus, droits.",
           "Snapchat Collect, entre Marseille et Tanger, est un flux de collecte et de redirection déjà en ligne en 2024. Ce n'est pas un ERP. C'est un branchement court, documenté pour l'équipe.",
+          "Le contrat dit ce que l'appel reçoit et ce qu'il renvoie. L'authentification dit qui a le droit d'appeler. La note pour l'équipe tient en quelques pages : assez pour brancher le site sans relire tout le code. On n'écrit pas une API quand un formulaire envoie déjà le message au bon endroit.",
         ],
       },
     ],

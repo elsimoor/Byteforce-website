@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { services } from "@/lib/content";
 import { entryPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main>
+      <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Services", path: "/services" }]} />
       <header className="px-6 pb-8 pt-16 md:px-12 md:pt-24">
         <h1 className="display max-w-[12ch] text-[clamp(3.2rem,8vw,7rem)]">Ce que l&apos;on construit.</h1>
       </header>

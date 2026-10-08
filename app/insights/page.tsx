@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { moneyPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
 
@@ -20,8 +21,9 @@ const groups = ["Problème", "Audience"];
 export default function InsightsPage() {
   return (
     <main>
+      <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Décisions", path: "/insights" }]} />
       <header className="px-6 pb-8 pt-16 md:px-12 md:pt-24">
-        <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,7rem)]">Décider.</h1>
+        <h1 className="display max-w-[16ch] text-[clamp(3.2rem,8vw,6.5rem)]">Décider avant de construire.</h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed">
           Pour quelqu&apos;un qui a déjà le problème : un tableur, une pile d&apos;abonnements, un processus manuel, ou
           une application que plus personne ne veut toucher.

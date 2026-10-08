@@ -62,7 +62,7 @@ export function StudioHome() {
               <a href="https://wa.me/212666650696" className="font-semibold text-primary">
                 WhatsApp
               </a>{" "}
-              or{" "}
+              ou{" "}
               <a href={`mailto:${site.email}`} className="font-semibold text-primary">
                 {site.email}
               </a>
@@ -481,7 +481,7 @@ export function StudioHome() {
             href="/contact"
             className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
           >
-            Start a project
+            Parler d'un projet
           </a>
         </div>
       </section>
@@ -593,7 +593,7 @@ export function StudioHome() {
             href="/contact"
             className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
           >
-            Start a project
+            Parler d'un projet
           </a>
         </div>
       </section>
@@ -668,7 +668,7 @@ export function StudioHome() {
               </p>
             </div>
             <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Start a project</span>
+              <span>Parler d'un projet</span>
               <span className="material-symbols-outlined text-sm">
                 north_east
               </span>
@@ -692,7 +692,7 @@ export function StudioHome() {
               </p>
             </div>
             <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Start a project</span>
+              <span>Parler d'un projet</span>
               <span className="material-symbols-outlined text-sm">
                 north_east
               </span>
@@ -716,7 +716,7 @@ export function StudioHome() {
               </p>
             </div>
             <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Start a project</span>
+              <span>Parler d'un projet</span>
               <span className="material-symbols-outlined text-sm">
                 north_east
               </span>
@@ -1326,7 +1326,7 @@ export function StudioHome() {
             </span>
           </div>
           <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase mb-2">
-            START A PROJECT
+            PARLER D'UN PROJET
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-black text-on-surface tracking-tight leading-tight max-w-2xl">
             Have a business problem that software could solve?
@@ -1339,7 +1339,7 @@ export function StudioHome() {
               className="inline-flex items-center gap-2 px-8 py-4 rounded bg-primary text-on-primary text-base font-semibold hover:bg-primary-container shadow-md hover:shadow-lg transition-all"
               href="/contact"
             >
-              <span>Start a project</span>
+              <span>Parler d'un projet</span>
               <span className="material-symbols-outlined text-base">
                 arrow_forward
               </span>

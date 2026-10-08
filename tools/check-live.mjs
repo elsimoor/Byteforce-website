@@ -87,9 +87,10 @@ async function main() {
   check("homepage nav is French", home.text.includes("Travaux") && home.text.includes("À propos") && home.text.includes("Décisions"));
   check("logo alt is Byte Force", /alt=["']Byte Force["']/.test(home.text));
   check("homepage did not crash", !crashed(home.text));
-  if (home.text.includes("Start a project")) {
-    console.log("NOTE  homepage body still has English sections below the hero");
-  }
+  check(
+    "homepage has no English nav phrases",
+    !/Start a project|>\s*About\s*<|>\s*Work\s*<|Software engineering studio/i.test(home.text),
+  );
 
   const sitemap = await get("/sitemap.xml");
   const locs = [...sitemap.text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
