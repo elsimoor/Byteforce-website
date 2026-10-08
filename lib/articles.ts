@@ -15,6 +15,7 @@ export type Article = {
   lede: string;
   sections: { heading: string; paragraphs: string[] }[];
   links: { href: string; label: string }[];
+  figures?: { src: string; alt: string; caption: string }[];
   en?: ArticleCopy;
 };
 
@@ -482,6 +483,172 @@ export const articles: Article[] = [
       { href: "/contact", label: "Parler du projet" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
       { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
+    ],
+  },
+  {
+    slug: "quatre-lectures-a-cent",
+    title: "Quatre lectures à 100, sur la page d'accueil",
+    description:
+      "Le 8 octobre 2026, PageSpeed affiche 100 en performance, accessibilité, bonnes pratiques et SEO sur byteforce.ma, et 3/3 pour les agents. C'est une lecture de laboratoire.",
+    h1: "Ce que montrent quatre notes à 100",
+    date: "2026-10-08",
+    lede: "Byte Force, au Technopark à Casablanca, publie ici la lecture PageSpeed de sa page d'accueil. Si la vôtre doit être trouvée, lue, et utilisée pour écrire, le premier geste est de la décrire : [[/contact|parler du projet]].",
+    figures: [
+      {
+        src: "/insights/pagespeed-mobile-2026-10-08.png",
+        alt: "PageSpeed Insights du 8 octobre 2026, 15:20, performance 100, accessibilité 100, bonnes pratiques 100, SEO 100, et 3/3 pour les agents. Premier affichage 0,7 s, plus grand élément 1,2 s.",
+        caption:
+          "Lecture du 8 octobre 2026, 15:20:00. Performance, accessibilité, bonnes pratiques et SEO à 100. Premier affichage 0,7 s, plus grand élément 1,2 s, indice de vitesse 1,2 s, blocage 0 ms, décalage 0. Agents : 3/3.",
+      },
+      {
+        src: "/insights/pagespeed-desktop-2026-10-08.png",
+        alt: "PageSpeed Insights du 8 octobre 2026, 15:20:33, les quatre notes à 100 et 3/3 pour les agents. Premier affichage 0,2 s, plus grand élément 0,5 s.",
+        caption:
+          "Même rapport, 15:20:33. Les quatre notes sont encore à 100, et les agents à 3/3. Premier affichage 0,2 s, plus grand élément 0,5 s, indice de vitesse 0,5 s, blocage 0 ms, décalage 0.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Ce que le rapport affiche",
+        paragraphs: [
+          "Les deux captures viennent du même passage : [[https://pagespeed.web.dev/analysis/https-byteforce-ma/k6jkig2rim?hl=en_GB&form_factor=desktop|le rapport PageSpeed du 8 octobre 2026]]. Les quatre cercles sont à 100. La ligne des agents est à 3/3. Chrome n'a pas assez de visites réelles pour une mesure de terrain sur cette page. C'est une lecture de laboratoire, pas ce que les visiteurs ont mesuré dans leur navigateur.",
+          "Une lecture plus tôt le même jour affichait 99 en performance, avec un plus grand élément à 2,1 s. Cette lecture-ci affiche 100. La note bouge d'un passage à l'autre. Elle n'est pas un classement Google, et elle ne se reporte pas toute seule sur le site d'un client.",
+        ],
+      },
+      {
+        heading: "Ce qui est en place sur la page",
+        paragraphs: [
+          "La page dit qui est Byte Force, où est le bureau, et comment écrire. Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Il n'y a pas d'avis inventé et pas de grille de prix. L'image principale a une taille déclarée. Les polices sont des fichiers du site.",
+          "La fiche courte est [[/llms.txt|llms.txt]] : un titre, puis des liens. Ce fichier n'est pas un facteur de classement. Autoriser un robot ne veut pas dire qu'il recommandera le site. Le 3/3 de ce rapport dit que la fiche a pu être lue ce jour-là, pas qu'une machine citera Byte Force.",
+          "L'[[/audit|audit gratuit]] relit une page, puis jusqu'à dix adresses du sitemap. [[/services/creation-site-web|La création de site]] est le travail quand la page doit expliquer l'offre et recueillir une demande.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrivez si la page existe et qu'une personne, ou une machine, ne peut pas dire ce que vous faites, où vous êtes, et comment vous joindre. Dites l'adresse, le geste que le visiteur doit pouvoir faire, et ce qui ne doit pas être inventé.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré. [[/contact|Écrire à Byte Force]] avec l'adresse de la page.",
+        ],
+      },
+    ],
+    en: {
+      title: "Four scores of 100, on the homepage",
+      description:
+        "On 8 October 2026, PageSpeed shows 100 for performance, accessibility, best practices and SEO on byteforce.ma, and 3/3 for agents. It is a lab reading.",
+      h1: "What four scores of 100 show",
+      lede: "Byte Force, at Technopark in Casablanca, publishes here the PageSpeed reading of its homepage. If yours must be found, read, and used to write, the first step is to describe it: [[/contact|talk about the project]].",
+      sections: [
+        {
+          heading: "What the report shows",
+          paragraphs: [
+            "The two captures are the same pass: [[https://pagespeed.web.dev/analysis/https-byteforce-ma/k6jkig2rim?hl=en_GB&form_factor=desktop|the PageSpeed report of 8 October 2026]]. The four circles are at 100. The agent line is 3/3. Chrome does not have enough real visits for a field measurement of this page. This is a lab reading, not what visitors measured in their browser.",
+            "An earlier reading the same day showed 99 for performance, with the largest element at 2.1 s. This reading shows 100. The score moves from one pass to the next. It is not a Google ranking, and it does not transfer by itself to a client's site.",
+          ],
+        },
+        {
+          heading: "What is in place on the page",
+          paragraphs: [
+            "The page says who Byte Force is, where the office is, and how to write. The office is at Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. There are no invented reviews and no price list. The main image has a declared size. The fonts are files on the site.",
+            "The short fiche is [[/llms.txt|llms.txt]]: a title, then links. That file is not a ranking factor. Allowing a bot does not mean it will recommend the site. The 3/3 on this report says the fiche could be read that day, not that a machine will cite Byte Force.",
+            "The [[/audit|free audit]] reads a page, then up to ten sitemap addresses. [[/services/creation-site-web|Website creation]] is the work when the page must explain the offer and collect an enquiry.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write if the page exists and a person, or a machine, cannot say what you do, where you are, and how to reach you. Give the address, the action the visitor must be able to take, and what must not be invented.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day. [[/contact|Write to Byte Force]] with the page address.",
+          ],
+        },
+      ],
+    },
+    links: [
+      { href: "/contact", label: "Parler du projet" },
+      { href: "/audit", label: "Auditer une page" },
+      { href: "/services/creation-site-web", label: "Création de site web" },
+    ],
+  },
+  {
+    slug: "premiere-version-utile",
+    title: "Lancer une première version utile",
+    description:
+      "La première version sert à apprendre d'une personne qui a le problème maintenant. Byte Force, à Casablanca, écrit ce geste, pas la liste complète.",
+    h1: "Ce que la première version doit permettre",
+    date: "2026-10-08",
+    lede: "Byte Force, au Technopark à Casablanca, écrit le plus petit logiciel qu'une personne peut déjà utiliser pour son problème. Si le vôtre attend encore d'être complet, le premier geste est de le décrire : [[/contact|parler du projet]].",
+    sections: [
+      {
+        heading: "Apprendre commence quand quelqu'un s'en sert",
+        paragraphs: [
+          "Cette note reprend un cadre public de Y Combinator. Une première version n'est pas un logiciel fini. C'est le plus court chemin pour mettre un geste réel entre les mains de quelqu'un, puis modifier ce geste. L'enquête, les entretiens et la comparaison des concurrents nomment la douleur. Ils ne disent pas si la solution tient, tant que personne ne s'en sert.",
+          "Le piège est de passer un an à préparer, lever, et recruter avant qu'un client touche une version qui marche. Le débutant qui livre trop vite et la personne qui livre exprès un petit morceau arrivent au même endroit : une version dehors. Celui qui veut d'abord tout comprendre n'y arrive pas.",
+        ],
+      },
+      {
+        heading: "La personne pressée, pas le public général",
+        paragraphs: [
+          "La personne dont le problème brûle accepte un outil imparfait, si ça l'avance aujourd'hui. Celle qui attend un produit poli ne l'adoptera pas, et ce n'est pas un client perdu : elle n'était pas le public de cette version. Airbnb, Twitch et Stripe sont des exemples publics de ce cadre, pas des projets de Byte Force. Leurs premières versions étaient étroites : un lit pendant un salon, une seule vidéo, des paiements encore en partie manuels.",
+          "Le premier iPhone est sorti sans boutique d'applications et sans vidéo. Le premier iPod cassait. Les versions connues sont venues après. Byte Force ne publie pas ces lancements comme les siens.",
+        ],
+      },
+      {
+        heading: "Couper la liste, garder le geste",
+        paragraphs: [
+          "Écrire la liste, puis retirer chaque ligne qui n'est pas nécessaire pour que la personne pressée commence aujourd'hui. Le reste attend une version suivante. On s'attache au problème de cette personne, pas au premier écran.",
+          "Byte Force ne promet pas un nombre de semaines valable pour tous. [[/insights/delai-logiciel-sur-mesure|Le délai]] suit le nombre de rôles et de branchements. Une première version tient souvent en plusieurs semaines. Le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]] part du geste, pas du catalogue de fonctions.",
+          "Le cadre cité dit qu'il vaut mieux cent personnes qui s'en servent vraiment que cent mille qui passent. Ce n'est pas un chiffre de Byte Force. C'est le choix : apprendre sur un usage réel, pas sur une audience large qui n'a pas le problème.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrivez si le logiciel est encore une liste, ou si une première version existe et que personne ne s'en sert. Dites le geste que la personne pressée doit pouvoir faire cette semaine, et ce qui peut attendre.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré. [[/contact|Écrire à Byte Force]] avec ce geste.",
+        ],
+      },
+    ],
+    en: {
+      title: "Ship a first version someone can use",
+      description:
+        "The first version exists to learn from a person who has the problem now. Byte Force, in Casablanca, writes that action, not the full list.",
+      h1: "What the first version must allow",
+      lede: "Byte Force, at Technopark in Casablanca, writes the smallest software a person can already use for their problem. If yours is still waiting to be complete, the first step is to describe it: [[/contact|talk about the project]].",
+      sections: [
+        {
+          heading: "Learning starts when someone uses it",
+          paragraphs: [
+            "This note follows a public Y Combinator frame. A first version is not a finished product. It is the shortest path to put a real action in someone's hands, then change that action. Surveys, interviews and competitor lists name the pain. They do not say whether the solution holds until someone uses it.",
+            "The trap is to spend a year preparing, raising and hiring before a customer touches a version that works. The beginner who ships too fast and the person who deliberately ships a small piece arrive at the same place: a version outside. The person who wants to understand everything first does not.",
+          ],
+        },
+        {
+          heading: "The person in a hurry, not the general public",
+          paragraphs: [
+            "A person whose problem is urgent will use an imperfect tool if it moves them today. A person who wants a polished product will not adopt it, and that is not a lost customer: they were not the audience for this version. Airbnb, Twitch and Stripe are public examples of this frame, not Byte Force projects. Their first versions were narrow: a bed during a conference, a single video, payments that were still partly manual.",
+            "The first iPhone shipped without an app store and without video. The first iPod broke. The known versions came later. Byte Force does not publish those launches as its own.",
+          ],
+        },
+        {
+          heading: "Cut the list, keep the action",
+          paragraphs: [
+            "Write the list, then remove every line that is not required for the person in a hurry to start today. The rest waits for a later version. Stay with that person's problem, not with the first screen.",
+            "Byte Force does not promise a number of weeks that fits everyone. [[/insights/delai-logiciel-sur-mesure|The schedule]] follows the number of roles and connections. A first version often takes several weeks. [[/developpement-logiciel-sur-mesure-maroc|Custom software]] starts from the action, not from a feature catalogue.",
+            "The frame cited here says it is better to have a hundred people who really use it than a hundred thousand who pass by. That is not a Byte Force figure. It is the choice: learn from real use, not from a wide audience that does not have the problem.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write if the software is still a list, or if a first version exists and nobody uses it. Say the action the person in a hurry must be able to take this week, and what can wait.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day. [[/contact|Write to Byte Force]] with that action.",
+          ],
+        },
+      ],
+    },
+    links: [
+      { href: "/contact", label: "Parler du projet" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+      { href: "/insights/delai-logiciel-sur-mesure", label: "Le délai" },
     ],
   },
 ];

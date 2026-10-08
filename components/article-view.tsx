@@ -9,6 +9,13 @@ function Rich({ text }: { text: string }) {
       {bits.map((bit, index) => {
         const match = /^\[\[([^|\]]+)\|([^\]]+)\]\]$/.exec(bit);
         if (!match) return <span key={index}>{bit}</span>;
+        if (match[1].startsWith("http")) {
+          return (
+            <a key={index} href={match[1]} className="border-b border-ink">
+              {match[2]}
+            </a>
+          );
+        }
         return (
           <Link key={index} href={match[1]} className="border-b border-ink">
             {match[2]}
@@ -68,6 +75,16 @@ export function ArticleView({ article }: { article: Article }) {
             Parler du projet
           </Link>
         </p>
+        {article.figures?.length ? (
+          <div className="mt-10 grid max-w-3xl gap-8">
+            {article.figures.map((figure) => (
+              <figure key={figure.src}>
+                <img src={figure.src} alt={figure.alt} className="w-full border border-line" />
+                <figcaption className="mt-3 text-sm text-mute">{figure.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        ) : null}
       </div>
       {article.sections.map((section) => (
         <section key={section.heading} className="border-t border-line px-6 py-14 md:px-12">

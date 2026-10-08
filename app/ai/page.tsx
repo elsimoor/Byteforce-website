@@ -54,7 +54,7 @@ export default function AiPage() {
             <Link href="/audit">/audit</Link>, lecture d'une page : technique, performance, SEO, accessibilité, GEO, conversion, et lecture machine.
           </li>
           <li>
-            <Link href="/insights/site-lisible-par-une-machine">Pourquoi une machine doit pouvoir citer le site</Link>, puis <Link href="/contact">écrire</Link>.
+            <Link href="/insights/site-lisible-par-une-machine">Pourquoi une machine doit pouvoir citer le site</Link>. La lecture du 8 octobre 2026 est sur <Link href="/insights/quatre-lectures-a-cent">quatre lectures à 100</Link>. Puis <Link href="/contact">écrire</Link>.
           </li>
           <li>
             <Link href="/audit/json?url=https://byteforce.ma">/audit/json</Link>, le même passage en JSON.

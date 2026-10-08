@@ -32,6 +32,8 @@ export function GET() {
     `- [Un site qu'une machine peut lire](${origin}/insights/site-lisible-par-une-machine) : citer l'offre, le lieu et le contact.`,
     `- [Rouvrir l'application le lendemain](${origin}/insights/rouvrir-l-application) : le geste qui fait revenir.`,
     `- [Tester le parcours avant de le copier](${origin}/insights/tester-le-parcours) : mesurer avant de copier un accueil, un compte ou un essai.`,
+    `- [Quatre lectures à 100](${origin}/insights/quatre-lectures-a-cent) : la lecture de laboratoire du 8 octobre 2026.`,
+    `- [La première version utile](${origin}/insights/premiere-version-utile) : le geste à livrer avant le reste.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,
