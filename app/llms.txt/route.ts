@@ -49,6 +49,7 @@ export function GET() {
     `- [Création d'un CRM sur mesure](${origin}/insights/creation-crm-sur-mesure) : partir des étapes réelles, pas d'un modèle vide.`,
     `- [Combien coûte un CRM personnalisé](${origin}/insights/cout-crm-personnalise) : pas de montant public, la note suit le cycle.`,
     `- [CRM ou Excel, pour une entreprise](${origin}/insights/crm-ou-excel) : le fichier suffit tant qu'une seule personne l'écrit.`,
+    `- [Remplacer Excel par un CRM](${origin}/insights/remplacer-excel-par-un-crm) : quand deux personnes écrasent le même dossier.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

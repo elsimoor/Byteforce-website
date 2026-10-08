@@ -1743,6 +1743,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "remplacer-excel-par-un-crm",
+    title: "Remplacer Excel par un CRM",
+    description:
+      "Remplacer Excel par un CRM se décide quand deux personnes écrasent le même dossier. Byte Force, Casablanca. Pas de prix public.",
+    h1: "Remplacer Excel par un CRM",
+    date: "2026-10-08",
+    lede: "Remplacer Excel par un CRM se décide sur un fait : deux personnes modifient le même dossier, et plus personne ne sait quelle ligne est partie chez le client. Byte Force, au Technopark à Casablanca, ne vend pas la migration d'un classeur entier. Pas de prix public. [[/contact|Écrire]] pour dire quelles colonnes se contredisent.",
+    sections: [
+      {
+        heading: "Le seuil",
+        paragraphs: [
+          "On remplace le fichier quand la relance, le devis ou le statut vivent dans des versions différentes. Une couleur, un onglet « final », un mail « regarde la v3 ». Le [[/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel|CRM qui remplace Excel]] est l'offre. La page [[/solutions/remplacer-excel|tableur]] dit le même seuil sans parler encore d'un cycle de vente.",
+          "On ne remplace pas un classeur de dix lignes tenu par une personne. On ne remplace pas non plus toute la comptabilité parce que le pipeline est cassé. Le CRM reprend le dossier commercial. Le calcul ponctuel peut rester dans Excel.",
+        ],
+      },
+      {
+        heading: "Ce qui est repris",
+        paragraphs: [
+          "Les colonnes qui décident : le client, l'étape, qui doit agir, la date de relance. Pas les cinquante colonnes historiques. La première version permet de créer le dossier, de le faire avancer, et de voir la relance du jour. Le reste du classeur attend.",
+          "Périmètre écrit, acompte, puis livraison. À la remise, le code, le dépôt et l'hébergement sont à l'entreprise. Le fichier peut rester une archive. Pas de nombre de lignes migrées publié : on n'a pas ce chiffre, et on n'en invente pas.",
+        ],
+      },
+      {
+        heading: "Ce qui ne change pas la décision",
+        paragraphs: [
+          "Le bureau est à Casablanca, boulevard Dammam, Aïn Chock. Ça permet de regarder le fichier ensemble. Ça ne crée pas un tarif « migration Excel ». Pas de grille. Pas de bureau en France ni au Canada. Pas de délai fixe : souvent plusieurs semaines pour le cycle repris, pas pour tout l'historique.",
+          "Un éditeur qui promet d'importer le classeur tel quel promet un Excel avec un login. Ce n'est pas le sujet. Si l'import est utile, il porte les colonnes décidées, pas l'onglet entier.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire avec le nom des colonnes qui divergent, et le nombre de personnes qui les touchent. Une personne : gardez le fichier. Plusieurs : le cycle a une page.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le fichier]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire quelles colonnes divergent" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel", label: "L'offre pour quitter Excel" },
+      { href: "/solutions/remplacer-excel", label: "Le fichier devenu l'entreprise" },
+    ],
+    en: {
+      title: "Replacing Excel with a CRM",
+      description:
+        "Replace Excel with a CRM when two people overwrite the same file. Byte Force, Casablanca. No public price, and not a full workbook import.",
+      h1: "Replacing Excel with a CRM",
+      lede: "Replacing Excel with a CRM is decided on one fact: two people edit the same file, and nobody knows which row went to the customer. Byte Force, at Technopark in Casablanca, does not sell a migration of the whole workbook. No public price. [[/contact|Write]] and say which columns contradict each other.",
+      sections: [
+      {
+        heading: "The threshold",
+        paragraphs: [
+          "The file is replaced when the follow-up, the quote or the status live in different versions. A colour, a tab named final, an email saying look at v3. The offer page is the CRM that replaces Excel. The spreadsheet page says the same threshold before it is a sales cycle.",
+          "A ten-line workbook kept by one person is not replaced. Accounting is not replaced either because the pipeline is broken. The CRM takes the commercial file. The one-off calculation can stay in Excel.",
+        ],
+      },
+      {
+        heading: "What is taken",
+        paragraphs: [
+          "The columns that decide: the customer, the step, who must act, the follow-up date. Not the fifty historical columns. The first version can create the file, move it, and show today's follow-up. The rest of the workbook waits.",
+          "A written scope, a deposit, then delivery. At handover, the code, the repository and the hosting belong to the company. The file can remain an archive. No count of migrated rows is published: that figure is not on file, and it is not invented.",
+        ],
+      },
+      {
+        heading: "What does not change the decision",
+        paragraphs: [
+          "The office is in Casablanca, boulevard Dammam, Aïn Chock. That lets us look at the file together. It does not create a « Excel migration » tariff. No grid. No office in France or Canada. No fixed schedule: often several weeks for the cycle that was taken, not for the whole history.",
+          "A vendor that promises to import the workbook as it stands promises Excel with a login. That is not the subject. If an import is useful, it carries the columns that were decided, not the entire tab.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write with the names of the columns that diverge, and how many people touch them. One person: keep the file. Several: the cycle has a page.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the file]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
