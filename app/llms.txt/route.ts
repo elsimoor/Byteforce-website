@@ -61,6 +61,7 @@ export function GET() {
     `- [Comment créer un SaaS](${origin}/insights/comment-creer-un-saas) : nommer le geste, isoler les clients, livrer une version ouvrable.`,
     `- [MVP d'un SaaS au Maroc](${origin}/insights/mvp-saas-maroc) : une première version qui isole déjà les clients.`,
     `- [Développement d'une application SaaS](${origin}/insights/developpement-application-saas) : le produit à comptes, pas la page qui le décrit.`,
+    `- [SaaS sur mesure ou logiciel standard](${origin}/insights/saas-sur-mesure-ou-standard) : garder le marché si le geste rentre dedans.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

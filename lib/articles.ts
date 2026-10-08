@@ -2729,6 +2729,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "saas-sur-mesure-ou-standard",
+    title: "SaaS sur mesure vs logiciel standard",
+    description:
+      "SaaS sur mesure vs logiciel standard : garder le marché si le geste rentre dedans. Sinon, l'écrire, clients isolés. Casablanca.",
+    h1: "SaaS sur mesure vs logiciel standard",
+    date: "2026-10-08",
+    lede: "SaaS sur mesure vs logiciel standard : si le geste rentre dans un produit déjà vendu, on le garde. S'il faut le tordre, on écrit, et les clients ne voient pas les dossiers des autres. Byte Force, à Casablanca, ne publie pas de duel de prix. [[/contact|Écrire]] avec le geste.",
+    sections: [
+      {
+        heading: "Quand le standard gagne",
+        paragraphs: [
+          "Le logiciel standard gagne quand le geste est déjà le sien : messagerie, comptabilité ordinaire, cycle prévu par l'éditeur. Le payer est plus court que de le réécrire. Le [[/solutions/remplacer-saas|SaaS subi]] est l'autre cas : l'abonnement dicte le métier. Le [[/developpement-saas-maroc/remplacer-saas|remplacement]] est une offre distincte de la création d'un produit pour plusieurs clients.",
+          "Créer un SaaS pour revendre ce que le marché fait déjà n'est pas un avantage. Le premier échange peut conclure de rester abonné. Rester abonné n'est pas un échec du projet : c'est le logiciel le plus court quand le geste est déjà couvert.",
+        ],
+      },
+      {
+        heading: "Quand le sur-mesure est un produit",
+        paragraphs: [
+          "Le sur-mesure devient un SaaS quand plusieurs clients ont le même geste, avec une règle que l'éditeur n'a pas, et que leurs dossiers sont isolés. Ce n'est pas un thème. Ce n'est pas un logiciel interne ouvert « plus tard ».",
+          "Pas de tableau de prix entre les deux. Pas d'étoiles. Pas de pourcentage. Casablanca, Technopark. Pas d'autre bureau. Code et hébergement livrés si on écrit. Pas de délai fixe.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne mélange pas",
+        paragraphs: [
+          "Un SaaS que l'entreprise subit n'est pas un SaaS qu'elle vend. Quitter le premier et créer le second sont deux projets. Les mettre sur le même devis mélange un contournement et un produit.",
+          "Coco Inbox n'est pas la preuve que tout logiciel standard doit être réécrit. C'est un produit publié. Ses chiffres ne sont pas repris.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire avec le nom de l'outil actuel et le geste qui ne rentre pas. Ou avec le geste que plusieurs clients paieraient. Les deux phrases ne sont pas le même projet : dites laquelle est la vôtre.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Nommer l'outil ou le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire si le geste rentre" },
+      { href: "/developpement-saas-maroc/remplacer-saas", label: "Remplacer un SaaS subi" },
+      { href: "/solutions/remplacer-saas", label: "Le SaaS qui dicte le métier" },
+    ],
+    en: {
+      title: "Custom SaaS or standard software",
+      description:
+        "Custom SaaS or standard software: keep the market product if the action fits. Otherwise write it, with customers isolated. Casablanca.",
+      h1: "Custom SaaS or standard software",
+      lede: "Custom SaaS or standard software: if the action fits a product already on sale, keep it. If it must be bent, write it, and customers do not see each other's files. Byte Force, in Casablanca, does not publish a price duel. [[/contact|Write]] with the action.",
+      sections: [
+      {
+        heading: "When standard wins",
+        paragraphs: [
+          "Standard software wins when the action is already its own: a mailbox, ordinary accounting, a cycle the vendor planned. Paying for it is shorter than rewriting it. A SaaS the company suffers is the other case: the subscription dictates the job. Replacing it is a different offer from creating a product for several customers.",
+            "Creating a SaaS to resell what the market already does is not an advantage. The first conversation can end with staying subscribed. Staying subscribed is not a failed project: it is the shorter software when the action is already covered.",
+        ],
+      },
+      {
+        heading: "When custom is a product",
+        paragraphs: [
+          "Custom becomes a SaaS when several customers have the same action, with a rule the vendor does not have, and their files are isolated. It is not a theme. It is not internal software opened « later ».",
+          "No price table between the two. No stars. No percentage. Casablanca, Technopark. No other office. Code and hosting delivered if it is written. No fixed schedule.",
+        ],
+      },
+      {
+        heading: "What is not mixed",
+        paragraphs: [
+          "A SaaS the company suffers is not a SaaS it sells. Leaving the first and creating the second are two projects. Putting them on the same quote mixes a workaround and a product.",
+          "Coco Inbox is not proof that every standard product should be rewritten. It is a published product. Its figures are not reused.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write with the name of the current tool and the action that does not fit. Or with the action several customers would pay for. Those two sentences are not the same project: say which one is yours.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Name the tool or the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
