@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleFigures } from "@/components/article-figures";
 import type { Article } from "@/lib/articles";
 import { site } from "@/lib/site";
 
@@ -75,16 +76,7 @@ export function ArticleView({ article }: { article: Article }) {
             Parler du projet
           </Link>
         </p>
-        {article.figures?.length ? (
-          <div className="mt-10 grid max-w-3xl gap-8">
-            {article.figures.map((figure) => (
-              <figure key={figure.src}>
-                <img src={figure.src} alt={figure.alt} className="w-full border border-line" />
-                <figcaption className="mt-3 text-sm text-mute">{figure.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
-        ) : null}
+        {article.figures?.length ? <ArticleFigures figures={article.figures} /> : null}
       </div>
       {article.sections.map((section) => (
         <section key={section.heading} className="border-t border-line px-6 py-14 md:px-12">

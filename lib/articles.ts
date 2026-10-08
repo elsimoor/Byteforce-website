@@ -495,13 +495,13 @@ export const articles: Article[] = [
     lede: "Byte Force, au Technopark à Casablanca, publie ici la lecture PageSpeed de sa page d'accueil. Si la vôtre doit être trouvée, lue, et utilisée pour écrire, le premier geste est de la décrire : [[/contact|parler du projet]].",
     figures: [
       {
-        src: "/insights/pagespeed-mobile-2026-10-08.png",
+        src: "/insights/screencapture-pagespeed-web-dev-analysis-https-byteforce-ma-k6jkig2rim-2026-10-08-15_30_55.png",
         alt: "PageSpeed Insights du 8 octobre 2026, 15:20, performance 100, accessibilité 100, bonnes pratiques 100, SEO 100, et 3/3 pour les agents. Premier affichage 0,7 s, plus grand élément 1,2 s.",
         caption:
           "Lecture du 8 octobre 2026, 15:20:00. Performance, accessibilité, bonnes pratiques et SEO à 100. Premier affichage 0,7 s, plus grand élément 1,2 s, indice de vitesse 1,2 s, blocage 0 ms, décalage 0. Agents : 3/3.",
       },
       {
-        src: "/insights/pagespeed-desktop-2026-10-08.png",
+        src: "/insights/screencapture-pagespeed-web-dev-analysis-https-byteforce-ma-k6jkig2rim-2026-10-08-15_30_35.png",
         alt: "PageSpeed Insights du 8 octobre 2026, 15:20:33, les quatre notes à 100 et 3/3 pour les agents. Premier affichage 0,2 s, plus grand élément 0,5 s.",
         caption:
           "Même rapport, 15:20:33. Les quatre notes sont encore à 100, et les agents à 3/3. Premier affichage 0,2 s, plus grand élément 0,5 s, indice de vitesse 0,5 s, blocage 0 ms, décalage 0.",
