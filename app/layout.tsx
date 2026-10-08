@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { headers } from "next/headers";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { OrganizationJsonLd } from "@/components/json-ld";
@@ -39,9 +40,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const path = (await headers()).get("x-byteforce-path") ?? "";
+
   return (
-    <html lang="fr" className={`${publicSans.variable} ${jetbrains.variable}`}>
+    <html lang="fr" data-brand={path === "/" ? "logo" : undefined} className={`${publicSans.variable} ${jetbrains.variable}`}>
       <body className="font-sans antialiased">
         <OrganizationJsonLd />
         <Header />

@@ -3,6 +3,7 @@
 import { Icon } from "@/components/icon";
 import Image from "next/image";
 import Link from "next/link";
+import { useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -18,6 +19,11 @@ const links = [
 
 export function Header() {
   const path = usePathname() ?? "";
+
+  useLayoutEffect(() => {
+    if (path === "/") document.documentElement.dataset.brand = "logo";
+    else delete document.documentElement.dataset.brand;
+  }, [path]);
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">

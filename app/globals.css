@@ -40,6 +40,25 @@
   --color-muted: #6b6a64;
 }
 
+html[data-brand="logo"] {
+  --color-primary: #000dbf;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #00099a;
+  --color-on-primary-container: #000870;
+  --color-primary-fixed: #e4e8ff;
+  --color-on-primary-fixed: #000870;
+  --color-secondary-container: #e4e8ff;
+  --color-inverse-primary: #b7c0ff;
+  --color-surface: #f4f6ff;
+  --color-surface-container-low: #eef1fb;
+  --color-surface-container: #e7ebf8;
+  --color-surface-container-high: #e0e5f4;
+  --color-surface-container-highest: #d8def0;
+  --color-inverse-surface: #070b33;
+  --color-inverse-on-surface: #eef0ff;
+  --color-outline-variant: #c5cce0;
+}
+
 html {
   background: var(--color-surface);
   scrollbar-width: none;
