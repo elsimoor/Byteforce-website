@@ -14,6 +14,38 @@ function mark(state: AuditStep["state"]) {
   return "Tenu";
 }
 
+function unit(seed: number) {
+  const value = Math.sin(seed) * 43758.5453;
+  return value - Math.floor(value);
+}
+
+function AuditMorph({ seed }: { seed: string }) {
+  const base = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 17);
+  return (
+    <div className="mt-8 flex items-center gap-4" role="status" aria-label="Lecture en cours">
+      {[0, 1, 2].map((index) => {
+        const salt = base * 13 + index * 97;
+        const duration = 2.2 + unit(salt + 1) * 1.9;
+        const lift = (unit(salt + 5) < 0.5 ? -1 : 1) * (0.22 + unit(salt + 6) * 0.5);
+        return (
+          <span
+            key={index}
+            aria-hidden="true"
+            className="audit-morph-dot"
+            style={{
+              ["--morph-dur" as string]: `${duration.toFixed(2)}s`,
+              ["--morph-delay" as string]: `${(-unit(salt + 2) * duration).toFixed(2)}s`,
+              ["--drift-dur" as string]: `${(1.3 + unit(salt + 3) * 1.7).toFixed(2)}s`,
+              ["--drift-delay" as string]: `${(-unit(salt + 4) * 1.6).toFixed(2)}s`,
+              ["--drift-y" as string]: `${lift.toFixed(2)}rem`,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
 export function AuditRun({ url }: { url: string }) {
   const [steps, setSteps] = useState<AuditStep[]>([]);
   const [done, setDone] = useState(false);
@@ -101,7 +133,9 @@ export function AuditRun({ url }: { url: string }) {
         })}
       </ol>
 
-      {visible.map((chapter) => (
+      {!done && !error && visible.length === 0 ? <AuditMorph seed={url} /> : null}
+
+      {visible.map((chapter, index) => (
         <section key={chapter} className="mt-14" aria-labelledby={`audit-${chapter}`}>
           <h2 id={`audit-${chapter}`} className="audit-step display text-4xl md:text-5xl">
             {chapter}
@@ -126,6 +160,7 @@ export function AuditRun({ url }: { url: string }) {
                 </li>
               ))}
           </ol>
+          {!done && !error && index === visible.length - 1 ? <AuditMorph seed={chapter} /> : null}
         </section>
       ))}
 

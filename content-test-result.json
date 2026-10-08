@@ -1,0 +1,621 @@
+{
+  "base": "https://byteforce.ma",
+  "ranAt": "2026-10-08T00:45:19.134Z",
+  "keyword": "logiciel sur mesure maroc",
+  "articles": [
+    {
+      "url": "https://byteforce.ma/insights/cout-logiciel-sur-mesure-maroc",
+      "status": 200,
+      "cache": "PRERENDER",
+      "age": "0",
+      "title": "Combien coûte un logiciel sur mesure au Maroc · Byte Force",
+      "titleLen": 58,
+      "descLen": 150,
+      "h1": [
+        "Combien coûte un logiciel sur mesure au Maroc"
+      ],
+      "h2Count": 7,
+      "words": 428,
+      "canonical": "https://byteforce.ma/insights/cout-logiciel-sur-mesure-maroc",
+      "schema": [
+        "WebSite",
+        "ProfessionalService",
+        "PostalAddress",
+        "OpeningHoursSpecification",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject"
+      ],
+      "article": {
+        "type": "Article",
+        "datePublished": "2026-10-08",
+        "author": "Byte Force",
+        "image": false
+      },
+      "serviceLinks": [
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/developpement-logiciel-casablanca"
+      ],
+      "kw": {
+        "title": false,
+        "h1": false,
+        "meta": false,
+        "first100words": false,
+        "slug": true
+      },
+      "checks": {
+        "status200": true,
+        "titleLen": true,
+        "descLen": true,
+        "oneH1": true,
+        "h2s": true,
+        "words": false,
+        "canonicalSelf": true,
+        "indexable": true,
+        "inSitemap": true,
+        "linkedFromIndex": true,
+        "articleSchema": true,
+        "schemaDates": true,
+        "schemaAuthor": true,
+        "ogImage": true,
+        "linksToServicePage": true,
+        "linksToContact": true,
+        "imgAlt": true,
+        "frenchLang": true
+      },
+      "failed": [
+        "words"
+      ]
+    },
+    {
+      "url": "https://byteforce.ma/insights/delai-logiciel-sur-mesure",
+      "status": 200,
+      "cache": "PRERENDER",
+      "age": "0",
+      "title": "Délai d'un logiciel sur mesure · Byte Force",
+      "titleLen": 43,
+      "descLen": 128,
+      "h1": [
+        "Combien de temps pour un logiciel sur mesure"
+      ],
+      "h2Count": 6,
+      "words": 313,
+      "canonical": "https://byteforce.ma/insights/delai-logiciel-sur-mesure",
+      "schema": [
+        "WebSite",
+        "ProfessionalService",
+        "PostalAddress",
+        "OpeningHoursSpecification",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject"
+      ],
+      "article": {
+        "type": "Article",
+        "datePublished": "2026-10-08",
+        "author": "Byte Force",
+        "image": false
+      },
+      "serviceLinks": [
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/developpement-logiciel-casablanca"
+      ],
+      "kw": {
+        "title": false,
+        "h1": false,
+        "meta": false,
+        "first100words": false,
+        "slug": false
+      },
+      "checks": {
+        "status200": true,
+        "titleLen": true,
+        "descLen": true,
+        "oneH1": true,
+        "h2s": true,
+        "words": false,
+        "canonicalSelf": true,
+        "indexable": true,
+        "inSitemap": true,
+        "linkedFromIndex": true,
+        "articleSchema": true,
+        "schemaDates": true,
+        "schemaAuthor": true,
+        "ogImage": true,
+        "linksToServicePage": true,
+        "linksToContact": true,
+        "imgAlt": true,
+        "frenchLang": true
+      },
+      "failed": [
+        "words"
+      ]
+    },
+    {
+      "url": "https://byteforce.ma/insights/qui-possede-le-code",
+      "status": 200,
+      "cache": "PRERENDER",
+      "age": "0",
+      "title": "Qui possède le code d'un logiciel sur mesure · Byte Force",
+      "titleLen": 57,
+      "descLen": 109,
+      "h1": [
+        "Qui possède le code"
+      ],
+      "h2Count": 6,
+      "words": 262,
+      "canonical": "https://byteforce.ma/insights/qui-possede-le-code",
+      "schema": [
+        "WebSite",
+        "ProfessionalService",
+        "PostalAddress",
+        "OpeningHoursSpecification",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject"
+      ],
+      "article": {
+        "type": "Article",
+        "datePublished": "2026-10-08",
+        "author": "Byte Force",
+        "image": false
+      },
+      "serviceLinks": [
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/developpement-logiciel-sur-mesure-maroc"
+      ],
+      "kw": {
+        "title": false,
+        "h1": false,
+        "meta": false,
+        "first100words": false,
+        "slug": false
+      },
+      "checks": {
+        "status200": true,
+        "titleLen": true,
+        "descLen": true,
+        "oneH1": true,
+        "h2s": true,
+        "words": false,
+        "canonicalSelf": true,
+        "indexable": true,
+        "inSitemap": true,
+        "linkedFromIndex": true,
+        "articleSchema": true,
+        "schemaDates": true,
+        "schemaAuthor": true,
+        "ogImage": true,
+        "linksToServicePage": true,
+        "linksToContact": true,
+        "imgAlt": true,
+        "frenchLang": true
+      },
+      "failed": [
+        "words"
+      ]
+    },
+    {
+      "url": "https://byteforce.ma/insights/apres-la-livraison",
+      "status": 200,
+      "cache": "PRERENDER",
+      "age": "0",
+      "title": "Après la livraison d'un logiciel · Byte Force",
+      "titleLen": 45,
+      "descLen": 118,
+      "h1": [
+        "Après la livraison"
+      ],
+      "h2Count": 6,
+      "words": 277,
+      "canonical": "https://byteforce.ma/insights/apres-la-livraison",
+      "schema": [
+        "WebSite",
+        "ProfessionalService",
+        "PostalAddress",
+        "OpeningHoursSpecification",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject"
+      ],
+      "article": {
+        "type": "Article",
+        "datePublished": "2026-10-08",
+        "author": "Byte Force",
+        "image": false
+      },
+      "serviceLinks": [
+        "/services/maintenance",
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/services/maintenance",
+        "/developpement-logiciel-sur-mesure-maroc"
+      ],
+      "kw": {
+        "title": false,
+        "h1": false,
+        "meta": false,
+        "first100words": false,
+        "slug": false
+      },
+      "checks": {
+        "status200": true,
+        "titleLen": true,
+        "descLen": true,
+        "oneH1": true,
+        "h2s": true,
+        "words": false,
+        "canonicalSelf": true,
+        "indexable": true,
+        "inSitemap": true,
+        "linkedFromIndex": true,
+        "articleSchema": true,
+        "schemaDates": true,
+        "schemaAuthor": true,
+        "ogImage": true,
+        "linksToServicePage": true,
+        "linksToContact": true,
+        "imgAlt": true,
+        "frenchLang": true
+      },
+      "failed": [
+        "words"
+      ]
+    },
+    {
+      "url": "https://byteforce.ma/insights/site-web-ou-logiciel",
+      "status": 200,
+      "cache": "PRERENDER",
+      "age": "0",
+      "title": "Site web ou logiciel sur mesure · Byte Force",
+      "titleLen": 44,
+      "descLen": 161,
+      "h1": [
+        "Site web ou logiciel sur mesure"
+      ],
+      "h2Count": 6,
+      "words": 318,
+      "canonical": "https://byteforce.ma/insights/site-web-ou-logiciel",
+      "schema": [
+        "WebSite",
+        "ProfessionalService",
+        "PostalAddress",
+        "OpeningHoursSpecification",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem",
+        "Article",
+        "Organization",
+        "Organization",
+        "ImageObject"
+      ],
+      "article": {
+        "type": "Article",
+        "datePublished": "2026-10-08",
+        "author": "Byte Force",
+        "image": false
+      },
+      "serviceLinks": [
+        "/services/creation-site-web",
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/developpement-logiciel-sur-mesure-maroc",
+        "/services/creation-site-web"
+      ],
+      "kw": {
+        "title": false,
+        "h1": false,
+        "meta": false,
+        "first100words": false,
+        "slug": false
+      },
+      "checks": {
+        "status200": true,
+        "titleLen": true,
+        "descLen": true,
+        "oneH1": true,
+        "h2s": true,
+        "words": false,
+        "canonicalSelf": true,
+        "indexable": true,
+        "inSitemap": true,
+        "linkedFromIndex": true,
+        "articleSchema": true,
+        "schemaDates": true,
+        "schemaAuthor": true,
+        "ogImage": true,
+        "linksToServicePage": true,
+        "linksToContact": true,
+        "imgAlt": true,
+        "frenchLang": true
+      },
+      "failed": [
+        "words"
+      ]
+    }
+  ],
+  "backlinks": [
+    {
+      "site": "https://escapadeflorale.enconstru.fr",
+      "caseStudyPages": [
+        "/realisations/escapade-florale"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:404",
+        "/mentions:404",
+        "/a-propos:200",
+        "/about:404",
+        "/contact:200",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:404"
+      ]
+    },
+    {
+      "site": "https://www.prochedemoi.fr",
+      "caseStudyPages": [
+        "/realisations/re-proche-de-moi"
+      ],
+      "hasBacklink": true,
+      "dofollow": true,
+      "linksToCaseStudy": false,
+      "found": [
+        {
+          "onPage": "/",
+          "href": "https://byteforce.ma/",
+          "anchor": "© 2026 Proche de Moi - tous droits réservés",
+          "rel": "",
+          "nofollow": false
+        }
+      ],
+      "checked": [
+        "/:200"
+      ]
+    },
+    {
+      "site": "https://nu-lille.fr",
+      "caseStudyPages": [
+        "/realisations/nu-lille"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:200",
+        "/mentions:200",
+        "/a-propos:404",
+        "/about:404",
+        "/contact:404",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:200"
+      ]
+    },
+    {
+      "site": "https://meubles-de-septentrion.fr",
+      "caseStudyPages": [
+        "/realisations/meubles-de-septentrion"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:200",
+        "/mentions:200",
+        "/a-propos:404",
+        "/about:404",
+        "/contact:200",
+        "/fr:404",
+        "/en:200",
+        "/fr/mentions-legales:200"
+      ]
+    },
+    {
+      "site": "https://ambulances-valcq.fr",
+      "caseStudyPages": [
+        "/realisations/ambulances-valcq"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:200",
+        "/mentions:200",
+        "/a-propos:404",
+        "/about:404",
+        "/contact:404",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:200"
+      ]
+    },
+    {
+      "site": "https://leshautspaysages.fr",
+      "caseStudyPages": [
+        "/realisations/les-hauts-paysages"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:200",
+        "/mentions:200",
+        "/a-propos:200",
+        "/about:404",
+        "/contact:200",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:200"
+      ]
+    },
+    {
+      "site": "https://www.dealkhir.ma",
+      "caseStudyPages": [
+        "/realisations/dealkhir"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:404",
+        "/mentions:404",
+        "/a-propos:404",
+        "/about:404",
+        "/contact:200",
+        "/fr:200",
+        "/en:200",
+        "/fr/mentions-legales:404"
+      ]
+    },
+    {
+      "site": "https://uas.ma",
+      "caseStudyPages": [
+        "/realisations/uas"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:404",
+        "/mentions:404",
+        "/a-propos:404",
+        "/about:200",
+        "/contact:200",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:404"
+      ]
+    },
+    {
+      "site": "http://agencywonderland.com",
+      "caseStudyPages": [
+        "/realisations/agency-wonderland"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:404",
+        "/mentions:404",
+        "/a-propos:200",
+        "/about:404",
+        "/contact:200",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:404"
+      ]
+    },
+    {
+      "site": "https://tourispeak.com",
+      "caseStudyPages": [
+        "/realisations/tourispeak"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:404",
+        "/mentions:404",
+        "/a-propos:404",
+        "/about:200",
+        "/contact:200",
+        "/fr:404",
+        "/en:404",
+        "/fr/mentions-legales:404"
+      ]
+    },
+    {
+      "site": "https://snapchat-collect.vercel.app",
+      "caseStudyPages": [
+        "/realisations/snapchat-collect"
+      ],
+      "hasBacklink": false,
+      "dofollow": false,
+      "linksToCaseStudy": false,
+      "found": [],
+      "checked": [
+        "/:200",
+        "/mentions-legales:200",
+        "/mentions:200",
+        "/a-propos:200",
+        "/about:200",
+        "/contact:200",
+        "/fr:200",
+        "/en:200",
+        "/fr/mentions-legales:404"
+      ]
+    }
+  ],
+  "verdicts": [
+    {
+      "pass": true,
+      "label": "At least 3 articles under /insights/ (found 5)"
+    },
+    {
+      "pass": true,
+      "label": "Every article is linked from /insights"
+    },
+    {
+      "pass": true,
+      "label": "Every article is in sitemap.xml"
+    },
+    {
+      "pass": false,
+      "label": "All articles pass every check"
+    },
+    {
+      "pass": true,
+      "label": "No duplicate article titles"
+    },
+    {
+      "pass": false,
+      "label": "Every case-study site links back to byteforce.ma (1/11)"
+    },
+    {
+      "pass": true,
+      "label": "At least one dofollow backlink exists"
+    }
+  ]
+}

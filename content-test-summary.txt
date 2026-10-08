@@ -1,0 +1,62 @@
+CONTENT TEST https://byteforce.ma  2026-10-08T00:45:19.134Z
+Insights index: status 200 | cache=HIT age=314 | articles found: 5 (linked from index: 5, in sitemap: 5)
+
+=== ARTICLES ===
+/insights/cout-logiciel-sur-mesure-maroc | 200 | 428w | title(58) "Combien coûte un logiciel sur mesure au Maroc · Byte Force" | h1="Combien coûte un logiciel sur mesure au Maroc" | h2=7
+   schema: WebSite, ProfessionalService, PostalAddress, OpeningHoursSpecification, BreadcrumbList, ListItem, Article, Organization, ImageObject | published=2026-10-08 modified=- author=Byte Force
+   links to service pages: 3 /developpement-logiciel-sur-mesure-maroc /developpement-logiciel-sur-mesure-maroc /developpement-logiciel-casablanca
+   keyword "logiciel sur mesure maroc": title=N h1=N meta=N first100words=N slug=Y
+   FAILED: words
+/insights/delai-logiciel-sur-mesure | 200 | 313w | title(43) "Délai d'un logiciel sur mesure · Byte Force" | h1="Combien de temps pour un logiciel sur mesure" | h2=6
+   schema: WebSite, ProfessionalService, PostalAddress, OpeningHoursSpecification, BreadcrumbList, ListItem, Article, Organization, ImageObject | published=2026-10-08 modified=- author=Byte Force
+   links to service pages: 3 /developpement-logiciel-sur-mesure-maroc /developpement-logiciel-sur-mesure-maroc /developpement-logiciel-casablanca
+   keyword "logiciel sur mesure maroc": title=N h1=N meta=N first100words=N slug=N
+   FAILED: words
+/insights/qui-possede-le-code | 200 | 262w | title(57) "Qui possède le code d'un logiciel sur mesure · Byte Force" | h1="Qui possède le code" | h2=6
+   schema: WebSite, ProfessionalService, PostalAddress, OpeningHoursSpecification, BreadcrumbList, ListItem, Article, Organization, ImageObject | published=2026-10-08 modified=- author=Byte Force
+   links to service pages: 2 /developpement-logiciel-sur-mesure-maroc /developpement-logiciel-sur-mesure-maroc
+   keyword "logiciel sur mesure maroc": title=N h1=N meta=N first100words=N slug=N
+   FAILED: words
+/insights/apres-la-livraison | 200 | 277w | title(45) "Après la livraison d'un logiciel · Byte Force" | h1="Après la livraison" | h2=6
+   schema: WebSite, ProfessionalService, PostalAddress, OpeningHoursSpecification, BreadcrumbList, ListItem, Article, Organization, ImageObject | published=2026-10-08 modified=- author=Byte Force
+   links to service pages: 4 /services/maintenance /developpement-logiciel-sur-mesure-maroc /services/maintenance
+   keyword "logiciel sur mesure maroc": title=N h1=N meta=N first100words=N slug=N
+   FAILED: words
+/insights/site-web-ou-logiciel | 200 | 318w | title(44) "Site web ou logiciel sur mesure · Byte Force" | h1="Site web ou logiciel sur mesure" | h2=6
+   schema: WebSite, ProfessionalService, PostalAddress, OpeningHoursSpecification, BreadcrumbList, ListItem, Article, Organization, ImageObject | published=2026-10-08 modified=- author=Byte Force
+   links to service pages: 4 /services/creation-site-web /developpement-logiciel-sur-mesure-maroc /developpement-logiciel-sur-mesure-maroc
+   keyword "logiciel sur mesure maroc": title=N h1=N meta=N first100words=N slug=N
+   FAILED: words
+
+=== BACKLINKS FROM CASE-STUDY SITES (11 external sites found in /realisations/*) ===
+https://escapadeflorale.enconstru.fr | NO BACKLINK | case study: /realisations/escapade-florale
+   pages checked: /:200 /mentions-legales:404 /mentions:404 /a-propos:200 /about:404 /contact:200 /fr:404 /en:404 /fr/mentions-legales:404
+https://www.prochedemoi.fr | BACKLINK OK (dofollow) | case study: /realisations/re-proche-de-moi
+   on /: https://byteforce.ma/ | anchor="© 2026 Proche de Moi - tous droits réservés" | rel=""
+https://nu-lille.fr | NO BACKLINK | case study: /realisations/nu-lille
+   pages checked: /:200 /mentions-legales:200 /mentions:200 /a-propos:404 /about:404 /contact:404 /fr:404 /en:404 /fr/mentions-legales:200
+https://meubles-de-septentrion.fr | NO BACKLINK | case study: /realisations/meubles-de-septentrion
+   pages checked: /:200 /mentions-legales:200 /mentions:200 /a-propos:404 /about:404 /contact:200 /fr:404 /en:200 /fr/mentions-legales:200
+https://ambulances-valcq.fr | NO BACKLINK | case study: /realisations/ambulances-valcq
+   pages checked: /:200 /mentions-legales:200 /mentions:200 /a-propos:404 /about:404 /contact:404 /fr:404 /en:404 /fr/mentions-legales:200
+https://leshautspaysages.fr | NO BACKLINK | case study: /realisations/les-hauts-paysages
+   pages checked: /:200 /mentions-legales:200 /mentions:200 /a-propos:200 /about:404 /contact:200 /fr:404 /en:404 /fr/mentions-legales:200
+https://www.dealkhir.ma | NO BACKLINK | case study: /realisations/dealkhir
+   pages checked: /:200 /mentions-legales:404 /mentions:404 /a-propos:404 /about:404 /contact:200 /fr:200 /en:200 /fr/mentions-legales:404
+https://uas.ma | NO BACKLINK | case study: /realisations/uas
+   pages checked: /:200 /mentions-legales:404 /mentions:404 /a-propos:404 /about:200 /contact:200 /fr:404 /en:404 /fr/mentions-legales:404
+http://agencywonderland.com | NO BACKLINK | case study: /realisations/agency-wonderland
+   pages checked: /:200 /mentions-legales:404 /mentions:404 /a-propos:200 /about:404 /contact:200 /fr:404 /en:404 /fr/mentions-legales:404
+https://tourispeak.com | NO BACKLINK | case study: /realisations/tourispeak
+   pages checked: /:200 /mentions-legales:404 /mentions:404 /a-propos:404 /about:200 /contact:200 /fr:404 /en:404 /fr/mentions-legales:404
+https://snapchat-collect.vercel.app | NO BACKLINK | case study: /realisations/snapchat-collect
+   pages checked: /:200 /mentions-legales:200 /mentions:200 /a-propos:200 /about:200 /contact:200 /fr:200 /en:200 /fr/mentions-legales:404
+
+=== VERDICT ===
+PASS  At least 3 articles under /insights/ (found 5)
+PASS  Every article is linked from /insights
+PASS  Every article is in sitemap.xml
+FAIL  All articles pass every check
+PASS  No duplicate article titles
+FAIL  Every case-study site links back to byteforce.ma (1/11)
+PASS  At least one dofollow backlink exists
