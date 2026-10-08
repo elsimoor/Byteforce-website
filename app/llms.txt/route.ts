@@ -42,6 +42,7 @@ export function GET() {
     `- [Logiciel métier sur mesure](${origin}/insights/logiciel-metier-sur-mesure) : un seul geste, avec le vocabulaire du métier.`,
     `- [Quand créer un logiciel sur mesure](${origin}/insights/quand-creer-un-logiciel-sur-mesure) : quand le marché tord le métier, pas avant.`,
     `- [Logiciel personnalisé ou logiciel standard](${origin}/insights/logiciel-personnalise-ou-standard) : garder le marché s'il porte le métier, sinon écrire.`,
+    `- [Avantages d'un logiciel sur mesure](${origin}/insights/avantages-logiciel-sur-mesure) : le circuit n'est pas tordu, et le code revient à l'entreprise.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,
