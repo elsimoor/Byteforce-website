@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "@/components/icon";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,7 +23,7 @@ export function Header() {
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
         <Link href="/" className="flex items-center gap-3">
-          <img alt="Byte Force" className="h-9 w-9 object-cover" src="/logo.png" />
+          <Image alt="Byte Force" className="h-9 w-9 object-cover" src="/logo.png" width={36} height={36} sizes="36px" />
           <span className="font-headline text-lg font-bold tracking-tight text-on-surface">ByteForce</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
@@ -56,7 +58,7 @@ export function Header() {
               aria-label="Client portal"
               className="flex h-8 w-8 items-center justify-center rounded-full bg-primary"
             >
-              <span className="material-symbols-outlined text-[18px] text-on-primary">person</span>
+              <Icon name="person" className="text-[18px] text-on-primary" />
             </Link>
           ) : null}
         </div>

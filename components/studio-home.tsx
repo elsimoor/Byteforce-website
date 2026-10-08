@@ -1,3 +1,5 @@
+import { Icon } from "@/components/icon";
+import Image from "next/image";
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -43,18 +45,14 @@ export function StudioHome() {
                 href="/contact"
               >
                 <span>Parler d&apos;un projet</span>
-                <span className="material-symbols-outlined text-base">
-                  arrow_forward
-                </span>
+                <Icon name="arrow_forward" className="text-base" />
               </a>
               <a
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-sm font-medium transition-colors"
                 href="/realisations"
               >
                 <span>Voir les travaux</span>
-                <span className="material-symbols-outlined text-base">
-                  south
-                </span>
+                <Icon name="south" className="text-base" />
               </a>
             </div>
             <p className="text-sm text-on-surface-variant">
@@ -74,9 +72,14 @@ export function StudioHome() {
               href="/realisations/coco-inbox"
               className="block overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl"
             >
-              <img
+              <Image
                 src="/work/coco-inbox.jpg"
                 alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
+                width={1280}
+                height={960}
+                priority
+                fetchPriority="high"
+                sizes="(min-width: 1024px) 40vw, 100vw"
                 className="aspect-[16/10] w-full object-cover object-top"
               />
               <div className="flex items-center justify-between gap-4 p-5">
@@ -253,7 +256,7 @@ export function StudioHome() {
                     01
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">strategy</span>
+                    <Icon name="strategy" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -280,7 +283,7 @@ export function StudioHome() {
                     02
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">dashboard</span>
+                    <Icon name="dashboard" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -307,7 +310,7 @@ export function StudioHome() {
                     03
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">group</span>
+                    <Icon name="group" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -334,7 +337,7 @@ export function StudioHome() {
                     04
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">smart_toy</span>
+                    <Icon name="smart_toy" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -361,7 +364,7 @@ export function StudioHome() {
                     05
                   </span>
                   <div className="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">devices</span>
+                    <Icon name="devices" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -388,7 +391,7 @@ export function StudioHome() {
                     06
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">hub</span>
+                    <Icon name="hub" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -412,7 +415,7 @@ export function StudioHome() {
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-sm font-bold text-primary">07</span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">bug_report</span>
+                    <Icon name="bug_report" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">Audit &amp; bug fixing</h3>
@@ -435,7 +438,7 @@ export function StudioHome() {
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-sm font-bold text-primary">08</span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">build</span>
+                    <Icon name="build" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">Maintenance &amp; support</h3>
@@ -458,7 +461,7 @@ export function StudioHome() {
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-sm font-bold text-primary">09</span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">extension</span>
+                    <Icon name="extension" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">WordPress plugins</h3>
@@ -506,7 +509,7 @@ export function StudioHome() {
             {/* Step 1 */}
             <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
               <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                <span className="text-2xl font-mono font-black text-primary block mb-3">
                   01
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
@@ -523,7 +526,7 @@ export function StudioHome() {
             {/* Step 2 */}
             <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
               <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                <span className="text-2xl font-mono font-black text-primary block mb-3">
                   02
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
@@ -540,7 +543,7 @@ export function StudioHome() {
             {/* Step 3 */}
             <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
               <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                <span className="text-2xl font-mono font-black text-primary block mb-3">
                   03
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
@@ -574,7 +577,7 @@ export function StudioHome() {
             {/* Step 5 */}
             <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
               <div>
-                <span className="text-2xl font-mono font-black text-primary/40 block mb-3">
+                <span className="text-2xl font-mono font-black text-primary block mb-3">
                   05
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
@@ -644,9 +647,7 @@ export function StudioHome() {
             href="/contact"
           >
             <span>Build an AI-powered product</span>
-            <span className="material-symbols-outlined text-sm">
-              arrow_forward
-            </span>
+            <Icon name="arrow_forward" className="text-sm" />
           </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -669,9 +670,7 @@ export function StudioHome() {
             </div>
             <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
               <span>Parler d'un projet</span>
-              <span className="material-symbols-outlined text-sm">
-                north_east
-              </span>
+              <Icon name="north_east" className="text-sm" />
             </div>
           </a>
           {/* Article 2 */}
@@ -693,9 +692,7 @@ export function StudioHome() {
             </div>
             <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
               <span>Parler d'un projet</span>
-              <span className="material-symbols-outlined text-sm">
-                north_east
-              </span>
+              <Icon name="north_east" className="text-sm" />
             </div>
           </a>
           {/* Article 3 */}
@@ -717,9 +714,7 @@ export function StudioHome() {
             </div>
             <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
               <span>Parler d'un projet</span>
-              <span className="material-symbols-outlined text-sm">
-                north_east
-              </span>
+              <Icon name="north_east" className="text-sm" />
             </div>
           </a>
         </div>
@@ -740,9 +735,9 @@ export function StudioHome() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Category 1 */}
           <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Product interface
-            </h4>
+            </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Next.js</span>
@@ -772,9 +767,9 @@ export function StudioHome() {
           </div>
           {/* Category 2 */}
           <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Application and data
-            </h4>
+            </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Node.js</span>
@@ -804,9 +799,9 @@ export function StudioHome() {
           </div>
           {/* Category 3 */}
           <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Delivery
-            </h4>
+            </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Redis</span>
@@ -836,9 +831,9 @@ export function StudioHome() {
           </div>
           {/* Category 4 */}
           <div className="bg-surface-container-low p-6 rounded-xl">
-            <h4 className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Where it runs
-            </h4>
+            </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>OVHcloud</span>
@@ -879,7 +874,7 @@ export function StudioHome() {
                     01
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">strategy</span>
+                    <Icon name="strategy" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -901,7 +896,7 @@ export function StudioHome() {
                     02
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">palette</span>
+                    <Icon name="palette" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -923,7 +918,7 @@ export function StudioHome() {
                     03
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">terminal</span>
+                    <Icon name="terminal" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -945,9 +940,7 @@ export function StudioHome() {
                     04
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">
-                      smartphone
-                    </span>
+                    <Icon name="smartphone" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -969,7 +962,7 @@ export function StudioHome() {
                     05
                   </span>
                   <div className="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">smart_toy</span>
+                    <Icon name="smart_toy" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -991,9 +984,7 @@ export function StudioHome() {
                     06
                   </span>
                   <div className="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-                    <span className="material-symbols-outlined">
-                      cloud_sync
-                    </span>
+                    <Icon name="cloud_sync" />
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -1028,49 +1019,49 @@ export function StudioHome() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-lg bg-surface-container-low">
-                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Business first
-                </h4>
+                </p>
                 <p className="text-xs text-on-surface-variant">
                   We understand the business first.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
-                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Product and technology
-                </h4>
+                </p>
                 <p className="text-xs text-on-surface-variant">
                   We design the product and the technology together.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
-                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Actual workflows
-                </h4>
+                </p>
                 <p className="text-xs text-on-surface-variant">
                   We build around your actual workflows.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
-                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Decision-makers
-                </h4>
+                </p>
                 <p className="text-xs text-on-surface-variant">
                   We work directly with decision-makers.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
-                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Built to evolve
-                </h4>
+                </p>
                 <p className="text-xs text-on-surface-variant">
                   We build software that can evolve with the company.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-surface-container-low">
-                <h4 className="font-headline font-bold text-sm text-on-surface mb-1">
+                <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   The outcome
-                </h4>
+                </p>
                 <p className="text-xs text-on-surface-variant">
                   We stay focused on the outcome, not just the deliverables.
                 </p>
@@ -1321,9 +1312,7 @@ export function StudioHome() {
       <section className="w-full bg-surface-container-high py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
           <div className="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-6 shadow-sm">
-            <span className="material-symbols-outlined text-2xl">
-              rocket_launch
-            </span>
+            <Icon name="rocket_launch" className="text-2xl" />
           </div>
           <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase mb-2">
             PARLER D'UN PROJET
@@ -1340,9 +1329,7 @@ export function StudioHome() {
               href="/contact"
             >
               <span>Parler d'un projet</span>
-              <span className="material-symbols-outlined text-base">
-                arrow_forward
-              </span>
+              <Icon name="arrow_forward" className="text-base" />
             </a>
             <a
               className="inline-flex items-center gap-2 px-6 py-4 rounded bg-surface text-on-surface text-base font-medium hover:bg-surface-container-highest transition-colors"
@@ -1354,9 +1341,7 @@ export function StudioHome() {
               className="inline-flex items-center gap-2 px-6 py-4 rounded bg-surface text-on-surface text-base font-medium hover:bg-surface-container-highest transition-colors"
               href={`mailto:${site.email}`}
             >
-              <span className="material-symbols-outlined text-base text-primary">
-                mail
-              </span>
+              <Icon name="mail" className="text-base text-primary" />
               <span>Talk to ByteForce</span>
             </a>
           </div>

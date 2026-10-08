@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Icon } from "@/components/icon";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function NotFound() {
           className="inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
         >
           Retour à l&apos;accueil
-          <span className="material-symbols-outlined text-base">arrow_forward</span>
+          <Icon name="arrow_forward" className="text-base" />
         </Link>
         <Link
           href="/contact"

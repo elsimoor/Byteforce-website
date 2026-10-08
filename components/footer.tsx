@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
@@ -8,7 +9,7 @@ export function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-3">
-              <img alt="Byte Force" className="h-8 w-8 object-cover" src="/logo.png" />
+              <Image alt="Byte Force" className="h-8 w-8 object-cover" src="/logo.png" width={32} height={32} sizes="32px" />
               <span className="font-headline text-base font-bold tracking-tight text-on-surface">ByteForce</span>
             </Link>
             <p className="max-w-sm text-sm text-on-surface-variant">

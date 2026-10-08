@@ -11,6 +11,7 @@ const publicSans = localFont({
   variable: "--font-public-sans",
   weight: "300 900",
   display: "swap",
+  adjustFontFallback: "Arial",
 });
 
 const jetbrains = localFont({
@@ -18,6 +19,7 @@ const jetbrains = localFont({
   variable: "--font-jetbrains",
   weight: "400 800",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -40,14 +42,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${publicSans.variable} ${jetbrains.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="font-sans antialiased">
         <OrganizationJsonLd />
         <Header />

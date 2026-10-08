@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/content";
 
@@ -30,10 +31,12 @@ export function ProjectStage({ project, variant }: { project: Project; variant: 
           <p className="mt-6 max-w-sm text-mute">{project.description}</p>
         </div>
         <div className="relative min-h-[52svh] overflow-hidden bg-ink md:col-span-7 md:min-h-full">
-          <img
+          <Image
             src={project.shot}
             alt={`${project.title}, capture du site en ligne`}
-            className="absolute inset-0 h-full w-full object-cover object-top"
+            fill
+            sizes="(min-width: 768px) 58vw, 100vw"
+            className="object-cover object-top"
           />
         </div>
       </Link>

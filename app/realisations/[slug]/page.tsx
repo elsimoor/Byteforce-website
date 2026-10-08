@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCity, slugify } from "@/lib/catalog";
@@ -96,9 +97,13 @@ export default async function ProjectPage({ params }: Props) {
       <section className="grid gap-12 px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
         <div className="md:col-span-7">
           {project.shot ? (
-            <img
+            <Image
               src={project.shot}
               alt={`${project.title}, capture du site en ligne`}
+              width={1280}
+              height={960}
+              priority
+              sizes="(min-width: 768px) 58vw, 100vw"
               className="mb-8 aspect-[16/10] w-full rounded-lg object-cover object-top"
             />
           ) : null}

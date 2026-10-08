@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/lib/content";
 
 const order = ["coco-inbox", "re-proche-de-moi", "dealkhir", "tourispeak"];
@@ -45,9 +46,12 @@ export function SelectedWork() {
         {cases.map((project) => (
           <article key={project.slug} className="overflow-hidden rounded-xl bg-surface-container-low shadow-sm">
             <a href={project.url} rel="noopener noreferrer">
-              <img
+              <Image
                 src={project.shot}
                 alt={`${project.title}, capture du site en ligne`}
+                width={1280}
+                height={960}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="aspect-[16/10] w-full object-cover object-top"
               />
             </a>
