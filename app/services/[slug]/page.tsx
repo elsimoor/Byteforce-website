@@ -118,6 +118,65 @@ export default async function ServicePage({ params }: Props) {
         </section>
       ))}
 
+      {service.plugins?.length ? (
+        <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
+          <h2 className="display max-w-[16ch] text-4xl md:text-5xl">Plugins déjà écrits</h2>
+          <div className="mt-12 max-w-3xl">
+            {service.plugins.map((plugin) => (
+              <article key={plugin.href} className="border-t border-line py-10">
+                <h3 className="display text-3xl">{plugin.name}</h3>
+                <p className="mt-2 text-sm text-mute">
+                  {plugin.version} · {plugin.needs}
+                </p>
+                <p className="mt-4 max-w-2xl leading-relaxed">{plugin.summary}</p>
+                <p className="mt-6">
+                  <a href={plugin.href} className="border-b border-ink pb-1" download>
+                    Télécharger {plugin.name}
+                  </a>
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-4 max-w-2xl border-t border-line pt-10">
+            <h3 className="display text-3xl">Quand écrire</h3>
+            <p className="mt-4 leading-relaxed">
+              Écrivez si le site est déjà sous WordPress et qu&apos;une extension du marché force à changer le parcours, ou casse à chaque mise à jour. Dites le geste que l&apos;équipe doit pouvoir faire, et ce qui est déjà installé.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré.
+            </p>
+            <p className="mt-6">
+              <Link href="/contact" className="border-b border-ink pb-1">
+                Parler d&apos;un plugin
+              </Link>
+            </p>
+          </div>
+        </section>
+      ) : null}
+
+      {service.en ? (
+        <div lang="en" className="border-t border-line px-6 py-16 md:px-12 md:py-24">
+          <p className="text-sm text-mute">English</p>
+          <h2 className="display mt-6 max-w-[18ch] text-4xl md:text-5xl">{service.en.h1}</h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed">{service.en.summary}</p>
+          {service.en.sections.map((section) => (
+            <section key={section.heading} className="mt-12">
+              <h3 className="display max-w-[20ch] text-3xl">{section.heading}</h3>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="mt-4 max-w-2xl leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </section>
+          ))}
+          <p className="mt-8">
+            <Link href="/contact" className="border-b border-ink pb-1">
+              Talk about the plugin
+            </Link>
+          </p>
+        </div>
+      ) : null}
+
       {service.faqs?.length ? (
         <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
           <h2 className="display text-4xl">Questions</h2>

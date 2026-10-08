@@ -26,6 +26,7 @@ export function GET() {
     "## Pages utiles",
     `- [Accueil](${origin}/) : le studio, à Casablanca.`,
     `- [Services](${origin}/services) : ce que Byte Force construit.`,
+    `- [Plugins WordPress](${origin}/services/plugins-wordpress) : quatre plugins téléchargeables, et un plugin écrit pour le geste qui manque.`,
     `- [Travaux](${origin}/realisations) : projets publiés.`,
     `- [À propos](${origin}/a-propos) : le bureau et les faits.`,
     `- [Décisions](${origin}/insights) : questions avant de construire.`,

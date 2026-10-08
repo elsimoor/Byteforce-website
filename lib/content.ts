@@ -11,6 +11,8 @@ export type Service = {
   sections?: { heading: string; paragraphs: string[] }[];
   faqs?: { q: string; a: string }[];
   links?: { href: string; label: string }[];
+  plugins?: { name: string; version: string; href: string; summary: string; needs: string }[];
+  en?: { h1: string; summary: string; sections: { heading: string; paragraphs: string[] }[] };
 };
 
 export type Project = {
@@ -365,9 +367,9 @@ export const services: Service[] = [
     slug: "plugins-wordpress",
     menu: "Plugins",
     summary:
-      "Plugins WordPress écrits pour le site qui existe déjà, quand une extension du marché ne fait pas le travail.",
+      "Byte Force écrit des plugins WordPress pour le site déjà en ligne. Quatre sont téléchargeables : Plugin Downloader, PDM Connect, PDM Ecommerce et PDM Optimize Media.",
     problem:
-      "Une extension générique force le site à changer, ou casse à la mise à jour. Un plugin sur mesure ajoute seulement ce qui manque, sans remplacer WordPress.",
+      "Une extension du marché force parfois le site à changer, ou casse à la mise à jour. Un plugin sur mesure ajoute le geste qui manque, sans remplacer WordPress.",
     includes: [
       "Lecture du site et des extensions déjà installées",
       "Plugin PHP branché au thème, ou à WooCommerce si le site l'utilise",
@@ -375,22 +377,81 @@ export const services: Service[] = [
       "Correction après la mise en ligne",
     ],
     audience:
-      "Entreprises qui ont déjà un site WordPress et un besoin qu'aucune extension du marché ne couvre.",
+      "Entreprises qui ont déjà un site WordPress et un geste qu'aucune extension du marché ne couvre.",
     primaryKeyword: "développement plugin WordPress Maroc",
     title: "Développement de plugin WordPress au Maroc",
     sections: [
       {
-        heading: "Ajouter seulement ce qui manque",
+        heading: "Ajouter seulement le geste qui manque",
         paragraphs: [
-          "Byte Force lit le site et les extensions déjà installées, puis écrit un plugin PHP branché au thème, ou à WooCommerce si le site l'utilise. L'équipe règle le plugin sans toucher au code.",
-          "On ne remplace pas WordPress par un autre outil si le site tient. Les corrections après la mise en ligne font partie de la livraison.",
+          "Byte Force, au Technopark à Casablanca, lit le site WordPress et les extensions déjà installées. Le plugin est du PHP branché au thème, ou à WooCommerce si la boutique est déjà là. L'équipe le règle sans ouvrir le code.",
+          "On ne remplace pas WordPress quand le site tient. Les quatre plugins plus bas sont déjà écrits. Un cinquième s'écrit quand le geste n'est dans aucun d'eux.",
         ],
       },
     ],
+    plugins: [
+      {
+        name: "Plugin Downloader",
+        version: "1.0.0",
+        href: "/plugin-downloader.zip",
+        summary:
+          "Depuis wp-admin, on cherche un plugin sur le répertoire officiel WordPress.org, on télécharge le zip officiel, on l'installe ou on l'active. Les données viennent de l'API WordPress.org. Le plugin n'accepte pas une adresse quelconque à télécharger. Il faut le droit d'installer des plugins. WordPress 6.0 et PHP 7.4.",
+        needs: "WordPress 6.0 · PHP 7.4",
+      },
+      {
+        name: "PDM Connect",
+        version: "1.0.0",
+        href: "/pdm-connect.zip",
+        summary:
+          "Le fichier s'appelle NextJS Page Sync. À l'enregistrement d'une page ou d'un article, il envoie la structure des blocs Gutenberg vers une API Next.js dont l'adresse est dans les réglages.",
+        needs: "WordPress · une API Next.js",
+      },
+      {
+        name: "PDM Ecommerce",
+        version: "1.0.0",
+        href: "/pdm-ecommerce.zip",
+        summary:
+          "Une API pour une boutique WooCommerce déjà en place. L'accès passe par une clé publique et une clé secrète. Les routes publiées couvrent les catégories, les produits, la recherche et le panier.",
+        needs: "WooCommerce",
+      },
+      {
+        name: "PDM Optimize Media",
+        version: "1.0.1",
+        href: "/pdm-optimize-media.zip",
+        summary:
+          "Il compresse les images de la médiathèque sans changer leur adresse. La conversion WebP est possible. Si le fichier optimisé est plus lourd, il n'est pas gardé. Il faut GD ou Imagick. WordPress 5.8 et PHP 7.4.",
+        needs: "WordPress 5.8 · PHP 7.4 · GD ou Imagick",
+      },
+    ],
+    en: {
+      h1: "WordPress plugins, written for the site you already have",
+      summary:
+        "Byte Force writes WordPress plugins for a site that is already online. Four can be downloaded: Plugin Downloader, PDM Connect, PDM Ecommerce and PDM Optimize Media.",
+      sections: [
+        {
+          heading: "Add only the missing action",
+          paragraphs: [
+            "Byte Force, at Technopark in Casablanca, reads the WordPress site and the plugins already installed. The plugin is PHP hooked to the theme, or to WooCommerce if the shop is already there. The team configures it without opening the code.",
+            "WordPress stays when the site holds. The four plugins below are already written. A fifth is written when the action is in none of them.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write if the site is already on WordPress and a market plugin forces a change of path, or breaks on every update. Say the action the team must be able to take, and what is already installed.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day. The form is on this page, or at /contact.",
+          ],
+        },
+      ],
+    },
     faqs: [
       {
         q: "Une extension du marché ne suffit-elle pas ?",
         a: "Souvent si. Le plugin sur mesure commence quand l'extension force le site à changer, ou casse à chaque mise à jour.",
+      },
+      {
+        q: "Peut-on installer les quatre plugins déjà écrits ?",
+        a: "Oui. Chaque zip sur cette page s'installe par Extensions, Ajouter, Téléverser une extension. Un autre geste s'écrit après le premier échange.",
       },
     ],
     links: [
