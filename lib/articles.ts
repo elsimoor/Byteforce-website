@@ -295,6 +295,100 @@ export const articles: Article[] = [
       { href: "/services/creation-site-web", label: "Création de site web" },
     ],
   },
+  {
+    slug: "rouvrir-l-application",
+    title: "Rouvrir l'application le lendemain",
+    description:
+      "Une application utile peut n'être ouverte qu'une fois. Byte Force, à Casablanca, conçoit le geste qui donne une raison de revenir.",
+    h1: "Ce qui fait revenir dans l'application",
+    date: "2026-10-08",
+    lede: "Byte Force, au Technopark à Casablanca, écrit des logiciels qu'une personne doit pouvoir rouvrir sans qu'on la relance. Si la vôtre est déjà en ligne et qu'on ne revient pas, le premier geste est de le dire : [[/contact|parler du projet]].",
+    sections: [
+      {
+        heading: "Le téléchargement ne prouve pas le retour",
+        paragraphs: [
+          "Duolingo est l'exemple public de cette note. Beaucoup de gens l'ouvrent sans chercher à devenir bilingues. Le cours est le travail. L'habitude vient de ce qui l'entoure : un personnage qui réagit, une leçon très courte, une récompense qui change, une série qu'on n'a pas envie de perdre.",
+          "Byte Force n'a pas conçu Duolingo et ne publie pas ses chiffres comme les siens. La décision est la même pour un logiciel métier : si personne n'a une raison de revenir demain, le premier usage ne compte pas.",
+        ],
+      },
+      {
+        heading: "Montrer le geste avant de demander un compte",
+        paragraphs: [
+          "Duolingo laisse entrer sans formulaire. Quelques questions courtes, une leçon d'une minute, puis seulement l'invitation à garder ce qui vient d'être fait. Un compte demandé trop tôt fait quitter avant d'avoir vu à quoi sert l'outil.",
+          "Le chemin recommandé est déjà coché. La personne peut le changer. Elle n'a pas à comparer trois durées avant d'avoir compris le geste. [[/developpement-logiciel-sur-mesure-maroc|Le logiciel sur mesure]] part de ce geste, pas d'un écran d'inscription.",
+        ],
+      },
+      {
+        heading: "Une erreur ne doit pas faire honte",
+        paragraphs: [
+          "Un bandeau rouge et le mot « erreur » arrêtent la séance. Duolingo marque la faute et dit comment la corriger, sans féliciter la faute. La personne voit ce qui ne va pas et peut continuer.",
+          "Le geste reste court : un choix, un ordre à remettre, pas une phrase entière à taper quand ce n'est pas nécessaire. Quand le métier exige une saisie longue, on la garde. On n'habille pas un formulaire en jeu.",
+        ],
+      },
+      {
+        heading: "Ce qu'on perd en ne revenant pas",
+        paragraphs: [
+          "Une récompense toujours identique cesse de tirer. Une récompense qui change, puis une raison explicite de revenir le lendemain, relie les deux séances. Ça ne remplace pas le travail. Si le bonus est le seul contenu, l'application ne sert plus le métier.",
+          "Ce que la personne a façonné — un profil, un dossier, une série — est plus dur à quitter qu'un outil anonyme. La série doit protéger le geste utile. Une règle qui punit sans livrer ce geste est une mauvaise règle. L'automatisation que Byte Force publie est une règle stable dans le logiciel, pas une offre « agent IA ».",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrivez si l'application existe et que les gens ne reviennent pas, ou si le logiciel doit être ouvert chaque jour pour un geste précis. Dites quel est ce geste, ce que la personne perd en le sautant, et ce qui ne doit pas ressembler à une punition.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré. [[/contact|Écrire à Byte Force]] avec l'adresse de l'application, ou avec le geste que le logiciel doit permettre.",
+        ],
+      },
+    ],
+    en: {
+      title: "Opening the application again tomorrow",
+      description:
+        "A useful application can still be opened only once. Byte Force, in Casablanca, designs the action that gives a reason to return.",
+      h1: "What brings someone back into the application",
+      lede: "Byte Force, at Technopark in Casablanca, builds software a person can open again without being chased. If yours is already online and people do not return, the first step is to say so: [[/contact|talk about the project]].",
+      sections: [
+        {
+          heading: "A download does not prove a return",
+          paragraphs: [
+            "Duolingo is the public example in this note. Many people open it without trying to become fluent. The lesson is the work. The habit comes from what surrounds it: a character that reacts, a very short lesson, a reward that changes, a streak they do not want to lose.",
+            "Byte Force did not design Duolingo and does not publish its numbers as its own. The decision is the same for business software: if nobody has a reason to come back tomorrow, the first use does not count.",
+          ],
+        },
+        {
+          heading: "Show the action before asking for an account",
+          paragraphs: [
+            "Duolingo lets someone in without a form. A few short questions, a one-minute lesson, and only then an invitation to keep what they just did. An account asked for too early makes people leave before they have seen what the tool is for.",
+            "The recommended path is already selected. The person can change it. They do not have to compare three durations before they understand the action. [[/developpement-logiciel-sur-mesure-maroc|Custom software]] starts from that action, not from a signup screen.",
+          ],
+        },
+        {
+          heading: "A mistake should not shame",
+          paragraphs: [
+            "A red banner and the word “error” stop the session. Duolingo marks the mistake and says how to correct it, without praising the mistake. The person sees what is wrong and can continue.",
+            "The action stays short: a choice, an order to restore, not a full sentence to type when that is unnecessary. When the job requires a long entry, keep it. Do not dress a form up as a game.",
+          ],
+        },
+        {
+          heading: "What is lost by not coming back",
+          paragraphs: [
+            "A reward that is always the same stops pulling. A reward that changes, then an explicit reason to return tomorrow, ties the two sessions together. It does not replace the work. If the bonus is the only content, the application no longer serves the job.",
+            "What the person shaped — a profile, a record, a streak — is harder to leave than an anonymous tool. The streak has to protect the useful action. A rule that punishes without delivering that action is a bad rule. The automation Byte Force publishes is a stable rule inside the software, not an “AI agent” offer.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write if the application exists and people do not return, or if the software must be opened every day for one precise action. Say what that action is, what the person loses by skipping it, and what must not feel like a punishment.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day. [[/contact|Write to Byte Force]] with the application address, or with the action the software must allow.",
+          ],
+        },
+      ],
+    },
+    links: [
+      { href: "/contact", label: "Parler du projet" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+    ],
+  },
 ];
 
 const slugs = new Set<string>();
