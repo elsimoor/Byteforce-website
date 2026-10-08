@@ -14,6 +14,72 @@ function mark(state: AuditStep["state"]) {
   return "Tenu";
 }
 
+const ringRadius = 52;
+const ringLength = 2 * Math.PI * ringRadius;
+
+function AuditGauge({ chapter, steps }: { chapter: (typeof chapters)[number]; steps: AuditStep[] }) {
+  const value = dimensionScore(steps, chapter);
+  if (value === null) return null;
+  const items = steps.filter((step) => step.dimension === chapter && step.state !== "running" && step.impact !== "aucun");
+  const tone = value >= 90 ? "text-ink" : value >= 50 ? "text-ink" : "text-mute";
+  return (
+    <div className="audit-step mt-10 grid items-start gap-10 border-t border-line pt-10 lg:grid-cols-12">
+      <div className="lg:col-span-4">
+        <div className={`relative h-40 w-40 ${tone}`}>
+          <svg viewBox="0 0 120 120" className="h-full w-full" aria-hidden="true">
+            <circle cx="60" cy="60" r={ringRadius} fill="none" stroke="var(--color-line)" strokeWidth="5" />
+            <circle
+              className="audit-ring"
+              cx="60"
+              cy="60"
+              r={ringRadius}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="5"
+              strokeLinecap="round"
+              strokeDasharray={ringLength}
+              strokeDashoffset={ringLength * (1 - value / 100)}
+              style={{ ["--ring-offset" as string]: `${ringLength * (1 - value / 100)}` }}
+              transform="rotate(-90 60 60)"
+            />
+          </svg>
+          <p className="display absolute inset-0 flex items-center justify-center text-5xl text-ink">{value}</p>
+        </div>
+        <p className="mt-5 text-lg">{chapter}</p>
+        <p className="mt-2 max-w-xs text-sm leading-relaxed text-mute">Sur 100, à partir des points de cette partie.</p>
+        <p className="mt-5 flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs text-mute">
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full border border-ink" />
+            0–49
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-mute" />
+            50–89
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-ink" />
+            90–100
+          </span>
+        </p>
+      </div>
+      <ul className="grid sm:grid-cols-2 sm:gap-x-10 lg:col-span-8">
+        {items.map((step) => (
+          <li key={step.id} className="flex items-baseline justify-between gap-4 border-b border-line py-3 break-inside-avoid">
+            <span className="flex min-w-0 items-center gap-3">
+              <span
+                className={`h-2 w-2 shrink-0 rounded-full ${step.state === "pass" ? "bg-ink" : step.state === "warn" ? "bg-mute" : "border border-ink"}`}
+                aria-hidden="true"
+              />
+              <span>{step.label}</span>
+            </span>
+            <span className="shrink-0 font-mono text-xs text-mute">{mark(step.state)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function unit(seed: number) {
   const value = Math.sin(seed) * 43758.5453;
   return value - Math.floor(value);
@@ -160,7 +226,11 @@ export function AuditRun({ url }: { url: string }) {
                 </li>
               ))}
           </ol>
-          {!done && !error && index === visible.length - 1 ? <AuditMorph seed={chapter} /> : null}
+          {done || index < visible.length - 1 ? (
+            <AuditGauge chapter={chapter} steps={shown} />
+          ) : !error ? (
+            <AuditMorph seed={chapter} />
+          ) : null}
         </section>
       ))}
 
