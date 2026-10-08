@@ -52,6 +52,7 @@ export function GET() {
     `- [Remplacer Excel par un CRM](${origin}/insights/remplacer-excel-par-un-crm) : quand deux personnes écrasent le même dossier.`,
     `- [Quand utiliser un CRM](${origin}/insights/quand-utiliser-un-crm) : quand la relance ne tient plus dans une tête ou un fichier.`,
     `- [CRM pour une PME au Maroc](${origin}/insights/crm-pme-maroc) : quelques étapes réelles, pas la suite d'un groupe.`,
+    `- [Logiciel de gestion des clients sur mesure](${origin}/insights/logiciel-gestion-clients-sur-mesure) : la fiche suit le dossier réel, pas un modèle d'éditeur.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

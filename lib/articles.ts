@@ -1986,6 +1986,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "logiciel-gestion-clients-sur-mesure",
+    title: "Logiciel gestion clients sur mesure",
+    description:
+      "Logiciel de gestion clients sur mesure : la fiche suit le dossier réel, pas un modèle d'éditeur. Casablanca. Pas de prix public.",
+    h1: "Logiciel gestion clients sur mesure",
+    date: "2026-10-08",
+    lede: "Un logiciel de gestion clients sur mesure garde la fiche telle que l'entreprise la tient, pas telle qu'un éditeur l'a dessinée. Byte Force l'écrit depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour dire ce qu'une fiche doit montrer le matin.",
+    sections: [
+      {
+        heading: "La fiche, pas le module",
+        paragraphs: [
+          "Gérer les clients, ici, c'est retrouver le dossier : où il en est, qui doit agir, ce qui a été promis. Si ce dossier est un cycle de devis et de relances, la page est le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]]. Si c'est le vocabulaire d'un métier, c'est le [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier|logiciel métier]]. Les deux ne se vendent pas comme le même écran.",
+          "Un logiciel qui affiche une fiche vide avec vingt champs inutiles ne gère personne. On part des champs que quelqu'un lit vraiment le matin. Le reste n'est pas « prévu pour plus tard » dans le même prix : il n'y a pas de prix affiché, et le périmètre est écrit.",
+        ],
+      },
+      {
+        heading: "Qui écrit dans la fiche",
+        paragraphs: [
+          "Les rôles décident plus que le nombre de clients. Une personne qui tient tout n'a peut-être pas besoin d'un logiciel. Deux personnes qui écrasent la même fiche, si. Qui crée, qui valide, qui exporte : ces trois noms sont le périmètre.",
+          "Le bureau est au Technopark, boulevard Dammam, Aïn Chock. On peut prendre une fiche papier ou un fichier et la lire ensemble. Pas de bureau en France ni au Canada. Pas de forfait « gestion clients ».",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "Le code, le dépôt et l'hébergement livré sont à l'entreprise. La fiche ne disparaît pas si un abonnement s'arrête. Un acompte après le périmètre. Pas de délai fixe : souvent plusieurs semaines pour la fiche utile, pas pour une suite.",
+          "Aucun portefeuille, aucun chiffre d'affaires clients, aucune note n'est publié. On ne prête pas non plus à Dealkhir ou à Coco Inbox une gestion de clients qu'ils n'ont pas sur leur fiche.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire avec un exemple de fiche, même incomplet. Dire qui la modifie. Si la fiche est un cycle commercial, on partira du CRM. Si c'est un métier, on partira de là. Si c'est un tableur d'une personne, on le dira.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Envoyer la fiche]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire ce que la fiche montre" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier", label: "Le logiciel métier" },
+    ],
+    en: {
+      title: "Custom software for client records",
+      description:
+        "Custom client-management software follows the real file, not a vendor template. Casablanca. No public price. Bring the morning record.",
+      h1: "Custom software for client records",
+      lede: "Custom software for client records keeps the file as the company actually keeps it, not as a vendor drew it. Byte Force writes it from Casablanca. No public price. [[/contact|Write]] and say what a record must show in the morning.",
+      sections: [
+      {
+        heading: "The record, not the module",
+        paragraphs: [
+          "Managing clients, here, means finding the file: where it stands, who must act, what was promised. If that file is a cycle of quotes and follow-ups, the page is the CRM. If it is a trade's vocabulary, it is trade software. The two are not sold as the same screen.",
+          "Software that shows an empty card with twenty useless fields manages nobody. Start from the fields someone really reads in the morning. The rest is not « planned for later » inside the same price: there is no displayed price, and the scope is written.",
+        ],
+      },
+      {
+        heading: "Who writes in the record",
+        paragraphs: [
+          "Roles decide more than the number of customers. One person who holds everything may not need software. Two people who overwrite the same record do. Who creates, who approves, who exports: those three names are the scope.",
+          "The office is at Technopark, boulevard Dammam, Aïn Chock. A paper record or a file can be read together. No office in France or Canada. No « client management » package.",
+        ],
+      },
+      {
+        heading: "What is handed over",
+        paragraphs: [
+          "The code, the repository and the delivered hosting belong to the company. The record does not disappear if a subscription stops. A deposit after the scope. No fixed schedule: often several weeks for the useful record, not for a suite.",
+          "No portfolio, no customer revenue, and no score is published. Dealkhir or Coco Inbox are not lent a client-management function they do not have on their own page.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write with an example of a record, even an incomplete one. Say who changes it. If the record is a commercial cycle, the CRM is the start. If it is a trade, that is the start. If it is one person's spreadsheet, that will be said.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Send the record]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
