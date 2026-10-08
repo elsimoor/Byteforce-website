@@ -1905,6 +1905,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "crm-pme-maroc",
+    title: "CRM pour PME Maroc",
+    description:
+      "CRM pour une PME au Maroc : le cycle tient souvent dans quelques étapes, pas dans une suite de groupe. Casablanca. Pas de prix public.",
+    h1: "CRM pour PME Maroc",
+    date: "2026-10-08",
+    lede: "Un CRM pour une PME au Maroc n'est pas le CRM d'un groupe avec les modules en moins. C'est le cycle réel : souvent peu d'étapes, tenues par peu de personnes. Byte Force l'écrit depuis le Technopark, à Casablanca. Pas de prix public. [[/contact|Écrire]] pour nommer ces étapes.",
+    sections: [
+      {
+        heading: "Ce qu'une PME n'a pas à acheter",
+        paragraphs: [
+          "Une PME n'a pas à ouvrir la paie, le stock et le marketing automation pour suivre dix devis. Le [[/solutions/logiciel-pme|logiciel pour une PME]] part du geste qui coince. Le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]] est ce geste quand il est commercial. Le reste attend, ou reste dans l'outil déjà payé.",
+          "Elle n'a pas non plus à réécrire un cycle qui rentre déjà dans un abonnement simple. Si trois étapes standard suffisent et que l'équipe s'en sert, on le dit. Construire alors serait un doublon.",
+        ],
+      },
+      {
+        heading: "Le cycle court",
+        paragraphs: [
+          "La première version : créer le dossier, le faire avancer, voir la relance. Les rôles sont ceux qui existent, souvent le dirigeant et une autre personne, pas une hiérarchie dessinée pour un groupe. Les écrans sont ceux qu'ils ouvrent vraiment.",
+          "À Casablanca, boulevard Dammam, Aïn Chock, on peut prendre trois dossiers de la semaine et les poser sur la table. Pas de bureau en France ni au Canada. Pas de grille « PME ». La note suivra ces étapes, après un périmètre écrit.",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "Le code, le dépôt et l'hébergement livré reviennent à l'entreprise. Un acompte lance le travail. Pas de délai fixe : souvent plusieurs semaines, selon les rôles, pas selon une étiquette PME. Un changement de périmètre est écrit avant d'être construit.",
+          "On ne publie pas un nombre de PME accompagnées, un taux, ou une note. Dealkhir, en ligne à Casablanca, n'est pas un CRM de PME et on ne le présente pas comme tel.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand les devis et les relances tiennent dans une boîte mail ou un fichier à deux. Apporter les étapes, même si elles sont quatre. Pas le catalogue d'un éditeur.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire les quatre étapes]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Nommer les étapes" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM sur mesure" },
+      { href: "/solutions/logiciel-pme", label: "Logiciel pour une PME" },
+    ],
+    en: {
+      title: "A CRM for an SME in Morocco",
+      description:
+        "A CRM for an SME in Morocco is the real short cycle, not a group's suite with modules removed. Casablanca. No public price.",
+      h1: "A CRM for an SME in Morocco",
+      lede: "A CRM for an SME in Morocco is not a group's CRM with the modules switched off. It is the real cycle: often few steps, kept by few people. Byte Force writes it from Technopark, in Casablanca. No public price. [[/contact|Write]] and name those steps.",
+      sections: [
+      {
+        heading: "What an SME does not have to buy",
+        paragraphs: [
+          "An SME does not have to open payroll, stock and marketing automation to follow ten quotes. Software for an SME starts from the action that sticks. The CRM is that action when it is commercial. The rest waits, or stays in the tool already paid for.",
+          "It also does not have to rewrite a cycle that already fits a simple subscription. If three standard steps are enough and the team uses them, that is said. Building then would be a duplicate.",
+        ],
+      },
+      {
+        heading: "The short cycle",
+        paragraphs: [
+          "The first version: create the file, move it forward, see the follow-up. The roles are the ones that exist, often the owner and one other person, not a hierarchy drawn for a group. The screens are the ones they really open.",
+          "In Casablanca, boulevard Dammam, Aïn Chock, three files from the week can be put on the table. No office in France or Canada. No « SME » grid. The figure will follow those steps, after a written scope.",
+        ],
+      },
+      {
+        heading: "What is handed over",
+        paragraphs: [
+          "The code, the repository and the delivered hosting return to the company. A deposit starts the work. No fixed schedule: often several weeks, according to the roles, not according to an SME label. A scope change is written before it is built.",
+          "No count of SMEs helped, no rate, and no score is published. Dealkhir, online in Casablanca, is not an SME CRM and is not presented as one.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when quotes and follow-ups live in a mailbox or a file shared by two people. Bring the steps, even if there are four. Not a vendor's catalogue.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the steps]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
