@@ -3310,6 +3310,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "application-web-ou-mobile",
+    title: "Application web vs application mobile",
+    description:
+      "Application web vs application mobile : le choix suit l'endroit du geste. Bureau ou téléphone. Casablanca. Pas les deux par défaut. Pas de prix public.",
+    h1: "Application web vs application mobile",
+    date: "2026-10-08",
+    lede: "Application web vs application mobile : on choisit l'endroit du geste. Devant un écran de bureau, le navigateur. Loin du bureau, le téléphone. Byte Force, à Casablanca, ne construit pas les deux par réflexe. Pas de prix public. [[/contact|Écrire]] pour dire où le geste se passe.",
+    sections: [
+      {
+        heading: "L'endroit décide",
+        paragraphs: [
+          "Le web gagne quand le dossier se traite assis : recherche, validation, export. L'[[/application-web-sur-mesure-maroc|application web]] est cette offre. Le mobile gagne quand la personne est en déplacement : rendez-vous, visite, notification immédiate. Le [[/developpement-application-mobile-maroc|mobile]] est l'autre offre. Les deux phrases ne décrivent pas le même périmètre.",
+          "Faire les deux « pour être présent partout » est un troisième projet. On ne le glisse pas dans le premier devis. Si un seul endroit porte le geste, l'autre attend.",
+        ],
+      },
+      {
+        heading: "Ce qui ne doit pas départager",
+        paragraphs: [
+          "Pas le mot à la mode. Pas le store du voisin. Pas un prix affiché : il n'y en a pas, ni pour le web ni pour le mobile. Pas la ville : le bureau est à Casablanca dans les deux cas, Technopark, boulevard Dammam. Pas de bureau en France ni au Canada.",
+          "Zainek et Tourispeak sont des applications Android à côté d'un site. Le site n'est pas l'application, et l'application n'est pas la preuve qu'il fallait les deux. On ne publie pas leurs téléchargements.",
+        ],
+      },
+      {
+        heading: "Si les deux sont vraiment le geste",
+        paragraphs: [
+          "Alors le périmètre le dit : quels écrans sont dans le navigateur, lesquels sont sur le téléphone, et ce qui est partagé. Première version : l'endroit où le décalage coûte déjà. L'autre endroit peut suivre. Code et comptes livrés à l'entreprise. Pas de délai fixe.",
+          "Un SaaS à plusieurs clients isolés est encore un autre sujet. On ne l'appelle pas « mobile » pour le rendre plus petit.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire en disant où la personne est quand le geste coince. Au bureau, en visite, ou les deux pour de vrai. Un exemple de dossier suffit.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Dire l'endroit]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire où le geste se passe" },
+      { href: "/application-web-sur-mesure-maroc", label: "L'application web" },
+      { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
+    ],
+    en: {
+      title: "Web app or mobile app",
+      description:
+        "Web app or mobile app: the choice follows where the action happens. Desk or phone. Casablanca. Not both by default. No public price.",
+      h1: "Web app or mobile app",
+      lede: "Web app or mobile app: choose where the action happens. At a desk screen, the browser. Away from the desk, the phone. Byte Force, in Casablanca, does not build both by reflex. No public price. [[/contact|Write]] and say where the action takes place.",
+      sections: [
+      {
+        heading: "The place decides",
+        paragraphs: [
+          "The web wins when the file is handled sitting down: search, approval, export. The web application is that offer. Mobile wins when the person is moving: an appointment, a visit, an immediate notification. Mobile is the other offer. The two sentences are not the same scope.",
+          "Doing both « to be everywhere » is a third project. It is not slipped into the first quote. If one place carries the action, the other waits.",
+        ],
+      },
+      {
+        heading: "What should not decide",
+        paragraphs: [
+          "Not the fashionable word. Not a neighbour's store. Not a displayed price: there isn't one, for the web or for mobile. Not the city: the office is in Casablanca in both cases, Technopark, boulevard Dammam. No office in France or Canada.",
+          "Zainek and Tourispeak are Android apps beside a site. The site is not the app, and the app is not proof that both were required. Their download counts are not published.",
+        ],
+      },
+      {
+        heading: "If both really are the action",
+        paragraphs: [
+          "Then the scope says so: which screens are in the browser, which are on the phone, and what is shared. The first version is the place where the delay already costs money. The other place can follow. Code and accounts delivered to the company. No fixed schedule.",
+          "A SaaS with several isolated customers is yet another subject. It is not called « mobile » to make it smaller.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write by saying where the person is when the action sticks. At the desk, on a visit, or both for real. One example of a file is enough.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Name the place]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
