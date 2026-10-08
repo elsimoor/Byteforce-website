@@ -2972,6 +2972,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "prix-application-mobile-maroc",
+    title: "Prix application mobile Maroc",
+    description:
+      "Prix d'une application mobile au Maroc : pas de montant public. La note suit les écrans, un store ou deux, et les rôles. Casablanca.",
+    h1: "Prix application mobile Maroc",
+    date: "2026-10-08",
+    lede: "Le prix d'une application mobile au Maroc n'est pas une ligne de store. Byte Force, au Technopark à Casablanca, ne publie pas de montant. La note suit les écrans, les rôles, et le fait de viser Android, iOS, ou les deux. [[/contact|Écrire]] pour le geste sur le téléphone, pas pour une grille.",
+    sections: [
+      {
+        heading: "Ce qu'une page ne chiffre pas",
+        paragraphs: [
+          "Une page « application à partir de » un montant en dirhams décrit un forfait, pas le geste d'une entreprise. Byte Force ne le fait pas. Les pages du site ne sont pas un devis. Un chiffre n'existe qu'après un périmètre écrit. Le [[/developpement-application-mobile-maroc|développement mobile]] est l'offre. Cette page dit quoi demander à voir sur un devis.",
+          "Zainek et Tourispeak sont des applications Android déjà publiées, avec leur site. Leurs fiches Play ne sont pas un tarif, et leurs chiffres ne sont pas ceux de Byte Force.",
+        ],
+      },
+      {
+        heading: "Les lignes qui comptent",
+        paragraphs: [
+          "Les écrans que quelqu'un ouvre vraiment. Les rôles. Le store : [[/developpement-application-mobile-maroc/android|Android]], iOS, ou les deux. Deux stores, ce n'est pas le même périmètre qu'un seul. Un compte développeur ouvert pour le projet fait partie du périmètre, pas une surprise le jour de la publication.",
+          "Vouloir le site, le CRM et la paie dans la même application fait monter la note sans rendre le geste plus sûr. Si le geste se fait à un bureau, une application web est souvent plus courte. On le dit avant d'écrire.",
+        ],
+      },
+      {
+        heading: "Ce qui ne change pas la note",
+        paragraphs: [
+          "Le bureau est à Casablanca, boulevard Dammam, Aïn Chock. La proximité ne rajoute pas une taxe et n'en retire pas une. Pas de bureau en France ni au Canada. Pas de délai fixe collé au prix : une première version tient souvent en plusieurs semaines, selon les écrans et les stores.",
+          "À la remise, le code et les comptes livrés reviennent à l'entreprise. Un acompte suit le périmètre. Un changement est écrit avant d'être construit. On ne publie pas un nombre de téléchargements pour justifier un montant qui n'est pas affiché.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand deux devis se comparent sans dire les écrans, les rôles et le store. Apporter le geste. Si vous ne savez pas encore Android ou iOS, le geste suffit pour le premier échange.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
+      { href: "/developpement-application-mobile-maroc/android", label: "Android" },
+    ],
+    en: {
+      title: "What a mobile app quote includes in Morocco",
+      description:
+        "No public price for a mobile app in Morocco. The figure follows the screens, one store or two, and the roles. Casablanca.",
+      h1: "What a mobile app quote includes in Morocco",
+      lede: "The price of a mobile app in Morocco is not a store line. Byte Force, at Technopark in Casablanca, does not publish a figure. The amount follows the screens, the roles, and whether the target is Android, iOS, or both. [[/contact|Write]] for the action on the phone, not for a grid.",
+      sections: [
+      {
+        heading: "What a page cannot price",
+        paragraphs: [
+          "A page « app from » an amount in dirhams describes a package, not one company's action. Byte Force does not do that. The pages of the site are not a quote. A figure exists only after a written scope. Mobile development is the offer. This page says what to ask to see on a quote.",
+          "Zainek and Tourispeak are Android apps already published, with their sites. Their Play listings are not a tariff, and their figures are not Byte Force figures.",
+        ],
+      },
+      {
+        heading: "The lines that count",
+        paragraphs: [
+          "The screens someone really opens. The roles. The store: Android, iOS, or both. Two stores are not the same scope as one. A developer account opened for the project is part of the scope, not a surprise on publication day.",
+          "Wanting the site, the CRM and payroll in the same app raises the amount without making the action safer. If the action happens at a desk, a web application is often shorter. That is said before anything is written.",
+        ],
+      },
+      {
+        heading: "What does not change the figure",
+        paragraphs: [
+          "The office is in Casablanca, boulevard Dammam, Aïn Chock. Being nearby does not add a tax and does not remove one. No office in France or Canada. No fixed schedule stuck to the price: a first version often takes several weeks, according to the screens and the stores.",
+          "At handover, the code and the delivered accounts return to the company. A deposit follows the scope. A change is written before it is built. No download count is published to justify an amount that is not displayed.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when two quotes are compared without the screens, the roles and the store. Bring the action. If you do not yet know Android or iOS, the action is enough for the first conversation.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
