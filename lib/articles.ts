@@ -2810,6 +2810,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "idee-saas-entreprise-maroc",
+    title: "Idée SaaS entreprise Maroc",
+    description:
+      "Une idée de SaaS pour une entreprise au Maroc se juge au geste, pas au nom. Plusieurs clients, dossiers séparés. Casablanca. Pas de prix public.",
+    h1: "Idée SaaS entreprise Maroc",
+    date: "2026-10-08",
+    lede: "Une idée de SaaS pour une entreprise au Maroc ne vaut que si le geste est le même pour plusieurs clients, et si leurs dossiers ne se mélangent pas. Le nom du produit ne décide rien. Byte Force, à Casablanca, ne note pas les idées. Pas de prix public. [[/contact|Écrire]] avec le geste, pas avec le slogan.",
+    sections: [
+      {
+        heading: "Ce qui fait une idée tenable",
+        paragraphs: [
+          "Le geste tient en une phrase. Plusieurs entreprises le feraient de la même façon, avec une règle que le marché ne porte pas. Leurs dossiers ne doivent pas se voir. Sans cela, c'est un souhait, un logiciel interne, ou un produit déjà vendu. L'offre pour le construire est le [[/developpement-saas-maroc|SaaS]]. Le cas où l'acheteur a plusieurs utilisateurs est le [[/developpement-saas-maroc/saas-b2b|SaaS B2B]].",
+          "Une idée qui commence par « comme untel, mais au Maroc » recopie un produit. On regarde si le geste local a une règle en plus. S'il n'en a pas, l'outil du marché suffit. Le bureau à Casablanca ne rend pas une copie plus utile.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne demande pas pour commencer",
+        paragraphs: [
+          "Pas un business plan. Pas une levée. Pas un prix public. Pas une étude de marché inventée. On demande le geste, qui le fait, et ce qui prouve que deux clients ne partagent pas le même dossier. Le premier échange de trente minutes sert à ça, et il peut conclure de ne pas construire.",
+          "La première version isole déjà. Elle ne montre pas tout le catalogue. Pas de délai fixe : souvent plusieurs semaines pour le geste. Code et hébergement à l'entreprise qui commande. Pas de bureau en France ni au Canada.",
+        ],
+      },
+      {
+        heading: "Ce qu'une idée n'est pas",
+        paragraphs: [
+          "Ce n'est pas un slogan, un logo, ou la liste des fonctions d'un concurrent. Ce n'est pas non plus Coco Inbox à recopier : ce produit a son usage, email temporaire, fichiers, notes. On ne le transforme pas en preuve que toute idée d'entreprise doit devenir un SaaS.",
+          "On ne publie pas de note d'idée, de potentiel, ou de nombre de clients visés. Ces chiffres ne sont pas des faits.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire la phrase du geste. Si elle ne tient pas sans le nom d'un concurrent, l'idée n'est pas encore là. Si elle tient, apportez-la.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Envoyer la phrase]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/developpement-saas-maroc", label: "Construire le SaaS" },
+      { href: "/developpement-saas-maroc/saas-b2b", label: "Un SaaS pour des entreprises" },
+    ],
+    en: {
+      title: "A SaaS idea for a company in Morocco",
+      description:
+        "A SaaS idea for a company in Morocco is judged by the action, not the name. Several customers, separate files. Casablanca. No public price.",
+      h1: "A SaaS idea for a company in Morocco",
+      lede: "A SaaS idea for a company in Morocco is worth something only if the action is the same for several customers, and their files do not mix. The product name decides nothing. Byte Force, in Casablanca, does not score ideas. No public price. [[/contact|Write]] with the action, not with the slogan.",
+      sections: [
+      {
+        heading: "What makes an idea hold",
+        paragraphs: [
+          "The action fits in one sentence. Several companies would do it the same way, with a rule the market does not carry. Their files must not see each other. Without that, it is a wish, internal software, or a product already on sale. The offer to build it is SaaS development. The case where the buyer has several users is B2B SaaS.",
+          "An idea that starts with « like that one, but in Morocco » copies a product. Look for whether the local action has one more rule. If it does not, the market tool is enough. The office in Casablanca does not make a copy more useful.",
+        ],
+      },
+      {
+        heading: "What is not required to start",
+        paragraphs: [
+          "Not a business plan. Not a fundraise. Not a public price. Not an invented market study. The action is required, who does it, and what shows that two customers do not share the same file. The first thirty minutes are for that, and they can end with not building.",
+          "The first version already isolates. It does not show the whole catalogue. No fixed schedule: often several weeks for the action. Code and hosting to the company that orders. No office in France or Canada.",
+        ],
+      },
+      {
+        heading: "What an idea is not",
+        paragraphs: [
+          "It is not a slogan, a logo, or a competitor's feature list. It is also not Coco Inbox to copy: that product has its use, temporary email, files, notes. It is not turned into proof that every company idea must become a SaaS.",
+          "No idea score, no potential, and no target customer count is published. Those figures are not facts.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write the sentence of the action. If it does not hold without a competitor's name, the idea is not there yet. If it holds, bring it.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Send the sentence]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
