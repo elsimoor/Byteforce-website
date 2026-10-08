@@ -444,6 +444,7 @@ export const projects: Project[] = [
     description: "Mobilier d'exception et pièces de caractère pour des intérieurs élégants.",
     url: "https://meubles-de-septentrion.fr/",
     serviceSlug: "creation-site-web",
+    shot: "/work/meubles-de-septentrion.jpg",
     pages: [
       { label: "Boutique", href: "https://meubles-de-septentrion.fr/boutique/" },
       {
@@ -634,6 +635,7 @@ export const projects: Project[] = [
       "Solution de collecte et redirection intelligente pour campagnes sociales, opérant entre Marseille et Tanger.",
     url: "https://snapchat-collect.vercel.app/fr",
     serviceSlug: "api-backend",
+    shot: "/work/snapchat-collect.png",
     pages: [],
   },
 ];
