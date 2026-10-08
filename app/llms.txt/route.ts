@@ -36,6 +36,7 @@ export function GET() {
     `- [Quatre lectures à 100](${origin}/insights/quatre-lectures-a-cent) : la lecture de laboratoire du 8 octobre 2026.`,
     `- [La première version utile](${origin}/insights/premiere-version-utile) : le geste à livrer avant le reste.`,
     `- [Logiciel sur mesure au Maroc](${origin}/insights/logiciel-sur-mesure-maroc) : le programme suit le circuit réel, pas un abonnement tordu.`,
+    `- [Développement logiciel sur mesure Maroc](${origin}/insights/developpement-logiciel-sur-mesure-maroc) : l'ordre du travail, après un périmètre écrit.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

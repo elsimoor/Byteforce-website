@@ -734,6 +734,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "developpement-logiciel-sur-mesure-maroc",
+    title: "Développement logiciel sur mesure Maroc",
+    description:
+      "Développement logiciel sur mesure Maroc : Byte Force part d'un périmètre écrit, au Technopark à Casablanca. Pas de délai fixe publié.",
+    h1: "Développement logiciel sur mesure Maroc",
+    date: "2026-10-08",
+    lede: "Un développement logiciel sur mesure au Maroc commence quand le circuit est nommé, pas quand une liste de modules est copiée. Byte Force le mène depuis le Technopark, boulevard Dammam, Aïn Chock, à Casablanca. Il n'y a pas de délai fixe publié, et pas de prix public. [[/contact|Écrire à Casablanca]] pour dire qui fait le geste aujourd'hui, et où ça coince.",
+    sections: [
+      {
+        heading: "Ce qui se décide au premier échange",
+        paragraphs: [
+          "Le premier échange dure trente minutes. Il sert à voir si le problème est un logiciel, ou un outil du marché qu'il faut garder. On y nomme le geste, les rôles, et le branchement qui doit rester. La réponse à un message part sous un jour ouvré, du lundi au vendredi, de 9 h à 19 h.",
+          "Le [[/developpement-logiciel-sur-mesure-maroc|cadre du développement]] reste la page de l'offre. Cette page-ci dit l'ordre du travail. On ne promet pas un nombre de semaines valable pour toutes les entreprises. Une première version tient souvent en plusieurs semaines, et le calendrier suit le nombre de rôles et de branchements.",
+        ],
+      },
+      {
+        heading: "Le périmètre est écrit avant d'être construit",
+        paragraphs: [
+          "Un projet commence après un périmètre écrit. Les pages du site ne sont pas un devis. Trois choses y figurent : les écrans que quelqu'un utilise vraiment, les rôles, et les branchements, email, paiement, ou un outil déjà payé. Vouloir tout le reste dans le même passage, congés, flotte, stock et paie, retarde le circuit qui coûte déjà.",
+          "Si le périmètre change, le changement est écrit et accepté avant d'être construit. Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré. [[/developpement-logiciel-casablanca|À Casablanca]], ce cadrage peut se faire autour de la table, avec le fichier sous les yeux. Il n'y a pas de bureau en France ni au Canada.",
+        ],
+      },
+      {
+        heading: "Ce que la première version doit déjà faire",
+        paragraphs: [
+          "La première version doit permettre le geste, pas illustrer le catalogue. La personne pressée doit pouvoir ouvrir le logiciel et finir l'action qui bloque aujourd'hui. Le reste attend. Une première session qui casse ne ferme pas l'entreprise : on réécrit le même geste, on ne rajoute pas dix écrans pour compenser.",
+          "À la remise, le client possède le code, le dépôt et les comptes d'hébergement livrés. Dealkhir et Coco Inbox montrent des produits en ligne. Ils ne montrent pas un montant, et leurs chiffres ne sont pas des résultats de Byte Force.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le circuit est déjà clair et que l'outil actuel force une ressaisie, une validation orale, ou un état impossible le soir. Dire ce qui doit marcher dans la première version, et ce qui peut attendre.",
+          "[[/contact|Décrire le périmètre]] suffit. Le premier échange est gratuit. Le téléphone du bureau est le +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le périmètre" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "L'offre logiciel" },
+      { href: "/developpement-logiciel-casablanca", label: "Le bureau à Casablanca" },
+    ],
+    en: {
+      title: "Custom software development in Morocco",
+      description:
+        "Custom software development in Morocco starts from a written scope, at Technopark in Casablanca. No fixed public schedule.",
+      h1: "Custom software development in Morocco",
+      lede: "Custom software development in Morocco starts when the workflow is named, not when a module list is copied. Byte Force runs it from Technopark, boulevard Dammam, Aïn Chock, in Casablanca. There is no fixed public schedule, and no public price. [[/contact|Write to Casablanca]] and say who does the action today, and where it sticks.",
+      sections: [
+        {
+          heading: "What the first conversation decides",
+          paragraphs: [
+            "The first conversation lasts thirty minutes. It checks whether the problem is software, or a market tool that should stay. The action, the roles and the connection that must remain are named there. A reply to a message goes out within one business day, Monday to Friday, 9:00 to 19:00.",
+            "The offer page remains the frame for the work. This page says the order of the work. Byte Force does not promise a number of weeks that fits every company. A first version often takes several weeks, and the calendar follows the number of roles and connections.",
+          ],
+        },
+        {
+          heading: "The scope is written before it is built",
+          paragraphs: [
+            "A project starts after a written scope. The pages of the site are not a quote. Three things are on it: the screens someone really uses, the roles, and the connections, email, payment, or a tool already paid for. Wanting everything else in the same pass, leave, a fleet, stock and payroll, delays the circuit that already costs money.",
+            "If the scope changes, the change is written and accepted before it is built. A deposit starts the work. The rest follows steps tied to what was delivered. In Casablanca, that framing can happen around a table, with the file in view. There is no office in France or Canada.",
+          ],
+        },
+        {
+          heading: "What the first version must already do",
+          paragraphs: [
+            "The first version must allow the action, not illustrate a catalogue. The person in a hurry must be able to open the software and finish the action that blocks today. The rest waits. A first session that breaks does not close the company: the same action is rewritten, ten screens are not added to compensate.",
+            "At handover, the client owns the code, the repository and the hosting accounts that were delivered. Dealkhir and Coco Inbox show products online. They do not show a price, and their figures are not Byte Force results.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write when the workflow is already clear and the current tool forces a retype, a spoken approval, or a report that cannot be produced in the evening. Say what must work in the first version, and what can wait.",
+            "[[/contact|Describe the scope]] is enough. The first conversation is free. The office phone is +212 666 650 696.",
+          ],
+        },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
