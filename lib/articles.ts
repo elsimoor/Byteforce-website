@@ -653,6 +653,87 @@ export const articles: Article[] = [
       { href: "/insights/delai-logiciel-sur-mesure", label: "Le délai" },
     ],
   },
+  {
+    slug: "logiciel-sur-mesure-maroc",
+    title: "Logiciel sur mesure au Maroc",
+    description:
+      "Un logiciel sur mesure au Maroc suit le circuit réel, depuis le Technopark à Casablanca. Pas de grille de prix. Premier échange de trente minutes, gratuit.",
+    h1: "Logiciel sur mesure au Maroc",
+    date: "2026-10-08",
+    lede: "Un logiciel sur mesure au Maroc est un programme écrit pour le circuit d'une entreprise précise, pas un abonnement que l'on tord pour s'en approcher. Byte Force le conçoit depuis le Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Il n'y a pas de prix public. Le premier échange dure trente minutes et il est gratuit. [[/contact|Écrire à Casablanca]] pour dire le geste qui bloque déjà chaque semaine.",
+    sections: [
+      {
+        heading: "Quand le marché ne suffit plus",
+        paragraphs: [
+          "Le logiciel sur mesure a un sens quand le travail ne rentre pas dans un outil déjà vendu sans tordre le métier. Plusieurs fichiers qui se contredisent, une validation qui n'existe que dans une conversation, un état que personne ne peut sortir le soir : le coût est déjà là, il est seulement mal compté. Le [[/developpement-logiciel-sur-mesure-maroc|développement logiciel sur mesure]] est le cadre. Le CRM, l'ERP, le logiciel métier et l'automatisation ont chacun leur page, parce qu'un pipeline de devis n'a pas le même périmètre qu'un stock.",
+          "Il n'a pas de sens pour une comptabilité standard, une messagerie, ou un tableur de dix lignes. Acheter un logiciel déjà fait est alors plus court. L'échange sert aussi à dire non, et à laisser l'outil du marché en place. Une page qui promet un logiciel pour « tout gérer » décrit un catalogue, pas le circuit d'une entreprise de Casablanca.",
+        ],
+      },
+      {
+        heading: "Ce que l'on écrit vraiment",
+        paragraphs: [
+          "On part du geste dont le décalage coûte. Qui crée le dossier, qui le valide, qui l'exporte, et quel outil déjà payé doit rester branché. Le nombre d'écrans que quelqu'un utilise vraiment compte plus que la liste des modules qu'un éditeur affiche. Vouloir les congés, la flotte, les prospects, le stock et la paie dans la même première version gonfle le périmètre sans rendre le premier circuit plus sûr.",
+          "Le bureau est à Casablanca. [[/developpement-logiciel-casablanca|On peut cadrer autour de la table]], avec le fichier sous les yeux. Il n'y a pas de bureau en France ni au Canada : ces projets se font depuis ce même bureau. La proximité ne rajoute pas une taxe, et elle n'en retire pas une non plus. Le décalage avec l'Europe est d'une heure une partie de l'année, nul le reste.",
+        ],
+      },
+      {
+        heading: "Ce qui revient à l'entreprise",
+        paragraphs: [
+          "À la remise, le client possède le code, le dépôt et les comptes d'hébergement livrés. Ce n'est pas un accès loué que l'éditeur peut fermer. Les projets publiés, Dealkhir à Casablanca ou Coco Inbox à Montréal, montrent ce qui est en ligne. Ils ne montrent pas un montant, et leurs chiffres ne sont pas ceux de Byte Force.",
+          "Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré. Si le périmètre change, le changement est écrit et accepté avant d'être construit. Il n'y a pas de délai fixe affiché : un premier passage tient souvent en plusieurs semaines, et le calendrier suit les rôles et les branchements, pas une promesse valable pour tout le monde.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le circuit réel ne tient plus dans l'outil du marché, ou quand plusieurs personnes ressaisissent la même information. Dire le geste, les rôles, et ce qui doit rester branché. Le reste peut attendre une version d'après.",
+          "La réponse part sous un jour ouvré, du lundi au vendredi, de 9 h à 19 h. [[/contact|Décrire le circuit]] suffit pour le premier échange. Le téléphone du bureau est le +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le circuit" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure" },
+      { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
+    ],
+    en: {
+      title: "Custom software in Morocco",
+      description:
+        "Custom software in Morocco follows the real workflow, from Technopark in Casablanca. No public price list. The first thirty minutes are free.",
+      h1: "Custom software in Morocco",
+      lede: "Custom software in Morocco is a program written for one company's workflow, not a subscription bent until it almost fits. Byte Force designs it from Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. There is no public price. The first conversation is thirty minutes and it is free. [[/contact|Write to Casablanca]] and name the action that already slips every week.",
+      sections: [
+        {
+          heading: "When a market tool is no longer enough",
+          paragraphs: [
+            "Custom software makes sense when the work does not fit a product already on sale without bending the job. Several files that contradict each other, an approval that exists only in a conversation, a report nobody can produce in the evening: the cost is already there, it is only badly counted. Custom software development is the frame. CRM, ERP, trade software and automation each have their own page, because a quote pipeline is not a stockroom.",
+            "It does not make sense for standard accounting, a mailbox, or a ten-line spreadsheet. Buying software that already exists is shorter then. The conversation is also there to say no, and to leave the market tool in place. A page that promises software to « manage everything » describes a catalogue, not the workflow of a company in Casablanca.",
+          ],
+        },
+        {
+          heading: "What actually gets written",
+          paragraphs: [
+            "Start from the action whose delay costs money. Who creates the file, who approves it, who exports it, and which tool already paid for must stay connected. The number of screens someone really uses matters more than the module list a vendor displays. Wanting leave, a fleet, prospects, stock and payroll in the same first version swells the scope without making the first circuit safer.",
+            "The office is in Casablanca. The scope can be set around a table, with the file in view. There is no office in France or Canada: those projects are done from this same office. Being nearby does not add a tax, and it does not remove one either. The offset with Europe is one hour for part of the year, and none for the rest.",
+          ],
+        },
+        {
+          heading: "What the company keeps",
+          paragraphs: [
+            "At handover, the client owns the code, the repository and the hosting accounts that were delivered. It is not a rented login a vendor can close. Published projects, Dealkhir in Casablanca or Coco Inbox in Montreal, show what is online. They do not show a price, and their figures are not Byte Force figures.",
+            "A deposit starts the work. The rest follows steps tied to what was delivered. If the scope changes, the change is written and accepted before it is built. There is no fixed public schedule: a first pass often takes several weeks, and the calendar follows the roles and the connections, not a promise that fits everyone.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write when the real workflow no longer fits the market tool, or when several people retype the same information. Name the action, the roles, and what must stay connected. The rest can wait for a later version.",
+            "A reply goes out within one business day, Monday to Friday, 9:00 to 19:00. [[/contact|Describe the workflow]] is enough for the first conversation. The office phone is +212 666 650 696.",
+          ],
+        },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();

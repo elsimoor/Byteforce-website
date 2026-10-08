@@ -47,6 +47,7 @@ export function ArticleView({ article }: { article: Article }) {
         description: article.description,
         inLanguage: "fr",
         datePublished: article.date,
+        dateModified: article.date,
         url,
         mainEntityOfPage: url,
         author: { "@type": "Organization", name: site.name, url: site.url },
