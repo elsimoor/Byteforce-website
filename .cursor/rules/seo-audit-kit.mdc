@@ -1,0 +1,24 @@
+---
+description: Use the seo-audit-kit package (seokit) for SEO audits, crawls, on-page checks, content, backlinks, PageSpeed, and run-to-run diffs. Apply when the user mentions SEO, audit, sitemap, meta, schema, rankings, PageSpeed, or seokit.
+alwaysApply: false
+---
+
+# SEO work uses seo-audit-kit
+
+When the task is SEO for this site, use the installed package. Do not write a new crawler or audit script for a check the package already runs.
+
+The command is `npx seokit`, from this repo. The site is `https://byteforce.ma`. Language is `fr`.
+
+```bash
+npx seokit audit https://byteforce.ma --lang fr
+npx seokit page https://byteforce.ma/path --lang fr
+npx seokit content https://byteforce.ma --lang fr
+npx seokit explain CHECK_ID
+npx seokit diff
+```
+
+PageSpeed only when the user asks for it: `npx seokit audit https://byteforce.ma --psi`. The key is the `PSI_KEY` environment variable. If the API returns 429, say the quota is used up. Do not invent a score.
+
+Reports go to `seokit-report/`. Do not commit that folder unless the user asks.
+
+The tool reads the HTML the server sends. It does not execute client-side JavaScript, and it does not measure rankings or search volume. Say that limit when a finding may be wrong because of it.
