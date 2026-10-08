@@ -389,6 +389,101 @@ export const articles: Article[] = [
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
     ],
   },
+  {
+    slug: "tester-le-parcours",
+    title: "Tester le parcours avant de le copier",
+    description:
+      "Un accueil court, un compte obligatoire et un essai gratuit peuvent vider la demande. Byte Force, à Casablanca, part du geste à mesurer.",
+    h1: "Ce qu'un test doit trancher",
+    date: "2026-10-08",
+    lede: "Byte Force, au Technopark à Casablanca, écrit le logiciel à partir du geste réel, pas d'un parcours copié. Si le vôtre convertit mal, le premier geste est de le décrire : [[/contact|parler du projet]].",
+    sections: [
+      {
+        heading: "Ce qu'on copie sans le mesurer",
+        paragraphs: [
+          "Moonly, une application d'astrologie, est l'exemple public de cette note. L'équipe dit avoir consacré plus d'un million de dollars à des tests sur six ans. Le passage au payant serait passé de 10 % en 2020 à 40 % en 2026, pour un chiffre d'affaires cumulé de 20 millions de dollars, sans investisseur.",
+          "Byte Force n'a pas conçu Moonly et ne publie pas ces chiffres comme les siens. Il n'y a pas de grille de prix ici. La décision est plus étroite : un parcours copié sur une application généraliste peut être le mauvais parcours pour un produit précis.",
+        ],
+      },
+      {
+        heading: "Trente écrans peuvent valoir mieux qu'un compte",
+        paragraphs: [
+          "Le conseil habituel est un accueil très court, un compte tout de suite, un essai gratuit, puis un paiement à chaque fonction. Moonly dit avoir mesuré l'inverse sur plusieurs points. L'accueil fait une trentaine d'écrans : il nomme le problème avant de montrer les fonctions. Le compte n'est pas demandé. L'état reste sur l'appareil.",
+          "Une mise en avant large dans la boutique a, pour eux, amené des visites qui convertissent mal. Un outil pour tout le monde et une application pour un problème précis ne se remplissent pas de la même façon. [[/developpement-application-mobile-maroc|L'application mobile]] et le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]] partent du geste, pas d'un modèle d'écrans.",
+        ],
+      },
+      {
+        heading: "Un seul paiement, et un essai qui ne donne pas déjà tout",
+        paragraphs: [
+          "Plusieurs écrans de paiement, un par fonction, ont fait croire qu'il fallait payer chaque outil à part. Un seul écran, qui dit que le paiement ouvre l'ensemble, a mieux converti chez eux. Une image très dessinée convertissait moins qu'une image réaliste, pour un public qu'ils situent à 35 ans et plus. Coller le visage de la personne sur les écrans a fait l'effet inverse : des gens évitaient d'ouvrir l'application.",
+          "L'essai gratuit laissait obtenir l'essentiel, puis partir. Ils l'ont retiré. Une offre au troisième jour, pour ceux qui n'avaient pas payé, a mieux tenu entre le jour 3 et le jour 30, selon leur mesure. Afficher un petit nombre par semaine plutôt que par mois, et un tarif à vie placé haut à côté de l'année, a changé le choix. Ce sont leurs prix, pas ceux de Byte Force.",
+        ],
+      },
+      {
+        heading: "Le paiement hors boutique n'est pas une règle universelle",
+        paragraphs: [
+          "Aux États-Unis, Moonly dit avoir fait payer une grande partie des clients sur le web, et que la valeur sur la durée a doublé : moins de commission, et une résiliation qui n'est plus un bouton dans les réglages du téléphone. Sur Android, le même détour a, selon eux, fait chuter la conversion à cause des avertissements de la boutique.",
+          "On ne copie pas ce chemin sans lire la règle de la boutique du pays. Là où elle n'autorise pas un autre paiement, le paiement reste celui de la boutique. Byte Force ne vend pas une offre « agent IA ». Une règle utile est une règle stable dans le logiciel.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrivez si l'application existe et que le parcours a été copié : accueil court, compte obligatoire, essai gratuit, ou un paiement par écran. Dites le geste que la personne doit accomplir, le moment où on lui demande de payer, et ce qu'elle obtient déjà sans payer.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré. [[/contact|Écrire à Byte Force]] avec l'adresse de l'application, ou avec le geste que le logiciel doit permettre.",
+        ],
+      },
+    ],
+    en: {
+      title: "Test the path before copying it",
+      description:
+        "A short welcome, a required account, and a free trial can drain the enquiry. Byte Force, in Casablanca, starts from the action worth measuring.",
+      h1: "What a test has to decide",
+      lede: "Byte Force, at Technopark in Casablanca, writes software from the real action, not from a copied path. If yours converts poorly, the first step is to describe it: [[/contact|talk about the project]].",
+      sections: [
+        {
+          heading: "What gets copied without being measured",
+          paragraphs: [
+            "Moonly, an astrology application, is the public example in this note. The team says it spent more than one million dollars on tests over six years. Paid conversion is said to have moved from 10% in 2020 to 40% in 2026, for 20 million dollars in total revenue, with no investor.",
+            "Byte Force did not design Moonly and does not publish these figures as its own. There is no public price list here. The decision is narrower: a path copied from a general application can be the wrong path for a specific product.",
+          ],
+        },
+        {
+          heading: "Thirty screens can be worth more than an account",
+          paragraphs: [
+            "The usual advice is a very short welcome, an account immediately, a free trial, then a payment on every feature. Moonly says it measured the opposite on several points. The welcome is about thirty screens: it names the problem before it shows the features. No account is required. The state stays on the device.",
+            "A broad store feature brought them visits that convert poorly. A tool for everyone and an application for one precise problem do not fill the same way. [[/developpement-application-mobile-maroc|The mobile application]] and [[/developpement-logiciel-sur-mesure-maroc|custom software]] start from the action, not from a screen template.",
+          ],
+        },
+        {
+          heading: "One payment, and a trial that does not already give everything",
+          paragraphs: [
+            "Several payment screens, one per feature, made people think each tool had to be bought separately. One screen, which says the payment opens the whole product, converted better for them. A very drawn image converted worse than a realistic image, for an audience they place at 35 and older. Putting the person's face on the screens did the opposite: people avoided opening the application.",
+            "The free trial let someone take the useful result, then leave. They removed it. An offer on the third day, for people who had not paid, held better between day 3 and day 30, by their measure. Showing a small number per week rather than per month, and a high lifetime price beside the year, changed the choice. Those are their prices, not Byte Force's.",
+          ],
+        },
+        {
+          heading: "Payment outside the store is not a universal rule",
+          paragraphs: [
+            "In the United States, Moonly says it moved a large share of customers to pay on the web, and that value over time doubled: a lower commission, and a cancellation that is no longer a button in the phone settings. On Android, the same detour cut conversion, by their account, because of the store warnings.",
+            "Do not copy that path without reading the store rule for the country. Where another payment is not allowed, payment stays with the store. Byte Force does not sell an “AI agent” offer. A useful rule is a stable rule inside the software.",
+          ],
+        },
+        {
+          heading: "When to write",
+          paragraphs: [
+            "Write if the application exists and the path was copied: a short welcome, a required account, a free trial, or a payment on each screen. Say the action the person must complete, the moment they are asked to pay, and what they already get without paying.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day. [[/contact|Write to Byte Force]] with the application address, or with the action the software must allow.",
+          ],
+        },
+      ],
+    },
+    links: [
+      { href: "/contact", label: "Parler du projet" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+      { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
+    ],
+  },
 ];
 
 const slugs = new Set<string>();
