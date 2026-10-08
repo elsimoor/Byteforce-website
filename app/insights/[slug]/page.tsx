@@ -6,7 +6,7 @@ import { openGraph } from "@/lib/open-graph";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));

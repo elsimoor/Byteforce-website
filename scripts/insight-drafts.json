@@ -1,0 +1,84 @@
+[
+  {
+    "keyword": "prix logiciel sur mesure Maroc",
+    "slug": "prix-logiciel-sur-mesure-maroc",
+    "title": "Prix logiciel sur mesure Maroc",
+    "description": "Prix d'un logiciel sur mesure au Maroc : aucun montant public. La note suit les écrans, les rôles et les branchements. Écrire à Casablanca.",
+    "h1": "Prix logiciel sur mesure Maroc",
+    "lede": "Le prix d'un logiciel sur mesure au Maroc n'est pas une ligne de catalogue. Byte Force, au Technopark à Casablanca, ne publie pas de montant. La note suit les écrans que quelqu'un utilise, les rôles, et les branchements. [[/contact|Écrire à Casablanca]] pour faire lire le circuit, pas pour recevoir une grille.",
+    "llmsLabel": "Prix d'un logiciel sur mesure au Maroc",
+    "llmsNote": "pas de montant public, la note suit le périmètre.",
+    "commit": "Explain what a custom-software quote in Morocco is made of, without publishing a price.",
+    "links": [
+      { "href": "/contact", "label": "Faire lire le circuit" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc", "label": "Le logiciel sur mesure" },
+      { "href": "/developpement-logiciel-casablanca", "label": "Depuis Casablanca" }
+    ],
+    "sections": [
+      {
+        "heading": "Ce qu'une page ne peut pas chiffrer",
+        "paragraphs": [
+          "Une page qui annonce un prix « à partir de » un montant en dirhams décrit un forfait, pas le logiciel d'une entreprise précise. Byte Force ne le fait pas. Les pages du site ne sont pas un devis. Un chiffre n'existe qu'après un périmètre écrit.",
+          "Le [[/insights/cout-logiciel-sur-mesure-maroc|montant d'un logiciel sur mesure]] se décide sur le même principe : pas de grille, trois choses qui bougent la note. Cette page dit quoi demander à voir sur un devis, avant de comparer deux chiffres qui ne parlent pas du même circuit."
+        ]
+      },
+      {
+        "heading": "Les trois lignes qui comptent",
+        "paragraphs": [
+          "La première ligne est le nombre d'écrans que quelqu'un utilise vraiment. Un écran de saisie et un écran de validation ne valent pas un module « complet » qu'aucune personne n'ouvre. La deuxième ligne est le nombre de rôles : qui crée, qui valide, qui exporte. La troisième est le branchement : email, paiement, ou un outil déjà payé qui doit rester.",
+          "Vouloir les congés, la flotte, les prospects, le stock et la paie sur le même devis gonfle le prix sans rendre le premier circuit plus sûr. On coupe jusqu'au flux dont le décalage coûte chaque semaine. Le reste est une ligne d'après, pas une ligne cachée."
+        ]
+      },
+      {
+        "heading": "Ce qui ne devrait pas changer la note",
+        "paragraphs": [
+          "Le bureau est à Casablanca, Technopark, boulevard Dammam, Aïn Chock. La proximité ne rajoute pas une taxe, et elle n'en retire pas une non plus. Un projet pour une entreprise en France ou au Canada se fait depuis ce bureau : il n'y a pas d'autre adresse.",
+          "Le [[/developpement-logiciel-sur-mesure-maroc|développement]] ne se vend pas au mot du cahier des charges. Un tableur de dix lignes, une comptabilité standard ou une messagerie n'appellent pas un logiciel sur mesure. Dire non fait partie du premier échange, et ça ne produit pas de facture."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire quand deux devis se comparent sans dire les écrans, les rôles et les branchements, ou quand un montant « à partir de » tient lieu de périmètre. Apporter le geste qui bloque, pas une liste de modules copiée.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré, du lundi au vendredi, de 9 h à 19 h. [[/contact|Décrire les trois lignes]] suffit. Le téléphone du bureau est le +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "What a custom software quote includes in Morocco",
+      "description": "No public price for custom software in Morocco. The figure follows screens, roles and connections. Write from Casablanca.",
+      "h1": "What a custom software quote includes in Morocco",
+      "lede": "The price of custom software in Morocco is not a catalogue line. Byte Force, at Technopark in Casablanca, does not publish a figure. The amount follows the screens someone uses, the roles, and the connections. [[/contact|Write to Casablanca]] to have the workflow read, not to receive a grid.",
+      "sections": [
+        {
+          "heading": "What a page cannot price",
+          "paragraphs": [
+            "A page that announces a price « from » an amount in dirhams describes a package, not one company's software. Byte Force does not do that. The pages of the site are not a quote. A figure exists only after a written scope.",
+            "The cost of custom software is decided on the same rule: no grid, three things that move the amount. This page says what to ask to see on a quote, before comparing two figures that do not describe the same workflow."
+          ]
+        },
+        {
+          "heading": "The three lines that matter",
+          "paragraphs": [
+            "The first line is the number of screens someone really uses. A screen to enter and a screen to approve are not a « complete » module nobody opens. The second line is the number of roles: who creates, who approves, who exports. The third is the connection: email, payment, or a tool already paid for that must stay.",
+            "Wanting leave, a fleet, prospects, stock and payroll on the same quote raises the price without making the first circuit safer. Cut back to the flow whose delay costs money every week. The rest is a later line, not a hidden one."
+          ]
+        },
+        {
+          "heading": "What should not change the figure",
+          "paragraphs": [
+            "The office is in Casablanca, Technopark, boulevard Dammam, Aïn Chock. Being nearby does not add a tax, and it does not remove one. A project for a company in France or Canada is done from this office: there is no other address.",
+            "The work is not sold by the word count of a specification. A ten-line spreadsheet, standard accounting or a mailbox does not call for custom software. Saying no is part of the first conversation, and it does not produce an invoice."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write when two quotes are compared without naming the screens, the roles and the connections, or when an amount « from » stands in for a scope. Bring the action that blocks, not a copied module list.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day, Monday to Friday, 9:00 to 19:00. [[/contact|Describe the three lines]] is enough. The office phone is +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  }
+]

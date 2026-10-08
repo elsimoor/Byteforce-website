@@ -1,0 +1,166 @@
+[
+  {
+    "keyword": "CRM personnalisé Maroc",
+    "slug": "crm-personnalise-maroc",
+    "title": "CRM personnalisé Maroc",
+    "description": "CRM personnalisé au Maroc : le pipeline suit le cycle réel, depuis Casablanca. Pas le cycle d'un éditeur. Pas de prix public. Écrire.",
+    "h1": "CRM personnalisé Maroc",
+    "lede": "Un CRM personnalisé au Maroc suit le cycle de vente de l'entreprise, pas celui dessiné dans un abonnement. Prospects, devis, relances : seulement s'ils existent vraiment. Byte Force l'écrit depuis le Technopark, à Casablanca. Pas de prix public. [[/contact|Écrire]] pour décrire le cycle, pas pour choisir un logo.",
+    "llmsLabel": "CRM personnalisé au Maroc",
+    "llmsNote": "le pipeline suit le cycle réel, pas celui d'un éditeur",
+    "commit": "Decide when a custom CRM in Morocco should follow the real sales cycle.",
+    "links": [
+      { "href": "/contact", "label": "Décrire le cycle" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc/crm", "label": "Le CRM sur mesure" },
+      { "href": "/developpement-logiciel-casablanca/crm", "label": "CRM à Casablanca" }
+    ],
+    "sections": [
+      {
+        "heading": "Le cycle, pas le catalogue",
+        "paragraphs": [
+          "Un CRM personnalisé a un sens quand le cycle ne rentre pas dans les étapes de l'éditeur : un devis qui attend une validation interne, une relance qui dépend d'un chantier, un client qui n'est pas une fiche standard. La page [[/developpement-logiciel-sur-mesure-maroc/crm|CRM sur mesure]] est l'offre. Celle-ci dit quoi apporter : le nom des étapes, dans l'ordre où elles arrivent vraiment.",
+          "Il n'a pas de sens si le cycle est déjà celui de l'outil du marché et que l'équipe s'en sert. Changer de logo ne justifie pas un développement. Le premier échange peut conclure de garder l'abonnement."
+        ]
+      },
+      {
+        "heading": "Ce qui entre dans la première version",
+        "paragraphs": [
+          "La première version porte le geste commercial qui coince : créer le dossier, le faire avancer, savoir qui doit relancer. Pas la comptabilité, pas la paie, pas le stock. Ces sujets ont d'autres pages. Les rôles sont ceux du bureau : qui crée, qui valide, qui exporte.",
+          "Le bureau est à Casablanca, Technopark, boulevard Dammam. On peut dérouler un vrai devis sur la table. Pas de bureau en France ni au Canada. Pas de grille de prix. La note, plus tard, suit les écrans, les rôles et les branchements."
+        ]
+      },
+      {
+        "heading": "Ce qui est rendu",
+        "paragraphs": [
+          "À la remise, le client possède le code, le dépôt et l'hébergement livré. Le CRM n'est pas un login que l'éditeur ferme. Un acompte lance le travail après un périmètre écrit. Un changement est écrit avant d'être construit. Il n'y a pas de délai fixe : souvent plusieurs semaines pour une première version, selon le cycle.",
+          "Aucun avis, aucune note, aucun nombre de clients n'est publié pour appuyer cette page. Les projets en ligne montrent autre chose que le cycle de vente d'une entreprise précise."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire quand les relances vivent dans une boîte mail ou un fichier que deux personnes écrasent. Dire les étapes et qui les tient. [[/developpement-logiciel-casablanca/crm|À Casablanca]], le cadrage peut se faire au bureau.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire les étapes]] suffit. Téléphone : +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "A custom CRM in Morocco",
+      "description": "A custom CRM in Morocco follows the real sales cycle, from Casablanca. Not a vendor's stages. No public price. Write with the cycle.",
+      "h1": "A custom CRM in Morocco",
+      "lede": "A custom CRM in Morocco follows the company's sales cycle, not the one drawn in a subscription. Prospects, quotes, follow-ups: only if they really exist. Byte Force writes it from Technopark, in Casablanca. No public price. [[/contact|Write]] to describe the cycle, not to pick a logo.",
+      "sections": [
+        {
+          "heading": "The cycle, not the catalogue",
+          "paragraphs": [
+            "A custom CRM makes sense when the cycle does not fit the vendor's stages: a quote waiting for an internal approval, a follow-up that depends on a job site, a customer who is not a standard card. The offer page already exists. This page says what to bring: the names of the steps, in the order they actually happen.",
+            "It does not make sense if the cycle is already the market tool's cycle and the team uses it. Changing the logo does not justify development. The first conversation can end with keeping the subscription."
+          ]
+        },
+        {
+          "heading": "What enters the first version",
+          "paragraphs": [
+            "The first version carries the commercial action that sticks: create the file, move it forward, know who must follow up. Not accounting, not payroll, not stock. Those subjects have other pages. The roles are the office's roles: who creates, who approves, who exports.",
+            "The office is in Casablanca, Technopark, boulevard Dammam. A real quote can be walked through on the table. No office in France or Canada. No price grid. The figure, later, follows the screens, the roles and the connections."
+          ]
+        },
+        {
+          "heading": "What is handed over",
+          "paragraphs": [
+            "At handover, the client owns the code, the repository and the delivered hosting. The CRM is not a login a vendor closes. A deposit starts the work after a written scope. A change is written before it is built. There is no fixed schedule: often several weeks for a first version, according to the cycle.",
+            "No review, no score, no client count is published to support this page. Projects online show something other than one company's sales cycle."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write when follow-ups live in a mailbox or in a file two people overwrite. Name the steps and who holds them. In Casablanca, the scope can be set at the office.",
+            "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the steps]] is enough. Phone: +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "keyword": "création CRM sur mesure",
+    "slug": "creation-crm-sur-mesure",
+    "title": "Création CRM sur mesure",
+    "description": "Création d'un CRM sur mesure : on part des étapes réelles, pas d'un modèle vide. Byte Force, Casablanca. Pas de prix public.",
+    "h1": "Création CRM sur mesure",
+    "lede": "La création d'un CRM sur mesure commence quand les étapes du dossier sont nommées. Pas quand on a choisi un nom de produit. Byte Force le fait depuis Casablanca, au Technopark. Pas de prix public. [[/contact|Écrire]] avec l'ordre des étapes, même s'il tient sur une feuille.",
+    "llmsLabel": "Création d'un CRM sur mesure",
+    "llmsNote": "partir des étapes réelles, pas d'un modèle vide",
+    "commit": "Explain how a custom CRM is created from the real steps, not an empty template.",
+    "links": [
+      { "href": "/contact", "label": "Donner l'ordre des étapes" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc/crm", "label": "L'offre CRM" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc/crm/logiciel-crm-personnalise", "label": "Le CRM personnalisé" }
+    ],
+    "sections": [
+      {
+        "heading": "Ce qu'il faut avoir avant d'écrire",
+        "paragraphs": [
+          "Avant la création, on écrit les étapes qu'un dossier traverse vraiment. Qui le crée, qui le fait avancer, qui relance, qui exporte. Sans cette liste, on construirait le CRM d'un éditeur avec un autre logo. L'offre est sur la page [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]]. Le [[/developpement-logiciel-sur-mesure-maroc/crm/logiciel-crm-personnalise|CRM personnalisé]] dit le même sujet pour une entreprise dont le cycle ne rentre pas dans un modèle.",
+          "Une feuille suffit. Un cahier de cinquante pages retarde. Le premier échange de trente minutes sert à voir si la liste est un CRM ou un tableur qu'il faut garder."
+        ]
+      },
+      {
+        "heading": "L'ordre du travail",
+        "paragraphs": [
+          "Le périmètre est écrit, puis construit. Un acompte lance le travail. Le reste suit ce qui est livré. Si une étape est ajoutée, elle est acceptée avant d'être codée. Il n'y a pas de délai fixe publié : une première version tient souvent en plusieurs semaines.",
+          "On ne met pas la paie, le stock et les congés dans cette création. Un CRM qui promet toute l'entreprise n'est plus un CRM. Le bureau, à Casablanca, boulevard Dammam, peut relire la liste autour de la table. Pas d'autre bureau en France ou au Canada."
+        ]
+      },
+      {
+        "heading": "Ce que la création ne promet pas",
+        "paragraphs": [
+          "Pas de prix public. Pas de montant « à partir de ». La note suit les écrans, les rôles et les branchements, email ou outil déjà payé compris. Les pages du site ne sont pas un devis.",
+          "Pas d'avis clients, pas de note, pas de nombre de pipelines « gérés ». À la remise, le code, le dépôt et l'hébergement livré sont à l'entreprise. C'est le fait. Le reste serait une invention."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire quand la liste des étapes existe déjà dans la tête de deux personnes qui ne la disent pas pareil. Apporter les deux versions. On en gardera une.",
+          "Réponse sous un jour ouvré, lundi à vendredi, 9 h à 19 h. [[/contact|Envoyer les étapes]] suffit. Téléphone : +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "Creating a custom CRM",
+      "description": "Creating a custom CRM starts from the real steps, not an empty template. Byte Force, Casablanca. No public price.",
+      "h1": "Creating a custom CRM",
+      "lede": "Creating a custom CRM starts when the steps of a file are named. Not when a product name has been chosen. Byte Force does it from Casablanca, at Technopark. No public price. [[/contact|Write]] with the order of the steps, even if it fits on one sheet.",
+      "sections": [
+        {
+          "heading": "What must exist before writing",
+          "paragraphs": [
+            "Before creation, the steps a file really crosses are written down. Who creates it, who moves it, who follows up, who exports. Without that list, the result would be a vendor's CRM with another logo. The offer is on the CRM page. The custom CRM page says the same subject for a company whose cycle does not fit a template.",
+            "One sheet is enough. A fifty-page specification delays the work. The first thirty minutes check whether the list is a CRM or a spreadsheet that should stay."
+          ]
+        },
+        {
+          "heading": "The order of the work",
+          "paragraphs": [
+            "The scope is written, then built. A deposit starts the work. The rest follows what is delivered. If a step is added, it is accepted before it is coded. There is no fixed public schedule: a first version often takes several weeks.",
+            "Payroll, stock and leave are not put into this creation. A CRM that promises the whole company is no longer a CRM. The office, in Casablanca, boulevard Dammam, can reread the list around the table. No other office in France or Canada."
+          ]
+        },
+        {
+          "heading": "What creation does not promise",
+          "paragraphs": [
+            "No public price. No amount « from ». The figure follows the screens, the roles and the connections, including email or a tool already paid for. The pages of the site are not a quote.",
+            "No client reviews, no score, no count of pipelines « managed ». At handover, the code, the repository and the delivered hosting belong to the company. That is the fact. The rest would be an invention."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write when the list of steps already exists in the heads of two people who do not say it the same way. Bring both versions. One will be kept.",
+            "A reply within one business day, Monday to Friday, 9:00 to 19:00. [[/contact|Send the steps]] is enough. Phone: +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  }
+]

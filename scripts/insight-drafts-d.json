@@ -1,0 +1,84 @@
+[
+  {
+    "keyword": "avantages d'un logiciel sur mesure",
+    "slug": "avantages-logiciel-sur-mesure",
+    "title": "Avantages d'un logiciel sur mesure",
+    "description": "Avantages d'un logiciel sur mesure : le circuit n'est pas tordu, et le code revient à l'entreprise. Casablanca. Pas de prix public.",
+    "h1": "Avantages d'un logiciel sur mesure",
+    "lede": "Les avantages d'un logiciel sur mesure tiennent en deux faits, pas en une liste marketing. Le circuit n'a pas à être tordu pour entrer dans un outil déjà vendu. À la remise, le code revient à l'entreprise. Byte Force est au Technopark, à Casablanca. Pas de prix public. [[/contact|Écrire]] pour voir si ces deux faits s'appliquent.",
+    "llmsLabel": "Avantages d'un logiciel sur mesure",
+    "llmsNote": "le circuit n'est pas tordu, et le code revient à l'entreprise",
+    "commit": "State the two real advantages of custom software, without a feature list.",
+    "links": [
+      { "href": "/contact", "label": "Voir si ça s'applique" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc", "label": "Le logiciel sur mesure" },
+      { "href": "/developpement-logiciel-casablanca", "label": "Depuis Casablanca" }
+    ],
+    "sections": [
+      {
+        "heading": "Le métier n'est pas le contourné",
+        "paragraphs": [
+          "L'avantage utile, c'est que les rôles du logiciel sont les rôles de l'entreprise. Qui crée, qui valide, qui exporte. Un outil standard demande souvent l'inverse : l'équipe apprend le vocabulaire de l'éditeur. Quand cet apprentissage devient le travail, le sur-mesure évite la ressaisie et la validation orale.",
+          "Ce n'est pas un avantage si le métier rentre déjà dans l'outil du marché. Une comptabilité standard, une messagerie, un tableur de dix lignes n'ont pas besoin d'être réécrits. Le [[/developpement-logiciel-sur-mesure-maroc|cadre]] le dit, et le premier échange aussi. Inventer un avantage là serait vendre un doublon."
+        ]
+      },
+      {
+        "heading": "Le code ne reste pas chez l'éditeur",
+        "paragraphs": [
+          "Le deuxième avantage est la remise. Le client possède le code, le dépôt et les comptes d'hébergement livrés. Ce n'est pas un login qu'un abonnement peut couper. La page [[/insights/qui-possede-le-code|qui possède le code]] détaille ce point. On ne le confond pas avec une promesse de « propriété intellectuelle » floue.",
+          "Cet avantage ne chiffre pas le projet. Il n'y a pas de prix public, et pas de gain en dirhams affiché. La note suit les écrans, les rôles et les branchements, après un périmètre écrit. Un acompte lance le travail. Un changement de périmètre est écrit avant d'être construit."
+        ]
+      },
+      {
+        "heading": "Ce qui n'est pas un avantage",
+        "paragraphs": [
+          "Ce n'est pas un avantage d'avoir plus d'écrans. Ce n'est pas un avantage d'être à Casablanca au sens d'une remise ou d'une taxe : le bureau est au Technopark, boulevard Dammam, Aïn Chock, et la proximité ne change pas une grille qui n'existe pas. Il n'y a pas de bureau en France ni au Canada.",
+          "Ce n'est pas non plus un avantage mesuré par un taux, un nombre de clients, ou une note. Byte Force n'en publie pas. Dealkhir et Coco Inbox montrent des produits en ligne. Leurs chiffres ne sont pas repris ici comme preuve."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire si le contournement est déjà le travail, ou si l'abonnement peut fermer un outil dont l'entreprise ne peut plus se passer. Dire le geste et qui le fait. Le reste peut attendre.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, lundi à vendredi, 9 h à 19 h. [[/contact|Décrire le contournement]] suffit. Téléphone : +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "What custom software actually changes",
+      "description": "Custom software keeps the real workflow, and the code returns to the company. Casablanca. No public price, no invented gain.",
+      "h1": "What custom software actually changes",
+      "lede": "The advantages of custom software are two facts, not a marketing list. The workflow does not have to be bent to fit a tool already on sale. At handover, the code returns to the company. Byte Force is at Technopark, in Casablanca. No public price. [[/contact|Write]] to see whether those two facts apply.",
+      "sections": [
+        {
+          "heading": "The job is not the workaround",
+          "paragraphs": [
+            "The useful advantage is that the roles in the software are the company's roles. Who creates, who approves, who exports. A standard tool often asks the reverse: the team learns the vendor's vocabulary. When that learning becomes the work, custom software avoids the retype and the spoken approval.",
+            "It is not an advantage if the job already fits the market tool. Standard accounting, a mailbox, a ten-line spreadsheet do not need to be rewritten. The offer says so, and so does the first conversation. Inventing an advantage there would be selling a duplicate."
+          ]
+        },
+        {
+          "heading": "The code does not stay with the vendor",
+          "paragraphs": [
+            "The second advantage is handover. The client owns the code, the repository and the hosting accounts that were delivered. It is not a login a subscription can cut. The page on who owns the code says this plainly. It is not a vague promise about intellectual property.",
+            "This advantage does not price the project. There is no public price, and no gain in dirhams on display. The figure follows the screens, the roles and the connections, after a written scope. A deposit starts the work. A scope change is written before it is built."
+          ]
+        },
+        {
+          "heading": "What is not an advantage",
+          "paragraphs": [
+            "More screens are not an advantage. Being in Casablanca is not an advantage in the sense of a discount or a tax: the office is at Technopark, boulevard Dammam, Aïn Chock, and being nearby does not change a grid that does not exist. There is no office in France or Canada.",
+            "It is also not an advantage measured by a rate, a client count, or a score. Byte Force does not publish those. Dealkhir and Coco Inbox show products online. Their figures are not reused here as proof."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write if the workaround is already the work, or if a subscription can close a tool the company can no longer do without. Name the action and who does it. The rest can wait.",
+            "Thirty minutes, free. A reply within one business day, Monday to Friday, 9:00 to 19:00. [[/contact|Describe the workaround]] is enough. Phone: +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -29,7 +29,16 @@ export function Header() {
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
         <Link href="/" className="flex items-center gap-3">
-          <Image alt="Byte Force" className="h-9 w-9 object-cover" src="/logo.png" width={36} height={36} sizes="36px" />
+          <Image
+            alt="Byte Force"
+            className="h-11 w-11 object-cover"
+            src="/logo.png"
+            width={44}
+            height={44}
+            sizes="44px"
+            priority
+            fetchPriority="high"
+          />
           <span className="font-headline text-lg font-bold tracking-tight text-on-surface">ByteForce</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">

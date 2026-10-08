@@ -77,26 +77,27 @@ export function StudioHome() {
               href="/realisations/coco-inbox"
               className="block overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl"
             >
-              <Image
-                src="/work/coco-inbox.jpg"
-                alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
-                width={1280}
-                height={960}
-                priority
-                fetchPriority="high"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="aspect-[16/10] w-full object-cover object-top"
-              />
-              <div className="flex items-center justify-between gap-4 p-5">
-                <div>
-                  <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">
+              <span className="relative block aspect-[16/10] w-full">
+                <Image
+                  src="/work/coco-inbox.jpg"
+                  alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
+                  fill
+                  priority
+                  fetchPriority="high"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-top"
+                />
+              </span>
+              <span className="flex items-center justify-between gap-4 p-5">
+                <span>
+                  <span className="block font-mono text-[11px] font-bold tracking-widest text-primary uppercase">
                     Live product
-                  </p>
-                  <p className="font-headline text-lg font-bold text-on-surface">Coco Inbox</p>
-                  <p className="text-sm text-on-surface-variant">Montréal · online since 2024</p>
-                </div>
+                  </span>
+                  <span className="block font-headline text-lg font-bold text-on-surface">Coco Inbox</span>
+                  <span className="block text-sm text-on-surface-variant">Montréal · online since 2024</span>
+                </span>
                 <span className="text-sm font-bold text-primary">Case study</span>
-              </div>
+              </span>
             </a>
           </div>
         </div>
@@ -661,66 +662,64 @@ export function StudioHome() {
             className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
             href="/contact"
           >
-            <div>
-              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
+            <span>
+              <span className="flex items-center justify-between text-xs font-mono text-outline mb-3">
                 <span>IN THE PRODUCT</span>
                 <span>ASSIST</span>
-              </div>
-              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+              </span>
+              <span className="block text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
                 Assistants and agents
-              </h3>
-              <p className="text-xs text-on-surface-variant leading-relaxed">
+              </span>
+              <span className="block text-xs text-on-surface-variant leading-relaxed">
                 AI assistants, AI agents and internal copilots inside the software people already use.
-              </p>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
+              </span>
+            </span>
+            <span className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
               <span>Parler d'un projet</span>
               <Icon name="north_east" className="text-sm" />
-            </div>
+            </span>
           </a>
-          {/* Article 2 */}
           <a
             className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
             href="/contact"
           >
-            <div>
-              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
+            <span>
+              <span className="flex items-center justify-between text-xs font-mono text-outline mb-3">
                 <span>IN THE PRODUCT</span>
                 <span>CUSTOMERS</span>
-              </div>
-              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+              </span>
+              <span className="block text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
                 Customer work
-              </h3>
-              <p className="text-xs text-on-surface-variant leading-relaxed">
+              </span>
+              <span className="block text-xs text-on-surface-variant leading-relaxed">
                 Lead qualification, automated customer responses and workflow automation.
-              </p>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
+              </span>
+            </span>
+            <span className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
               <span>Parler d'un projet</span>
               <Icon name="north_east" className="text-sm" />
-            </div>
+            </span>
           </a>
-          {/* Article 3 */}
           <a
             className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
             href="/contact"
           >
-            <div>
-              <div className="flex items-center justify-between text-xs font-mono text-outline mb-3">
+            <span>
+              <span className="flex items-center justify-between text-xs font-mono text-outline mb-3">
                 <span>IN THE PRODUCT</span>
                 <span>INFORMATION</span>
-              </div>
-              <h3 className="text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+              </span>
+              <span className="block text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
                 Information and documents
-              </h3>
-              <p className="text-xs text-on-surface-variant leading-relaxed">
+              </span>
+              <span className="block text-xs text-on-surface-variant leading-relaxed">
                 Intelligent search, document processing, data analysis and content generation.
-              </p>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
+              </span>
+            </span>
+            <span className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
               <span>Parler d'un projet</span>
               <Icon name="north_east" className="text-sm" />
-            </div>
+            </span>
           </a>
         </div>
       </section>

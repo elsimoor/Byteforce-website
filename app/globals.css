@@ -40,7 +40,8 @@
   --color-muted: #6b6a64;
 }
 
-html[data-brand="logo"] {
+html[data-brand="logo"],
+html:has([data-home]) {
   --color-primary: #000dbf;
   --color-on-primary: #ffffff;
   --color-primary-container: #00099a;

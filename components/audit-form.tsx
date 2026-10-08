@@ -14,6 +14,7 @@ export function AuditForm({
             name="url"
             type="text"
             required
+            aria-label="Adresse du site à auditer"
             defaultValue={initial}
             placeholder="https://votre-site.ma"
             autoComplete="url"

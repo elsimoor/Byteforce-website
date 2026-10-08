@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "agent-ia-entreprise",
+    "keyword": "agent IA entreprise",
+    "title": "Agent IA entreprise",
+    "description": "Agent IA entreprise : ce n'est pas une offre. L'automatisation reste une règle stable. Casablanca, Technopark. Pas de prix public.",
+    "h1": "Agent IA entreprise",
+    "lede": "Agent IA entreprise n'est pas une offre de Byte Force. L'automatisation est une règle stable dans le logiciel. Un modèle n'entre que si cette règle ne porte pas le geste. Casablanca, Technopark. Pas de prix public. [[/contact|Écrire]] pour le geste qui se répète.",
+    "llmsLabel": "Agent IA entreprise",
+    "llmsNote": "ce n'est pas une offre, l'automatisation reste une règle stable",
+    "ai": "Un agent IA entreprise n'est pas une offre : la règle stable d'abord",
+    "commit": "Say an enterprise AI agent is not an offer, and start from a stable rule.",
+    "links": [
+      { "href": "/contact", "label": "Décrire le geste répétitif" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc/automatisation", "label": "L'automatisation" },
+      { "href": "/solutions/automatisation-entreprise", "label": "Automatiser un processus" },
+      { "href": "/ai", "label": "Un site lisible par une machine" }
+    ],
+    "sections": [
+      {
+        "heading": "Ce que le mot recouvre",
+        "paragraphs": [
+          "Un agent IA entreprise, dans une brochure, est souvent un logiciel présenté comme s'il décidait seul. Ici, ce mot n'ouvre pas une offre. Byte Force construit le geste : une règle écrite, un écran, un rôle. Si le dossier est complet, on envoie. Si le montant dépasse un seuil, quelqu'un valide. Cela ne s'appelle pas un agent, et cela n'a pas besoin de l'être.",
+          "L'[[/developpement-logiciel-sur-mesure-maroc/automatisation|automatisation]] et la page [[/solutions/automatisation-entreprise|pour une entreprise]] décrivent ce travail. La page [[/ai|sur la lecture par une machine]] dit comment un site se laisse lire. Aucune des trois ne vend un agent qui remplace une équipe, ni un logiciel qui agit sans qu'on puisse dire la règle."
+        ]
+      },
+      {
+        "heading": "Quand le mot arrive dans une demande",
+        "paragraphs": [
+          "La demande dit souvent agent IA entreprise alors que le besoin est une ressaisie. Le commercial copie encore le bon dans un tableur. Le support répond la même phrase dix fois. Le soir, quelqu'un exporte et recolle. Cela s'écrit en règle. Coller un modèle par-dessus ne nomme pas le geste, et ne dit pas qui reste responsable quand le résultat est faux.",
+          "Parfois le texte change trop pour une règle : un document sans champs fixes, une demande libre, un courrier qui n'a pas deux fois la même forme. Alors on le dit dans le périmètre. Qui voit les données. Qui reprend la main. Sans cette phrase, on ne construit pas, même si le mot agent est déjà dans le mail."
+        ]
+      },
+      {
+        "heading": "Ce qu'on refuse de promettre",
+        "paragraphs": [
+          "Pas de prix public. Pas de pourcentage de réussite. Pas d'heures gagnées. Pas d'équipe remplacée. Le bureau est à Casablanca, Technopark, boulevard Dammam, Aïn Chock, 20001. Pas de bureau en France ni au Canada. Le code, le dépôt et l'hébergement livrés appartiennent à l'entreprise. Un acompte, puis des étapes liées à ce qui est livré.",
+          "Un agent qui travaillerait tout seul n'est pas un livrable. Une notification, un export, un bouton, un rôle qui valide, si. Snapchat Collect est un flux de collecte déjà en ligne. Ce n'est pas un agent, et ses chiffres ne sont pas repris ici. On ne publie pas non plus une note d'intelligence."
+        ]
+      },
+      {
+        "heading": "Le premier échange",
+        "paragraphs": [
+          "Trente minutes, gratuites. On écrit le geste de la semaine. On dit s'il tient en une règle. Si oui, l'agent sort du sujet et on construit la règle. Si non, trois cas où la règle casse suffisent pour voir si un modèle a une place, et laquelle. Le premier échange peut retirer le mot du devis. C'est souvent la bonne coupe.",
+          "Pas de délai fixe. Une première version du geste nommé tient souvent en plusieurs semaines. Un changement de règle est écrit avant d'être construit. On n'ajoute pas un modèle en silence pour que la page ait l'air actuelle. La réponse part sous un jour ouvré."
+        ]
+      },
+      {
+        "heading": "Ce qui est rendu",
+        "paragraphs": [
+          "Le logiciel que l'équipe peut ouvrir le lundi. La règle reste lisible dans le code. Les rôles sont nommés. L'endroit où un humain valide encore est visible. On ne livre pas une boîte noire dont personne ne peut expliquer le prochain geste. Si un modèle est dans le périmètre, les données qu'il voit sont écrites, ainsi que la reprise en main.",
+          "Coco Inbox, à Montréal, est une boîte mail temporaire, des fichiers chiffrés, des notes. Ce n'est pas un agent et ce n'est pas une preuve. Dealkhir, à Casablanca, est un logiciel de métier. Zainek et Tourispeak sont des applications Android déjà en ligne. Aucun de ces produits n'est une démonstration d'agent, et leurs chiffres ne sont pas repris."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire le geste, pas le mot agent. Dire qui le fait aujourd'hui, sur quel outil, et où cela casse dans la semaine. Un tableur, un mail, un copier-coller entre deux écrans : c'est assez pour commencer. [[/contact|Décrire la répétition]] suffit pour le premier message.",
+          "Réponse sous un jour ouvré, du lundi au vendredi, 9 h à 19 h. Téléphone : +212 666 650 696. Bureau : Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Pas d'autre adresse. Pas de grille de prix sur le site."
+        ]
+      }
+    ],
+    "en": {
+      "title": "An enterprise AI agent is not an offer",
+      "description": "An enterprise AI agent is not a Byte Force offer. Automation stays a stable rule in the software. Casablanca. No public price.",
+      "h1": "An enterprise AI agent is not an offer",
+      "lede": "An enterprise AI agent is not a Byte Force offer. Automation is a stable rule in the software. A model enters only when that rule does not carry the action. Casablanca, Technopark. No public price. [[/contact|Write]] for the action that repeats.",
+      "sections": [
+        {
+          "heading": "What the word covers",
+          "paragraphs": [
+            "An enterprise AI agent, in a brochure, is often software presented as if it decided alone. Here the word does not open an offer. Byte Force builds the action: a written rule, a screen, a role. If the file is complete, send it. If the amount passes a threshold, someone approves. That is not called an agent, and it does not need to be.",
+            "The automation pages describe this work. The page on being read by a machine says how a site can be read. None of the three sells an agent that replaces a team, or software that acts without a rule someone can state."
+          ]
+        },
+        {
+          "heading": "When the word shows up in a request",
+          "paragraphs": [
+            "The request often says enterprise AI agent when the need is a retype. Sales still copies the order into a spreadsheet. Support answers the same sentence ten times. In the evening someone exports and pastes. That is a rule. Putting a model on top does not name the action, and does not say who stays responsible when the result is wrong.",
+            "Sometimes the text changes too much for a rule: a document with no fixed fields, a free-form request, a letter that never has the same shape twice. Then it is said in the scope. Who sees the data. Who takes back control. Without that sentence, it is not built, even if the word agent is already in the email."
+          ]
+        },
+        {
+          "heading": "What is not promised",
+          "paragraphs": [
+            "No public price. No success percentage. No hours saved. No team replaced. The office is in Casablanca, Technopark, boulevard Dammam, Aïn Chock, 20001. No office in France or Canada. The delivered code, repository and hosting belong to the company. A deposit, then steps tied to what is delivered.",
+            "An agent that would work entirely alone is not a deliverable. A notification, an export, a button, a role that approves: yes. Snapchat Collect is a collection flow already online. It is not an agent, and its figures are not reused here. No intelligence score is published either."
+          ]
+        },
+        {
+          "heading": "The first conversation",
+          "paragraphs": [
+            "Thirty minutes, free. The week's action is written down. We say whether it holds as one rule. If yes, the agent leaves the subject and the rule is built. If not, three cases where the rule breaks are enough to see whether a model has a place, and which place. The first conversation can remove the word from the quote. That is often the right cut.",
+            "No fixed schedule. A first version of the named action is often several weeks. A rule change is written before it is built. A model is not added in silence so the page looks current. The reply goes out within one business day."
+          ]
+        },
+        {
+          "heading": "What is handed over",
+          "paragraphs": [
+            "Software the team can open on Monday. The rule stays readable in the code. Roles are named. The place where a human still approves is visible. What is handed over is not a black box nobody can explain. If a model is in the scope, the data it sees is written, and so is the hand-back.",
+            "Coco Inbox, in Montreal, is temporary email, encrypted files, and notes. It is not an agent and it is not proof. Dealkhir, in Casablanca, is business software. Zainek and Tourispeak are Android apps already online. None of these products is an agent demo, and their figures are not reused."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write the action, not the word agent. Say who does it today, on which tool, and where it breaks during the week. A spreadsheet, an email, a copy between two screens: that is enough to start. [[/contact|Describe the repetition]] is enough for the first message.",
+            "A reply within one business day, Monday to Friday, 9:00 to 19:00. Phone: +212 666 650 696. Office: Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. No other address. No price grid on the site."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "integrer-lintelligence-artificielle-dans-un-logiciel",
+    "keyword": "intégrer l'intelligence artificielle dans un logiciel",
+    "title": "Intégrer l'intelligence artificielle dans logiciel",
+    "description": "Intégrer l'intelligence artificielle dans un logiciel : seulement si une règle stable ne porte pas le geste. Casablanca. Pas de prix public.",
+    "h1": "Intégrer l'intelligence artificielle dans un logiciel",
+    "lede": "Intégrer l'intelligence artificielle dans un logiciel ne se décide pas parce que le mot est à la mode. On le fait seulement si une règle stable ne porte pas le geste. Qui valide une réponse fausse fait partie du périmètre. Casablanca. Pas de prix public. [[/contact|Écrire]] pour le geste.",
+    "llmsLabel": "Intégrer l'intelligence artificielle dans un logiciel",
+    "llmsNote": "seulement si une règle stable ne porte pas le geste, avec qui reprend la main",
+    "ai": "Intégrer l'intelligence artificielle dans un logiciel, seulement si la règle ne suffit pas",
+    "commit": "Put a model inside software only when a stable rule cannot carry the action.",
+    "links": [
+      { "href": "/contact", "label": "Décrire le geste" },
+      { "href": "/developpement-logiciel-sur-mesure-maroc/automatisation", "label": "L'automatisation" },
+      { "href": "/solutions/automatisation-entreprise", "label": "Automatiser un processus" },
+      { "href": "/ai", "label": "Un site lisible par une machine" }
+    ],
+    "sections": [
+      {
+        "heading": "La règle avant le modèle",
+        "paragraphs": [
+          "Intégrer l'intelligence artificielle dans un logiciel commence par écrire le geste. Si le dossier est complet, on envoie. Si le montant dépasse un seuil, quelqu'un valide. Cette règle tient sans modèle. L'[[/developpement-logiciel-sur-mesure-maroc/automatisation|automatisation]] et la page [[/solutions/automatisation-entreprise|pour une entreprise]] partent de là. Le modèle n'est pas le premier outil.",
+          "Le modèle a une place quand la règle ne se formule pas : le texte change trop, le document n'a pas de champs fixes, deux demandes proches ne se comparent pas par une case. Alors on le dit. Sinon, intégrer l'intelligence artificielle dans un logiciel ajoute un coût et une erreur qu'une condition aurait évités."
+        ]
+      },
+      {
+        "heading": "Qui reprend la main",
+        "paragraphs": [
+          "Une réponse fausse arrive. Le périmètre dit qui la voit, qui la corrige, et ce que le logiciel fait en attendant. Sans cette phrase, le modèle n'est pas dans le logiciel. Un bouton qui envoie sans relecture n'est pas une intégration. C'est un risque écrit nulle part.",
+          "Les données que le modèle voit sont nommées. Un export entier « pour voir » n'est pas un périmètre. Le dépôt et le code restent à l'entreprise. On n'enferme pas la règle dans un compte qu'elle ne possède pas."
+        ]
+      },
+      {
+        "heading": "Ce qui ne change pas",
+        "paragraphs": [
+          "Pas de prix public. Pas de pourcentage de justesse. Pas d'heures gagnées. Pas d'équipe remplacée par le modèle. Le bureau est à Casablanca, Technopark, boulevard Dammam, Aïn Chock, 20001. Pas de bureau en France ni au Canada. Acompte, puis étapes liées à ce qui est livré. Un changement de règle est écrit avant d'être construit.",
+          "Pas de délai fixe. Une première version du geste nommé tient souvent en plusieurs semaines. Intégrer l'intelligence artificielle dans un logiciel ne raccourcit pas ce délai par magie. Cela l'allonge si personne n'a encore dit la règle, ni qui valide."
+        ]
+      },
+      {
+        "heading": "Où cela se voit dans le logiciel",
+        "paragraphs": [
+          "L'écran montre la proposition et la décision. L'historique dit qui a validé. La règle qui aurait pu suffire reste dans le code, à côté, pour qu'on puisse l'enlever du modèle le jour où elle se formule. On ne cache pas le geste derrière un chat.",
+          "La page [[/ai|sur la lecture par une machine]] parle d'un site qu'on peut citer. Ce n'est pas la même chose qu'un modèle dans un logiciel métier. Permettre à un robot de lire une page n'est pas une recommandation, et ce n'est pas une intégration."
+        ]
+      },
+      {
+        "heading": "Ce qui est rendu",
+        "paragraphs": [
+          "Le code, le dépôt et l'hébergement livrés. La règle lisible. La liste des données vues par le modèle, si un modèle est vraiment dans le périmètre. Le nom de la personne ou du rôle qui reprend une mauvaise réponse. Pas une note. Pas un taux. Pas un slogan.",
+          "Coco Inbox reste une boîte temporaire, des fichiers chiffrés, des notes. Snapchat Collect reste un flux de collecte. Ni l'un ni l'autre n'est la preuve qu'un modèle a été intégré, et leurs chiffres ne sont pas repris. Dealkhir, Zainek et Tourispeak sont des logiciels déjà en ligne, pas des démonstrations de modèle."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Apporter le geste et trois cas où une règle simple casse. Dire ce qu'une mauvaise réponse coûterait, en travail, pas en slogan. [[/contact|Décrire le geste]] suffit. Si la règle tient déjà, on le dira, et le modèle sortira du sujet.",
+          "Réponse sous un jour ouvré, du lundi au vendredi, 9 h à 19 h. Téléphone : +212 666 650 696. Trente minutes gratuites pour le premier échange. Pas de grille de prix. Bureau à Casablanca seulement."
+        ]
+      }
+    ],
+    "en": {
+      "title": "Putting artificial intelligence inside software",
+      "description": "Putting artificial intelligence inside software happens only when a stable rule cannot carry the action. Casablanca. No public price.",
+      "h1": "Putting artificial intelligence inside software",
+      "lede": "Putting artificial intelligence inside software is not decided because the phrase is in fashion. It is done only when a stable rule does not carry the action. Who checks a wrong answer is part of the scope. Casablanca. No public price. [[/contact|Write]] for the action.",
+      "sections": [
+        {
+          "heading": "The rule before the model",
+          "paragraphs": [
+            "Putting artificial intelligence inside software starts by writing the action. If the file is complete, send it. If the amount passes a threshold, someone approves. That rule holds without a model. The automation pages start there. The model is not the first tool.",
+            "A model has a place when the rule cannot be stated: the text changes too much, the document has no fixed fields, two close requests cannot be compared by a checkbox. Then it is said. Otherwise, putting a model in the software adds a cost and an error a condition would have avoided."
+          ]
+        },
+        {
+          "heading": "Who takes back control",
+          "paragraphs": [
+            "A wrong answer happens. The scope says who sees it, who corrects it, and what the software does meanwhile. Without that sentence, the model is not in the software. A button that sends with no review is not an integration. It is a risk written nowhere.",
+            "The data the model sees is named. A full export « just to see » is not a scope. The repository and the code stay with the company. The rule is not locked inside an account the company does not own."
+          ]
+        },
+        {
+          "heading": "What does not change",
+          "paragraphs": [
+            "No public price. No accuracy percentage. No hours saved. No team replaced by the model. The office is in Casablanca, Technopark, boulevard Dammam, Aïn Chock, 20001. No office in France or Canada. A deposit, then steps tied to what is delivered. A rule change is written before it is built.",
+            "No fixed schedule. A first version of the named action is often several weeks. Putting a model in the software does not shorten that by magic. It lengthens it if nobody has yet stated the rule, or who approves."
+          ]
+        },
+        {
+          "heading": "Where it shows in the software",
+          "paragraphs": [
+            "The screen shows the proposal and the decision. The history says who approved. The rule that might have been enough stays in the code, beside it, so it can be taken off the model the day it can be stated. The action is not hidden behind a chat.",
+            "The page on being read by a machine is about a site that can be cited. That is not the same as a model inside business software. Letting a bot read a page is not a recommendation, and it is not an integration."
+          ]
+        },
+        {
+          "heading": "What is handed over",
+          "paragraphs": [
+            "The delivered code, repository and hosting. The readable rule. The list of data the model sees, if a model is actually in the scope. The name of the person or role who takes back a bad answer. No score. No rate. No slogan.",
+            "Coco Inbox remains temporary email, encrypted files, and notes. Snapchat Collect remains a collection flow. Neither is proof that a model was integrated, and their figures are not reused. Dealkhir, Zainek and Tourispeak are software already online, not model demos."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Bring the action and three cases where a simple rule breaks. Say what a wrong answer would cost, in work, not in a slogan. [[/contact|Describe the action]] is enough. If the rule already holds, that will be said, and the model will leave the subject.",
+            "A reply within one business day, Monday to Friday, 9:00 to 19:00. Phone: +212 666 650 696. Thirty free minutes for the first conversation. No price grid. The office is in Casablanca only."
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -9,7 +9,7 @@ export function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-3">
-              <Image alt="Byte Force" className="h-8 w-8 object-cover" src="/logo.png" width={32} height={32} sizes="32px" />
+              <Image alt="Byte Force" className="h-11 w-11 object-cover" src="/logo.png" width={44} height={44} sizes="44px" />
               <span className="font-headline text-base font-bold tracking-tight text-on-surface">ByteForce</span>
             </Link>
             <p className="max-w-sm text-sm text-on-surface-variant">
@@ -36,7 +36,7 @@ export function Footer() {
               </li>
               <li className="leading-none">
                 <Link href="/a-propos" className="text-on-surface-variant transition-colors hover:text-on-surface">
-                  À propos
+                  Qui sommes-nous
                 </Link>
               </li>
               <li className="leading-none">
@@ -97,7 +97,10 @@ export function Footer() {
               Mentions légales
             </Link>
             <Link href="/confidentialite" className="hover:text-on-surface">
-              Confidentialité
+              Politique de confidentialité
+            </Link>
+            <Link href="/llms.txt" className="hover:text-on-surface">
+              llms.txt
             </Link>
             <Link href="/conditions" className="hover:text-on-surface">
               Conditions

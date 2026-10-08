@@ -45,14 +45,18 @@ export function SelectedWork() {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {cases.map((project) => (
           <article key={project.slug} className="overflow-hidden rounded-xl bg-surface-container-low shadow-sm">
-            <a href={project.url} rel="noopener noreferrer">
+            <a
+              href={project.url}
+              rel="noopener noreferrer"
+              aria-label={`Site ${project.title}`}
+              className="relative block aspect-[16/10] w-full"
+            >
               <Image
                 src={project.shot}
                 alt={`${project.title}, capture du site en ligne`}
-                width={1280}
-                height={960}
+                fill
                 sizes="(min-width: 768px) 50vw, 100vw"
-                className="aspect-[16/10] w-full object-cover object-top"
+                className="object-cover object-top"
               />
             </a>
             <div className="space-y-3 p-6 lg:p-8">
@@ -73,9 +77,9 @@ export function SelectedWork() {
                 {copy[project.slug].result}
               </p>
               <div className="flex flex-wrap gap-4 pt-2 text-sm font-bold text-primary">
-                <a href={`/realisations/${project.slug}`}>Fiche</a>
+                <a href={`/realisations/${project.slug}`}>Fiche {project.title}</a>
                 <a href={project.url} rel="noopener noreferrer">
-                  Site en ligne
+                  Site {project.title}
                 </a>
               </div>
             </div>

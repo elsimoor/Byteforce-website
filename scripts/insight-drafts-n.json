@@ -1,0 +1,248 @@
+[
+  {
+    "keyword": "développement application SaaS",
+    "slug": "developpement-application-saas",
+    "title": "Développement application SaaS",
+    "description": "Développement d'une application SaaS : un produit à comptes, pas un site. Plusieurs clients, dossiers séparés. Casablanca. Pas de prix public.",
+    "h1": "Développement application SaaS",
+    "lede": "Le développement d'une application SaaS construit le produit que plusieurs clients ouvrent, pas la page qui le décrit. Comptes, rôles, dossiers qui ne se mélangent pas. Byte Force le fait depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour le geste dans l'application.",
+    "llmsLabel": "Développement d'une application SaaS",
+    "llmsNote": "le produit à comptes, pas la page qui le décrit",
+    "commit": "Separate a SaaS application from the page that describes it.",
+    "links": [
+      { "href": "/contact", "label": "Décrire le geste dans l'application" },
+      { "href": "/developpement-saas-maroc", "label": "Le SaaS" },
+      { "href": "/application-web-sur-mesure-maroc", "label": "L'application web" }
+    ],
+    "sections": [
+      {
+        "heading": "L'application, pas la vitrine",
+        "paragraphs": [
+          "L'application est l'endroit où le client finit le geste. Le site, s'il existe, dit ce que c'est et mène au compte. Les confondre, c'est livrer une plaquette et l'appeler SaaS. L'offre produit est le [[/developpement-saas-maroc|développement SaaS]]. Si le logiciel est pour une seule entreprise, dans le navigateur, c'est l'[[/application-web-sur-mesure-maroc|application web]], pas un SaaS.",
+          "Plusieurs clients, des rôles, des données isolées : sans ces trois-là, le mot application ne suffit pas. On ne les ajoute pas après la mise en ligne du premier logo."
+        ]
+      },
+      {
+        "heading": "Ce que la première version ouvre",
+        "paragraphs": [
+          "Un compte. Le geste. La séparation. Pas le catalogue de rapports. Périmètre écrit, acompte, code et hébergement à l'entreprise qui commande. Pas de délai fixe : souvent plusieurs semaines. Pas de prix public.",
+          "Casablanca, Technopark, boulevard Dammam. Pas de bureau en France ni au Canada. Coco Inbox est un produit en ligne, pas le plan de cette application."
+        ]
+      },
+      {
+        "heading": "Ce qu'on refuse d'appeler ainsi",
+        "paragraphs": [
+          "Un formulaire sur un site. Un tableur partagé. Un logiciel interne avec un mot de passe unique pour tout le monde. Aucun n'est une application SaaS. Le premier échange le dit, et il est gratuit.",
+          "On ne publie pas un nombre d'applications, un revenu, ou une note pour habiller le mot."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire quand vous pouvez séparer la page publique et le geste dans le compte. Dire le geste. Dire si un seul client ou plusieurs.",
+          "Trente minutes. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le compte]] suffit. Téléphone : +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "Building a SaaS application",
+      "description": "A SaaS application is the product with accounts, not the site. Several customers, separate files. Casablanca. No public price.",
+      "h1": "Building a SaaS application",
+      "lede": "Building a SaaS application means the product several customers open, not the page that describes it. Accounts, roles, files that do not mix. Byte Force does it from Casablanca. No public price. [[/contact|Write]] for the action inside the application.",
+      "sections": [
+        {
+          "heading": "The application, not the brochure",
+          "paragraphs": [
+            "The application is where the customer finishes the action. The site, if it exists, says what it is and leads to the account. Mixing them means shipping a leaflet and calling it a SaaS. The product offer is SaaS development. If the software is for one company, in the browser, it is a web application, not a SaaS.",
+            "Several customers, roles, isolated data: without those three, the word application is not enough. They are not added after the first logo goes online."
+          ]
+        },
+        {
+          "heading": "What the first version opens",
+          "paragraphs": [
+            "An account. The action. The separation. Not the report catalogue. A written scope, a deposit, code and hosting to the company that orders. No fixed schedule: often several weeks. No public price.",
+            "Casablanca, Technopark, boulevard Dammam. No office in France or Canada. Coco Inbox is a product online, not the plan of this application."
+          ]
+        },
+        {
+          "heading": "What is not called that",
+          "paragraphs": [
+            "A form on a site. A shared spreadsheet. Internal software with one password for everyone. None of these is a SaaS application. The first conversation says so, and it is free.",
+            "No count of applications, no revenue, and no score is published to dress the word."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write when you can separate the public page and the action inside the account. Name the action. Say whether one customer or several.",
+            "Thirty minutes. A reply within one business day, 9:00 to 19:00. [[/contact|Describe the account]] is enough. Phone: +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "keyword": "SaaS sur mesure vs logiciel standard",
+    "slug": "saas-sur-mesure-ou-standard",
+    "title": "SaaS sur mesure vs logiciel standard",
+    "description": "SaaS sur mesure vs logiciel standard : garder le marché si le geste rentre dedans. Sinon, l'écrire, clients isolés. Casablanca.",
+    "h1": "SaaS sur mesure vs logiciel standard",
+    "lede": "SaaS sur mesure vs logiciel standard : si le geste rentre dans un produit déjà vendu, on le garde. S'il faut le tordre, on écrit, et les clients ne voient pas les dossiers des autres. Byte Force, à Casablanca, ne publie pas de duel de prix. [[/contact|Écrire]] avec le geste.",
+    "llmsLabel": "SaaS sur mesure ou logiciel standard",
+    "llmsNote": "garder le marché si le geste rentre dedans",
+    "commit": "Choose custom SaaS or a standard product by whether the action still fits.",
+    "links": [
+      { "href": "/contact", "label": "Dire si le geste rentre" },
+      { "href": "/developpement-saas-maroc/remplacer-saas", "label": "Remplacer un SaaS subi" },
+      { "href": "/solutions/remplacer-saas", "label": "Le SaaS qui dicte le métier" }
+    ],
+    "sections": [
+      {
+        "heading": "Quand le standard gagne",
+        "paragraphs": [
+          "Le logiciel standard gagne quand le geste est déjà le sien : messagerie, comptabilité ordinaire, cycle prévu par l'éditeur. Le payer est plus court que de le réécrire. Le [[/solutions/remplacer-saas|SaaS subi]] est l'autre cas : l'abonnement dicte le métier. Le [[/developpement-saas-maroc/remplacer-saas|remplacement]] est une offre distincte de la création d'un produit pour plusieurs clients.",
+          "Créer un SaaS pour revendre ce que le marché fait déjà n'est pas un avantage. Le premier échange peut conclure de rester abonné."
+        ]
+      },
+      {
+        "heading": "Quand le sur-mesure est un produit",
+        "paragraphs": [
+          "Le sur-mesure devient un SaaS quand plusieurs clients ont le même geste, avec une règle que l'éditeur n'a pas, et que leurs dossiers sont isolés. Ce n'est pas un thème. Ce n'est pas un logiciel interne ouvert « plus tard ».",
+          "Pas de tableau de prix entre les deux. Pas d'étoiles. Pas de pourcentage. Casablanca, Technopark. Pas d'autre bureau. Code et hébergement livrés si on écrit. Pas de délai fixe."
+        ]
+      },
+      {
+        "heading": "Ce qu'on ne mélange pas",
+        "paragraphs": [
+          "Un SaaS que l'entreprise subit n'est pas un SaaS qu'elle vend. Quitter le premier et créer le second sont deux projets. Les mettre sur le même devis mélange un contournement et un produit.",
+          "Coco Inbox n'est pas la preuve que tout logiciel standard doit être réécrit. C'est un produit publié. Ses chiffres ne sont pas repris."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire avec le nom de l'outil actuel et le geste qui ne rentre pas. Ou avec le geste que plusieurs clients paieraient. Les deux phrases ne sont pas le même projet : dites laquelle est la vôtre.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Nommer l'outil ou le geste]] suffit. Téléphone : +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "Custom SaaS or standard software",
+      "description": "Custom SaaS or standard software: keep the market product if the action fits. Otherwise write it, with customers isolated. Casablanca.",
+      "h1": "Custom SaaS or standard software",
+      "lede": "Custom SaaS or standard software: if the action fits a product already on sale, keep it. If it must be bent, write it, and customers do not see each other's files. Byte Force, in Casablanca, does not publish a price duel. [[/contact|Write]] with the action.",
+      "sections": [
+        {
+          "heading": "When standard wins",
+          "paragraphs": [
+            "Standard software wins when the action is already its own: a mailbox, ordinary accounting, a cycle the vendor planned. Paying for it is shorter than rewriting it. A SaaS the company suffers is the other case: the subscription dictates the job. Replacing it is a different offer from creating a product for several customers.",
+            "Creating a SaaS to resell what the market already does is not an advantage. The first conversation can end with staying subscribed."
+          ]
+        },
+        {
+          "heading": "When custom is a product",
+          "paragraphs": [
+            "Custom becomes a SaaS when several customers have the same action, with a rule the vendor does not have, and their files are isolated. It is not a theme. It is not internal software opened « later ».",
+            "No price table between the two. No stars. No percentage. Casablanca, Technopark. No other office. Code and hosting delivered if it is written. No fixed schedule."
+          ]
+        },
+        {
+          "heading": "What is not mixed",
+          "paragraphs": [
+            "A SaaS the company suffers is not a SaaS it sells. Leaving the first and creating the second are two projects. Putting them on the same quote mixes a workaround and a product.",
+            "Coco Inbox is not proof that every standard product should be rewritten. It is a published product. Its figures are not reused."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write with the name of the current tool and the action that does not fit. Or with the action several customers would pay for. Those two sentences are not the same project: say which one is yours.",
+            "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Name the tool or the action]] is enough. Phone: +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "keyword": "idée SaaS entreprise Maroc",
+    "slug": "idee-saas-entreprise-maroc",
+    "title": "Idée SaaS entreprise Maroc",
+    "description": "Une idée de SaaS pour une entreprise au Maroc se juge au geste, pas au nom. Plusieurs clients, dossiers séparés. Casablanca. Pas de prix public.",
+    "h1": "Idée SaaS entreprise Maroc",
+    "lede": "Une idée de SaaS pour une entreprise au Maroc ne vaut que si le geste est le même pour plusieurs clients, et si leurs dossiers ne se mélangent pas. Le nom du produit ne décide rien. Byte Force, à Casablanca, ne note pas les idées. Pas de prix public. [[/contact|Écrire]] avec le geste, pas avec le slogan.",
+    "llmsLabel": "Une idée de SaaS pour une entreprise au Maroc",
+    "llmsNote": "elle se juge au geste partagé, pas au nom du produit",
+    "commit": "Judge a SaaS idea in Morocco by the shared action, not by the product name.",
+    "links": [
+      { "href": "/contact", "label": "Décrire le geste" },
+      { "href": "/developpement-saas-maroc", "label": "Construire le SaaS" },
+      { "href": "/developpement-saas-maroc/saas-b2b", "label": "Un SaaS pour des entreprises" }
+    ],
+    "sections": [
+      {
+        "heading": "Ce qui fait une idée tenable",
+        "paragraphs": [
+          "Le geste tient en une phrase. Plusieurs entreprises le feraient de la même façon, avec une règle que le marché ne porte pas. Leurs dossiers ne doivent pas se voir. Sans cela, c'est un souhait, un logiciel interne, ou un produit déjà vendu. L'offre pour le construire est le [[/developpement-saas-maroc|SaaS]]. Le cas où l'acheteur a plusieurs utilisateurs est le [[/developpement-saas-maroc/saas-b2b|SaaS B2B]].",
+          "Une idée qui commence par « comme untel, mais au Maroc » recopie un produit. On regarde si le geste local a une règle en plus. S'il n'en a pas, l'outil du marché suffit. Le bureau à Casablanca ne rend pas une copie plus utile."
+        ]
+      },
+      {
+        "heading": "Ce qu'on ne demande pas pour commencer",
+        "paragraphs": [
+          "Pas un business plan. Pas une levée. Pas un prix public. Pas une étude de marché inventée. On demande le geste, qui le fait, et ce qui prouve que deux clients ne partagent pas le même dossier. Le premier échange de trente minutes sert à ça, et il peut conclure de ne pas construire.",
+          "La première version isole déjà. Elle ne montre pas tout le catalogue. Pas de délai fixe : souvent plusieurs semaines pour le geste. Code et hébergement à l'entreprise qui commande. Pas de bureau en France ni au Canada."
+        ]
+      },
+      {
+        "heading": "Ce qu'une idée n'est pas",
+        "paragraphs": [
+          "Ce n'est pas un slogan, un logo, ou la liste des fonctions d'un concurrent. Ce n'est pas non plus Coco Inbox à recopier : ce produit a son usage, email temporaire, fichiers, notes. On ne le transforme pas en preuve que toute idée d'entreprise doit devenir un SaaS.",
+          "On ne publie pas de note d'idée, de potentiel, ou de nombre de clients visés. Ces chiffres ne sont pas des faits."
+        ]
+      },
+      {
+        "heading": "Quand écrire",
+        "paragraphs": [
+          "Écrire la phrase du geste. Si elle ne tient pas sans le nom d'un concurrent, l'idée n'est pas encore là. Si elle tient, apportez-la.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Envoyer la phrase]] suffit. Téléphone : +212 666 650 696."
+        ]
+      }
+    ],
+    "en": {
+      "title": "A SaaS idea for a company in Morocco",
+      "description": "A SaaS idea for a company in Morocco is judged by the action, not the name. Several customers, separate files. Casablanca. No public price.",
+      "h1": "A SaaS idea for a company in Morocco",
+      "lede": "A SaaS idea for a company in Morocco is worth something only if the action is the same for several customers, and their files do not mix. The product name decides nothing. Byte Force, in Casablanca, does not score ideas. No public price. [[/contact|Write]] with the action, not with the slogan.",
+      "sections": [
+        {
+          "heading": "What makes an idea hold",
+          "paragraphs": [
+            "The action fits in one sentence. Several companies would do it the same way, with a rule the market does not carry. Their files must not see each other. Without that, it is a wish, internal software, or a product already on sale. The offer to build it is SaaS development. The case where the buyer has several users is B2B SaaS.",
+            "An idea that starts with « like that one, but in Morocco » copies a product. Look for whether the local action has one more rule. If it does not, the market tool is enough. The office in Casablanca does not make a copy more useful."
+          ]
+        },
+        {
+          "heading": "What is not required to start",
+          "paragraphs": [
+            "Not a business plan. Not a fundraise. Not a public price. Not an invented market study. The action is required, who does it, and what shows that two customers do not share the same file. The first thirty minutes are for that, and they can end with not building.",
+            "The first version already isolates. It does not show the whole catalogue. No fixed schedule: often several weeks for the action. Code and hosting to the company that orders. No office in France or Canada."
+          ]
+        },
+        {
+          "heading": "What an idea is not",
+          "paragraphs": [
+            "It is not a slogan, a logo, or a competitor's feature list. It is also not Coco Inbox to copy: that product has its use, temporary email, files, notes. It is not turned into proof that every company idea must become a SaaS.",
+            "No idea score, no potential, and no target customer count is published. Those figures are not facts."
+          ]
+        },
+        {
+          "heading": "When to write",
+          "paragraphs": [
+            "Write the sentence of the action. If it does not hold without a competitor's name, the idea is not there yet. If it holds, bring it.",
+            "A reply within one business day, 9:00 to 19:00. [[/contact|Send the sentence]] is enough. Phone: +212 666 650 696."
+          ]
+        }
+      ]
+    }
+  }
+]
