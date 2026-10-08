@@ -101,6 +101,7 @@ async function main() {
   check("sitemap omits the redirecting service URLs", !locs.some((url) => url.includes("/services/logiciel-sur-mesure") || url.includes("/services/applications-mobiles")));
   check("sitemap lists the homepage without a trailing slash", locs.includes(origin));
   check("sitemap lists the Casablanca page", locs.includes(`${origin}/developpement-logiciel-casablanca`));
+  check("sitemap lists the free audit", locs.includes(`${origin}/audit`));
 
   const cities = ["/villes/lille", "/villes/tanger"];
   for (const path of cities) {
@@ -204,6 +205,13 @@ async function main() {
   const www = await get("https://www.byteforce.ma/", { redirect: "manual" });
   const wwwLocation = www.headers.get("location") || "";
   check("www redirects to the bare host", [301, 302, 307, 308].includes(www.status) && wwwLocation.startsWith("https://byteforce.ma"), `${www.status} ${wwwLocation}`);
+
+  const audit = await get("/audit");
+  check(
+    "free audit page renders",
+    audit.status === 200 && pageOk(audit.text, "Audit gratuit") && audit.text.includes("Auditer gratuitement") && !crashed(audit.text),
+    titleOf(audit.text),
+  );
 
   const money = await get("/developpement-logiciel-sur-mesure-maroc");
   check("software money page renders", money.status === 200 && pageOk(money.text, "Byte Force") && !crashed(money.text), titleOf(money.text));

@@ -44,6 +44,11 @@ export function Footer() {
                   Décisions
                 </Link>
               </li>
+              <li className="leading-none">
+                <Link href="/audit" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  Audit gratuit
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

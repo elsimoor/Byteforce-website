@@ -1,3 +1,4 @@
+import { AuditForm } from "@/components/audit-form";
 import { Icon } from "@/components/icon";
 import Image from "next/image";
 import { SelectedWork } from "@/components/selected-work";
@@ -54,6 +55,10 @@ export function StudioHome() {
                 <span>Voir les travaux</span>
                 <Icon name="south" className="text-base" />
               </a>
+            </div>
+            <div className="max-w-xl space-y-2">
+              <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">Ou un site déjà en ligne</p>
+              <AuditForm variant="studio" />
             </div>
             <p className="text-sm text-on-surface-variant">
               Réponse sous un jour ouvré. On peut aussi écrire sur{" "}
