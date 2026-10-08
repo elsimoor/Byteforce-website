@@ -65,6 +65,7 @@ export function GET() {
     `- [Une idée de SaaS pour une entreprise au Maroc](${origin}/insights/idee-saas-entreprise-maroc) : elle se juge au geste partagé, pas au nom du produit.`,
     `- [Développement d'une application mobile au Maroc](${origin}/insights/developpement-application-mobile-maroc) : le geste sur le téléphone, pas une présence sur les stores.`,
     `- [Prix d'une application mobile au Maroc](${origin}/insights/prix-application-mobile-maroc) : pas de montant public, la note suit les stores et les écrans.`,
+    `- [Combien coûte une application mobile](${origin}/insights/cout-application-mobile) : pas de prix public, la note suit le geste et les stores.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

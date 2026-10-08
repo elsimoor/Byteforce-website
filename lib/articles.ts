@@ -3053,6 +3053,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "cout-application-mobile",
+    title: "Combien coûte une application mobile",
+    description:
+      "Combien coûte une application mobile : pas de prix public. La note suit le geste, les écrans et le nombre de stores. Casablanca. Écrire.",
+    h1: "Combien coûte une application mobile",
+    date: "2026-10-08",
+    lede: "Combien coûte une application mobile : Byte Force ne publie pas de montant. À Casablanca, la note suit le geste sur le téléphone, les écrans, et un store ou deux. Le principe est le même que pour un logiciel. [[/contact|Écrire]] pour ce geste, pas pour une grille.",
+    sections: [
+      {
+        heading: "Il n'y a pas de tarif d'application",
+        paragraphs: [
+          "Un montant « à partir de » décrit un forfait. Byte Force ne l'affiche pas. Les pages ne sont pas un devis. Le [[/developpement-application-mobile-maroc|cadre mobile]] dit ce qui se construit. Cette page dit ce qui fait bouger la note. Comparer deux applications sans le geste, c'est comparer deux mots.",
+          "iOS et Android ne coûtent pas « la même chose » par principe. [[/developpement-application-mobile-maroc/ios|iOS]] est un périmètre. Android en est un autre. Les deux ensemble en sont un troisième. On ne publie pas trois chiffres pour les habiller.",
+        ],
+      },
+      {
+        heading: "Ce qui change le montant",
+        paragraphs: [
+          "Le geste. Le nombre d'écrans vraiment ouverts. Les rôles. Les branchements : un paiement, une notification, un outil déjà payé. Le compte développeur, s'il est ouvert pour le projet. Ajouter un site vitrine et un CRM dans le même devis gonfle la note sans rendre le geste plus sûr.",
+          "Le bureau à Casablanca, Technopark, boulevard Dammam, ne rajoute pas une ligne. Pas de bureau en France ni au Canada. Trente minutes gratuites, y compris pour conclure qu'une application web suffit, ou qu'il ne faut rien construire.",
+        ],
+      },
+      {
+        heading: "Ce qu'un devis devrait montrer",
+        paragraphs: [
+          "Le geste. Les écrans. Le ou les stores. Ce qui attend. Un acompte, puis des étapes liées à ce qui est livré. À la remise, le code et les comptes livrés sont à l'entreprise. Pas de délai fixe collé au prix : souvent plusieurs semaines.",
+          "On ne publie pas les téléchargements de Zainek ou de Tourispeak, ni une moyenne d'applications. Ces chiffres ne sont pas un devis.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand un chiffre circule sans le geste, ou quand le projet est encore « une application ». Apporter ce que la personne doit finir sur le téléphone.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
+      { href: "/developpement-application-mobile-maroc/ios", label: "iOS" },
+    ],
+    en: {
+      title: "What a mobile app costs",
+      description:
+        "What a mobile app costs is not public. The figure follows the action, the screens and how many stores. Casablanca. No grid.",
+      h1: "What a mobile app costs",
+      lede: "What a mobile app costs is not a published figure. In Casablanca, the amount follows the action on the phone, the screens, and one store or two. The rule is the same as for any custom software. [[/contact|Write]] for that action, not for a grid.",
+      sections: [
+      {
+        heading: "There is no app tariff",
+        paragraphs: [
+          "An amount « from » describes a package. Byte Force does not display one. The pages are not a quote. The mobile page says what gets built. This page says what moves the amount. Comparing two apps without the action is comparing two words.",
+          "iOS and Android do not cost « the same » by principle. iOS is one scope. Android is another. Both together are a third. Three figures are not published to dress them.",
+        ],
+      },
+      {
+        heading: "What changes the amount",
+        paragraphs: [
+          "The action. The number of screens really opened. The roles. The connections: a payment, a notification, a tool already paid for. The developer account, if it is opened for the project. Adding a brochure site and a CRM on the same quote raises the amount without making the action safer.",
+          "The office in Casablanca, Technopark, boulevard Dammam, does not add a line. No office in France or Canada. Thirty free minutes, including to conclude that a web application is enough, or that nothing should be built.",
+        ],
+      },
+      {
+        heading: "What a quote should show",
+        paragraphs: [
+          "The action. The screens. The store or stores. What waits. A deposit, then steps tied to what is delivered. At handover, the code and the delivered accounts belong to the company. No fixed schedule stuck to the price: often several weeks.",
+          "Zainek or Tourispeak download counts are not published, nor an average app cost. Those figures are not a quote.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when a figure is circulating without the action, or when the project is still « an app ». Bring what the person must finish on the phone.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
