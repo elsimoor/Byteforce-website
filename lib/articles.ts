@@ -595,6 +595,7 @@ export const articles: Article[] = [
         heading: "Couper la liste, garder le geste",
         paragraphs: [
           "Écrire la liste, puis retirer chaque ligne qui n'est pas nécessaire pour que la personne pressée commence aujourd'hui. Le reste attend une version suivante. On s'attache au problème de cette personne, pas au premier écran.",
+          "Une première séance qui casse ne ferme pas l'entreprise. L'associé ne part pas pour ça, et l'argent ne disparaît pas dans la nuit. On réécrit à la même personne une semaine plus tard, avec le geste corrigé. Un questionnaire dit où ça fait mal. Seule une version qu'on peut ouvrir dit si le logiciel le résout.",
           "Byte Force ne promet pas un nombre de semaines valable pour tous. [[/insights/delai-logiciel-sur-mesure|Le délai]] suit le nombre de rôles et de branchements. Une première version tient souvent en plusieurs semaines. Le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]] part du geste, pas du catalogue de fonctions.",
           "Le cadre cité dit qu'il vaut mieux cent personnes qui s'en servent vraiment que cent mille qui passent. Ce n'est pas un chiffre de Byte Force. C'est le choix : apprendre sur un usage réel, pas sur une audience large qui n'a pas le problème.",
         ],
@@ -632,6 +633,7 @@ export const articles: Article[] = [
           heading: "Cut the list, keep the action",
           paragraphs: [
             "Write the list, then remove every line that is not required for the person in a hurry to start today. The rest waits for a later version. Stay with that person's problem, not with the first screen.",
+            "A first session that breaks does not close the company. A cofounder does not leave for that, and the money does not vanish overnight. You write to the same person a week later, with the action corrected. A survey says where it hurts. Only a version someone can open says whether the software resolves it.",
             "Byte Force does not promise a number of weeks that fits everyone. [[/insights/delai-logiciel-sur-mesure|The schedule]] follows the number of roles and connections. A first version often takes several weeks. [[/developpement-logiciel-sur-mesure-maroc|Custom software]] starts from the action, not from a feature catalogue.",
             "The frame cited here says it is better to have a hundred people who really use it than a hundred thousand who pass by. That is not a Byte Force figure. It is the choice: learn from real use, not from a wide audience that does not have the problem.",
           ],

@@ -30,16 +30,16 @@ export function ArticleFigures({ figures }: { figures: Figure[] }) {
 
   return (
     <>
-      <div className="mt-10 grid max-w-3xl gap-8">
+      <div className="mt-10 grid max-w-5xl grid-cols-2 gap-4">
         {figures.map((item, index) => (
           <figure key={item.src}>
             <button
               type="button"
               onClick={() => show(index)}
-              className="block w-full cursor-zoom-in text-left"
+              className="block w-full cursor-zoom-in overflow-hidden border border-line text-left"
               aria-label={`Agrandir : ${item.alt}`}
             >
-              <img src={item.src} alt={item.alt} className="w-full border border-line" />
+              <img src={item.src} alt={item.alt} className="h-36 w-full object-cover object-top sm:h-44" />
             </button>
             <figcaption className="mt-3 text-sm text-mute">
               {item.caption} Cliquer pour agrandir.
