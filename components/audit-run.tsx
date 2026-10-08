@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { dimensionScore, dimensions, overallScore, priorities, scoreLabel, takeaways } from "@/lib/audit/score";
+import { markAudit, readAudit, writeAudit } from "@/lib/audit/saved";
 import type { AuditStep } from "@/lib/site-audit";
+import { SitemapPick } from "@/components/sitemap-pick";
 
 const chapters = dimensions;
 const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -92,7 +94,6 @@ function AuditMorph({ seed }: { seed: string }) {
       {[0, 1, 2].map((index) => {
         const salt = base * 13 + index * 97;
         const duration = 2.2 + unit(salt + 1) * 1.9;
-        const lift = (unit(salt + 5) < 0.5 ? -1 : 1) * (0.22 + unit(salt + 6) * 0.5);
         return (
           <span
             key={index}
@@ -101,9 +102,6 @@ function AuditMorph({ seed }: { seed: string }) {
             style={{
               ["--morph-dur" as string]: `${duration.toFixed(2)}s`,
               ["--morph-delay" as string]: `${(-unit(salt + 2) * duration).toFixed(2)}s`,
-              ["--drift-dur" as string]: `${(1.3 + unit(salt + 3) * 1.7).toFixed(2)}s`,
-              ["--drift-delay" as string]: `${(-unit(salt + 4) * 1.6).toFixed(2)}s`,
-              ["--drift-y" as string]: `${lift.toFixed(2)}rem`,
             }}
           />
         );
@@ -112,15 +110,34 @@ function AuditMorph({ seed }: { seed: string }) {
   );
 }
 
-export function AuditRun({ url }: { url: string }) {
+export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) {
   const [steps, setSteps] = useState<AuditStep[]>([]);
   const [done, setDone] = useState(false);
   const [error, setError] = useState("");
+  const [burstUrl, setBurstUrl] = useState(url);
+  const [session, setSession] = useState(0);
+  if (burstUrl !== url) {
+    setBurstUrl(url);
+    setSession(0);
+  }
 
   useEffect(() => {
+    const saved = session === 0 ? readAudit(url) : null;
+    if (saved) {
+      setSteps(saved.steps);
+      setDone(true);
+      setError("");
+      return;
+    }
+
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const controller = new AbortController();
     let cancelled = false;
+    const collected: AuditStep[] = [];
+    setSteps([]);
+    setDone(false);
+    setError("");
+    markAudit(url, "running");
 
     async function run() {
       try {
@@ -132,7 +149,10 @@ export function AuditRun({ url }: { url: string }) {
         });
         if (!response.ok || !response.body) {
           const payload = (await response.json().catch(() => null)) as { error?: string } | null;
-          if (!cancelled) setError(payload?.error || "La lecture n'a pas pu démarrer.");
+          if (!cancelled) {
+            setError(payload?.error || "La lecture n'a pas pu démarrer.");
+            markAudit(url, "error");
+          }
           return;
         }
         const reader = response.body.getReader();
@@ -148,19 +168,23 @@ export function AuditRun({ url }: { url: string }) {
             if (!line.trim()) continue;
             const item = JSON.parse(line) as AuditStep;
             if (cancelled) return;
-            setSteps((current) => {
-              const index = current.findIndex((step) => step.id === item.id);
-              if (index === -1) return [...current, item];
-              const next = current.slice();
-              next[index] = item;
-              return next;
-            });
+            const index = collected.findIndex((step) => step.id === item.id);
+            if (index === -1) collected.push(item);
+            else collected[index] = item;
+            setSteps(collected.slice());
             if (!reduced && item.state !== "running") await pause(280);
           }
         }
-        if (!cancelled) setDone(true);
-      } catch {
-        if (!cancelled) setError("La lecture s'est interrompue.");
+        if (!cancelled) {
+          setDone(true);
+          if (collected.some((step) => step.state !== "running" && step.id !== "suite")) writeAudit(url, collected);
+          else markAudit(url, "error");
+        }
+      } catch (caught) {
+        if (!cancelled && !(caught instanceof DOMException && caught.name === "AbortError")) {
+          setError("La lecture s'est interrompue.");
+          markAudit(url, "error");
+        }
       }
     }
 
@@ -169,7 +193,11 @@ export function AuditRun({ url }: { url: string }) {
       cancelled = true;
       controller.abort();
     };
-  }, [url]);
+  }, [url, session]);
+
+  function reread() {
+    setSession((value) => value + 1);
+  }
 
   const settled = steps.filter((step) => step.state !== "running");
   const shown = settled.filter((step) => step.id !== "suite");
@@ -186,7 +214,14 @@ export function AuditRun({ url }: { url: string }) {
 
   return (
     <div className="mt-14">
-      <p className="font-mono text-xs tracking-wide text-mute">{url}</p>
+      <div className="flex flex-wrap items-baseline justify-between gap-4">
+        <p className="font-mono text-xs tracking-wide text-mute">{url}</p>
+        {done ? (
+          <button type="button" onClick={reread} className="border-b border-ink pb-0.5 text-sm">
+            Relire
+          </button>
+        ) : null}
+      </div>
       <ol className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-b border-line pb-4 text-sm" aria-label="Parties de l'audit">
         {chapters.map((chapter) => {
           const seen = steps.some((step) => step.chapter === chapter);
@@ -439,6 +474,7 @@ export function AuditRun({ url }: { url: string }) {
               </a>
             </section>
           </div>
+          {pick ? <SitemapPick origin={url} /> : null}
         </>
       ) : null}
     </div>

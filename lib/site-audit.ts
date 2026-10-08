@@ -457,3 +457,115 @@ async function collectFacts(page: Awaited<ReturnType<typeof fetchPage>>): Promis
     links,
   };
 }
+
+const SITEMAP_PAGE_CAP = 60;
+const SITEMAP_CHILD_CAP = 4;
+
+function unescapeLoc(value: string) {
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#0*39;/g, "'")
+    .trim();
+}
+
+function xmlLocs(xml: string) {
+  return [...xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/gi)].map((match) => unescapeLoc(match[1]));
+}
+
+function isSitemapIndex(xml: string) {
+  return /<sitemapindex[\s>]/i.test(xml) || (/<sitemap[\s>]/i.test(xml) && !/<url[\s>]/i.test(xml));
+}
+
+function pageKey(url: URL) {
+  const path = url.pathname.replace(/\/$/, "") || "/";
+  return `${url.protocol}//${url.host}${path}${url.search}`;
+}
+
+const skippedSitemapExt = /\.(xml|pdf|jpe?g|png|gif|webp|svg|avif|zip|css|m?js|mp4|mp3|ico|woff2?|txt)$/i;
+
+function pageFromLoc(loc: string, host: string) {
+  try {
+    const url = parseAuditUrl(loc);
+    if (!sameSite(url.hostname, host)) return "";
+    if (skippedSitemapExt.test(url.pathname)) return "";
+    return pageKey(url);
+  } catch {
+    return "";
+  }
+}
+
+async function readSitemapFile(start: URL) {
+  try {
+    return await fetchText(start);
+  } catch {
+    return { status: 0, text: "", url: start };
+  }
+}
+
+export async function listSitemapPages(raw: string): Promise<{ pages: string[]; truncated: boolean }> {
+  const page = parseAuditUrl(raw);
+  await assertPublicHost(page);
+  const origin = new URL(`${page.protocol}//${page.host}/`);
+  const found: string[] = [];
+  const seen = new Set<string>();
+  let truncated = false;
+
+  const pushPages = (xml: string) => {
+    for (const loc of xmlLocs(xml)) {
+      const href = pageFromLoc(loc, page.hostname);
+      if (!href || seen.has(href)) continue;
+      if (found.length >= SITEMAP_PAGE_CAP) {
+        truncated = true;
+        return;
+      }
+      seen.add(href);
+      found.push(href);
+    }
+  };
+
+  const absorb = async (xml: string, depth: number) => {
+    if (found.length >= SITEMAP_PAGE_CAP) return;
+    if (isSitemapIndex(xml) && depth < 2) {
+      const locs = xmlLocs(xml);
+      if (locs.length > SITEMAP_CHILD_CAP) truncated = true;
+      for (const loc of locs.slice(0, SITEMAP_CHILD_CAP)) {
+        try {
+          const child = parseAuditUrl(loc);
+          if (!sameSite(child.hostname, page.hostname)) continue;
+          const file = await readSitemapFile(child);
+          if (file.status === 200 && file.text) await absorb(file.text, depth + 1);
+        } catch {
+          continue;
+        }
+        if (found.length >= SITEMAP_PAGE_CAP) return;
+      }
+      return;
+    }
+    pushPages(xml);
+  };
+
+  const root = await readSitemapFile(new URL("/sitemap.xml", origin));
+  if (root.status === 200 && root.text) {
+    await absorb(root.text, 0);
+  } else {
+    const robots = await readSitemapFile(new URL("/robots.txt", origin));
+    const declared = [...robots.text.matchAll(/^sitemap:\s*(\S+)/gim)].map((match) => match[1]).slice(0, SITEMAP_CHILD_CAP);
+    if ([...robots.text.matchAll(/^sitemap:\s*(\S+)/gim)].length > SITEMAP_CHILD_CAP) truncated = true;
+    for (const loc of declared) {
+      try {
+        const child = parseAuditUrl(loc);
+        if (!sameSite(child.hostname, page.hostname)) continue;
+        const file = await readSitemapFile(child);
+        if (file.status === 200 && file.text) await absorb(file.text, 0);
+      } catch {
+        continue;
+      }
+      if (found.length >= SITEMAP_PAGE_CAP) break;
+    }
+  }
+
+  return { pages: found, truncated };
+}

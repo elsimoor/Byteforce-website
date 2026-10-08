@@ -1,24 +1,10 @@
+import { auditClientIp, auditLimited } from "@/lib/audit/limit";
 import { auditPage } from "@/lib/site-audit";
 
 export const dynamic = "force-dynamic";
 
-const hits = new Map<string, number[]>();
-
-function limited(ip: string) {
-  const now = Date.now();
-  const recent = (hits.get(ip) ?? []).filter((time) => now - time < 60_000);
-  if (recent.length >= 8) {
-    hits.set(ip, recent);
-    return true;
-  }
-  recent.push(now);
-  hits.set(ip, recent);
-  return false;
-}
-
 export async function POST(request: Request) {
-  const ip = (request.headers.get("x-forwarded-for") ?? "").split(",")[0]?.trim() || "local";
-  if (limited(ip)) {
+  if (auditLimited(auditClientIp(request))) {
     return Response.json({ error: "Trop de demandes. Réessayez dans une minute." }, { status: 429 });
   }
 
