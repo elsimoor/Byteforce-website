@@ -66,6 +66,7 @@ export function GET() {
     `- [Développement d'une application mobile au Maroc](${origin}/insights/developpement-application-mobile-maroc) : le geste sur le téléphone, pas une présence sur les stores.`,
     `- [Prix d'une application mobile au Maroc](${origin}/insights/prix-application-mobile-maroc) : pas de montant public, la note suit les stores et les écrans.`,
     `- [Combien coûte une application mobile](${origin}/insights/cout-application-mobile) : pas de prix public, la note suit le geste et les stores.`,
+    `- [Développement d'une application web au Maroc](${origin}/insights/developpement-application-web-maroc) : le geste dans le navigateur, pas une vitrine.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

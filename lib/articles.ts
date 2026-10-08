@@ -3134,6 +3134,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "developpement-application-web-maroc",
+    title: "Développement application web Maroc",
+    description:
+      "Développement d'une application web au Maroc : le geste dans le navigateur, depuis Casablanca. Pas un site vitrine. Pas de prix public.",
+    h1: "Développement application web Maroc",
+    date: "2026-10-08",
+    lede: "Le développement d'une application web au Maroc construit le geste dans le navigateur : un dossier, des rôles, un écran que quelqu'un ouvre pour travailler. Ce n'est pas une vitrine. Byte Force le fait depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour ce geste.",
+    sections: [
+      {
+        heading: "Le navigateur, pas la plaquette",
+        paragraphs: [
+          "Une application web sert quand le travail se fait devant un écran : chercher un dossier, le valider, l'exporter. L'offre est l'[[/application-web-sur-mesure-maroc|application web sur mesure]]. Si le vocabulaire est celui d'un seul métier, c'est l'[[/application-web-sur-mesure-maroc/application-metier|application métier]]. Une page qui présente l'entreprise n'est pas cette offre.",
+          "Si le geste se fait loin du bureau, sur un téléphone, le sujet est mobile. Construire les deux sans savoir où le geste se passe double le périmètre. Le premier échange choisit l'endroit.",
+        ],
+      },
+      {
+        heading: "Ce que la première version ouvre",
+        paragraphs: [
+          "Le dossier. Les rôles : qui crée, qui valide, qui exporte. Le branchement qui doit rester. Pas tous les tableaux de bord. Périmètre écrit, acompte, code et hébergement livrés à l'entreprise. Pas de délai fixe : souvent plusieurs semaines. Pas de prix public.",
+          "Le bureau est au Technopark, boulevard Dammam, Aïn Chock. On peut poser le fichier sur la table. Pas de bureau en France ni au Canada. Dealkhir, en ligne à Casablanca, montre une plateforme utilisée, pas le plan de toute application web.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne livre pas sous ce nom",
+        paragraphs: [
+          "Un thème, un formulaire de contact, et un logo. Ça peut être un site. Ce n'est pas une application. On le dit. Le premier échange de trente minutes est gratuit, y compris pour conclure qu'un site suffit, ou qu'un outil du marché suffit.",
+          "On ne publie pas un nombre d'écrans moyen, un temps de chargement général, ou une note. Le score d'un laboratoire sur byteforce.ma n'est pas le score de l'application d'un client.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste a un nom et qu'il se fait dans un navigateur. Dire les rôles. Dire ce qui doit rester branché. Si plusieurs clients doivent être isolés, le sujet est un SaaS, pas seulement une application interne.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le dossier]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/application-web-sur-mesure-maroc", label: "L'application web" },
+      { href: "/application-web-sur-mesure-maroc/application-metier", label: "L'application métier" },
+    ],
+    en: {
+      title: "Web application development in Morocco",
+      description:
+        "A web application in Morocco is the action in the browser, from Casablanca. Not a brochure site. No public price.",
+      h1: "Web application development in Morocco",
+      lede: "Web application development in Morocco builds the action in the browser: a file, roles, a screen someone opens in order to work. It is not a brochure. Byte Force does it from Casablanca. No public price. [[/contact|Write]] for that action.",
+      sections: [
+      {
+        heading: "The browser, not the leaflet",
+        paragraphs: [
+          "A web application is for work done at a screen: find a file, approve it, export it. The offer is the custom web application. If the vocabulary is one trade's, it is the trade application. A page that presents the company is not this offer.",
+          "If the action happens away from the desk, on a phone, the subject is mobile. Building both without knowing where the action happens doubles the scope. The first conversation picks the place.",
+        ],
+      },
+      {
+        heading: "What the first version opens",
+        paragraphs: [
+          "The file. The roles: who creates, who approves, who exports. The connection that must stay. Not every dashboard. A written scope, a deposit, code and hosting delivered to the company. No fixed schedule: often several weeks. No public price.",
+          "The office is at Technopark, boulevard Dammam, Aïn Chock. The file can sit on the table. No office in France or Canada. Dealkhir, online in Casablanca, shows a platform in use, not the plan of every web application.",
+        ],
+      },
+      {
+        heading: "What is not delivered under this name",
+        paragraphs: [
+          "A theme, a contact form, and a logo. That can be a site. It is not an application. That is said. The first thirty minutes are free, including to conclude that a site is enough, or that a market tool is enough.",
+          "No average screen count, no general load time, and no score is published. A lab score of byteforce.ma is not the score of a client's application.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action has a name and it happens in a browser. Name the roles. Name what must stay connected. If several customers must be isolated, the subject is a SaaS, not only an internal application.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the file]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
