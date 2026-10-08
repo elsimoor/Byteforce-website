@@ -30,6 +30,7 @@ export function GET() {
     `- Travaux : ${origin}/realisations`,
     `- À propos : ${origin}/a-propos`,
     `- Décisions : ${origin}/insights`,
+    `- Un site qu'une machine peut lire : ${origin}/insights/site-lisible-par-une-machine`,
     `- Audit : ${origin}/audit`,
     `- Pour les agents : ${origin}/ai`,
     `- Contact : ${origin}/contact`,

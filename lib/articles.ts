@@ -1,3 +1,11 @@
+export type ArticleCopy = {
+  title: string;
+  description: string;
+  h1: string;
+  lede: string;
+  sections: { heading: string; paragraphs: string[] }[];
+};
+
 export type Article = {
   slug: string;
   title: string;
@@ -7,6 +15,7 @@ export type Article = {
   lede: string;
   sections: { heading: string; paragraphs: string[] }[];
   links: { href: string; label: string }[];
+  en?: ArticleCopy;
 };
 
 export const articles: Article[] = [
@@ -198,6 +207,92 @@ export const articles: Article[] = [
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
       { href: "/services/creation-site-web", label: "Création de site web" },
       { href: "/contact", label: "Décrire le geste" },
+    ],
+  },
+  {
+    slug: "site-lisible-par-une-machine",
+    title: "Un site qu'une machine peut lire",
+    description:
+      "Un visiteur comprend parfois un site qu'une machine ne peut ni citer ni utiliser pour écrire. Byte Force, à Casablanca, lit ce passage puis construit la suite.",
+    h1: "Un site qu'une machine peut comprendre",
+    date: "2026-10-08",
+    lede: "Byte Force, au Technopark à Casablanca, conçoit des logiciels et des sites qu'un humain et une machine peuvent trouver, comprendre, et utiliser pour écrire. Si le vôtre est déjà en ligne, le premier geste est de le décrire : [[/contact|parler du projet]].",
+    sections: [
+      {
+        heading: "Ce qu'une personne voit, et ce qu'une machine peut citer",
+        paragraphs: [
+          "Une page peut être claire pour quelqu'un qui la lit, et rester opaque pour un outil qui doit répondre : que fait cette entreprise, où est-elle, comment lui écrire. Autoriser un robot ne veut pas dire qu'il recommandera le site. Un fichier llms.txt n'est pas non plus un facteur de classement.",
+          "Le passage utile tient en cinq questions. Est-ce qu'on peut découvrir la page. Est-ce qu'on peut identifier l'entreprise. Est-ce qu'on peut répondre sans deviner. Est-ce qu'on a un fait pour la recommander, sans inventer d'avis. Est-ce qu'on peut agir : formulaire, téléphone, email.",
+        ],
+      },
+      {
+        heading: "L'audit dit où ça bloque",
+        paragraphs: [
+          "L'[[/audit|audit gratuit]] lit une page d'accueil, puis jusqu'à dix adresses du sitemap. Il sépare la technique, la performance, le référencement, l'accessibilité, la lecture par une machine, et la conversion. Le temps affiché est celui de la réponse du serveur, pas un LCP de laboratoire.",
+          "À la fin, une lecture machine ajoute la découverte, la compréhension, la réponse, la recommandation et l'action. Le JSON du même passage est sur /audit/json. Ce n'est pas une note arbitraire : chaque point dit ce qui a été vu, pourquoi ça compte, et quoi changer.",
+          "Si le frein est l'action, le site peut être trouvé et rester sans demande. C'est souvent là que le travail commence. [[/contact|Décrire la page et ce que le visiteur doit pouvoir faire]].",
+        ],
+      },
+      {
+        heading: "Ce qu'il ne faut pas fabriquer",
+        paragraphs: [
+          "Pas d'avis structuré s'il n'existe pas. Pas de prix public si le montant dépend du périmètre. Pas d'adresse inventée. Byte Force publie le bureau : Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Les projets en France ou au Canada se font depuis ce bureau.",
+          "Une réalisation liée, comme celles de [[/realisations|la page travaux]], est une preuve. Un témoignage écrit pour l'occasion n'en est pas une.",
+        ],
+      },
+      {
+        heading: "Quand Byte Force est le bon interlocuteur",
+        paragraphs: [
+          "Un site qui doit expliquer l'offre et recueillir une demande se lit sur [[/services/creation-site-web|la création de site]]. Un dossier, des rôles et une règle que le tableur ne garde pas se lisent sur le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]]. Le choix entre les deux est déjà écrit : [[/insights/site-web-ou-logiciel|site ou logiciel]].",
+          "La fiche pour les outils qui lisent Byte Force est sur [[/ai|pour les agents]]. Elle ne vend pas une offre « agent IA ». L'automatisation publiée est une règle stable dans le logiciel.",
+          "Le premier échange dure trente minutes et il est gratuit. La réponse part sous un jour ouvré. [[/contact|Écrire à Byte Force]] avec l'adresse du site, ou avec le geste que le logiciel doit permettre.",
+        ],
+      },
+    ],
+    en: {
+      title: "A site a machine can read",
+      description:
+        "A visitor can understand a site that a machine still cannot cite or use to get in touch. Byte Force, in Casablanca, reads that gap and builds what comes next.",
+      h1: "A site a machine can understand",
+      lede: "Byte Force, at Technopark in Casablanca, builds software and websites a person and a machine can find, understand, and use to write. If yours is already online, the first step is to describe it: [[/contact|talk about the project]].",
+      sections: [
+        {
+          heading: "What a person sees, and what a machine can cite",
+          paragraphs: [
+            "A page can be clear to someone reading it and still be opaque to a tool that must answer what the company does, where it is, and how to write. Allowing a bot does not mean it will recommend the site. An llms.txt file is not a Google ranking factor either.",
+            "The useful pass is five questions. Can the page be discovered. Can the company be identified. Can the questions be answered without guessing. Is there a real fact to recommend it, with no invented review. Can someone act: a form, a phone number, an email.",
+          ],
+        },
+        {
+          heading: "The audit shows where it stops",
+          paragraphs: [
+            "The [[/audit|free audit]] reads a homepage, then up to ten sitemap addresses. It separates technique, performance, search, accessibility, machine reading, and conversion. The time shown is the server response, not a lab LCP.",
+            "At the end, a machine reading adds discovery, understanding, answers, recommendation, and action. The JSON for the same pass is at /audit/json. It is not an arbitrary grade: each point says what was seen, why it matters, and what to change.",
+            "If the block is action, the site can be found and still produce no enquiry. That is often where the work starts. [[/contact|Describe the page and what the visitor must be able to do]].",
+          ],
+        },
+        {
+          heading: "What not to invent",
+          paragraphs: [
+            "No structured review if none exists. No public price if the amount depends on the scope. No invented address. Byte Force publishes the office: Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Projects in France or Canada are done from that office.",
+            "A linked project, like those on [[/realisations|the work page]], is proof. A testimonial written for the occasion is not.",
+          ],
+        },
+        {
+          heading: "When Byte Force is the right studio",
+          paragraphs: [
+            "A site that must explain the offer and collect an enquiry is [[/services/creation-site-web|website creation]]. A record, roles, and a rule a spreadsheet cannot keep are [[/developpement-logiciel-sur-mesure-maroc|custom software]]. The choice between them is already written: [[/insights/site-web-ou-logiciel|website or software]].",
+            "The fiche for tools that read Byte Force is [[/ai|for agents]]. It does not sell an “AI agent” offer. The published automation is a stable rule inside the software.",
+            "The first conversation is thirty minutes and it is free. A reply goes out within one business day. [[/contact|Write to Byte Force]] with the site address, or with the action the software must allow.",
+          ],
+        },
+      ],
+    },
+    links: [
+      { href: "/contact", label: "Parler du projet" },
+      { href: "/audit", label: "Auditer une page" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+      { href: "/services/creation-site-web", label: "Création de site web" },
     ],
   },
 ];

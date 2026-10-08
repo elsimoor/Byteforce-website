@@ -34,8 +34,9 @@ export default function InsightsPage() {
         <h2 className="display max-w-[16ch] text-4xl">Quelle page lire</h2>
         <div className="mt-8 max-w-2xl space-y-4 leading-relaxed">
           <p>
-            Cinq articles répondent à une question précise : le coût, le délai, le code, la suite, le site ou le
-            logiciel. Les six pages d&apos;après traitent un cas. Chacune mène au formulaire si le cas est le vôtre.
+            Six articles répondent à une question précise : le coût, le délai, le code, la suite, le site ou le
+            logiciel, et ce qu&apos;une machine peut citer. Les six pages d&apos;après traitent un cas. Chacune mène au
+            formulaire si le cas est le vôtre.
           </p>
           <p>
             Le fichier Excel se lit en premier quand plusieurs personnes écrivent dans la même feuille, sans savoir qui

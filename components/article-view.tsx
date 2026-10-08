@@ -81,6 +81,34 @@ export function ArticleView({ article }: { article: Article }) {
           </div>
         </section>
       ))}
+      {article.en ? (
+        <div lang="en">
+          <div className="border-t border-line px-6 py-14 md:px-12">
+            <p className="text-sm text-mute">English</p>
+            <h2 className="display mt-6 max-w-[18ch] text-[clamp(2.2rem,5vw,4rem)]">{article.en.h1}</h2>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed">
+              <Rich text={article.en.lede} />
+            </p>
+            <p className="mt-6">
+              <Link href="/contact" className="border-b border-ink pb-1">
+                Talk about the project
+              </Link>
+            </p>
+          </div>
+          {article.en.sections.map((section) => (
+            <section key={section.heading} className="border-t border-line px-6 py-14 md:px-12">
+              <h2 className="display max-w-[20ch] text-4xl">{section.heading}</h2>
+              <div className="mt-6 max-w-2xl space-y-4 text-base leading-relaxed">
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>
+                    <Rich text={paragraph} />
+                  </p>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      ) : null}
       <section className="border-t border-line px-6 py-14 md:px-12">
         <h2 className="text-sm text-mute">Pages liées</h2>
         <ul className="mt-4 flex flex-col gap-2">
