@@ -3,7 +3,15 @@
 import { useEffect, useState } from "react";
 import type { AuditStep } from "@/lib/site-audit";
 
+const chapters = ["Arrivée", "Page", "Fichiers", "Domaine", "Liens"];
 const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function mark(state: AuditStep["state"]) {
+  if (state === "fail") return "À corriger";
+  if (state === "warn") return "À revoir";
+  if (state === "running") return "En cours";
+  return "Tenu";
+}
 
 export function AuditRun({ url }: { url: string }) {
   const [steps, setSteps] = useState<AuditStep[]>([]);
@@ -48,7 +56,7 @@ export function AuditRun({ url }: { url: string }) {
               next[index] = item;
               return next;
             });
-            if (!reduced && item.state !== "running") await pause(520);
+            if (!reduced && item.state !== "running") await pause(420);
           }
         }
         if (!cancelled) setDone(true);
@@ -64,46 +72,85 @@ export function AuditRun({ url }: { url: string }) {
     };
   }, [url]);
 
+  const open = steps.filter((step) => step.state === "warn" || step.state === "fail");
   const held = steps.filter((step) => step.state === "pass").length;
-  const open = steps.filter((step) => step.state === "warn" || step.state === "fail").length;
+  const visible = chapters.filter((chapter) => steps.some((step) => step.chapter === chapter));
 
   return (
-    <div className="mt-16">
+    <div className="mt-14">
       <p className="font-mono text-xs tracking-wide text-mute">{url}</p>
-      <ol className="mt-8 border-t border-line" aria-live="polite">
-        {steps.map((step, index) => (
-          <li key={step.id} className="audit-step grid grid-cols-[3.5rem_1fr] gap-4 border-b border-line py-7">
-            <span className={`pt-1 font-mono text-sm ${step.state === "running" ? "audit-live" : "text-mute"}`}>
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <div>
-              <p className="text-xl tracking-tight">{step.label}</p>
-              <p className="mt-2 max-w-xl text-sm leading-relaxed text-mute">
-                {step.state === "running" ? "En cours." : step.detail}
-              </p>
-            </div>
-          </li>
-        ))}
+      <ol className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-b border-line pb-4 text-sm" aria-label="Parties de l'audit">
+        {chapters.map((chapter) => {
+          const seen = steps.some((step) => step.chapter === chapter);
+          const active = steps.some((step) => step.chapter === chapter && step.state === "running");
+          return (
+            <li key={chapter} className={active ? "audit-live" : seen ? "" : "text-mute"}>
+              {chapter}
+            </li>
+          );
+        })}
       </ol>
+
+      {visible.map((chapter) => (
+        <section key={chapter} className="mt-14" aria-labelledby={`audit-${chapter}`}>
+          <h2 id={`audit-${chapter}`} className="audit-step display text-4xl md:text-5xl">
+            {chapter}
+          </h2>
+          <ol className="mt-6 border-t border-line">
+            {steps
+              .filter((step) => step.chapter === chapter)
+              .map((step) => (
+                <li key={step.id} className="audit-step grid grid-cols-[5.5rem_1fr] gap-4 border-b border-line py-6 md:grid-cols-[7rem_1fr]">
+                  <span className={`pt-1 font-mono text-xs tracking-wide ${step.state === "running" ? "audit-live" : "text-mute"}`}>
+                    {mark(step.state)}
+                  </span>
+                  <div>
+                    <p className="text-xl tracking-tight">{step.label}</p>
+                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-mute">{step.detail || "En cours."}</p>
+                  </div>
+                </li>
+              ))}
+          </ol>
+        </section>
+      ))}
+
       {error ? (
         <p className="mt-8 text-sm" role="alert">
           {error}
         </p>
       ) : null}
+
       {done ? (
-        <div className="audit-step mt-16 max-w-xl">
-          <p className="display text-[clamp(3.4rem,8vw,6rem)]">{held}</p>
-          <p className="mt-4 text-lg">
-            {held === 1 ? "point tenu" : "points tenus"}
-            {open ? `, ${open} à revoir` : ""}.
+        <section className="audit-step mt-20 border-t border-line pt-12" aria-labelledby="audit-open">
+          <h2 id="audit-open" className="display max-w-[12ch] text-[clamp(3rem,7vw,5.5rem)]">
+            {open.length ? "Ce qui reste ouvert." : "Rien de bloquant."}
+          </h2>
+          <p className="mt-6 font-mono text-sm text-mute">
+            {held} tenu{held > 1 ? "s" : ""} · {open.length} ouvert{open.length > 1 ? "s" : ""}
           </p>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-mute">
-            Lecture de la page d&apos;accueil seulement. Ce n&apos;est pas un score Google, et ce n&apos;est pas tout le site.
+          {open.length ? (
+            <ul className="mt-10 max-w-2xl border-t border-line">
+              {open.map((step) => (
+                <li key={step.id} className="border-b border-line py-5">
+                  <p className="text-lg">
+                    {step.chapter} · {step.label}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-mute">{step.detail}</p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-8 max-w-md text-sm leading-relaxed text-mute">
+              L&apos;accueil, les fichiers et les pages liées tiennent sur ce passage.
+            </p>
+          )}
+          <p className="mt-8 max-w-md text-sm leading-relaxed text-mute">
+            Accueil, robots, sitemap, le domaine, et jusqu&apos;à trois pages liées. Ce n&apos;est pas un score Google, et ce n&apos;est pas tout le site.
           </p>
           <a href="/contact" className="mt-8 inline-block border-b border-ink pb-1 text-sm">
             Parler de ce site
           </a>
-        </div>
+        </section>
       ) : null}
     </div>
   );

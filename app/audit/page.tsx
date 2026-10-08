@@ -45,7 +45,7 @@ export default async function AuditPage({ searchParams }: Props) {
       </p>
       <h1 className="display mt-6 max-w-[11ch] text-[clamp(3.2rem,8vw,6.8rem)]">Audit gratuit.</h1>
       <p className="mt-8 max-w-md text-lg leading-relaxed">
-        On lit la page d&apos;accueil, point par point. Gratuit, sans compte.
+        On lit l&apos;accueil, puis les fichiers, le domaine, et quelques pages liées. Gratuit, sans compte.
       </p>
       {target ? <AuditRun url={target} /> : <AuditForm initial={raw} />}
       {error ? (
@@ -59,7 +59,7 @@ export default async function AuditPage({ searchParams }: Props) {
         </div>
       ) : (
         <p className="mt-16 max-w-md text-sm leading-relaxed text-mute">
-          Le résultat porte sur cette page seulement. Corriger ce qui bloque la lecture se décide ensuite, à Casablanca.
+          Le passage couvre l&apos;accueil et un échantillon du site. Corriger ce qui bloque se décide ensuite, à Casablanca.
         </p>
       )}
     </main>
