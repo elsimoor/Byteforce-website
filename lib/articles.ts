@@ -2553,6 +2553,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "mvp-saas-maroc",
+    title: "MVP SaaS Maroc, première version",
+    description:
+      "MVP SaaS au Maroc : la première version isole déjà les clients et permet le geste. Byte Force, Casablanca. Pas une maquette. Pas de prix public.",
+    h1: "MVP SaaS Maroc, première version",
+    date: "2026-10-08",
+    lede: "Un MVP SaaS au Maroc est une première version qu'un client peut ouvrir, avec ses dossiers séparés de ceux des autres. Ce n'est pas une maquette, et ce n'est pas le catalogue. Byte Force la construit depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour le geste de cette version.",
+    sections: [
+      {
+        heading: "Ce que les trois lettres ne dispensent pas",
+        paragraphs: [
+          "MVP ne veut pas dire incomplet au point qu'un client voie les dossiers d'un autre. L'isolation, l'invitation et l'arrêt d'un compte font partie de cette version si plusieurs clients sont prévus. La page [[/developpement-saas-maroc/mvp|MVP SaaS]] est l'offre. [[/insights/premiere-version-utile|La première version utile]] dit le même choix pour un logiciel qui n'est pas encore un produit à plusieurs clients.",
+          "Une maquette cliquable ne dit pas si le geste tient. Seule une version qu'on peut ouvrir le dit. Une première session qui casse ne ferme pas l'entreprise : on réécrit le geste.",
+        ],
+      },
+      {
+        heading: "Ce qu'on coupe",
+        paragraphs: [
+          "On écrit la liste, puis on retire tout ce qui n'est pas nécessaire pour que la personne pressée commence aujourd'hui. Les rapports, les rôles d'un grand compte, la place de marché attendent. Rester sur le problème de cette personne, pas sur le premier écran qu'un concurrent montre.",
+          "Pas de prix public pour un MVP. Pas de promesse en un nombre de semaines fixe : souvent plusieurs semaines, selon les rôles. Casablanca, Technopark. Pas d'autre bureau. Le code et l'hébergement livrés reviennent à l'entreprise qui commande.",
+        ],
+      },
+      {
+        heading: "Ce qu'on ne copie pas",
+        paragraphs: [
+          "Coco Inbox est un produit publié, avec un usage précis. Ce n'est pas un MVP générique à recopier. On ne publie pas ses chiffres, ni un objectif de cent utilisateurs, ni un objectif de cent mille. Ces cadres viennent d'ailleurs. Ils ne sont pas des résultats de Byte Force.",
+          "On ne vend pas un MVP comme une réduction. C'est une version. La suivante s'écrit quand celle-ci est utilisée, pas quand la liste d'envies revient.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire si le SaaS est encore une liste, ou si une version existe et que personne ne finit le geste. Dire le geste de cette semaine, et ce qui attend.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Dire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste de la première version" },
+      { href: "/developpement-saas-maroc/mvp", label: "Le MVP SaaS" },
+      { href: "/developpement-saas-maroc", label: "Le développement SaaS" },
+    ],
+    en: {
+      title: "A SaaS MVP in Morocco",
+      description:
+        "A SaaS MVP in Morocco is a first version that already isolates customers and allows the action. Casablanca. Not a mock-up. No public price.",
+      h1: "A SaaS MVP in Morocco",
+      lede: "A SaaS MVP in Morocco is a first version a customer can open, with their files kept apart from everyone else's. It is not a mock-up, and it is not the catalogue. Byte Force builds it from Casablanca. No public price. [[/contact|Write]] for the action of that version.",
+      sections: [
+      {
+        heading: "What the three letters do not excuse",
+        paragraphs: [
+          "MVP does not mean so incomplete that one customer sees another's files. Isolation, the invitation and closing an account are part of this version if several customers are planned. The MVP page is the offer. The useful first version says the same choice for software that is not yet a product for several customers.",
+          "A clickable mock-up does not say whether the action holds. Only a version someone can open says that. A first session that breaks does not close the company: the action is rewritten.",
+        ],
+      },
+      {
+        heading: "What gets cut",
+        paragraphs: [
+          "Write the list, then remove everything that is not required for the person in a hurry to start today. Reports, large-account roles, a marketplace wait. Stay with that person's problem, not with the first screen a competitor shows.",
+          "No public price for an MVP. No promise of a fixed number of weeks: often several weeks, according to the roles. Casablanca, Technopark. No other office. The delivered code and hosting return to the company that orders.",
+        ],
+      },
+      {
+        heading: "What is not copied",
+        paragraphs: [
+          "Coco Inbox is a published product, with a precise use. It is not a generic MVP to copy. Its figures are not published, nor a target of one hundred users, nor a target of one hundred thousand. Those frames come from elsewhere. They are not Byte Force results.",
+          "An MVP is not sold as a discount. It is a version. The next one is written when this one is used, not when the wish list returns.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write if the SaaS is still a list, or if a version exists and nobody finishes the action. Say this week's action, and what waits.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Name the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
