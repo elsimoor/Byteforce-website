@@ -3215,6 +3215,101 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "application-mobile-sur-mesure",
+    title: "Application mobile sur mesure",
+    description:
+      "Une application mobile sur mesure suit un geste, pas un modèle de store. Android, iOS, ou les deux. Casablanca. Pas de prix public.",
+    h1: "Application mobile sur mesure",
+    date: "2026-10-08",
+    lede: "Une application mobile sur mesure suit le geste de l'entreprise sur le téléphone, pas un modèle déjà publié sur un store. Byte Force l'écrit depuis Casablanca. Pas de prix public. [[/contact|Écrire]] pour nommer ce geste, et un store ou deux.",
+    sections: [
+      {
+        heading: "Sur mesure, sur un téléphone",
+        paragraphs: [
+          "Sur mesure veut dire les écrans que la personne ouvre, les rôles qui existent, et le store qui correspond au geste. L'offre métier est l'[[/developpement-application-mobile-maroc/application-metier|application mobile métier]]. Le [[/developpement-application-mobile-maroc|cadre]] reste le développement mobile. Un thème d'application avec un logo n'est pas ce travail.",
+          "Zainek suit un rendez-vous beauté. Tourispeak suit une visite audio. On ne les recolle pas sur un autre métier, et on ne publie pas leurs chiffres comme une preuve universelle.",
+        ],
+      },
+      {
+        heading: "Ce qui entre dans la première version",
+        paragraphs: [
+          "Le geste. Pas la liste des fonctions vues chez un concurrent. Android ou iOS se décide avec le geste, pas avec une mode. Les deux stores ensemble sont un périmètre plus large, écrit comme tel. Un compte développeur ouvert pour le projet est dans le périmètre.",
+          "Périmètre écrit, acompte, code livré. Pas de délai fixe : souvent plusieurs semaines. Casablanca, Technopark, boulevard Dammam. Pas d'autre bureau. Pas de grille.",
+        ],
+      },
+      {
+        heading: "Ce que sur mesure ne veut pas dire",
+        paragraphs: [
+          "Pas « tout le métier dans le téléphone ». La paie, le stock et le site public peuvent rester ailleurs. Pas non plus une application que l'éditeur peut fermer : à la remise, le code et les comptes livrés sont à l'entreprise.",
+          "Le premier échange peut conclure qu'une application web suffit, ou qu'un outil du marché suffit. Dire non fait partie du travail. Trente minutes, gratuites.",
+        ],
+      },
+      {
+        heading: "Ce qui revient à l'entreprise",
+        paragraphs: [
+          "À la remise, le client possède le code et les comptes livrés pour le projet, y compris le compte du store s'il a été ouvert pour cette application. Ce n'est pas un accès que Byte Force garde pour publier à sa place indéfiniment. Un changement de périmètre, un écran de plus ou un second store, est écrit avant d'être construit.",
+          "Il n'y a pas de note de store promise, ni un rang, ni un nombre de téléchargements. Zainek et Tourispeak montrent que des applications Android peuvent être en ligne. Ils ne montrent pas le prix de la suivante, et ils ne montrent pas que toute entreprise a besoin du même écran.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste se fait loin d'un bureau et qu'aucun modèle de store ne le porte sans le tordre. Apporter un exemple : un rendez-vous, une visite, une validation.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire l'exemple]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Nommer le geste" },
+      { href: "/developpement-application-mobile-maroc/application-metier", label: "L'application mobile métier" },
+      { href: "/developpement-application-mobile-maroc", label: "Le développement mobile" },
+    ],
+    en: {
+      title: "A custom mobile app",
+      description:
+        "A custom mobile app follows one action, not a store template. Android, iOS, or both. Casablanca. No public price.",
+      h1: "A custom mobile app",
+      lede: "A custom mobile app follows the company's action on the phone, not a template already published on a store. Byte Force writes it from Casablanca. No public price. [[/contact|Write]] and name that action, and one store or two.",
+      sections: [
+      {
+        heading: "Custom, on a phone",
+        paragraphs: [
+          "Custom means the screens the person opens, the roles that exist, and the store that matches the action. The trade offer is the trade mobile app. The frame remains mobile development. An app theme with a logo is not this work.",
+          "Zainek follows a beauty appointment. Tourispeak follows an audio visit. They are not pasted onto another trade, and their figures are not published as universal proof.",
+        ],
+      },
+      {
+        heading: "What enters the first version",
+        paragraphs: [
+          "The action. Not the feature list seen at a competitor. Android or iOS is decided with the action, not with a fashion. Both stores together are a wider scope, written as such. A developer account opened for the project is in the scope.",
+          "A written scope, a deposit, the code delivered. No fixed schedule: often several weeks. Casablanca, Technopark, boulevard Dammam. No other office. No grid.",
+        ],
+      },
+      {
+        heading: "What custom does not mean",
+        paragraphs: [
+          "Not « the whole trade on the phone ». Payroll, stock and the public site can stay elsewhere. Not an app a vendor can close either: at handover, the code and the delivered accounts belong to the company.",
+          "The first conversation can end with a web application being enough, or a market tool being enough. Saying no is part of the work. Thirty minutes, free.",
+        ],
+      },
+      {
+        heading: "What the company keeps",
+        paragraphs: [
+          "At handover, the client owns the code and the accounts delivered for the project, including the store account if it was opened for this app. It is not an access Byte Force keeps in order to publish in their place forever. A scope change, one more screen or a second store, is written before it is built.",
+          "No store rating is promised, nor a rank, nor a download count. Zainek and Tourispeak show that Android apps can be online. They do not show the price of the next one, and they do not show that every company needs the same screen.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action happens away from a desk and no store template carries it without bending it. Bring an example: an appointment, a visit, an approval.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the example]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
