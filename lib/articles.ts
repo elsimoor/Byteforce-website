@@ -2148,6 +2148,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "comment-choisir-un-crm",
+    title: "Comment choisir un CRM pour son entreprise",
+    description:
+      "Comment choisir un CRM pour son entreprise : par le cycle réel, pas par le nombre de modules. Casablanca. Pas de grille, pas de classement.",
+    h1: "Comment choisir un CRM pour son entreprise",
+    date: "2026-10-08",
+    lede: "Comment choisir un CRM pour son entreprise : écrire les étapes du dossier, puis voir si un outil déjà vendu les porte. S'il les porte, on le garde. S'il faut les tordre, on écrit. Byte Force, à Casablanca, ne classe pas les éditeurs. Pas de prix public. [[/contact|Écrire]] avec les étapes.",
+    sections: [
+      {
+        heading: "La liste qui décide",
+        paragraphs: [
+          "La liste tient en peu de lignes. Qui crée le dossier. Quelles étapes il traverse. Qui relance. Quel outil déjà payé doit rester. Si cette liste rentre dans un CRM du marché, le choix est fait : on l'achète, on ne le réécrit pas. Le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM sur mesure]] est le choix d'après, quand une étape ne rentre pas.",
+          "Choisir par le nombre de modules, par une étoile, ou par le logo du voisin ne dit rien du dossier. Byte Force ne publie pas de classement. [[/solutions/logiciel-entreprise|Une entreprise déjà outillée]] part de ce qui reste, pas d'une page blanche.",
+        ],
+      },
+      {
+        heading: "Les mauvaises questions",
+        paragraphs: [
+          "« Lequel est le moins cher » n'a pas de réponse ici : il n'y a pas de grille, ni pour un abonnement tiers, ni pour un développement. « Lequel a le plus de fonctions » élargit le périmètre sans rendre la relance plus sûre. « Lequel est fait pour le Maroc » n'est pas un critère : le bureau est à Casablanca, le cycle est celui de l'entreprise.",
+          "Le Technopark, boulevard Dammam, Aïn Chock, permet de lire la liste ensemble. Pas de bureau en France ni au Canada. La proximité ne choisit pas le CRM à votre place.",
+        ],
+      },
+      {
+        heading: "Si le choix est d'écrire",
+        paragraphs: [
+          "On écrit les étapes retenues, pas la liste de souhaits. Première version : créer, avancer, relancer. Acompte après périmètre. Code, dépôt et hébergement livré à l'entreprise. Pas de délai fixe : souvent plusieurs semaines. Un changement est écrit avant d'être construit.",
+          "On ne promet pas que l'écriture bat un éditeur sur un tableau. On promet que le périmètre sera le cycle nommé. Rien d'autre n'est un fait.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire avec la liste, même courte, et le nom de l'outil actuel s'il y en a un. Le premier échange peut conclure d'acheter, de garder, ou d'écrire. Les trois sont des réponses.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Envoyer la liste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Apporter les étapes" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM sur mesure" },
+      { href: "/solutions/logiciel-entreprise", label: "Une entreprise déjà outillée" },
+    ],
+    en: {
+      title: "How to choose a CRM for a company",
+      description:
+        "Choose a CRM for a company from the real cycle, not from a module count. Casablanca. No grid and no ranking.",
+      h1: "How to choose a CRM for a company",
+      lede: "How to choose a CRM for a company: write the steps of the file, then see if a tool already on sale carries them. If it does, keep it. If they must be bent, write. Byte Force, in Casablanca, does not rank vendors. No public price. [[/contact|Write]] with the steps.",
+      sections: [
+      {
+        heading: "The list that decides",
+        paragraphs: [
+          "The list is short. Who creates the file. Which steps it crosses. Who follows up. Which tool already paid for must stay. If that list fits a market CRM, the choice is made: buy it, do not rewrite it. A custom CRM is the next choice, when a step does not fit.",
+          "Choosing by the number of modules, by a star, or by a neighbour's logo says nothing about the file. Byte Force does not publish a ranking. A company that already has tools starts from what stays, not from a blank page.",
+        ],
+      },
+      {
+        heading: "The wrong questions",
+        paragraphs: [
+          "« Which is cheapest » has no answer here: there is no grid, neither for a third-party subscription nor for development. « Which has the most features » widens the scope without making the follow-up safer. « Which is made for Morocco » is not a criterion: the office is in Casablanca, the cycle is the company's.",
+          "Technopark, boulevard Dammam, Aïn Chock, lets the list be read together. No office in France or Canada. Being nearby does not choose the CRM for you.",
+        ],
+      },
+      {
+        heading: "If the choice is to write",
+        paragraphs: [
+          "The steps that were kept are written, not the wish list. First version: create, move, follow up. A deposit after the scope. Code, repository and delivered hosting to the company. No fixed schedule: often several weeks. A change is written before it is built.",
+          "There is no promise that writing beats a vendor on a chart. The promise is that the scope will be the cycle that was named. Nothing else is a fact.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write with the list, even a short one, and the name of the current tool if there is one. The first conversation can end with buy, keep, or write. All three are answers.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Send the list]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
