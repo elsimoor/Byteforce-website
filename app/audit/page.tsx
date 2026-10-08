@@ -45,7 +45,7 @@ export default async function AuditPage({ searchParams }: Props) {
       </p>
       <h1 className="display mt-6 max-w-[11ch] text-[clamp(3.2rem,8vw,6.8rem)]">Audit gratuit.</h1>
       <p className="mt-8 max-w-md text-lg leading-relaxed">
-        On lit l&apos;accueil, puis les fichiers, le domaine, et quelques pages liées. Gratuit, sans compte.
+        On lit si le site fonctionne, s&apos;il peut être trouvé, compris par une machine, et s&apos;il mène à une demande. Gratuit, sans compte.
       </p>
       {target ? <AuditRun url={target} /> : <AuditForm initial={raw} />}
       {error ? (

@@ -1,20 +1,48 @@
 import { lookup } from "node:dns/promises";
 import { isIP } from "node:net";
+import tls from "node:tls";
+import { buildFindings, type AuditFacts } from "@/lib/audit/findings";
 
 export type AuditState = "running" | "pass" | "warn" | "fail";
+export type AuditDimension = "Technique" | "Performance" | "SEO" | "Accessibilité" | "GEO" | "Conversion";
+export type AuditImpact = "aucun" | "faible" | "moyen" | "élevé";
+export type AuditEffort = "court" | "moyen" | "long";
 
 export type AuditStep = {
   id: string;
   chapter: string;
+  dimension: AuditDimension;
   label: string;
   state: AuditState;
   detail: string;
+  why: string;
+  impact: AuditImpact;
+  action: string;
+  effort: AuditEffort;
 };
 
 const MAX_HTML = 1_500_000;
 
-function step(id: string, chapter: string, label: string, state: AuditState, detail = ""): AuditStep {
-  return { id, chapter, label, state, detail };
+function step(
+  id: string,
+  chapter: string,
+  label: string,
+  state: AuditState,
+  detail = "",
+  extra: Partial<Pick<AuditStep, "dimension" | "why" | "impact" | "action" | "effort">> = {},
+): AuditStep {
+  return {
+    id,
+    chapter,
+    dimension: extra.dimension ?? "Technique",
+    label,
+    state,
+    detail,
+    why: extra.why ?? "",
+    impact: extra.impact ?? "faible",
+    action: extra.action ?? "",
+    effort: extra.effort ?? "court",
+  };
 }
 
 export function parseAuditUrl(raw: string): URL {
@@ -88,10 +116,6 @@ function attrs(tag: string) {
   return found;
 }
 
-function textOf(html: string) {
-  return decode(html.replace(/<[^>]+>/g, " "));
-}
-
 async function readLimited(response: Response) {
   const reader = response.body?.getReader();
   if (!reader) return "";
@@ -110,6 +134,7 @@ async function readLimited(response: Response) {
 async function fetchPage(start: URL) {
   let current = start;
   const started = Date.now();
+  let hops = 0;
   for (let hop = 0; hop < 5; hop += 1) {
     await assertPublicHost(current);
     const response = await fetch(current, {
@@ -125,6 +150,7 @@ async function fetchPage(start: URL) {
       await response.body?.cancel().catch(() => undefined);
       if (!location) throw new Error("Redirection sans adresse.");
       current = parseAuditUrl(new URL(location, current).href);
+      hops += 1;
       continue;
     }
     const type = response.headers.get("content-type") ?? "";
@@ -138,48 +164,22 @@ async function fetchPage(start: URL) {
       html,
       robots,
       type,
+      hops,
+      bytes: html.length,
+      cookies: typeof response.headers.getSetCookie === "function" ? response.headers.getSetCookie() : [],
       hsts: response.headers.get("strict-transport-security") ?? "",
       nosniff: response.headers.get("x-content-type-options") ?? "",
-      frame: response.headers.get("x-frame-options") ?? response.headers.get("content-security-policy") ?? "",
+      frame: response.headers.get("x-frame-options") ?? "",
+      csp: response.headers.get("content-security-policy") ?? "",
+      referrer: response.headers.get("referrer-policy") ?? "",
+      permissions: response.headers.get("permissions-policy") ?? "",
+      coop: response.headers.get("cross-origin-opener-policy") ?? "",
+      corp: response.headers.get("cross-origin-resource-policy") ?? "",
+      server: response.headers.get("server") ?? "",
+      powered: response.headers.get("x-powered-by") ?? "",
     };
   }
   throw new Error("Trop de redirections.");
-}
-
-function schemaTypes(html: string) {
-  const types: string[] = [];
-  let invalid = false;
-  for (const match of html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
-    try {
-      const walk = (node: unknown) => {
-        if (Array.isArray(node)) {
-          node.forEach(walk);
-          return;
-        }
-        if (!node || typeof node !== "object") return;
-        const record = node as Record<string, unknown>;
-        if (record["@type"]) {
-          const value = record["@type"];
-          types.push(Array.isArray(value) ? value.map(String).join("/") : String(value));
-        }
-        Object.values(record).forEach(walk);
-      };
-      walk(JSON.parse(match[1]));
-    } catch {
-      invalid = true;
-    }
-  }
-  return { types: [...new Set(types)].slice(0, 6), invalid };
-}
-
-function headingNote(html: string) {
-  const levels = [...html.matchAll(/<h([1-6])\b/gi)].map((match) => Number(match[1]));
-  if (!levels.length) return { state: "fail" as const, detail: "Aucun titre H1–H6." };
-  const jump = levels.findIndex((level, index) => index > 0 && level > levels[index - 1] + 1);
-  const counts = [1, 2, 3].map((level) => `${levels.filter((item) => item === level).length} H${level}`).join(", ");
-  if (levels[0] !== 1) return { state: "warn" as const, detail: `Le premier titre est un H${levels[0]}. ${counts}.` };
-  if (jump >= 0) return { state: "warn" as const, detail: `H${levels[jump]} suit H${levels[jump - 1]}. ${counts}.` };
-  return { state: "pass" as const, detail: counts };
 }
 
 function wordCount(html: string) {
@@ -267,225 +267,193 @@ async function fetchStatus(start: URL) {
   return { status: response.status, location };
 }
 
-function judge(
-  html: string,
-  robotsHeader: string,
-  finalUrl: URL,
-  headers: { hsts: string; nosniff: string; frame: string },
-): AuditStep[] {
-  const chapter = "Page";
-  const title = decode((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] ?? "");
-  const lang = (html.match(/<html[^>]*\slang=["']([^"']+)/i) || [])[1] ?? "";
-  const meta: Record<string, string> = {};
-  for (const match of html.matchAll(/<meta\s[^>]*>/gi)) {
-    const tag = attrs(match[0]);
-    const key = (tag.name || tag.property || "").toLowerCase();
-    if (key && tag.content !== undefined) meta[key] = tag.content;
-  }
-  let canonical = "";
-  let icon = false;
-  for (const match of html.matchAll(/<link\s[^>]*>/gi)) {
-    const tag = attrs(match[0]);
-    const rel = (tag.rel ?? "").toLowerCase();
-    if (rel === "canonical" && tag.href) canonical = tag.href;
-    if (rel.split(/\s+/).includes("icon")) icon = true;
-  }
-  const h1 = [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/gi)].map((match) => textOf(match[1])).filter(Boolean);
-  const images = [...html.matchAll(/<img\b[^>]*>/gi)];
-  const missingAlt = images.filter((match) => !/\balt\s*=/.test(match[0])).length;
-  const schema = schemaTypes(html);
-  const headings = headingNote(html);
-  const viewport = meta.viewport ?? "";
-  const description = meta.description ?? "";
-  const robots = `${meta.robots ?? ""} ${robotsHeader}`.toLowerCase();
-  const words = wordCount(html);
-  const insecureLinks = [...html.matchAll(/href=["']http:\/\//gi)].length;
-  const socialBits = [
-    meta["og:title"] ? "titre" : "",
-    meta["og:description"] ? "description" : "",
-    meta["og:image"] ? "image" : "",
-  ].filter(Boolean);
-  const headerBits = [headers.hsts ? "HSTS" : "", /nosniff/i.test(headers.nosniff) ? "nosniff" : "", headers.frame ? "cadre" : ""].filter(Boolean);
-
-  const titleState: AuditState = !title ? "fail" : title.length < 15 || title.length > 70 ? "warn" : "pass";
-  const descriptionState: AuditState = !description ? "fail" : description.length < 50 || description.length > 170 ? "warn" : "pass";
-  const h1State: AuditState = h1.length === 1 ? "pass" : h1.length === 0 ? "fail" : "warn";
-  const indexState: AuditState = /noindex/.test(robots) ? "fail" : canonical ? "pass" : "warn";
-  const imageState: AuditState = images.length === 0 ? "pass" : missingAlt === 0 ? "pass" : missingAlt * 2 >= images.length ? "fail" : "warn";
-  const schemaState: AuditState = schema.invalid ? "warn" : schema.types.length ? "pass" : "warn";
-
-  return [
-    step("title", chapter, "Titre", titleState, title ? `${title.length} caractères. ${title}` : "La page n'a pas de titre."),
-    step("description", chapter, "Description", descriptionState, description ? `${description.length} caractères.` : "Aucune meta description."),
-    step("h1", chapter, "Titre visible", h1State, h1.length === 1 ? h1[0] : h1.length === 0 ? "Aucun H1." : `${h1.length} titres H1.`),
-    step("headings", chapter, "Ordre des titres", headings.state, headings.detail),
-    step("index", chapter, "Indexation", indexState, /noindex/.test(robots) ? "La page demande à ne pas être indexée." : canonical ? canonical : "Pas de lien canonique."),
-    step("social", chapter, "Partage", socialBits.length === 3 ? "pass" : socialBits.length ? "warn" : "fail", socialBits.length ? `Open Graph : ${socialBits.join(", ")}.` : "Pas de titre, description, ni image de partage."),
-    step("language", chapter, "Langue", lang ? "pass" : "warn", lang ? `lang="${lang}".` : "La langue de la page n'est pas déclarée."),
-    step("mobile", chapter, "Mobile", /width\s*=\s*device-width/i.test(viewport) ? "pass" : "fail", viewport ? viewport : "Pas de balise viewport."),
-    step("icon", chapter, "Icône", icon ? "pass" : "warn", icon ? "Une icône est déclarée." : "Pas de favicon dans la page."),
-    step("images", chapter, "Images", imageState, images.length === 0 ? "Aucune image sur la page." : missingAlt === 0 ? `${images.length} images avec un attribut alt.` : `${missingAlt} image${missingAlt > 1 ? "s" : ""} sans attribut alt.`),
-    step(
-      "https",
-      chapter,
-      "HTTPS",
-      finalUrl.protocol === "https:" ? (insecureLinks ? "warn" : "pass") : "fail",
-      finalUrl.protocol === "https:" ? (insecureLinks ? `${insecureLinks} lien${insecureLinks > 1 ? "s" : ""} encore en http.` : "La page est servie en https.") : "La page finale est encore en http.",
-    ),
-    step("headers", chapter, "En-têtes", headerBits.length >= 2 ? "pass" : "warn", headerBits.length ? headerBits.join(", ") + "." : "Pas de HSTS, nosniff, ni protection de cadre."),
-    step("text", chapter, "Texte", words >= 250 ? "pass" : words >= 120 ? "warn" : "fail", `${words} mots hors menus.`),
-    step("schema", chapter, "Données structurées", schemaState, schema.invalid ? "Un JSON-LD est présent, mais illisible." : schema.types.length ? schema.types.join(", ") + "." : "Pas de JSON-LD sur cette page."),
-  ];
-}
-
-async function* filesAndHost(pageUrl: URL, html: string): AsyncGenerator<AuditStep> {
-  yield step("robots", "Fichiers", "robots.txt", "running", "Lecture du fichier.");
-  try {
-    const robots = await fetchText(new URL("/robots.txt", pageUrl.origin), 80_000);
-    const blocksHome = /disallow:\s*\/\s*$/im.test(robots.text);
-    const hasAgent = /user-agent:/i.test(robots.text);
-    const pointsSitemap = /sitemap:/i.test(robots.text);
-    const state: AuditState = robots.status !== 200 ? "fail" : blocksHome ? "warn" : hasAgent ? "pass" : "warn";
-    const detail =
-      robots.status !== 200
-        ? `Réponse ${robots.status || "vide"}.`
-        : blocksHome
-          ? "Le fichier bloque la racine du site."
-          : `${hasAgent ? "Règles présentes" : "Peu de règles"}${pointsSitemap ? ", avec un sitemap" : ""}.`;
-    yield step("robots", "Fichiers", "robots.txt", state, detail);
-  } catch {
-    yield step("robots", "Fichiers", "robots.txt", "fail", "Le fichier ne répond pas.");
-  }
-
-  yield step("sitemap", "Fichiers", "Sitemap", "running", "Comptage des adresses.");
-  try {
-    const sitemap = await fetchText(new URL("/sitemap.xml", pageUrl.origin));
-    const locs = sitemap.text.match(/<loc>/gi)?.length ?? 0;
-    const indexes = sitemap.text.match(/<sitemap[\s>]/gi)?.length ?? 0;
-    const lastmods = sitemap.text.match(/<lastmod>/gi)?.length ?? 0;
-    if (sitemap.status !== 200) {
-      yield step("sitemap", "Fichiers", "Sitemap", "warn", `Pas de sitemap à la racine (${sitemap.status || "sans réponse"}).`);
-    } else if (indexes && !sitemap.text.includes("<url>")) {
-      yield step("sitemap", "Fichiers", "Sitemap", locs ? "pass" : "warn", `Index de ${locs} sitemap${locs > 1 ? "s" : ""}.`);
-    } else if (!locs) {
-      yield step("sitemap", "Fichiers", "Sitemap", "fail", "Le fichier répond, sans adresse.");
-    } else {
-      yield step("sitemap", "Fichiers", "Sitemap", "pass", `${locs} adresse${locs > 1 ? "s" : ""}${lastmods ? `, ${lastmods} avec une date` : ""}.`);
-    }
-  } catch {
-    yield step("sitemap", "Fichiers", "Sitemap", "warn", "Le sitemap ne répond pas.");
-  }
-
-  const otherHost = pageUrl.hostname.startsWith("www.") ? pageUrl.hostname.slice(4) : `www.${pageUrl.hostname}`;
-  yield step("host", "Domaine", "www", "running", `Lecture de ${otherHost}.`);
-  try {
-    const other = new URL(pageUrl.href);
-    other.hostname = otherHost;
-    const probe = await fetchStatus(other);
-    const locationHost = probe.location ? new URL(probe.location, other).hostname : "";
-    const redirectsHome = probe.status >= 300 && probe.status < 400 && sameSite(locationHost, pageUrl.hostname);
-    yield step(
-      "host",
-      "Domaine",
-      "www",
-      redirectsHome ? "pass" : probe.status === 200 ? "warn" : "warn",
-      redirectsHome ? `${otherHost} renvoie vers le site.` : probe.status === 200 ? `${otherHost} répond aussi, sans redirection.` : `${otherHost} répond ${probe.status || "sans code"}.`,
-    );
-  } catch {
-    yield step("host", "Domaine", "www", "warn", `${otherHost} ne répond pas.`);
-  }
-
-  if (pageUrl.protocol === "https:") {
-    yield step("http", "Domaine", "HTTP", "running", "Vérification du passage vers https.");
-    try {
-      const httpUrl = new URL(pageUrl.href);
-      httpUrl.protocol = "http:";
-      const probe = await fetchStatus(httpUrl);
-      const secure = probe.status >= 300 && probe.status < 400 && probe.location.startsWith("https://");
-      yield step("http", "Domaine", "HTTP", secure ? "pass" : probe.status === 200 ? "fail" : "warn", secure ? "Le http renvoie vers le https." : probe.status === 200 ? "La page reste disponible en http." : `Réponse ${probe.status || "vide"}.`);
-    } catch {
-      yield step("http", "Domaine", "HTTP", "warn", "Le http ne répond pas.");
-    }
-  }
-
-  yield step("missing", "Domaine", "Page absente", "running", "Demande d'une adresse qui n'existe pas.");
-  try {
-    const missing = new URL(`/byteforce-audit-absent-${Date.now().toString(36)}`, pageUrl.origin);
-    const probe = await fetchStatus(missing);
-    yield step("missing", "Domaine", "Page absente", probe.status === 404 ? "pass" : "warn", probe.status === 404 ? "Une adresse inconnue répond 404." : `Une adresse inconnue répond ${probe.status}.`);
-  } catch {
-    yield step("missing", "Domaine", "Page absente", "warn", "La demande n'a pas abouti.");
-  }
-
-  const links = internalTargets(html, pageUrl);
-  if (!links.length) {
-    yield step("links", "Liens", "Pages liées", "warn", "Aucun lien interne sur l'accueil.");
-    return;
-  }
-  for (const [index, link] of links.entries()) {
-    const id = `link-${index}`;
-    const label = link.pathname === "/" ? link.hostname : link.pathname;
-    yield step(id, "Liens", label, "running", "Lecture de la page.");
-    try {
-      const linked = await fetchPage(link);
-      if (!linked.html) {
-        yield step(id, "Liens", label, "warn", linked.status ? `Réponse ${linked.status}, sans page HTML.` : "Pas de page HTML.");
-        continue;
-      }
-      const linkedTitle = decode((linked.html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] ?? "");
-      const noindex = /noindex/i.test(linked.robots) || /<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(linked.html);
-      const words = wordCount(linked.html);
-      const state: AuditState = linked.status < 200 || linked.status >= 300 ? "fail" : !linkedTitle || words < 120 ? "warn" : "pass";
-      yield step(
-        id,
-        "Liens",
-        label,
-        state,
-        `${linked.status} · ${words} mots${linkedTitle ? ` · ${linkedTitle}` : ""}${noindex ? " · noindex" : ""}.`,
-      );
-    } catch {
-      yield step(id, "Liens", label, "fail", "La page ne répond pas.");
-    }
-  }
-}
-
 export async function* auditPage(raw: string): AsyncGenerator<AuditStep> {
-  yield step("address", "Arrivée", "Adresse", "running", "Vérification.");
+  yield step("address", "Technique", "Adresse", "running", "Vérification.", { dimension: "Technique", impact: "élevé", effort: "court" });
   let url: URL;
   try {
     url = parseAuditUrl(raw);
     await assertPublicHost(url);
   } catch (error) {
-    yield step("address", "Arrivée", "Adresse", "fail", error instanceof Error ? error.message : "Adresse refusée.");
+    yield step("address", "Technique", "Adresse", "fail", error instanceof Error ? error.message : "Adresse refusée.", {
+      dimension: "Technique",
+      why: "Sans une adresse publique, il n'y a pas de site à lire.",
+      impact: "élevé",
+      action: "Indiquer l'adresse https du site.",
+      effort: "court",
+    });
     return;
   }
-  yield step("address", "Arrivée", "Adresse", "pass", url.hostname);
+  yield step("address", "Technique", "Adresse", "pass", url.hostname, {
+    dimension: "Technique",
+    why: "L'adresse est publique. La suite peut la lire.",
+    impact: "faible",
+    action: "Garder cette adresse comme canonique.",
+    effort: "court",
+  });
 
-  yield step("response", "Arrivée", "La page répond", "running", "Lecture de la page d'accueil.");
+  yield step("response", "Technique", "La page répond", "running", "Lecture de la page d'accueil.", { dimension: "Technique" });
   let page: Awaited<ReturnType<typeof fetchPage>>;
   try {
     page = await fetchPage(url);
   } catch (error) {
     const message = error instanceof Error && error.name === "TimeoutError" ? "Pas de réponse dans le délai." : "Le site ne répond pas.";
-    yield step("response", "Arrivée", "La page répond", "fail", message);
+    yield step("response", "Technique", "La page répond", "fail", message, {
+      dimension: "Technique",
+      why: "Si la page ne répond pas, aucun visiteur ni aucun moteur ne la lit.",
+      impact: "élevé",
+      action: "Rétablir la réponse de l'accueil avant le reste.",
+      effort: "moyen",
+    });
     return;
   }
 
   const moved = page.url.href.replace(/\/$/, "") !== url.href.replace(/\/$/, "");
   if (!page.html) {
-    yield step("response", "Arrivée", "La page répond", "fail", page.status ? `Réponse ${page.status}, sans page HTML.` : "Pas de page HTML.");
+    yield step("response", "Technique", "La page répond", "fail", page.status ? `Réponse ${page.status}, sans page HTML.` : "Pas de page HTML.", {
+      dimension: "Technique",
+      why: "Une réponse sans page ne peut ni se lire ni convertir.",
+      impact: "élevé",
+      action: "Servir le HTML de l'accueil.",
+      effort: "moyen",
+    });
     return;
   }
   const responseState: AuditState = page.status >= 200 && page.status < 300 ? "pass" : "fail";
   yield step(
     "response",
-    "Arrivée",
+    "Technique",
     "La page répond",
     responseState,
     `${page.status} en ${page.ms} ms${moved ? `. Arrivée sur ${page.url.hostname}` : ""}.`,
+    {
+      dimension: "Technique",
+      why: "C'est la porte d'entrée. Le temps détaillé est dans Performance.",
+      impact: responseState === "pass" ? "faible" : "élevé",
+      action: responseState === "pass" ? "Garder cette réponse." : "Corriger le code de réponse de l'accueil.",
+      effort: "moyen",
+    },
   );
   if (responseState === "fail") return;
 
-  for (const item of judge(page.html, page.robots, page.url, page)) yield item;
-  yield* filesAndHost(page.url, page.html);
+  yield step("suite", "Technique", "Suite de la lecture", "running", "Fichiers, domaine, et jusqu'à trois pages liées.", {
+    dimension: "Technique",
+    why: "Le rapport a besoin de plus que l'accueil pour dire si le site peut être trouvé et contacté.",
+    impact: "faible",
+    action: "",
+    effort: "court",
+  });
+
+  const facts = await collectFacts(page);
+  yield step("suite", "Technique", "Suite de la lecture", "pass", "Fichiers, domaine et pages liées ont été lus.", {
+    dimension: "Technique",
+    why: "Ces lectures alimentent les conclusions. Ce n'est pas encore tout le site.",
+    impact: "aucun",
+    action: "",
+    effort: "court",
+  });
+  for (const item of buildFindings(facts)) yield item;
+}
+
+function certDays(host: string) {
+  return new Promise<number | null>((resolve) => {
+    const socket = tls.connect({ host, port: 443, servername: host, timeout: 8_000 }, () => {
+      const cert = socket.getPeerCertificate();
+      socket.end();
+      if (!cert || !cert.valid_to) {
+        resolve(null);
+        return;
+      }
+      resolve(Math.round((new Date(cert.valid_to).getTime() - Date.now()) / 86_400_000));
+    });
+    socket.on("error", () => resolve(null));
+    socket.on("timeout", () => {
+      socket.destroy();
+      resolve(null);
+    });
+  });
+}
+
+async function collectFacts(page: Awaited<ReturnType<typeof fetchPage>>): Promise<AuditFacts> {
+  const origin = page.url.origin;
+  const robotsTxt = await fetchText(new URL("/robots.txt", origin), 80_000).catch(() => ({ status: 0, text: "", url: page.url }));
+  const sitemapRaw = await fetchText(new URL("/sitemap.xml", origin)).catch(() => ({ status: 0, text: "", url: page.url }));
+  const locs = sitemapRaw.text.match(/<loc>/gi)?.length ?? 0;
+  const otherHost = page.url.hostname.startsWith("www.") ? page.url.hostname.slice(4) : `www.${page.url.hostname}`;
+  let host = { otherHost, status: 0, redirectsHome: false };
+  try {
+    const other = new URL(page.url.href);
+    other.hostname = otherHost;
+    const probe = await fetchStatus(other);
+    const locationHost = probe.location ? new URL(probe.location, other).hostname : "";
+    host = {
+      otherHost,
+      status: probe.status,
+      redirectsHome: probe.status >= 300 && probe.status < 400 && sameSite(locationHost, page.url.hostname),
+    };
+  } catch {
+    host = { otherHost, status: 0, redirectsHome: false };
+  }
+  let http: AuditFacts["http"] = null;
+  if (page.url.protocol === "https:") {
+    try {
+      const httpUrl = new URL(page.url.href);
+      httpUrl.protocol = "http:";
+      const probe = await fetchStatus(httpUrl);
+      http = { status: probe.status, secure: probe.status >= 300 && probe.status < 400 && probe.location.startsWith("https://") };
+    } catch {
+      http = { status: 0, secure: false };
+    }
+  }
+  let missingStatus = 0;
+  try {
+    missingStatus = (await fetchStatus(new URL(`/byteforce-audit-absent-${Date.now().toString(36)}`, origin))).status;
+  } catch {
+    missingStatus = 0;
+  }
+  const llms = await fetchText(new URL("/llms.txt", origin), 80_000).catch(() => ({ status: 0, text: "", url: page.url }));
+  const links = [];
+  for (const link of internalTargets(page.html, page.url)) {
+    try {
+      const linked = await fetchPage(link);
+      const linkedTitle = decode((linked.html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] ?? "");
+      links.push({ path: link.pathname || "/", status: linked.status, title: linkedTitle, words: wordCount(linked.html) });
+    } catch {
+      links.push({ path: link.pathname || "/", status: 0, title: "", words: 0 });
+    }
+  }
+  return {
+    status: page.status,
+    ms: page.ms,
+    hops: page.hops,
+    bytes: page.bytes,
+    html: page.html,
+    finalUrl: page.url,
+    headers: {
+      robots: page.robots,
+      hsts: page.hsts,
+      nosniff: page.nosniff,
+      frame: page.frame,
+      csp: page.csp,
+      referrer: page.referrer,
+      permissions: page.permissions,
+      coop: page.coop,
+      corp: page.corp,
+      server: page.server,
+      powered: page.powered,
+    },
+    cookies: page.cookies,
+    certDays: page.url.protocol === "https:" ? await certDays(page.url.hostname) : null,
+    robotsTxt: { status: robotsTxt.status, text: robotsTxt.text },
+    sitemap: {
+      status: sitemapRaw.status,
+      locs,
+      lastmods: sitemapRaw.text.match(/<lastmod>/gi)?.length ?? 0,
+      index: /<sitemap[\s>]/i.test(sitemapRaw.text) && !/<url[\s>]/i.test(sitemapRaw.text),
+    },
+    host,
+    http,
+    missingStatus,
+    llms: { status: llms.status, text: llms.text },
+    links,
+  };
 }

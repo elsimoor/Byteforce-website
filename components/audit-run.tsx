@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { dimensionScore, dimensions, overallScore, priorities, scoreLabel, takeaways } from "@/lib/audit/score";
 import type { AuditStep } from "@/lib/site-audit";
 
-const chapters = ["Arrivée", "Page", "Fichiers", "Domaine", "Liens"];
+const chapters = dimensions;
 const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function mark(state: AuditStep["state"]) {
@@ -56,7 +57,7 @@ export function AuditRun({ url }: { url: string }) {
               next[index] = item;
               return next;
             });
-            if (!reduced && item.state !== "running") await pause(420);
+            if (!reduced && item.state !== "running") await pause(280);
           }
         }
         if (!cancelled) setDone(true);
@@ -73,11 +74,16 @@ export function AuditRun({ url }: { url: string }) {
   }, [url]);
 
   const settled = steps.filter((step) => step.state !== "running");
-  const open = settled.filter((step) => step.state === "warn" || step.state === "fail");
-  const held = settled.filter((step) => step.state === "pass").length;
-  const warned = settled.filter((step) => step.state === "warn").length;
-  const failed = settled.filter((step) => step.state === "fail").length;
-  const visible = chapters.filter((chapter) => steps.some((step) => step.chapter === chapter));
+  const shown = settled.filter((step) => step.id !== "suite");
+  const open = shown.filter((step) => step.state === "warn" || step.state === "fail");
+  const held = shown.filter((step) => step.state === "pass").length;
+  const warned = shown.filter((step) => step.state === "warn").length;
+  const failed = shown.filter((step) => step.state === "fail").length;
+  const listed = steps.filter((step) => step.id !== "suite");
+  const visible = chapters.filter((chapter) => listed.some((step) => step.chapter === chapter));
+  const score = overallScore(shown);
+  const nextSteps = priorities(shown);
+  const headlines = takeaways(shown);
   const tallest = Math.max(held, warned, failed, 1);
 
   return (
@@ -101,7 +107,7 @@ export function AuditRun({ url }: { url: string }) {
             {chapter}
           </h2>
           <ol className="mt-6 border-t border-line">
-            {steps
+            {listed
               .filter((step) => step.chapter === chapter)
               .map((step) => (
                 <li key={step.id} className="audit-step grid grid-cols-[5.5rem_1fr] gap-4 border-b border-line py-6 md:grid-cols-[7rem_1fr]">
@@ -111,6 +117,11 @@ export function AuditRun({ url }: { url: string }) {
                   <div>
                     <p className="text-xl tracking-tight">{step.label}</p>
                     <p className="mt-2 max-w-2xl text-sm leading-relaxed text-mute">{step.detail || "En cours."}</p>
+                    {step.state !== "running" && step.why ? <p className="mt-3 max-w-2xl text-sm leading-relaxed">{step.why}</p> : null}
+                    {step.state !== "running" && step.impact !== "aucun" ? (
+                      <p className="mt-3 font-mono text-xs text-mute">Impact {step.impact}{step.action ? ` · ${step.effort}` : ""}</p>
+                    ) : null}
+                    {step.action ? <p className="mt-2 max-w-2xl text-sm">À faire : {step.action}</p> : null}
                   </div>
                 </li>
               ))}
@@ -124,8 +135,47 @@ export function AuditRun({ url }: { url: string }) {
         </p>
       ) : null}
 
-      {done && settled.length > 0 ? (
+      {done && shown.length > 0 ? (
         <>
+          <section className="audit-step border-t border-line pt-12" aria-labelledby="audit-score">
+            <p className="font-mono text-xs tracking-wide text-mute">Trouvé, compris, choisi</p>
+            <h2 id="audit-score" className="display mt-4 text-[clamp(4rem,10vw,7rem)]">
+              {score}
+              <span className="text-[0.35em] text-mute"> / 100</span>
+            </h2>
+            <p className="mt-4 max-w-xl text-lg">{scoreLabel(score)}</p>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-mute">
+              Le score résume ce passage. Un site peut cocher presque tout et rester difficile à trouver, à citer ou à contacter.
+            </p>
+            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {chapters.map((dimension) => {
+                const value = dimensionScore(shown, dimension);
+                if (value === null) return null;
+                return (
+                  <li key={dimension} className="border-t border-line pt-3">
+                    <div className="flex items-baseline justify-between gap-4">
+                      <span>{dimension}</span>
+                      <span className="font-mono text-2xl">{value}</span>
+                    </div>
+                    <div className="mt-3 h-1 bg-line" role="img" aria-label={`${dimension} ${value} sur 100`}>
+                      <span className="audit-bar block h-full bg-ink" style={{ width: `${value}%` }} />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+            <ol className="mt-12 max-w-2xl border-t border-line">
+              {headlines.map((item, index) => (
+                <li key={item.dimension} className="grid grid-cols-[3rem_1fr] gap-4 border-b border-line py-5">
+                  <span className="font-mono text-sm text-mute">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <p className="text-lg">{item.dimension}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-mute">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
           <section className="audit-step mt-20 border-t border-line pt-12" aria-labelledby="audit-charts">
             <h2 id="audit-charts" className="display text-4xl md:text-5xl">
               Les proportions.
@@ -162,10 +212,10 @@ export function AuditRun({ url }: { url: string }) {
                 </ul>
               </div>
               <div className="lg:col-span-7">
-                <p className="text-sm text-mute">Par partie, sur {settled.length} points lus.</p>
+                <p className="text-sm text-mute">Par partie, sur {shown.length} points lus.</p>
                 <ul className="mt-6 space-y-5">
                   {chapters.map((chapter) => {
-                    const items = settled.filter((step) => step.chapter === chapter);
+                    const items = shown.filter((step) => step.chapter === chapter);
                     if (!items.length) return null;
                     const partHeld = items.filter((step) => step.state === "pass").length;
                     const partWarned = items.filter((step) => step.state === "warn").length;
@@ -196,17 +246,39 @@ export function AuditRun({ url }: { url: string }) {
             </div>
           </section>
 
+          {nextSteps.length ? (
+          <section className="audit-step mt-20 border-t border-line pt-12" aria-labelledby="audit-next">
+            <h2 id="audit-next" className="display max-w-[14ch] text-4xl md:text-5xl">
+              Les 5 prochaines actions
+            </h2>
+            <ol className="mt-8 max-w-2xl border-t border-line">
+              {nextSteps.map((step, index) => (
+                <li key={step.id} className="grid grid-cols-[3rem_1fr] gap-4 border-b border-line py-5">
+                  <span className="font-mono text-sm text-mute">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <p className="text-lg">{step.label}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-mute">{step.action || step.detail}</p>
+                    <p className="mt-2 font-mono text-xs text-mute">
+                      Impact {step.impact} · effort {step.effort}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+          ) : null}
+
           <div className="relative mt-24">
             <section className="border border-line bg-paper px-6 py-12 md:px-12 md:pb-28" aria-labelledby="audit-whole">
               <h2 id="audit-whole" className="display max-w-[14ch] text-[clamp(2.8rem,6vw,5rem)]">
                 Tout le passage.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-relaxed">
-                {held} tenu{held > 1 ? "s" : ""}, {warned} à revoir, {failed} à corriger. Accueil, fichiers, domaine, et les pages liées de ce passage.
+                {held} tenu{held > 1 ? "s" : ""}, {warned} à revoir, {failed} à corriger. Technique, performance, SEO, accessibilité, GEO et conversion de ce passage.
               </p>
-              <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+              <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {chapters.map((chapter) => {
-                  const items = settled.filter((step) => step.chapter === chapter);
+                  const items = shown.filter((step) => step.chapter === chapter);
                   const partOpen = items.filter((step) => step.state === "warn" || step.state === "fail");
                   return (
                     <li key={chapter} className="border-t border-line pt-4">
