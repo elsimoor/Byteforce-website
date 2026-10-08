@@ -48,6 +48,7 @@ export function GET() {
     `- [CRM personnalisé au Maroc](${origin}/insights/crm-personnalise-maroc) : le pipeline suit le cycle réel, pas celui d'un éditeur.`,
     `- [Création d'un CRM sur mesure](${origin}/insights/creation-crm-sur-mesure) : partir des étapes réelles, pas d'un modèle vide.`,
     `- [Combien coûte un CRM personnalisé](${origin}/insights/cout-crm-personnalise) : pas de montant public, la note suit le cycle.`,
+    `- [CRM ou Excel, pour une entreprise](${origin}/insights/crm-ou-excel) : le fichier suffit tant qu'une seule personne l'écrit.`,
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

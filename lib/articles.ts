@@ -1662,6 +1662,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "crm-ou-excel",
+    title: "CRM vs Excel entreprise",
+    description:
+      "CRM vs Excel dans une entreprise : le fichier suffit tant qu'une personne l'écrit. Dès qu'ils sont deux, le dossier se contredit. Casablanca.",
+    h1: "CRM vs Excel entreprise",
+    date: "2026-10-08",
+    lede: "CRM vs Excel, pour une entreprise : le tableur suffit tant qu'une seule personne écrit le dossier. Dès que deux personnes le modifient, personne ne sait plus quelle ligne est vraie. Byte Force, à Casablanca, ne publie pas de prix pour trancher. [[/contact|Écrire]] avec le fichier, ou sans.",
+    sections: [
+      {
+        heading: "Quand Excel gagne",
+        paragraphs: [
+          "Excel gagne pour une liste courte, tenue par une personne, sans validation et sans relance oubliée. Le recopier dans un CRM serait payer pour un écran de plus. Le premier échange le dit. Byte Force n'a pas intérêt à construire si le fichier tient.",
+          "Excel perd quand deux commerciaux écrasent la même ligne, quand la relance est une couleur, ou quand le devis part d'une version que l'autre n'a pas. Là, le [[/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel|remplacement]] a un sens. La page [[/solutions/remplacer-excel|fichier devenu l'entreprise]] décrit le même seuil, vu depuis le tableur.",
+        ],
+      },
+      {
+        heading: "Ce que le CRM ne doit pas reprendre",
+        paragraphs: [
+          "On ne reprend pas les cinquante colonnes. On reprend le dossier : qui le crée, qui le fait avancer, qui doit relancer. Le reste du classeur, calculs ponctuels compris, peut rester dans le tableur. Un CRM qui recopierait Excel en entier n'aurait rien réglé.",
+          "Pas de prix public pour « passer de Excel à un CRM ». La note suit ce qu'on reprend vraiment. Casablanca, Technopark, boulevard Dammam. Pas de bureau ailleurs. Pas de délai fixe : souvent plusieurs semaines pour la première version du cycle, pas pour tout le classeur.",
+        ],
+      },
+      {
+        heading: "Ce qui est rendu",
+        paragraphs: [
+          "Le code, le dépôt et l'hébergement livré reviennent à l'entreprise. Le fichier Excel peut rester une archive. On ne publie pas un taux de conversion, un nombre de lignes migrées, ou une note. Rien de tout cela n'est un fait du studio.",
+          "Un acompte après un périmètre écrit. Un changement écrit avant d'être construit. Le [[/developpement-logiciel-sur-mesure-maroc/crm|CRM]] reste l'offre. Cette page ne sert qu'à choisir entre le fichier et le cycle.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand vous pouvez dire combien de personnes touchent le même fichier cette semaine. Une seule : gardez Excel. Deux ou plus, avec des versions qui divergent : apportez le fichier, ou décrivez les colonnes qui se contredisent.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Dire qui écrit]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire qui écrit le fichier" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel", label: "Remplacer Excel par un CRM" },
+      { href: "/solutions/remplacer-excel", label: "Quand le fichier est devenu l'entreprise" },
+    ],
+    en: {
+      title: "CRM or Excel for a company",
+      description:
+        "CRM or Excel: the file is enough while one person writes it. Once two people edit it, the row is no longer true. Casablanca.",
+      h1: "CRM or Excel for a company",
+      lede: "CRM vs Excel, for a company: the spreadsheet is enough while one person writes the file. Once two people change it, nobody knows which row is true. Byte Force, in Casablanca, does not publish a price to settle it. [[/contact|Write]] with the file, or without it.",
+      sections: [
+      {
+        heading: "When Excel wins",
+        paragraphs: [
+          "Excel wins for a short list, kept by one person, with no approval and no forgotten follow-up. Copying it into a CRM would mean paying for one more screen. The first conversation says so. Byte Force has no reason to build if the file holds.",
+          "Excel loses when two salespeople overwrite the same row, when the follow-up is a colour, or when the quote leaves from a version the other person does not have. Then replacement makes sense. The page about the file becoming the company describes the same threshold, seen from the spreadsheet.",
+        ],
+      },
+      {
+        heading: "What the CRM should not copy",
+        paragraphs: [
+          "The fifty columns are not copied. The file is: who creates it, who moves it, who must follow up. The rest of the workbook, including one-off calculations, can stay in the spreadsheet. A CRM that copied Excel entirely would have fixed nothing.",
+          "No public price for « moving from Excel to a CRM ». The figure follows what is actually taken. Casablanca, Technopark, boulevard Dammam. No office elsewhere. No fixed schedule: often several weeks for the first version of the cycle, not for the whole workbook.",
+        ],
+      },
+      {
+        heading: "What is handed over",
+        paragraphs: [
+          "The code, the repository and the delivered hosting return to the company. The Excel file can remain an archive. No conversion rate, no count of migrated rows, and no score is published. None of that is a fact of the studio.",
+          "A deposit after a written scope. A change written before it is built. The CRM page remains the offer. This page only helps choose between the file and the cycle.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when you can say how many people touch the same file this week. One: keep Excel. Two or more, with versions that diverge: bring the file, or describe the columns that contradict each other.",
+          "Thirty minutes, free. A reply within one business day, 9:00 to 19:00. [[/contact|Say who writes it]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
