@@ -2391,6 +2391,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "cout-creation-saas",
+    title: "Combien coûte la création d'un SaaS",
+    description:
+      "Combien coûte la création d'un SaaS : pas de montant public. La note suit le geste, les rôles et l'isolation des clients. Casablanca.",
+    h1: "Combien coûte la création d'un SaaS",
+    date: "2026-10-08",
+    lede: "Combien coûte la création d'un SaaS : Byte Force ne publie pas de montant. La note suit le geste du premier client, les rôles, et le fait que les dossiers ne se mélangent pas. Le principe est celui de tout logiciel écrit à Casablanca. [[/contact|Écrire]] pour ce geste, pas pour une grille.",
+    sections: [
+      {
+        heading: "Pas de tarif de création",
+        paragraphs: [
+          "Une page « SaaS à partir de » un montant décrit un forfait, pas le produit. Byte Force ne le fait pas. Les pages du site ne sont pas un devis. Le [[/insights/cout-logiciel-sur-mesure-maroc|montant d'un logiciel]] se décide déjà sans grille. Un SaaS ajoute une question : les clients sont-ils isolés dès la première version ?",
+          "Le [[/developpement-saas-maroc|développement SaaS]] dit ce qui se construit. Cette page dit ce qui fait bouger la note. Comparer deux « créations de SaaS » sans le geste, c'est comparer deux mots.",
+        ],
+      },
+      {
+        heading: "Ce qui change la note",
+        paragraphs: [
+          "Le geste que le premier client doit finir. Le nombre de rôles dans son compte. L'isolation des données, l'invitation, l'arrêt d'un compte. Les branchements : paiement, email, outil déjà payé. Vouloir la place de marché, tous les rapports et tous les rôles d'un grand compte sur le même devis gonfle le montant sans rendre le geste plus sûr.",
+          "Le bureau à Casablanca ne rajoute pas une ligne. Pas de bureau en France ni au Canada. Un échange de trente minutes est gratuit, y compris s'il conclut de ne pas construire.",
+        ],
+      },
+      {
+        heading: "Ce qu'un devis devrait montrer",
+        paragraphs: [
+          "Le geste. Les rôles. Ce qui est isolé. Ce qui attend. Un acompte, puis des étapes liées à ce qui est livré. À la remise, le code, le dépôt et l'hébergement sont à l'entreprise qui commande. Pas de délai fixe collé au prix : souvent plusieurs semaines pour ce geste.",
+          "On ne publie pas le revenu de Coco Inbox, ni un coût moyen de SaaS, ni une note. Ces chiffres ne sont pas des faits qu'on peut coller sur un devis.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand un chiffre circule sans dire le geste, ou quand le projet est encore une liste de fonctions. Apporter le geste du premier client.",
+          "Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/developpement-saas-maroc", label: "Le SaaS" },
+      { href: "/developpement-saas-maroc/multi-tenant", label: "Isoler les clients" },
+    ],
+    en: {
+      title: "What it costs to create a SaaS",
+      description:
+        "What it costs to create a SaaS is not public. The figure follows the action, the roles and customer isolation. Casablanca. No grid.",
+      h1: "What it costs to create a SaaS",
+      lede: "What it costs to create a SaaS is not a published figure. The amount follows the first customer's action, the roles, and the fact that files do not mix. The rule is the same as for any software written in Casablanca. [[/contact|Write]] for that action, not for a grid.",
+      sections: [
+      {
+        heading: "No creation tariff",
+        paragraphs: [
+          "A page « SaaS from » an amount describes a package, not the product. Byte Force does not do that. The pages of the site are not a quote. The cost of custom software is already decided without a grid. A SaaS adds one question: are customers isolated from the first version?",
+          "SaaS development says what gets built. This page says what moves the amount. Comparing two « SaaS builds » without the action is comparing two words.",
+        ],
+      },
+      {
+        heading: "What changes the figure",
+        paragraphs: [
+          "The action the first customer must finish. The number of roles in their account. Data isolation, the invitation, closing an account. The connections: payment, email, a tool already paid for. Wanting a marketplace, every report and every large-account role on the same quote raises the amount without making the action safer.",
+          "The office in Casablanca does not add a line. No office in France or Canada. A thirty-minute conversation is free, including when it ends with not building.",
+        ],
+      },
+      {
+        heading: "What a quote should show",
+        paragraphs: [
+          "The action. The roles. What is isolated. What waits. A deposit, then steps tied to what is delivered. At handover, the code, the repository and the hosting belong to the company that orders. No fixed schedule stuck to the price: often several weeks for that action.",
+          "Coco Inbox revenue is not published, nor an average SaaS cost, nor a score. Those figures are not facts that can be pasted onto a quote.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when a figure is circulating without the action, or when the project is still a feature list. Bring the first customer's action.",
+          "A reply within one business day, 9:00 to 19:00. [[/contact|Describe the action]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
