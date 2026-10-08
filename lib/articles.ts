@@ -1257,6 +1257,87 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "developpement-logiciel-entreprise-maroc",
+    title: "Développement logiciel entreprise Maroc",
+    description:
+      "Développement logiciel entreprise Maroc : le programme suit l'entreprise déjà outillée, depuis Casablanca. Pas de prix public. Écrire.",
+    h1: "Développement logiciel entreprise Maroc",
+    date: "2026-10-08",
+    lede: "Le développement logiciel pour une entreprise au Maroc part de ce qui est déjà en place, pas d'une page blanche. Byte Force le mène depuis le Technopark, à Casablanca. Il n'y a pas de prix public. [[/contact|Écrire]] pour dire quels outils restent, et quel geste ne passe plus entre eux.",
+    sections: [
+      {
+        heading: "L'entreprise a déjà des outils",
+        paragraphs: [
+          "Une entreprise n'arrive en général pas sans logiciel. Elle a un tableur, un abonnement, parfois un vieil écran que plus personne n'ose modifier. Le développement consiste à écrire le morceau qui manque, ou à relier ce qui se contredit, pas à tout jeter le premier jour. La page [[/solutions/logiciel-entreprise|logiciel pour une entreprise déjà outillée]] est l'offre. Celle-ci dit l'ordre : nommer le geste, garder ce qui marche, écrire le reste.",
+          "Tout jeter est un autre projet, plus long, et souvent inutile. La messagerie, la comptabilité standard, le paiement déjà branché peuvent rester. On ne les réécrit pas pour avoir l'air complet.",
+        ],
+      },
+      {
+        heading: "Ce qui se décide à Casablanca",
+        paragraphs: [
+          "Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001. Du lundi au vendredi, de 9 h à 19 h, le cadrage peut se faire avec le fichier sur la table. Il n'y a pas de bureau en France ni au Canada. Une entreprise marocaine et une entreprise française se parlent depuis ce même bureau.",
+          "Il n'y a pas de délai fixe. Une première version tient souvent en plusieurs semaines, selon les rôles et les branchements. Le [[/developpement-logiciel-sur-mesure-maroc|cadre]] reste le logiciel sur mesure : périmètre écrit, acompte, code rendu. Les pages du site ne sont pas un devis.",
+        ],
+      },
+      {
+        heading: "Ce que l'entreprise récupère",
+        paragraphs: [
+          "À la remise, elle possède le code, le dépôt et les comptes d'hébergement livrés. Les outils qu'on a choisi de garder restent les siens. On ne publie pas un nombre de salariés, un chiffre d'affaires, ou une note : rien de tout cela n'est sur le site comme résultat de Byte Force.",
+          "Dealkhir, à Casablanca, montre une plateforme en ligne depuis 2024. Ce n'est pas le modèle de toute entreprise. On ne lui prête pas la paie, la flotte ou le stock d'un autre.",
+        ],
+      },
+      {
+        heading: "Quand écrire",
+        paragraphs: [
+          "Écrire quand le geste traverse deux outils et que personne ne sait plus lequel dit vrai. Apporter le nom des outils et le nom du dossier. Pas une liste de tous les services de l'entreprise.",
+          "Trente minutes, gratuites. Réponse sous un jour ouvré. [[/contact|Décrire les outils]] suffit. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Dire quels outils restent" },
+      { href: "/solutions/logiciel-entreprise", label: "Logiciel pour une entreprise" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Le cadre sur mesure" },
+    ],
+    en: {
+      title: "Software development for a company in Morocco",
+      description:
+        "Software for a company in Morocco starts from the tools already in place, from Casablanca. No public price. Write with what must stay.",
+      h1: "Software development for a company in Morocco",
+      lede: "Software development for a company in Morocco starts from what is already in place, not from a blank page. Byte Force runs it from Technopark, in Casablanca. There is no public price. [[/contact|Write]] and say which tools stay, and which action no longer passes between them.",
+      sections: [
+      {
+        heading: "The company already has tools",
+        paragraphs: [
+          "A company rarely arrives with no software. It has a spreadsheet, a subscription, sometimes an old screen nobody dares to change. Development means writing the missing piece, or joining what contradicts itself, not throwing everything away on day one. The offer page is for a company that already has tools. This page says the order: name the action, keep what works, write the rest.",
+          "Throwing everything away is another project, longer, and often useless. The mailbox, standard accounting, a payment already connected can stay. They are not rewritten in order to look complete.",
+        ],
+      },
+      {
+        heading: "What is decided in Casablanca",
+        paragraphs: [
+          "The office is at Technopark, boulevard Dammam, Aïn Chock, 20001. Monday to Friday, 9:00 to 19:00, the scope can be set with the file on the table. There is no office in France or Canada. A Moroccan company and a French company are both spoken with from this same office.",
+          "There is no fixed schedule. A first version often takes several weeks, according to the roles and the connections. The frame remains custom software: a written scope, a deposit, the code returned. The pages of the site are not a quote.",
+        ],
+      },
+      {
+        heading: "What the company gets back",
+        paragraphs: [
+          "At handover, it owns the code, the repository and the hosting accounts that were delivered. The tools chosen to stay remain its own. No headcount, revenue, or score is published: none of that is on the site as a Byte Force result.",
+          "Dealkhir, in Casablanca, shows a platform online since 2024. It is not the model of every company. It is not lent another company's payroll, fleet or stock.",
+        ],
+      },
+      {
+        heading: "When to write",
+        paragraphs: [
+          "Write when the action crosses two tools and nobody knows which one is right. Bring the names of the tools and the name of the file. Not a list of every department.",
+          "Thirty minutes, free. A reply within one business day. [[/contact|Describe the tools]] is enough. Phone: +212 666 650 696.",
+        ],
+      },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();
