@@ -78,6 +78,16 @@ export function Footer() {
                   WhatsApp
                 </a>
               </li>
+              <li className="leading-none">
+                <a href={site.instagram} className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  Instagram
+                </a>
+              </li>
+              <li className="leading-none">
+                <a href={site.linkedin} className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  LinkedIn
+                </a>
+              </li>
               {process.env.NODE_ENV === "development" ? (
                 <li className="leading-none">
                   <Link href="/dashboard/login" className="text-on-surface-variant transition-colors hover:text-on-surface">

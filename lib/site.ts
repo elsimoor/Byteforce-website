@@ -14,4 +14,6 @@ export const site = {
   countryLabel: "Maroc",
   hoursLabel: "Lundi au vendredi, 9h–19h",
   catalogue: "https://catalogue-iota.vercel.app/",
+  instagram: "https://www.instagram.com/byteforce.ma/",
+  linkedin: "https://www.linkedin.com/company/byte-force-maroc",
 };

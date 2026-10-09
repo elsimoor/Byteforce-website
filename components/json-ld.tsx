@@ -37,7 +37,7 @@ export function OrganizationJsonLd() {
           postalCode: site.postal,
           addressCountry: site.country,
         },
-        sameAs: ["https://share.google/L12w0TmJ9kkUcVBg7", site.catalogue],
+        sameAs: [site.instagram, site.linkedin, "https://share.google/L12w0TmJ9kkUcVBg7", site.catalogue],
         contactPoint: {
           "@type": "ContactPoint",
           telephone: site.phone,
