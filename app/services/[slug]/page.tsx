@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LeadForm } from "@/components/lead-form";
+import { PluginBreak, PluginFlow, PluginShelf } from "@/components/wordpress-plugin-lab";
 import { getService, projectsForService, services } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
@@ -31,6 +32,7 @@ export default async function ServicePage({ params }: Props) {
   const service = getService(slug);
   if (!service) notFound();
   const related = projectsForService(service.slug);
+  const pluginsPage = service.slug === "plugins-wordpress";
   const path = `/services/${service.slug}`;
   const schema = {
     "@context": "https://schema.org",
@@ -115,6 +117,7 @@ export default async function ServicePage({ params }: Props) {
               {paragraph}
             </p>
           ))}
+          {pluginsPage && section.heading === "Ajouter seulement le geste qui manque" ? <PluginFlow lang="fr" /> : null}
         </section>
       ))}
 
@@ -137,6 +140,12 @@ export default async function ServicePage({ params }: Props) {
               </article>
             ))}
           </div>
+          {pluginsPage ? (
+            <>
+              <PluginShelf lang="fr" />
+              <PluginBreak lang="fr" />
+            </>
+          ) : null}
           <div className="mt-4 max-w-2xl border-t border-line pt-10">
             <h3 className="display text-3xl">Quand écrire</h3>
             <p className="mt-4 leading-relaxed">
@@ -167,8 +176,15 @@ export default async function ServicePage({ params }: Props) {
                   {paragraph}
                 </p>
               ))}
+              {pluginsPage && section.heading === "Add only the missing action" ? <PluginFlow lang="en" /> : null}
             </section>
           ))}
+          {pluginsPage ? (
+            <>
+              <PluginShelf lang="en" />
+              <PluginBreak lang="en" />
+            </>
+          ) : null}
           <p className="mt-8">
             <Link href="/contact" className="border-b border-ink pb-1">
               Talk about the plugin

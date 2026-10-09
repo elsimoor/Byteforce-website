@@ -387,7 +387,8 @@ export const services: Service[] = [
       {
         heading: "Ajouter seulement le geste qui manque",
         paragraphs: [
-          "Byte Force, au Technopark à Casablanca, lit le site WordPress et les extensions déjà installées. Le plugin est du PHP branché au thème, ou à WooCommerce si la boutique est déjà là. L'équipe le règle sans ouvrir le code.",
+          "Le site est déjà sous WordPress. La question est si le geste qui manque tient dans un plugin.",
+          "Byte Force, au Technopark à Casablanca, lit les extensions déjà installées. Le plugin est du PHP branché au thème, ou à WooCommerce si la boutique est déjà là. L'équipe le règle sans ouvrir le code.",
           "On ne remplace pas WordPress quand le site tient. Les quatre plugins plus bas sont déjà écrits. Un cinquième s'écrit quand le geste n'est dans aucun d'eux.",
         ],
       },
@@ -434,7 +435,8 @@ export const services: Service[] = [
         {
           heading: "Add only the missing action",
           paragraphs: [
-            "Byte Force, at Technopark in Casablanca, reads the WordPress site and the plugins already installed. The plugin is PHP hooked to the theme, or to WooCommerce if the shop is already there. The team configures it without opening the code.",
+            "The site is already on WordPress. The question is whether the missing action fits a plugin.",
+            "Byte Force, at Technopark in Casablanca, reads the plugins already installed. The plugin is PHP hooked to the theme, or to WooCommerce if the shop is already there. The team changes the settings without opening the code.",
             "WordPress stays when the site holds. The four plugins below are already written. A fifth is written when the action is in none of them.",
           ],
         },
