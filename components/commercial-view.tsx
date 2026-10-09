@@ -32,6 +32,9 @@ export function CommercialView({ page }: { page: MoneyPage }) {
           "@type": "Article",
           headline: page.h1,
           description: page.description,
+          datePublished: "2026-10-08",
+          dateModified: "2026-10-08",
+          image: `${site.url}/opengraph-image`,
           url,
           author: {
             "@type": "Person",

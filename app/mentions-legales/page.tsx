@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
+const title = "Mentions légales";
+const description =
+  "Éditeur, contact et hébergement du site Byte Force. Le bureau est à Casablanca, au Technopark, boulevard Dammam, Aïn Chock.";
+
 export const metadata: Metadata = {
-  title: "Mentions légales",
-  description: "Éditeur, contact et hébergement du site Byte Force.",
+  title,
+  description,
   alternates: { canonical: "/mentions-legales" },
+  openGraph: openGraph("/mentions-legales", title, description),
 };
 
 export default function LegalPage() {

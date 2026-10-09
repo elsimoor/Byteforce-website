@@ -30,7 +30,7 @@ export default function AiWorkPage() {
             {project.problem ? <p className="mt-3 leading-relaxed">Problème : {project.problem}</p> : null}
             {project.solution ? <p className="mt-3 leading-relaxed">Solution : {project.solution}</p> : null}
             <p className="mt-3 text-sm">
-              <a href={project.url}>{project.url.replace(/^https?:\/\//, "")}</a>
+              <a href={project.url}>Site publié de {project.title}</a>
             </p>
           </li>
         ))}

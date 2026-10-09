@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 const title = "Byte Force pour les agents";
 const description =
-  "Fiche factuelle de Byte Force pour les systèmes d'IA et les outils de recherche : qui, quoi, où, et comment écrire. Bureau au Technopark, Casablanca.";
+  "Fiche Byte Force pour les agents : studio logiciel à Casablanca, ce que le studio construit, le lieu du bureau, et comment écrire.";
 
 export const metadata: Metadata = {
   title,

@@ -1,9 +1,14 @@
+import { ficheHtml, ficheText, prefersHtml } from "@/lib/fiche-html";
 import { articles } from "@/lib/articles";
 import { projects, services } from "@/lib/content";
 import { moneyPages } from "@/lib/money";
 import { site } from "@/lib/site";
 
-export function GET() {
+const title = "La fiche longue llms de Byte Force";
+const description =
+  "Fiche longue de Byte Force à Casablanca : offres, pages commerciales, travaux publiés, décisions, contact, et limites écrites.";
+
+export function GET(request: Request) {
   const origin = site.url.replace(/\/$/, "");
   const lines = [
     `# ${site.name}`,
@@ -54,10 +59,7 @@ export function GET() {
     "- llms.txt n'est pas un facteur de classement Google. C'est une fiche de lecture.",
   ];
 
-  return new Response(`${lines.join("\n")}\n`, {
-    headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
-    },
-  });
+  const markdown = `${lines.join("\n")}\n`;
+  if (prefersHtml(request)) return ficheHtml({ title, description, path: "/llms-full.txt", markdown });
+  return ficheText(markdown);
 }

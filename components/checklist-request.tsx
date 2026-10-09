@@ -78,7 +78,10 @@ export function ChecklistRequest() {
           className="mt-2 w-full border border-ink bg-paper px-3 py-3 text-ink"
         />
       </label>
-      <input name="company_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+      <label className="absolute -left-[9999px]" aria-hidden="true">
+        Site
+        <input name="company_website" tabIndex={-1} autoComplete="off" />
+      </label>
       <TurnstileCheck onToken={setTurnstileToken} />
       <a
         href={turnstileToken ? pdfHref : "#pdf"}

@@ -1,8 +1,13 @@
+import { ficheHtml, ficheText, prefersHtml } from "@/lib/fiche-html";
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
 import { techArticles } from "@/lib/tech-articles";
 
-export function GET() {
+const title = "La fiche llms.txt de Byte Force";
+const description =
+  "Fiche de lecture de Byte Force à Casablanca : le studio, les pages utiles, le contact, et ce qu'il ne faut pas inventer ici.";
+
+export function GET(request: Request) {
   const origin = site.url.replace(/\/$/, "");
   const lines = [
     `# ${site.name}`,
@@ -88,10 +93,7 @@ export function GET() {
     `- Le catalogue des projets est [catalogue](${site.catalogue}).`,
   ];
 
-  return new Response(`${lines.join("\n")}\n`, {
-    headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
-    },
-  });
+  const markdown = `${lines.join("\n")}\n`;
+  if (prefersHtml(request)) return ficheHtml({ title, description, path: "/llms.txt", markdown });
+  return ficheText(markdown);
 }
