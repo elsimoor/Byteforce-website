@@ -151,22 +151,40 @@ export function StudioHome() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-surface py-16">
-        <div className="max-w-3xl mx-auto px-6 lg:px-12 space-y-4 text-base text-on-surface-variant leading-relaxed">
-          <h2 className="text-3xl font-headline font-bold text-on-surface">What the studio does, in plain words</h2>
-          <p>Byte Force is a software studio in Casablanca. We build the tool a team uses each day. That can be a site, an app, or software made for one firm.</p>
-          <p>We start with the work, not with a theme. Who does the task? Where does it take place? What blocks it? The first call is free. It lasts thirty minutes. We reply within one work day. The desk is open from nine to seven, Monday to Friday.</p>
-          <p>The office is at Technopark, on Bd Dammam, in Aïn Chock. The post code is 20001. There is no desk in France and no desk in Canada. Work for those countries is done from here.</p>
-          <p>You own the code when we hand it over. You own the repo and the host accounts too. We do not print a price on this site. The first note should say what you have now, and what must change.</p>
-          <p>Four live products are on this page. Coco Inbox is in Montreal. It is for short lived mail, locked files, and notes. Proche de moi is in Lille. It helps a shop be found. Dealkhir is in Casablanca. It is for gifts and groups. Tourispeak is in Montreal. It is a site for trips, plus an Android app.</p>
-          <p>We can also fix a site that is already live. A form that does not send. A page that is out of date. A bug that stops a sale. A one off fix does not need a plan. If the code was made by another team, we read it first. If we should not patch it, we say so before we touch it.</p>
-          <p>A site is not the whole job. Some firms need a tool their staff use all day: a file, a step, a rule a sheet can not hold. We write that tool. We put it on a server. We show the team how to use it. Then we stay if they want care after launch.</p>
-          <p>Care means we watch the live site, keep a copy, and fix what breaks. The desk still replies within one work day. A price is not on this page. It is set when we know the task.</p>
-          <p>Write from the contact page, by mail, or on WhatsApp. Tell us your name, a way to reply, and the task. A long brief can wait. Say what exists now: a site, a file, or a tool. Say what must change. That is enough to start.</p>
-          <p>The studio does not sell a chat product. If a task can be a stable rule, we write the rule. We add a model only when the rule can not do the job. The choice is said up front.</p>
-          <p>Walid Moultamiss leads the studio. His profile is on this site, in French and in English, with both CVs. The work you can check is the live sites, not a quote from a past client.</p>
-          <p>If you are not sure what to build, say the task in one line. We will say if it is a site, an app, or a tool for the team. We will also say if we are not the right studio. That saves a long brief.</p>
-          <p>Bring what you have. A link. A file. A photo of the form that fails. We do not need a slide deck. We need the real step that is stuck, and the name of the person who does it now.</p>
+      <section className="w-full bg-surface py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
+          <div className="lg:col-span-5">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">The studio</span>
+            <h2 className="mt-2 font-headline text-3xl font-bold tracking-tight text-on-surface lg:text-4xl">
+              The work comes first. The tool follows.
+            </h2>
+            <p className="mt-4 max-w-md text-base leading-relaxed text-on-surface-variant">
+              Byte Force is a software studio in Casablanca. We build the tool a team uses each day: a site, an app, or
+              software made for one firm.
+            </p>
+            <a
+              href="/contact"
+              className="mt-8 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+            >
+              Parler d&apos;un projet
+              <Icon name="arrow_forward" className="text-base" />
+            </a>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
+            {[
+              ["Where we work", "Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca. Monday to Friday, 9:00 to 19:00. We reply within one business day. The first call is thirty minutes, and it is free."],
+              ["What you keep", "You own the code, the repository, and the hosting accounts. There is no price on this site. The first note says what exists now, and what must change."],
+              ["Already live", "A form that does not send, a page out of date, or a bug that stops a sale. A one-off fix does not need a plan. If another team wrote the code, we read it first."],
+              ["After launch", "Care means we watch the live site, keep a copy, and fix what breaks. The same desk still replies within one business day. The price is set when the task is known."],
+              ["How to start", "Write from the contact page, by email, or on WhatsApp. Your name, a way to reply, and the task. A link, a file, or a photo of the form that fails is enough."],
+              ["Who leads it", "Walid Moultamiss leads the studio. His profile is on this site, in French and in English, with both CVs. The proof is the live work."],
+            ].map(([title, text]) => (
+              <div key={title} className="rounded-xl bg-surface-container-lowest p-6 shadow-sm">
+                <h3 className="font-headline text-lg font-bold text-on-surface">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       {/* 8. ABOUT BYTEFORCE & MOROCCO HUB */}
