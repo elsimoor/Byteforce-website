@@ -6,21 +6,6 @@ import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
 import { site } from "@/lib/site";
 
-const capabilities = [
-  { kicker: "Access", title: "Authentication and permissions", text: "Who can see and do what" },
-  { kicker: "Visibility", title: "Dashboards and analytics", text: "What is happening in the business" },
-  { kicker: "Customers", title: "CRM and customer management", text: "Accounts, pipelines, history" },
-  { kicker: "Revenue", title: "Payments and subscriptions", text: "Billing inside the product" },
-  { kicker: "Intelligence", title: "AI and automation", text: "Work removed from the team" },
-  { kicker: "Connections", title: "APIs and integrations", text: "The product talks to other systems" },
-  { kicker: "Messages", title: "Notifications", text: "Email, alerts, in-product messages" },
-  { kicker: "Files", title: "Documents and files", text: "Files attached to the work" },
-  { kicker: "Finding", title: "Search inside the product", text: "Find records, not folders" },
-  { kicker: "Operations", title: "Admin and back office", text: "The team’s side of the product" },
-  { kicker: "Running", title: "Cloud infrastructure", text: "Hosting, deploy, monitoring" },
-  { kicker: "Scale", title: "Multi-user and multi-company", text: "Teams and tenants in one product" },
-];
-
 export function StudioHome() {
   return (
     <div className="flex flex-col w-full text-on-surface">
@@ -135,7 +120,7 @@ export function StudioHome() {
               Inside the product
             </span>
             <span className="text-xs text-on-surface-variant">
-              Assistants, agents, automation
+              A rule first, a model only if the rule cannot do it
             </span>
           </div>
           <div className="flex flex-col">
@@ -309,11 +294,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Platforms built around your company&apos;s workflows, operations and data.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>The workflow, the roles and the data the team already uses</li>
-                  <li>An interface for the people who do the work</li>
-                  <li>The repository handed over at the end</li>
-                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
                 For teams whose tools do not match the work
@@ -336,11 +316,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Multi-user products with subscriptions, dashboards, permissions, billing and scalable infrastructure.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>Accounts, permissions and billing</li>
-                  <li>A dashboard the team can run</li>
-                  <li>A first version you can put in front of users</li>
-                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
                 For founders launching a multi-user product
@@ -363,11 +338,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Custom CRM, customer management, sales pipelines, operations and internal administration.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>Pipeline, history and follow-up</li>
-                  <li>Roles for the team</li>
-                  <li>Room to connect the tools you already use</li>
-                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
                 For a business that has outgrown a spreadsheet
@@ -385,16 +355,11 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  AI-Powered Software
+                  Automation in the product
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
-                  AI assistants, agents, intelligent search, automation and AI features integrated directly into business products.
+                  A repeated task becomes a stable rule. A model is added only when that rule cannot carry the action.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>An assistant or agent inside the product</li>
-                  <li>One repeated task taken off the team</li>
-                  <li>A person still able to review the result</li>
-                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
                 For a product that should remove manual work
@@ -417,11 +382,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Modern applications designed for customers, employees, partners or internal teams.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>A path for the customer, the employee or the partner</li>
-                  <li>Web, and iOS or Android when the use needs a phone</li>
-                  <li>The same data as the rest of the product</li>
-                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
                 For customers, employees or partners
@@ -444,11 +404,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Marketplaces, customer portals, booking platforms, directories and complex multi-sided systems.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>Customer, partner and admin sides</li>
-                  <li>Search, profiles or booking</li>
-                  <li>A published platform</li>
-                </ul>
               </div>
               <div className="mt-6 pt-4 text-xs font-mono text-outline">
                 For marketplaces, portals and booking
@@ -466,11 +421,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   A read of an existing product: what blocks people, what is broken, and what to fix first.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>Review of the current product and code</li>
-                  <li>Bugs and risks, ordered by what blocks use</li>
-                  <li>Fixes on the points that stop the work</li>
-                </ul>
                 <a href="/contact" className="mt-4 inline-flex text-sm font-bold text-primary">
                   Get an audit
                 </a>
@@ -489,11 +439,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   The product stays up, backed up, and able to change after launch.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>Uptime checks, backups and security updates</li>
-                  <li>Fixes and small content edits</li>
-                  <li>A direct path when the site is down</li>
-                </ul>
                 <a href="/services/maintenance" className="mt-4 inline-flex text-sm font-bold text-primary">
                   See support
                 </a>
@@ -512,11 +457,6 @@ export function StudioHome() {
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   A plugin written for the WordPress site you already have, when a marketplace extension does not do the job.
                 </p>
-                <ul className="mt-4 space-y-1 text-sm text-on-surface-variant">
-                  <li>A read of the current site and its plugins</li>
-                  <li>Custom PHP, including WooCommerce when the site uses it</li>
-                  <li>Settings the team can change without editing code</li>
-                </ul>
                 <a href="/services/plugins-wordpress" className="mt-4 inline-flex text-sm font-bold text-primary">
                   See the offer
                 </a>
@@ -585,122 +525,6 @@ export function StudioHome() {
         </div>
       </section>
       <SelectedWork />
-      {/* 2. CLIENT & ENTERPRISE TRUST SECTION */}
-      <section className="w-full bg-surface-container py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
-              <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-                INSIDE THE PRODUCT
-              </span>
-              <h2 className="text-2xl lg:text-3xl font-headline font-bold text-on-surface mt-1">
-                Everything your software needs.
-              </h2>
-            </div>
-            <p className="text-xs font-mono text-on-surface-variant">
-              CAPABILITIES BUILT INTO THE SYSTEM
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((item) => (
-              <div key={item.title} className="rounded-xl bg-surface-container-lowest p-6">
-                <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">{item.kicker}</p>
-                <h3 className="mt-2 font-headline text-xl font-bold leading-snug text-on-surface">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* 9. INSIGHTS / THOUGHT LEADERSHIP */}
-      <section id="insights" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div>
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
-              AI &amp; AUTOMATION
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
-              Make your software work harder.
-            </h2>
-            <p className="text-on-surface-variant text-base mt-2 max-w-2xl">
-              AI shouldn&apos;t be a feature added for the sake of AI. It should remove work, improve decisions and make your product more useful.
-            </p>
-          </div>
-          <a
-            className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
-            href="/contact"
-          >
-            <span>Build an AI-powered product</span>
-            <Icon name="arrow_forward" className="text-sm" />
-          </a>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Article 1 */}
-          <a
-            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
-            href="/contact"
-          >
-            <span>
-              <span className="flex items-center justify-between text-xs font-mono text-outline mb-3">
-                <span>IN THE PRODUCT</span>
-                <span>ASSIST</span>
-              </span>
-              <span className="block text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
-                Assistants and agents
-              </span>
-              <span className="block text-xs text-on-surface-variant leading-relaxed">
-                AI assistants, AI agents and internal copilots inside the software people already use.
-              </span>
-            </span>
-            <span className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Parler d'un projet</span>
-              <Icon name="north_east" className="text-sm" />
-            </span>
-          </a>
-          <a
-            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
-            href="/contact"
-          >
-            <span>
-              <span className="flex items-center justify-between text-xs font-mono text-outline mb-3">
-                <span>IN THE PRODUCT</span>
-                <span>CUSTOMERS</span>
-              </span>
-              <span className="block text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
-                Customer work
-              </span>
-              <span className="block text-xs text-on-surface-variant leading-relaxed">
-                Lead qualification, automated customer responses and workflow automation.
-              </span>
-            </span>
-            <span className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Parler d'un projet</span>
-              <Icon name="north_east" className="text-sm" />
-            </span>
-          </a>
-          <a
-            className="bg-surface-container-low p-6 rounded-xl hover:shadow-md transition-shadow flex flex-col justify-between group"
-            href="/contact"
-          >
-            <span>
-              <span className="flex items-center justify-between text-xs font-mono text-outline mb-3">
-                <span>IN THE PRODUCT</span>
-                <span>INFORMATION</span>
-              </span>
-              <span className="block text-lg font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
-                Information and documents
-              </span>
-              <span className="block text-xs text-on-surface-variant leading-relaxed">
-                Intelligent search, document processing, data analysis and content generation.
-              </span>
-            </span>
-            <span className="mt-6 flex items-center gap-1 text-xs font-bold text-primary">
-              <span>Parler d'un projet</span>
-              <Icon name="north_east" className="text-sm" />
-            </span>
-          </a>
-        </div>
-      </section>
       {/* 5. FOUNDATIONAL STACK */}
       <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
         <div className="mb-14">
@@ -1111,10 +935,10 @@ export function StudioHome() {
                   Repeat
                 </span>
                 <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  AI agents
+                  A stable rule
                 </p>
                 <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Repetitive tasks handed to agents
+                  A repeated task becomes a rule in the product
                 </p>
               </div>
               <div>

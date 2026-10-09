@@ -115,6 +115,52 @@ const nextConfig: NextConfig = {
       { source: "/a-house-guru", destination: "/realisations", permanent: true },
     ];
   },
+  webpack: (config, { isServer, webpack }) => {
+    if (!isServer) {
+      config.plugins.push({
+        apply(compiler: {
+          hooks: {
+            thisCompilation: {
+              tap: (
+                name: string,
+                fn: (compilation: {
+                  hooks: { processAssets: { tap: (options: { name: string; stage: number }, fn: () => void) => void } };
+                  getAssets: () => { name: string; source: { source: () => { toString(): string } } }[];
+                  deleteAsset: (name: string) => void;
+                  updateAsset: (name: string, source: unknown) => void;
+                }) => void,
+              ) => void;
+            };
+          };
+        }) {
+          compiler.hooks.thisCompilation.tap("DropLegacyPolyfill", (compilation) => {
+            compilation.hooks.processAssets.tap(
+              {
+                name: "DropLegacyPolyfill",
+                stage: webpack.Compilation.PROCESS_ASSETS_STAGE_OPTIMIZE,
+              },
+              () => {
+                for (const asset of [...compilation.getAssets()]) {
+                  if (/(^|\/)polyfills([.-]|$)/.test(asset.name)) {
+                    compilation.deleteAsset(asset.name);
+                    continue;
+                  }
+                  if (!asset.name.endsWith("build-manifest.json") && !asset.name.endsWith("middleware-build-manifest.js")) continue;
+                  const text = asset.source.source().toString();
+                  if (!text.includes('"polyfillFiles"')) continue;
+                  const next = asset.name.endsWith(".json")
+                    ? JSON.stringify({ ...JSON.parse(text), polyfillFiles: [] })
+                    : text.replace(/"polyfillFiles": \[[^\]]*\]/, '"polyfillFiles": []');
+                  compilation.updateAsset(asset.name, new webpack.sources.RawSource(next));
+                }
+              },
+            );
+          });
+        },
+      });
+    }
+    return config;
+  },
   async headers() {
     return [
       {

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ResponsiveImg } from "@/components/responsive-img";
-import { SiteIndex } from "@/components/site-index";
 import { projects } from "@/lib/content";
 
 const order = ["coco-inbox", "re-proche-de-moi", "dealkhir", "tourispeak"];
@@ -105,7 +104,6 @@ export function SelectedWork() {
       >
         Parler d&apos;un projet
       </a>
-      <SiteIndex part={0} />
     </section>
   );
 }
