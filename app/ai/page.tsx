@@ -62,6 +62,9 @@ export default function AiPage() {
           <li>
             <Link href="/insights/automatisation-entreprise-avec-ia">L'automatisation reste une règle stable, même quand on parle d'IA</Link>. Puis <Link href="/contact">écrire</Link>.
           </li>
+          <li>
+            <Link href="/insights/modele-apres-la-regle">Un modèle seulement après la règle, y compris les fonctions de lecture d'email dans Coco Inbox</Link>. Puis <Link href="/contact">écrire</Link>.
+          </li>
 <li>
             <Link href="/audit/json?url=https://byteforce.ma">/audit/json</Link>, le même passage en JSON.
           </li>

@@ -1,3 +1,5 @@
+import { techArticles } from "@/lib/tech-articles";
+
 export type ArticleCopy = {
   title: string;
   description: string;
@@ -20,6 +22,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  ...techArticles,
   {
     slug: "cout-logiciel-sur-mesure-maroc",
     title: "Combien coûte un logiciel sur mesure au Maroc",

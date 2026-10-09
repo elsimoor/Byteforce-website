@@ -1,5 +1,6 @@
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
+import { techArticles } from "@/lib/tech-articles";
 
 export function GET() {
   const origin = site.url.replace(/\/$/, "");
@@ -73,6 +74,9 @@ export function GET() {
     `- [Créer une application pour son entreprise](${origin}/insights/creer-une-application-pour-son-entreprise) : d'abord l'endroit du geste et les rôles.`,
     `- [Intelligence artificielle pour une entreprise au Maroc](${origin}/insights/intelligence-artificielle-entreprise-maroc) : d'abord une règle stable, un modèle seulement si le geste l'exige.`,
     `- [Automatiser une entreprise, avec ou sans IA](${origin}/insights/automatisation-entreprise-avec-ia) : la règle stable d'abord, l'IA seulement si elle ne suffit pas.`,
+    ...techArticles.map(
+      (article) => `- [${article.h1}](${origin}/insights/${article.slug}) : ${article.description}`,
+    ),
     `- [Audit](${origin}/audit) : lecture d'une page.`,
     `- [Pour les agents](${origin}/ai) : fiche factuelle.`,
     `- [Contact](${origin}/contact) : décrire le projet.`,

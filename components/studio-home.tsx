@@ -5,6 +5,7 @@ import { ResponsiveImg } from "@/components/responsive-img";
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
 import { site } from "@/lib/site";
+import { technologies } from "@/lib/tech-articles";
 
 export function StudioHome() {
   return (
@@ -655,6 +656,27 @@ export function StudioHome() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+          {technologies.map((tool) => (
+            <a
+              key={tool.slug}
+              href={`/insights/${tool.slug}`}
+              className="group flex flex-col items-center justify-center gap-3 rounded-xl bg-surface-container-low px-3 py-5"
+            >
+              <img
+                src={`/tech/${tool.file}.svg`}
+                alt=""
+                width={40}
+                height={40}
+                loading="lazy"
+                className="h-10 w-10 grayscale opacity-60 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100"
+              />
+              <span className="text-center text-xs font-semibold text-on-surface">
+                {tool.name}
+              </span>
+            </a>
+          ))}
         </div>
       </section>
       {/* ENGINEERING */}
