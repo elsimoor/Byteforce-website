@@ -1,8 +1,19 @@
 import Link from "next/link";
 import { ArticleFigures } from "@/components/article-figures";
 import { AuthorByline } from "@/components/author-byline";
+import { CloudflareBench, CloudflareFlow } from "@/components/cloudflare-lab";
 import type { Article } from "@/lib/articles";
 import { site } from "@/lib/site";
+
+function CloudflareSlot({ heading, lang }: { heading: string; lang: "fr" | "en" }) {
+  if (heading === "À quoi sert la bordure" || heading === "What the edge is for") {
+    return <CloudflareFlow lang={lang} />;
+  }
+  if (heading === "Ce qu'on ne promet pas" || heading === "What is not promised") {
+    return <CloudflareBench lang={lang} />;
+  }
+  return null;
+}
 
 function Rich({ text }: { text: string }) {
   const bits = text.split(/(\[\[[^\]]+\]\])/g);
@@ -102,6 +113,7 @@ export function ArticleView({ article }: { article: Article }) {
               </p>
             ))}
           </div>
+          {article.slug === "cloudflare-devant-le-site" ? <CloudflareSlot heading={section.heading} lang="fr" /> : null}
         </section>
       ))}
       {article.en ? (
@@ -128,6 +140,7 @@ export function ArticleView({ article }: { article: Article }) {
                   </p>
                 ))}
               </div>
+              {article.slug === "cloudflare-devant-le-site" ? <CloudflareSlot heading={section.heading} lang="en" /> : null}
             </section>
           ))}
         </div>

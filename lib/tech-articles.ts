@@ -878,6 +878,7 @@ export const techArticles = [
     ],
     links: [
       { href: "/contact", label: "Décrire le domaine" },
+      { href: "/audit", label: "Audit d'une page" },
       { href: "/services/hebergement", label: "Hébergement" },
       { href: "/services/maintenance", label: "Maintenance" },
       { href: "/walid-moultamiss", label: "Fiche de Walid Moultamiss" },

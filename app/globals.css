@@ -311,3 +311,43 @@ summary:focus-visible {
     transform: none;
   }
 }
+
+@keyframes cf-packet-direct {
+  from {
+    cx: 96;
+  }
+  to {
+    cx: 544;
+  }
+}
+
+@keyframes cf-packet-proxy {
+  0% {
+    cx: 96;
+  }
+  40% {
+    cx: 304;
+  }
+  60% {
+    cx: 336;
+  }
+  100% {
+    cx: 544;
+  }
+}
+
+.cf-packet-direct {
+  animation: cf-packet-direct 2.8s linear infinite;
+}
+
+.cf-packet-proxy {
+  animation: cf-packet-proxy 3.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-packet-direct,
+  .cf-packet-proxy {
+    animation: none;
+    cx: 320;
+  }
+}
