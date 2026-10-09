@@ -2,8 +2,37 @@ import Link from "next/link";
 import { ArticleFigures } from "@/components/article-figures";
 import { AuthorByline } from "@/components/author-byline";
 import { CloudflareBench, CloudflareFlow } from "@/components/cloudflare-lab";
+import { NextBench, NextFlow } from "@/components/nextjs-lab";
+import { VercelBench, VercelFlow } from "@/components/vercel-lab";
 import type { Article } from "@/lib/articles";
 import { site } from "@/lib/site";
+
+function NextSlot({ heading, lang }: { heading: string; lang: "fr" | "en" }) {
+  if (heading === "La page et le produit" || heading === "The page and the product") {
+    return <NextFlow lang={lang} />;
+  }
+  if (heading === "Quand le thème suffit encore" || heading === "When the theme still holds") {
+    return <NextBench lang={lang} />;
+  }
+  return null;
+}
+
+function VercelSlot({ heading, lang }: { heading: string; lang: "fr" | "en" }) {
+  if (heading === "Du dépôt à l'adresse" || heading === "From the repository to the address") {
+    return <VercelFlow lang={lang} />;
+  }
+  if (heading === "L'hôte qu'on ne déplace pas" || heading === "The host you do not move") {
+    return <VercelBench lang={lang} />;
+  }
+  return null;
+}
+
+function IllustratedSlot({ slug, heading, lang }: { slug: string; heading: string; lang: "fr" | "en" }) {
+  if (slug === "cloudflare-devant-le-site") return <CloudflareSlot heading={heading} lang={lang} />;
+  if (slug === "nextjs-dans-les-produits") return <NextSlot heading={heading} lang={lang} />;
+  if (slug === "vercel-pour-publier") return <VercelSlot heading={heading} lang={lang} />;
+  return null;
+}
 
 function CloudflareSlot({ heading, lang }: { heading: string; lang: "fr" | "en" }) {
   if (heading === "À quoi sert la bordure" || heading === "What the edge is for") {
@@ -113,7 +142,7 @@ export function ArticleView({ article }: { article: Article }) {
               </p>
             ))}
           </div>
-          {article.slug === "cloudflare-devant-le-site" ? <CloudflareSlot heading={section.heading} lang="fr" /> : null}
+          <IllustratedSlot slug={article.slug} heading={section.heading} lang="fr" />
         </section>
       ))}
       {article.en ? (
@@ -140,7 +169,7 @@ export function ArticleView({ article }: { article: Article }) {
                   </p>
                 ))}
               </div>
-              {article.slug === "cloudflare-devant-le-site" ? <CloudflareSlot heading={section.heading} lang="en" /> : null}
+              <IllustratedSlot slug={article.slug} heading={section.heading} lang="en" />
             </section>
           ))}
         </div>

@@ -25,39 +25,40 @@ export const techArticles = [
       "Next.js chez Byte Force : Proche de moi, Coco Inbox, et le site du studio. Le cadre suit le produit. Bureau à Casablanca.",
     h1: "Next.js dans les produits du studio",
     date,
-    lede: "Next.js est le cadre des produits web du studio quand l'interface et les pages doivent vivre ensemble. [[/realisations/re-proche-de-moi|Proche de moi]] et [[/realisations/coco-inbox|Coco Inbox]] sont deux produits déjà en ligne. Le site du studio est écrit de la même façon. [[/contact|Écrire à Casablanca]] si le prochain produit doit s'ouvrir dans un navigateur.",
+    lede: "Vous ouvrez une page. La question est si cette page est le produit, ou seulement son affiche. Next.js est le cadre quand l'écran et l'enregistrement vivent dans le même dépôt. [[/realisations/re-proche-de-moi|Proche de moi]] et [[/realisations/coco-inbox|Coco Inbox]] sont deux produits déjà en ligne ainsi. Le site du studio aussi. [[/contact|Écrire à Casablanca]] si le prochain parcours doit s'ouvrir dans un navigateur.",
     sections: [
       {
-        heading: "Où Next.js est déjà nommé",
+        heading: "Où le cadre est déjà nommé",
         paragraphs: [
-          "La fiche de Walid Moultamiss dit le travail sur prochedemoi.fr et booking.prochedemoi.fr : recherche locale, CMS headless avec Next.js, TypeScript et Strapi, fiches de commerces, données structurées. Ce n'est pas une promesse de trafic. C'est le cadre nommé pour ce produit, en ligne à Lille depuis 2024.",
-          "Coco Inbox, à Montréal depuis 2024, est décrit avec Next.js, Node.js, GraphQL et MongoDB : email temporaire, fichiers chiffrés, notes. Le même cadre sert l'interface. Le serveur et les données sont nommés à part, sur leurs pages.",
+          "La fiche de Walid Moultamiss nomme le travail sur prochedemoi.fr et booking.prochedemoi.fr. Recherche locale, CMS headless avec Next.js, TypeScript et Strapi, fiches de commerces, données structurées. Le produit est en ligne à Lille depuis 2024. Ce n'est pas une promesse de trafic. C'est le cadre nommé pour ce produit.",
+          "Coco Inbox est à Montréal depuis 2024. Next.js porte l'interface : email temporaire, fichiers chiffrés, notes. Node.js, GraphQL et MongoDB sont nommés à part. Le cadre ne les avale pas.",
         ],
       },
       {
-        heading: "Ce que le cadre porte",
+        heading: "La page et le produit",
         paragraphs: [
-          "Next.js sert quand la page que la personne ouvre et le produit qu'elle utilise ne sont pas deux chantiers. Une fiche, une recherche, une réservation, un message : l'écran et la donnée partent du même dépôt. Le client possède ce dépôt à la remise, avec les comptes d'hébergement livrés.",
-          "Le site byteforce.ma est le troisième exemple public : les pages, les articles et le formulaire sont dans ce cadre. Il ne remplace pas un produit client. Il montre que le studio publie avec l'outil qu'il propose.",
+          "Next.js sert quand la page que la personne ouvre et le produit qu'elle utilise ne sont pas deux chantiers. Une fiche, une recherche, une réservation, un message : l'écran et la donnée partent du même dépôt.",
+          "À la remise, le client possède ce dépôt, avec les comptes d'hébergement livrés. byteforce.ma est le troisième exemple public. Les pages, les articles et le formulaire y sont. Ce n'est pas un produit client. Le studio publie avec l'outil qu'il propose.",
         ],
       },
       {
-        heading: "Ce qu'on ne lui fait pas faire",
+        heading: "Quand le thème suffit encore",
         paragraphs: [
-          "Un site WordPress qui tient n'est pas réécrit en Next.js pour changer de nom. Les plugins du studio existent pour le geste qui manque sur un site déjà en ligne. Le passage à Next.js se décide quand le produit a des comptes, des rôles, ou un parcours que le thème ne porte plus.",
-          "Il n'y a pas de prix sur cette page. Le premier échange dure trente minutes. Il est gratuit. La réponse part sous un jour ouvré, du lundi au vendredi, de 9h à 19h.",
+          "Un site WordPress qui tient n'est pas réécrit en Next.js pour changer de nom. Les plugins du studio existent pour le geste qui manque sur un site déjà en ligne.",
+          "Le passage se décide quand le produit a des comptes, des rôles, ou un parcours que le thème ne porte plus. Il n'y a pas de prix sur cette page. Le premier échange dure trente minutes. Il est gratuit. La réponse part sous un jour ouvré, du lundi au vendredi, de 9h à 19h.",
         ],
       },
       {
-        heading: "Écrire si le produit doit s'ouvrir",
+        heading: "Dire ce que la personne doit faire",
         paragraphs: [
-          "Dire ce que la personne doit pouvoir faire, et ce qui existe déjà : un site, un fichier, un outil. [[/developpement-logiciel-sur-mesure-maroc|Le logiciel sur mesure]] est le cadre commercial. Next.js n'est que l'outil si le parcours le demande.",
-          "[[/contact|Écrire à Casablanca]] suffit pour commencer. Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001.",
+          "Le message utile dit le geste, et ce qui existe déjà : un site, un fichier, un outil. [[/developpement-logiciel-sur-mesure-maroc|Le logiciel sur mesure]] est le cadre commercial. Next.js n'est l'outil que si le parcours le demande.",
+          "[[/contact|Écrire à Casablanca]]. Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001.",
         ],
       },
     ],
     links: [
       { href: "/contact", label: "Décrire le produit" },
+      { href: "/audit", label: "Audit d'une page" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
       { href: "/realisations/re-proche-de-moi", label: "Proche de moi" },
       { href: "/realisations/coco-inbox", label: "Coco Inbox" },
@@ -67,34 +68,34 @@ export const techArticles = [
       description:
         "Next.js at Byte Force: Proche de moi, Coco Inbox, and the studio site. The frame follows the product. Office in Casablanca.",
       h1: "Next.js in the studio products",
-      lede: "Next.js is the frame when the page a person opens and the product they use should live in one place. [[/realisations/re-proche-de-moi|Proche de moi]] and [[/realisations/coco-inbox|Coco Inbox]] are already online. The studio site is written the same way. [[/contact|Write to Casablanca]] if the next product must open in a browser.",
+      lede: "You open a page. The question is whether that page is the product, or only its poster. Next.js is the frame when the screen and the record live in the same repository. [[/realisations/re-proche-de-moi|Proche de moi]] and [[/realisations/coco-inbox|Coco Inbox]] are already online that way. So is the studio site. [[/contact|Write to Casablanca]] if the next path must open in a browser.",
       sections: [
         {
-          heading: "Where Next.js is already named",
+          heading: "Where the frame is already named",
           paragraphs: [
-            "Walid Moultamiss's profile names the work on prochedemoi.fr and booking.prochedemoi.fr: local search, a headless CMS with Next.js, TypeScript and Strapi, shop listings, structured data. That is the frame named for that product, online in Lille since 2024.",
-            "Coco Inbox, in Montreal since 2024, is described with Next.js, Node.js, GraphQL and MongoDB: temporary email, encrypted files, notes. The same frame carries the interface.",
+            "Walid Moultamiss's profile names the work on prochedemoi.fr and booking.prochedemoi.fr. Local search, a headless CMS with Next.js, TypeScript and Strapi, shop listings, structured data. The product has been online in Lille since 2024. That is not a traffic promise. It is the frame named for that product.",
+            "Coco Inbox has been in Montreal since 2024. Next.js carries the interface: temporary email, encrypted files, notes. Node.js, GraphQL and MongoDB are named apart. The frame does not swallow them.",
           ],
         },
         {
-          heading: "What the frame carries",
+          heading: "The page and the product",
           paragraphs: [
-            "Next.js is used when the screen and the data are one repository. A listing, a search, a booking, a message. At handover the client owns that repository and the hosting accounts that were delivered.",
-            "byteforce.ma is the third public example. It is not a client product. It shows that the studio publishes with the tool it offers.",
+            "Next.js is used when the page a person opens and the product they use are not two jobs. A listing, a search, a booking, a message: the screen and the data leave from the same repository.",
+            "At handover the client owns that repository, with the hosting accounts that were delivered. byteforce.ma is the third public example. The pages, the articles and the form are there. It is not a client product. The studio publishes with the tool it offers.",
           ],
         },
         {
-          heading: "What it is not asked to replace",
+          heading: "When the theme still holds",
           paragraphs: [
-            "A WordPress site that still holds is not rewritten in Next.js for a new name. The studio plugins exist for the missing action on a site that is already online. The move happens when accounts, roles, or a path no longer fit the theme.",
-            "There is no price on this page. The first conversation is thirty minutes and it is free. A reply goes out within one business day, Monday to Friday, 9:00 to 19:00.",
+            "A WordPress site that still holds is not rewritten in Next.js for a new name. The studio plugins exist for the missing action on a site that is already online.",
+            "The move is decided when the product has accounts, roles, or a path the theme no longer carries. There is no price on this page. The first conversation is thirty minutes, and it is free. A reply goes out within one business day, Monday to Friday, 9:00 to 19:00.",
           ],
         },
         {
-          heading: "Write if the product must open",
+          heading: "Say what the person must do",
           paragraphs: [
-            "Say what the person must be able to do, and what already exists. Custom software is the commercial frame. Next.js is only the tool when the path needs it.",
-            "[[/contact|Write to Casablanca]] is enough. The office is at Technopark, boulevard Dammam, Aïn Chock, 20001.",
+            "The useful note says the action, and what already exists: a site, a file, a tool. Custom software is the commercial frame. Next.js is the tool only when the path needs it.",
+            "[[/contact|Write to Casablanca]]. The office is at Technopark, boulevard Dammam, Aïn Chock, 20001.",
           ],
         },
       ],
@@ -928,31 +929,31 @@ export const techArticles = [
       "Vercel est cité dans le CV. Le catalogue du studio est publié sur Vercel. Le compte livré revient au client. Casablanca.",
     h1: "Vercel pour publier le produit",
     date,
-    lede: "Vercel est l'outil de publication nommé dans le CV, à côté d'OVHcloud et de Cloudflare. Le catalogue des projets est en ligne sur catalogue-iota.vercel.app. [[/contact|Écrire à Casablanca]] pour la mise en ligne d'un produit Next.js, avec le compte au nom du client.",
+    lede: "Le produit est dans le dépôt. La question est qui peut l'ouvrir, et sous quel nom. Vercel est l'outil de publication nommé dans le CV, à côté d'OVHcloud et de Cloudflare. Le catalogue des projets est en ligne sur catalogue-iota.vercel.app. Ce catalogue n'est pas un produit client. [[/contact|Écrire à Casablanca]] pour la mise en ligne d'un produit Next.js, avec le compte au nom du client.",
     sections: [
       {
-        heading: "Ce qui est public",
+        heading: "Ce qui est public, et ce qui ne l'est pas",
         paragraphs: [
-          "La fiche de Walid Moultamiss range Vercel dans les outils du CV. Le catalogue du studio, lié depuis le site, est hébergé sur un domaine vercel.app. Ce catalogue n'est pas un produit client. Il montre les travaux. Le site du studio est publié de la même famille d'outil : une application Next.js mise en ligne, pas un serveur décrit page par page.",
+          "La fiche de Walid Moultamiss range Vercel dans les outils du CV. Le catalogue du studio, lié depuis le site, est hébergé sur un domaine vercel.app. Il montre les travaux. Le site du studio est de la même famille : une application Next.js mise en ligne, pas un serveur décrit page par page.",
           "Les produits clients ne sont pas tous déclarés sur Vercel. Proche de moi, Coco Inbox, Dealkhir et Tourispeak ont leurs domaines. Leur page ne dit pas le nom de l'hébergeur de production. Cette page ne l'invente pas.",
         ],
       },
       {
-        heading: "Ce que la publication couvre",
+        heading: "Du dépôt à l'adresse",
         paragraphs: [
-          "Vercel sert quand le produit est une application Next.js et que la mise en ligne, l'aperçu d'une branche et le domaine doivent suivre le dépôt. Le déploiement n'est pas le métier. C'est la façon d'ouvrir la version convenue.",
+          "Vercel sert quand le produit est une application Next.js, et que la mise en ligne, l'aperçu d'une branche et le domaine doivent suivre le dépôt. Le déploiement n'est pas le métier. C'est la façon d'ouvrir la version convenue.",
           "À la remise, le compte est au client. Le studio ne garde pas la seule clé qui publie. C'est la même phrase que pour le dépôt et pour les autres comptes d'hébergement.",
         ],
       },
       {
-        heading: "Là où un autre hôte est le bon",
+        heading: "L'hôte qu'on ne déplace pas",
         paragraphs: [
           "Un site WordPress sur un hébergement mutualisé, comme le parc OVHcloud décrit au CV, ne se déplace pas sur Vercel pour changer d'écran de réglage. [[/services/hebergement|L'hébergement]] se choisit pour le projet. Le bureau est à Casablanca. La ville du serveur n'est pas un argument.",
           "Pas de prix de plateforme recopié. Le périmètre reste les écrans, les rôles et la mise en ligne. Trente minutes, gratuites.",
         ],
       },
       {
-        heading: "Dire ce qui doit s'ouvrir",
+        heading: "Dire le domaine",
         paragraphs: [
           "[[/developpement-logiciel-sur-mesure-maroc|Le logiciel sur mesure]] inclut le jour où quelqu'un d'autre que l'auteur ouvre le produit. Vercel est un moyen de ce jour quand le cadre est Next.js.",
           "[[/contact|Écrire à Casablanca]] avec le domaine souhaité, ou avec le domaine déjà en place.",
@@ -961,6 +962,7 @@ export const techArticles = [
     ],
     links: [
       { href: "/contact", label: "Décrire la mise en ligne" },
+      { href: "/audit", label: "Audit d'une page" },
       { href: "/services/hebergement", label: "Hébergement" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
       { href: "/walid-moultamiss", label: "Fiche de Walid Moultamiss" },
@@ -970,31 +972,31 @@ export const techArticles = [
       description:
         "Vercel is named in the CV. The studio catalogue is published on Vercel. The delivered account returns to the client. Casablanca.",
       h1: "Vercel for publishing the product",
-      lede: "Vercel is the publishing tool named in the CV, next to OVHcloud and Cloudflare. The project catalogue is online at catalogue-iota.vercel.app. [[/contact|Write to Casablanca]] about putting a Next.js product online, with the account in the client's name.",
+      lede: "The product is in the repository. The question is who can open it, and under which name. Vercel is the publishing tool named in the CV, next to OVHcloud and Cloudflare. The project catalogue is online at catalogue-iota.vercel.app. That catalogue is not a client product. [[/contact|Write to Casablanca]] about putting a Next.js product online, with the account in the client's name.",
       sections: [
         {
-          heading: "What is public",
+          heading: "What is public, and what is not",
           paragraphs: [
-            "Walid Moultamiss's profile files Vercel among the CV tools. The studio catalogue, linked from the site, is hosted on a vercel.app domain. That catalogue is not a client product. It shows the work. The studio site is published in the same family of tool: a Next.js application put online, not a server described page by page.",
+            "Walid Moultamiss's profile files Vercel among the CV tools. The studio catalogue, linked from the site, is hosted on a vercel.app domain. It shows the work. The studio site is the same family: a Next.js application put online, not a server described page by page.",
             "Client products are not all declared on Vercel. Proche de moi, Coco Inbox, Dealkhir and Tourispeak have their own domains. Their pages do not name the production host. This page does not invent it.",
           ],
         },
         {
-          heading: "What publishing covers",
+          heading: "From the repository to the address",
           paragraphs: [
-            "Vercel is used when the product is a Next.js application and go-live, a branch preview and the domain should follow the repository. Deployment is not the trade. It is how the agreed version opens.",
+            "Vercel is used when the product is a Next.js application, and go-live, a branch preview and the domain should follow the repository. Deployment is not the trade. It is how the agreed version opens.",
             "At handover the account belongs to the client. The studio does not keep the only key that publishes. The same sentence covers the repository and the other hosting accounts.",
           ],
         },
         {
-          heading: "Where another host is the right one",
+          heading: "The host you do not move",
           paragraphs: [
             "A WordPress site on shared hosting, like the OVHcloud park described in the CV, is not moved to Vercel to change a settings screen. Hosting is chosen for the project. The office is in Casablanca. The server's city is not an argument.",
             "No copied platform price. The scope stays the screens, the roles and the go-live. Thirty minutes, free.",
           ],
         },
         {
-          heading: "Say what must open",
+          heading: "Name the domain",
           paragraphs: [
             "Custom software includes the day someone other than the author opens the product. Vercel is one way to that day when the frame is Next.js.",
             "[[/contact|Write to Casablanca]] with the domain you want, or with the domain already in place.",

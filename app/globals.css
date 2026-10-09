@@ -351,3 +351,43 @@ summary:focus-visible {
     cx: 320;
   }
 }
+
+@keyframes lab-packet-stop {
+  from {
+    cx: 96;
+  }
+  to {
+    cx: 300;
+  }
+}
+
+@keyframes lab-packet-full {
+  0% {
+    cx: 96;
+  }
+  40% {
+    cx: 304;
+  }
+  60% {
+    cx: 336;
+  }
+  100% {
+    cx: 544;
+  }
+}
+
+.lab-packet-stop {
+  animation: lab-packet-stop 2.4s ease-in-out infinite alternate;
+}
+
+.lab-packet-full {
+  animation: lab-packet-full 3.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-packet-stop,
+  .lab-packet-full {
+    animation: none;
+    cx: 320;
+  }
+}
