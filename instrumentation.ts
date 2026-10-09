@@ -21,15 +21,15 @@ export const loggerProvider = new LoggerProvider({
   resource: resourceFromAttributes({ "service.name": "byteforce-website" }),
   processors: isConfigured
     ? [
-        new BatchLogRecordProcessor(
-          new OTLPLogExporter({
+        new BatchLogRecordProcessor({
+          exporter: new OTLPLogExporter({
             url: `${posthogHost}/i/v1/logs`,
             headers: {
               Authorization: `Bearer ${projectToken}`,
               "Content-Type": "application/json",
             },
           }),
-        ),
+        }),
       ]
     : [],
 });
