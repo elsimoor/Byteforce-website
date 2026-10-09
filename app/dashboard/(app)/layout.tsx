@@ -25,6 +25,9 @@ export default async function DashboardLayout({ children }: { children: React.Re
             <Link href="/dashboard/pages" className="hover:text-copper">
               Métas
             </Link>
+            <Link href="/dashboard/illustrations" className="hover:text-copper">
+              Illustrations
+            </Link>
           </nav>
           <form action={logout}>
             <button type="submit" className="hover:text-copper">

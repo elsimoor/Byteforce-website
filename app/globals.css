@@ -391,3 +391,44 @@ summary:focus-visible {
     cx: 320;
   }
 }
+
+@keyframes illus-flow {
+  to {
+    stroke-dashoffset: -52;
+  }
+}
+
+@keyframes illus-travel {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.illus .flow {
+  stroke-dasharray: 4 9;
+  animation: illus-flow 1.15s linear infinite;
+}
+
+.illus .travel {
+  offset-distance: 0%;
+  animation: illus-travel 3s linear infinite;
+}
+
+.illus.is-paused .flow,
+.illus.is-paused .travel {
+  animation-play-state: paused;
+}
+
+.illus [role="button"]:focus-visible {
+  outline: 1px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .illus .flow,
+  .illus .travel {
+    animation: none;
+    stroke-dasharray: none;
+    offset-distance: 62%;
+  }
+}
