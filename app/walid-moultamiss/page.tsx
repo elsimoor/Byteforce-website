@@ -82,7 +82,15 @@ export default function WalidPage() {
           ]}
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
-        <header className="px-6 pb-12 pt-16 md:px-12 md:pt-28">
+        <header className="grid gap-10 px-6 pb-12 pt-16 md:grid-cols-12 md:px-12 md:pt-28">
+          <img
+            src="/walid-moultamiss-byte-force-maroc.png"
+            alt="Walid Moultamiss, Byte Force Maroc"
+            width={420}
+            height={520}
+            className="aspect-[4/5] w-full max-w-sm rounded-lg object-cover object-[center_18%] md:col-span-5"
+          />
+          <div className="md:col-span-7">
           <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,6.5rem)]">Walid Moultamiss</h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed">
             Ingénieur logiciel full-stack, à Casablanca. Plus de 4 ans d&apos;expérience. Il a fondé Byte Force, dont le
@@ -93,13 +101,14 @@ export default function WalidPage() {
             <br />
             {site.phoneDisplay}
             <br />
-            <a href={linkedin}>LinkedIn</a>
+            <a href={linkedin}>LinkedIn de Walid Moultamiss</a>
           </p>
           <p className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
             <a href={cvFr}>CV en français (PDF)</a>
             <a href={cvEn}>CV in English (PDF)</a>
             <Link href="/contact">Écrire au studio</Link>
           </p>
+          </div>
         </header>
 
         <section className="border-t border-line px-6 py-16 md:px-12">
@@ -160,7 +169,7 @@ export default function WalidPage() {
           <p className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm">
             <a href={cvEn}>Download the English CV</a>
             <a href={cvFr}>Télécharger le CV français</a>
-            <a href={linkedin}>LinkedIn</a>
+            <a href={linkedin}>LinkedIn de Walid Moultamiss</a>
           </p>
         </section>
       </article>

@@ -13,6 +13,11 @@ const staticPaths = [
   "/recherche",
   "/how-we-write",
   "/walid-moultamiss",
+  "/checklists/comprendre-le-travail",
+  "/checklists/dessiner-le-produit",
+  "/checklists/construire-le-produit",
+  "/checklists/lancer-le-produit",
+  "/checklists/ameliorer-le-produit",
   "/ai",
   "/ai/services",
   "/ai/work",
@@ -39,6 +44,11 @@ export function publicEntries() {
   for (const article of articles) set(`/insights/${article.slug}`, article.date);
   set("/how-we-write", "2026-10-09");
   set("/walid-moultamiss", "2026-10-09");
+  set("/checklists/lancer-le-produit", "2026-10-09");
+  set("/checklists/comprendre-le-travail", "2026-10-09");
+  set("/checklists/dessiner-le-produit", "2026-10-09");
+  set("/checklists/construire-le-produit", "2026-10-09");
+  set("/checklists/ameliorer-le-produit", "2026-10-09");
   set("/recherche", "2026-10-09");
   return [...dates.entries()].map(([path, lastModified]) => ({ path, lastModified }));
 }

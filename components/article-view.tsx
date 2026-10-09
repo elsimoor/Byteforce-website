@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArticleFigures } from "@/components/article-figures";
+import { AuthorByline } from "@/components/author-byline";
 import type { Article } from "@/lib/articles";
 import { site } from "@/lib/site";
 
@@ -50,7 +51,16 @@ export function ArticleView({ article }: { article: Article }) {
         dateModified: article.date,
         url,
         mainEntityOfPage: url,
-        author: { "@type": "Organization", name: site.name, url: site.url },
+        author: {
+          "@type": "Person",
+          name: "Walid Moultamiss",
+          url: `${site.url}/walid-moultamiss`,
+          image: `${site.url}/walid-moultamiss-byte-force-maroc.png`,
+          jobTitle: "Full-Stack Software Engineer",
+          description:
+            "Full-Stack Software Engineer with 4+ years of experience. Master's studies in computer science at Heriot-Watt University. Lead of Byte Force in Casablanca.",
+          sameAs: ["https://www.linkedin.com/in/walid-moultamiss-56142b1aa"],
+        },
         publisher: {
           "@type": "Organization",
           name: site.name,
@@ -72,6 +82,7 @@ export function ArticleView({ article }: { article: Article }) {
         </p>
         <h1 className="display mt-6 max-w-[18ch] text-[clamp(2.6rem,6vw,5.5rem)]">{article.h1}</h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed">{article.lede}</p>
+        <AuthorByline />
         <p className="mt-6">
           <Link href="/contact" className="border-b border-ink pb-1">
             Parler du projet

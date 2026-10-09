@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AuthorByline } from "@/components/author-byline";
 import { LeadForm } from "@/components/lead-form";
 import { childrenOf, crumbsFor, moneyPages, type MoneyPage } from "@/lib/money";
 import { site } from "@/lib/site";
@@ -32,7 +33,16 @@ export function CommercialView({ page }: { page: MoneyPage }) {
           headline: page.h1,
           description: page.description,
           url,
-          author: { "@id": `${site.url}/#business` },
+          author: {
+            "@type": "Person",
+            name: "Walid Moultamiss",
+            url: `${site.url}/walid-moultamiss`,
+            image: `${site.url}/walid-moultamiss-byte-force-maroc.png`,
+            jobTitle: "Full-Stack Software Engineer",
+            description:
+              "Full-Stack Software Engineer with 4+ years of experience. Master's studies in computer science at Heriot-Watt University.",
+            sameAs: ["https://www.linkedin.com/in/walid-moultamiss-56142b1aa"],
+          },
           publisher: { "@id": `${site.url}/#business` },
           inLanguage: "fr-MA",
         }
@@ -91,6 +101,7 @@ export function CommercialView({ page }: { page: MoneyPage }) {
         <Link href="/contact" className="mt-8 inline-block border-b border-ink pb-1">
           {page.cta}
         </Link>
+        {page.schema === "article" ? <AuthorByline /> : null}
       </header>
 
       {page.blocks.map((block) => (

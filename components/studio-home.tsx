@@ -1,4 +1,5 @@
 import { AuditForm } from "@/components/audit-form";
+import { StepDrawing } from "@/components/step-drawing";
 import { Icon } from "@/components/icon";
 import { ResponsiveImg } from "@/components/responsive-img";
 import { SelectedWork } from "@/components/selected-work";
@@ -531,91 +532,31 @@ export function StudioHome() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {/* Step 1 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary block mb-3">
-                  01
+            {(
+              [
+                ["01", "understand", "Understand the work", "We understand your business, users, workflows and constraints.", "BUSINESS • USERS", "/checklists/comprendre-le-travail"],
+                ["02", "design", "Design the product", "We turn the requirements into a clear product experience and technical architecture.", "PRODUCT • ARCHITECTURE", "/checklists/dessiner-le-produit"],
+                ["03", "build", "Build the product", "We engineer the application, backend, database, integrations and infrastructure.", "APPLICATION • DATA", "/checklists/construire-le-produit"],
+                ["04", "launch", "Launch the product", "We deploy the software into a real production environment.", "PRODUCTION", "/checklists/lancer-le-produit"],
+                ["05", "improve", "Improve the product", "We continue improving the product as your business grows.", "AFTER LAUNCH", "/checklists/ameliorer-le-produit"],
+              ] as const
+            ).map(([index, drawing, title, text, mark, href]) => (
+              <a
+                key={href}
+                href={href}
+                className="flex flex-col justify-between rounded-lg bg-surface-container-lowest p-5 text-on-surface shadow-sm transition-shadow hover:shadow-md"
+              >
+                <span className="text-primary">
+                  <StepDrawing name={drawing} />
                 </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Understand the work
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  We understand your business, users, workflows and constraints.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                BUSINESS • USERS
-              </span>
-            </div>
-            {/* Step 2 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary block mb-3">
-                  02
+                <span className="mt-4 text-2xl font-mono font-black text-primary">{index}</span>
+                <h3 className="mb-2 mt-2 font-headline text-base font-bold">{title}</h3>
+                <p className="text-xs leading-relaxed text-on-surface-variant">{text}</p>
+                <span className={`mt-6 text-[10px] font-mono uppercase tracking-wider ${index === "04" ? "font-bold text-primary" : "text-outline"}`}>
+                  {mark}
                 </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Design the product
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  We turn the requirements into a clear product experience and technical architecture.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                PRODUCT • ARCHITECTURE
-              </span>
-            </div>
-            {/* Step 3 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary block mb-3">
-                  03
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Build the product
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  We engineer the application, backend, database, integrations and infrastructure.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                APPLICATION • DATA
-              </span>
-            </div>
-            {/* Step 4 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary block mb-3">
-                  04
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Launch the product
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  We deploy the software into a real production environment.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-primary font-bold uppercase tracking-wider">
-                PRODUCTION
-              </span>
-            </div>
-            {/* Step 5 */}
-            <div className="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between h-64 shadow-sm">
-              <div>
-                <span className="text-2xl font-mono font-black text-primary block mb-3">
-                  05
-                </span>
-                <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Improve the product
-                </h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed">
-                  We continue improving the product as your business grows.
-                </p>
-              </div>
-              <span className="text-[10px] font-mono text-outline uppercase tracking-wider">
-                AFTER LAUNCH
-              </span>
-            </div>
+              </a>
+            ))}
           </div>
           <a
             href="/contact"

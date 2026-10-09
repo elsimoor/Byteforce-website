@@ -62,7 +62,6 @@ html:has([data-home]) {
 
 html {
   background: var(--color-surface);
-  scrollbar-width: none;
 }
 
 body {
@@ -70,11 +69,6 @@ body {
   color: var(--color-on-surface);
   text-rendering: optimizeLegibility;
   overscroll-behavior: none;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
 }
 
 ::selection {
