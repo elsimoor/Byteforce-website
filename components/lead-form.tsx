@@ -63,7 +63,7 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
   const draftRef = useRef<Draft | null>(null);
   const tokenRef = useRef("");
   const [turnstileToken, setTurnstileToken] = useState("");
-  const [status, setStatus] = useState<"choice" | "saving" | "saved" | "error">("choice");
+  const [status, setStatus] = useState<"choice" | "saved">("choice");
 
   function setToken(token: string) {
     tokenRef.current = token;
@@ -87,33 +87,26 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
     dialogRef.current?.showModal();
   }
 
-  async function choose(channel: "email" | "whatsapp") {
+  function choose(channel: "email" | "whatsapp") {
     const draft = draftRef.current;
     const turnstile = tokenRef.current;
-    if (!draft || !turnstile || status === "saving") return;
+    if (!draft || !turnstile || status === "saved") return;
     const lead = { ...draft, city, country, pageUrl: window.location.href, turnstile };
+    if (posthogEnabled) posthog.capture("lead_channel_selected", { channel });
+    void recordLead(lead);
     if (channel === "whatsapp") {
-      if (posthogEnabled) posthog.capture("lead_channel_selected", { channel });
-      void recordLead(lead);
       window.open(whatsappUrl(projectText(draft)), "_blank", "noopener,noreferrer");
       closeChoice();
       return;
     }
-    setStatus("saving");
-    try {
-      const result = await recordLead(lead);
-      if (result?.ok && posthogEnabled) {
-        posthog.capture("lead_channel_selected", { channel });
-        posthog.capture("lead_submitted", {
-          channel,
-          has_service_selected: Boolean(draft.service),
-          has_budget_selected: Boolean(draft.budget),
-        });
-      }
-      setStatus(result?.ok ? "saved" : "error");
-    } catch {
-      setStatus("error");
+    if (posthogEnabled) {
+      posthog.capture("lead_submitted", {
+        channel,
+        has_service_selected: Boolean(draft.service),
+        has_budget_selected: Boolean(draft.budget),
+      });
     }
+    setStatus("saved");
   }
 
   return (
@@ -177,14 +170,12 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
         onClose={() => setStatus("choice")}
       >
         <h2 id="send-choice-title" className="text-2xl">
-          {status === "saved" ? "Demande enregistrée." : "Comment envoyer la demande ?"}
+          {status === "saved" ? "On vous répond bientôt." : "Comment envoyer la demande ?"}
         </h2>
         <p className="mt-3 text-sm text-mute">
           {status === "saved"
-            ? "Elle est dans le CRM. On revient vers vous."
-            : status === "error"
-              ? "L'enregistrement dans le CRM a échoué. Réessayez."
-              : "Email enregistre la demande dans le CRM. WhatsApp ouvre le message déjà rédigé."}
+            ? "La réponse part sous un jour ouvré."
+            : "L'email envoie la demande. WhatsApp ouvre le message déjà rédigé."}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           {status === "saved" ? (
@@ -193,20 +184,10 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
             </button>
           ) : (
             <>
-              <button
-                type="button"
-                className="border border-ink px-4 py-3 text-sm disabled:opacity-50"
-                disabled={status === "saving"}
-                onClick={() => choose("email")}
-              >
-                {status === "saving" ? "Enregistrement…" : "Email"}
+              <button type="button" className="border border-ink px-4 py-3 text-sm" onClick={() => choose("email")}>
+                Email
               </button>
-              <button
-                type="button"
-                className="bg-ink px-4 py-3 text-sm text-paper disabled:opacity-50"
-                disabled={status === "saving"}
-                onClick={() => choose("whatsapp")}
-              >
+              <button type="button" className="bg-ink px-4 py-3 text-sm text-paper" onClick={() => choose("whatsapp")}>
                 WhatsApp
               </button>
               <button type="button" className="px-4 py-3 text-sm text-mute" onClick={closeChoice}>
