@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { ResponsiveImg } from "@/components/responsive-img";
 import { notFound } from "next/navigation";
 import { ProjectJsonLd } from "@/components/json-ld";
 import { getCity, slugify } from "@/lib/catalog";
@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }: Props) {
       <section className="grid gap-12 px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
         <div className="md:col-span-7">
           {project.shot && project.screens?.[0]?.src !== project.shot ? (
-            <Image
+            <ResponsiveImg
               src={project.shot}
               alt={`${project.title}, capture du site en ligne`}
               width={400}
@@ -111,7 +111,7 @@ export default async function ProjectPage({ params }: Props) {
               <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {project.screens.map((screen, index) => (
                   <li key={screen.src}>
-                    <Image
+                    <ResponsiveImg
                       src={screen.src}
                       alt={`${project.title}, capture ${index + 1} de l'application Android`}
                       width={screen.width > 400 ? 400 : screen.width}

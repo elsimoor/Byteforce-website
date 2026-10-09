@@ -64,9 +64,10 @@ export default function AboutPage() {
               Casablanca.
             </p>
             <p>
-              On ne publie pas de biographie de fondateur, de photo d&apos;équipe, ni de témoignage. La preuve publique
-              est le site en ligne de chaque projet, avec sa ville et son année. Quand un chiffre n&apos;est pas dans le
-              dossier, il n&apos;apparaît pas.
+              La fiche de Walid Moultamiss reprend le parcours écrit dans son CV. Il n&apos;y a pas de photo d&apos;équipe
+              ni de témoignage. La preuve publique des projets reste le site en ligne, avec sa ville et son année. Quand
+              un chiffre n&apos;est pas dans le dossier, il n&apos;apparaît pas.{" "}
+              <Link href="/walid-moultamiss">Lire la fiche</Link>.
             </p>
           </div>
           <h2 className="display mt-16 text-4xl">Ce qui est déjà en ligne</h2>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ResponsiveImg } from "@/components/responsive-img";
 import type { Project } from "@/lib/content";
 
 const countryMark: Record<string, string> = {
@@ -37,7 +37,7 @@ export function ProjectStage({
           <p className="mt-6 max-w-sm text-mute">{project.description}</p>
         </div>
         <div className="relative min-h-[52svh] overflow-hidden bg-ink md:col-span-7 md:min-h-full">
-          <Image
+          <ResponsiveImg
             src={project.shot}
             alt={`${project.title}, capture du site en ligne`}
             width={400}

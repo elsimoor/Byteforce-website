@@ -314,6 +314,9 @@ export const services: Service[] = [
         paragraphs: [
           "Byte Force corrige après la mise en ligne, met à jour ce qui concerne la sécurité, et vérifie le formulaire et les pages qui reçoivent les demandes. Une petite évolution de page fait partie du suivi.",
           "Un correctif isolé peut être devisé sans abonnement. Le bureau est à Casablanca, la réponse part sous un jour ouvré.",
+          "Le suivi porte sur un site ou un outil déjà publié. On regarde d'abord le parcours qui doit produire une demande : la page d'offre, le formulaire, le message qui part, et la page qui confirme l'envoi. Si un de ces points casse après une mise à jour, la correction vise ce point, pas une refonte.",
+          "Une petite évolution, c'est un texte, un bloc ou un lien qui ne dit plus ce que l'entreprise fait. On ne change pas l'offre à la place du client. On met la page au niveau de ce qui est vrai aujourd'hui, puis on revérifie que le formulaire part encore.",
+          "Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. On répond du lundi au vendredi, de 9h à 19h, par le formulaire, par email ou par WhatsApp. Aucun prix n'est affiché ici. Le premier message dit ce qui bloque, sur quel site, et depuis quand. Si le site a été écrit par quelqu'un d'autre, on le lit avant de le corriger. Si le code peut être repris, on le dit. Si une reprise complète est le chemin honnête, on le dit aussi, avant de toucher au site. Le code livré reste au client.",
         ],
       },
     ],

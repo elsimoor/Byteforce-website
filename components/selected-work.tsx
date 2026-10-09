@@ -68,7 +68,9 @@ export function SelectedWork() {
               <p className="font-mono text-xs font-bold tracking-wider text-primary uppercase">
                 {project.city} · {project.year}
               </p>
-              <h3 className="font-headline text-2xl font-bold text-on-surface">{project.title}</h3>
+              <h3 className="font-headline text-2xl font-bold text-on-surface">
+                {project.title.length < 10 ? `${project.title} en ligne` : project.title}
+              </h3>
               <p className="text-sm leading-relaxed text-on-surface-variant">
                 <span className="font-semibold text-on-surface">Problème. </span>
                 {copy[project.slug].problem}

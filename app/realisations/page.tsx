@@ -3,7 +3,6 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { ProjectStage } from "@/components/project-stage";
 import { SiteIndex } from "@/components/site-index";
-import { categories, cities } from "@/lib/catalog";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 
@@ -29,22 +28,10 @@ export default function WorkPage() {
       <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Travaux", path: "/realisations" }]} />
       <header className="grid gap-10 px-6 pb-8 pt-16 md:grid-cols-12 md:px-12 md:pt-28">
         <h1 className="display text-[clamp(3.2rem,8vw,7rem)] md:col-span-7">Travaux publiés.</h1>
-        <div className="flex flex-col gap-6 text-sm md:col-span-4 md:col-start-9 md:pt-4">
-          <p className="flex flex-wrap gap-x-5 gap-y-2">
-            {categories().map((category) => (
-              <Link key={category.slug} href={category.path} className="hover:opacity-50">
-                {category.name}
-              </Link>
-            ))}
-          </p>
-          <p className="flex flex-wrap gap-x-5 gap-y-2 text-mute">
-            {cities().map((city) => (
-              <Link key={city.slug} href={city.path} className="hover:text-ink">
-                {city.city}
-              </Link>
-            ))}
-          </p>
-        </div>
+        <p className="text-sm leading-relaxed text-mute md:col-span-4 md:col-start-9 md:pt-4">
+          Boutiques, sites vitrines et plateformes. Les villes du catalogue : Lille, Marcq-en-Barœul, Roubaix, le Nord,
+          Casablanca, Montréal, Safi, Marrakech et Tanger.
+        </p>
       </header>
       <section className="px-6 pb-16 md:px-12">
         <p className="max-w-2xl text-lg leading-relaxed">
@@ -79,6 +66,20 @@ export default function WorkPage() {
           </li>
         ))}
       </ol>
+      <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
+        <h2 className="display max-w-[16ch] text-4xl">Ce que chaque dossier contient</h2>
+        <div className="mt-10 max-w-3xl space-y-8">
+          {projects.map((project) => (
+            <p key={project.slug} className="leading-relaxed">
+              {project.title} ({project.year}) est en ligne pour {project.city}, {project.country}. {project.description}{" "}
+              La fiche classe ce travail en {project.category}. Elle ne donne pas de prix, pas de témoignage et pas de
+              volume de ventes : ces chiffres ne sont pas dans le dossier. On ouvre le site publié depuis la fiche, puis
+              on écrit à Casablanca si le besoin ressemble à celui-ci. La ville et l&apos;année suffisent à situer le
+              travail. Le reste se vérifie sur le site du client. Le code livré appartient au client.
+            </p>
+          ))}
+        </div>
+      </section>
       <SiteIndex part={5} />
       </article>
     </main>

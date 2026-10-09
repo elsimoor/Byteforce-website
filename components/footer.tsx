@@ -102,6 +102,14 @@ export function Footer() {
           {site.description} Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. On répond du
           lundi au vendredi, de 9h à 19h.
         </p>
+        <p className="author mt-8 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
+          <Link href="/walid-moultamiss" className="font-semibold text-on-surface">
+            Walid Moultamiss
+          </Link>
+          , fondateur de Byte Force à Casablanca. Full-Stack Software Engineer with 4+ years of experience. Master&apos;s
+          studies in computer science at Heriot-Watt University. Lead of the studio.{" "}
+          <a href="https://www.linkedin.com/in/walid-moultamiss-56142b1aa">LinkedIn de Walid Moultamiss</a>.
+        </p>
         <p className="financial-disclaimer mt-4 max-w-3xl text-xs text-on-surface-variant">
           This page is not financial advice. Aucun prix n&apos;est publié sur ce site.
         </p>
