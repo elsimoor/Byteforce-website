@@ -135,7 +135,7 @@ async function main() {
   check("contact has Open Graph title and description", meta(contact.text, "og:title").includes("Contact") && meta(contact.text, "og:description").length > 40);
   check("contact locale is fr_FR", meta(contact.text, "og:locale") === "fr_FR");
 
-  const about = await get("/a-propos");
+  const about = await get("/studio");
   check("about title names the studio", titleOf(about.text).includes("Studio logiciel à Casablanca"), titleOf(about.text));
   check("about states there is no office in France", about.text.includes("Pas de bureau en France"));
   check("about is more than a stub", words(about.text) >= 250, `${words(about.text)} words`);
@@ -192,7 +192,7 @@ async function main() {
 
   const aboutRedirect = await get("/about", { redirect: "manual" });
   const aboutLocation = aboutRedirect.headers.get("location") || "";
-  check("old /about redirects to /a-propos", [301, 308].includes(aboutRedirect.status) && aboutLocation.includes("/a-propos"), `${aboutRedirect.status} ${aboutLocation}`);
+  check("old /about redirects to /studio", [301, 308].includes(aboutRedirect.status) && aboutLocation.includes("/studio"), `${aboutRedirect.status} ${aboutLocation}`);
 
   const serviceRedirect = await get("/services/logiciel-sur-mesure", { redirect: "manual" });
   const serviceLocation = serviceRedirect.headers.get("location") || "";

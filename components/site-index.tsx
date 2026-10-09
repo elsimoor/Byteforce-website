@@ -1,25 +1,28 @@
 import Link from "next/link";
 import { publicEntries } from "@/lib/public-urls";
 
+const parts = 6;
+
 function label(path: string) {
   if (path === "/") return "Accueil";
   return path.slice(1).replaceAll("/", " · ");
 }
 
-export function SiteIndex() {
-  const entries = publicEntries();
+export function SiteIndex({ part }: { part: number }) {
+  const entries = publicEntries().filter((_, index) => index % parts === part);
+  if (entries.length === 0) return null;
   return (
-    <details className="mt-12 border-t border-outline-variant/20 pt-8">
-      <summary className="cursor-pointer text-sm font-medium text-on-surface">Plan du site</summary>
-      <ul className="mt-4 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
+    <nav aria-label="Autres pages" className="px-6 py-10 md:px-12">
+      <h2 className="text-sm text-mute">Autres pages du site</h2>
+      <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
         {entries.map((entry) => (
-          <li key={entry.path} className="mb-1.5 break-inside-avoid">
-            <Link href={entry.path} className="text-on-surface-variant hover:text-on-surface">
+          <li key={entry.path}>
+            <Link href={entry.path} className="text-mute hover:text-ink">
               {label(entry.path)}
             </Link>
           </li>
         ))}
       </ul>
-    </details>
+    </nav>
   );
 }

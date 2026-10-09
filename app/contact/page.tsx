@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { LeadForm } from "@/components/lead-form";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
+import { SiteIndex } from "@/components/site-index";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Écrire à Casablanca",
   description:
-    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel sur mesure.",
+    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel. Réponse sous un jour ouvré, du lundi au vendredi.",
   alternates: { canonical: "/contact" },
   openGraph: openGraph(
     "/contact",
     "Contact · Byte Force",
-    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel sur mesure.",
+    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel. Réponse sous un jour ouvré, du lundi au vendredi.",
   ),
 };
 
@@ -48,7 +49,10 @@ export default async function ContactPage({ searchParams }: Props) {
           <p>
             Après l&apos;envoi, la réponse arrive par email ou par WhatsApp. Si le sujet n&apos;est pas un logiciel, un
             site ou une application, la réponse le dit. Les travaux déjà en ligne sont sur la page des réalisations. La
-            page d&apos;accueil reprend les quatre produits montrés avec une capture.
+            page d&apos;accueil reprend les quatre produits montrés avec une capture. Le bureau reçoit du lundi au
+            vendredi, de 9h à 19h, au Technopark. Un prix n&apos;est pas demandé dans ce premier message. Il
+            n&apos;y a pas de bureau en France ni au Canada. Les projets lillois et montréalais du catalogue ont été
+            faits depuis Casablanca.
           </p>
           <p>
             Le message utile tient en peu de lignes : votre nom, un email, ce qui existe déjà (un site, un fichier, un
@@ -79,6 +83,7 @@ export default async function ContactPage({ searchParams }: Props) {
         {!query.sent ? <LeadForm /> : null}
       </div>
       </div>
+      <SiteIndex part={4} />
       </article>
     </main>
   );

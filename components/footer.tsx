@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { SiteIndex } from "@/components/site-index";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -9,9 +7,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-3 md:col-span-2">
-            <Link href="/" className="flex items-center gap-3">
-              <Image alt="Byte Force" className="h-11 w-11 object-cover" src="/logo.png" width={44} height={44} sizes="44px" />
-              <span className="font-headline text-base font-bold tracking-tight text-on-surface">ByteForce</span>
+            <Link href="/" className="font-headline text-base font-bold tracking-tight text-on-surface">
+              Byte Force
             </Link>
             <p className="max-w-sm text-sm text-on-surface-variant">
               Studio logiciel à Casablanca. Sites, applications et logiciels sur mesure.
@@ -23,7 +20,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Studio</h2>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Pages du studio</h2>
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
                 <Link href="/realisations" className="text-on-surface-variant transition-colors hover:text-on-surface">
@@ -36,7 +33,7 @@ export function Footer() {
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/a-propos" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/studio" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   Qui sommes-nous
                 </Link>
               </li>
@@ -58,7 +55,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Contact</h2>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Écrire au studio</h2>
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
                 <Link href="/contact" className="text-on-surface-variant transition-colors hover:text-on-surface">
@@ -91,7 +88,6 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <SiteIndex />
         <p className="mt-8 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
           {site.description} Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. On répond du
           lundi au vendredi, de 9h à 19h.
@@ -108,6 +104,9 @@ export function Footer() {
           </a>
           <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(site.url)}`}>Partager sur X</a>
           <Link href="/how-we-write">Comment les pages sont écrites</Link>
+          <a href="https://schema.org/">schema.org</a>
+          <a href="https://wordpress.org/">wordpress.org</a>
+          <a href="https://www.w3.org/TR/html/">W3C HTML</a>
           <time dateTime="2026-10-09">Mis à jour le 9 octobre 2026</time>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-outline-variant/20 pt-8 text-xs text-on-surface-variant sm:flex-row">

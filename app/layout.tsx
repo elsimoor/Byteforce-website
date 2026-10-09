@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
-  authors: [{ name: site.name, url: `${site.url}/a-propos` }],
+  authors: [{ name: site.name, url: `${site.url}/studio` }],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

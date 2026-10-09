@@ -46,7 +46,7 @@ export const placePages: MoneyPage[] = [
       { href: "/realisations/dealkhir", title: "Dealkhir", note: "En ligne à Casablanca depuis 2024." },
     ],
     links: [
-      { href: "/a-propos", label: "Le bureau" },
+      { href: "/studio", label: "Le bureau" },
       { href: "/contact", label: "Contact" },
       { href: "/solutions/logiciel-pme", label: "Pour une PME" },
     ],

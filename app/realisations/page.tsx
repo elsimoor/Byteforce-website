@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { ProjectStage } from "@/components/project-stage";
+import { SiteIndex } from "@/components/site-index";
 import { categories, cities } from "@/lib/catalog";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
@@ -78,6 +79,7 @@ export default function WorkPage() {
           </li>
         ))}
       </ol>
+      <SiteIndex part={5} />
       </article>
     </main>
   );

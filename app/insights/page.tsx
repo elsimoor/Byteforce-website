@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { articles } from "@/lib/articles";
+import { SiteIndex } from "@/components/site-index";
 import { moneyPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
 
@@ -91,6 +92,7 @@ export default function InsightsPage() {
           </ul>
         </section>
       ))}
+      <SiteIndex part={3} />
       </article>
     </main>
   );

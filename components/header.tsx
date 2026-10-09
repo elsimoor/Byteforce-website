@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/realisations", label: "Travaux", match: (path: string) => path.startsWith("/realisations") },
   { href: "/services", label: "Services", match: (path: string) => path.startsWith("/services") },
-  { href: "/a-propos", label: "À propos", match: (path: string) => path.startsWith("/a-propos") },
+  { href: "/studio", label: "À propos", match: (path: string) => path.startsWith("/studio") },
   {
     href: "/insights",
     label: "Décisions",

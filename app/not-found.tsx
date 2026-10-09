@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const links = [
   { href: "/realisations", label: "Travaux" },
   { href: "/services", label: "Services" },
-  { href: "/a-propos", label: "À propos" },
+  { href: "/studio", label: "À propos" },
   { href: "/insights", label: "Décisions" },
 ];
 

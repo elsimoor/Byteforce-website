@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { SiteIndex } from "@/components/site-index";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 import { site } from "@/lib/site";
 
+const description =
+  "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.";
+
 export const metadata: Metadata = {
   title: "Studio logiciel à Casablanca",
-  description:
-    "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.",
-  alternates: { canonical: "/a-propos" },
-  openGraph: openGraph(
-    "/a-propos",
-    "Studio logiciel à Casablanca",
-    "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.",
-  ),
+  description,
+  alternates: { canonical: "/studio" },
+  openGraph: openGraph("/studio", "Studio logiciel à Casablanca", description),
 };
 
 const countries = new Set(projects.map((project) => project.country)).size;
@@ -24,7 +23,7 @@ export default function AboutPage() {
   return (
     <main>
       <article>
-      <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "À propos", path: "/a-propos" }]} />
+      <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "À propos", path: "/studio" }]} />
       <header className="px-6 pb-16 pt-16 md:px-12 md:pt-28">
         <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,7.2rem)]">
           Un studio logiciel à Casablanca.
@@ -112,6 +111,7 @@ export default function AboutPage() {
           {site.hoursLabel}
         </p>
       </section>
+      <SiteIndex part={2} />
       </article>
     </main>
   );

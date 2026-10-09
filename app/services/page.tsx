@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { services } from "@/lib/content";
+import { SiteIndex } from "@/components/site-index";
 import { entryPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
 
@@ -64,6 +65,7 @@ export default function ServicesPage() {
           Accueil du studio
         </Link>
       </p>
+      <SiteIndex part={1} />
       </article>
     </main>
   );

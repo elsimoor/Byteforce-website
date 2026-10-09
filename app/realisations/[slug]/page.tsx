@@ -86,9 +86,9 @@ export default async function ProjectPage({ params }: Props) {
           {" · "}
           <Link href={`/categories/${slugify(project.category)}`}>{project.category}</Link>
           {" · "}
-          <Link href={place?.path ?? `/villes/${slugify(project.city)}`}>{project.city}</Link>
+          <Link href={place?.path ?? `/villes/${slugify(project.city)}`}>Ville de {project.city}</Link>
           {" · "}
-          {project.year}
+          <time dateTime={`${project.year}-01-01`}>{project.year}</time>
         </p>
         <h1 className="relative display max-w-[12ch] text-[clamp(3.4rem,8vw,7.5rem)]">{project.title}</h1>
       </header>
@@ -165,7 +165,9 @@ export default async function ProjectPage({ params }: Props) {
             </div>
             <div>
               <dt className="font-mono text-xs text-mute">Année affichée</dt>
-              <dd className="mt-1">{project.year}</dd>
+              <dd className="mt-1">
+                <time dateTime={`${project.year}-01-01`}>{project.year}</time>
+              </dd>
             </div>
             <div>
               <dt className="font-mono text-xs text-mute">Type</dt>

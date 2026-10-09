@@ -1,6 +1,6 @@
 import { AuditForm } from "@/components/audit-form";
 import { Icon } from "@/components/icon";
-import Image from "next/image";
+import { ResponsiveImg } from "@/components/responsive-img";
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -13,8 +13,8 @@ const capabilities = [
   { kicker: "Intelligence", title: "AI and automation", text: "Work removed from the team" },
   { kicker: "Connections", title: "APIs and integrations", text: "The product talks to other systems" },
   { kicker: "Messages", title: "Notifications", text: "Email, alerts, in-product messages" },
-  { kicker: "Files", title: "Documents", text: "Files attached to the work" },
-  { kicker: "Finding", title: "Search", text: "Find records, not folders" },
+  { kicker: "Files", title: "Documents and files", text: "Files attached to the work" },
+  { kicker: "Finding", title: "Search inside the product", text: "Find records, not folders" },
   { kicker: "Operations", title: "Admin and back office", text: "The team’s side of the product" },
   { kicker: "Running", title: "Cloud infrastructure", text: "Hosting, deploy, monitoring" },
   { kicker: "Scale", title: "Multi-user and multi-company", text: "Teams and tenants in one product" },
@@ -78,7 +78,7 @@ export function StudioHome() {
               className="block overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl"
             >
               <span className="relative block aspect-[16/10] w-full">
-                <Image
+                <ResponsiveImg
                   src="/work/coco-inbox.jpg"
                   alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
                   width={400}
@@ -169,7 +169,7 @@ export function StudioHome() {
               </p>
               <p className="text-base text-on-surface-variant leading-relaxed">
                 {projects.length} projets publiés. Le bureau est au Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca.{" "}
-                <a href="/a-propos" className="font-semibold text-primary">
+                <a href="/studio" className="font-semibold text-primary">
                   À propos du studio
                 </a>
                 .
@@ -520,7 +520,7 @@ export function StudioHome() {
                   01
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Understand
+                  Understand the work
                 </h3>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   We understand your business, users, workflows and constraints.
@@ -537,7 +537,7 @@ export function StudioHome() {
                   02
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Design
+                  Design the product
                 </h3>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   We turn the requirements into a clear product experience and technical architecture.
@@ -554,7 +554,7 @@ export function StudioHome() {
                   03
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Build
+                  Build the product
                 </h3>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   We engineer the application, backend, database, integrations and infrastructure.
@@ -571,7 +571,7 @@ export function StudioHome() {
                   04
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Launch
+                  Launch the product
                 </h3>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   We deploy the software into a real production environment.
@@ -588,7 +588,7 @@ export function StudioHome() {
                   05
                 </span>
                 <h3 className="text-base font-headline font-bold text-on-surface mb-2">
-                  Improve
+                  Improve the product
                 </h3>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   We continue improving the product as your business grows.
@@ -905,7 +905,7 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Backend
+                  Backend and APIs
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Reliable APIs, business logic and data processing.
@@ -927,7 +927,7 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Database
+                  Database and files
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Structured data models designed for real-world usage.
@@ -993,7 +993,7 @@ export function StudioHome() {
                   </div>
                 </div>
                 <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Security
+                  Security and access
                 </h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed">
                   Authentication, permissions and secure data handling.
@@ -1188,21 +1188,21 @@ export function StudioHome() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-headline font-bold text-on-surface">Care</h3>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Care for a live site</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Uptime monitoring, weekly backups, security updates.</p>
               </div>
               <p className="mt-8 text-xs font-mono text-primary font-bold">Reply in 2 business days</p>
             </div>
             <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-headline font-bold text-on-surface">Care Plus</h3>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Care Plus for a live site</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Care, plus 5 hours a month of fixes and content edits.</p>
               </div>
               <p className="mt-8 text-xs font-mono text-primary font-bold">Reply in 1 business day</p>
             </div>
             <div className="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-headline font-bold text-on-surface">Priority</h3>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Priority for a live site</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Care Plus, plus performance work and a monthly report.</p>
               </div>
               <p className="mt-8 text-xs font-mono text-primary font-bold">4 hours for a critical outage</p>

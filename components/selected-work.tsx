@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ResponsiveImg } from "@/components/responsive-img";
+import { SiteIndex } from "@/components/site-index";
 import { projects } from "@/lib/content";
 
 const order = ["coco-inbox", "re-proche-de-moi", "dealkhir", "tourispeak"];
@@ -52,7 +53,7 @@ export function SelectedWork() {
               aria-label={`Site ${project.title}`}
               className="relative block aspect-[16/10] w-full"
             >
-              <Image
+              <ResponsiveImg
                 src={project.shot}
                 alt={`${project.title}, capture du site en ligne`}
                 width={400}
@@ -92,7 +93,7 @@ export function SelectedWork() {
       </div>
       <p className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-sm">
         <Link href="/services">Services à Casablanca</Link>
-        <Link href="/a-propos">Qui sommes-nous</Link>
+        <Link href="/studio">Qui sommes-nous</Link>
         <Link href="/insights">Décisions avant de construire</Link>
         <Link href="/contact">Écrire à Casablanca</Link>
       </p>
@@ -102,6 +103,7 @@ export function SelectedWork() {
       >
         Parler d&apos;un projet
       </a>
+      <SiteIndex part={0} />
     </section>
   );
 }

@@ -296,7 +296,7 @@ export const services: Service[] = [
     slug: "maintenance",
     menu: "Maintenance",
     summary:
-      "Corrections, mises à jour et petites évolutions pour que le site continue à produire des demandes.",
+      "Corrections, mises à jour et petites évolutions au Technopark, à Casablanca, pour que le site continue à produire des demandes.",
     problem:
       "Un formulaire cassé ou un contenu périmé arrête les leads sans prévenir. La maintenance garde le parcours de contact ouvert.",
     includes: [
@@ -522,7 +522,7 @@ export const projects: Project[] = [
     city: "Lille",
     country: "France",
     description:
-      "Plateforme de mise en relation et marketplace locale pour les boutiques de proximité.",
+      "Plateforme de mise en relation pour les boutiques de proximité. En ligne à Lille depuis 2024, avec la recherche et la carte.",
     url: "https://www.prochedemoi.fr/",
     serviceSlug: "logiciel-sur-mesure",
     problem:
@@ -532,9 +532,9 @@ export const projects: Project[] = [
     result: "Le site est en ligne à Lille depuis 2024.",
     shot: "/work/proche.jpg",
     pages: [
-      { label: "Recherche", href: "https://www.prochedemoi.fr/search?q=lille" },
-      { label: "Carte", href: "https://www.prochedemoi.fr/map" },
-      { label: "Lille", href: "https://www.prochedemoi.fr/france/nord-59/lille" },
+      { label: "Recherche sur Proche de moi", href: "https://www.prochedemoi.fr/search?q=lille" },
+      { label: "Carte sur Proche de moi", href: "https://www.prochedemoi.fr/map" },
+      { label: "Lille sur Proche de moi", href: "https://www.prochedemoi.fr/france/nord-59/lille" },
     ],
   },
   {
@@ -590,7 +590,7 @@ export const projects: Project[] = [
     city: "Montréal",
     country: "Canada",
     description:
-      "Produit publié pour l'email temporaire, les fichiers chiffrés et les notes sécurisées. Montréal, 2024.",
+      "Produit publié pour l'email temporaire, les fichiers chiffrés et les notes sécurisées. En ligne à Montréal depuis l'année 2024.",
     url: "https://www.cocoinbox.com/",
     serviceSlug: "logiciel-sur-mesure",
     problem:

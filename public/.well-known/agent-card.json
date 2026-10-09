@@ -1,0 +1,9 @@
+{
+  "name": "Byte Force",
+  "description": "Studio logiciel à Casablanca. Ce fichier identifie le studio. Ce n'est pas un agent conversationnel.",
+  "url": "https://byteforce.ma/",
+  "provider": {
+    "organization": "Byte Force Maroc",
+    "url": "https://byteforce.ma/contact"
+  }
+}

@@ -28,7 +28,7 @@ export function GET() {
     `- [Services](${origin}/services) : ce que Byte Force construit.`,
     `- [Plugins WordPress](${origin}/services/plugins-wordpress) : quatre plugins téléchargeables, et un plugin écrit pour le geste qui manque.`,
     `- [Travaux](${origin}/realisations) : projets publiés.`,
-    `- [À propos](${origin}/a-propos) : le bureau et les faits.`,
+    `- [À propos](${origin}/studio) : le bureau et les faits.`,
     `- [Décisions](${origin}/insights) : questions avant de construire.`,
     `- [Combien coûte un logiciel sur mesure](${origin}/insights/cout-logiciel-sur-mesure-maroc) : pas de prix public, la note suit le périmètre.`,
     `- [Un site qu'une machine peut lire](${origin}/insights/site-lisible-par-une-machine) : citer l'offre, le lieu et le contact.`,
