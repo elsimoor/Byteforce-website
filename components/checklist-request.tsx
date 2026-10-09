@@ -3,13 +3,19 @@
 import { useState, type MouseEvent } from "react";
 import { recordLead } from "@/lib/actions";
 import { site } from "@/lib/site";
+import { TurnstileCheck } from "@/components/turnstile-check";
 
 const pdfHref = "/checklists/lancement-produit.pdf";
 
 export function ChecklistRequest() {
   const [state, setState] = useState<"idle" | "saving" | "sent" | "error">("idle");
+  const [turnstileToken, setTurnstileToken] = useState("");
 
   function onClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (!turnstileToken) {
+      event.preventDefault();
+      return;
+    }
     const form = event.currentTarget.closest("form");
     if (!form || !form.reportValidity()) {
       event.preventDefault();
@@ -37,6 +43,7 @@ export function ChecklistRequest() {
       country: "Maroc",
       city: "Casablanca",
       pageUrl: "https://byteforce.ma/checklists/lancer-le-produit",
+      turnstile: turnstileToken,
     })
       .then((saved) => setState(saved?.ok ? "sent" : "error"))
       .catch(() => setState("error"));
@@ -48,7 +55,7 @@ export function ChecklistRequest() {
       className="max-w-md space-y-4"
       onSubmit={(event) => {
         event.preventDefault();
-        event.currentTarget.querySelector("a[download]")?.click();
+        event.currentTarget.querySelector<HTMLAnchorElement>("a[download], a[aria-disabled]")?.click();
       }}
     >
       <p className="text-lg leading-relaxed">
@@ -65,11 +72,13 @@ export function ChecklistRequest() {
         />
       </label>
       <input name="company_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+      <TurnstileCheck onToken={setTurnstileToken} />
       <a
-        href={pdfHref}
-        download="liste-lancement-produit.pdf"
+        href={turnstileToken ? pdfHref : "#pdf"}
+        download={turnstileToken ? "liste-lancement-produit.pdf" : undefined}
         onClick={onClick}
-        className="inline-block border border-paper bg-paper px-5 py-3 text-sm text-ink"
+        aria-disabled={!turnstileToken}
+        className={`inline-block border border-paper bg-paper px-5 py-3 text-sm text-ink ${turnstileToken ? "" : "opacity-40"}`}
       >
         {state === "saving" ? "Enregistrement…" : "Recevoir la liste PDF"}
       </a>

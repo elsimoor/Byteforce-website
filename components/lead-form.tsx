@@ -4,6 +4,7 @@ import { useRef, useState, type FormEvent } from "react";
 import { recordLead } from "@/lib/actions";
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
+import { TurnstileCheck } from "@/components/turnstile-check";
 
 type Draft = {
   name: string;
@@ -55,7 +56,14 @@ function whatsappUrl(text: string) {
 export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: string; country?: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const draftRef = useRef<Draft | null>(null);
+  const tokenRef = useRef("");
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [status, setStatus] = useState<"choice" | "saving" | "saved" | "error">("choice");
+
+  function setToken(token: string) {
+    tokenRef.current = token;
+    setTurnstileToken(token);
+  }
 
   function closeChoice() {
     dialogRef.current?.close();
@@ -68,6 +76,7 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
     if (!form.reportValidity()) return;
     const next = readDraft(form);
     if (next.company_website) return;
+    if (!tokenRef.current) return;
     draftRef.current = next;
     setStatus("choice");
     dialogRef.current?.showModal();
@@ -75,8 +84,9 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
 
   async function choose(channel: "email" | "whatsapp") {
     const draft = draftRef.current;
-    if (!draft || status === "saving") return;
-    const lead = { ...draft, city, country, pageUrl: window.location.href };
+    const turnstile = tokenRef.current;
+    if (!draft || !turnstile || status === "saving") return;
+    const lead = { ...draft, city, country, pageUrl: window.location.href, turnstile };
     if (channel === "whatsapp") {
       void recordLead(lead);
       window.open(whatsappUrl(projectText(draft)), "_blank", "noopener,noreferrer");
@@ -141,7 +151,8 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
           Site
           <input name="company_website" tabIndex={-1} autoComplete="off" />
         </label>
-        <button type="submit" className="justify-self-start border-b border-ink pb-1 text-left">
+        <TurnstileCheck onToken={setToken} />
+        <button type="submit" disabled={!turnstileToken} className="justify-self-start border-b border-ink pb-1 text-left disabled:opacity-40">
           Envoyer la demande
         </button>
       </form>

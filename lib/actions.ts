@@ -5,6 +5,7 @@ import { catalogPages } from "@/lib/catalog";
 import { clearSession, isAuthed, passwordConfigured, setSession } from "@/lib/auth";
 import { getDb } from "@/lib/db";
 import { pushLeadToCocoinbox } from "@/lib/cocoinbox";
+import { verifyTurnstile } from "@/lib/turnstile";
 
 function text(formData: FormData, key: string, max: number) {
   return String(formData.get(key) ?? "").trim().slice(0, max);
@@ -26,8 +27,10 @@ export async function recordLead(input: {
   country?: string;
   city?: string;
   pageUrl?: string;
+  turnstile?: string;
 }) {
   if (input.company_website?.trim()) return { ok: true };
+  if (!(await verifyTurnstile(input.turnstile ?? ""))) return { ok: false };
   const name = input.name.trim().slice(0, 120);
   const email = input.email.trim().slice(0, 160);
   const message = input.message.trim().slice(0, 4000);
@@ -54,6 +57,9 @@ export async function recordLead(input: {
 export async function createLead(formData: FormData) {
   if (text(formData, "company_website", 80)) {
     redirect("/contact?sent=1");
+  }
+  if (!(await verifyTurnstile(text(formData, "turnstile", 4096)))) {
+    redirect("/contact?error=1");
   }
   const name = text(formData, "name", 120);
   const email = text(formData, "email", 160);
