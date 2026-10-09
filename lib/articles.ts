@@ -3774,6 +3774,73 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: "contrat-avant-le-code",
+    title: "Le contrat avant le code généré",
+    description:
+      "Avant le code : le contrat du geste, la boucle qui revient au départ, et les tokens visuels. Byte Force, Casablanca. Pas un agent.",
+    h1: "Écrire le contrat avant de générer l'écran",
+    date: "2026-10-09",
+    lede: "Un modèle relancé sans page écrite recopie les mêmes cartes et ajoute des écrans. Le contrat du geste, la boucle qui revient au départ, et les tokens visuels s'écrivent avant la première ligne. Byte Force, au Technopark à Casablanca, part de cette page. Pas de prix public. [[/contact|Écrire le geste]].",
+    sections: [
+      {
+        heading: "Quand les invites remplacent le contrat",
+        paragraphs: [
+          "Sans contrat, chaque invite ajoute un écran. D'une séance à l'autre, le modèle perd le geste : une règle en double, un état cassé, un bouton qui ne ramène nulle part. Les cartes sortent crème, serrées, pareilles d'un produit à l'autre.",
+          "Le contrat tient sur une page. Il nomme le geste, ce qui est lu, ce qui est écrit, et ce qui reste dehors. L'application n'est pas générée tant que cette page n'existe pas. Dans un exemple de plan de repas, le garde-manger est le centre. On note qu'un aliment est là. On ne note pas son poids. La semaine est un ensemble de plats. Cuisiner hors de cet ensemble retire l'aliment et laisse la semaine en place. Un reste prévu compte comme un plat. Cet exemple n'est pas un logiciel livré par Byte Force.",
+        ],
+      },
+      {
+        heading: "La boucle qui revient au calme",
+        paragraphs: [
+          "La première version fait un seul aller-retour. On entre. On finit le geste. On retrouve l'état du début, sans écran laissé ouvert. La page [[/insights/premiere-version-utile|sur la première version utile]] dit la même coupe pour un logiciel d'entreprise.",
+          "Dans l'exemple, la voix note le frigo. Un tri propose les plats qui croisent ce stock et le régime déjà écrit. Les étapes s'ouvrent sous la carte. L'étape qui dure porte son minuteur. Terminer retire les aliments essentiels et revient à l'écoute. La livraison et le second catalogue restent dehors. Le geste est dans la cuisine, les mains prises : l'écran est celui du téléphone. Si l'exemple parle d'un essai puis d'un abonnement, ce montant n'est pas un prix de Byte Force. Le choix de l'écran suit [[/insights/application-web-ou-mobile|l'endroit du geste]].",
+        ],
+      },
+      {
+        heading: "Les tokens avant les cartes",
+        paragraphs: [
+          "Le premier jet aligne la largeur de la carte sur la longueur du titre. Deux plats n'ont plus la même marge. Les pastilles s'empilent. Le fond crème et le bouton bleu reviennent.",
+          "On écarte ce jet. On fixe le fond, le filet, le texte, et une marque en tête de ligne. La carte prend toute la largeur. Le titre s'aligne sur la marque. La voix a trois dessins avant le code : attente, écoute, traitement. L'exemple vise une surface chaude et peu de traits. Ce n'est pas la charte de ce site. [[/contact|Décrire le geste]] : ce qui est lu, ce qui est écrit, ce qui reste dehors. Réponse sous un jour ouvré. Téléphone : +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Décrire le geste" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure" },
+      { href: "/insights/premiere-version-utile", label: "La première version utile" },
+    ],
+    en: {
+      title: "The contract before generated code",
+      description:
+        "Before generated code: the contract, the loop that returns, and the visual tokens. Byte Force, Casablanca. Not an agent.",
+      h1: "Write the contract before generating the screen",
+      lede: "A model restarted without a written page copies the same cards and adds screens. The contract of the action, the loop that returns to the start, and the visual tokens are written before the first line. Byte Force, at Technopark in Casablanca, starts from that page. No public price. [[/contact|Write the action]].",
+      sections: [
+        {
+          heading: "When prompts replace the contract",
+          paragraphs: [
+            "Without a contract, each prompt adds a screen. From one session to the next, the model loses the action: a duplicated rule, a broken state, a button that leads nowhere. The cards come out cream, cramped, and alike from one product to the next.",
+            "The contract fits on one page. It names the action, what is read, what is written, and what stays out. The application is not generated until that page exists. In a meal-plan example, the pantry is the centre. An item is marked present. Its weight is not marked. The week is a set of dishes. Cooking outside that set removes the item and leaves the week in place. A planned leftover counts as a dish. This example is not software delivered by Byte Force.",
+          ],
+        },
+        {
+          heading: "The loop that returns to the start",
+          paragraphs: [
+            "The first version is one round trip. You enter. You finish the action. You find the starting state again, with no screen left open. The page on [[/insights/premiere-version-utile|the first useful version]] says the same cut for company software.",
+            "In the example, voice notes the fridge. A sort offers the dishes that cross that stock and the diet already written. The steps open under the card. The step that takes time carries its timer. Finish removes the essential items and returns to listening. Delivery and a second catalogue stay out. The action is in the kitchen, hands busy: the screen is the phone. If the example speaks of a trial and then a subscription, that amount is not a Byte Force price. The screen follows [[/insights/application-web-ou-mobile|where the action happens]].",
+          ],
+        },
+        {
+          heading: "Tokens before the cards",
+          paragraphs: [
+            "The first draft sets the card width to the length of the title. Two dishes no longer share a margin. The pills stack. The cream background and the blue button come back.",
+            "That draft is set aside. The background, the divider, the text, and a mark at the start of the line are fixed. The card takes the full width. The title aligns to the mark. Voice has three drawings before the code: waiting, listening, processing. The example aims at a warm surface and few lines. It is not this site's palette. [[/contact|Describe the action]]: what is read, what is written, what stays out. A reply within one business day. Phone: +212 666 650 696.",
+          ],
+        },
+      ],
+    },
+  },
 ];
 
 const slugs = new Set<string>();

@@ -3,11 +3,13 @@ import { ArticleFigures } from "@/components/article-figures";
 import { AuthorByline } from "@/components/author-byline";
 import { ArticleDrawings } from "@/components/article-drawings";
 import { CloudflareBench, CloudflareFlow } from "@/components/cloudflare-lab";
+import { ContratSlot } from "@/components/contrat-lab";
 import type { Article } from "@/lib/articles";
 import { site } from "@/lib/site";
 
 function IllustratedSlot({ slug, heading, lang }: { slug: string; heading: string; lang: "fr" | "en" }) {
   if (slug === "cloudflare-devant-le-site") return <CloudflareSlot heading={heading} lang={lang} />;
+  if (slug === "contrat-avant-le-code") return <ContratSlot heading={heading} lang={lang} />;
   if (slug === "nextjs-dans-les-produits" || slug === "vercel-pour-publier") {
     return <ArticleDrawings slug={slug} heading={heading} lang={lang} />;
   }

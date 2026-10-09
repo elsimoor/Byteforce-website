@@ -79,6 +79,7 @@ export function GET(request: Request) {
     `- [Créer une application pour son entreprise](${origin}/insights/creer-une-application-pour-son-entreprise) : d'abord l'endroit du geste et les rôles.`,
     `- [Intelligence artificielle pour une entreprise au Maroc](${origin}/insights/intelligence-artificielle-entreprise-maroc) : d'abord une règle stable, un modèle seulement si le geste l'exige.`,
     `- [Automatiser une entreprise, avec ou sans IA](${origin}/insights/automatisation-entreprise-avec-ia) : la règle stable d'abord, l'IA seulement si elle ne suffit pas.`,
+    `- [Le contrat avant le code généré](${origin}/insights/contrat-avant-le-code) : le geste, la boucle et les tokens s'écrivent avant la première ligne.`,
     ...techArticles.map(
       (article) => `- [${article.h1}](${origin}/insights/${article.slug}) : ${article.description}`,
     ),

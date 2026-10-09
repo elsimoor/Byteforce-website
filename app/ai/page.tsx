@@ -63,6 +63,9 @@ export default function AiPage() {
             <Link href="/insights/automatisation-entreprise-avec-ia">L'automatisation reste une règle stable, même quand on parle d'IA</Link>. Puis <Link href="/contact">écrire</Link>.
           </li>
           <li>
+            <Link href="/insights/contrat-avant-le-code">Le contrat, la boucle et les tokens s'écrivent avant le code généré</Link>. Puis <Link href="/contact">écrire</Link>.
+          </li>
+          <li>
             <Link href="/insights/modele-apres-la-regle">Un modèle seulement après la règle, y compris les fonctions de lecture d'email dans Coco Inbox</Link>. Puis <Link href="/contact">écrire</Link>.
           </li>
 <li>
