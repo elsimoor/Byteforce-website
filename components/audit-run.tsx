@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import posthog from "posthog-js";
 import { dimensionScore, dimensions, layerScore, machineLayers, machineNote, machineScore, overallScore, priorities, scoreLabel, takeaways } from "@/lib/audit/score";
 import { markAudit, readAudit, writeAudit } from "@/lib/audit/saved";
 import type { AuditStep } from "@/lib/site-audit";
@@ -9,6 +10,9 @@ import { SitemapPick } from "@/components/sitemap-pick";
 const chapters = dimensions;
 const passage = [...dimensions, "Machine"] as const;
 const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+const posthogEnabled = Boolean(
+  process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST,
+);
 
 function mark(state: AuditStep["state"]) {
   if (state === "fail") return "À corriger";
@@ -177,9 +181,12 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
           }
         }
         if (!cancelled) {
+          const completedSteps = collected.filter((step) => step.state !== "running" && step.id !== "suite");
           setDone(true);
-          if (collected.some((step) => step.state !== "running" && step.id !== "suite")) writeAudit(url, collected);
-          else markAudit(url, "error");
+          if (completedSteps.length) {
+            if (posthogEnabled) posthog.capture("audit_completed", { audit_step_count: completedSteps.length });
+            writeAudit(url, collected);
+          } else markAudit(url, "error");
         }
       } catch (caught) {
         if (!cancelled && !(caught instanceof DOMException && caught.name === "AbortError")) {
@@ -197,6 +204,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
   }, [url, session]);
 
   function reread() {
+    if (posthogEnabled) posthog.capture("audit_rerun");
     setSession((value) => value + 1);
   }
 

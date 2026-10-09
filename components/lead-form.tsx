@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type FormEvent } from "react";
+import posthog from "posthog-js";
 import { recordLead } from "@/lib/actions";
 import { services } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -47,6 +48,10 @@ function projectText(draft: Draft) {
   return lines.join("\n");
 }
 
+const posthogEnabled = Boolean(
+  process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST,
+);
+
 function whatsappUrl(text: string) {
   const phone = site.phone.replace(/\D/g, "");
   const capped = text.length > 1200 ? `${text.slice(0, 1199)}…` : text;
@@ -88,6 +93,7 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
     if (!draft || !turnstile || status === "saving") return;
     const lead = { ...draft, city, country, pageUrl: window.location.href, turnstile };
     if (channel === "whatsapp") {
+      if (posthogEnabled) posthog.capture("lead_channel_selected", { channel });
       void recordLead(lead);
       window.open(whatsappUrl(projectText(draft)), "_blank", "noopener,noreferrer");
       closeChoice();
@@ -96,6 +102,14 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
     setStatus("saving");
     try {
       const result = await recordLead(lead);
+      if (result?.ok && posthogEnabled) {
+        posthog.capture("lead_channel_selected", { channel });
+        posthog.capture("lead_submitted", {
+          channel,
+          has_service_selected: Boolean(draft.service),
+          has_budget_selected: Boolean(draft.budget),
+        });
+      }
       setStatus(result?.ok ? "saved" : "error");
     } catch {
       setStatus("error");

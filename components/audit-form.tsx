@@ -1,4 +1,15 @@
+"use client";
+
+import posthog from "posthog-js";
 import { startAudit } from "@/lib/actions";
+
+const posthogEnabled = Boolean(
+  process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST,
+);
+
+function captureAuditStart() {
+  if (posthogEnabled) posthog.capture("audit_started");
+}
 
 export function AuditForm({
   variant = "editorial",
@@ -9,7 +20,7 @@ export function AuditForm({
 }) {
   if (variant === "studio") {
     return (
-      <form action={startAudit} method="post" className="flex w-full max-w-xl flex-col gap-3 pt-2 sm:flex-row">
+      <form action={startAudit} method="post" onSubmit={captureAuditStart} className="flex w-full max-w-xl flex-col gap-3 pt-2 sm:flex-row">
         <label className="min-w-0 flex-1">
           <span className="sr-only">Adresse du site à auditer</span>
           <input
@@ -37,7 +48,7 @@ export function AuditForm({
   }
 
   return (
-    <form action={startAudit} method="post" className="mt-12 max-w-xl">
+    <form action={startAudit} method="post" onSubmit={captureAuditStart} className="mt-12 max-w-xl">
       <label className="grid gap-2 text-sm" htmlFor="audit-url">
         Adresse du site
         <input

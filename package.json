@@ -9,7 +9,12 @@
     "check-live": "node tools/check-live.mjs"
   },
   "dependencies": {
+    "@opentelemetry/api-logs": "^0.223.0",
+    "@opentelemetry/exporter-logs-otlp-http": "^0.223.0",
+    "@opentelemetry/resources": "^2.12.0",
+    "@opentelemetry/sdk-logs": "^0.223.0",
     "next": "^15.5.4",
+    "posthog-js": "^1.438.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "seo-audit-kit": "^1.0.0"

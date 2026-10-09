@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, type MouseEvent } from "react";
+import posthog from "posthog-js";
 import { recordLead } from "@/lib/actions";
 import { site } from "@/lib/site";
 import { TurnstileCheck } from "@/components/turnstile-check";
 
 const pdfHref = "/checklists/lancement-produit.pdf";
+const posthogEnabled = Boolean(
+  process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST,
+);
 
 export function ChecklistRequest() {
   const [state, setState] = useState<"idle" | "saving" | "sent" | "error">("idle");
@@ -45,7 +49,10 @@ export function ChecklistRequest() {
       pageUrl: "https://byteforce.ma/checklists/lancer-le-produit",
       turnstile: turnstileToken,
     })
-      .then((saved) => setState(saved?.ok ? "sent" : "error"))
+      .then((saved) => {
+        if (saved?.ok && posthogEnabled) posthog.capture("checklist_requested");
+        setState(saved?.ok ? "sent" : "error");
+      })
       .catch(() => setState("error"));
   }
 
