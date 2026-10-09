@@ -24,6 +24,7 @@ export default function WorkPage() {
 
   return (
     <main>
+      <article>
       <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Travaux", path: "/realisations" }]} />
       <header className="grid gap-10 px-6 pb-8 pt-16 md:grid-cols-12 md:px-12 md:pt-28">
         <h1 className="display text-[clamp(3.2rem,8vw,7rem)] md:col-span-7">Travaux publiés.</h1>
@@ -53,7 +54,12 @@ export default function WorkPage() {
         </p>
       </section>
       {staged.map((project, index) => (
-        <ProjectStage key={project.slug} project={project} variant={(index % 3) as 0 | 1 | 2} />
+        <ProjectStage
+          key={project.slug}
+          project={project}
+          variant={(index % 3) as 0 | 1 | 2}
+          priority={index < 2}
+        />
       ))}
       <ol>
         {rest.map((project) => (
@@ -72,6 +78,7 @@ export default function WorkPage() {
           </li>
         ))}
       </ol>
+      </article>
     </main>
   );
 }

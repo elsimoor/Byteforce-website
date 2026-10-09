@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/icon";
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import { useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -17,8 +17,21 @@ const links = [
   },
 ];
 
+function logoProps() {
+  return getImageProps({
+    alt: "Byte Force",
+    src: "/logo.png",
+    width: 44,
+    height: 44,
+    sizes: "44px",
+    priority: true,
+    fetchPriority: "high",
+  }).props;
+}
+
 export function Header() {
   const path = usePathname() ?? "";
+  const logo = logoProps();
 
   useLayoutEffect(() => {
     if (path === "/") document.documentElement.dataset.brand = "logo";
@@ -27,18 +40,10 @@ export function Header() {
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
+      <link rel="preload" as="image" href={logo.src} fetchPriority="high" />
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            alt="Byte Force"
-            className="h-11 w-11 object-cover"
-            src="/logo.png"
-            width={44}
-            height={44}
-            sizes="44px"
-            priority
-            fetchPriority="high"
-          />
+          <img {...logo} className="h-11 w-11 object-cover" alt="Byte Force" />
           <span className="font-headline text-lg font-bold tracking-tight text-on-surface">ByteForce</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">

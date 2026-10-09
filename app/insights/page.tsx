@@ -8,12 +8,12 @@ import { openGraph } from "@/lib/open-graph";
 export const metadata: Metadata = {
   title: "Décider avant de construire",
   description:
-    "Pages Byte Force pour remplacer Excel, quitter un SaaS, automatiser une entreprise ou moderniser une application.",
+    "Pages Byte Force pour remplacer Excel, quitter un SaaS, automatiser une entreprise ou moderniser une application à Casablanca.",
   alternates: { canonical: "/insights" },
   openGraph: openGraph(
     "/insights",
     "Décider avant de construire",
-    "Pages Byte Force pour remplacer Excel, quitter un SaaS, automatiser une entreprise ou moderniser une application.",
+    "Pages Byte Force pour remplacer Excel, quitter un SaaS, automatiser une entreprise ou moderniser une application à Casablanca.",
   ),
 };
 
@@ -22,6 +22,7 @@ const groups = ["Problème", "Audience"];
 export default function InsightsPage() {
   return (
     <main>
+      <article>
       <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Décisions", path: "/insights" }]} />
       <header className="px-6 pb-8 pt-16 md:px-12 md:pt-24">
         <h1 className="display max-w-[16ch] text-[clamp(3.2rem,8vw,6.5rem)]">Décider avant de construire.</h1>
@@ -90,6 +91,7 @@ export default function InsightsPage() {
           </ul>
         </section>
       ))}
+      </article>
     </main>
   );
 }

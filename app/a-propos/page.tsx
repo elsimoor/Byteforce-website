@@ -23,6 +23,7 @@ const pictured = projects.filter((project) => project.shot);
 export default function AboutPage() {
   return (
     <main>
+      <article>
       <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "À propos", path: "/a-propos" }]} />
       <header className="px-6 pb-16 pt-16 md:px-12 md:pt-28">
         <h1 className="display max-w-[14ch] text-[clamp(3.2rem,8vw,7.2rem)]">
@@ -111,6 +112,7 @@ export default function AboutPage() {
           {site.hoursLabel}
         </p>
       </section>
+      </article>
     </main>
   );
 }

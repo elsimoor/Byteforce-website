@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SiteIndex } from "@/components/site-index";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -89,6 +90,25 @@ export function Footer() {
               ) : null}
             </ul>
           </div>
+        </div>
+        <SiteIndex />
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-on-surface-variant">
+          {site.description} Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. On répond du
+          lundi au vendredi, de 9h à 19h.
+        </p>
+        <p className="financial-disclaimer mt-4 max-w-3xl text-xs text-on-surface-variant">
+          This page is not financial advice. Aucun prix n&apos;est publié sur ce site.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-4 text-sm">
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(site.url)}`}>
+            Partager sur Facebook
+          </a>
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(site.url)}`}>
+            Partager sur LinkedIn
+          </a>
+          <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(site.url)}`}>Partager sur X</a>
+          <Link href="/how-we-write">Comment les pages sont écrites</Link>
+          <time dateTime="2026-10-09">Mis à jour le 9 octobre 2026</time>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-outline-variant/20 pt-8 text-xs text-on-surface-variant sm:flex-row">
           <span>© {new Date().getFullYear()} Byte Force. Tous droits réservés.</span>

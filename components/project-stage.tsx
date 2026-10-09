@@ -14,17 +14,23 @@ const categoryMark: Record<Project["category"], string> = {
   "Plate-forme": "PF",
 };
 
-export function ProjectStage({ project, variant }: { project: Project; variant: 0 | 1 | 2 }) {
+export function ProjectStage({
+  project,
+  variant,
+  priority = false,
+}: {
+  project: Project;
+  variant: 0 | 1 | 2;
+  priority?: boolean;
+}) {
   const country = countryMark[project.country] ?? project.country;
   const mark = variant === 0 ? project.year : variant === 2 ? categoryMark[project.category] : country;
   const meta = `${project.category} · ${project.city} · ${project.year}`;
+  const href = `/realisations/${project.slug}`;
 
   if (project.shot) {
     return (
-      <Link
-        href={`/realisations/${project.slug}`}
-        className="group grid min-h-[78svh] border-t border-line bg-paper text-ink md:grid-cols-12"
-      >
+      <article className="group relative grid min-h-[78svh] border-t border-line bg-paper text-ink md:grid-cols-12">
         <div className="flex min-w-0 flex-col justify-end px-6 py-12 md:col-span-5 md:px-12 md:py-16">
           <p className="text-sm text-mute">{meta}</p>
           <h2 className="stage-title display mt-4 text-[clamp(2.6rem,4.6vw,5rem)]">{project.title}</h2>
@@ -34,21 +40,23 @@ export function ProjectStage({ project, variant }: { project: Project; variant: 
           <Image
             src={project.shot}
             alt={`${project.title}, capture du site en ligne`}
-            fill
+            width={400}
+            height={250}
+            priority={priority}
             sizes="(min-width: 768px) 58vw, 100vw"
-            className={project.screens?.[0]?.src === project.shot ? "object-contain object-center" : "object-cover object-top"}
+            className={`absolute inset-0 h-full w-full ${project.screens?.[0]?.src === project.shot ? "object-contain object-center" : "object-cover object-top"}`}
           />
         </div>
-      </Link>
+        <Link href={href} className="absolute inset-0 z-10" aria-label={`Fiche ${project.title}`}>
+          <span className="sr-only">{project.title}</span>
+        </Link>
+      </article>
     );
   }
 
   if (variant === 1) {
     return (
-      <Link
-        href={`/realisations/${project.slug}`}
-        className="group grid min-h-[78svh] bg-paper text-ink md:grid-cols-12"
-      >
+      <article className="group relative grid min-h-[78svh] bg-paper text-ink md:grid-cols-12">
         <div className="flex flex-col justify-end px-6 py-12 md:col-span-5 md:px-12 md:py-16">
           <p className="text-sm text-mute">{meta}</p>
           <h2 className="stage-title display mt-4 text-[clamp(3rem,6vw,6.5rem)]">{project.title}</h2>
@@ -60,15 +68,17 @@ export function ProjectStage({ project, variant }: { project: Project; variant: 
           </span>
           <span className="absolute bottom-8 left-8 text-sm">Voir le projet</span>
         </div>
-      </Link>
+        <Link href={href} className="absolute inset-0 z-10" aria-label={`Fiche ${project.title}`}>
+          <span className="sr-only">{project.title}</span>
+        </Link>
+      </article>
     );
   }
 
   const dark = variant === 0;
 
   return (
-    <Link
-      href={`/realisations/${project.slug}`}
+    <article
       className={`group relative block min-h-[86svh] overflow-hidden ${dark ? "bg-ink text-paper" : "border-t border-line bg-paper text-ink"}`}
     >
       <span className={`plate-mark ${dark ? "" : "plate-mark--top"}`} aria-hidden="true">
@@ -81,6 +91,9 @@ export function ProjectStage({ project, variant }: { project: Project; variant: 
           <p className={`mt-6 max-w-md ${dark ? "text-paper/70" : "text-mute"}`}>{project.description}</p>
         </div>
       </div>
-    </Link>
+      <Link href={href} className="absolute inset-0 z-10" aria-label={`Fiche ${project.title}`}>
+        <span className="sr-only">{project.title}</span>
+      </Link>
+    </article>
   );
 }

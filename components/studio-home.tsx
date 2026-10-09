@@ -81,11 +81,12 @@ export function StudioHome() {
                 <Image
                   src="/work/coco-inbox.jpg"
                   alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
-                  fill
+                  width={400}
+                  height={250}
                   priority
                   fetchPriority="high"
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-top"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
               </span>
               <span className="flex items-center justify-between gap-4 p-5">

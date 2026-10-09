@@ -1,3 +1,5 @@
+import { startAudit } from "@/lib/actions";
+
 export function AuditForm({
   variant = "editorial",
   initial = "",
@@ -7,7 +9,7 @@ export function AuditForm({
 }) {
   if (variant === "studio") {
     return (
-      <form action="/audit" className="flex w-full max-w-xl flex-col gap-3 pt-2 sm:flex-row">
+      <form action={startAudit} method="post" className="flex w-full max-w-xl flex-col gap-3 pt-2 sm:flex-row">
         <label className="min-w-0 flex-1">
           <span className="sr-only">Adresse du site à auditer</span>
           <input
@@ -35,7 +37,7 @@ export function AuditForm({
   }
 
   return (
-    <form action="/audit" className="mt-12 max-w-xl">
+    <form action={startAudit} method="post" className="mt-12 max-w-xl">
       <label className="grid gap-2 text-sm" htmlFor="audit-url">
         Adresse du site
         <input

@@ -57,21 +57,18 @@ export default async function ProjectPage({ params }: Props) {
         ],
       },
       {
-    "@type": "Article",
-    headline: project.title,
-    description: project.description,
-    inLanguage: "fr",
-    datePublished: project.year,
-    url: pageUrl,
-    mainEntityOfPage: pageUrl,
-    image: project.shot ? `${site.url}${project.shot}` : `${site.url}/opengraph-image`,
-    author: { "@type": "Organization", name: site.name, url: site.url },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      url: site.url,
-      logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
-    },
+        "@type": "Article",
+        "@id": pageUrl,
+        headline: project.title,
+        description: project.description,
+        inLanguage: "fr",
+        datePublished: project.year,
+        dateModified: project.year,
+        url: pageUrl,
+        mainEntityOfPage: pageUrl,
+        image: project.shot ? `${site.url}${project.shot}` : `${site.url}/opengraph-image`,
+        author: { "@id": `${site.url}/#business` },
+        publisher: { "@id": `${site.url}/#business` },
         about: { "@type": "CreativeWork", name: project.title, url: project.url },
       },
     ],
@@ -101,8 +98,8 @@ export default async function ProjectPage({ params }: Props) {
             <Image
               src={project.shot}
               alt={`${project.title}, capture du site en ligne`}
-              width={1280}
-              height={960}
+              width={400}
+              height={250}
               priority
               sizes="(min-width: 768px) 58vw, 100vw"
               className="mb-8 aspect-[16/10] w-full rounded-lg object-cover object-top"
@@ -117,8 +114,12 @@ export default async function ProjectPage({ params }: Props) {
                     <Image
                       src={screen.src}
                       alt={`${project.title}, capture ${index + 1} de l'application Android`}
-                      width={screen.width}
-                      height={screen.height}
+                      width={screen.width > 400 ? 400 : screen.width}
+                      height={
+                        screen.width > 400
+                          ? Math.max(1, Math.round((screen.height * 400) / screen.width))
+                          : screen.height
+                      }
                       priority={index === 0}
                       sizes="208px"
                       className="h-auto w-full rounded-lg"

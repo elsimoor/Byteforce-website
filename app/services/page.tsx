@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main>
+      <article>
       <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Services", path: "/services" }]} />
       <header className="px-6 pb-8 pt-16 md:px-12 md:pt-24">
         <h1 className="display max-w-[12ch] text-[clamp(3.2rem,8vw,7rem)]">Ce que l&apos;on construit.</h1>
@@ -51,6 +52,19 @@ export default function ServicesPage() {
           ))}
         </ul>
       </section>
+      <p className="max-w-2xl px-6 pb-16 text-lg leading-relaxed md:px-12">
+        Byte Force construit ces offres depuis Casablanca : un site, une application, un logiciel, un plugin WordPress,
+        le référencement, l&apos;hébergement et la maintenance. Chaque ligne ci-dessus ouvre la page du service. Le
+        premier échange se fait par écrit, et la réponse part sous un jour ouvré. Le bureau est au Technopark, boulevard
+        Dammam, Aïn Chock. Aucun prix n&apos;est affiché, parce que le montant dépend de ce qui doit être construit.
+        Pour revenir au studio, la page d&apos;accueil reste ouverte.
+      </p>
+      <p className="px-6 pb-16 md:px-12">
+        <Link href="/" className="border-b border-ink pb-1">
+          Accueil du studio
+        </Link>
+      </p>
+      </article>
     </main>
   );
 }

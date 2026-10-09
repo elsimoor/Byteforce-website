@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { projects } from "@/lib/content";
 
 const order = ["coco-inbox", "re-proche-de-moi", "dealkhir", "tourispeak"];
@@ -43,7 +44,7 @@ export function SelectedWork() {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {cases.map((project) => (
+        {cases.map((project, index) => (
           <article key={project.slug} className="overflow-hidden rounded-xl bg-surface-container-low shadow-sm">
             <a
               href={project.url}
@@ -54,10 +55,13 @@ export function SelectedWork() {
               <Image
                 src={project.shot}
                 alt={`${project.title}, capture du site en ligne`}
-                fill
+                width={400}
+                height={250}
+                priority={index === 0}
                 sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover object-top"
+                className="absolute inset-0 h-full w-full object-cover object-top"
               />
+              <span className="sr-only">Site {project.title}</span>
             </a>
             <div className="space-y-3 p-6 lg:p-8">
               <p className="font-mono text-xs font-bold tracking-wider text-primary uppercase">
@@ -86,9 +90,15 @@ export function SelectedWork() {
           </article>
         ))}
       </div>
+      <p className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <Link href="/services">Services à Casablanca</Link>
+        <Link href="/a-propos">Qui sommes-nous</Link>
+        <Link href="/insights">Décisions avant de construire</Link>
+        <Link href="/contact">Écrire à Casablanca</Link>
+      </p>
       <a
         href="/contact"
-        className="mt-10 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+        className="mt-6 inline-flex items-center gap-2 rounded bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
       >
         Parler d&apos;un projet
       </a>

@@ -173,6 +173,16 @@ export async function savePageMeta(formData: FormData) {
   redirect(`/dashboard/pages?saved=${encodeURIComponent(pagePath)}`);
 }
 
+export async function startAudit(formData: FormData) {
+  const url = text(formData, "url", 500);
+  redirect(`/audit?url=${encodeURIComponent(url)}`);
+}
+
+export async function runSearch(formData: FormData) {
+  const q = text(formData, "q", 120);
+  redirect(q ? `/recherche?q=${encodeURIComponent(q)}` : "/recherche");
+}
+
 export async function updateAction(formData: FormData) {
   if (!(await requireAuth())) redirect("/dashboard/login");
   const id = Number(text(formData, "id", 12));

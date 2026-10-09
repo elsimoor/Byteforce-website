@@ -94,7 +94,7 @@ export function LeadForm({ city = "Casablanca", country = "Maroc" }: { city?: st
 
   return (
     <>
-      <form onSubmit={openChoice} className="grid gap-8">
+      <form method="post" onSubmit={openChoice} className="grid gap-8">
         <div className="grid gap-8 md:grid-cols-2">
           <label className="grid gap-1 text-sm">
             Nom
