@@ -81,7 +81,9 @@ export function ArticleView({ article }: { article: Article }) {
           <time dateTime={article.date}>8 octobre 2026</time>
         </p>
         <h1 className="display mt-6 max-w-[18ch] text-[clamp(2.6rem,6vw,5.5rem)]">{article.h1}</h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed">{article.lede}</p>
+        <p className="mt-8 max-w-2xl text-lg leading-relaxed">
+          <Rich text={article.lede} />
+        </p>
         <AuthorByline />
         <p className="mt-6">
           <Link href="/contact" className="border-b border-ink pb-1">

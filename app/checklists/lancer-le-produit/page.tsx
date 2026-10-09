@@ -8,7 +8,7 @@ import { openGraph } from "@/lib/open-graph";
 
 const title = "Liste de lancement d'un produit";
 const description =
-  "Liste pour mettre un logiciel en ligne : parcours, comptes, formulaire, et le jour J. Le PDF complet part par email. Casablanca.";
+  "Liste pour mettre un logiciel en ligne : parcours, comptes, formulaire, et le jour J. Le PDF s'ouvre après l'email. Casablanca.";
 
 const toc = [
   ["quoi", "Qu'est-ce qu'une liste de lancement"],
@@ -57,8 +57,7 @@ export default function LaunchChecklistPage() {
             <h1 className="display mt-6 max-w-[12ch] text-[clamp(3rem,7vw,6.2rem)]">Lancer le produit.</h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed">
               Une liste pour vérifier qu&apos;un logiciel, un site ou une application peut être ouvert par quelqu&apos;un
-              qui n&apos;a pas construit le projet. Le PDF complet s&apos;envoie après l&apos;email. Il n&apos;est pas
-              téléchargé ici.
+              qui n&apos;a pas construit le projet. Le PDF complet s&apos;ouvre après l&apos;email.
             </p>
             <AuthorByline />
           </div>
