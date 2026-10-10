@@ -86,7 +86,11 @@ export default async function ProjectPage({ params }: Props) {
           {" · "}
           <Link href={`/categories/${slugify(project.category)}`}>{project.category}</Link>
           {" · "}
-          <Link href={place?.path ?? `/villes/${slugify(project.city)}`}>Ville de {project.city}</Link>
+          {project.city === project.country ? (
+            <Link href="/developpement-logiciel-sur-mesure-maroc">Au Maroc</Link>
+          ) : (
+            <Link href={place?.path ?? `/villes/${slugify(project.city)}`}>Ville de {project.city}</Link>
+          )}
           {" · "}
           <time dateTime={`${project.year}-01-01`}>{project.year}</time>
         </p>
@@ -160,7 +164,7 @@ export default async function ProjectPage({ params }: Props) {
             <div>
               <dt className="font-mono text-xs text-mute">Lieu</dt>
               <dd className="mt-1">
-                {project.city}, {project.country}
+                {project.city === project.country ? project.country : `${project.city}, ${project.country}`}
               </dd>
             </div>
             <div>

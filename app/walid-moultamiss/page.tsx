@@ -117,7 +117,7 @@ export default function WalidPage() {
             <p>
               Le texte suit le CV. Walid Moultamiss conçoit des logiciels, des CRM, des sites et des applications, puis
               les met en ligne. Les outils cités dans le CV sont React, Next.js, TypeScript, Node.js, GraphQL, MongoDB,
-              WordPress, WooCommerce, PHP, Vercel, OVHcloud et Cloudflare.
+              WordPress, WooCommerce, PHP, Vercel, OVHcloud et Cloudflare. Power BI est nommé pour la maintenance des sites WordPress. D&apos;autres outils du studio : Microsoft Clarity, PostHog, Expo, Mailgun, Mailchimp, Hostinger, Namecheap et Nindohost. Aucune fiche de réalisation ne leur attribue un produit, sauf quand le CV le dit déjà.
             </p>
             <p>
               Les études en cours sont un Master en informatique et ingénierie informatique à Heriot-Watt University, au
@@ -159,7 +159,7 @@ export default function WalidPage() {
               states 30+ shared hosting environments. From January to July 2025 he built features for an orthodontic CRM
               at YourSmile Run in Morocco. Through 2024 he worked on the Cocoinbox platform and CRM from Canada. From
               2022 to January 2024 he led ByteForce SARL in Casablanca. The CV states 20+ web and software projects in
-              that period.
+              that period. Power BI is named for the WordPress maintenance. Other studio tools: Microsoft Clarity, PostHog, Expo, Mailgun, Mailchimp, Hostinger, Namecheap and Nindohost. A realisation page does not assign one of them to a product unless the CV already does.
             </p>
             <p>
               The public proof of the studio is the live work, with its city and year. This page does not add a team

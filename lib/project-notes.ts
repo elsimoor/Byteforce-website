@@ -13,6 +13,11 @@ export const projectTitles: Record<string, string> = {
   "les-hauts-paysages": "Les Hauts Paysages : site paysager dans le Nord",
   "agency-wonderland": "Agency Wonderland : studio visuel à Marrakech",
   "snapchat-collect": "Snapchat Collect : collecte de campagnes à Tanger",
+  "crm-cocoinbox": "CRM Cocoinbox : dossiers depuis le courrier, à Montréal",
+  "booking-proche-de-moi": "Réservation Proche de moi : tableau de bord à Lille",
+  infinitebridge: "Infinitebridge : site public, en ligne depuis 2023",
+  "palais-mehdi": "Palais Mehdi : réservation d'un séjour à Marrakech",
+  yoursmile: "YourSmile : aligneurs, comptes praticien et patient",
 };
 
 export const projectNotes: Record<string, string[]> = {
@@ -40,7 +45,7 @@ export const projectNotes: Record<string, string[]> = {
   "re-proche-de-moi": [
     "Proche de moi est une plateforme de mise en relation pour les commerces de proximité, publiée en 2024 à Lille. Le site est prochedemoi.fr. Trois pages publiques sont liées : la recherche, la carte, et la page Lille.",
     "Le problème de départ était concret : les commerces étaient difficiles à trouver dans un seul parcours. La solution publiée est la plateforme, avec la recherche, la carte et les fiches d'établissements. Le résultat que l'on peut vérifier est celui-ci : le site est en ligne à Lille depuis 2024. Pas un nombre d'inscrits, pas un chiffre d'affaires.",
-    "Le projet est classé plateforme, et le service lié est le logiciel sur mesure, parce que le parcours n'est pas une simple page vitrine. Un habitant cherche, voit une carte, ouvre une fiche. C'est le produit. On ne le présente pas comme un CRM, ni comme un outil de caisse pour les boutiques.",
+    "Le projet est classé plateforme, et le service lié est le logiciel sur mesure, parce que le parcours n'est pas une simple page vitrine. Un habitant cherche, voit une carte, ouvre une fiche. C'est le produit. On ne le présente pas comme un CRM, ni comme un outil de caisse pour les boutiques. La réservation des établissements est une autre adresse, booking.prochedemoi.fr, publiée en 2026.",
     "Une entreprise qui a le même genre de parcours — chercher, localiser, ouvrir une fiche — peut décrire le sien par le formulaire. On regarde d'abord si un outil du marché le fait déjà. On n'écrit pas un logiciel pour remplacer une carte qui suffit.",
     "Les trois adresses liées, recherche, carte et Lille, sont le parcours que l'on peut refaire sans compte. On ne publie pas le nombre de commerces inscrits. Si ce nombre compte pour décider, il se lit sur le site, pas dans une phrase ajoutée ici. Le projet reste daté de 2024, à Lille.",
   ],
@@ -68,7 +73,7 @@ export const projectNotes: Record<string, string[]> = {
   "coco-inbox": [
     "Coco Inbox est un produit publié en 2024 à Montréal. Il couvre l'email temporaire, les fichiers chiffrés et les notes sécurisées. L'adresse est cocoinbox.com. Aucune page intérieure n'est listée : le produit se consulte à la racine.",
     "Le problème de départ : l'email, les fichiers et les notes partaient sans limite claire de durée ou de destinataire. La solution est le produit publié. Le résultat que l'on affirme est seulement celui-ci : il est en ligne, depuis Montréal, depuis 2024.",
-    "Ce n'est pas un CRM, pas une boîte mail d'entreprise, et pas un outil de prospection. Le catalogue le classe en plateforme. Le service lié est le logiciel sur mesure, parce que le produit a son propre parcours, pas une page vitrine.",
+    "Ce n'est pas le CRM, pas une boîte mail d'entreprise, et pas un outil de prospection. Le CRM est une autre adresse, crm.cocoinbox.com, publiée en 2026. Le catalogue classe Coco Inbox en plateforme. Le service lié est le logiciel sur mesure, parce que le produit a son propre parcours, pas une page vitrine.",
     "On ne publie pas un nombre d'utilisateurs ni un niveau de chiffrement détaillé au-delà de ce que le produit dit lui-même. La fiche renvoie au site. Une entreprise qui veut un outil du même ordre décrit la donnée qui part aujourd'hui, et à qui, avant qu'on décide s'il faut l'écrire.",
     "Montréal, 2024, cocoinbox.com : ce sont les trois faits stables. Le produit se consulte sans page intérieure listée dans le catalogue. On ne le range pas avec les boutiques, ni avec les vitrines. C'est un outil publié, et la capture sur la fiche montre l'écran, pas un résultat commercial.",
   ],
@@ -107,5 +112,35 @@ export const projectNotes: Record<string, string[]> = {
     "Le produit reçoit un passage et l'oriente. C'est tout ce que l'on affirme. On ne le présente pas comme un gestionnaire de publicités, ni comme un CRM des personnes qui ont cliqué.",
     "Une équipe qui a le même besoin décrit la source du clic et la page d'arrivée, puis ce qui doit être enregistré. Si un outil du marché le fait déjà, on le dit. Sinon, on cadre l'API. Le contact est à Casablanca, et la réponse part sous un jour ouvré.",
     "Tanger est la ville du catalogue, et le dossier dit aussi Marseille, parce que l'outil opère entre les deux. 2024 est l'année. L'adresse publique est en français. On n'ajoute pas de campagne exemple, ni de marque annonceur. La fiche s'arrête à la collecte et à la redirection. Le lien de service reste l'API, pas la création d'un site vitrine.",
+  ],
+  "crm-cocoinbox": [
+    "CRM Cocoinbox est une page publique à part de Coco Inbox. L'adresse est crm.cocoinbox.com. L'année affichée est 2026. La ville du catalogue est Montréal, comme le produit d'email temporaire publié en 2024.",
+    "La capture montre ce que la page dit : le courrier prépare une fiche, le pipeline range l'affaire, les relances sont rédigées. Les colonnes visibles sont Nouveau, Qualifié, Devis et Gagné. Les noms et les montants dessinés sur cette capture sont l'écran du produit. Ce ne sont pas un chiffre d'affaires de Byte Force.",
+    "Coco Inbox, sur cocoinbox.com, reste l'email temporaire, les fichiers chiffrés et les notes. Cette fiche-ci est le CRM. On ne mélange pas les deux adresses, et on ne publie pas un nombre d'affaires gagnées.",
+    "Le service lié est le logiciel sur mesure. Une entreprise qui veut le même genre d'écran décrit d'où vient le message, et ce qu'une fiche doit contenir avant qu'une personne relance. Le formulaire est à Casablanca. La réponse part sous un jour ouvré.",
+  ],
+  "booking-proche-de-moi": [
+    "Réservation Proche de moi est la page booking.prochedemoi.fr, publiée en 2026 à Lille. L'établissement se connecte avec une adresse mail et un mot de passe, puis ouvre son tableau de bord. La recherche des commerces reste sur prochedemoi.fr, une autre fiche du catalogue, datée de 2024.",
+    "La fiche de Walid Moultamiss nomme le travail sur ces deux adresses depuis mars 2026 : recherche locale, CMS headless avec Next.js, TypeScript et Strapi, fiches de commerces, données structurées. Ce sont les outils écrits sur la fiche. On ne leur ajoute pas un autre nom.",
+    "La capture montre les rubriques Tables et saveurs, Boutiques, Bien-être et beauté, Services, Insolite et expériences. On ne publie pas un nombre d'établissements, ni un nombre de réservations.",
+    "Le projet est une plateforme. Le service lié est le logiciel sur mesure. Pour un parcours du même ordre, le message dit qui se connecte, et ce que le tableau de bord doit montrer. On écrit depuis Casablanca.",
+  ],
+  infinitebridge: [
+    "Infinitebridge est le site public infinitebridge.ma, en ligne depuis 2023. La capture est la page d'accueil : le nom, une phrase sur le développement informatique, et un bouton de contact. Le pays est le Maroc, parce que le nom de domaine est .ma. La page ne publie pas de ville. Cette fiche n'en invente pas une.",
+    "On ne reprend pas les phrases commerciales du site, ni un avis, ni un délai, ni un prix. La preuve est l'adresse et la capture. Le catalogue classe le projet en vitrine. Le service lié est la création de site.",
+    "Aucune ligne du CV ne dit quel outil porte ce site. On ne lui colle pas un hébergeur, un outil de mesure, ou une pile. Si ce détail compte, il se vérifie avec le propriétaire du site, pas dans une phrase ajoutée ici.",
+    "Une société qui veut une page du même ordre décrit ce que le visiteur doit comprendre, et comment il écrit. Le bureau de Byte Force est à Casablanca. La réponse part sous un jour ouvré.",
+  ],
+  "palais-mehdi": [
+    "Palais Mehdi est la page de réservation booking.palais-mehdi.com, publiée en 2026. La capture montre le choix des dates, le nombre d'adultes, le nombre d'enfants, et le bouton qui vérifie les disponibilités. La page parle de la ville rouge. Le catalogue place le projet à Marrakech.",
+    "On ne publie pas un prix de nuit, un taux d'occupation, ni un avis. Ces éléments, s'ils sont sur le site du palais, restent les siens. La fiche s'arrête à l'écran de réservation, à la ville et à l'année.",
+    "Le catalogue classe le projet en vitrine. Le service lié est la création de site. Ce n'est pas décrit comme un logiciel de gestion hôtelière. On ne nomme pas l'outil de paiement.",
+    "Un lieu qui veut le même écran décrit ce que le visiteur choisit avant d'écrire : une date, un nombre de personnes, ou une demande simple. On cadre cela depuis Casablanca.",
+  ],
+  yoursmile: [
+    "YourSmile est le site public yoursmile.ma, en ligne depuis 2025. La capture montre un compte praticien, un compte patient, et une page pour les aligneurs dentaires. La page cite Casablanca pour la fabrication. Le CV place le travail chez YourSmile Run, au Maroc, de janvier à juillet 2025.",
+    "Le CV décrit un CRM orthodontique : parcours pour l'administration, les dentistes et le back-office, API GraphQL, Node.js, MongoDB, droits d'accès, interfaces Next.js. Cette fiche reprend ces noms. Elle n'en ajoute pas.",
+    "Les délais, les tarifs et les qualités écrites sur yoursmile.ma sont le texte du site. Byte Force ne les republie pas comme un résultat du studio. On ne copie pas un nombre de patients.",
+    "Le projet est une plateforme. Le service lié est le logiciel sur mesure. Une entreprise du même ordre décrit qui a un compte, qui valide, et quel outil déjà en place doit rester. Le contact est à Casablanca, au Technopark.",
   ],
 };

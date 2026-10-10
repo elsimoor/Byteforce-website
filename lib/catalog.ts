@@ -64,6 +64,7 @@ export function placePhrase(city: string) {
 export function cities() {
   const seen = new Map<string, { city: string; country: string }>();
   for (const project of projects) {
+    if (project.city === project.country) continue;
     const slug = slugify(project.city);
     if (!seen.has(slug)) seen.set(slug, { city: project.city, country: project.country });
   }

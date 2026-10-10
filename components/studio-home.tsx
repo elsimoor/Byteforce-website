@@ -539,7 +539,7 @@ export function StudioHome() {
             On choisit l&apos;outil selon le produit : tenue en charge, performance, sécurité et maintenance d&apos;abord.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
           {/* Category 1 */}
           <div className="bg-surface-container-low p-6 rounded-xl">
             <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
@@ -568,6 +568,12 @@ export function StudioHome() {
                 <span>WordPress</span>
                 <span className="text-[11px] font-mono text-outline">
                   Plugins
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Expo</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Téléphone
                 </span>
               </li>
             </ul>
@@ -600,6 +606,12 @@ export function StudioHome() {
                 <span>MongoDB</span>
                 <span className="text-[11px] font-mono text-outline">
                   Documents
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Power BI</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Tableaux
                 </span>
               </li>
             </ul>
@@ -652,6 +664,55 @@ export function StudioHome() {
                 <span>API de modèles</span>
                 <span className="text-[11px] font-mono text-outline">
                   Dans le produit
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Hostinger</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Hébergement
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Namecheap</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Domaine
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Nindohost</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Hébergement
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-xl">
+            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+              Mesure et courrier
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Microsoft Clarity</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Sessions
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>PostHog</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Événements
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Mailgun</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Envoi
+                </span>
+              </li>
+              <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
+                <span>Mailchimp</span>
+                <span className="text-[11px] font-mono text-outline">
+                  Liste
                 </span>
               </li>
             </ul>

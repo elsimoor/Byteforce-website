@@ -1,3 +1,5 @@
+import { stackArticles } from "@/lib/stack-tools";
+
 export const technologies = [
   { name: "Next.js", slug: "nextjs-dans-les-produits", file: "nextjs" },
   { name: "React", slug: "react-pour-l-interface", file: "react" },
@@ -13,6 +15,15 @@ export const technologies = [
   { name: "Vercel", slug: "vercel-pour-publier", file: "vercel" },
   { name: "OVHcloud", slug: "ovhcloud-pour-l-hebergement", file: "ovhcloud" },
   { name: "AI / LLM APIs", slug: "modele-apres-la-regle", file: "llm" },
+  { name: "Expo", slug: "expo-pour-le-telephone", file: "expo" },
+  { name: "Power BI", slug: "power-bi-si-l-outil-est-la", file: "powerbi" },
+  { name: "Microsoft Clarity", slug: "clarity-sur-une-page", file: "clarity" },
+  { name: "PostHog", slug: "posthog-pour-les-evenements", file: "posthog" },
+  { name: "Mailgun", slug: "mailgun-pour-l-envoi", file: "mailgun" },
+  { name: "Mailchimp", slug: "mailchimp-pour-la-liste", file: "mailchimp" },
+  { name: "Hostinger", slug: "hostinger-pour-l-hebergement", file: "hostinger" },
+  { name: "Namecheap", slug: "namecheap-pour-le-domaine", file: "namecheap" },
+  { name: "Nindohost", slug: "nindohost-pour-l-hebergement", file: "nindohost" },
 ] as const;
 
 const date = "2026-10-09";
@@ -1169,4 +1180,5 @@ export const techArticles = [
       ],
     },
   },
+  ...stackArticles,
 ];
