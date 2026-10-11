@@ -1,0 +1,47 @@
+[
+  {
+    "event_name": "lead_submitted",
+    "event_description": "A validated contact or checklist lead was successfully saved to the CRM.",
+    "file": "lib/actions.ts"
+  },
+  {
+    "event_name": "lead_channel_selected",
+    "event_description": "A visitor selected email or WhatsApp as the channel for a qualified project enquiry.",
+    "file": "components/lead-form.tsx"
+  },
+  {
+    "event_name": "checklist_requested",
+    "event_description": "A visitor requested the product-launch checklist download.",
+    "file": "components/checklist-request.tsx"
+  },
+  {
+    "event_name": "audit_started",
+    "event_description": "The server accepted a website audit request and began processing it.",
+    "file": "app/api/audit/route.ts"
+  },
+  {
+    "event_name": "audit_completed",
+    "event_description": "A website audit finished and displayed a scored result.",
+    "file": "components/audit-run.tsx"
+  },
+  {
+    "event_name": "audit_rerun",
+    "event_description": "A visitor asked to rerun a completed website audit.",
+    "file": "components/audit-run.tsx"
+  },
+  {
+    "event_name": "dashboard_login_succeeded",
+    "event_description": "An authorized dashboard login completed successfully.",
+    "file": "lib/actions.ts"
+  },
+  {
+    "event_name": "keyword_created",
+    "event_description": "An authorized user added a keyword to the content strategy.",
+    "file": "lib/actions.ts"
+  },
+  {
+    "event_name": "site_search_submitted",
+    "event_description": "A visitor submitted an on-site search query.",
+    "file": "lib/actions.ts"
+  }
+]

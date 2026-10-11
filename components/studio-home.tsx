@@ -894,7 +894,7 @@ export function StudioHome() {
       <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           {/* Philosophy (Left 6) */}
-          <div className="lg:col-span-6 flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-6 flex flex-col space-y-8">
             <div>
               <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
                 POURQUOI BYTE FORCE
