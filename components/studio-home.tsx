@@ -968,88 +968,26 @@ export function StudioHome() {
                 Un bon logiciel change la façon de travailler.
               </h3>
             </div>
-            <div className="grid grid-cols-2 gap-8 my-auto">
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Manuel
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Automatisation
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Le travail manuel devient un parcours
-                </p>
-              </div>
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Épars
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Un système
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Les données éparses au même endroit
-                </p>
-              </div>
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Tableurs
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Tableaux
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Les tableurs deviennent des chiffres en ligne
-                </p>
-              </div>
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Plusieurs outils
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Une plateforme
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Plusieurs outils deviennent un produit
-                </p>
-              </div>
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Répétition
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Une règle stable
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Une tâche répétée devient une règle
-                </p>
-              </div>
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Séparé
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Branché
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Des systèmes séparés dans un seul parcours
-                </p>
-              </div>
-              <div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-white tracking-tight">
-                  Idée
-                </span>
-                <p className="text-xs font-mono uppercase tracking-wider text-inverse-primary font-bold mt-1">
-                  Produit
-                </p>
-                <p className="text-xs text-inverse-on-surface/70 mt-1">
-                  Une idée métier devient un logiciel utilisé
-                </p>
-              </div>
-            </div>
-            <div className="pt-6 mt-6 border-t border-inverse-on-surface/10 flex items-center justify-between gap-6 text-xs font-mono text-inverse-on-surface/70">
+            <ul className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
+              {[
+                ["Manuel", "Automatisation", "Le travail manuel devient un parcours"],
+                ["Épars", "Un système", "Les données éparses au même endroit"],
+                ["Tableurs", "Tableaux", "Les tableurs deviennent des chiffres en ligne"],
+                ["Plusieurs outils", "Une plateforme", "Plusieurs outils deviennent un produit"],
+                ["Répétition", "Une règle stable", "Une tâche répétée devient une règle"],
+                ["Séparé", "Branché", "Des systèmes séparés dans un seul parcours"],
+                ["Idée", "Produit", "Une idée métier devient un logiciel utilisé"],
+              ].map(([from, to, text]) => (
+                <li key={from} className="min-w-0 border-t border-inverse-on-surface/15 pt-4">
+                  <p className="text-xl font-headline font-bold leading-tight text-white">{from}</p>
+                  <p className="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-inverse-primary">{to}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-inverse-on-surface/70">{text}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap items-start justify-between gap-3 border-t border-inverse-on-surface/10 pt-6 text-xs font-mono leading-relaxed text-inverse-on-surface/70">
               <span>On ne mesure pas le succès au nombre de lignes.</span>
-              <span className="text-inverse-primary font-bold">
+              <span className="font-bold text-inverse-primary">
                 On le mesure à ce que le logiciel permet de faire.
               </span>
             </div>
