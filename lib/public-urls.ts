@@ -1,5 +1,6 @@
 import { articles } from "@/lib/articles";
 import { projects, services } from "@/lib/content";
+import { geoKeywords } from "@/lib/geo/keywords";
 import { moneyPages } from "@/lib/money";
 
 const staticPaths = [
@@ -37,6 +38,8 @@ export function publicEntries() {
   for (const path of staticPaths) set(path, "2026-10-08");
   for (const service of services) set(service.href ?? `/services/${service.slug}`, "2026-10-08");
   for (const page of moneyPages) set(`/${page.path}`, "2026-10-08");
+  set("/geo-location", "2026-10-12");
+  for (const row of geoKeywords()) set(`/${row.path}`, "2026-10-12");
   for (const project of projects) {
     const year = Number(project.year);
     set(`/realisations/${project.slug}`, Number.isFinite(year) ? `${project.year}-01-01` : "2026-10-08");

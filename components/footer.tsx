@@ -33,6 +33,11 @@ export function Footer() {
                 </Link>
               </li>
               <li className="leading-none">
+                <Link href="/geo-location" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  Lieux
+                </Link>
+              </li>
+              <li className="leading-none">
                 <Link href="/studio" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   Qui sommes-nous
                 </Link>

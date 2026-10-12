@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ByteForce — GEO SEO Keyword Generator</title>
+<style>
+:root{--blue:#2563eb;--blue2:#1d4ed8;--ink:#14233f;--muted:#64748b;--line:#dbe5f2;--bg:#f5f8fd;--panel:#fff;--soft:#eff6ff;--green:#0f766e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:9px;padding:9px 12px;font-weight:650}button:hover{border-color:#9bb8e8}button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}button.primary:hover{background:var(--blue2)}button.small{padding:5px 8px;font-size:12px}
+header{height:auto;min-height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(140deg,#2563eb,#60a5fa);display:grid;place-items:center;color:white;font-size:24px;font-weight:900}.brand h1{font-size:19px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}
+.stats{display:flex;gap:0;border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}.stat{padding:9px 18px;min-width:100px;border-left:1px solid var(--line)}.stat:first-child{border-left:0}.stat span{display:block;color:var(--muted);font-size:11px}.stat strong{font-size:19px}
+main{display:grid;grid-template-columns:330px minmax(0,1fr);gap:14px;padding:14px;max-width:1800px;margin:auto}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;min-width:0}.sidebar{padding:17px;height:max-content;position:sticky;top:12px}.section{padding:0 0 15px;margin-bottom:15px;border-bottom:1px solid #e8eef7}.section:last-of-type{border-bottom:0}.section h2{font-size:14px;margin:0 0 4px}.hint{color:var(--muted);font-size:12px;margin:0 0 10px}.field{width:100%;border:1px solid #cfdaea;border-radius:8px;padding:10px;background:#fff;color:var(--ink)}textarea.field{min-height:155px;resize:vertical}.checklist{border:1px solid var(--line);border-radius:8px;padding:8px;max-height:190px;overflow:auto;margin-top:8px}.checkrow{display:flex;align-items:center;gap:8px;padding:5px 1px;font-size:12px}.checkrow input{accent-color:var(--blue)}.row-between{display:flex;justify-content:space-between;align-items:center;gap:8px}.country-block{border:1px solid var(--line);border-radius:9px;padding:9px;margin-top:8px}.country-title{display:flex;align-items:center;gap:8px;font-weight:700}.city-list{padding-left:26px;margin-top:6px;display:grid;grid-template-columns:1fr 1fr;gap:2px}.city-list label{font-size:12px;display:flex;gap:5px;align-items:center}.city-list input{accent-color:var(--blue)}.generate{width:100%;padding:13px;font-size:14px}.notice{background:var(--soft);color:#315a94;padding:11px;border-radius:9px;font-size:12px;margin-top:12px}
+.content{padding:15px;min-height:75vh}.content-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:0 0 14px}.content-head h2{margin:0;font-size:17px}.content-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap}.toolbar{display:flex;gap:8px;justify-content:space-between;align-items:center;margin:12px 0;flex-wrap:wrap}.toolbar input{max-width:390px}.toolbar select{width:auto;min-width:150px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px;max-height:67vh}table{border-collapse:collapse;width:100%;font-size:12px;white-space:nowrap}th{position:sticky;top:0;background:#f8faff;text-align:left;color:#52627b;font-size:11px;z-index:1}td,th{padding:10px 11px;border-bottom:1px solid #edf1f7}tbody tr:hover{background:#f8fbff}.kw{white-space:normal;min-width:260px;max-width:430px;font-weight:600}.badge{display:inline-block;background:#eaf2ff;color:#1d4ed8;border-radius:999px;padding:3px 8px;font-size:11px}.badge.local{background:#e7f7f2;color:#0f766e}.empty{text-align:center;padding:48px 20px;color:var(--muted)}.bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;color:var(--muted);font-size:12px;flex-wrap:wrap}.pages{display:flex;gap:5px;align-items:center}.pages button.active{background:var(--blue);color:#fff;border-color:var(--blue)}.footer-note{font-size:11px;color:var(--muted);margin-top:12px}.custom-add{display:flex;gap:6px;margin-top:8px}.custom-add input{min-width:0;flex:1}
+@media(max-width:900px){main{grid-template-columns:1fr}.sidebar{position:static}.stats{width:100%;justify-content:space-between}.stat{flex:1;min-width:0;padding:8px}.stat strong{font-size:16px}.content{min-height:0}.table-wrap{max-height:60vh}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">B</div><div><h1>GEO SEO Keyword Generator</h1><p>ByteForce · Generate location-based keyword ideas from your services</p></div></div>
+ <div class="stats"><div class="stat"><span>Keyword ideas</span><strong id="statKeywords">0</strong></div><div class="stat"><span>Services</span><strong id="statServices">0</strong></div><div class="stat"><span>Countries</span><strong id="statCountries">0</strong></div><div class="stat"><span>Cities</span><strong id="statCities">0</strong></div></div>
+</header>
+<main>
+<aside class="panel sidebar">
+ <section class="section">
+  <h2>1. Add your services</h2><p class="hint">One service per line. Edit this list to match your actual offer.</p>
+  <textarea id="services" class="field">Développement logiciel sur mesure
+Applications mobiles
+Sites web et applications web
+SaaS
+Automatisation des processus
+Intégration API
+CRM
+ERP
+Refonte d'applications
+Remplacement Excel
+Développement WordPress
+Maintenance de site web
+Audit technique
+SEO
+Design UI/UX
+Hébergement cloud</textarea>
+  <div class="row-between" style="margin-top:7px"><span class="hint" style="margin:0">Or add a service</span></div>
+  <div class="custom-add"><input id="newService" class="field" placeholder="Ex. Logiciel de gestion"><button id="addService">Add</button></div>
+ </section>
+ <section class="section">
+  <h2>2. Choose countries</h2><p class="hint">Select the markets you want to target.</p>
+  <div id="countryControls"></div>
+ </section>
+ <section class="section">
+  <h2>3. Choose keyword patterns</h2><p class="hint">The generator combines each service with these search intents.</p>
+  <div id="patternControls" class="checklist"></div>
+  <label class="checkrow"><input type="checkbox" id="includeCity" checked> Generate city-level variations</label>
+  <label class="checkrow"><input type="checkbox" id="includeCountry" checked> Generate country-level variations</label>
+  <label class="checkrow"><input type="checkbox" id="includePlain" checked> Include service + location keywords</label>
+ </section>
+ <section class="section">
+  <h2>4. Generate</h2><p class="hint">Generate the full keyword list, then search, review, and export it.</p>
+  <button class="primary generate" id="generateBtn">✦ Generate keywords</button>
+  <div class="notice">These are keyword ideas generated from templates, not verified search-volume data. Review wording and validate demand before creating SEO pages.</div>
+ </section>
+ <div class="footer-note">Runs locally in your browser. Your service list is not uploaded.</div>
+</aside>
+<section class="panel content">
+ <div class="content-head"><div><h2>Generated keywords</h2><p id="resultDescription">Add services and click Generate keywords.</p></div><div class="actions"><button id="copyBtn">Copy keywords</button><button class="primary" id="csvBtn">↓ Download CSV</button><button id="txtBtn">Download TXT</button></div></div>
+ <div class="toolbar"><input id="search" class="field" placeholder="Search keyword, service, city, country…"><select id="countryFilter" class="field"><option value="">All countries</option></select><select id="intentFilter" class="field"><option value="">All intents</option></select></div>
+ <div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Service</th><th>Country</th><th>City</th><th>Level</th><th>Intent</th><th>URL slug idea</th></tr></thead><tbody id="results"><tr><td colspan="7" class="empty">Your keyword list will appear here.</td></tr></tbody></table></div>
+ <div class="bottom"><span id="countLabel">0 keywords</span><div class="pages"><button id="prevBtn">←</button><span id="pageLabel">Page 1</span><button id="nextBtn">→</button></div></div>
+</section>
+</main>
+<script>
+const GEO = [
+ {key:"ma",name:"Maroc",flag:"🇲🇦",countryPrep:"au Maroc",cities:[["Casablanca","à Casablanca"],["Rabat","à Rabat"],["Marrakech","à Marrakech"],["Tanger","à Tanger"],["Agadir","à Agadir"],["Fès","à Fès"]]},
+ {key:"fr",name:"France",flag:"🇫🇷",countryPrep:"en France",cities:[["Lille","à Lille"],["Paris","à Paris"],["Marseille","à Marseille"],["Lyon","à Lyon"],["Bordeaux","à Bordeaux"],["Nantes","à Nantes"],["Toulouse","à Toulouse"]]},
+ {key:"ca",name:"Canada",flag:"🇨🇦",countryPrep:"au Canada",cities:[["Montréal","à Montréal"],["Québec","à Québec"],["Toronto","à Toronto"],["Ottawa","à Ottawa"],["Vancouver","à Vancouver"],["Calgary","à Calgary"]]}
+];
+const PATTERNS = [
+ {id:"base",label:"Service + location",intent:"Local / commercial",build:(s,l)=>`${s} ${l}`},
+ {id:"developpement",label:"Développement de…",intent:"Commercial",build:(s,l)=>`Développement de ${articleService(s)} ${l}`},
+ {id:"creation",label:"Création de…",intent:"Commercial",build:(s,l)=>`Création de ${articleService(s)} ${l}`},
+ {id:"agence",label:"Agence de…",intent:"Commercial",build:(s,l)=>`Agence de ${articleService(s)} ${l}`},
+ {id:"surmesure",label:"Sur mesure",intent:"Commercial",build:(s,l)=>`${s} sur mesure ${l}`},
+ {id:"entreprise",label:"Entreprise spécialisée",intent:"Commercial",build:(s,l)=>`Entreprise de ${articleService(s)} ${l}`},
+ {id:"prix",label:"Prix / coût",intent:"Commercial / pricing",build:(s,l)=>`Prix ${articleService(s)} ${l}`}
+];
+const articleMap = [
+ [/^applications? mobiles?$/i,"application mobile"],[/^sites web et applications web$/i,"site web"],[/^sites? web$/i,"site web"],[/^développement logiciel sur mesure$/i,"logiciel sur mesure"],[/^saas$/i,"SaaS"],[/^crm$/i,"CRM"],[/^erp$/i,"ERP"],[/^seo$/i,"SEO"],[/^design ui\/ux$/i,"design UI/UX"],[/^intégration api$/i,"intégration API"],[/^automatisation des processus$/i,"automatisation des processus"],[/^refonte d'applications$/i,"application"],[/^remplacement excel$/i,"solution pour remplacer Excel"],[/^développement wordpress$/i,"site WordPress"],[/^maintenance de site web$/i,"site web"],[/^audit technique$/i,"audit technique"],[/^hébergement cloud$/i,"hébergement cloud"]
+];
+function articleService(s){for(const [re,v] of articleMap)if(re.test(s.trim()))return v;return s.charAt(0).toLowerCase()+s.slice(1)}
+function slugify(s){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/œ/g,"oe").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
+const countryControls=document.getElementById("countryControls"),patternControls=document.getElementById("patternControls");
+GEO.forEach(g=>{const el=document.createElement("div");el.className="country-block";el.innerHTML=`<label class="country-title"><input type="checkbox" class="country-check" value="${g.key}" checked> <span>${g.flag}</span> ${g.name} <small style="margin-left:auto;color:#64748b">${g.cities.length} cities</small></label><div class="city-list">${g.cities.map((c,i)=>`<label><input type="checkbox" class="city-check" data-country="${g.key}" value="${i}" checked>${c[0]}</label>`).join("")}</div>`;countryControls.appendChild(el)});
+PATTERNS.forEach(p=>{const l=document.createElement("label");l.className="checkrow";l.innerHTML=`<input type="checkbox" class="pattern-check" value="${p.id}" checked> ${p.label}`;patternControls.appendChild(l)});
+let allRows=[],page=1;const PAGE_SIZE=100;
+function getServices(){return [...new Set(document.getElementById("services").value.split(/\n/).map(x=>x.trim()).filter(Boolean))]}
+function selectedCountries(){const chosen=new Set([...document.querySelectorAll(".country-check:checked")].map(x=>x.value));return GEO.filter(g=>chosen.has(g.key))}
+function selectedCities(g){return [...document.querySelectorAll(`.city-check[data-country="${g.key}"]:checked`)].map(x=>g.cities[Number(x.value)]).filter(Boolean)}
+function selectedPatterns(){const ids=new Set([...document.querySelectorAll(".pattern-check:checked")].map(x=>x.value));return PATTERNS.filter(p=>ids.has(p.id))}
+function makeRows(){
+ const services=getServices(),countries=selectedCountries(),patterns=selectedPatterns(),withCity=document.getElementById("includeCity").checked,withCountry=document.getElementById("includeCountry").checked,withPlain=document.getElementById("includePlain").checked;const rows=[],seen=new Set();
+ for(const s of services)for(const g of countries){
+  const targets=[];if(withCountry)targets.push({name:g.name,label:g.countryPrep,level:"Country",city:g.name,slug:g.key});
+  if(withCity)for(const [name,prep] of selectedCities(g))targets.push({name,label:prep,level:"City",city:name,slug:slugify(name)});
+  for(const t of targets){
+   const candidates=[];if(withPlain)candidates.push({keyword:`${s} ${t.label}`,intent:"Local / commercial",pattern:"demande"});
+   for(const p of patterns){if(p.id==="base"&&!withPlain)continue;candidates.push({keyword:p.build(s,t.label),intent:p.intent,pattern:p.id==="base"?"demande":p.id==="surmesure"?"sur-mesure":p.id})}
+   for(const c of candidates){const kw=c.keyword.replace(/\s+/g," ").trim();const key=kw.toLocaleLowerCase("fr");if(seen.has(key))continue;seen.add(key);rows.push({keyword:kw,service:s,country:g.name,flag:g.flag,city:t.city,level:t.level,intent:c.intent,slug:`/geo-location/${slugify(s)}/${g.key}${t.level==="City"?"/"+t.slug:""}/${c.pattern}`})}
+  }
+ }
+ return rows.sort((a,b)=>a.country.localeCompare(b.country,"fr")||a.service.localeCompare(b.service,"fr")||a.city.localeCompare(b.city,"fr")||a.keyword.localeCompare(b.keyword,"fr"));
+}
+function refreshFilters(){const cf=document.getElementById("countryFilter"),iv=document.getElementById("intentFilter"),oldC=cf.value,oldI=iv.value;cf.innerHTML='<option value="">All countries</option>'+[...new Set(allRows.map(r=>r.country))].map(v=>`<option>${v}</option>`).join("");iv.innerHTML='<option value="">All intents</option>'+[...new Set(allRows.map(r=>r.intent))].map(v=>`<option>${v}</option>`).join("");cf.value=oldC;iv.value=oldI}
+function filtered(){const q=document.getElementById("search").value.toLocaleLowerCase("fr").trim(),c=document.getElementById("countryFilter").value,i=document.getElementById("intentFilter").value;return allRows.filter(r=>(!q||[r.keyword,r.service,r.country,r.city,r.intent,r.slug].some(v=>v.toLocaleLowerCase("fr").includes(q)))&&(!c||r.country===c)&&(!i||r.intent===i))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(){const rows=filtered(),maxPage=Math.max(1,Math.ceil(rows.length/PAGE_SIZE));page=Math.min(page,maxPage);const slice=rows.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);document.getElementById("results").innerHTML=slice.length?slice.map(r=>`<tr><td class="kw">${esc(r.keyword)}</td><td>${esc(r.service)}</td><td>${r.flag} ${esc(r.country)}</td><td>${esc(r.city)}</td><td><span class="badge ${r.level==="City"?"local":""}">${r.level==="City"?"Local":"Country"}</span></td><td>${esc(r.intent)}</td><td><code>${esc(r.slug)}</code></td></tr>`).join(""):'<tr><td colspan="7" class="empty">No results match your filters.</td></tr>';document.getElementById("countLabel").textContent=`Showing ${rows.length?((page-1)*PAGE_SIZE+1):0}–${Math.min(page*PAGE_SIZE,rows.length)} of ${rows.length.toLocaleString("fr-FR")} keywords`;document.getElementById("pageLabel").textContent=`Page ${page} / ${maxPage}`;document.getElementById("prevBtn").disabled=page<=1;document.getElementById("nextBtn").disabled=page>=maxPage;document.getElementById("statKeywords").textContent=allRows.length.toLocaleString("fr-FR");document.getElementById("statServices").textContent=getServices().length;document.getElementById("statCountries").textContent=selectedCountries().length;document.getElementById("statCities").textContent=selectedCountries().reduce((n,g)=>n+selectedCities(g).length,0);document.getElementById("resultDescription").textContent=`${allRows.length.toLocaleString("fr-FR")} keyword ideas generated from your current selections.`}
+function generate(){allRows=makeRows();page=1;refreshFilters();render()}
+function csv(){const rows=filtered(),headers=["keyword","service","country","city","level","intent","url_slug_idea"];const quote=v=>'"'+String(v??"").replace(/"/g,'""')+'"';const content=[headers.join(","),...rows.map(r=>[r.keyword,r.service,r.country,r.city,r.level,r.intent,r.slug].map(quote).join(","))].join("\r\n");downloadFile("byteforce-geo-keywords.csv","\ufeff"+content,"text/csv;charset=utf-8")}
+function downloadFile(name,content,type){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
+document.getElementById("generateBtn").addEventListener("click",generate);
+document.getElementById("addService").addEventListener("click",()=>{const i=document.getElementById("newService"),v=i.value.trim();if(!v)return;const ta=document.getElementById("services");const current=getServices();if(!current.some(s=>s.toLocaleLowerCase("fr")===v.toLocaleLowerCase("fr")))ta.value=(ta.value.trim()?ta.value.trim()+"\n":"")+v;i.value="";generate()});
+document.getElementById("csvBtn").addEventListener("click",csv);
+document.getElementById("txtBtn").addEventListener("click",()=>downloadFile("byteforce-geo-keywords.txt",filtered().map(r=>r.keyword).join("\n"),"text/plain;charset=utf-8"));
+document.getElementById("copyBtn").addEventListener("click",async()=>{const text=filtered().map(r=>r.keyword).join("\n");try{await navigator.clipboard.writeText(text);document.getElementById("copyBtn").textContent="Copied!";setTimeout(()=>document.getElementById("copyBtn").textContent="Copy keywords",1300)}catch(e){downloadFile("byteforce-geo-keywords.txt",text,"text/plain;charset=utf-8")}});
+document.getElementById("prevBtn").addEventListener("click",()=>{page=Math.max(1,page-1);render()});document.getElementById("nextBtn").addEventListener("click",()=>{page++;render()});
+["search","countryFilter","intentFilter"].forEach(id=>document.getElementById(id).addEventListener(id==="search"?"input":"change",()=>{page=1;render()}));
+document.querySelectorAll(".country-check").forEach(el=>el.addEventListener("change",()=>{document.querySelectorAll(`.city-check[data-country="${el.value}"]`).forEach(c=>c.checked=el.checked);generate()}));
+document.querySelectorAll(".city-check,.pattern-check").forEach(el=>el.addEventListener("change",generate));
+["includeCity","includeCountry","includePlain"].forEach(id=>document.getElementById(id).addEventListener("change",generate));
+generate();
+</script>
+</body>
+</html>
