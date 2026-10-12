@@ -7,15 +7,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef } from "react";
 
 const links = [
-  { href: "/realisations", label: "Travaux", match: (path: string) => path.startsWith("/realisations") },
   { href: "/services", label: "Services", match: (path: string) => path.startsWith("/services") },
-  { href: "/geo-location", label: "Lieux", match: (path: string) => path.startsWith("/geo-location") },
-  { href: "/studio", label: "À propos", match: (path: string) => path.startsWith("/studio") },
-  {
-    href: "/insights",
-    label: "Décisions",
-    match: (path: string) => path.startsWith("/insights") || path.startsWith("/solutions"),
-  },
+  { href: "/solutions", label: "Solutions", match: (path: string) => path.startsWith("/solutions") },
+  { href: "/realisations", label: "Réalisations", match: (path: string) => path.startsWith("/realisations") },
+  { href: "/insights", label: "Insights", match: (path: string) => path.startsWith("/insights") },
+  { href: "/studio", label: "Studio", match: (path: string) => path.startsWith("/studio") },
+  { href: "/contact", label: "Contact", match: (path: string) => path.startsWith("/contact") },
 ];
 
 function logoProps() {
@@ -103,7 +100,7 @@ export function Header() {
           <img {...logo} className="h-11 w-11 object-cover" alt="Byte Force" />
           <span className="font-headline text-lg font-bold tracking-tight text-on-surface">ByteForce</span>
         </Link>
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-5 md:flex xl:gap-8" aria-label="Principal">
           {links.map((link) => {
             const active = link.match(path);
             return (
@@ -126,7 +123,7 @@ export function Header() {
           <NavSearch />
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-all hover:bg-primary-container"
+            className="hidden items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-all hover:bg-primary-container xl:inline-flex"
           >
             Parler d&apos;un projet →
           </Link>

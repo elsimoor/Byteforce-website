@@ -2,19 +2,17 @@ import type { Metadata } from "next";
 import { LeadForm } from "@/components/lead-form";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
 import { SiteIndex } from "@/components/site-index";
 import { site } from "@/lib/site";
 
+const contactMeta = seoMeta["/contact"];
+
 export const metadata: Metadata = {
-  title: "Écrire à Casablanca",
-  description:
-    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel. Réponse sous un jour ouvré, du lundi au vendredi.",
+  title: { absolute: contactMeta.title },
+  description: contactMeta.description,
   alternates: { canonical: "/contact" },
-  openGraph: openGraph(
-    "/contact",
-    "Contact · Byte Force",
-    "Écrire à Byte Force à Casablanca pour un site, une application ou un logiciel. Réponse sous un jour ouvré, du lundi au vendredi.",
-  ),
+  openGraph: openGraph("/contact", contactMeta.title, contactMeta.description),
 };
 
 type Props = { searchParams: Promise<{ sent?: string; error?: string }> };

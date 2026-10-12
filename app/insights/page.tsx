@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { articles } from "@/lib/articles";
+import { insightCategories } from "@/lib/insight-categories";
 import { SiteIndex } from "@/components/site-index";
 import { moneyPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
@@ -31,6 +32,15 @@ export default function InsightsPage() {
           Pour quelqu&apos;un qui a déjà le problème : un tableur, une pile d&apos;abonnements, un processus manuel, ou
           une application que plus personne ne veut toucher.
         </p>
+        <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {insightCategories.map((category) => (
+            <li key={category.slug}>
+              <Link href={`/insights/category/${category.slug}`} className="border-b border-line">
+                {category.h1.replace("Décisions sur ", "").replace("Décisions ", "")}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </header>
       <section className="border-t border-line px-6 py-16 md:px-12">
         <h2 className="display max-w-[16ch] text-4xl">Quelle page lire</h2>
@@ -56,7 +66,7 @@ export default function InsightsPage() {
             outillés, quand l&apos;un bloque l&apos;autre.
           </p>
           <p>
-            <Link href="/contact" className="border-b border-ink pb-1">
+            <Link href="/contact" className="btn">
               Décrire le cas
             </Link>
           </p>

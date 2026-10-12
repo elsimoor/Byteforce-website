@@ -12,7 +12,7 @@ function Rich({ text }: { text: string }) {
         const match = /^\[\[([^|\]]+)\|([^\]]+)\]\]$/.exec(bit);
         if (!match) return <span key={index}>{bit}</span>;
         return (
-          <Link key={index} href={match[1]} className="border-b border-line">
+          <Link key={index} href={match[1]} className="font-semibold text-primary">
             {match[2]}
           </Link>
         );
@@ -26,6 +26,10 @@ export function CommercialView({ page }: { page: MoneyPage }) {
   const crumbs = crumbsFor(page, moneyPages);
   const children = childrenOf(page, moneyPages);
   const area = page.path.includes("france") ? "FR" : "MA";
+  const geo =
+    page.path === "developpement-logiciel-maroc" ||
+    page.path === "developpement-logiciel-casablanca" ||
+    page.path === "developpement-logiciel-france";
   const mainEntity =
     page.schema === "article"
       ? {
@@ -79,6 +83,34 @@ export function CommercialView({ page }: { page: MoneyPage }) {
           acceptedAnswer: { "@type": "Answer", text: item.a },
         })),
       },
+      ...(geo
+        ? [
+            {
+              "@type": ["ProfessionalService", "LocalBusiness"],
+              name: site.name,
+              url,
+              description: page.description,
+              email: site.email,
+              telephone: site.phone,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: site.street,
+                addressLocality: site.city,
+                postalCode: site.postal,
+                addressCountry: site.country,
+              },
+              areaServed:
+                page.path === "developpement-logiciel-maroc"
+                  ? ["Casablanca", "Rabat", "Marrakech", "Tanger", "Fès", "Safi"].map((name) => ({
+                      "@type": "City",
+                      name,
+                    }))
+                  : page.path === "developpement-logiciel-france"
+                    ? { "@type": "Country", name: "France" }
+                    : { "@type": "City", name: "Casablanca" },
+            },
+          ]
+        : []),
     ],
   };
 
@@ -101,7 +133,7 @@ export function CommercialView({ page }: { page: MoneyPage }) {
         <p className="mt-8 max-w-2xl text-lg leading-relaxed">
           <Rich text={page.lede} />
         </p>
-        <Link href="/contact" className="mt-8 inline-block border-b border-ink pb-1">
+        <Link href="/contact" className="btn mt-8">
           {page.cta}
         </Link>
         {page.schema === "article" ? <AuthorByline /> : null}

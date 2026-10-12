@@ -5,6 +5,7 @@ import { ArticleDrawings } from "@/components/article-drawings";
 import { CloudflareBench, CloudflareFlow } from "@/components/cloudflare-lab";
 import { ContratSlot } from "@/components/contrat-lab";
 import type { Article } from "@/lib/articles";
+import { categoryOf, relatedArticles } from "@/lib/insight-categories";
 import { site } from "@/lib/site";
 
 function IllustratedSlot({ slug, heading, lang }: { slug: string; heading: string; lang: "fr" | "en" }) {
@@ -35,13 +36,13 @@ function Rich({ text }: { text: string }) {
         if (!match) return <span key={index}>{bit}</span>;
         if (match[1].startsWith("http")) {
           return (
-            <a key={index} href={match[1]} className="border-b border-ink">
+            <a key={index} href={match[1]} className="font-semibold text-primary">
               {match[2]}
             </a>
           );
         }
         return (
-          <Link key={index} href={match[1]} className="border-b border-ink">
+          <Link key={index} href={match[1]} className="font-semibold text-primary">
             {match[2]}
           </Link>
         );
@@ -52,6 +53,8 @@ function Rich({ text }: { text: string }) {
 
 export function ArticleView({ article }: { article: Article }) {
   const path = `/insights/${article.slug}`;
+  const related = relatedArticles(article);
+  const category = categoryOf(article.slug);
   const url = `${site.url}${path}`;
   const schema = {
     "@context": "https://schema.org",
@@ -108,7 +111,7 @@ export function ArticleView({ article }: { article: Article }) {
         </p>
         <AuthorByline />
         <p className="mt-6">
-          <Link href="/contact" className="border-b border-ink pb-1">
+          <Link href="/contact" className="btn">
             Parler du projet
           </Link>
         </p>
@@ -136,7 +139,7 @@ export function ArticleView({ article }: { article: Article }) {
               <Rich text={article.en.lede} />
             </p>
             <p className="mt-6">
-              <Link href="/contact" className="border-b border-ink pb-1">
+              <Link href="/contact" className="btn">
                 Talk about the project
               </Link>
             </p>
@@ -155,6 +158,27 @@ export function ArticleView({ article }: { article: Article }) {
             </section>
           ))}
         </div>
+      ) : null}
+      {related.length > 0 ? (
+        <section className="border-t border-line px-6 py-14 md:px-12">
+          <h2 className="text-sm text-mute">Décisions liées</h2>
+          {category ? (
+            <p className="mt-4">
+              <Link href={`/insights/category/${category.slug}`} className="border-b border-ink pb-1">
+                {category.h1}
+              </Link>
+            </p>
+          ) : null}
+          <ul className="mt-4 flex flex-col gap-2">
+            {related.map((item) => (
+              <li key={item.slug}>
+                <Link href={`/insights/${item.slug}`} className="border-b border-ink pb-1">
+                  {item.h1}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       ) : null}
       <section className="border-t border-line px-6 py-14 md:px-12">
         <h2 className="text-sm text-mute">Pages liées</h2>

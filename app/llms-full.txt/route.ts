@@ -1,6 +1,8 @@
 import { ficheHtml, ficheText, prefersHtml } from "@/lib/fiche-html";
 import { articles } from "@/lib/articles";
+import { cityPages } from "@/lib/city-pages";
 import { projects, services } from "@/lib/content";
+import { insightCategories } from "@/lib/insight-categories";
 import { moneyPages } from "@/lib/money";
 import { site } from "@/lib/site";
 
@@ -26,6 +28,14 @@ export function GET(request: Request) {
     "",
     "## Pages commerciales",
     ...moneyPages.map((page) => `- [${page.h1}](${origin}/${page.path}) : ${page.description}`),
+    "",
+    "## Villes",
+    ...cityPages.map((city) => `- [${city.h1}](${origin}/villes/${city.slug}) : ${city.description}`),
+    "",
+    "## Décisions par sujet",
+    ...insightCategories.map(
+      (category) => `- [${category.h1}](${origin}/insights/category/${category.slug}) : ${category.description}`,
+    ),
     "",
     "## Réalisations",
     ...projects.map((project) => {

@@ -4,11 +4,10 @@ import { AuditForm } from "@/components/audit-form";
 import { AuditRun } from "@/components/audit-run";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
 import { parseAuditUrl } from "@/lib/site-audit";
 
-const title = "Audit gratuit d'une page d'accueil";
-const description =
-  "Byte Force lit gratuitement la page d'accueil d'un site : titre, description, indexation, images, mobile. Sans compte.";
+const { title, description } = seoMeta["/audit"];
 
 type Props = { searchParams: Promise<{ url?: string }> };
 
@@ -16,10 +15,10 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const query = await searchParams;
   const hasTarget = Boolean((query.url ?? "").trim());
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: "/audit" },
-    openGraph: openGraph("/audit", `${title} · Byte Force`, description),
+    openGraph: openGraph("/audit", title, description),
     robots: hasTarget ? { index: false, follow: true } : { index: true, follow: true },
   };
 }

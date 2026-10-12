@@ -125,7 +125,7 @@ export const solutionPages: MoneyPage[] = [
     ],
     links: [
       { href: "/solutions/remplacer-excel", label: "Remplacer Excel" },
-      { href: "/application-web-sur-mesure-maroc/dashboard", label: "Lire ces données" },
+      { href: "/application-web-sur-mesure-maroc", label: "Lire ces données" },
       contact,
     ],
   },
@@ -190,7 +190,7 @@ export const solutionPages: MoneyPage[] = [
           "L'export payant qui existe parce que l'écran principal est inutilisable : parfois un réglage suffit.",
         ],
         p: [
-          "Byte Force peut aider à lire cette liste. Ce n'est pas un audit certifié, et ce n'est pas une promesse d'économie en pourcentage. Si après le tri le métier est encore tordu par l'outil, on parle de [[/solutions/remplacer-saas/logiciel-personnalise|logiciel]].",
+          "Byte Force peut aider à lire cette liste. Ce n'est pas un audit certifié, et ce n'est pas une promesse d'économie en pourcentage. Si après le tri le métier est encore tordu par l'outil, on parle de [[/solutions/remplacer-saas|logiciel]].",
         ],
       },
     ],
@@ -201,7 +201,7 @@ export const solutionPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/solutions/remplacer-saas", label: "Remplacer un SaaS" },
-      { href: "/developpement-saas-maroc/remplacer-saas", label: "Si le remplacement est un produit" },
+      { href: "/solutions/remplacer-saas", label: "Si le remplacement est un produit" },
       contact,
     ],
   },
@@ -221,7 +221,7 @@ export const solutionPages: MoneyPage[] = [
       {
         h: "Le découpage",
         p: [
-          "On nomme le contournement en une phrase : « chaque soir, on recolle les commandes dans un fichier parce que le statut livraison n'existe pas ». Cette phrase est le périmètre. Le reste de l'abonnement reste. Le lien, s'il existe, est une [[/developpement-logiciel-sur-mesure-maroc/automatisation/integration-api|intégration]], pas une guerre de remplacement.",
+          "On nomme le contournement en une phrase : « chaque soir, on recolle les commandes dans un fichier parce que le statut livraison n'existe pas ». Cette phrase est le périmètre. Le reste de l'abonnement reste. Le lien, s'il existe, est une [[/developpement-logiciel-sur-mesure-maroc/automatisation|intégration]], pas une guerre de remplacement.",
           "Le cadre de construction est le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]]. Cette page sert à décider si le morceau vaut d'être écrit.",
         ],
       },
@@ -322,7 +322,7 @@ export const solutionPages: MoneyPage[] = [
       {
         h: "Le bon raccord",
         p: [
-          "Une information naît dans un outil et doit apparaître dans l'autre : un paiement crée une commande, un statut clôt une relance. On écrit ce sens unique. Les synchronisations « dans les deux sens sur tous les champs » se contredisent. La technique est l'[[/developpement-logiciel-sur-mesure-maroc/automatisation/integration-api|intégration API]] quand une API existe.",
+          "Une information naît dans un outil et doit apparaître dans l'autre : un paiement crée une commande, un statut clôt une relance. On écrit ce sens unique. Les synchronisations « dans les deux sens sur tous les champs » se contredisent. La technique est l'[[/developpement-logiciel-sur-mesure-maroc/automatisation|intégration API]] quand une API existe.",
           "Snapchat Collect, dans le catalogue, est un flux de collecte et de redirection déjà en ligne. Ce n'est pas votre comptabilité. C'est un exemple de flux étroit, pas d'usine.",
         ],
       },
@@ -388,7 +388,7 @@ export const solutionPages: MoneyPage[] = [
     h1: "Refonte d'application web",
     cta: "Lister les changements en attente",
     schema: "article",
-    lede: "La refonte web se justifie quand l'application sert encore et que la file des changements ne sort plus. Elle ne se justifie pas pour « faire plus moderne » si l'équipe s'en sert sans douleur. Le comment est sur [[/application-web-sur-mesure-maroc/refonte|la page construction]].",
+    lede: "La refonte web se justifie quand l'application sert encore et que la file des changements ne sort plus. Elle ne se justifie pas pour « faire plus moderne » si l'équipe s'en sert sans douleur. Le comment est sur [[/application-web-sur-mesure-maroc|la page construction]].",
     blocks: [
       {
         h: "Avant de signer",
@@ -410,7 +410,7 @@ export const solutionPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/solutions/moderniser-application", label: "Moderniser" },
-      { href: "/application-web-sur-mesure-maroc/refonte", label: "Construire la refonte" },
+      { href: "/application-web-sur-mesure-maroc", label: "Construire la refonte" },
       contact,
     ],
   },
@@ -431,7 +431,7 @@ export const solutionPages: MoneyPage[] = [
         h: "L'ordre",
         p: [
           "Inventaire de ce qui est encore vivant. Essai de migration sur une copie. Comparaison : nombre de dossiers, un échantillon lu par l'équipe, pas seulement un total. Bascule avec l'ancien en lecture seule. Une personne joignable le lendemain. Cet ordre n'est pas négociable pour faire joli dans un planning.",
-          "La [[/solutions/moderniser-application/refonte-web|refonte]] peut inclure une migration. Elles ne sont pas synonymes : on peut refondre sans déménager, et déménager sans tout redessiner.",
+          "La [[/solutions/moderniser-application|refonte]] peut inclure une migration. Elles ne sont pas synonymes : on peut refondre sans déménager, et déménager sans tout redessiner.",
         ],
       },
     ],
@@ -442,7 +442,7 @@ export const solutionPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/solutions/moderniser-application", label: "Moderniser" },
-      { href: "/application-web-sur-mesure-maroc/refonte", label: "Refonte web" },
+      { href: "/application-web-sur-mesure-maroc", label: "Refonte web" },
       contact,
     ],
   },
@@ -511,6 +511,31 @@ export const solutionPages: MoneyPage[] = [
           "Le sponsor qui ne se sert pas du logiciel ne suffit pas. Il faut le responsable du flux, et le droit de dire non à un service qui veut son module dans la même version. Sans ce droit, le projet redevient une liste de souhaits.",
         ],
       },
+      {
+        h: "Quand les outils ne se parlent pas",
+        p: [
+          "Le symptôme habituel est une journée coupée en quatre : un message, un tableau, un fichier, un autre outil. Personne ne sait lequel fait foi. Le logiciel d'entreprise ne commence pas par les remplacer tous. Il commence par le passage où deux services se contredisent.",
+        ],
+      },
+      {
+        h: "Un seul état",
+        p: [
+          "L'intérêt n'est pas d'avoir « un seul logiciel » comme slogan. C'est qu'un dossier ait un état. Le commerce voit la commande. L'opération voit ce qu'il faut faire. La personne qui valide voit la même ligne. Le reste des outils peut rester, s'il n'est pas le lieu de la contradiction.",
+        ],
+      },
+      {
+        h: "Selon le métier",
+        p: [
+          "Dans un commerce, le premier flux est souvent la commande, le stock et la facture. Dans un service, c'est le planning, le suivi du client et ce que l'on peut en sortir le soir. Dans une industrie, c'est la production, le contrôle et ce qui doit être maintenu. On n'écrit pas les trois dans la même version.",
+          "Si le point de départ est un fichier, lire [[/solutions/remplacer-excel|remplacer Excel]]. Si c'est une suite d'abonnements, lire [[/solutions/remplacer-saas|remplacer un SaaS]]. Si l'entreprise est plus petite, la page est [[/solutions/logiciel-pme|le logiciel pour une PME]].",
+        ],
+      },
+      {
+        h: "Comment on commence",
+        p: [
+          "D'abord on lit les outils déjà payés et le geste qui bloque. Ensuite une première version de ce geste, utilisée. Ensuite seulement le flux suivant. [[/contact|Écrire]] pour nommer le service qui contredit l'autre.",
+        ],
+      },
     ],
     faqs: [
       { q: "C'est différent d'une PME ?", a: "Oui sur le nombre de parties et d'outils déjà payés. Non sur la règle : un flux, livré, utilisé, avant le suivant." },
@@ -519,6 +544,8 @@ export const solutionPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/solutions/logiciel-pme", label: "Plutôt une PME" },
+      { href: "/solutions/remplacer-saas", label: "Trop de SaaS" },
+      { href: "/solutions/remplacer-excel", label: "Partir d'Excel" },
       { href: "/developpement-logiciel-sur-mesure-maroc/erp/logiciel-gestion-entreprise", label: "Logiciel de gestion" },
       contact,
     ],

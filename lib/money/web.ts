@@ -51,6 +51,8 @@ export const webPages: MoneyPage[] = [
     links: [
       { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
       { href: "/services/creation-site-web", label: "Si le besoin est un site" },
+      { href: "/realisations/re-proche-de-moi", label: "Proche de moi" },
+      { href: "/insights/category/applications-web", label: "Décisions web" },
       contact,
     ],
   },
@@ -121,7 +123,7 @@ export const webPages: MoneyPage[] = [
       {
         h: "Côté équipe",
         p: [
-          "Le portail n'est pas une deuxième base. L'état affiché au client est le même que celui de l'[[/application-web-sur-mesure-maroc/application-metier|application métier]] ou du dossier interne. Sinon quelqu'un met à jour deux endroits, et le portail ment dès la deuxième semaine.",
+          "Le portail n'est pas une deuxième base. L'état affiché au client est le même que celui de l'[[/application-web-sur-mesure-maroc|application métier]] ou du dossier interne. Sinon quelqu'un met à jour deux endroits, et le portail ment dès la deuxième semaine.",
         ],
       },
     ],
@@ -134,7 +136,7 @@ export const webPages: MoneyPage[] = [
     ],
     links: [
       { href: "/application-web-sur-mesure-maroc", label: "Application web" },
-      { href: "/application-web-sur-mesure-maroc/dashboard", label: "Tableau de bord interne" },
+      { href: "/application-web-sur-mesure-maroc", label: "Tableau de bord interne" },
       contact,
     ],
   },
@@ -155,7 +157,7 @@ export const webPages: MoneyPage[] = [
         h: "Choisir les questions, pas les graphiques",
         p: [
           "« Qu'est-ce qui est en retard », « qu'est-ce qui est promis et pas disponible », « quelles affaires n'ont pas bougé ». Trois questions tenues à jour valent douze camemberts. On les écrit avec la personne qui décide, puis on vérifie que la donnée source existe. Sinon le premier chantier n'est pas le dashboard, c'est la saisie.",
-          "Un outil de reporting déjà payé peut rester le lieu de lecture. Dans ce cas le travail est l'[[/developpement-logiciel-sur-mesure-maroc/automatisation/integration-api|intégration]], pas un deuxième écran.",
+          "Un outil de reporting déjà payé peut rester le lieu de lecture. Dans ce cas le travail est l'[[/developpement-logiciel-sur-mesure-maroc/automatisation|intégration]], pas un deuxième écran.",
         ],
       },
       {
@@ -198,7 +200,7 @@ export const webPages: MoneyPage[] = [
       {
         h: "La bascule",
         p: [
-          "Les utilisateurs passent quand leurs dossiers sont là et que le geste principal prend le même temps. Une bascule un vendredi soir sans retour arrière est un choix, pas une obligation. On prévoit qui surveille le lundi. Le sujet voisin, la [[/solutions/moderniser-application/migration|migration]], concerne le déménagement des données et des comptes quand on change de socle.",
+          "Les utilisateurs passent quand leurs dossiers sont là et que le geste principal prend le même temps. Une bascule un vendredi soir sans retour arrière est un choix, pas une obligation. On prévoit qui surveille le lundi. Le sujet voisin, la [[/solutions/moderniser-application|migration]], concerne le déménagement des données et des comptes quand on change de socle.",
         ],
       },
     ],
@@ -210,7 +212,7 @@ export const webPages: MoneyPage[] = [
     links: [
       { href: "/application-web-sur-mesure-maroc", label: "Application web" },
       { href: "/services/audit-correction", label: "Audit et correction" },
-      { href: "/solutions/moderniser-application/refonte-web", label: "Le problème de la refonte" },
+      { href: "/solutions/moderniser-application", label: "Le problème de la refonte" },
       contact,
     ],
   },

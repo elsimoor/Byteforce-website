@@ -162,7 +162,7 @@ export function Landing() {
                   <h3 className="text-2xl font-medium tracking-tight">Cocoinbox</h3>
                   <p className="mt-1 text-sm text-white/50">Secure communication platform & CRM</p>
                 </div>
-                <Link href="/realisations/coco-inbox" className="text-sm text-white/60 hover:text-white">
+                <Link href="/realisations" className="text-sm text-white/60 hover:text-white">
                   Open the project
                 </Link>
               </div>
@@ -181,7 +181,7 @@ export function Landing() {
                   <h3 className="text-2xl font-medium tracking-tight">Proche de moi</h3>
                   <p className="mt-1 text-sm text-white/50">AI-powered local discovery platform</p>
                 </div>
-                <Link href="/realisations/re-proche-de-moi" className="text-sm text-white/60 hover:text-white">
+                <Link href="/realisations" className="text-sm text-white/60 hover:text-white">
                   Open the project
                 </Link>
               </div>

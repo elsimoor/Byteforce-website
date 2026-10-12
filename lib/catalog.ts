@@ -73,7 +73,7 @@ export function cities() {
     const cityProjects = projects.filter((project) => slugify(project.city) === slug);
     return {
       slug,
-      path: slug === "casablanca" ? "/developpement-logiciel-casablanca" : `/villes/${slug}`,
+      path: `/villes/${slug}`,
       city: place.city,
       country: place.country,
       placeLabel,

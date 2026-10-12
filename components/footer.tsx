@@ -48,6 +48,16 @@ export function Footer() {
                 </Link>
               </li>
               <li className="leading-none">
+                <Link href="/developpement-logiciel-maroc" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  Maroc
+                </Link>
+              </li>
+              <li className="leading-none">
+                <Link href="/developpement-logiciel-france" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  France
+                </Link>
+              </li>
+              <li className="leading-none">
                 <Link href="/audit" className="text-on-surface-variant transition-colors hover:text-on-surface">
                   Audit gratuit
                 </Link>
@@ -100,6 +110,55 @@ export function Footer() {
                   </Link>
                 </li>
               ) : null}
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 grid gap-10 border-t border-outline-variant/20 pt-10 md:grid-cols-2">
+          <div>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Maroc</h2>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                ["/villes/casablanca", "Casablanca"],
+                ["/villes/rabat", "Rabat"],
+                ["/villes/marrakech", "Marrakech"],
+                ["/villes/tanger", "Tanger"],
+                ["/villes/fes", "Fès"],
+                ["/villes/safi", "Safi"],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <Link href={href} className="text-on-surface-variant hover:text-on-surface">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/developpement-logiciel-maroc" className="text-on-surface hover:text-primary">
+                  Voir tout le Maroc
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">France</h2>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                ["/villes/lille", "Lille"],
+                ["/villes/roubaix", "Roubaix"],
+                ["/villes/nord", "Nord"],
+                ["/villes/marcq-en-baroeul", "Marcq-en-Barœul"],
+                ["/villes/montreal", "Montréal"],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <Link href={href} className="text-on-surface-variant hover:text-on-surface">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/developpement-logiciel-france" className="text-on-surface hover:text-primary">
+                  Voir la France
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

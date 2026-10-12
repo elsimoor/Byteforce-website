@@ -47,6 +47,10 @@ export const placePages: MoneyPage[] = [
     ],
     links: [
       { href: "/studio", label: "Le bureau" },
+      { href: "/villes/casablanca", label: "Byte Force à Casablanca" },
+      { href: "/services/creation-site-web", label: "Création de site" },
+      { href: "/realisations/dealkhir", label: "Dealkhir" },
+      { href: "/developpement-logiciel-maroc", label: "Maroc" },
       { href: "/contact", label: "Contact" },
       { href: "/solutions/logiciel-pme", label: "Pour une PME" },
     ],
@@ -127,25 +131,70 @@ export const placePages: MoneyPage[] = [
     group: "Lieu",
     crumb: "France",
     keyword: "développement logiciel France",
-    title: "Développement logiciel pour une entreprise en France",
+    title: "Développement logiciel pour entreprises en France · Byte Force",
     description:
-      "Pas de bureau en France. Travail à distance depuis Casablanca, fuseau proche, projets déjà livrés à Lille et ailleurs.",
-    h1: "Développement logiciel pour la France",
+      "Studio logiciel à Casablanca pour entreprises françaises. Même fuseau horaire, livrables en français. Lille, Nord, Roubaix.",
+    h1: "Développement logiciel pour une entreprise en France",
     cta: "Décrire le projet, à distance",
     schema: "service",
-    lede: "Byte Force n'a pas de bureau en France. Le travail avec une entreprise française se fait à distance, depuis Casablanca. Le fuseau est le même qu'en France une partie de l'année, et à une heure le reste. Ce n'est pas une filiale. C'est un studio marocain qui a déjà livré des projets utilisés en France.",
+    lede: "Byte Force travaille avec des entreprises françaises depuis Casablanca. Il n'y a pas de bureau en France, ni de société française. Le fuseau est le même une partie de l'année, et à une heure le reste. La langue du cadrage et des écrans est le français. [[/contact|Écrire pour décrire le projet]].",
     blocks: [
       {
-        h: "Ce qui est déjà en ligne là-bas",
+        h: "Le même jour, pas la même adresse",
         p: [
-          "Proche de moi est en ligne à Lille depuis 2024 : recherche et fiches. D'autres réalisations du catalogue sont en France (boutiques, pages). On ne les transforme pas en « clients logiciel » qu'elles ne sont pas. Elles montrent que livrer et maintenir à distance, pour un public français, est déjà le cas.",
+          "Un projet pour la France se cadre en visio, sur les heures du Technopark, qui couvrent la journée française. Le contrat et la facture sont ceux de l'entreprise à Casablanca. On ne laisse pas croire à une filiale lilloise ou parisienne.",
+          "Le code, le dépôt et les comptes d'hébergement livrés reviennent au client. L'hébergement est chez le fournisseur ouvert à son nom. Il n'est pas « au Maroc » par principe.",
         ],
       },
       {
-        h: "Comment se passe un projet",
+        h: "Pourquoi ce nearshore",
         p: [
-          "Cadrage en visio, périmètre écrit, points en français sur les heures de bureau marocaines, qui couvrent la journée française. Le code et les comptes livrés sont à l'entreprise, pas hébergés « au Maroc » par principe. Il n'y a pas d'entité légale française à annoncer, et on n'en invente pas.",
-          "Deux sujets reviennent : un [[/developpement-saas-maroc|SaaS]] vendu à des clients français, et un [[/developpement-logiciel-sur-mesure-maroc|logiciel interne]] pour une équipe en France. Le fond technique est le même qu'au Maroc. La différence est le rythme et la distance.",
+          "Le fuseau horaire se recouvre. Une question posée le matin en France a une réponse dans la journée, du lundi au vendredi. Le français est la langue de travail du studio, pas une langue ajoutée pour le marché.",
+          "Le coût se discute sur un périmètre écrit, pas sur une grille « moins cher de tant ». Byte Force ne publie pas de pourcentage. Deux projets français n'ont pas le même nombre de rôles. Le premier échange dure trente minutes et sert aussi à dire si un outil du marché suffit.",
+          "Un déplacement en France est possible quand le métier ne se comprend pas en vidéo. Il se compte en quelques heures de vol. Il n'est pas le mode de travail. Le mode courant est la visio, avec un partage d'écran de la personne qui fait le geste.",
+        ],
+      },
+      {
+        h: "Lille",
+        p: [
+          "Lille est la ville française la plus présente dans le catalogue. Nu Lille, Escapade Florale, Proche de moi et le tableau de réservation Proche de moi sont en ligne. [[/villes/lille|Développement logiciel à Lille]].",
+        ],
+      },
+      {
+        h: "Roubaix",
+        p: [
+          "Roubaix a le site d'Ambulances Valcq, en ligne depuis 2022. C'est une vitrine de transport sanitaire, pas un logiciel de régulation. [[/villes/roubaix|Développement logiciel à Roubaix]].",
+        ],
+      },
+      {
+        h: "Le Nord",
+        p: [
+          "Le Nord relie ces villes. Les Hauts Paysages est un site d'aménagements dont la zone est le Nord. La page régionale ne remplace pas les villes. [[/villes/nord|Développement logiciel dans le Nord]].",
+        ],
+      },
+      {
+        h: "Marcq-en-Barœul",
+        p: [
+          "Meubles de Septentrion est une boutique de mobilier publiée en 2023 à Marcq-en-Barœul. [[/villes/marcq-en-baroeul|La page de la commune]].",
+        ],
+      },
+      {
+        h: "Montréal",
+        p: [
+          "Montréal n'est pas en France. C'est le marché francophone du catalogue en dehors du Maroc et de la France : Coco Inbox, le CRM Cocoinbox, Tourispeak. Le décalage est d'environ cinq heures. La page est [[/villes/montreal|le développement pour Montréal]]. Elle remonte ici faute d'un second pilier.",
+        ],
+      },
+      {
+        h: "Réalisations",
+        p: [
+          "[[/realisations/ambulances-valcq|Ambulances Valcq]] à Roubaix. [[/realisations/nu-lille|Nu Lille]] et [[/realisations/escapade-florale|Escapade Florale]] à Lille. [[/realisations/les-hauts-paysages|Les Hauts Paysages]] dans le Nord. [[/realisations/meubles-de-septentrion|Meubles de Septentrion]] à Marcq-en-Barœul. Chacune a son adresse publique. Aucune n'est un témoignage chiffré.",
+        ],
+      },
+      {
+        h: "Comment ça se passe",
+        p: [
+          "On nomme le geste. On regarde l'outil déjà en place. On écrit le périmètre. On construit la première version de ce geste. Les points sont en français. Après la remise, les défauts du périmètre sont corrigés avec la livraison. La suite est un correctif ou un suivi, décrit sur la [[/services/maintenance|maintenance]].",
+          "Deux sujets reviennent souvent : un [[/developpement-saas-maroc|SaaS]] dont les clients sont en France, et un [[/developpement-logiciel-sur-mesure-maroc|logiciel interne]] pour une équipe française. Le fond technique est le même qu'au Maroc. Pour le Maroc, la page est [[/developpement-logiciel-maroc|le développement logiciel au Maroc]].",
         ],
       },
     ],
@@ -155,11 +204,21 @@ export const placePages: MoneyPage[] = [
       { q: "La maintenance après livraison ?", a: "Oui, à distance : correctifs du périmètre convenu, puis suivi ou devis. Le fuseau permet un échange dans la journée." },
     ],
     proof: [
-      { href: "/realisations/re-proche-de-moi", title: "Proche de moi", note: "En ligne à Lille depuis 2024." },
+      { href: "/realisations/ambulances-valcq", title: "Ambulances Valcq", note: "Site de transport sanitaire, Roubaix, 2022." },
+      { href: "/realisations/nu-lille", title: "Nu Lille", note: "Site gastronomique, Lille, 2023." },
+      { href: "/realisations/escapade-florale", title: "Escapade Florale", note: "Boutique florale, Lille, 2024." },
+      { href: "/realisations/les-hauts-paysages", title: "Les Hauts Paysages", note: "Site paysager, Nord, 2023." },
+      { href: "/realisations/meubles-de-septentrion", title: "Meubles de Septentrion", note: "Boutique de mobilier, Marcq-en-Barœul, 2023." },
     ],
     links: [
-      { href: "/developpement-logiciel-casablanca", label: "Le bureau, lui, est à Casablanca" },
-      { href: "/realisations", label: "Réalisations" },
+      { href: "/villes/lille", label: "Lille" },
+      { href: "/villes/roubaix", label: "Roubaix" },
+      { href: "/villes/nord", label: "Nord" },
+      { href: "/villes/marcq-en-baroeul", label: "Marcq-en-Barœul" },
+      { href: "/villes/montreal", label: "Montréal" },
+      { href: "/services/maintenance", label: "Maintenance" },
+      { href: "/developpement-logiciel-maroc", label: "Le pilier Maroc" },
+      { href: "/developpement-logiciel-casablanca", label: "Le bureau est à Casablanca" },
       contact,
     ],
   },
@@ -193,7 +252,7 @@ export const placePages: MoneyPage[] = [
     ],
     links: [
       { href: "/developpement-logiciel-france", label: "Travailler avec la France" },
-      { href: "/developpement-saas-maroc/saas-b2b", label: "SaaS B2B" },
+      { href: "/developpement-saas-maroc", label: "SaaS B2B" },
       contact,
     ],
   },

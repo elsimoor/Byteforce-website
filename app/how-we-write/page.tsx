@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
 
-const title = "Comment les pages sont écrites";
-const description =
-  "Les pages Byte Force partent des logiciels déjà livrés et des faits du studio à Casablanca. Aucun prix n'est inventé.";
+const { title, description } = seoMeta["/how-we-write"];
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/how-we-write" },
-  openGraph: openGraph("/how-we-write", `${title} · Byte Force`, description),
+  openGraph: openGraph("/how-we-write", title, description),
 };
 
 export default function HowWeWritePage() {

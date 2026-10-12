@@ -43,6 +43,10 @@ export const mobilePages: MoneyPage[] = [
     ],
     links: [
       { href: "/application-web-sur-mesure-maroc", label: "Rester dans le navigateur" },
+      { href: "/services/design-graphique", label: "Design" },
+      { href: "/realisations/tourispeak", label: "Tourispeak" },
+      { href: "/realisations/zainek", label: "Zainek" },
+      { href: "/insights/category/applications-mobiles", label: "Décisions mobile" },
       contact,
     ],
   },
@@ -63,7 +67,7 @@ export const mobilePages: MoneyPage[] = [
         h: "Ce qu'il faut accepter",
         p: [
           "Un compte Apple Developer au nom du client, une politique de confidentialité vraie, et des permissions demandées au moment où elles servent. L'application qui demande la position « au cas où » se fait recaler, ou se fait désinstaller.",
-          "Si Android est aussi obligatoire dès le premier jour, la page [[/developpement-application-mobile-maroc/cross-platform|cross-platform]] est le bon point de départ. Faire iOS seul puis « porter » sans l'avoir prévu double souvent le coût.",
+          "Si Android est aussi obligatoire dès le premier jour, la page [[/developpement-application-mobile-maroc|cross-platform]] est le bon point de départ. Faire iOS seul puis « porter » sans l'avoir prévu double souvent le coût.",
         ],
       },
     ],
@@ -74,7 +78,7 @@ export const mobilePages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
-      { href: "/developpement-application-mobile-maroc/android", label: "Android" },
+      { href: "/developpement-application-mobile-maroc", label: "Android" },
       contact,
     ],
   },
@@ -109,7 +113,7 @@ export const mobilePages: MoneyPage[] = [
     ],
     links: [
       { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
-      { href: "/developpement-application-mobile-maroc/application-metier", label: "Usage métier" },
+      { href: "/developpement-application-mobile-maroc", label: "Usage métier" },
       contact,
     ],
   },
@@ -140,8 +144,8 @@ export const mobilePages: MoneyPage[] = [
     ],
     proof: [],
     links: [
-      { href: "/developpement-application-mobile-maroc/ios", label: "iOS seul" },
-      { href: "/developpement-application-mobile-maroc/android", label: "Android seul" },
+      { href: "/developpement-application-mobile-maroc", label: "iOS seul" },
+      { href: "/developpement-application-mobile-maroc", label: "Android seul" },
       { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
       contact,
     ],
@@ -162,7 +166,7 @@ export const mobilePages: MoneyPage[] = [
       {
         h: "Le geste avant le store",
         p: [
-          "On suit une personne une matinée, ou on se fait raconter trois interventions dont une qui s'est mal passée. L'écran reprend cet ordre. Un menu copié sur l'intranet sera ignoré. Le [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier/outil-interne|outil interne]] web reste préférable si tout se fait au dépôt avec du réseau.",
+          "On suit une personne une matinée, ou on se fait raconter trois interventions dont une qui s'est mal passée. L'écran reprend cet ordre. Un menu copié sur l'intranet sera ignoré. Le [[/developpement-logiciel-sur-mesure-maroc/logiciel-metier|outil interne]] web reste préférable si tout se fait au dépôt avec du réseau.",
         ],
       },
       {

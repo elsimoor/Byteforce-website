@@ -1,6 +1,7 @@
 import type { MoneyPage } from "./types";
 import { parentPath } from "./types";
 import { mobilePages } from "./mobile";
+import { moroccoPages } from "./morocco";
 import { placePages } from "./places";
 import { saasPages } from "./saas";
 import { softwarePages } from "./software";
@@ -31,6 +32,7 @@ const architecture = new Set([
   "solutions/logiciel-entreprise",
   "developpement-logiciel-casablanca",
   "developpement-logiciel-france",
+  "developpement-logiciel-maroc",
 ]);
 
 export const moneyPages: MoneyPage[] = [
@@ -40,6 +42,7 @@ export const moneyPages: MoneyPage[] = [
   ...mobilePages,
   ...solutionPages,
   ...placePages,
+  ...moroccoPages,
 ].filter((page) => architecture.has(page.path));
 
 function assertPages(pages: MoneyPage[]) {

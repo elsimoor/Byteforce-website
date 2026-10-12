@@ -6,7 +6,9 @@ import { ProjectJsonLd } from "@/components/json-ld";
 import { getCity, slugify } from "@/lib/catalog";
 import { getProject, getService, projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
+import { caseDossier } from "@/lib/case-dossier";
 import { projectNotes, projectTitles } from "@/lib/project-notes";
+import { metaFor } from "@/lib/seo-meta";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -26,13 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject(slug);
   if (!project) return {};
   const path = `/realisations/${project.slug}`;
-  const title = `${projectTitles[project.slug] ?? project.title} · Byte Force`;
-  const description = project.description;
+  const meta = metaFor(path, `${projectTitles[project.slug] ?? project.title} · Byte Force`, project.description);
   return {
-    title: { absolute: title },
-    description,
+    title: { absolute: meta.title },
+    description: meta.description,
     alternates: { canonical: path },
-    openGraph: openGraph(path, title, description),
+    openGraph: openGraph(path, meta.title, meta.description),
   };
 }
 
@@ -43,6 +44,7 @@ export default async function ProjectPage({ params }: Props) {
   const service = getService(project.serviceSlug);
   const place = getCity(slugify(project.city));
   const notes = projectNotes[project.slug] ?? [];
+  const dossier = caseDossier[project.slug] ?? [];
   const mark = countryMark[project.country] ?? project.country;
   const pageUrl = `${site.url}/realisations/${project.slug}`;
   const schema = {
@@ -157,6 +159,16 @@ export default async function ProjectPage({ params }: Props) {
               ))}
             </div>
           ) : null}
+          {dossier.map((section) => (
+            <div key={section.heading} className="mt-10">
+              <h2 className="text-lg">{section.heading}</h2>
+              <div className="mt-3 space-y-4 text-base leading-relaxed">
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
         <div className="text-sm md:col-span-4 md:col-start-9">
           <ProjectJsonLd project={project} />

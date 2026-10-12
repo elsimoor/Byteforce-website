@@ -5,17 +5,15 @@ import { services } from "@/lib/content";
 import { SiteIndex } from "@/components/site-index";
 import { entryPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
+
+const servicesMeta = seoMeta["/services"];
 
 export const metadata: Metadata = {
-  title: "Services à Casablanca",
-  description:
-    "Création de sites, applications, logiciels, plugins, référencement, hébergement, design et maintenance à Casablanca. Écrire.",
+  title: { absolute: servicesMeta.title },
+  description: servicesMeta.description,
   alternates: { canonical: "/services" },
-  openGraph: openGraph(
-    "/services",
-    "Services à Casablanca",
-    "Création de sites, applications, logiciels, plugins, référencement, hébergement, design et maintenance à Casablanca. Écrire.",
-  ),
+  openGraph: openGraph("/services", servicesMeta.title, servicesMeta.description),
 };
 
 export default function ServicesPage() {
@@ -55,9 +53,13 @@ export default function ServicesPage() {
       </section>
       <p className="max-w-2xl px-6 pb-16 text-lg leading-relaxed md:px-12">
         Byte Force construit ces offres depuis Casablanca : un site, une application, un logiciel, un plugin WordPress,
-        le référencement, l&apos;hébergement et la maintenance. Chaque ligne ci-dessus ouvre la page du service. Le
-        premier échange se fait par écrit, et la réponse part sous un jour ouvré. Le bureau est au Technopark, boulevard
-        Dammam, Aïn Chock. Aucun prix n&apos;est affiché, parce que le montant dépend de ce qui doit être construit.
+        le référencement, l&apos;hébergement et la maintenance. Le cadre national est le{" "}
+        <Link href="/developpement-logiciel-maroc">développement logiciel au Maroc</Link>. Pour une entreprise en
+        France, la page est le{" "}
+        <Link href="/developpement-logiciel-france">développement logiciel pour la France</Link>. Chaque ligne
+        ci-dessus ouvre la page du service. Le premier échange se fait par écrit, et la réponse part sous un jour
+        ouvré. Le bureau est au Technopark, boulevard Dammam, Aïn Chock. Aucun prix n&apos;est affiché, parce que le
+        montant dépend de ce qui doit être construit.
         Pour revenir au studio, la page d&apos;accueil reste ouverte.
       </p>
       <p className="px-6 pb-16 md:px-12">

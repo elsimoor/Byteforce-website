@@ -4,16 +4,16 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { SiteIndex } from "@/components/site-index";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
 import { site } from "@/lib/site";
 
-const description =
-  "Byte Force conçoit des logiciels, des applications et des sites depuis le Technopark, à Casablanca. Pas de bureau en France.";
+const studioMeta = seoMeta["/studio"];
 
 export const metadata: Metadata = {
-  title: "Studio logiciel à Casablanca",
-  description,
+  title: { absolute: studioMeta.title },
+  description: studioMeta.description,
   alternates: { canonical: "/studio" },
-  openGraph: openGraph("/studio", "Studio logiciel à Casablanca", description),
+  openGraph: openGraph("/studio", studioMeta.title, studioMeta.description),
 };
 
 const countries = new Set(projects.map((project) => project.country)).size;

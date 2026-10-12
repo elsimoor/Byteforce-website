@@ -5,6 +5,7 @@ import { LeadForm } from "@/components/lead-form";
 import { PluginBreak, PluginFlow, PluginShelf } from "@/components/wordpress-plugin-lab";
 import { getService, projectsForService, services } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
+import { metaFor } from "@/lib/seo-meta";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return {};
-  const path = `/services/${service.slug}`;
-  const title = `${service.title} · Byte Force`;
+  const path = service.href ?? `/services/${service.slug}`;
+  const meta = metaFor(path, `${service.title} · Byte Force`, service.summary);
   return {
-    title: { absolute: title },
-    description: service.summary,
+    title: { absolute: meta.title },
+    description: meta.description,
     alternates: { canonical: path },
-    openGraph: openGraph(path, title, service.summary),
+    openGraph: openGraph(path, meta.title, meta.description),
   };
 }
 

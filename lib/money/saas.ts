@@ -41,6 +41,11 @@ export const saasPages: MoneyPage[] = [
     links: [
       { href: "/developpement-logiciel-france", label: "Pour une entreprise en France" },
       { href: "/solutions/remplacer-saas", label: "Subir trop de SaaS" },
+      { href: "/services/api-backend", label: "API" },
+      { href: "/services/hebergement", label: "Hébergement" },
+      { href: "/realisations/coco-inbox", label: "Coco Inbox" },
+      { href: "/realisations/yoursmile", label: "YourSmile" },
+      { href: "/insights/category/saas", label: "Décisions SaaS" },
       contact,
     ],
   },
@@ -80,7 +85,7 @@ export const saasPages: MoneyPage[] = [
     ],
     links: [
       { href: "/developpement-saas-maroc", label: "Développement SaaS" },
-      { href: "/developpement-saas-maroc/saas-b2b", label: "SaaS B2B" },
+      { href: "/developpement-saas-maroc", label: "SaaS B2B" },
       contact,
     ],
   },
@@ -101,7 +106,7 @@ export const saasPages: MoneyPage[] = [
         h: "Le compte entreprise",
         p: [
           "Il y a une organisation, des invitations, un administrateur, et des rôles. Un commercial ne configure pas la facturation. Un admin ne devrait pas être le seul à pouvoir travailler. Cette structure se pose au début. L'ajouter quand dix clients sont en production, c'est une migration, pas un réglage.",
-          "Le [[/developpement-saas-maroc/multi-tenant|multi-tenant]] est la façon technique de tenir ces organisations côte à côte. La page B2B parle de l'achat et de l'usage. L'autre parle de l'isolation.",
+          "Le [[/developpement-saas-maroc|multi-tenant]] est la façon technique de tenir ces organisations côte à côte. La page B2B parle de l'achat et de l'usage. L'autre parle de l'isolation.",
         ],
       },
       {
@@ -118,7 +123,7 @@ export const saasPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/developpement-saas-maroc", label: "Développement SaaS" },
-      { href: "/developpement-saas-maroc/multi-tenant", label: "Multi-tenant" },
+      { href: "/developpement-saas-maroc", label: "Multi-tenant" },
       contact,
     ],
   },
@@ -160,7 +165,7 @@ export const saasPages: MoneyPage[] = [
     ],
     proof: [],
     links: [
-      { href: "/developpement-saas-maroc/saas-b2b", label: "SaaS B2B" },
+      { href: "/developpement-saas-maroc", label: "SaaS B2B" },
       { href: "/developpement-saas-maroc", label: "Développement SaaS" },
       contact,
     ],
@@ -198,7 +203,7 @@ export const saasPages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/solutions/remplacer-saas", label: "Le problème des SaaS empilés" },
-      { href: "/solutions/remplacer-saas/reduire-couts", label: "Réduire le coût sans tout réécrire" },
+      { href: "/solutions/remplacer-saas", label: "Réduire le coût sans tout réécrire" },
       { href: "/developpement-saas-maroc", label: "Développement SaaS" },
       contact,
     ],

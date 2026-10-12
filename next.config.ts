@@ -18,11 +18,6 @@ const nextConfig: NextConfig = {
         destination: "/developpement-application-mobile-maroc",
         permanent: true,
       },
-      {
-        source: "/villes/casablanca",
-        destination: "/developpement-logiciel-casablanca",
-        permanent: true,
-      },
       { source: "/crm-sur-mesure-maroc", destination: "/developpement-logiciel-sur-mesure-maroc/crm", permanent: true },
       { source: "/erp-sur-mesure-maroc", destination: "/developpement-logiciel-sur-mesure-maroc/erp", permanent: true },
       {
@@ -163,10 +158,6 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
-      {
-        source: "/villes/:path*",
-        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
-      },
       {
         source: "/categories/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],

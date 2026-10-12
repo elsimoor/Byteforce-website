@@ -5,17 +5,15 @@ import { ProjectStage } from "@/components/project-stage";
 import { SiteIndex } from "@/components/site-index";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
+
+const workMeta = seoMeta["/realisations"];
 
 export const metadata: Metadata = {
-  title: "Travaux publiés, Casablanca",
-  description:
-    "Sites, applications et logiciels livrés par Byte Force, de Casablanca à Lille et Montréal. Chaque fiche dit ce qui est en ligne.",
+  title: { absolute: workMeta.title },
+  description: workMeta.description,
   alternates: { canonical: "/realisations" },
-  openGraph: openGraph(
-    "/realisations",
-    "Réalisations · Byte Force",
-    "Sites, applications et logiciels livrés par Byte Force, de Casablanca à Lille et Montréal. Chaque fiche dit ce qui est en ligne.",
-  ),
+  openGraph: openGraph("/realisations", workMeta.title, workMeta.description),
 };
 
 export default function WorkPage() {

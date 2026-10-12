@@ -60,6 +60,8 @@ export const softwarePages: MoneyPage[] = [
       { q: "Qu'est-ce qu'un logiciel sur mesure ?", a: "C'est un logiciel conçu pour les rôles, les données et les règles d'une entreprise, plutôt qu'un produit générique paramétré après coup." },
       { q: "Byte Force est-il une agence web généraliste ?", a: "Le cœur du travail est le logiciel d'entreprise : application, métier, automatisation. Byte Force fait aussi le site, le référencement, l'hébergement et le plugin WordPress quand le projet en a besoin. Ce n'est pas une agence de sites vitrines au forfait. Le bureau est au Technopark, boulevard Dammam, Aïn Chock, Casablanca." },
       { q: "Qui possède le code ?", a: "Le client, à la remise : code, dépôt et comptes d'hébergement livrés." },
+      { q: "Travaillez-vous avec des entreprises en dehors de Casablanca ?", a: "Oui. Le bureau est au Technopark. Les projets se font aussi pour d'autres villes du Maroc, et pour des entreprises en France et au Canada, en visio. Il n'y a pas d'autre bureau." },
+      { q: "Proposez-vous de la maintenance après la livraison ?", a: "Les défauts du périmètre convenu sont corrigés avec la livraison. Ensuite, un correctif devisé ou un suivi. La page maintenance décrit le suivi." },
       { q: "Combien de temps faut-il ?", a: "Un audit tient en quelques jours. Une première version tient souvent en plusieurs semaines. Le délai suit le nombre de rôles et de branchements, pas une promesse fixe." },
     ],
     proof: [
@@ -71,7 +73,12 @@ export const softwarePages: MoneyPage[] = [
       { href: "/solutions/remplacer-excel", label: "Remplacer Excel" },
       { href: "/solutions/remplacer-saas", label: "Remplacer un SaaS" },
       { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
+      { href: "/developpement-logiciel-maroc", label: "Développement logiciel au Maroc" },
       { href: "/application-web-sur-mesure-maroc", label: "Application web" },
+      { href: "/services/api-backend", label: "API" },
+      { href: "/services/maintenance", label: "Maintenance" },
+      { href: "/realisations/coco-inbox", label: "Coco Inbox" },
+      { href: "/realisations/crm-cocoinbox", label: "CRM Cocoinbox" },
       contact,
     ],
   },
@@ -426,7 +433,7 @@ export const softwarePages: MoneyPage[] = [
     h1: "Outil interne sur mesure",
     cta: "Décrire la tâche répétée",
     schema: "service",
-    lede: "Un outil interne sur mesure sert les gens de l'entreprise, pas leurs clients. Il remplace une suite de gestes : préparer une tournée, contrôler une pièce, assembler un dossier avant envoi. S'il faut un espace pour le client, c'est un [[/application-web-sur-mesure-maroc/portail-client|portail]], autre page, autre usage.",
+    lede: "Un outil interne sur mesure sert les gens de l'entreprise, pas leurs clients. Il remplace une suite de gestes : préparer une tournée, contrôler une pièce, assembler un dossier avant envoi. S'il faut un espace pour le client, c'est un [[/application-web-sur-mesure-maroc|portail]], autre page, autre usage.",
     blocks: [
       {
         h: "Le bon candidat",
@@ -443,13 +450,13 @@ export const softwarePages: MoneyPage[] = [
       },
     ],
     faqs: [
-      { q: "Est-ce une application mobile ?", a: "Seulement si la tâche se fait loin d'un bureau. Beaucoup d'outils internes restent une application web ouverte sur un téléphone. Le natif est un autre coût, décrit côté [[/developpement-application-mobile-maroc/application-metier|application métier mobile]]." },
+      { q: "Est-ce une application mobile ?", a: "Seulement si la tâche se fait loin d'un bureau. Beaucoup d'outils internes restent une application web ouverte sur un téléphone. Le natif est un autre coût, décrit côté [[/developpement-application-mobile-maroc|application métier mobile]]." },
       { q: "Qui forme l'équipe ?", a: "L'outil est assez proche du geste actuel pour qu'une séance suffise. S'il faut une formation d'une semaine, l'écran est mauvais." },
     ],
     proof: [],
     links: [
       { href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier", label: "Logiciel métier" },
-      { href: "/application-web-sur-mesure-maroc/dashboard", label: "Tableau de bord" },
+      { href: "/application-web-sur-mesure-maroc", label: "Tableau de bord" },
       contact,
     ],
   },
@@ -532,7 +539,7 @@ export const softwarePages: MoneyPage[] = [
     proof: [],
     links: [
       { href: "/developpement-logiciel-sur-mesure-maroc/automatisation", label: "Automatisation des processus" },
-      { href: "/solutions/automatisation-entreprise/workflow", label: "Un workflow précis" },
+      { href: "/solutions/automatisation-entreprise", label: "Un workflow précis" },
       contact,
     ],
   },
@@ -576,7 +583,7 @@ export const softwarePages: MoneyPage[] = [
     ],
     links: [
       { href: "/services/api-backend", label: "API et backend" },
-      { href: "/solutions/automatisation-entreprise/integration-outils", label: "Connecter les outils déjà payés" },
+      { href: "/solutions/automatisation-entreprise", label: "Connecter les outils déjà payés" },
       { href: "/developpement-logiciel-sur-mesure-maroc/automatisation", label: "Automatisation" },
       contact,
     ],

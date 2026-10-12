@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CommercialView } from "@/components/commercial-view";
 import { getMoneyPage, moneyPages } from "@/lib/money";
 import { openGraph } from "@/lib/open-graph";
+import { metaFor } from "@/lib/seo-meta";
 
 type Props = { params: Promise<{ slug: string[] }> };
 
@@ -16,11 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = getMoneyPage(slug.join("/"));
   if (!page) return {};
+  const meta = metaFor(`/${page.path}`, page.title, page.description);
   return {
-    title: { absolute: page.title },
-    description: page.description,
+    title: { absolute: meta.title },
+    description: meta.description,
     alternates: { canonical: `/${page.path}` },
-    openGraph: openGraph(`/${page.path}`, page.title, page.description),
+    openGraph: openGraph(`/${page.path}`, meta.title, meta.description),
     robots: { index: true, follow: true },
   };
 }

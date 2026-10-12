@@ -84,6 +84,8 @@ export const services: Service[] = [
     links: [
       { href: "/contact", label: "Parler d'un site" },
       { href: "/services/referencement-seo", label: "Référencement naturel" },
+      { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
+      { href: "/application-web-sur-mesure-maroc", label: "Application web" },
       { href: "/realisations", label: "Travaux publiés" },
     ],
   },
@@ -202,6 +204,20 @@ export const services: Service[] = [
           "Il n'y a pas de pourcentage de disponibilité affiché : on dit ce qui est surveillé, et on corrige quand la page ne répond plus.",
         ],
       },
+      {
+        heading: "Ce que l'on met en ligne",
+        paragraphs: [
+          "Selon le projet : un hébergement mutualisé pour un site simple, un serveur quand l'application a besoin de son processus, ou une publication sans serveur quand le produit est déjà prévu pour. Le choix se fait avec le client, pas selon une grille du studio.",
+          "Les comptes déjà utilisés dans des projets du catalogue comprennent Vercel, Cloudflare, OVHcloud et Nindohost. Ce ne sont pas des exclusivités. Le compte ouvert pour le projet revient au client.",
+        ],
+      },
+      {
+        heading: "Ce qui est inclus",
+        paragraphs: [
+          "Le certificat, le nom de domaine s'il est dans le périmètre, une copie de sauvegarde, et une surveillance de la page. Le support se fait en français, aux heures du Technopark. On ne publie pas un taux de disponibilité : on dit ce qui est surveillé.",
+          "La maintenance, si le site doit continuer à être corrigé après la mise en ligne, est une page à part.",
+        ],
+      },
     ],
     faqs: [
       {
@@ -212,10 +228,15 @@ export const services: Service[] = [
         q: "Où sont les serveurs ?",
         a: "Le bureau est à Casablanca. L'hébergement est choisi pour le projet, pas pour une ville du serveur. Les comptes remis reviennent au client.",
       },
+      {
+        q: "Puis-je reprendre l'hébergement plus tard ?",
+        a: "Oui. Les comptes livrés sont au nom du client. Byte Force n'en fait pas une condition pour continuer.",
+      },
     ],
     links: [
       { href: "/contact", label: "Parler de l'hébergement" },
       { href: "/services/maintenance", label: "Maintenance" },
+      { href: "/developpement-saas-maroc", label: "Développement SaaS" },
     ],
   },
   {
@@ -242,16 +263,34 @@ export const services: Service[] = [
           "Agency Wonderland, à Marrakech, est un site de studio visuel livré en 2024. Les fichiers réutilisables restent à l'équipe.",
         ],
       },
+      {
+        heading: "Ce qui est livré",
+        paragraphs: [
+          "Une direction visuelle, des maquettes des pages qui comptent, une charte courte que l'équipe peut réutiliser, et les icônes ou illustrations nécessaires au parcours. On ne livre pas un dossier de logos décoratifs si le besoin est une page qui fait écrire.",
+        ],
+      },
+      {
+        heading: "Comment le design se décide",
+        paragraphs: [
+          "On part du brief : qui lit, ce qu'il doit comprendre, ce qu'il doit faire. Ensuite une direction, puis les écrans dans l'ordre du parcours, puis les corrections. Les outils du travail sont Figma pour les écrans et la suite habituelle pour les fichiers à exporter. L'outil n'est pas le livrable.",
+          "Sur le web et le mobile, les écrans sont prévus pour la largeur réelle : le téléphone, puis le bureau. Les composants se répètent pour que le formulaire, le titre et le bouton ne changent pas de sens d'une page à l'autre.",
+        ],
+      },
     ],
     faqs: [
       {
         q: "Le design est-il séparé du site ?",
         a: "Il peut l'être, pour une identité ou des supports. Sur un site, le design et les pages partent ensemble, pour que le formulaire soit lisible.",
       },
+      {
+        q: "Qui valide les écrans ?",
+        a: "La personne qui connaît le métier chez le client. Une maquette validée par quelqu'un qui ne fera pas le geste est une maquette à refaire.",
+      },
     ],
     links: [
       { href: "/contact", label: "Parler du design" },
       { href: "/realisations/agency-wonderland", label: "Agency Wonderland" },
+      { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
     ],
   },
   {
@@ -279,15 +318,45 @@ export const services: Service[] = [
           "Le contrat dit ce que l'appel reçoit et ce qu'il renvoie. L'authentification dit qui a le droit d'appeler. La note pour l'équipe tient en quelques pages : assez pour brancher le site sans relire tout le code. On n'écrit pas une API quand un formulaire envoie déjà le message au bon endroit.",
         ],
       },
+      {
+        heading: "Les formes d'API",
+        paragraphs: [
+          "Une API HTTP simple, quand un site ou une application doit lire et écrire les mêmes dossiers. GraphQL, seulement si les écrans demandent des combinaisons de champs qu'un contrat fixe rendrait pénible. Des webhooks, quand un outil déjà payé doit prévenir le logiciel. Une API interne, quand deux programmes de la même entreprise doivent se parler sans passer par le public.",
+        ],
+      },
+      {
+        heading: "La pile",
+        paragraphs: [
+          "Le serveur est souvent Node.js. La base et l'accès aux données suivent le dossier : une base relationnelle quand les liens sont stables. La documentation décrit les appels que l'équipe va vraiment faire. On ne choisit pas la pile avant d'avoir nommé ces appels.",
+        ],
+      },
+      {
+        heading: "Des branchements déjà vus",
+        paragraphs: [
+          "Un site qui envoie une demande vers l'outil qui la traite. Une application mobile qui lit le même état que le back-office. Un flux court entre deux systèmes, comme la collecte déjà en ligne de Snapchat Collect. On ne branche pas un CRM et un ERP « pour faire propre » si personne ne traverse ce pont.",
+        ],
+      },
+      {
+        heading: "L'ordre du travail",
+        paragraphs: [
+          "On écrit ce que l'appel reçoit et renvoie. On le développe. On le documente pour l'équipe. On le teste avec les cas qui cassent : un droit manquant, un doublon, un outil distant qui ne répond pas. Ensuite on surveille ce qui doit rester vrai.",
+        ],
+      },
     ],
     faqs: [
       {
         q: "Faut-il remplacer les outils déjà en place ?",
         a: "Non, si un branchement suffit. On remplace un outil seulement quand le contournement coûte plus cher que le logiciel.",
       },
+      {
+        q: "Combien de temps, et qui maintient ?",
+        a: "Le délai suit le nombre d'appels et d'outils déjà en place. Il n'y a pas de grille publique. Après la remise, un défaut du périmètre est corrigé avec la livraison. La suite est un correctif ou un suivi.",
+      },
     ],
     links: [
       { href: "/contact", label: "Parler d'une API" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+      { href: "/developpement-saas-maroc", label: "SaaS" },
       { href: "/developpement-logiciel-sur-mesure-maroc/automatisation", label: "Automatisation" },
       { href: "/realisations/snapchat-collect", label: "Snapchat Collect" },
     ],
@@ -329,6 +398,8 @@ export const services: Service[] = [
     links: [
       { href: "/contact", label: "Parler de la maintenance" },
       { href: "/services/audit-correction", label: "Audit et correction" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+      { href: "/developpement-logiciel-france", label: "Pour une entreprise en France" },
     ],
   },
   {
@@ -354,14 +425,38 @@ export const services: Service[] = [
           "Il n'y a pas de note sur 100. Le livrable est une liste priorisée, puis les corrections convenues.",
         ],
       },
+      {
+        heading: "Ce que la lecture couvre",
+        paragraphs: [
+          "Le parcours : est-ce qu'une personne comprend l'offre et arrive à écrire. La performance de la page. Le référencement de base : titre, description, indexation. La sécurité visible : ce qui est exposé sans devoir l'être. L'accessibilité des textes et des boutons. On ne promet pas un score d'outil.",
+        ],
+      },
+      {
+        heading: "Comment on lit",
+        paragraphs: [
+          "La page est ouverte comme un visiteur, puis comme un moteur. Les mesures de laboratoire, quand elles servent, viennent d'outils publics de performance et d'accessibilité. Le nom de l'outil ne remplace pas la liste de ce qui bloque.",
+        ],
+      },
+      {
+        heading: "Ce que vous recevez",
+        paragraphs: [
+          "Une liste priorisée : ce qui empêche de finir, ce qui est fragile, ce qui peut attendre. Un échange pour la parcourir. Les corrections convenues sont faites sur le produit, pas seulement écrites dans un rapport. La refonte n'est proposée que si le code ne peut plus évoluer.",
+          "Pour une page d'accueil, le formulaire d'audit du site lit déjà le titre, l'indexation et le mobile, sans compte.",
+        ],
+      },
     ],
     faqs: [
       {
         q: "L'audit oblige-t-il à refaire le site ?",
         a: "Non. Beaucoup de blocages se corrigent sur le produit existant. La refonte n'est proposée que si le code ne peut plus évoluer.",
       },
+      {
+        q: "L'audit de la page d'accueil est-il le même travail ?",
+        a: "Non. Le formulaire du site lit une page d'accueil sans compte. L'audit d'un produit déjà écrit regarde le parcours et le code, puis les corrections convenues.",
+      },
     ],
     links: [
+      { href: "/audit", label: "Audit d'une page d'accueil" },
       { href: "/contact", label: "Demander un audit" },
       { href: "/solutions/moderniser-application", label: "Moderniser une application" },
     ],
@@ -457,6 +552,18 @@ export const services: Service[] = [
       {
         q: "Peut-on installer les quatre plugins déjà écrits ?",
         a: "Oui. Chaque zip sur cette page s'installe par Extensions, Ajouter, Téléverser une extension. Un autre geste s'écrit après le premier échange.",
+      },
+      {
+        q: "Combien coûte un plugin WordPress sur mesure ?",
+        a: "Byte Force ne publie pas de montant. Un plugin simple et un plugin branché à une boutique n'ont pas le même périmètre. Le premier échange dure trente minutes.",
+      },
+      {
+        q: "Pouvez-vous modifier un plugin existant ?",
+        a: "Oui, après l'avoir lu. On adapte, on corrige, ou on dit si une réécriture du geste est le chemin honnête.",
+      },
+      {
+        q: "Le plugin suit-il les mises à jour WordPress ?",
+        a: "Il est écrit pour le site déjà en place, et testé avec la version en ligne. Une mise à jour majeure de WordPress se revérifie. Ce n'est pas une garantie permanente sans suivi.",
       },
     ],
     links: [

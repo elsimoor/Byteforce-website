@@ -1,6 +1,8 @@
 import { articles } from "@/lib/articles";
+import { cityPages } from "@/lib/city-pages";
 import { projects, services } from "@/lib/content";
 import { geoKeywords } from "@/lib/geo/keywords";
+import { insightCategories } from "@/lib/insight-categories";
 import { moneyPages } from "@/lib/money";
 
 const staticPaths = [
@@ -24,6 +26,7 @@ const staticPaths = [
   "/ai/work",
   "/ai/contact",
   "/ai/faq",
+  "/solutions",
   "/mentions-legales",
   "/confidentialite",
   "/conditions",
@@ -37,7 +40,9 @@ export function publicEntries() {
   };
   for (const path of staticPaths) set(path, "2026-10-08");
   for (const service of services) set(service.href ?? `/services/${service.slug}`, "2026-10-08");
-  for (const page of moneyPages) set(`/${page.path}`, "2026-10-08");
+  for (const page of moneyPages) set(`/${page.path}`, "2026-10-12");
+  for (const city of cityPages) set(`/villes/${city.slug}`, "2026-10-12");
+  for (const category of insightCategories) set(`/insights/category/${category.slug}`, "2026-10-12");
   set("/geo-location", "2026-10-12");
   for (const row of geoKeywords()) set(`/${row.path}`, "2026-10-12");
   for (const project of projects) {

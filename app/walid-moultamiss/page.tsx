@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
+import { seoMeta } from "@/lib/seo-meta";
 import { site } from "@/lib/site";
 
-const description =
-  "Walid Moultamiss, ingénieur logiciel full-stack à Casablanca. Plus de 4 ans d'expérience. Bureau Byte Force au Technopark.";
+const { title: personTitle, description } = seoMeta["/walid-moultamiss"];
 
 const cvFr = "/walid_moultamiss%20CV%20Fr.pdf";
 const cvEn = "/walid_moultamiss%20CV%20Eng.pdf";
 const linkedin = "https://www.linkedin.com/in/walid-moultamiss-56142b1aa";
 
 export const metadata: Metadata = {
-  title: "Walid Moultamiss",
+  title: { absolute: personTitle },
   description,
   alternates: { canonical: "/walid-moultamiss" },
-  openGraph: openGraph("/walid-moultamiss", "Walid Moultamiss", description),
+  openGraph: openGraph("/walid-moultamiss", personTitle, description),
 };
 
 const roles = [

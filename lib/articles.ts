@@ -134,9 +134,29 @@ export const articles: Article[] = [
           "Pour poser une date sur un circuit précis, [[/contact|décrire le projet]]. Le téléphone est le +212 666 650 696.",
         ],
       },
+      {
+        heading: "Des ordres de grandeur, pas un engagement",
+        paragraphs: [
+          "Au cadrage, on parle parfois en ordres de grandeur : une première version courte en quelques semaines, une application métier en quelques mois, un produit à plusieurs clients ou un outil large encore plus long. Ces phrases ne sont pas un devis. Elles servent à voir si l'attente du client est du même ordre que le geste.",
+          "Le détail de ce qu'une première version doit contenir est sur [[/insights/premiere-version-utile|lancer une première version utile]].",
+        ],
+      },
+      {
+        heading: "Ce qui accélère",
+        paragraphs: [
+          "Un périmètre déjà nommé. Les écrans validés par la personne qui fera le geste. Une équipe disponible pour répondre dans la semaine. Un outil déjà en place dont on connaît le contrat, au lieu de le découvrir au milieu du projet.",
+        ],
+      },
+      {
+        heading: "Ce qui ralentit",
+        paragraphs: [
+          "Un périmètre qui change après avoir été accepté. Une validation qui attend des semaines. Plusieurs branchements découverts un par un. Vouloir le CRM, le stock et le site dans la même première version.",
+        ],
+      },
     ],
     links: [
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure" },
+      { href: "/insights/premiere-version-utile", label: "La première version utile" },
       { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
       { href: "/contact", label: "Poser le périmètre" },
     ],
@@ -170,9 +190,24 @@ export const articles: Article[] = [
           "Les défauts du périmètre convenu sont corrigés avec la livraison. Après, un correctif est un devis isolé ou un suivi. Posséder le dépôt permet de le confier à quelqu'un d'autre. Le dépôt remis est celui du projet, pas les comptes déjà ouverts chez un éditeur. Le [[/developpement-logiciel-sur-mesure-maroc|logiciel sur mesure]] reste la page du projet lui-même.",
         ],
       },
+      {
+        heading: "Ce que le contrat doit dire",
+        paragraphs: [
+          "Le transfert se décide dans le contrat, pas dans une conversation. [[/insights/contrat-avant-le-code|Le contrat avant le code]] est la page qui pose ça avant d'écrire. Les [[/conditions|conditions]] du site disent déjà que le code, le dépôt et les comptes livrés reviennent au client à la remise.",
+          "Une clause qui ne remet le dépôt qu'à la fin de tous les paiements, ou qui laisse l'hébergement au seul nom du studio, mérite d'être lue avant de signer. Byte Force remet ce qui a été livré. Le client peut ensuite confier le dépôt à quelqu'un d'autre.",
+        ],
+      },
+      {
+        heading: "Ce qu'il faut refuser",
+        paragraphs: [
+          "Un prestataire qui refuse de livrer le dépôt. Un hébergement dont le client n'a pas les accès. Un contrat qui parle de licence alors que la commande était une cession à la remise. Ces points se voient avant le premier acompte, pas après.",
+          "Cette page n'est pas un avis d'avocat. Elle dit ce que Byte Force écrit dans ses conditions, et ce qu'un client peut vérifier dans le contrat qu'on lui propose.",
+        ],
+      },
     ],
     links: [
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure" },
+      { href: "/insights/contrat-avant-le-code", label: "Le contrat avant le code" },
       { href: "/conditions", label: "Conditions" },
       { href: "/contact", label: "Parler de la remise" },
     ],
@@ -206,9 +241,23 @@ export const articles: Article[] = [
           "Avant le projet, pour savoir qui reprendra le dépôt. Après, pour un correctif ou une panne. [[/contact|Écrire à Casablanca]], ou WhatsApp au +212 666 650 696. La réponse part sous un jour ouvré.",
         ],
       },
+      {
+        heading: "Les premiers jours",
+        paragraphs: [
+          "Juste après la mise en ligne, on regarde si le geste convenu tient : la personne ouvre l'écran, le dossier passe, le message part. Un défaut de ce périmètre est corrigé avec la livraison. Une idée nouvelle n'est pas un défaut.",
+        ],
+      },
+      {
+        heading: "Le suivi, puis les évolutions",
+        paragraphs: [
+          "La [[/services/maintenance|maintenance]] couvre les mises à jour, la surveillance et les petites corrections d'un site ou d'un outil déjà publié. Une évolution majeure, un nouvel écran, un nouveau rôle, est un périmètre écrit, pas un inclus silencieux.",
+          "Le cadre de ce qui est promis avant d'écrire est sur [[/insights/contrat-avant-le-code|le contrat avant le code]]. Posséder le dépôt permet d'arrêter, ou de continuer avec Byte Force, ou de confier la suite à quelqu'un d'autre.",
+        ],
+      },
     ],
     links: [
       { href: "/services/maintenance", label: "Maintenance" },
+      { href: "/insights/contrat-avant-le-code", label: "Le contrat avant le code" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
       { href: "/contact", label: "Décrire la suite" },
     ],
@@ -941,7 +990,7 @@ export const articles: Article[] = [
     title: "Logiciel métier sur mesure",
     description:
       "Un logiciel métier sur mesure épouse un seul geste, avec son vocabulaire. Byte Force, Casablanca. Pas de prix public. Écrire.",
-    h1: "Logiciel métier sur mesure",
+    h1: "Le logiciel métier suit un seul geste",
     date: "2026-10-08",
     lede: "Un logiciel métier sur mesure sert un seul geste, avec le vocabulaire de ceux qui le font. Il n'est pas un ERP qui promet tous les services, ni un tableur renommé. Byte Force l'écrit depuis le Technopark, à Casablanca. Il n'y a pas de prix public. [[/contact|Écrire]] pour nommer ce geste, et seulement celui-là.",
     sections: [
@@ -1111,7 +1160,7 @@ export const articles: Article[] = [
         heading: "Quand le standard gagne",
         paragraphs: [
           "Le logiciel standard gagne pour une comptabilité ordinaire, une messagerie, un tableur court, ou un cycle de vente que l'éditeur a déjà prévu. Le payer chaque mois est alors plus court que de le réécrire. Byte Force le dit au premier échange. Ce n'est pas une défaite : c'est le bon outil.",
-          "Le standard perd quand l'équipe passe son temps à contourner : champs inutiles, exports recopiés, règles du métier écrites dans un commentaire. Le [[/solutions/remplacer-saas/logiciel-personnalise|logiciel personnalisé]] commence là, pas au premier abonnement qui déplaît.",
+          "Le standard perd quand l'équipe passe son temps à contourner : champs inutiles, exports recopiés, règles du métier écrites dans un commentaire. Le [[/solutions/remplacer-saas|logiciel personnalisé]] commence là, pas au premier abonnement qui déplaît.",
         ],
       },
       {
@@ -1138,7 +1187,7 @@ export const articles: Article[] = [
     ],
     links: [
       { href: "/contact", label: "Dire si le métier rentre" },
-      { href: "/solutions/remplacer-saas/logiciel-personnalise", label: "Le logiciel à la place du contournement" },
+      { href: "/solutions/remplacer-saas", label: "Le logiciel à la place du contournement" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Écrire le logiciel" },
     ],
     en: {
@@ -1455,7 +1504,7 @@ export const articles: Article[] = [
       {
         heading: "Quand écrire",
         paragraphs: [
-          "Écrire quand les relances vivent dans une boîte mail ou un fichier que deux personnes écrasent. Dire les étapes et qui les tient. [[/developpement-logiciel-casablanca/crm|À Casablanca]], le cadrage peut se faire au bureau.",
+          "Écrire quand les relances vivent dans une boîte mail ou un fichier que deux personnes écrasent. Dire les étapes et qui les tient. [[/developpement-logiciel-casablanca|À Casablanca]], le cadrage peut se faire au bureau.",
           "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire les étapes]] suffit. Téléphone : +212 666 650 696.",
         ],
       },
@@ -1463,7 +1512,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le cycle" },
       { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "Le CRM sur mesure" },
-      { href: "/developpement-logiciel-casablanca/crm", label: "CRM à Casablanca" },
+      { href: "/developpement-logiciel-casablanca", label: "CRM à Casablanca" },
     ],
     en: {
       title: "A custom CRM in Morocco",
@@ -1751,7 +1800,7 @@ export const articles: Article[] = [
     title: "Remplacer Excel par un CRM",
     description:
       "Remplacer Excel par un CRM se décide quand deux personnes écrasent le même dossier. Byte Force, Casablanca. Pas de prix public.",
-    h1: "Remplacer Excel par un CRM",
+    h1: "Passer d'un fichier Excel à un CRM",
     date: "2026-10-08",
     lede: "Remplacer Excel par un CRM se décide sur un fait : deux personnes modifient le même dossier, et plus personne ne sait quelle ligne est partie chez le client. Byte Force, au Technopark à Casablanca, ne vend pas la migration d'un classeur entier. Pas de prix public. [[/contact|Écrire]] pour dire quelles colonnes se contredisent.",
     sections: [
@@ -2244,7 +2293,7 @@ export const articles: Article[] = [
       {
         heading: "Ce qu'un SaaS doit déjà séparer",
         paragraphs: [
-          "Un logiciel interne a un propriétaire. Un SaaS en a plusieurs, qui ne doivent jamais voir les dossiers des autres. L'invitation d'un utilisateur, l'arrêt d'un compte et l'isolation des données font partie du produit. Les oublier « après le premier client » est la dette classique. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. Le [[/developpement-saas-maroc/saas-b2b|SaaS pour des entreprises]] précise le cas où l'acheteur a lui-même plusieurs utilisateurs.",
+          "Un logiciel interne a un propriétaire. Un SaaS en a plusieurs, qui ne doivent jamais voir les dossiers des autres. L'invitation d'un utilisateur, l'arrêt d'un compte et l'isolation des données font partie du produit. Les oublier « après le premier client » est la dette classique. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. Le [[/developpement-saas-maroc|SaaS pour des entreprises]] précise le cas où l'acheteur a lui-même plusieurs utilisateurs.",
           "Mettre un prix sur une page et appeler ça un SaaS ne crée pas le produit. Coco Inbox, en ligne depuis Montréal en 2024, montre qu'un produit peut sortir : email temporaire, fichiers chiffrés, notes. Ce n'est pas la preuve d'un SaaS de facturation ou d'un outil RH. On ne lui prête pas ces fonctions.",
         ],
       },
@@ -2273,7 +2322,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le premier client" },
       { href: "/developpement-saas-maroc", label: "Le développement SaaS" },
-      { href: "/developpement-saas-maroc/saas-b2b", label: "Un SaaS pour des entreprises" },
+      { href: "/developpement-saas-maroc", label: "Un SaaS pour des entreprises" },
     ],
     en: {
       title: "Creating a SaaS in Morocco",
@@ -2325,7 +2374,7 @@ export const articles: Article[] = [
       {
         heading: "Sur mesure, pour plusieurs clients",
         paragraphs: [
-          "Sur mesure ne veut pas dire un logiciel interne qu'on ouvre à d'autres plus tard. Dès la première version, un client ne voit pas le dossier d'un autre. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. L'isolation est la page [[/developpement-saas-maroc/multi-tenant|multi-tenant]]. Oublier cette séparation et l'ajouter après le premier contrat est le retard habituel.",
+          "Sur mesure ne veut pas dire un logiciel interne qu'on ouvre à d'autres plus tard. Dès la première version, un client ne voit pas le dossier d'un autre. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. L'isolation est la page [[/developpement-saas-maroc|multi-tenant]]. Oublier cette séparation et l'ajouter après le premier contrat est le retard habituel.",
           "Sur mesure ne veut pas dire non plus recopier un éditeur avec un autre nom. Si le geste rentre dans un produit déjà vendu, on le dit. Le développement commence quand ce geste a une règle que le marché ne porte pas.",
         ],
       },
@@ -2354,7 +2403,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Nommer le geste" },
       { href: "/developpement-saas-maroc", label: "L'offre SaaS" },
-      { href: "/developpement-saas-maroc/multi-tenant", label: "Isoler les clients" },
+      { href: "/developpement-saas-maroc", label: "Isoler les clients" },
     ],
     en: {
       title: "Custom SaaS development",
@@ -2435,7 +2484,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le geste" },
       { href: "/developpement-saas-maroc", label: "Le SaaS" },
-      { href: "/developpement-saas-maroc/multi-tenant", label: "Isoler les clients" },
+      { href: "/developpement-saas-maroc", label: "Isoler les clients" },
     ],
     en: {
       title: "What it costs to create a SaaS",
@@ -2487,7 +2536,7 @@ export const articles: Article[] = [
       {
         heading: "Trois décisions, dans cet ordre",
         paragraphs: [
-          "D'abord le geste. Pas le nom du produit, pas le logo, pas la liste des écrans d'un concurrent. Ensuite l'isolation : un client ne voit pas le dossier d'un autre, dès la première version. Ensuite ce qui peut attendre. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. La [[/developpement-saas-maroc/mvp|première version]] a sa page : elle doit déjà s'utiliser.",
+          "D'abord le geste. Pas le nom du produit, pas le logo, pas la liste des écrans d'un concurrent. Ensuite l'isolation : un client ne voit pas le dossier d'un autre, dès la première version. Ensuite ce qui peut attendre. L'offre est le [[/developpement-saas-maroc|développement SaaS]]. La [[/developpement-saas-maroc|première version]] a sa page : elle doit déjà s'utiliser.",
           "Créer ne commence pas par une levée, un business plan, ou un prix affiché sur une page vitrine. Ces sujets ne sont pas le logiciel. Byte Force ne publie pas de méthode de financement, et pas de montant.",
         ],
       },
@@ -2516,7 +2565,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Nommer le geste" },
       { href: "/developpement-saas-maroc", label: "Le développement SaaS" },
-      { href: "/developpement-saas-maroc/mvp", label: "La première version" },
+      { href: "/developpement-saas-maroc", label: "La première version" },
     ],
     en: {
       title: "How to create a SaaS",
@@ -2568,7 +2617,7 @@ export const articles: Article[] = [
       {
         heading: "Ce que les trois lettres ne dispensent pas",
         paragraphs: [
-          "MVP ne veut pas dire incomplet au point qu'un client voie les dossiers d'un autre. L'isolation, l'invitation et l'arrêt d'un compte font partie de cette version si plusieurs clients sont prévus. La page [[/developpement-saas-maroc/mvp|MVP SaaS]] est l'offre. [[/insights/premiere-version-utile|La première version utile]] dit le même choix pour un logiciel qui n'est pas encore un produit à plusieurs clients.",
+          "MVP ne veut pas dire incomplet au point qu'un client voie les dossiers d'un autre. L'isolation, l'invitation et l'arrêt d'un compte font partie de cette version si plusieurs clients sont prévus. La page [[/developpement-saas-maroc|MVP SaaS]] est l'offre. [[/insights/premiere-version-utile|La première version utile]] dit le même choix pour un logiciel qui n'est pas encore un produit à plusieurs clients.",
           "Une maquette cliquable ne dit pas si le geste tient. Seule une version qu'on peut ouvrir le dit. Une première session qui casse ne ferme pas l'entreprise : on réécrit le geste.",
         ],
       },
@@ -2596,7 +2645,7 @@ export const articles: Article[] = [
     ],
     links: [
       { href: "/contact", label: "Décrire le geste de la première version" },
-      { href: "/developpement-saas-maroc/mvp", label: "Le MVP SaaS" },
+      { href: "/developpement-saas-maroc", label: "Le MVP SaaS" },
       { href: "/developpement-saas-maroc", label: "Le développement SaaS" },
     ],
     en: {
@@ -2744,7 +2793,7 @@ export const articles: Article[] = [
       {
         heading: "Quand le standard gagne",
         paragraphs: [
-          "Le logiciel standard gagne quand le geste est déjà le sien : messagerie, comptabilité ordinaire, cycle prévu par l'éditeur. Le payer est plus court que de le réécrire. Le [[/solutions/remplacer-saas|SaaS subi]] est l'autre cas : l'abonnement dicte le métier. Le [[/developpement-saas-maroc/remplacer-saas|remplacement]] est une offre distincte de la création d'un produit pour plusieurs clients.",
+          "Le logiciel standard gagne quand le geste est déjà le sien : messagerie, comptabilité ordinaire, cycle prévu par l'éditeur. Le payer est plus court que de le réécrire. Le [[/solutions/remplacer-saas|SaaS subi]] est l'autre cas : l'abonnement dicte le métier. Le [[/solutions/remplacer-saas|remplacement]] est une offre distincte de la création d'un produit pour plusieurs clients.",
           "Créer un SaaS pour revendre ce que le marché fait déjà n'est pas un avantage. Le premier échange peut conclure de rester abonné. Rester abonné n'est pas un échec du projet : c'est le logiciel le plus court quand le geste est déjà couvert.",
         ],
       },
@@ -2772,7 +2821,7 @@ export const articles: Article[] = [
     ],
     links: [
       { href: "/contact", label: "Dire si le geste rentre" },
-      { href: "/developpement-saas-maroc/remplacer-saas", label: "Remplacer un SaaS subi" },
+      { href: "/solutions/remplacer-saas", label: "Remplacer un SaaS subi" },
       { href: "/solutions/remplacer-saas", label: "Le SaaS qui dicte le métier" },
     ],
     en: {
@@ -2825,7 +2874,7 @@ export const articles: Article[] = [
       {
         heading: "Ce qui fait une idée tenable",
         paragraphs: [
-          "Le geste tient en une phrase. Plusieurs entreprises le feraient de la même façon, avec une règle que le marché ne porte pas. Leurs dossiers ne doivent pas se voir. Sans cela, c'est un souhait, un logiciel interne, ou un produit déjà vendu. L'offre pour le construire est le [[/developpement-saas-maroc|SaaS]]. Le cas où l'acheteur a plusieurs utilisateurs est le [[/developpement-saas-maroc/saas-b2b|SaaS B2B]].",
+          "Le geste tient en une phrase. Plusieurs entreprises le feraient de la même façon, avec une règle que le marché ne porte pas. Leurs dossiers ne doivent pas se voir. Sans cela, c'est un souhait, un logiciel interne, ou un produit déjà vendu. L'offre pour le construire est le [[/developpement-saas-maroc|SaaS]]. Le cas où l'acheteur a plusieurs utilisateurs est le [[/developpement-saas-maroc|SaaS B2B]].",
           "Une idée qui commence par « comme untel, mais au Maroc » recopie un produit. On regarde si le geste local a une règle en plus. S'il n'en a pas, l'outil du marché suffit. Le bureau à Casablanca ne rend pas une copie plus utile.",
         ],
       },
@@ -2854,7 +2903,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le geste" },
       { href: "/developpement-saas-maroc", label: "Construire le SaaS" },
-      { href: "/developpement-saas-maroc/saas-b2b", label: "Un SaaS pour des entreprises" },
+      { href: "/developpement-saas-maroc", label: "Un SaaS pour des entreprises" },
     ],
     en: {
       title: "A SaaS idea for a company in Morocco",
@@ -2906,7 +2955,7 @@ export const articles: Article[] = [
       {
         heading: "Le téléphone, ou le navigateur",
         paragraphs: [
-          "Une application mobile a un sens quand le geste se fait loin d'un bureau : un rendez-vous, une visite, une notification que la personne doit voir tout de suite. L'offre est le [[/developpement-application-mobile-maroc|développement mobile]]. Android et iOS ne sont pas le même périmètre. [[/developpement-application-mobile-maroc/android|Android]] est un choix, pas un synonyme de mobile.",
+          "Une application mobile a un sens quand le geste se fait loin d'un bureau : un rendez-vous, une visite, une notification que la personne doit voir tout de suite. L'offre est le [[/developpement-application-mobile-maroc|développement mobile]]. Android et iOS ne sont pas le même périmètre. [[/developpement-application-mobile-maroc|Android]] est un choix, pas un synonyme de mobile.",
           "Si le geste se fait devant un écran de bureau, une application web est souvent plus courte. Construire les deux « pour être complet » double le travail sans rendre le geste plus sûr. Le premier échange sert à ne garder qu'un endroit.",
         ],
       },
@@ -2935,7 +2984,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le geste sur le téléphone" },
       { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
-      { href: "/developpement-application-mobile-maroc/android", label: "Android" },
+      { href: "/developpement-application-mobile-maroc", label: "Android" },
     ],
     en: {
       title: "Mobile app development in Morocco",
@@ -2994,7 +3043,7 @@ export const articles: Article[] = [
       {
         heading: "Les lignes qui comptent",
         paragraphs: [
-          "Les écrans que quelqu'un ouvre vraiment. Les rôles. Le store : [[/developpement-application-mobile-maroc/android|Android]], iOS, ou les deux. Deux stores, ce n'est pas le même périmètre qu'un seul. Un compte développeur ouvert pour le projet fait partie du périmètre, pas une surprise le jour de la publication.",
+          "Les écrans que quelqu'un ouvre vraiment. Les rôles. Le store : [[/developpement-application-mobile-maroc|Android]], iOS, ou les deux. Deux stores, ce n'est pas le même périmètre qu'un seul. Un compte développeur ouvert pour le projet fait partie du périmètre, pas une surprise le jour de la publication.",
           "Vouloir le site, le CRM et la paie dans la même application fait monter la note sans rendre le geste plus sûr. Si le geste se fait à un bureau, une application web est souvent plus courte. On le dit avant d'écrire.",
         ],
       },
@@ -3016,7 +3065,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le geste" },
       { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
-      { href: "/developpement-application-mobile-maroc/android", label: "Android" },
+      { href: "/developpement-application-mobile-maroc", label: "Android" },
     ],
     en: {
       title: "What a mobile app quote includes in Morocco",
@@ -3069,7 +3118,7 @@ export const articles: Article[] = [
         heading: "Il n'y a pas de tarif d'application",
         paragraphs: [
           "Un montant « à partir de » décrit un forfait. Byte Force ne l'affiche pas. Les pages ne sont pas un devis. Le [[/developpement-application-mobile-maroc|cadre mobile]] dit ce qui se construit. Cette page dit ce qui fait bouger la note. Comparer deux applications sans le geste, c'est comparer deux mots.",
-          "iOS et Android ne coûtent pas « la même chose » par principe. [[/developpement-application-mobile-maroc/ios|iOS]] est un périmètre. Android en est un autre. Les deux ensemble en sont un troisième. On ne publie pas trois chiffres pour les habiller.",
+          "iOS et Android ne coûtent pas « la même chose » par principe. [[/developpement-application-mobile-maroc|iOS]] est un périmètre. Android en est un autre. Les deux ensemble en sont un troisième. On ne publie pas trois chiffres pour les habiller.",
         ],
       },
       {
@@ -3097,7 +3146,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le geste" },
       { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
-      { href: "/developpement-application-mobile-maroc/ios", label: "iOS" },
+      { href: "/developpement-application-mobile-maroc", label: "iOS" },
     ],
     en: {
       title: "What a mobile app costs",
@@ -3149,7 +3198,7 @@ export const articles: Article[] = [
       {
         heading: "Le navigateur, pas la plaquette",
         paragraphs: [
-          "Une application web sert quand le travail se fait devant un écran : chercher un dossier, le valider, l'exporter. L'offre est l'[[/application-web-sur-mesure-maroc|application web sur mesure]]. Si le vocabulaire est celui d'un seul métier, c'est l'[[/application-web-sur-mesure-maroc/application-metier|application métier]]. Une page qui présente l'entreprise n'est pas cette offre.",
+          "Une application web sert quand le travail se fait devant un écran : chercher un dossier, le valider, l'exporter. L'offre est l'[[/application-web-sur-mesure-maroc|application web sur mesure]]. Si le vocabulaire est celui d'un seul métier, c'est l'[[/application-web-sur-mesure-maroc|application métier]]. Une page qui présente l'entreprise n'est pas cette offre.",
           "Si le geste se fait loin du bureau, sur un téléphone, le sujet est mobile. Construire les deux sans savoir où le geste se passe double le périmètre. Le premier échange choisit l'endroit.",
         ],
       },
@@ -3178,7 +3227,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Décrire le geste" },
       { href: "/application-web-sur-mesure-maroc", label: "L'application web" },
-      { href: "/application-web-sur-mesure-maroc/application-metier", label: "L'application métier" },
+      { href: "/application-web-sur-mesure-maroc", label: "L'application métier" },
     ],
     en: {
       title: "Web application development in Morocco",
@@ -3230,7 +3279,7 @@ export const articles: Article[] = [
       {
         heading: "Sur mesure, sur un téléphone",
         paragraphs: [
-          "Sur mesure veut dire les écrans que la personne ouvre, les rôles qui existent, et le store qui correspond au geste. L'offre métier est l'[[/developpement-application-mobile-maroc/application-metier|application mobile métier]]. Le [[/developpement-application-mobile-maroc|cadre]] reste le développement mobile. Un thème d'application avec un logo n'est pas ce travail.",
+          "Sur mesure veut dire les écrans que la personne ouvre, les rôles qui existent, et le store qui correspond au geste. L'offre métier est l'[[/developpement-application-mobile-maroc|application mobile métier]]. Le [[/developpement-application-mobile-maroc|cadre]] reste le développement mobile. Un thème d'application avec un logo n'est pas ce travail.",
           "Zainek suit un rendez-vous beauté. Tourispeak suit une visite audio. On ne les recolle pas sur un autre métier, et on ne publie pas leurs chiffres comme une preuve universelle.",
         ],
       },
@@ -3265,7 +3314,7 @@ export const articles: Article[] = [
     ],
     links: [
       { href: "/contact", label: "Nommer le geste" },
-      { href: "/developpement-application-mobile-maroc/application-metier", label: "L'application mobile métier" },
+      { href: "/developpement-application-mobile-maroc", label: "L'application mobile métier" },
       { href: "/developpement-application-mobile-maroc", label: "Le développement mobile" },
     ],
     en: {
