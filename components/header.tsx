@@ -3,8 +3,8 @@
 import { Icon } from "@/components/icon";
 import { getImageProps } from "next/image";
 import Link from "next/link";
-import { useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 const links = [
   { href: "/realisations", label: "Travaux", match: (path: string) => path.startsWith("/realisations") },
@@ -28,6 +28,62 @@ function logoProps() {
     priority: true,
     fetchPriority: "high",
   }).props;
+}
+
+function NavSearch() {
+  const dialog = useRef<HTMLDialogElement>(null);
+  const input = useRef<HTMLInputElement>(null);
+  const path = usePathname();
+
+  useEffect(() => {
+    dialog.current?.close();
+  }, [path]);
+
+  return (
+    <>
+      <button
+        type="button"
+        aria-label="Rechercher"
+        className="flex h-10 w-10 items-center justify-center rounded border border-outline-variant/40 text-on-surface"
+        onClick={() => {
+          dialog.current?.showModal();
+          input.current?.focus();
+        }}
+      >
+        <Icon name="search" className="text-[20px]" />
+      </button>
+      <dialog
+        ref={dialog}
+        className="m-auto w-[min(36rem,calc(100%-2rem))] border border-line bg-surface p-6 text-on-surface backdrop:bg-black/40"
+        onClick={(event) => {
+          if (event.target === dialog.current) dialog.current.close();
+        }}
+      >
+        <form action="/recherche" method="get" className="flex flex-col gap-4">
+          <div className="flex items-center justify-between gap-4">
+            <h2 className="font-headline text-lg font-bold">Recherche</h2>
+            <button type="button" className="text-sm text-on-surface-variant" onClick={() => dialog.current?.close()}>
+              Fermer
+            </button>
+          </div>
+          <label>
+            <span className="sr-only">Mot à chercher</span>
+            <input
+              ref={input}
+              name="q"
+              type="search"
+              required
+              placeholder="Service, ville, projet…"
+              className="h-12 w-full rounded border border-line bg-paper px-4 text-sm"
+            />
+          </label>
+          <button type="submit" className="h-12 rounded bg-primary px-5 text-sm font-medium text-on-primary">
+            Chercher
+          </button>
+        </form>
+      </dialog>
+    </>
+  );
 }
 
 export function Header() {
@@ -67,6 +123,7 @@ export function Header() {
           })}
         </nav>
         <div className="flex items-center gap-4">
+          <NavSearch />
           <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-all hover:bg-primary-container"
