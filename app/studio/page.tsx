@@ -5,6 +5,7 @@ import { SiteIndex } from "@/components/site-index";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 import { seoMeta } from "@/lib/seo-meta";
+import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 const studioMeta = seoMeta["/studio"];
@@ -59,7 +60,7 @@ export default function AboutPage() {
             </p>
             <p>
               Le bureau est au {site.street}, {site.locality}, {site.postal} {site.city}. On y répond du lundi au
-              vendredi, de 9h à 19h, au {site.phoneDisplay} ou par {site.email}. Il n&apos;y a pas de bureau en France
+              vendredi, de 9h à 19h, au {site.phoneDisplay} ou par <EmailText />. Il n&apos;y a pas de bureau en France
               ni au Canada. Les projets lillois, roubaisiens et montréalais du catalogue ont été faits depuis
               Casablanca.
             </p>
@@ -107,7 +108,7 @@ export default function AboutPage() {
           <br />
           {site.phoneDisplay}
           <br />
-          {site.email}
+          <EmailText />
           <br />
           {site.hoursLabel}
         </p>

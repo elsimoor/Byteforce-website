@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,14 +15,14 @@ export default function PrivacyPage() {
       <div className="mt-8 space-y-4 leading-relaxed text-on-surface-variant">
         <p>
           Byte Force, {site.street}, {site.locality}, {site.postal} {site.city}, {site.countryLabel}. Contact :{" "}
-          {site.email}, {site.phoneDisplay}.
+          <EmailText />, {site.phoneDisplay}.
         </p>
         <p>
           Le formulaire enregistre le nom, l&apos;email, le téléphone, la société, l&apos;offre et le message pour
           pouvoir répondre. Ces messages ne sont pas publiés.
         </p>
         <p>Réponse sous un jour ouvré. {site.hoursLabel}.</p>
-        <p>Pour demander ce qui est conservé sur un message envoyé, écrire à {site.email}.</p>
+        <p>Pour demander ce qui est conservé sur un message envoyé, écrire à <EmailText />.</p>
       </div>
     </main>
   );

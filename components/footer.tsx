@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MailLink } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -13,57 +14,72 @@ export function Footer() {
             <p className="max-w-sm text-sm text-on-surface-variant">
               Studio logiciel à Casablanca. Sites, applications et logiciels sur mesure.
             </p>
-            <p className="pt-2 font-mono text-xs tracking-wide text-outline">
+            <address className="pt-2 font-mono text-xs tracking-wide text-outline not-italic">
               Technopark, Bd Dammam, Aïn Chock
               <br />
-              20001 Casablanca
-            </p>
+              20001 Casablanca, Maroc
+            </address>
           </div>
           <div>
             <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Pages du studio</h2>
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
-                <Link href="/realisations" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/realisations" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Travaux
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/services" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/services" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Services
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/geo-location" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/solutions" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
+                  Solutions
+                </Link>
+              </li>
+              <li className="leading-none">
+                <Link href="/geo-location" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Lieux
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/studio" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/checklists/comprendre-le-travail" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
+                  Comprendre le travail
+                </Link>
+              </li>
+              <li className="leading-none">
+                <Link href="/plan-du-site" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
+                  Plan du site
+                </Link>
+              </li>
+              <li className="leading-none">
+                <Link href="/studio" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Qui sommes-nous
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/insights" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/insights" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Décisions
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/developpement-logiciel-maroc" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/developpement-logiciel-maroc" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Maroc
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/developpement-logiciel-france" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/developpement-logiciel-france" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   France
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/audit" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/audit" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Audit gratuit
                 </Link>
               </li>
               <li className="leading-none">
-                <Link href="/ai" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/ai" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Pour les agents
                 </Link>
               </li>
@@ -73,39 +89,34 @@ export function Footer() {
             <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Écrire au studio</h2>
             <ul className="space-y-2.5 text-sm">
               <li className="leading-none">
-                <Link href="/contact" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <Link href="/contact" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Parler d&apos;un projet
                 </Link>
               </li>
               <li className="leading-none">
-                <a
-                  href={`mailto:${site.email}`}
-                  className="text-on-surface-variant transition-colors hover:text-on-surface"
-                >
-                  {site.email}
-                </a>
+                <MailLink className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface" />
               </li>
               <li className="leading-none">
                 <a
                   href="https://wa.me/212666650696"
-                  className="text-on-surface-variant transition-colors hover:text-on-surface"
+                  className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface"
                 >
                   WhatsApp
                 </a>
               </li>
               <li className="leading-none">
-                <a href={site.instagram} className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <a href={site.instagram} rel="me" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Instagram
                 </a>
               </li>
               <li className="leading-none">
-                <a href={site.linkedin} className="text-on-surface-variant transition-colors hover:text-on-surface">
+                <a href={site.linkedin} rel="me" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   LinkedIn
                 </a>
               </li>
               {process.env.NODE_ENV === "development" ? (
                 <li className="leading-none">
-                  <Link href="/dashboard/login" className="text-on-surface-variant transition-colors hover:text-on-surface">
+                  <Link href="/dashboard/login" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                     Client Portal
                   </Link>
                 </li>
@@ -115,7 +126,7 @@ export function Footer() {
         </div>
         <div className="mt-12 grid gap-10 border-t border-outline-variant/20 pt-10 md:grid-cols-2">
           <div>
-            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Maroc</h2>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Villes au Maroc</h2>
             <ul className="space-y-2.5 text-sm">
               {[
                 ["/villes/casablanca", "Casablanca"],
@@ -126,20 +137,20 @@ export function Footer() {
                 ["/villes/safi", "Safi"],
               ].map(([href, label]) => (
                 <li key={href}>
-                  <Link href={href} className="text-on-surface-variant hover:text-on-surface">
+                  <Link href={href} className="inline-flex min-h-11 items-center text-on-surface-variant hover:text-on-surface">
                     {label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/developpement-logiciel-maroc" className="text-on-surface hover:text-primary">
+                <Link href="/developpement-logiciel-maroc" className="inline-flex min-h-11 items-center text-on-surface hover:text-primary">
                   Voir tout le Maroc
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">France</h2>
+            <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Villes en France</h2>
             <ul className="space-y-2.5 text-sm">
               {[
                 ["/villes/lille", "Lille"],
@@ -149,13 +160,13 @@ export function Footer() {
                 ["/villes/montreal", "Montréal"],
               ].map(([href, label]) => (
                 <li key={href}>
-                  <Link href={href} className="text-on-surface-variant hover:text-on-surface">
+                  <Link href={href} className="inline-flex min-h-11 items-center text-on-surface-variant hover:text-on-surface">
                     {label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/developpement-logiciel-france" className="text-on-surface hover:text-primary">
+                <Link href="/developpement-logiciel-france" className="inline-flex min-h-11 items-center text-on-surface hover:text-primary">
                   Voir la France
                 </Link>
               </li>
@@ -177,15 +188,10 @@ export function Footer() {
         <p className="financial-disclaimer mt-4 max-w-3xl text-xs text-on-surface-variant">
           This page is not financial advice. Aucun prix n&apos;est publié sur ce site.
         </p>
-        <div className="mt-6 flex flex-wrap gap-4 text-sm">
-          <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(site.url)}`}>
-            Partager sur Facebook
-          </a>
-          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(site.url)}`}>
-            Partager sur LinkedIn
-          </a>
-          <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(site.url)}`}>Partager sur X</a>
-          <Link href="/how-we-write">Comment les pages sont écrites</Link>
+        <div className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          <Link href="/how-we-write" className="inline-flex min-h-11 items-center">
+            Comment les pages sont écrites
+          </Link>
           <a href="https://schema.org/">schema.org</a>
           <a href="https://wordpress.org/">wordpress.org</a>
           <a href="https://www.w3.org/TR/html/">W3C HTML</a>

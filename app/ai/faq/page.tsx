@@ -41,7 +41,7 @@ const answers = [
   },
   {
     q: "Comment écrire ?",
-    a: `${site.email}, ${site.phoneDisplay}, WhatsApp, ou /contact. Réponse sous un jour ouvré.`,
+    a: `${site.phoneDisplay}, WhatsApp, ou /contact. Réponse sous un jour ouvré.`,
     href: "/contact",
   },
   {

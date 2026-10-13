@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { LeadForm } from "@/components/lead-form";
 import type { GeoPage } from "@/lib/geo/pages";
-import { site } from "@/lib/site";
+import { EmailText } from "@/components/mail-link";
+import { ldJson, site } from "@/lib/site";
 
 function Rich({ text }: { text: string }) {
   const bits = text.split(/(\[\[[^\]]+\]\])/g);
@@ -61,7 +62,7 @@ export function GeoView({ page }: { page: GeoPage }) {
 
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
       <header className="px-6 pb-16 pt-16 md:px-12 md:pt-24">
         <nav aria-label="Fil d'Ariane" className="flex flex-wrap gap-x-2 text-sm text-mute">
           {page.crumbs.map((crumb, index) => {
@@ -168,7 +169,7 @@ export function GeoView({ page }: { page: GeoPage }) {
         <div className="md:col-span-5">
           <h2 className="display text-5xl">{page.cta}</h2>
           <p className="mt-6 max-w-sm leading-relaxed">
-            Réponse sous un jour ouvré, à {site.email} ou au {site.phoneDisplay}. Bureau au Technopark, Casablanca.
+            Réponse sous un jour ouvré, à <EmailText /> ou au {site.phoneDisplay}. Bureau au Technopark, Casablanca.
           </p>
           <nav aria-label="Pages liées" className="mt-8 flex flex-col gap-2 text-sm">
             {page.links.map((item) => (

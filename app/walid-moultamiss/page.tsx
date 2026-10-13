@@ -3,7 +3,8 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
 import { seoMeta } from "@/lib/seo-meta";
-import { site } from "@/lib/site";
+import { EmailText } from "@/components/mail-link";
+import { ldJson, site } from "@/lib/site";
 
 const { title: personTitle, description } = seoMeta["/walid-moultamiss"];
 
@@ -81,7 +82,7 @@ export default function WalidPage() {
             { name: "Walid Moultamiss", path: "/walid-moultamiss" },
           ]}
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(person) }} />
         <header className="grid gap-10 px-6 pb-12 pt-16 md:grid-cols-12 md:px-12 md:pt-28">
           <img
             src="/walid-moultamiss-byte-force-maroc.png"
@@ -97,7 +98,7 @@ export default function WalidPage() {
             bureau est au Technopark.
           </p>
           <p className="mt-6 text-sm leading-relaxed text-mute">
-            {site.email}
+            <EmailText />
             <br />
             {site.phoneDisplay}
             <br />

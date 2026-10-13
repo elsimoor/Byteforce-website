@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AiDoc } from "@/components/ai-doc";
 import { openGraph } from "@/lib/open-graph";
+import { MailLink } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 const title = "Contacter Byte Force, pour les agents";
@@ -21,7 +22,7 @@ export default function AiContactPage() {
         <div>
           <dt className="font-mono text-xs text-mute">Email</dt>
           <dd className="mt-1">
-            <a href={`mailto:${site.email}`}>{site.email}</a>
+            <MailLink />
           </dd>
         </div>
         <div>

@@ -27,6 +27,9 @@ const steps = {
         p: [
           "Pas de cahier des charges de cinquante pages. Pas de prix sur cette page. Le bureau est au Technopark, à Casablanca, du lundi au vendredi, de 9h à 19h. La réponse part sous un jour ouvré.",
           "Quand la phrase est claire, la suite est le dessin du produit, puis la construction, puis le lancement. La liste de mise en ligne est la page Lancer le produit.",
+          "Notez aussi qui décide, qui relance, et quel fichier fait foi quand deux versions existent. Si le geste se fait au téléphone, dites-le. Si une étape n'a pas de responsable, elle n'entre pas dans le logiciel.",
+          "Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. On répond du lundi au vendredi, de 9h à 19h. Le premier message peut être court. Un lien, une photo du fichier, ou le nom de la personne qui bloque suffisent.",
+          "Cette liste sert avant un logiciel métier, un CRM, un site ou une application. Elle ne choisit pas la technologie. Elle fixe le geste. Les pages Services et Solutions partent de là. Le contact reste à Casablanca.",
         ],
       },
     ],

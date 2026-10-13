@@ -3,6 +3,7 @@
 import { useState, type MouseEvent } from "react";
 import posthog from "posthog-js";
 import { recordLead } from "@/lib/actions";
+import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 import { TurnstileCheck } from "@/components/turnstile-check";
 
@@ -99,7 +100,7 @@ export function ChecklistRequest() {
       ) : null}
       {state === "error" ? (
         <p className="text-sm" role="alert">
-          La liste s&apos;ouvre. L&apos;email n&apos;a pas été enregistré : écrire à {site.email}.
+          La liste s&apos;ouvre. L&apos;email n&apos;a pas été enregistré : écrire à <EmailText />.
         </p>
       ) : null}
     </form>

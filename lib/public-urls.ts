@@ -30,6 +30,7 @@ const staticPaths = [
   "/mentions-legales",
   "/confidentialite",
   "/conditions",
+  "/plan-du-site",
 ];
 
 export function publicEntries() {
@@ -58,5 +59,11 @@ export function publicEntries() {
   set("/checklists/construire-le-produit", "2026-10-09");
   set("/checklists/ameliorer-le-produit", "2026-10-09");
   set("/recherche", "2026-10-09");
+  set("/", "2026-10-13");
+  set("/services", "2026-10-13");
+  set("/solutions", "2026-10-13");
+  set("/realisations", "2026-10-13");
+  set("/plan-du-site", "2026-10-13");
+  set("/checklists/comprendre-le-travail", "2026-10-13");
   return [...dates.entries()].map(([path, lastModified]) => ({ path, lastModified }));
 }

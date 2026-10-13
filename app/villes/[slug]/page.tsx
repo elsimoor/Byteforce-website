@@ -5,7 +5,8 @@ import { LeadForm } from "@/components/lead-form";
 import { cityPages, getCityPage } from "@/lib/city-pages";
 import { projects } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
-import { site } from "@/lib/site";
+import { EmailText } from "@/components/mail-link";
+import { ldJson, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -97,7 +98,7 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
       <header className="px-6 pb-16 pt-16 md:px-12 md:pt-24">
         <nav aria-label="Fil d'Ariane" className="flex flex-wrap gap-x-2 text-sm text-mute">
           {crumbs.map((crumb, index) => {
@@ -179,7 +180,7 @@ export default async function CityPage({ params }: Props) {
         <div className="md:col-span-5">
           <h2 className="display text-5xl">Écrire.</h2>
           <p className="mt-6 max-w-sm leading-relaxed">
-            Décrivez le projet pour {city.city}. Réponse sous un jour ouvré, à {site.email} ou sur{" "}
+            Décrivez le projet pour {city.city}. Réponse sous un jour ouvré, à <EmailText /> ou sur{" "}
             <a href="https://wa.me/212666650696">WhatsApp</a>.
           </p>
         </div>

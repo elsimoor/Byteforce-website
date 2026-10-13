@@ -1,6 +1,6 @@
 import { services } from "@/lib/content";
 import type { Project } from "@/lib/content";
-import { site } from "@/lib/site";
+import { ldJson, site } from "@/lib/site";
 
 export function OrganizationJsonLd() {
   const businessId = `${site.url}/#business`;
@@ -32,14 +32,22 @@ export function OrganizationJsonLd() {
         logo: `${site.url}/logo.png`,
         address: {
           "@type": "PostalAddress",
+          "@id": `${site.url}/#address`,
           streetAddress: `${site.street}, ${site.locality}`,
           addressLocality: site.city,
           postalCode: site.postal,
           addressCountry: site.country,
         },
-        sameAs: [site.instagram, site.linkedin, "https://share.google/L12w0TmJ9kkUcVBg7", site.catalogue],
+        geo: {
+          "@type": "GeoCoordinates",
+          "@id": `${site.url}/#geo`,
+          latitude: site.geo.latitude,
+          longitude: site.geo.longitude,
+        },
+        sameAs: [site.instagram, site.linkedin, site.catalogue],
         contactPoint: {
           "@type": "ContactPoint",
+          "@id": `${site.url}/#contact`,
           telephone: site.phone,
           email: site.email,
           contactType: "sales",
@@ -94,7 +102,7 @@ export function OrganizationJsonLd() {
   };
 
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
   );
 }
 
@@ -114,7 +122,7 @@ export function ProjectJsonLd({ project }: { project: Project }) {
     },
     sameAs: project.url,
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />;
 }
 
 export function BreadcrumbJsonLd({ items }: { items: { name: string; path: string }[] }) {
@@ -128,5 +136,5 @@ export function BreadcrumbJsonLd({ items }: { items: { name: string; path: strin
       item: item.path.startsWith("http") ? item.path : `${site.url}${item.path === "/" ? "/" : item.path}`,
     })),
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />;
 }

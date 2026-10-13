@@ -1,4 +1,5 @@
 import { AuditForm } from "@/components/audit-form";
+import { EmailText, MailLink } from "@/components/mail-link";
 import { StepDrawing } from "@/components/step-drawing";
 import { Icon } from "@/components/icon";
 import { ResponsiveImg } from "@/components/responsive-img";
@@ -51,11 +52,7 @@ export function StudioHome() {
               <a href="https://wa.me/212666650696" className="font-semibold text-primary">
                 WhatsApp
               </a>{" "}
-              ou{" "}
-              <a href={`mailto:${site.email}`} className="font-semibold text-primary">
-                {site.email}
-              </a>
-              .
+              ou <MailLink className="font-semibold text-primary" />.
             </p>
           </div>
           <div className="lg:col-span-6 w-full min-w-0">
@@ -485,7 +482,7 @@ export function StudioHome() {
               Chaque projet part d&apos;un problème, pas d&apos;une technologie.
             </p>
             <p className="text-on-surface-variant text-sm mt-4 max-w-2xl">
-              Au quotidien : l&apos;email {site.email} et WhatsApp, avec un point hebdomadaire sur un tableau partagé. Réponse sous un jour ouvré. Les bugs du périmètre convenu sont corrigés avec la livraison. Ensuite, un correctif chiffré ou un forfait mensuel les couvre. À la fin, le code, le dépôt et les comptes d&apos;hébergement vous reviennent.
+              Au quotidien : l&apos;email <EmailText /> et WhatsApp, avec un point hebdomadaire sur un tableau partagé. Réponse sous un jour ouvré. Les bugs du périmètre convenu sont corrigés avec la livraison. Ensuite, un correctif chiffré ou un forfait mensuel les couvre. À la fin, le code, le dépôt et les comptes d&apos;hébergement vous reviennent.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
@@ -718,9 +715,8 @@ export function StudioHome() {
         </div>
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
           {technologies.map((tool) => (
-            <a
+            <div
               key={tool.slug}
-              href="/insights"
               className="group flex flex-col items-center justify-center gap-3 border-t border-outline-variant px-3 py-5"
             >
               <img
@@ -734,9 +730,14 @@ export function StudioHome() {
               <span className="text-center text-xs font-semibold text-on-surface">
                 {tool.name}
               </span>
-            </a>
+            </div>
           ))}
         </div>
+        <p className="mt-8 text-sm">
+          <a href="/insights" className="inline-flex min-h-11 items-center font-semibold text-primary">
+            Les outils, expliqués
+          </a>
+        </p>
       </section>
       {/* ENGINEERING */}
       <section id="engineering" className="w-full bg-surface-container py-20 lg:py-28">
@@ -1014,14 +1015,14 @@ export function StudioHome() {
             </div>
             <div className="flex flex-col justify-between border-t border-outline-variant pt-6">
               <div>
-                <h3 className="text-xl font-headline font-bold text-on-surface">Suivi plus</h3>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Forfait Suivi plus</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Le suivi, plus 5 heures par mois de correctifs et de modifications.</p>
               </div>
               <p className="mt-8 text-xs font-mono text-primary font-bold">Réponse sous 1 jour ouvré</p>
             </div>
             <div className="flex flex-col justify-between border-t border-outline-variant pt-6">
               <div>
-                <h3 className="text-xl font-headline font-bold text-on-surface">Priorité</h3>
+                <h3 className="text-xl font-headline font-bold text-on-surface">Priorité sur le suivi</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Le suivi plus, plus le travail de performance et un rapport mensuel.</p>
               </div>
               <p className="mt-8 text-xs font-mono text-primary font-bold">4 heures pour une panne critique</p>
@@ -1065,9 +1066,9 @@ export function StudioHome() {
           </div>
         </div>
         <p className="mt-6 text-sm text-on-surface-variant">
-          Google listing:{" "}
-          <a href="https://share.google/L12w0TmJ9kkUcVBg7" className="font-semibold text-primary">
-            Byte Force Maroc
+          Fiche du studio :{" "}
+          <a href={site.linkedin} rel="me" className="font-semibold text-primary">
+            Byte Force sur LinkedIn
           </a>
           .
         </p>
@@ -1176,13 +1177,10 @@ export function StudioHome() {
             >
               <span>WhatsApp</span>
             </a>
-            <a
-              className="inline-flex items-center gap-2 border border-outline-variant bg-surface px-6 py-4 text-base font-medium text-on-surface hover:bg-surface-container-highest"
-              href={`mailto:${site.email}`}
-            >
-              <Icon name="mail" className="text-base text-primary" />
-              <span>Écrire à Byte Force</span>
-            </a>
+            <MailLink
+              className="inline-flex min-h-11 items-center gap-2 border border-outline-variant bg-surface px-6 py-4 text-base font-medium text-on-surface hover:bg-surface-container-highest"
+              label="Écrire à Byte Force"
+            />
           </div>
           <p className="mt-12 font-mono text-xs text-outline">
             Web · Mobile · SaaS · IA · Logiciel métier

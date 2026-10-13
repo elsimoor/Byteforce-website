@@ -825,7 +825,7 @@ export const projects: Project[] = [
     problem: "Le courrier arrivait sans que le dossier, le pipeline et les relances soient déjà sur la même page.",
     solution: "Une page publique pour ce CRM. La capture montre la boîte, les fiches, et les colonnes Nouveau, Qualifié, Devis et Gagné.",
     result: "crm.cocoinbox.com est en ligne. L'année affichée est 2026. La ville est Montréal, comme Coco Inbox. Les montants dessinés sur la capture ne sont pas un chiffre du studio.",
-    shot: "/work/crm.cocoinbox.png",
+    shot: "/work/crm.cocoinbox.webp",
     pages: [],
   },
   {
@@ -843,7 +843,7 @@ export const projects: Project[] = [
     solution:
       "booking.prochedemoi.fr ouvre la connexion de l'établissement. La fiche de Walid Moultamiss nomme Next.js, TypeScript et Strapi pour ce travail, avec prochedemoi.fr.",
     result: "La page est en ligne à Lille depuis 2026. Ce n'est pas un nombre de réservations.",
-    shot: "/work/booking.prochedemoi.png",
+    shot: "/work/booking.prochedemoi.webp",
     pages: [],
   },
   {
@@ -857,7 +857,7 @@ export const projects: Project[] = [
       "Site public d'Infinitebridge, société informatique au Maroc. La page d'accueil est en ligne sur infinitebridge.ma depuis 2023.",
     url: "https://www.infinitebridge.ma/",
     serviceSlug: "creation-site-web",
-    shot: "/work/infinitebridge.png",
+    shot: "/work/infinitebridge.webp",
     pages: [],
   },
   {
@@ -871,7 +871,7 @@ export const projects: Project[] = [
       "Réservation du Palais Mehdi : dates, adultes, enfants, puis les disponibilités. En ligne à Marrakech depuis 2026 également.",
     url: "https://booking.palais-mehdi.com/",
     serviceSlug: "creation-site-web",
-    shot: "/work/palaismehdi.png",
+    shot: "/work/palaismehdi.webp",
     pages: [],
   },
   {
@@ -889,7 +889,7 @@ export const projects: Project[] = [
     solution:
       "Le site public yoursmile.ma. Le CV décrit le CRM : administration, dentistes, back-office, API GraphQL, Node.js, MongoDB, droits d'accès, interfaces Next.js.",
     result: "Le site est en ligne depuis 2025. La page publique cite Casablanca. Les délais écrits sur cette page ne sont pas une mesure de Byte Force.",
-    shot: "/work/yoursmile.png",
+    shot: "/work/yoursmile.webp",
     pages: [],
   },
 ];

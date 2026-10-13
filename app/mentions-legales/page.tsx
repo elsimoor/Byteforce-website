@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { openGraph } from "@/lib/open-graph";
+import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 const title = "Mentions légales";
@@ -23,7 +24,7 @@ export default function LegalPage() {
           {site.postal} {site.city}, {site.countryLabel}.
         </p>
         <p>
-          Contact: {site.email}, {site.phoneDisplay}. Horaires: {site.hoursLabel}.
+          Contact: <EmailText />, {site.phoneDisplay}. Horaires: {site.hoursLabel}.
         </p>
         <p>
           Les textes décrivent les offres et les réalisations publiées. Ils ne

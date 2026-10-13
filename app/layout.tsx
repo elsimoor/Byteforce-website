@@ -37,6 +37,12 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  other: {
+    "geo.region": "MA-06",
+    "geo.placename": "Casablanca",
+    "geo.position": `${site.geo.latitude};${site.geo.longitude}`,
+    ICBM: `${site.geo.latitude}, ${site.geo.longitude}`,
+  },
   authors: [
     { name: site.name, url: `${site.url}/studio` },
     { name: "Walid Moultamiss", url: `${site.url}/walid-moultamiss` },
@@ -47,6 +53,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${publicSans.variable} ${jetbrains.variable}`}>
       <body className="font-sans antialiased">
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if(window.trustedTypes&&!trustedTypes.defaultPolicy){trustedTypes.createPolicy('default',{createHTML:function(s){return s},createScript:function(s){return s},createScriptURL:function(s){return s}})}",
+          }}
+        />
         <a
           href="#content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-surface focus:px-4 focus:py-2"

@@ -65,7 +65,7 @@ export function ficheHtml(options: { title: string; description: string; path: s
         <li><a href="${origin}/contact">Écrire à Casablanca</a></li>
       </ul>
       <h2>Texte de la fiche</h2>
-      <pre>${esc(options.markdown)}</pre>
+      <!--email_off--><pre>${esc(options.markdown).replaceAll(site.email, site.email.replace("@", "&#64;"))}</pre><!--/email_off-->
     </article>
   </main>
   <footer>

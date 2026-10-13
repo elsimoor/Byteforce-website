@@ -3,7 +3,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
   "/": {
     title: "Développement logiciel sur mesure à Casablanca · Byte Force",
     description:
-      "Studio logiciel à Casablanca. Logiciels métier, CRM, ERP, SaaS et applications mobiles sur mesure pour entreprises au Maroc et en France.",
+      "Studio logiciel à Casablanca. Logiciels métier, CRM et applications sur mesure pour les entreprises au Maroc et en France.",
   },
   "/developpement-logiciel-sur-mesure-maroc": {
     title: "Développement logiciel sur mesure au Maroc · Byte Force",
@@ -134,7 +134,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
   "/realisations": {
     title: "Réalisations · Projets logiciel à Casablanca",
     description:
-      "Portfolio Byte Force : logiciels métier, CRM, SaaS, sites web et applications mobiles livrés à Casablanca et en France.",
+      "Réalisations Byte Force à Casablanca : logiciels, CRM, sites et applications déjà livrés au Maroc, en France et à Montréal.",
   },
   "/realisations/coco-inbox": {
     title: "Coco Inbox · Email temporaire · Montréal",

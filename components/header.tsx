@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/icon";
-import { getImageProps } from "next/image";
+import { runSearch } from "@/lib/actions";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef } from "react";
@@ -14,18 +14,6 @@ const links = [
   { href: "/studio", label: "Studio", match: (path: string) => path.startsWith("/studio") },
   { href: "/contact", label: "Contact", match: (path: string) => path.startsWith("/contact") },
 ];
-
-function logoProps() {
-  return getImageProps({
-    alt: "Byte Force",
-    src: "/logo.png",
-    width: 44,
-    height: 44,
-    sizes: "44px",
-    priority: true,
-    fetchPriority: "high",
-  }).props;
-}
 
 function NavSearch() {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -41,7 +29,7 @@ function NavSearch() {
       <button
         type="button"
         aria-label="Rechercher"
-        className="flex h-10 w-10 items-center justify-center rounded border border-outline-variant/40 text-on-surface"
+        className="flex h-11 w-11 items-center justify-center rounded border border-outline-variant/40 text-on-surface"
         onClick={() => {
           dialog.current?.showModal();
           input.current?.focus();
@@ -56,15 +44,15 @@ function NavSearch() {
           if (event.target === dialog.current) dialog.current.close();
         }}
       >
-        <form action="/recherche" method="get" className="flex flex-col gap-4">
+        <form action={runSearch} method="post" className="flex flex-col gap-4">
           <div className="flex items-center justify-between gap-4">
-            <h2 className="font-headline text-lg font-bold">Recherche</h2>
-            <button type="button" className="text-sm text-on-surface-variant" onClick={() => dialog.current?.close()}>
+            <h2 className="font-headline text-lg font-bold">Recherche sur le site</h2>
+            <button type="button" className="inline-flex min-h-11 items-center px-3 text-sm text-on-surface-variant" onClick={() => dialog.current?.close()}>
               Fermer
             </button>
           </div>
-          <label>
-            <span className="sr-only">Mot à chercher</span>
+          <label className="grid gap-1 text-sm">
+            Mot à chercher
             <input
               ref={input}
               name="q"
@@ -85,7 +73,6 @@ function NavSearch() {
 
 export function Header() {
   const path = usePathname() ?? "";
-  const logo = logoProps();
 
   useLayoutEffect(() => {
     if (path === "/") document.documentElement.dataset.brand = "logo";
@@ -94,13 +81,12 @@ export function Header() {
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
-      <link rel="preload" as="image" href={logo.src} fetchPriority="high" />
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
-        <Link href="/" className="flex items-center gap-3">
-          <img {...logo} className="h-11 w-11 object-cover" alt="Byte Force" />
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 lg:px-12">
+        <Link href="/" className="flex min-h-11 items-center gap-3">
+          <img src="/logo.webp" alt="Byte Force" width={44} height={44} fetchPriority="high" className="h-11 w-11 object-cover" />
           <span className="font-headline text-lg font-bold tracking-tight text-on-surface">ByteForce</span>
         </Link>
-        <nav className="hidden items-center gap-5 md:flex xl:gap-8" aria-label="Principal">
+        <nav className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto md:gap-5 xl:gap-8" aria-label="Principal">
           {links.map((link) => {
             const active = link.match(path);
             return (
@@ -110,8 +96,8 @@ export function Header() {
                 aria-current={active ? "page" : undefined}
                 className={
                   active
-                    ? "text-sm font-semibold text-primary transition-colors"
-                    : "text-sm text-on-surface-variant transition-colors hover:text-on-surface"
+                    ? "inline-flex min-h-11 items-center px-2 text-sm font-semibold whitespace-nowrap text-primary transition-colors"
+                    : "inline-flex min-h-11 items-center px-2 text-sm whitespace-nowrap text-on-surface-variant transition-colors hover:text-on-surface"
                 }
               >
                 {link.label}
@@ -123,7 +109,7 @@ export function Header() {
           <NavSearch />
           <Link
             href="/contact"
-            className="hidden items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-all hover:bg-primary-container xl:inline-flex"
+            className="hidden min-h-11 items-center justify-center rounded bg-primary px-4 text-sm font-medium whitespace-nowrap text-on-primary transition-all hover:bg-primary-container xl:inline-flex"
           >
             Parler d&apos;un projet →
           </Link>

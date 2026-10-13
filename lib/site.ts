@@ -16,4 +16,9 @@ export const site = {
   catalogue: "https://catalogue-iota.vercel.app/",
   instagram: "https://www.instagram.com/byteforce.ma/",
   linkedin: "https://www.linkedin.com/company/byte-force-maroc",
+  geo: { latitude: 33.5434, longitude: -7.6412 },
 };
+
+export function ldJson(data: unknown) {
+  return JSON.stringify(data).replaceAll(site.email, site.email.replace("@", "\\u0040"));
+}

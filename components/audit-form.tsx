@@ -21,8 +21,8 @@ export function AuditForm({
   if (variant === "studio") {
     return (
       <form action={startAudit} method="post" onSubmit={captureAuditStart} className="flex w-full max-w-xl flex-col gap-3 pt-2 sm:flex-row">
-        <label className="min-w-0 flex-1">
-          <span className="sr-only">Adresse du site à auditer</span>
+        <label className="grid min-w-0 flex-1 gap-1 text-sm">
+          Adresse du site à auditer
           <input
             name="url"
             type="text"
@@ -65,7 +65,7 @@ export function AuditForm({
           className="field"
         />
       </label>
-      <button type="submit" className="mt-6 border-b border-ink pb-1 text-left text-sm">
+      <button type="submit" className="btn mt-6">
         Auditer gratuitement
       </button>
     </form>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import { EmailText } from "@/components/mail-link";
 
 export const metadata: Metadata = {
   title: "Conditions",
@@ -22,7 +22,7 @@ export default function TermsPage() {
           devis isolé, soit un suivi mensuel.
         </p>
         <p>À la remise, le client possède le code, le dépôt et les comptes d&apos;hébergement livrés.</p>
-        <p>Un accord de confidentialité est possible avant le brief. Questions : {site.email}.</p>
+        <p>Un accord de confidentialité est possible avant le brief. Questions : <EmailText />.</p>
       </div>
     </main>
   );

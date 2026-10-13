@@ -12,7 +12,10 @@ const servicesMeta = seoMeta["/services"];
 export const metadata: Metadata = {
   title: { absolute: servicesMeta.title },
   description: servicesMeta.description,
-  alternates: { canonical: "/services" },
+  alternates: {
+    canonical: "/services",
+    types: { "text/markdown": "/services/md" },
+  },
   openGraph: openGraph("/services", servicesMeta.title, servicesMeta.description),
 };
 
@@ -51,17 +54,28 @@ export default function ServicesPage() {
           ))}
         </ul>
       </section>
-      <p className="max-w-2xl px-6 pb-16 text-lg leading-relaxed md:px-12">
-        Byte Force construit ces offres depuis Casablanca : un site, une application, un logiciel, un plugin WordPress,
-        le référencement, l&apos;hébergement et la maintenance. Le cadre national est le{" "}
-        <Link href="/developpement-logiciel-maroc">développement logiciel au Maroc</Link>. Pour une entreprise en
-        France, la page est le{" "}
-        <Link href="/developpement-logiciel-france">développement logiciel pour la France</Link>. Chaque ligne
-        ci-dessus ouvre la page du service. Le premier échange se fait par écrit, et la réponse part sous un jour
-        ouvré. Le bureau est au Technopark, boulevard Dammam, Aïn Chock. Aucun prix n&apos;est affiché, parce que le
-        montant dépend de ce qui doit être construit.
-        Pour revenir au studio, la page d&apos;accueil reste ouverte.
-      </p>
+      <div className="max-w-2xl space-y-4 px-6 pb-8 text-lg leading-relaxed md:px-12">
+        <p>Byte Force construit ces offres depuis Casablanca.</p>
+        <p>Un site. Une application. Un logiciel. Un plugin WordPress. Le référencement. L&apos;hébergement. La maintenance.</p>
+        <p>
+          Le cadre national est le <Link href="/developpement-logiciel-maroc">développement logiciel au Maroc</Link>.
+        </p>
+        <p>
+          Pour une entreprise en France, la page est le{" "}
+          <Link href="/developpement-logiciel-france">développement logiciel pour la France</Link>.
+        </p>
+        <p>Chaque ligne ci-dessus ouvre la page du service.</p>
+        <p>Le premier échange se fait par écrit. La réponse part sous un jour ouvré.</p>
+        <p>Le bureau est au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca.</p>
+        <p>Aucun prix n&apos;est affiché. Le montant dépend de ce qui doit être construit.</p>
+        <p>
+          Avant le premier échange, la liste est{" "}
+          <Link href="/checklists/comprendre-le-travail">comprendre le travail</Link>.
+        </p>
+        <p>
+          Une version texte de cette page est disponible en <Link href="/services/md">markdown</Link>.
+        </p>
+      </div>
       <p className="px-6 pb-16 md:px-12">
         <Link href="/" className="border-b border-ink pb-1">
           Accueil du studio

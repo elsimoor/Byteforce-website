@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AiDoc } from "@/components/ai-doc";
 import { openGraph } from "@/lib/open-graph";
+import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 const title = "Byte Force pour les agents";
@@ -38,7 +39,7 @@ export default function AiPage() {
       <section>
         <h2 className="text-2xl">Où, et comment écrire ?</h2>
         <p className="mt-4 leading-relaxed">
-          {site.email}, {site.phoneDisplay}, ou le formulaire sur <Link href="/contact">/contact</Link>. Réponse sous un jour ouvré, {site.hoursLabel.toLowerCase()}. Pas de prix public : le montant suit le périmètre.
+          <EmailText />, {site.phoneDisplay}, ou le formulaire sur <Link href="/contact">/contact</Link>. Réponse sous un jour ouvré, {site.hoursLabel.toLowerCase()}. Pas de prix public : le montant suit le périmètre.
         </p>
       </section>
       <section>

@@ -4,6 +4,7 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { openGraph } from "@/lib/open-graph";
 import { seoMeta } from "@/lib/seo-meta";
 import { SiteIndex } from "@/components/site-index";
+import { MailLink } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 const contactMeta = seoMeta["/contact"];
@@ -31,7 +32,7 @@ export default async function ContactPage({ searchParams }: Props) {
           <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a>
         </p>
         <p className="mt-3">
-          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <MailLink />
         </p>
         <p className="mt-3">
           <a href="https://wa.me/212666650696">WhatsApp</a>

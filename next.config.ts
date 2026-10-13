@@ -3,8 +3,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  compress: true,
   htmlLimitedBots: /.*/,
-  images: { minimumCacheTTL: 2678400 },
+  images: {
+    minimumCacheTTL: 2678400,
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 828, 1080, 1200, 1920],
+    imageSizes: [32, 48, 64, 96, 128, 256, 384],
+    qualities: [60, 75],
+  },
   outputFileTracingRoot: path.join(__dirname),
   async redirects() {
     return [
@@ -157,20 +164,43 @@ const nextConfig: NextConfig = {
     return config;
   },
   async headers() {
+    const csp = [
+      "default-src 'self'",
+      "base-uri 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'self'",
+      "form-action 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://*.posthog.com https://*.i.posthog.com",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: blob: https:",
+      "font-src 'self'",
+      "connect-src 'self' https://*.posthog.com https://*.i.posthog.com https://challenges.cloudflare.com",
+      "frame-src https://challenges.cloudflare.com",
+      "worker-src 'self' blob:",
+      "upgrade-insecure-requests",
+      "trusted-types default",
+      "require-trusted-types-for 'script'",
+    ].join("; ");
+    const cache = { key: "Cache-Control", value: "public, max-age=31536000, immutable" };
     return [
       {
         source: "/categories/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
       },
+      { source: "/work/:path*", headers: [cache] },
+      { source: "/fonts/:path*", headers: [cache] },
+      { source: "/logo.webp", headers: [cache] },
+      { source: "/tech/:path*", headers: [cache] },
       {
         source: "/:path*",
         headers: [
-          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
+          { key: "Content-Security-Policy", value: csp },
         ],
       },
     ];
