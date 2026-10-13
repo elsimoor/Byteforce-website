@@ -258,6 +258,46 @@ export function StudioHome() {
           </div>
         </div>
       </section>
+      <section className="w-full bg-surface py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
+          <div className="lg:col-span-5">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">Vibe coding</span>
+            <h2 className="mt-2 font-headline text-3xl font-bold tracking-tight text-on-surface lg:text-4xl">
+              La moitié est faite. C&apos;est déjà bien.
+            </h2>
+            <p className="mt-4 max-w-md text-base leading-relaxed text-on-surface-variant">
+              Un écran qui tourne chez vous, c&apos;est la moitié du travail. Byte Force prend l&apos;autre moitié : comptes,
+              données, cas qui cassent, mise en ligne, page qu&apos;on trouve, et dépôt qui vous revient.
+            </p>
+            <a
+              href="/contact"
+              className="mt-8 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+            >
+              Finir le projet
+              <Icon name="arrow_forward" className="text-base" />
+            </a>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-on-surface-variant">
+              Un lien, un dépôt ou une capture suffit. Réponse sous un jour ouvré. Pas de prix sur cette page.
+            </p>
+          </div>
+          <ol className="grid sm:grid-cols-2 lg:col-span-7 lg:border-l lg:border-outline-variant lg:pl-10">
+            {[
+              ["Comptes et droits", "Qui entre, qui voit un dossier, et qui ne doit pas le voir."],
+              ["Données", "Ce qui est saisi reste après la fermeture de l'onglet, avec une copie."],
+              ["Cas qui cassent", "Le champ vide, le double envoi, le rôle sans le droit."],
+              ["Mise en ligne", "Le nom de domaine, l'hébergement, et une adresse qui répond."],
+              ["Le dépôt", "Le code et les comptes livrés reviennent à l'entreprise."],
+              ["Page et formulaire", "L'offre se trouve, et le message part vraiment."],
+            ].map(([title, text], index) => (
+              <li key={title} className="border-t border-outline-variant py-5 sm:px-4">
+                <span className="font-mono text-xs font-bold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                <h3 className="mt-2 font-headline text-lg font-bold text-on-surface">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
       {/* 4. SERVICES / CAPABILITIES (Engineering Matrix) */}
       <section id="capabilities" className="w-full bg-surface-container py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">

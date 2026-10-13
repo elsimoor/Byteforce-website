@@ -178,7 +178,7 @@ const nextConfig: NextConfig = {
       "frame-src https://challenges.cloudflare.com",
       "worker-src 'self' blob:",
       "upgrade-insecure-requests",
-      "trusted-types default",
+      "trusted-types default nextjs nextjs#bundler 'allow-duplicates'",
       "require-trusted-types-for 'script'",
     ].join("; ");
     const cache = { key: "Cache-Control", value: "public, max-age=31536000, immutable" };
