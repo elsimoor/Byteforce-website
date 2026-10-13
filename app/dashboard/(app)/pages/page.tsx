@@ -23,9 +23,9 @@ export default async function PageMetaAdmin({ searchParams }: Props) {
   const rows = listPageMeta();
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-12">
-      <h1 className="font-serif text-5xl">Titres et meta descriptions</h1>
-      <p className="mt-4 max-w-2xl text-muted">
+    <main className="px-6 py-16 md:px-12">
+      <h1 className="display text-5xl">Titres et meta descriptions</h1>
+      <p className="mt-4 max-w-2xl text-mute">
         Chaque fiche client, chaque catégorie et chaque ville a sa balise title et sa
         meta description. L&apos;enregistrement est immédiat sur la page publique.
       </p>
@@ -42,14 +42,14 @@ export default async function PageMetaAdmin({ searchParams }: Props) {
 
       {groups.map((group) => (
         <section key={group.kind} className="mt-12">
-          <h2 className="font-serif text-3xl">{group.title}</h2>
+          <h2 className="display text-3xl">{group.title}</h2>
           <ul className="mt-6 space-y-6">
             {rows
               .filter((row) => row.kind === group.kind)
               .map((row) => (
                 <li key={row.path} className="border border-line p-5">
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
-                    <h3 className="font-serif text-2xl">{row.label}</h3>
+                    <h3 className="display text-2xl">{row.label}</h3>
                     <Link href={row.path} className="text-sm hover:text-copper">
                       {row.path}
                     </Link>
@@ -65,7 +65,7 @@ export default async function PageMetaAdmin({ searchParams }: Props) {
                         defaultValue={row.meta_title}
                         className="border border-line bg-white px-3 py-2"
                       />
-                      <span className="text-muted">{row.meta_title.length}/60 visé, 70 maximum</span>
+                      <span className="text-mute">{row.meta_title.length}/60 visé, 70 maximum</span>
                     </label>
                     <label className="grid gap-1 text-sm">
                       Meta description
@@ -77,7 +77,7 @@ export default async function PageMetaAdmin({ searchParams }: Props) {
                         defaultValue={row.meta_description}
                         className="border border-line bg-white px-3 py-2"
                       />
-                      <span className="text-muted">
+                      <span className="text-mute">
                         {row.meta_description.length}/160 visé, 180 maximum
                       </span>
                     </label>

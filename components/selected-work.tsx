@@ -45,7 +45,7 @@ export function SelectedWork() {
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {cases.map((project, index) => (
-          <article key={project.slug} className="overflow-hidden rounded-xl bg-surface-container-low shadow-sm">
+          <article key={project.slug} className="overflow-hidden border border-outline-variant bg-surface-container-lowest">
             <a
               href={project.url}
               rel="noopener noreferrer"

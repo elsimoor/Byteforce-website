@@ -50,16 +50,16 @@ export default async function StrategyPage({ searchParams }: Props) {
   const clashes = conflicts(keywords);
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-12">
+    <main className="px-6 py-16 md:px-12">
       <p className="text-xs uppercase tracking-[0.18em] text-copper">Interne</p>
-      <h1 className="mt-3 font-serif text-5xl">Carte de mots-clés</h1>
-      <p className="mt-4 max-w-2xl text-lg text-muted">
+      <h1 className="mt-3 display text-5xl">Carte de mots-clés</h1>
+      <p className="mt-4 max-w-2xl text-lg text-mute">
         Cette page sert à choisir les recherches qui peuvent amener un client, puis
         la page qui doit y répondre. Elle n&apos;est pas indexée.
       </p>
 
       <section className="mt-8 border border-line bg-white p-5 text-sm leading-relaxed">
-        <h2 className="font-serif text-2xl">Règles</h2>
+        <h2 className="display text-2xl">Règles</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li>Un mot-clé principal par URL. Les autres sont des variantes de la même page.</li>
           <li>Garder les requêtes commerciales: quelqu&apos;un cherche un prestataire.</li>
@@ -86,19 +86,19 @@ export default async function StrategyPage({ searchParams }: Props) {
         </p>
       ) : null}
 
-      <h2 className="mt-12 font-serif text-3xl">Carte</h2>
+      <h2 className="mt-12 display text-3xl">Carte</h2>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {groups.map(([cluster, rows]) => (
           <section key={cluster} className="border border-line p-5">
-            <h3 className="font-serif text-2xl">{cluster}</h3>
+            <h3 className="display text-2xl">{cluster}</h3>
             <ul className="mt-4 space-y-3">
               {rows.map((row) => (
                 <li key={row.id} className="border-t border-line pt-3 text-sm">
                   <p>
                     <span className="font-medium">{row.keyword}</span>
-                    <span className="text-muted"> · {row.role}</span>
+                    <span className="text-mute"> · {row.role}</span>
                   </p>
-                  <p className="text-muted">
+                  <p className="text-mute">
                     {row.intent} · priorité {row.priority} · {row.target_path}
                   </p>
                   {row.notes ? <p className="mt-1">{row.notes}</p> : null}
@@ -121,7 +121,7 @@ export default async function StrategyPage({ searchParams }: Props) {
                     </form>
                     <form action={removeKeyword}>
                       <input type="hidden" name="id" value={row.id} />
-                      <button type="submit" className="text-muted hover:text-copper">
+                      <button type="submit" className="text-mute hover:text-copper">
                         Retirer
                       </button>
                     </form>
@@ -133,7 +133,7 @@ export default async function StrategyPage({ searchParams }: Props) {
         ))}
       </div>
 
-      <h2 className="mt-14 font-serif text-3xl">Ajouter un mot-clé</h2>
+      <h2 className="mt-14 display text-3xl">Ajouter un mot-clé</h2>
       <form action={addKeyword} className="mt-6 grid gap-4 md:grid-cols-2">
         <label className="grid gap-1 text-sm">
           Groupe
@@ -190,15 +190,15 @@ export default async function StrategyPage({ searchParams }: Props) {
         </button>
       </form>
 
-      <h2 className="mt-14 font-serif text-3xl">Travaux à mener</h2>
-      <p className="mt-3 max-w-2xl text-muted">
+      <h2 className="mt-14 display text-3xl">Travaux à mener</h2>
+      <p className="mt-3 max-w-2xl text-mute">
         Ce qui reste à faire pour que la landing amène de nouveaux clients.
       </p>
       <ul className="mt-6 space-y-4">
         {actions.map((action) => (
           <li key={action.id} className="border border-line p-4">
             <p className="font-medium">{action.title}</p>
-            {action.detail ? <p className="mt-1 text-sm text-muted">{action.detail}</p> : null}
+            {action.detail ? <p className="mt-1 text-sm text-mute">{action.detail}</p> : null}
             <form action={updateAction} className="mt-3 flex gap-2">
               <input type="hidden" name="id" value={action.id} />
               <select

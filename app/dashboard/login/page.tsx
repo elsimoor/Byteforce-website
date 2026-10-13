@@ -15,33 +15,25 @@ export default async function LoginPage({ searchParams }: Props) {
   const query = await searchParams;
 
   return (
-    <main className="mx-auto max-w-md px-6 py-20">
-      <h1 className="font-serif text-4xl">Tableau de bord</h1>
-      <p className="mt-4 text-muted">
-        Les demandes et la carte de mots-clés restent hors du site public.
-      </p>
+    <main className="max-w-xl px-6 py-16 md:px-12 md:py-24">
+      <h1 className="display text-[clamp(3rem,7vw,5rem)]">Tableau de bord</h1>
+      <p className="mt-6 text-mute">Les demandes et la carte de mots-clés restent hors du site public.</p>
       {!passwordConfigured() ? (
-        <p className="mt-6 border border-copper p-4 text-sm" role="alert">
+        <p className="mt-6 text-sm" role="alert">
           Ajoutez DASHBOARD_PASSWORD dans .env.local, puis relancez le serveur.
         </p>
       ) : (
-        <form action={login} className="mt-8 grid gap-4">
+        <form action={login} className="mt-10 max-w-md">
           {query.error ? (
-            <p className="text-sm text-copper" role="alert">
+            <p className="mb-4 text-sm" role="alert">
               Mot de passe refusé.
             </p>
           ) : null}
           <label className="grid gap-1 text-sm">
             Mot de passe
-            <input
-              name="password"
-              type="password"
-              required
-              autoComplete="current-password"
-              className="border border-line bg-white px-3 py-2"
-            />
+            <input name="password" type="password" required autoComplete="current-password" className="field" />
           </label>
-          <button type="submit" className="justify-self-start bg-ink px-5 py-3 text-paper">
+          <button type="submit" className="mt-6 border-b border-ink pb-1 text-left text-sm">
             Entrer
           </button>
         </form>
