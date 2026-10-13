@@ -5,6 +5,8 @@ import { Icon } from "@/components/icon";
 import { ResponsiveImg } from "@/components/responsive-img";
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
+import { studioSections } from "@/lib/studio-sections";
+import Link from "next/link";
 import { site } from "@/lib/site";
 import { technologies } from "@/lib/tech-articles";
 
@@ -143,27 +145,24 @@ export function StudioHome() {
               Byte Force est un studio logiciel à Casablanca. On construit l&apos;outil qu&apos;une équipe utilise chaque
               jour : un site, une application, ou un logiciel écrit pour une entreprise.
             </p>
-            <a
-              href="/contact"
+            <Link
+              href="/ou-en-est-le-projet"
               className="mt-8 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
             >
-              Parler d&apos;un projet
+              Où en est le travail
               <Icon name="arrow_forward" className="text-base" />
-            </a>
+            </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:col-span-7 lg:border-l lg:border-outline-variant lg:pl-10">
-            {[
-              ["Où l'on travaille", "Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca. Lundi au vendredi, 9h à 19h. Réponse sous un jour ouvré. Le premier échange dure trente minutes, et il est gratuit."],
-              ["Ce que vous gardez", "Le code, le dépôt et les comptes d'hébergement vous reviennent. Pas de prix sur ce site. La première note dit ce qui existe, et ce qui doit changer."],
-              ["Déjà en ligne", "Un formulaire qui n'envoie rien, une page périmée, ou un bug qui bloque une vente. Un correctif ponctuel n'a pas besoin d'un plan. Si une autre équipe a écrit le code, on le lit d'abord."],
-              ["Après la mise en ligne", "Le suivi surveille le site, garde une copie, et corrige ce qui casse. Le même bureau répond sous un jour ouvré. Le prix se fixe quand la tâche est connue."],
-              ["Comment commencer", "Écrire depuis la page contact, par email, ou sur WhatsApp. Votre nom, un moyen de répondre, et la tâche. Un lien, un fichier, ou une photo du formulaire qui échoue suffit."],
-              ["Qui le dirige", "Walid Moultamiss dirige le studio. Sa fiche est sur ce site, en français et en anglais, avec les deux CV. La preuve, ce sont les travaux en ligne."],
-            ].map(([title, text]) => (
-              <div key={title} className="border-t border-outline-variant py-5 sm:px-4">
-                <h3 className="font-headline text-lg font-bold text-on-surface">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{text}</p>
-              </div>
+            {studioSections.map((section) => (
+              <Link key={section.slug} href={`/studio/${section.slug}`} className="block border-t border-outline-variant py-5 sm:px-4">
+                <h3 className="font-headline text-lg font-bold text-primary">{section.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{section.card}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                  Lire
+                  <Icon name="arrow_forward" className="text-base" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

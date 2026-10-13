@@ -212,9 +212,44 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     title: "Studio logiciel à Casablanca · Byte Force",
     description: "Byte Force : studio de développement logiciel à Casablanca. Méthode, bureau et projets depuis 2023.",
   },
+  "/studio/ou-lon-travaille": {
+    title: "Bureau Byte Force au Technopark · Casablanca",
+    description:
+      "Byte Force travaille au Technopark, boulevard Dammam, Aïn Chock, 20001 Casablanca. Du lundi au vendredi, de 9h à 19h. Réponse sous un jour ouvré.",
+  },
+  "/studio/ce-que-vous-gardez": {
+    title: "Le code vous revient · Byte Force",
+    description:
+      "À la remise, le code, le dépôt et les comptes d'hébergement livrés reviennent au client. Pas de prix public sur le site.",
+  },
+  "/studio/deja-en-ligne": {
+    title: "Corriger un site déjà en ligne · Byte Force",
+    description:
+      "Formulaire muet, page périmée ou bug qui bloque une vente. Byte Force lit le code déjà en ligne avant de le corriger. Un lien suffit.",
+  },
+  "/studio/apres-la-mise-en-ligne": {
+    title: "Après la mise en ligne · Suivi Byte Force",
+    description:
+      "Après la mise en ligne, Byte Force surveille, garde une copie et corrige ce qui casse. Le prix se fixe quand la tâche est connue.",
+  },
+  "/studio/comment-commencer": {
+    title: "Comment commencer un projet · Byte Force",
+    description:
+      "Écrivez à Byte Force par le formulaire, l'email ou WhatsApp. Votre nom, un moyen de répondre et la tâche suffisent. Réponse sous un jour ouvré.",
+  },
+  "/studio/qui-le-dirige": {
+    title: "Walid Moultamiss dirige Byte Force",
+    description:
+      "Walid Moultamiss dirige Byte Force à Casablanca. Sa fiche est en français et en anglais, avec les deux CV et les travaux publiés.",
+  },
   "/walid-moultamiss": {
     title: "Walid Moultamiss · Fondateur Byte Force",
     description: "Walid Moultamiss, fondateur de Byte Force. Développeur logiciel à Casablanca, applications métier.",
+  },
+  "/ou-en-est-le-projet": {
+    title: "Où en est le travail · Byte Force",
+    description:
+      "Situez le projet en quelques questions. La liste dit ce qu'il reste à faire, et prépare le message pour le bureau à Casablanca.",
   },
   "/contact": {
     title: "Écrire à Byte Force · Casablanca",

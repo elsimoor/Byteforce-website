@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: openGraph("/contact", contactMeta.title, contactMeta.description),
 };
 
-type Props = { searchParams: Promise<{ sent?: string; error?: string }> };
+type Props = { searchParams: Promise<{ sent?: string; error?: string; service?: string; budget?: string; message?: string }> };
 
 export default async function ContactPage({ searchParams }: Props) {
   const query = await searchParams;
@@ -79,7 +79,7 @@ export default async function ContactPage({ searchParams }: Props) {
             Le nom, l&apos;email et le message sont nécessaires.
           </p>
         ) : null}
-        {!query.sent ? <LeadForm /> : null}
+        {!query.sent ? <LeadForm initial={{ service: query.service, budget: query.budget, message: query.message }} /> : null}
       </div>
       </div>
       <SiteIndex part={4} />

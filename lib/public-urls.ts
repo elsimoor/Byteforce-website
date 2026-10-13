@@ -4,6 +4,7 @@ import { projects, services } from "@/lib/content";
 import { geoKeywords } from "@/lib/geo/keywords";
 import { insightCategories } from "@/lib/insight-categories";
 import { moneyPages } from "@/lib/money";
+import { studioSections } from "@/lib/studio-sections";
 
 const staticPaths = [
   "/",
@@ -64,6 +65,8 @@ export function publicEntries() {
   set("/solutions", "2026-10-13");
   set("/realisations", "2026-10-13");
   set("/plan-du-site", "2026-10-13");
+  for (const section of studioSections) set(`/studio/${section.slug}`, "2026-10-13");
+  set("/ou-en-est-le-projet", "2026-10-13");
   set("/checklists/comprendre-le-travail", "2026-10-13");
   return [...dates.entries()].map(([path, lastModified]) => ({ path, lastModified }));
 }

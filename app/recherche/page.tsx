@@ -4,6 +4,7 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { articles } from "@/lib/articles";
 import { projects, services } from "@/lib/content";
 import { moneyPages } from "@/lib/money";
+import { studioSections } from "@/lib/studio-sections";
 import { openGraph } from "@/lib/open-graph";
 import { runSearch } from "@/lib/actions";
 
@@ -38,6 +39,11 @@ export default async function SearchPage({ searchParams }: Props) {
       href: `/insights/${article.slug}`,
       title: article.h1,
       text: article.description,
+    })),
+    ...studioSections.map((section) => ({
+      href: `/studio/${section.slug}`,
+      title: section.title,
+      text: `${section.h1} ${section.card}`,
     })),
     ...moneyPages.map((page) => ({
       href: `/${page.path}`,
