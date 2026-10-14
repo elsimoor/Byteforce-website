@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HeroSlices } from "@/components/hero-slices";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { getStudioSection, studioSections } from "@/lib/studio-sections";
 import { ldJson, site } from "@/lib/site";
@@ -55,13 +56,16 @@ export default async function StudioSectionPage({ params }: Props) {
           ]}
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(faq) }} />
-        <header className="px-6 pb-12 pt-16 md:px-12 md:pt-28">
-          <p className="font-mono text-xs font-bold tracking-[0.16em] text-primary uppercase">Le studio</p>
-          <h1 className="display mt-4 max-w-[16ch] text-[clamp(2.6rem,6vw,5.2rem)]">{section.h1}</h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed">{section.lede}</p>
-          <Link href="/contact" className="btn mt-8">
-            Parler d&apos;un projet
-          </Link>
+        <header className={section.heroImage ? "studio-hero" : "px-6 pb-12 pt-16 md:px-12 md:pt-28"}>
+          {section.heroImage ? <HeroSlices src={section.heroImage} /> : null}
+          <div className={section.heroImage ? "studio-hero-copy" : undefined}>
+            <p className="font-mono text-xs font-bold tracking-[0.16em] text-primary uppercase">Le studio</p>
+            <h1 className="display mt-4 max-w-[16ch] text-[clamp(2.6rem,6vw,5.2rem)]">{section.h1}</h1>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed">{section.lede}</p>
+            <Link href="/contact" className="btn mt-8">
+              Parler d&apos;un projet
+            </Link>
+          </div>
         </header>
         {section.blocks.map((block) => (
           <section key={block.h} className="border-t border-line px-6 py-14 md:px-12">

@@ -6,6 +6,7 @@ export type StudioSection = {
   slug: string;
   title: string;
   card: string;
+  heroImage?: string;
   h1: string;
   titleTag: string;
   description: string;
@@ -20,6 +21,7 @@ export const studioSections: StudioSection[] = [
     slug: "ou-lon-travaille",
     title: "Où l'on travaille",
     card: "Technopark, Bd Dammam, Aïn Chock, 20001 Casablanca. Lundi au vendredi, 9h à 19h. Réponse sous un jour ouvré. Le premier échange dure trente minutes, et il est gratuit.",
+    heroImage: "/studio/technopark.png",
     h1: "Le bureau est au Technopark, à Casablanca.",
     titleTag: "Bureau Byte Force au Technopark · Casablanca",
     description:

@@ -45,11 +45,11 @@ export function StudioHome() {
                 Voir les travaux
               </a>
             </div>
-            <div className="max-w-xl space-y-2">
+            <div className="mt-8 max-w-xl">
               <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">Ou un site déjà en ligne</p>
               <AuditForm variant="studio" />
             </div>
-            <p className="text-sm text-on-surface-variant">
+            <p className="mt-4 text-sm text-on-surface-variant">
               Réponse sous un jour ouvré. On peut aussi écrire sur{" "}
               <a href="https://wa.me/212666650696" className="font-semibold text-primary">
                 WhatsApp
