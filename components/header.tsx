@@ -44,7 +44,7 @@ function SearchBand({ onClose }: { onClose: () => void }) {
           </button>
           <button
             type="button"
-            className="inline-flex min-h-12 items-center px-3 font-mono text-[11px] tracking-[0.14em] text-outline uppercase"
+            className="inline-flex min-h-12 items-center px-3 font-mono text-[15px] tracking-[0.12em] text-outline uppercase"
             onClick={onClose}
           >
             Fermer
@@ -116,7 +116,7 @@ export function Header() {
           })}
         </nav>
         <details className="relative md:hidden">
-          <summary className="flex h-11 cursor-pointer list-none items-center px-3 font-mono text-[11px] font-bold tracking-[0.14em] text-on-surface uppercase [&::-webkit-details-marker]:hidden">
+          <summary className="flex h-11 cursor-pointer list-none items-center px-3 font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase [&::-webkit-details-marker]:hidden">
             Menu
           </summary>
           <nav className="absolute right-0 top-12 z-50 w-56 border border-outline-variant bg-surface py-2" aria-label="Principal">
@@ -134,22 +134,16 @@ export function Header() {
             aria-label={searchOpen ? "Fermer la recherche" : "Rechercher"}
             aria-expanded={searchOpen}
             aria-controls="site-search"
-            className="flex h-11 w-11 items-center justify-center rounded border border-outline-variant/40 text-on-surface"
+            className="flex h-11 w-11 items-center justify-center border border-outline-variant/40 text-on-surface"
             onClick={() => (searchOpen ? closeSearch() : setSearchOpen(true))}
           >
             <Icon name="search" className="text-[20px]" />
           </button>
-          <Link
-            href="/contact"
-            className="hidden min-h-11 items-center justify-center rounded bg-primary px-4 text-sm font-medium whitespace-nowrap text-on-primary transition-all hover:bg-primary-container xl:inline-flex"
-          >
-            Parler d&apos;un projet →
-          </Link>
           {process.env.NODE_ENV === "development" ? (
             <Link
               href="/dashboard/login"
               aria-label="Client portal"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-primary"
+              className="flex h-11 w-11 items-center justify-center bg-primary"
             >
               <Icon name="person" className="text-[18px] text-on-primary" />
             </Link>

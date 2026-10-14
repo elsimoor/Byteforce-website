@@ -17,22 +17,22 @@ export function StudioHome() {
       <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-16 lg:pt-16 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-end">
           <div className="lg:col-span-6 flex min-w-0 flex-col">
-            <p className="font-mono text-xs font-bold tracking-[0.18em] uppercase text-primary">
+            <p className="font-mono text-[15px] font-bold tracking-[0.14em] uppercase text-on-surface sm:text-sm">
               Studio logiciel · Casablanca
             </p>
-            <h1 className="mt-5 max-w-[11em] font-headline text-[2.35rem] font-black leading-[0.98] tracking-tight text-on-surface sm:max-w-none sm:text-5xl lg:text-[4.15rem] lg:leading-[0.96]">
+            <h1 className="mt-5 max-w-[11em] font-headline text-[2.35rem] font-black leading-[1.05] tracking-tight text-on-surface sm:max-w-none sm:text-5xl lg:text-[4.15rem]">
               Développement
               <span className="lg:inline"> </span>
               <span className="block lg:inline">logiciel</span>
               <span className="block">sur mesure,</span>
               <span className="block">à Casablanca.</span>
             </h1>
-            <p className="mt-6 text-lg text-on-surface-variant max-w-xl leading-relaxed">
+            <p className="mt-6 max-w-xl text-xl leading-relaxed text-on-surface-variant">
               Byte Force conçoit le logiciel, l&apos;application ou le site, le corrige quand il casse, et remet le code au client. Un humain et une machine doivent pouvoir trouver l&apos;offre, la comprendre, et écrire.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a
-                className="inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary hover:bg-primary-container"
+                className="inline-flex min-h-11 items-center gap-2 bg-primary px-6 py-3.5 text-[15px] font-medium text-on-primary hover:bg-primary-container active:bg-on-primary-fixed"
                 href="/contact"
               >
                 <span>Parler d&apos;un projet</span>
@@ -46,7 +46,7 @@ export function StudioHome() {
               </a>
             </div>
             <div className="mt-8 max-w-xl">
-              <p className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">Ou un site déjà en ligne</p>
+              <p className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">Ou un site déjà en ligne</p>
               <AuditForm variant="studio" />
             </div>
             <p className="mt-4 text-sm text-on-surface-variant">
@@ -76,7 +76,7 @@ export function StudioHome() {
               </span>
               <span className="flex items-end justify-between gap-4 border-t border-outline-variant px-4 py-3">
                 <span>
-                  <span className="block font-mono text-[11px] font-bold tracking-widest text-primary uppercase">
+                  <span className="block font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
                     Produit en ligne
                   </span>
                   <span className="block font-headline text-lg font-bold text-on-surface">Coco Inbox</span>
@@ -89,46 +89,46 @@ export function StudioHome() {
         </div>
         <div className="mt-16 grid grid-cols-1 border-t border-outline-variant sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col border-outline-variant py-5 sm:pr-6 lg:border-r">
-            <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
+            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
               Logiciel
             </span>
-            <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
+            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
               Outils métier
             </span>
-            <span className="text-xs text-on-surface-variant">
+            <span className="text-[15px] sm:text-sm text-on-surface-variant">
               Parcours, opérations et données
             </span>
           </div>
           <div className="flex flex-col border-t border-outline-variant py-5 sm:border-t-0 sm:pl-6 lg:border-r lg:pr-6">
-            <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
+            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
               SaaS
             </span>
-            <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
+            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
               Produits à plusieurs comptes
             </span>
-            <span className="text-xs text-on-surface-variant">
+            <span className="text-[15px] sm:text-sm text-on-surface-variant">
               Tableaux, facturation, droits
             </span>
           </div>
           <div className="flex flex-col border-t border-outline-variant py-5 lg:border-t-0 lg:border-r lg:px-6">
-            <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
+            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
               IA
             </span>
-            <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
+            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
               Dans le produit
             </span>
-            <span className="text-xs text-on-surface-variant">
+            <span className="text-[15px] sm:text-sm text-on-surface-variant">
               Une règle d&apos;abord, un modèle seulement si elle ne suffit pas
             </span>
           </div>
           <div className="flex flex-col border-t border-outline-variant py-5 sm:pl-6 lg:border-t-0 lg:pl-6">
-            <span className="text-2xl lg:text-3xl font-headline font-bold text-primary">
+            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
               Plateformes
             </span>
-            <span className="text-xs font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
+            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
               Portails et places de marché
             </span>
-            <span className="text-xs text-on-surface-variant">
+            <span className="text-[15px] sm:text-sm text-on-surface-variant">
               Clients, partenaires, équipes
             </span>
           </div>
@@ -137,17 +137,17 @@ export function StudioHome() {
       <section className="w-full bg-surface py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
           <div className="lg:col-span-5">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">Le studio</span>
+            <span className="font-mono text-[15px] font-bold uppercase tracking-[0.12em] text-on-surface sm:text-sm">Le studio</span>
             <h2 className="mt-2 font-headline text-3xl font-bold tracking-tight text-on-surface lg:text-4xl">
               Le travail d&apos;abord. L&apos;outil ensuite.
             </h2>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-on-surface-variant">
+            <p className="mt-4 max-w-md text-lg leading-relaxed text-on-surface-variant">
               Byte Force est un studio logiciel à Casablanca. On construit l&apos;outil qu&apos;une équipe utilise chaque
               jour : un site, une application, ou un logiciel écrit pour une entreprise.
             </p>
             <Link
               href="/ou-en-est-le-projet"
-              className="mt-8 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+              className="mt-8 inline-flex items-center gap-2 min-h-11 bg-primary px-6 py-3.5 text-[15px] font-medium text-on-primary hover:bg-primary-container active:bg-on-primary-fixed"
             >
               Où en est le travail
               <Icon name="arrow_forward" className="text-base" />
@@ -157,11 +157,7 @@ export function StudioHome() {
             {studioSections.map((section) => (
               <Link key={section.slug} href={`/studio/${section.slug}`} className="block border-t border-outline-variant py-5 sm:px-4">
                 <h3 className="font-headline text-lg font-bold text-primary">{section.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{section.card}</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                  Lire
-                  <Icon name="arrow_forward" className="text-base" />
-                </span>
+                <p className="mt-2 text-[15px] leading-relaxed text-on-surface-variant sm:text-base">{section.card}</p>
               </Link>
             ))}
           </div>
@@ -172,7 +168,7 @@ export function StudioHome() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 flex flex-col space-y-4">
-              <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+              <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
                 LE POINT DE DÉPART
               </span>
               <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight">
@@ -196,7 +192,7 @@ export function StudioHome() {
                   <div className="text-lg font-bold text-on-surface">
                     Casablanca
                   </div>
-                  <div className="text-xs font-mono text-outline">
+                  <div className="text-[15px] sm:text-sm font-mono text-outline">
                     Technopark, Bd Dammam, Aïn Chock
                   </div>
                 </div>
@@ -205,7 +201,7 @@ export function StudioHome() {
                   <div className="text-lg font-bold text-on-surface">
                     GMT / UTC+1
                   </div>
-                  <div className="text-xs font-mono text-outline">
+                  <div className="text-[15px] sm:text-sm font-mono text-outline">
                     Chevauchement Europe et États-Unis
                   </div>
                 </div>
@@ -214,40 +210,40 @@ export function StudioHome() {
             {/* Right: Casablanca Tech Hub Card */}
             <div className="lg:col-span-5 border border-outline-variant bg-surface-container-lowest p-6">
               <div className="flex items-center justify-between pb-4 border-b border-outline-variant/30">
-                <span className="text-xs font-mono font-bold text-on-surface">
+                <span className="text-[15px] sm:text-sm font-mono font-bold text-on-surface">
                   PÔLE TECH, CASABLANCA
                 </span>
-                <span className="text-[11px] font-mono text-primary font-semibold">
+                <span className="text-[15px] sm:text-sm font-mono text-on-surface font-semibold">
                   33.5731° N, 7.5898° W
                 </span>
               </div>
               <div className="py-4 space-y-3">
-                <div className="flex items-center justify-between text-xs">
+                <div className="flex items-center justify-between text-[15px] sm:text-sm">
                   <span className="text-on-surface-variant font-mono">
                     Europe de l&apos;Ouest (CET)
                   </span>
-                  <span className="font-mono font-bold text-primary">
+                  <span className="font-mono font-bold text-on-surface">
                     ±1 h de commun
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs">
+                <div className="flex items-center justify-between text-[15px] sm:text-sm">
                   <span className="text-on-surface-variant font-mono">
                     Royaume-Uni (GMT)
                   </span>
-                  <span className="font-mono font-bold text-primary">
+                  <span className="font-mono font-bold text-on-surface">
                     Même fuseau
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs">
+                <div className="flex items-center justify-between text-[15px] sm:text-sm">
                   <span className="text-on-surface-variant font-mono">
                     Côte est des États-Unis
                   </span>
-                  <span className="font-mono font-bold text-primary">
+                  <span className="font-mono font-bold text-on-surface">
                     4 à 5 h de commun
                   </span>
                 </div>
               </div>
-              <div className="pt-4 border-t border-outline-variant/30 flex items-center justify-between text-xs font-mono text-outline">
+              <div className="pt-4 border-t border-outline-variant/30 flex items-center justify-between text-[15px] sm:text-sm font-mono text-outline">
                 <span>Livraison</span>
                 <span className="text-on-surface font-semibold">
                   Français • anglais • arabe
@@ -260,17 +256,17 @@ export function StudioHome() {
       <section className="w-full bg-surface py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
           <div className="lg:col-span-5">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">Vibe coding</span>
+            <span className="font-mono text-[15px] font-bold uppercase tracking-[0.12em] text-on-surface sm:text-sm">Vibe coding</span>
             <h2 className="mt-2 font-headline text-3xl font-bold tracking-tight text-on-surface lg:text-4xl">
               La moitié est faite. C&apos;est déjà bien.
             </h2>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-on-surface-variant">
+            <p className="mt-4 max-w-md text-lg leading-relaxed text-on-surface-variant">
               Un écran qui tourne chez vous, c&apos;est la moitié du travail. Byte Force prend l&apos;autre moitié : comptes,
               données, cas qui cassent, mise en ligne, page qu&apos;on trouve, et dépôt qui vous revient.
             </p>
             <a
               href="/contact"
-              className="mt-8 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+              className="mt-8 inline-flex items-center gap-2 min-h-11 bg-primary px-6 py-3.5 text-[15px] font-medium text-on-primary hover:bg-primary-container active:bg-on-primary-fixed"
             >
               Finir le projet
               <Icon name="arrow_forward" className="text-base" />
@@ -289,7 +285,7 @@ export function StudioHome() {
               ["Page et formulaire", "L'offre se trouve, et le message part vraiment."],
             ].map(([title, text], index) => (
               <li key={title} className="border-t border-outline-variant py-5 sm:px-4">
-                <span className="font-mono text-xs font-bold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[15px] sm:text-sm font-bold text-primary">{String(index + 1).padStart(2, "0")}</span>
                 <h3 className="mt-2 font-headline text-lg font-bold text-on-surface">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{text}</p>
               </li>
@@ -301,13 +297,13 @@ export function StudioHome() {
       <section id="capabilities" className="w-full bg-surface-container py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-14">
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+            <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
               CE QUE L&apos;ON CONSTRUIT
             </span>
             <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
               Ce que l&apos;on construit
             </h2>
-            <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
+            <p className="text-on-surface-variant text-lg lg:text-lg mt-2 max-w-2xl">
               Chaque offre dit à qui elle s&apos;adresse, et ce qu&apos;elle comprend. La pile livrée comprend React, Next.js et Node.js.
             </p>
           </div>
@@ -319,7 +315,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     01
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="strategy" />
                   </div>
                 </div>
@@ -330,7 +326,7 @@ export function StudioHome() {
                   Des plateformes autour des parcours, des opérations et des données de l&apos;entreprise.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Quand les outils ne collent pas au travail
               </div>
             </div>
@@ -341,7 +337,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     02
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="dashboard" />
                   </div>
                 </div>
@@ -352,7 +348,7 @@ export function StudioHome() {
                   Produits à plusieurs comptes : abonnements, tableaux, droits et facturation.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Pour lancer un produit à plusieurs comptes
               </div>
             </div>
@@ -363,7 +359,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     03
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="group" />
                   </div>
                 </div>
@@ -374,7 +370,7 @@ export function StudioHome() {
                   CRM, clients, pipeline commercial, opérations et administration interne.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Quand le tableur ne suffit plus
               </div>
             </div>
@@ -385,7 +381,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     04
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="smart_toy" />
                   </div>
                 </div>
@@ -396,7 +392,7 @@ export function StudioHome() {
                   Une tâche répétée devient une règle stable. Un modèle n&apos;est ajouté que si la règle ne peut pas porter le geste.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Quand le produit doit retirer du travail manuel
               </div>
             </div>
@@ -407,7 +403,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     05
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="devices" />
                   </div>
                 </div>
@@ -418,7 +414,7 @@ export function StudioHome() {
                   Applications pour les clients, les employés, les partenaires ou l&apos;équipe interne.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Clients, employés ou partenaires
               </div>
             </div>
@@ -429,7 +425,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     06
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="hub" />
                   </div>
                 </div>
@@ -440,7 +436,7 @@ export function StudioHome() {
                   Places de marché, portails clients, réservation et annuaires.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Places de marché, portails, réservation
               </div>
             </div>
@@ -448,7 +444,7 @@ export function StudioHome() {
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-sm font-bold text-primary">07</span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="bug_report" />
                   </div>
                 </div>
@@ -460,13 +456,13 @@ export function StudioHome() {
                   Demander une lecture
                 </a>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">Pour un produit ou un site déjà en ligne</div>
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">Pour un produit ou un site déjà en ligne</div>
             </div>
             <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-sm font-bold text-primary">08</span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="build" />
                   </div>
                 </div>
@@ -478,13 +474,13 @@ export function StudioHome() {
                   Voir le suivi
                 </a>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">Pour un produit déjà en production</div>
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">Pour un produit déjà en production</div>
             </div>
             <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-mono text-sm font-bold text-primary">09</span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="extension" />
                   </div>
                 </div>
@@ -496,12 +492,12 @@ export function StudioHome() {
                   Voir l&apos;offre
                 </a>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">Pour un site WordPress qui a besoin d&apos;une fonction</div>
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">Pour un site WordPress qui a besoin d&apos;une fonction</div>
             </div>
           </div>
           <a
             href="/contact"
-            className="mt-10 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+            className="mt-10 inline-flex items-center gap-2 min-h-11 bg-primary px-6 py-3.5 text-[15px] font-medium text-on-primary hover:bg-primary-container active:bg-on-primary-fixed"
           >
             Parler d'un projet
           </a>
@@ -511,13 +507,13 @@ export function StudioHome() {
       <section className="w-full bg-surface-container py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-14">
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+            <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
               COMMENT LE LOGICIEL COMMENCE
             </span>
             <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
               Du problème métier au logiciel qui tourne.
             </h2>
-            <p className="text-on-surface-variant text-base mt-2 max-w-xl">
+            <p className="text-on-surface-variant text-lg mt-2 max-w-xl">
               Chaque projet part d&apos;un problème, pas d&apos;une technologie.
             </p>
             <p className="text-on-surface-variant text-sm mt-4 max-w-2xl">
@@ -539,13 +535,13 @@ export function StudioHome() {
                 href={href}
                 className="flex flex-col justify-between border-t border-outline-variant pt-5 text-on-surface"
               >
-                <span className="text-primary">
+                <span className="text-on-surface">
                   <StepDrawing name={drawing} />
                 </span>
                 <span className="mt-4 text-2xl font-mono font-black text-primary">{index}</span>
                 <h3 className="mb-2 mt-2 font-headline text-base font-bold">{title}</h3>
-                <p className="text-xs leading-relaxed text-on-surface-variant">{text}</p>
-                <span className={`mt-6 text-[10px] font-mono uppercase tracking-wider ${index === "04" ? "font-bold text-primary" : "text-outline"}`}>
+                <p className="text-[15px] sm:text-sm leading-relaxed text-on-surface-variant">{text}</p>
+                <span className={`mt-6 text-[15px] sm:text-sm font-mono uppercase tracking-wider ${index === "04" ? "font-bold text-primary" : "text-outline"}`}>
                   {mark}
                 </span>
               </a>
@@ -553,7 +549,7 @@ export function StudioHome() {
           </div>
           <a
             href="/contact"
-            className="mt-10 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+            className="mt-10 inline-flex items-center gap-2 min-h-11 bg-primary px-6 py-3.5 text-[15px] font-medium text-on-primary hover:bg-primary-container active:bg-on-primary-fixed"
           >
             Parler d'un projet
           </a>
@@ -563,50 +559,50 @@ export function StudioHome() {
       {/* 5. FOUNDATIONAL STACK */}
       <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
         <div className="mb-14">
-          <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+          <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
             TECHNOLOGIE
           </span>
           <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight mt-1">
             La technologie derrière le produit.
           </h2>
-          <p className="text-on-surface-variant text-base mt-2 max-w-2xl">
+          <p className="text-on-surface-variant text-lg mt-2 max-w-2xl">
             On choisit l&apos;outil selon le produit : tenue en charge, performance, sécurité et maintenance d&apos;abord.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
           {/* Category 1 */}
           <div className="border-t border-outline-variant pt-6">
-            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-[15px] sm:text-sm font-mono font-bold text-on-surface uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Interface du produit
             </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Next.js</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Cadre
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>React</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Interface
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>TypeScript</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Code du produit
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>WordPress</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Plugins
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Expo</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Téléphone
                 </span>
               </li>
@@ -614,37 +610,37 @@ export function StudioHome() {
           </div>
           {/* Category 2 */}
           <div className="border-t border-outline-variant pt-6">
-            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-[15px] sm:text-sm font-mono font-bold text-on-surface uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Application et données
             </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Node.js</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Serveur
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>GraphQL</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   API
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>PostgreSQL</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Enregistrements
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>MongoDB</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Documents
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Power BI</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Tableaux
                 </span>
               </li>
@@ -652,31 +648,31 @@ export function StudioHome() {
           </div>
           {/* Category 3 */}
           <div className="border-t border-outline-variant pt-6">
-            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-[15px] sm:text-sm font-mono font-bold text-on-surface uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Livraison
             </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Redis</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   État rapide
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Firebase</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Connexion
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Cloudflare</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Devant le site
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Vercel</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Mise en ligne
                 </span>
               </li>
@@ -684,68 +680,68 @@ export function StudioHome() {
           </div>
           {/* Category 4 */}
           <div className="border-t border-outline-variant pt-6">
-            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-[15px] sm:text-sm font-mono font-bold text-on-surface uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Où ça tourne
             </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>OVHcloud</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Hébergement
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>API de modèles</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Dans le produit
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Hostinger</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Hébergement
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Namecheap</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Domaine
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Nindohost</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Hébergement
                 </span>
               </li>
             </ul>
           </div>
           <div className="border-t border-outline-variant pt-6">
-            <p className="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
+            <p className="text-[15px] sm:text-sm font-mono font-bold text-on-surface uppercase tracking-wider mb-4 pb-2 border-b border-outline-variant/30">
               Mesure et courrier
             </p>
             <ul className="space-y-3">
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Microsoft Clarity</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Sessions
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>PostHog</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Événements
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Mailgun</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Envoi
                 </span>
               </li>
               <li className="flex items-center justify-between text-sm font-semibold text-on-surface">
                 <span>Mailchimp</span>
-                <span className="text-[11px] font-mono text-outline">
+                <span className="text-[15px] sm:text-sm font-mono text-outline">
                   Liste
                 </span>
               </li>
@@ -766,7 +762,7 @@ export function StudioHome() {
                 loading="lazy"
                 className="h-10 w-10 grayscale opacity-60 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100"
               />
-              <span className="text-center text-xs font-semibold text-on-surface">
+              <span className="text-center text-[15px] sm:text-sm font-semibold text-on-surface">
                 {tool.name}
               </span>
             </div>
@@ -782,13 +778,13 @@ export function StudioHome() {
       <section id="engineering" className="w-full bg-surface-container py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-14">
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+            <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
               INGÉNIERIE
             </span>
             <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
               Fait pour la production, pas seulement pour la démo.
             </h2>
-            <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
+            <p className="text-on-surface-variant text-lg lg:text-lg mt-2 max-w-2xl">
               Une belle interface n&apos;est qu&apos;une partie d&apos;un bon logiciel.
             </p>
           </div>
@@ -800,7 +796,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     01
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="strategy" />
                   </div>
                 </div>
@@ -811,7 +807,7 @@ export function StudioHome() {
                   Des systèmes qui peuvent suivre le métier.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Des systèmes qui changent
               </div>
             </div>
@@ -822,7 +818,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     02
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="palette" />
                   </div>
                 </div>
@@ -833,7 +829,7 @@ export function StudioHome() {
                   Des API fiables, la logique métier et le traitement des données.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 API • Logique • Données
               </div>
             </div>
@@ -844,7 +840,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     03
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="terminal" />
                   </div>
                 </div>
@@ -855,7 +851,7 @@ export function StudioHome() {
                   Des modèles de données faits pour l&apos;usage réel.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Modèles • Dossiers • Usage
               </div>
             </div>
@@ -866,7 +862,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     04
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="smartphone" />
                   </div>
                 </div>
@@ -877,7 +873,7 @@ export function StudioHome() {
                   Hébergement, mise en ligne, sécurité et surveillance.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Hébergement • Mise en ligne • Surveillance
               </div>
             </div>
@@ -888,7 +884,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     05
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="smart_toy" />
                   </div>
                 </div>
@@ -899,7 +895,7 @@ export function StudioHome() {
                   Paiements, API, outils de communication et services externes.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Paiements • API • Outils
               </div>
             </div>
@@ -910,7 +906,7 @@ export function StudioHome() {
                   <span className="font-mono text-sm font-bold text-primary">
                     06
                   </span>
-                  <div className="text-primary">
+                  <div className="text-on-surface">
                     <Icon name="cloud_sync" />
                   </div>
                 </div>
@@ -921,7 +917,7 @@ export function StudioHome() {
                   Authentification, droits, et données tenues.
                 </p>
               </div>
-              <div className="mt-6 pt-4 text-xs font-mono text-outline">
+              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
                 Accès • Droits • Données
               </div>
             </div>
@@ -934,13 +930,13 @@ export function StudioHome() {
           {/* Philosophy (Left 6) */}
           <div className="lg:col-span-6 flex flex-col space-y-8">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+              <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
                 POURQUOI BYTE FORCE
               </span>
               <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight mt-1">
                 Un partenaire logiciel, pas seulement une équipe qui code.
               </h2>
-              <p className="text-on-surface-variant text-base mt-3 leading-relaxed">
+              <p className="text-on-surface-variant text-lg mt-3 leading-relaxed">
                 Le besoin, le produit et le système sont tenus ensemble.
               </p>
             </div>
@@ -949,7 +945,7 @@ export function StudioHome() {
                 <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Le métier d&apos;abord
                 </p>
-                <p className="text-xs text-on-surface-variant">
+                <p className="text-[15px] sm:text-sm text-on-surface-variant">
                   On comprend le métier avant l&apos;outil.
                 </p>
               </div>
@@ -957,7 +953,7 @@ export function StudioHome() {
                 <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Produit et technique
                 </p>
-                <p className="text-xs text-on-surface-variant">
+                <p className="text-[15px] sm:text-sm text-on-surface-variant">
                   On dessine le produit et la technique ensemble.
                 </p>
               </div>
@@ -965,7 +961,7 @@ export function StudioHome() {
                 <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Les vrais parcours
                 </p>
-                <p className="text-xs text-on-surface-variant">
+                <p className="text-[15px] sm:text-sm text-on-surface-variant">
                   On construit autour des parcours réels.
                 </p>
               </div>
@@ -973,7 +969,7 @@ export function StudioHome() {
                 <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Avec qui décide
                 </p>
-                <p className="text-xs text-on-surface-variant">
+                <p className="text-[15px] sm:text-sm text-on-surface-variant">
                   On travaille directement avec les décideurs.
                 </p>
               </div>
@@ -981,7 +977,7 @@ export function StudioHome() {
                 <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Fait pour évoluer
                 </p>
-                <p className="text-xs text-on-surface-variant">
+                <p className="text-[15px] sm:text-sm text-on-surface-variant">
                   Le logiciel peut suivre l&apos;entreprise.
                 </p>
               </div>
@@ -989,7 +985,7 @@ export function StudioHome() {
                 <p className="font-headline font-bold text-sm text-on-surface mb-1">
                   Le résultat
                 </p>
-                <p className="text-xs text-on-surface-variant">
+                <p className="text-[15px] sm:text-sm text-on-surface-variant">
                   On vise ce que le logiciel permet, pas seulement la livraison.
                 </p>
               </div>
@@ -998,7 +994,7 @@ export function StudioHome() {
           {/* Prominent Metrics Block (Right 6) */}
           <div className="lg:col-span-6 flex flex-col justify-between bg-inverse-surface p-8 text-inverse-on-surface lg:p-12">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest text-inverse-primary uppercase">
+              <span className="text-[15px] sm:text-sm font-mono font-bold tracking-widest text-inverse-primary uppercase">
                 EFFET SUR LE MÉTIER
               </span>
               <h3 className="text-2xl font-headline font-bold text-white mt-1 mb-8">
@@ -1017,12 +1013,12 @@ export function StudioHome() {
               ].map(([from, to, text]) => (
                 <li key={from} className="min-w-0 border-t border-inverse-on-surface/15 pt-4">
                   <p className="text-xl font-headline font-bold leading-tight text-white">{from}</p>
-                  <p className="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-inverse-primary">{to}</p>
+                  <p className="mt-1 text-[15px] sm:text-sm font-mono font-bold uppercase tracking-wider text-inverse-primary">{to}</p>
                   <p className="mt-1 text-sm leading-relaxed text-inverse-on-surface/70">{text}</p>
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-wrap items-start justify-between gap-3 border-t border-inverse-on-surface/10 pt-6 text-xs font-mono leading-relaxed text-inverse-on-surface/70">
+            <div className="mt-8 flex flex-wrap items-start justify-between gap-3 border-t border-inverse-on-surface/10 pt-6 text-[15px] sm:text-sm font-mono leading-relaxed text-inverse-on-surface/70">
               <span>On ne mesure pas le succès au nombre de lignes.</span>
               <span className="font-bold text-inverse-primary">
                 On le mesure à ce que le logiciel permet de faire.
@@ -1034,13 +1030,13 @@ export function StudioHome() {
       <section id="maintenance" className="w-full bg-surface-container py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-14">
-            <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">
+            <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
               APRÈS LA MISE EN LIGNE
             </span>
             <h2 className="text-3xl lg:text-5xl font-headline font-black text-on-surface tracking-tight mt-1">
               Maintenance et suivi.
             </h2>
-            <p className="text-on-surface-variant text-base lg:text-lg mt-2 max-w-2xl">
+            <p className="text-on-surface-variant text-lg lg:text-lg mt-2 max-w-2xl">
               Suivi, Suivi plus et Priorité sont des forfaits mensuels. Un correctif seul peut être chiffré, sans forfait. Les délais sont en jours ouvrés, sauf mention contraire.
             </p>
           </div>
@@ -1050,37 +1046,37 @@ export function StudioHome() {
                 <h3 className="text-xl font-headline font-bold text-on-surface">Suivi d&apos;un site en ligne</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Surveillance, copies hebdomadaires, mises à jour de sécurité.</p>
               </div>
-              <p className="mt-8 text-xs font-mono text-primary font-bold">Réponse sous 2 jours ouvrés</p>
+              <p className="mt-8 text-[15px] sm:text-sm font-mono text-on-surface font-bold">Réponse sous 2 jours ouvrés</p>
             </div>
             <div className="flex flex-col justify-between border-t border-outline-variant pt-6">
               <div>
                 <h3 className="text-xl font-headline font-bold text-on-surface">Forfait Suivi plus</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Le suivi, plus 5 heures par mois de correctifs et de modifications.</p>
               </div>
-              <p className="mt-8 text-xs font-mono text-primary font-bold">Réponse sous 1 jour ouvré</p>
+              <p className="mt-8 text-[15px] sm:text-sm font-mono text-on-surface font-bold">Réponse sous 1 jour ouvré</p>
             </div>
             <div className="flex flex-col justify-between border-t border-outline-variant pt-6">
               <div>
                 <h3 className="text-xl font-headline font-bold text-on-surface">Priorité sur le suivi</h3>
                 <p className="mt-3 text-sm text-on-surface-variant">Le suivi plus, plus le travail de performance et un rapport mensuel.</p>
               </div>
-              <p className="mt-8 text-xs font-mono text-primary font-bold">4 heures pour une panne critique</p>
+              <p className="mt-8 text-[15px] sm:text-sm font-mono text-on-surface font-bold">4 heures pour une panne critique</p>
             </div>
           </div>
           <a
             href="https://wa.me/212666650696?text=Le%20site%20ne%20r%C3%A9pond%20plus"
-            className="mt-10 inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-sm font-medium text-on-primary"
+            className="mt-10 inline-flex items-center gap-2 min-h-11 bg-primary px-6 py-3.5 text-[15px] font-medium text-on-primary hover:bg-primary-container active:bg-on-primary-fixed"
           >
             Le site ne répond plus ? WhatsApp
           </a>
         </div>
       </section>
       <section id="pricing" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">PÉRIMÈTRE</span>
+        <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">PÉRIMÈTRE</span>
         <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight mt-1">
           Ce qui change le prix.
         </h2>
-        <p className="text-on-surface-variant text-base mt-4 max-w-2xl">
+        <p className="text-on-surface-variant text-lg mt-4 max-w-2xl">
           Pas de prix public. Le travail suit le périmètre, les branchements, et le nombre de rôles. Un premier échange de 30 minutes est gratuit. Une lecture prend souvent quelques jours. Une première version prend souvent plusieurs semaines.
         </p>
         <div className="mt-8">
@@ -1093,15 +1089,15 @@ export function StudioHome() {
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8">
           <div className="border-t border-outline-variant py-4">
             <h3 className="font-headline font-bold text-sm">Accord de confidentialité sur demande</h3>
-            <p className="mt-1 text-xs text-on-surface-variant">Le besoin peut rester privé avant tout travail.</p>
+            <p className="mt-1 text-[15px] sm:text-sm text-on-surface-variant">Le besoin peut rester privé avant tout travail.</p>
           </div>
           <div className="border-t border-outline-variant py-4">
             <h3 className="font-headline font-bold text-sm">Essai avant la mise en ligne</h3>
-            <p className="mt-1 text-xs text-on-surface-variant">Vous voyez le produit sur un environnement d&apos;essai avant qu&apos;il soit public.</p>
+            <p className="mt-1 text-[15px] sm:text-sm text-on-surface-variant">Vous voyez le produit sur un environnement d&apos;essai avant qu&apos;il soit public.</p>
           </div>
           <div className="border-t border-outline-variant py-4">
             <h3 className="font-headline font-bold text-sm">Le code vous appartient</h3>
-            <p className="mt-1 text-xs text-on-surface-variant">Le dépôt et les comptes d&apos;hébergement vous reviennent. Les changements se relisent avant la mise en ligne. Les copies sont dans les forfaits de suivi.</p>
+            <p className="mt-1 text-[15px] sm:text-sm text-on-surface-variant">Le dépôt et les comptes d&apos;hébergement vous reviennent. Les changements se relisent avant la mise en ligne. Les copies sont dans les forfaits de suivi.</p>
           </div>
         </div>
         <p className="mt-6 text-sm text-on-surface-variant">
@@ -1113,7 +1109,7 @@ export function StudioHome() {
         </p>
       </section>
       <section id="faq" className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
-        <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase">AVANT L&apos;ÉCHANGE</span>
+        <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">AVANT L&apos;ÉCHANGE</span>
         <h2 className="text-3xl lg:text-4xl font-headline font-black text-on-surface tracking-tight mt-1">
           Les questions qui reviennent d&apos;abord.
         </h2>
@@ -1193,13 +1189,13 @@ export function StudioHome() {
       {/* 10. FINAL CTA / CONVERSION SECTION */}
       <section className="w-full bg-surface-container-high py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
-          <span className="text-xs font-mono font-bold tracking-widest text-primary uppercase mb-2">
+          <span className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm mb-2">
             PARLER D'UN PROJET
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-black text-on-surface tracking-tight leading-tight max-w-2xl">
             Un problème métier qu&apos;un logiciel pourrait résoudre ?
           </h2>
-          <p className="text-on-surface-variant text-base lg:text-lg mt-4 max-w-xl">
+          <p className="text-on-surface-variant text-lg lg:text-lg mt-4 max-w-xl">
             Dites ce que vous voulez construire, améliorer ou automatiser. On aide à en faire un produit. Réponse sous un jour ouvré.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
@@ -1221,7 +1217,7 @@ export function StudioHome() {
               label="Écrire à Byte Force"
             />
           </div>
-          <p className="mt-12 font-mono text-xs text-outline">
+          <p className="mt-12 font-mono text-[15px] sm:text-sm text-outline">
             Web · Mobile · SaaS · IA · Logiciel métier
           </p>
         </div>
