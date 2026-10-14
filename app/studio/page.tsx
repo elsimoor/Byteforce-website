@@ -42,8 +42,14 @@ const places = [
 ];
 
 export default function AboutPage() {
-  const featured = featuredOrder.map((slug) => withShot(slug)).filter((project) => project !== null);
-  const stage = windows.map((item) => ({ ...item, project: withShot(item.slug) })).filter((item) => item.project);
+  const featured = featuredOrder.flatMap((slug) => {
+    const project = withShot(slug);
+    return project ? [project] : [];
+  });
+  const stage = windows.flatMap((item) => {
+    const project = withShot(item.slug);
+    return project ? [{ slot: item.slot, project }] : [];
+  });
 
   return (
     <main>
