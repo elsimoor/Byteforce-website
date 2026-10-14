@@ -144,7 +144,7 @@ export function StudioHome() {
             </Link>
           ))}
         </div>
-        <OfferFlows />
+        {/* <OfferFlows /> */}
       </section>
       <section className="w-full bg-surface py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
