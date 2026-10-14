@@ -156,6 +156,99 @@ function Lattice({ x, y }: { x: number; y: number }) {
   );
 }
 
+const halves = ["comptes", "donnees", "cassent", "ligne", "depot", "page"] as const;
+
+export function HalfMark({ name }: { name: (typeof halves)[number] }) {
+  return (
+    <svg viewBox="0 0 220 112" className="mb-3 h-24 w-full text-secondary" aria-hidden="true" {...frame}>
+      {name === "comptes" ? <Comptes /> : null}
+      {name === "donnees" ? <Donnees /> : null}
+      {name === "cassent" ? <Cassent /> : null}
+      {name === "ligne" ? <Ligne /> : null}
+      {name === "depot" ? <Depot /> : null}
+      {name === "page" ? <PageForm /> : null}
+    </svg>
+  );
+}
+
+function Comptes() {
+  return (
+    <g>
+      <WindowFrame x={16} y={8} w={188} h={96} />
+      <Person x={52} y={40} />
+      <path d="M78 58h28" />
+      <rect x="112" y="42" width="72" height="22" rx="3" fill="var(--color-surface-container)" />
+      <path d="M122 53h40" />
+      <Person x={52} y={78} />
+      <path d="M78 92h28" strokeDasharray="3 3" />
+      <rect x="112" y="76" width="72" height="18" rx="3" strokeDasharray="4 3" />
+    </g>
+  );
+}
+
+function Donnees() {
+  return (
+    <g>
+      <WindowFrame x={12} y={16} w={120} h={80} />
+      <path d="M28 48h88M28 64h64" />
+      <rect x="28" y="72" width="72" height="12" rx="2" fill="var(--color-surface-container)" />
+      <rect x="118" y="36" width="86" height="60" rx="8" fill="var(--color-surface-container-lowest)" />
+      <path d="M132 58h58M132 74h40" />
+    </g>
+  );
+}
+
+function Cassent() {
+  return (
+    <g>
+      <WindowFrame x={16} y={8} w={188} h={96} />
+      <rect x="32" y="36" width="100" height="18" rx="3" strokeDasharray="4 3" />
+      <path d="M32 68h70" />
+      <path d="M32 78h70" opacity="0.45" />
+      <circle cx="168" cy="58" r="16" />
+      <path d="M156 70l24-24" />
+    </g>
+  );
+}
+
+function Ligne() {
+  return (
+    <g>
+      <rect x="12" y="40" width="70" height="28" rx="14" fill="var(--color-surface-container)" />
+      <path d="M24 54h46" />
+      <path d="M90 54h28" />
+      <path d="M112 48l8 6-8 6" fill="currentColor" stroke="none" />
+      <WindowFrame x={128} y={22} w={80} h={68} />
+      <path d="M148 62l10 10 18-22" />
+    </g>
+  );
+}
+
+function Depot() {
+  return (
+    <g>
+      <rect x="16" y="28" width="78" height="64" rx="6" fill="var(--color-surface-container)" />
+      <path d="M28 48h52M28 62h40M28 76h46" />
+      <path d="M102 60h28" />
+      <path d="M124 54l8 6-8 6" fill="currentColor" stroke="none" />
+      <Person x={168} y={48} />
+    </g>
+  );
+}
+
+function PageForm() {
+  return (
+    <g>
+      <WindowFrame x={12} y={10} w={140} h={92} />
+      <path d="M28 40h88" />
+      <rect x="28" y="52" width="108" height="16" rx="3" fill="var(--color-surface-container)" />
+      <rect x="28" y="76" width="48" height="14" rx="3" fill="currentColor" opacity="0.35" />
+      <path d="M160 56h24" />
+      <path d="M178 50l8 6-8 6" fill="currentColor" stroke="none" />
+    </g>
+  );
+}
+
 function Party({ x, y, label, cart = false }: { x: number; y: number; label: string; cart?: boolean }) {
   return (
     <g>

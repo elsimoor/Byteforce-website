@@ -9,7 +9,7 @@ import { studioSections } from "@/lib/studio-sections";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { technologies } from "@/lib/tech-articles";
-import { OfferFlows, OfferMark } from "@/components/offer-drawings";
+import { HalfMark, OfferFlows, OfferMark } from "@/components/offer-drawings";
 
 const offers = [
   {
@@ -288,16 +288,19 @@ export function StudioHome() {
             </p>
           </div>
           <ol className="grid sm:grid-cols-2 lg:col-span-7 lg:border-l lg:border-outline-variant lg:pl-10">
-            {[
-              ["Comptes et droits", "Qui entre, qui voit un dossier, et qui ne doit pas le voir."],
-              ["Données", "Ce qui est saisi reste après la fermeture de l'onglet, avec une copie."],
-              ["Cas qui cassent", "Le champ vide, le double envoi, le rôle sans le droit."],
-              ["Mise en ligne", "Le nom de domaine, l'hébergement, et une adresse qui répond."],
-              ["Le dépôt", "Le code et les comptes livrés reviennent à l'entreprise."],
-              ["Page et formulaire", "L'offre se trouve, et le message part vraiment."],
-            ].map(([title, text], index) => (
+            {(
+              [
+                ["comptes", "Comptes et droits", "Qui entre, qui voit un dossier, et qui ne doit pas le voir."],
+                ["donnees", "Données", "Ce qui est saisi reste après la fermeture de l'onglet, avec une copie."],
+                ["cassent", "Cas qui cassent", "Le champ vide, le double envoi, le rôle sans le droit."],
+                ["ligne", "Mise en ligne", "Le nom de domaine, l'hébergement, et une adresse qui répond."],
+                ["depot", "Le dépôt", "Le code et les comptes livrés reviennent à l'entreprise."],
+                ["page", "Page et formulaire", "L'offre se trouve, et le message part vraiment."],
+              ] as const
+            ).map(([mark, title, text], index) => (
               <li key={title} className="border-t border-outline-variant py-5 sm:px-4">
-                <span className="font-mono text-[15px] sm:text-sm font-bold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                <HalfMark name={mark} />
+                <span className="font-mono text-[15px] font-bold text-primary sm:text-sm">{String(index + 1).padStart(2, "0")}</span>
                 <h3 className="mt-2 font-headline text-lg font-bold text-on-surface">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">{text}</p>
               </li>
