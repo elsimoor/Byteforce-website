@@ -9,6 +9,7 @@ import { studioSections } from "@/lib/studio-sections";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { technologies } from "@/lib/tech-articles";
+import { OfferFlows, OfferMark } from "@/components/offer-drawings";
 
 const offers = [
   {
@@ -47,58 +48,6 @@ const offerFrame = [
   "border-t border-outline-variant py-5 lg:border-t-0 lg:border-r lg:px-6",
   "border-t border-outline-variant py-5 sm:pl-6 lg:border-t-0 lg:pl-6",
 ];
-
-function OfferMark({ name }: { name: (typeof offers)[number]["mark"] }) {
-  const common = {
-    viewBox: "0 0 160 64",
-    className: "mb-4 h-14 w-full",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 1.5,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-    "aria-hidden": true,
-  };
-  if (name === "logiciel") {
-    return (
-      <svg {...common}>
-        <rect x="28" y="8" width="104" height="14" />
-        <rect x="28" y="26" width="104" height="14" />
-        <rect x="28" y="44" width="104" height="14" />
-        <path d="M38 15h36M38 33h28M38 51h44" />
-      </svg>
-    );
-  }
-  if (name === "saas") {
-    return (
-      <svg {...common}>
-        <rect x="14" y="12" width="54" height="40" />
-        <rect x="92" y="12" width="54" height="40" />
-        <path d="M24 26h34M24 36h22M102 26h34M102 36h22" />
-        <path d="M68 32h24" strokeDasharray="3 3" />
-      </svg>
-    );
-  }
-  if (name === "ia") {
-    return (
-      <svg {...common}>
-        <rect x="12" y="14" width="72" height="36" />
-        <path d="M22 28h52M22 40h32" />
-        <path d="M84 32h16" strokeDasharray="3 3" />
-        <rect x="104" y="14" width="44" height="36" strokeDasharray="4 3" />
-      </svg>
-    );
-  }
-  return (
-    <svg {...common}>
-      <circle cx="36" cy="22" r="8" />
-      <circle cx="80" cy="22" r="8" />
-      <circle cx="124" cy="22" r="8" />
-      <path d="M44 22h28M88 22h28" />
-      <rect x="20" y="40" width="120" height="14" />
-    </svg>
-  );
-}
 
 export function StudioHome() {
   return (
@@ -195,6 +144,7 @@ export function StudioHome() {
             </Link>
           ))}
         </div>
+        <OfferFlows />
       </section>
       <section className="w-full bg-surface py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
