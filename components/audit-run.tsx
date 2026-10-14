@@ -243,7 +243,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
             <li key={chapter}>
               <a
                 href={`#audit-${chapter}`}
-                className={`audit-jump${loading ? " audit-live" : ""}`}
+                className={`border-b border-ink pb-0.5 text-sm${loading ? " audit-live" : ""}`}
                 aria-label={loading ? `${chapter}, en cours` : value !== null ? `${chapter}, ${value} sur 100` : chapter}
               >
                 {chapter}

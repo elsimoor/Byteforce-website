@@ -466,22 +466,6 @@ main:not([data-home]) a.border-b {
   }
 }
 
-.audit-jump {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  padding: 0.35rem 0.6rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.audit-jump:hover {
-  background: var(--color-primary-container);
-}
-
 .audit-tablist {
   background: var(--color-line);
 }
