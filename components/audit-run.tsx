@@ -333,7 +333,7 @@ export function AuditRun({ url, pick = true, children }: { url: string; pick?: b
           Le détail, par catégorie.
         </h2>
         {live && listed.length === 0 ? <AuditMorph seed={url} /> : null}
-        <div className="mt-10 grid gap-6 md:grid-cols-1">
+        <div className="mt-10 flex flex-col gap-6">
           {passage.map((chapter) => {
             const value = chapterValue(shown, chapter);
             const standing = chapterStanding(listed, chapter, done);

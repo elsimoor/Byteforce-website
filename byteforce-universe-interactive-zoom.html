@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>ByteForce — Technologie en orbite</title>
+<style>
+:root{--ink:#060713;--ice:#b9f4ff;--blue:#557aff;--violet:#8b5cff;--pink:#ff70cf;--gold:#ffc98a}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--ink);color:#f5f6ff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body{padding:clamp(12px,3vw,36px);display:grid;place-items:center}
+.universe{width:min(1280px,100%);position:relative;isolation:isolate;overflow:hidden;border-radius:28px;background:
+ radial-gradient(ellipse at 50% 55%,rgba(53,59,169,.23),transparent 31%),
+ radial-gradient(ellipse at 14% 82%,rgba(116,35,160,.15),transparent 34%),
+ radial-gradient(ellipse at 88% 13%,rgba(22,121,186,.14),transparent 30%),
+ #070815;min-height:800px;box-shadow:0 40px 130px #0008,inset 0 0 0 1px #b5c8ff12}
+#cosmos{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.topline{position:absolute;left:28px;right:28px;top:24px;display:flex;justify-content:space-between;align-items:center;color:#7984b0;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+.topline .live{display:flex;align-items:center;gap:8px}.live i{display:block;width:5px;height:5px;border-radius:50%;background:#7effdf;box-shadow:0 0 12px #7effdf}
+.intro{position:relative;z-index:4;text-align:center;padding:76px 20px 0;pointer-events:none}
+.kicker{font-size:10px;font-weight:750;letter-spacing:.3em;text-transform:uppercase;color:#a9baff;display:flex;align-items:center;justify-content:center;gap:12px}
+.kicker:before,.kicker:after{content:"";height:1px;width:28px;background:linear-gradient(90deg,transparent,#8b9dff)}
+.kicker:after{transform:rotate(180deg)}
+h1{font-size:clamp(34px,5.6vw,68px);letter-spacing:-.075em;line-height:.98;font-weight:580;margin:20px 0 15px;text-shadow:0 0 44px #8194ff27}
+h1 span{background:linear-gradient(100deg,#fff 8%,#a7c6ff 40%,#d8a7ff 72%,#89f4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{font-size:14px;line-height:1.7;max-width:490px;margin:auto;color:#9ea8ca}
+.scene{height:510px;position:relative;display:grid;place-items:center;margin-top:-5px;perspective:1100px}
+.art{position:relative;width:min(850px,95vw);height:490px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-16deg);transition:transform .35s ease-out}
+.vortex{position:absolute;left:50%;top:50%;width:530px;height:530px;max-width:80vw;max-height:80vw;transform:translate(-50%,-50%);border-radius:50%;
+ background:repeating-radial-gradient(ellipse at center,transparent 0 13px,#8b7aff0b 14px 15px,transparent 16px 25px);
+ filter:drop-shadow(0 0 25px #6d58ff12);animation:vortex 42s linear infinite}
+@keyframes vortex{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px solid transparent;transform:translate(-50%,-50%);transform-style:preserve-3d}
+.ring:before,.ring:after{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid transparent}
+.r1{width:205px;height:205px;border-top-color:#8ff3ff99;border-right-color:#9e8dff55;box-shadow:0 -5px 24px #6feeff0a;animation:spin 13s linear infinite}
+.r1:after{inset:7px;border-bottom-color:#ff7bdf80;transform:rotate(48deg)}
+.r2{width:320px;height:320px;border-left-color:#9c85ff9c;border-bottom-color:#7feaff59;animation:spin 19s linear infinite reverse}
+.r2:before{inset:10px;border-top-color:#ff9de866;transform:rotate(28deg)}
+.r3{width:445px;height:445px;border-top-color:#7edfff4a;border-right-color:#8f7bff6b;border-bottom-color:#ff8fe72e;animation:spin 28s linear infinite}
+.r3:after{inset:18px;border-left-color:#81d7ff38;transform:rotate(67deg)}
+.r4{width:575px;height:575px;border-left-color:#89a4ff35;border-top-color:#8b75ff2e;animation:spin 39s linear infinite reverse}
+.r4:before{inset:23px;border-right-color:#6feaff32;transform:rotate(32deg)}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.core{position:absolute;left:50%;top:50%;width:160px;height:160px;transform:translate(-50%,-50%) rotateX(-58deg) rotateZ(16deg);border-radius:50%;z-index:5;display:grid;place-items:center}
+.core-halo{position:absolute;inset:-72px;border-radius:50%;background:radial-gradient(circle,#7c6aff3d 0,#4768ff25 30%,#9a54ff12 52%,transparent 72%);filter:blur(10px);animation:breath 4.5s ease-in-out infinite}
+.core-planet{position:absolute;inset:9px;border-radius:50%;overflow:hidden;background:
+ radial-gradient(ellipse at 29% 22%,#e6f4ff 0,#94baff 3%,#3e5fbd 12%,transparent 31%),
+ radial-gradient(ellipse at 70% 78%,#b05dff 0,#3d247e 24%,transparent 50%),
+ radial-gradient(circle at 40% 38%,#243d8b,#111637 51%,#050713 74%);
+ box-shadow:inset -20px -15px 35px #000b,inset 10px 8px 26px #7fcaff55,0 0 35px #8b83ff4d,0 0 0 1px #d6e3ffb0}
+.core-planet:before{content:"";position:absolute;inset:-15%;background:repeating-linear-gradient(132deg,transparent 0 13px,#9ed5ff18 14px 15px,transparent 16px 28px);transform:rotate(23deg);border-radius:50%;animation:surface 22s linear infinite}
+.core-planet:after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(115deg,#ffffff2b,transparent 28% 65%,#0009)}
+@keyframes surface{to{transform:rotate(383deg)}}
+.core-orbit{position:absolute;inset:-18px;border:1px solid #b6d8ff99;border-radius:50%;transform:rotate(-25deg) scaleY(.34);box-shadow:0 0 12px #8eeaff24}
+.core-orbit:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#c3faff;top:15%;left:10%;box-shadow:0 0 18px 5px #76eaffaa}
+.core-type{position:relative;z-index:2;text-align:center;transform:translateY(1px)}
+.core-type b{display:block;font-size:29px;letter-spacing:-.12em;text-shadow:0 0 18px #b6d9ff}
+.core-type small{display:block;margin-top:1px;font-size:8px;font-weight:800;letter-spacing:.28em;color:#d3e4ff}
+@keyframes breath{0%,100%{transform:scale(.9);opacity:.65}50%{transform:scale(1.13);opacity:1}}
+.planet{position:absolute;left:50%;top:0;width:44px;height:44px;margin:-22px;transform-style:preserve-3d;animation:counter linear infinite}
+@keyframes counter{to{transform:rotate(-360deg)}}
+.r1 .planet{animation-duration:13s}.r2 .planet{animation-duration:19s;animation-direction:reverse}.r3 .planet{animation-duration:28s}.r4 .planet{animation-duration:39s;animation-direction:reverse}
+.node{position:relative;width:44px;height:44px;display:grid;place-items:center;border:1px solid #b7c9ff68;border-radius:15px;background:linear-gradient(145deg,#1b2147ee,#0b0d20f5);box-shadow:0 10px 24px #0008,inset 0 1px #ffffff18;cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s}
+.node:before{content:"";position:absolute;inset:-5px;border:1px solid #a7c4ff16;border-radius:19px}
+.node:hover,.node:focus-visible{transform:scale(1.18) translateZ(15px);border-color:#a4f3ff;box-shadow:0 0 28px #71dfff2d,0 10px 24px #0009;outline:none}
+.glyph{font-size:16px;font-weight:850;letter-spacing:-.06em;color:#e5eaff;text-shadow:0 0 13px #8daaff65}
+.node[data-tone=cyan] .glyph{color:#91f1ff}.node[data-tone=violet] .glyph{color:#c7a9ff}.node[data-tone=pink] .glyph{color:#ffa5e3}.node[data-tone=green] .glyph{color:#9af5c6}.node[data-tone=gold] .glyph{color:#ffd39b}
+.node-label{position:absolute;top:52px;left:50%;transform:translateX(-50%) rotateX(-58deg) rotateZ(16deg);font-size:10px;letter-spacing:.02em;font-weight:700;color:#e3e8ff;white-space:nowrap;text-shadow:0 2px 10px #000;pointer-events:none}
+.annotation{position:absolute;z-index:4;display:flex;align-items:center;gap:9px;color:#a5b0d4;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.annotation:before{content:"";width:30px;height:1px;background:linear-gradient(90deg,#8faaff,#8faaff00)}
+.annotation.a{left:7%;top:46%}.annotation.b{right:5%;top:32%}.annotation.c{right:9%;bottom:14%}
+.annotation.b:before{order:2;transform:rotate(180deg)}
+.annotation.c:before{order:2;transform:rotate(180deg)}
+.bottom{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 34px 28px;color:#7580a7;font-size:11px}
+.bottom .instruction{display:flex;align-items:center;gap:8px}.spark{color:#8ef2ff;text-shadow:0 0 12px #8ef2ff}
+.bottom .meta{letter-spacing:.18em;text-transform:uppercase;font-size:9px}
+
+/* Cinematic planet focus */
+.focus-backdrop{position:absolute;inset:0;z-index:8;background:transparent;backdrop-filter:blur(0);pointer-events:none;transition:background .8s ease,backdrop-filter .8s ease}
+.universe.is-focused .focus-backdrop{background:rgba(3,5,17,.57);backdrop-filter:blur(5px);pointer-events:auto}
+.universe.is-focused .art{transition:transform 1.25s cubic-bezier(.16,1,.3,1),filter .8s ease;filter:saturate(.72)}
+.universe.is-focused .ring:not(.selected-ring){opacity:.07!important;filter:blur(2px);transition:opacity .7s ease,filter .7s ease}
+.universe.is-focused .ring.selected-ring{opacity:1!important;filter:drop-shadow(0 0 24px rgba(105,218,255,.28));transition:opacity .7s ease,filter .7s ease}
+.universe.is-focused .core{opacity:.12;transition:opacity .6s ease}
+.node.is-selected{z-index:12;transform:scale(1.5);border-color:#b5f7ff;box-shadow:0 0 0 8px rgba(126,225,255,.07),0 0 42px rgba(104,215,255,.6),inset 0 0 18px rgba(119,203,255,.2)}
+.node.is-selected:after{content:"";position:absolute;inset:-13px;border:1px solid rgba(156,232,255,.5);border-radius:20px;animation:focusPulse 2.4s ease-in-out infinite}
+@keyframes focusPulse{0%,100%{transform:scale(.92);opacity:.45}50%{transform:scale(1.12);opacity:1}}
+.planet-detail{position:absolute;z-index:15;left:50%;top:54%;width:min(330px,calc(100% - 34px));padding:23px 24px 21px;transform:translate(-50%,-25%) scale(.88);opacity:0;pointer-events:none;border-radius:20px;border:1px solid rgba(174,202,255,.23);background:linear-gradient(145deg,rgba(22,29,62,.97),rgba(8,11,27,.98));box-shadow:0 25px 90px rgba(0,0,0,.5),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(20px);transition:opacity .5s ease .75s,transform .7s cubic-bezier(.16,1,.3,1) .7s}
+.universe.is-focused .planet-detail{opacity:1;pointer-events:auto;transform:translate(-50%,-25%) scale(1)}
+.detail-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}.detail-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#27386a,#141a3a);border:1px solid rgba(158,199,255,.35);color:#a8f2ff;font-size:17px;font-weight:800;box-shadow:0 0 25px rgba(105,181,255,.12)}
+.detail-kicker{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#91a4d5;margin-bottom:4px}.detail-title{font-size:23px;letter-spacing:-.05em;font-weight:650}
+.detail-description{font-size:12px;line-height:1.75;color:#b5bfdc;margin:0 0 18px}
+.detail-actions{display:flex;align-items:center;gap:12px}.learn-more{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:#08101f;background:linear-gradient(100deg,#b8f3ff,#a9bdff);border-radius:999px;padding:10px 15px;font-size:11px;font-weight:800;transition:transform .2s,box-shadow .2s}
+.learn-more:hover{transform:translateY(-2px);box-shadow:0 8px 24px #85cfff30}.close-focus{border:0;background:transparent;color:#aab5d7;font:inherit;font-size:11px;cursor:pointer;padding:9px 4px}.close-focus:hover{color:white}
+@media(max-width:760px){.universe.is-focused .art{transform:scale(.72) rotateX(58deg) rotateZ(-16deg)!important}.universe.is-focused .planet-detail{top:58%;transform:translate(-50%,-15%) scale(1)}.planet-detail{padding:19px}}
+@media(max-width:460px){.universe.is-focused .art{transform:scale(.58) rotateX(58deg) rotateZ(-16deg)!important}.universe.is-focused .planet-detail{top:58%}}
+@media(prefers-reduced-motion:reduce){.planet-detail,.focus-backdrop,.universe.is-focused .art{transition:none!important}.node.is-selected:after{animation:none!important}}
+
+@media(max-width:760px){
+ .universe{min-height:720px;border-radius:20px}.topline{left:18px;right:18px;top:18px;font-size:8px}
+ .intro{padding-top:72px}.subtitle{font-size:12px;max-width:330px}
+ .scene{height:450px;margin-top:10px}.art{width:700px;height:430px;transform:scale(.72) rotateX(58deg) rotateZ(-16deg)}
+ .annotation{display:none}.bottom{padding:0 20px 24px;justify-content:center;text-align:center}.bottom .meta{display:none}
+}
+@media(max-width:460px){.universe{min-height:640px}.scene{height:380px}.art{transform:scale(.58) rotateX(58deg) rotateZ(-16deg)}h1{font-size:37px}.topline{letter-spacing:.12em}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section class="universe" aria-label="Univers technologique ByteForce">
+ <canvas id="cosmos" aria-hidden="true"></canvas>
+ <div class="focus-backdrop" id="focus-backdrop"></div>
+ <aside class="planet-detail" id="planet-detail" aria-live="polite" aria-hidden="true">
+  <div class="detail-top"><div class="detail-icon" id="detail-icon">N</div><div><div class="detail-kicker">Technologie de notre univers</div><div class="detail-title" id="detail-title">Next.js</div></div></div>
+  <p class="detail-description" id="detail-description">Une base moderne pour créer des expériences web rapides, accessibles et évolutives.</p>
+  <div class="detail-actions"><a class="learn-more" id="detail-link" href="/#">En savoir plus <span aria-hidden="true">↗</span></a><button class="close-focus" id="close-focus" type="button">← Retour à l’univers</button></div>
+ </aside>
+ <div class="topline"><span>BYTEFORCE / SYSTEM 01</span><span class="live"><i></i> Écosystème actif</span></div>
+ <header class="intro">
+  <div class="kicker">L'ingénierie derrière vos idées</div>
+  <h1>Un univers.<br><span>Des possibilités infinies.</span></h1>
+  <p class="subtitle">Des technologies qui gravitent autour d'une même ambition : créer des produits numériques utiles, solides et évolutifs.</p>
+ </header>
+ <div class="scene" id="scene">
+  <div class="art" id="art">
+   <div class="vortex"></div><div class="ring r4">
+    <div class="planet" style="left:50%;top:0"><button class="node" data-tone="pink" data-name="WordPress" aria-label="WordPress"><span class="glyph">W</span></button><span class="node-label">WordPress</span></div>
+    <div class="planet" style="left:100%;top:50%"><button class="node" data-tone="cyan" data-name="Vercel" aria-label="Vercel"><span class="glyph">▲</span></button><span class="node-label">Vercel</span></div>
+    <div class="planet" style="left:0;top:50%"><button class="node" data-tone="gold" data-name="Power BI" aria-label="Power BI"><span class="glyph">▥</span></button><span class="node-label">Power BI</span></div>
+   </div>
+   <div class="ring r3">
+    <div class="planet" style="left:50%;top:0"><button class="node" data-tone="green" data-name="MongoDB" aria-label="MongoDB"><span class="glyph">◖</span></button><span class="node-label">MongoDB</span></div>
+    <div class="planet" style="left:100%;top:50%"><button class="node" data-tone="cyan" data-name="Cloudflare" aria-label="Cloudflare"><span class="glyph">☁</span></button><span class="node-label">Cloudflare</span></div>
+    <div class="planet" style="left:0;top:50%"><button class="node" data-tone="violet" data-name="Firebase" aria-label="Firebase"><span class="glyph">▲</span></button><span class="node-label">Firebase</span></div>
+   </div>
+   <div class="ring r2">
+    <div class="planet" style="left:50%;top:0"><button class="node" data-tone="violet" data-name="TypeScript" aria-label="TypeScript"><span class="glyph">TS</span></button><span class="node-label">TypeScript</span></div>
+    <div class="planet" style="left:100%;top:50%"><button class="node" data-tone="green" data-name="Node.js" aria-label="Node.js"><span class="glyph">⬡</span></button><span class="node-label">Node.js</span></div>
+    <div class="planet" style="left:0;top:50%"><button class="node" data-tone="gold" data-name="GraphQL" aria-label="GraphQL"><span class="glyph">◆</span></button><span class="node-label">GraphQL</span></div>
+   </div>
+   <div class="ring r1">
+    <div class="planet" style="left:50%;top:0"><button class="node" data-tone="cyan" data-name="Next.js" aria-label="Next.js"><span class="glyph">N</span></button><span class="node-label">Next.js</span></div>
+    <div class="planet" style="left:100%;top:50%"><button class="node" data-tone="violet" data-name="React" aria-label="React"><span class="glyph">⚛</span></button><span class="node-label">React</span></div>
+   </div>
+   <div class="core"><div class="core-halo"></div><div class="core-planet"></div><div class="core-orbit"></div><div class="core-type"><b>BF</b><small>BYTEFORCE</small></div></div>
+  </div>
+  <div class="annotation a">Architecture</div><div class="annotation b">Intelligence</div><div class="annotation c">Infrastructure</div>
+ </div>
+ <footer class="bottom"><div class="instruction"><span class="spark">✳</span><span id="hint">Explorez les orbites — chaque technologie a son rôle.</span></div><div class="meta">Designing what comes next · MA</div></footer>
+</section>
+<script>
+(() => {
+ const canvas=document.querySelector('#cosmos'),ctx=canvas.getContext('2d'),host=document.querySelector('.universe');
+ let w=0,h=0,dpr=1,stars=[],pointer={x:.5,y:.5},raf=0;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function resize(){
+  const r=host.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(devicePixelRatio||1,2);
+  canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  stars=Array.from({length:Math.floor(w*h/1800)},()=>({x:Math.random()*w,y:Math.random()*h,z:.3+Math.random()*.7,r:.3+Math.random()*1.1,p:Math.random()*6.28}));
+ }
+ function draw(t){
+  ctx.clearRect(0,0,w,h);
+  const g=ctx.createRadialGradient(w*.5,h*.58,0,w*.5,h*.58,Math.max(w,h)*.65);
+  g.addColorStop(0,'rgba(47,62,158,.10)');g.addColorStop(.5,'rgba(24,32,91,.04)');g.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+  for(const s of stars){
+   const twinkle=.35+.65*(.5+.5*Math.sin(t*.0007+s.p));
+   ctx.beginPath();ctx.arc(s.x+pointer.x*8*s.z,s.y+pointer.y*6*s.z,s.r,0,Math.PI*2);
+   ctx.fillStyle=`rgba(${s.z>.8?'190,218,255':'126,151,225'},${twinkle*s.z})`;ctx.fill();
+   if(s.z>.94){ctx.fillStyle=`rgba(149,201,255,${twinkle*.18})`;ctx.fillRect(s.x-4,s.y,.8,8);ctx.fillRect(s.x-4,s.y,8,.8)}
+  }
+  // Fine drifting cosmic dust
+  for(let i=0;i<26;i++){
+   const x=(i*137.7+t*.003*(i%3+1))%w,y=(i*79.3+Math.sin(t*.0002+i)*18)%h;
+   ctx.fillStyle=`rgba(138,129,255,${.08+(i%4)*.025})`;ctx.fillRect(x,y,.8,.8);
+  }
+  if(!reduced)raf=requestAnimationFrame(draw);
+ }
+ resize();draw(0);if(!reduced)raf=requestAnimationFrame(draw);
+ addEventListener('resize',resize,{passive:true});
+ const art=document.querySelector('#art'),scene=document.querySelector('#scene'),hint=document.querySelector('#hint');
+ scene.addEventListener('pointermove',e=>{
+  if(innerWidth<760||e.pointerType==='touch'||document.querySelector('.universe').classList.contains('is-focused'))return;
+  const r=scene.getBoundingClientRect();pointer.x=(e.clientX-r.left)/r.width-.5;pointer.y=(e.clientY-r.top)/r.height-.5;
+  art.style.transform=`rotateX(${58-pointer.y*4}deg) rotateZ(${-16+pointer.x*5}deg)`;
+ });
+ scene.addEventListener('pointerleave',()=>{art.style.transform=innerWidth<760?'scale(.72) rotateX(58deg) rotateZ(-16deg)':'rotateX(58deg) rotateZ(-16deg)';pointer={x:.5,y:.5}});
+ const universe=document.querySelector('.universe');
+ const detail=document.querySelector('#planet-detail'),detailTitle=document.querySelector('#detail-title');
+ const detailIcon=document.querySelector('#detail-icon'),detailDescription=document.querySelector('#detail-description');
+ const detailLink=document.querySelector('#detail-link'),closeButton=document.querySelector('#close-focus');
+ const nodes=[...document.querySelectorAll('.node')];
+ const descriptions={
+  'Next.js':'Une base moderne pour créer des expériences web rapides, accessibles et évolutives.',
+  'React':'Des interfaces réactives, modulaires et pensées autour des usages réels.',
+  'TypeScript':'Un code plus fiable et plus facile à faire évoluer à mesure que votre produit grandit.',
+  'Node.js':'Des API et des services backend conçus pour connecter vos applications et vos données.',
+  'GraphQL':'Des échanges de données précis entre vos interfaces, vos services et vos systèmes.',
+  'MongoDB':'Une base de données flexible pour faire évoluer vos produits et leurs fonctionnalités.',
+  'Cloudflare':'Une couche de performance, de sécurité et de distribution pour vos services web.',
+  'Firebase':'Des services applicatifs qui accélèrent le développement et certaines fonctionnalités temps réel.',
+  'WordPress':'Des sites et plateformes éditoriales adaptés à vos besoins, avec des développements sur mesure.',
+  'Vercel':'Un déploiement moderne pour livrer des expériences web avec rapidité et fiabilité.',
+  'Power BI':'Des données transformées en tableaux de bord utiles pour mieux piloter votre activité.'
+ };
+ let selectedNode=null,focusTimer=0;
+ function openPlanet(node){
+  if(selectedNode===node)return;
+  if(selectedNode)closePlanet();
+  selectedNode=node;universe.classList.add('is-focused');
+  nodes.forEach(n=>n.classList.toggle('is-selected',n===node));
+  document.querySelectorAll('.ring').forEach(r=>r.classList.toggle('selected-ring',r===node.closest('.ring')));
+  nodes.forEach(n=>n.disabled=true);
+  hint.textContent=`Approche en cours : ${node.dataset.name}`;
+  detail.setAttribute('aria-hidden','false');
+  detailTitle.textContent=node.dataset.name;
+  detailIcon.textContent=node.querySelector('.glyph')?.textContent||'✦';
+  detailDescription.textContent=descriptions[node.dataset.name]||'Une technologie au service de produits numériques robustes et évolutifs.';
+  detailLink.href='/#';
+  const rect=node.getBoundingClientRect(),sceneRect=scene.getBoundingClientRect();
+  const x=(rect.left+rect.width/2-sceneRect.left)/sceneRect.width-.5;
+  const y=(rect.top+rect.height/2-sceneRect.top)/sceneRect.height-.5;
+  if(innerWidth>=760)art.style.transform=`translate3d(${-x*100}px,${-y*70}px,180px) rotateX(${58-pointer.y*2}deg) rotateZ(${-16+pointer.x*2}deg) scale(1.65)`;
+  node.closest('.ring').style.zIndex='10';
+  // Dramatic push-in first; freeze every orbit only after the zoom settles.
+  focusTimer=window.setTimeout(()=>{
+   document.querySelectorAll('.ring,.planet,.vortex').forEach(el=>el.style.animationPlayState='paused');
+   hint.textContent=`${node.dataset.name} · Découvrez son rôle dans notre écosystème.`;
+   nodes.forEach(n=>n.disabled=false);
+   closeButton.focus({preventScroll:true});
+  },1350);
+ }
+ function closePlanet(){
+  window.clearTimeout(focusTimer);selectedNode=null;
+  universe.classList.remove('is-focused');detail.setAttribute('aria-hidden','true');
+  nodes.forEach(n=>{n.classList.remove('is-selected');n.disabled=false});
+  document.querySelectorAll('.ring').forEach(r=>{r.classList.remove('selected-ring');r.style.zIndex='';r.style.filter=''});
+  document.querySelectorAll('.ring,.planet,.vortex').forEach(el=>el.style.animationPlayState='running');
+  art.style.transform=innerWidth<460?'scale(.58) rotateX(58deg) rotateZ(-16deg)':innerWidth<760?'scale(.72) rotateX(58deg) rotateZ(-16deg)':'rotateX(58deg) rotateZ(-16deg)';
+  hint.textContent='Explorez les orbites — chaque technologie a son rôle.';
+ }
+ nodes.forEach(node=>{
+  node.addEventListener('click',()=>openPlanet(node));
+  node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPlanet(node)}});
+ });
+ closeButton.addEventListener('click',closePlanet);
+ document.querySelector('#focus-backdrop').addEventListener('click',closePlanet);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&selectedNode)closePlanet()});
+})();
+</script>
+</body>
+</html>
