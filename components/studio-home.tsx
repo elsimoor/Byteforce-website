@@ -8,7 +8,14 @@ import { projects } from "@/lib/content";
 import { studioSections } from "@/lib/studio-sections";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { TechUniverse, type TechLogo } from "@/components/tech-universe";
 import { technologies } from "@/lib/tech-articles";
+
+const techLogos: TechLogo[] = technologies.map((tool) => ({
+  name: tool.name,
+  href: `/insights/${tool.slug}`,
+  src: `/tech/${tool.file}.svg`,
+}));
 
 export function StudioHome() {
   return (
@@ -748,14 +755,17 @@ export function StudioHome() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
-          {technologies.map((tool) => (
+        <div className="mt-10 hidden md:block">
+          <TechUniverse logos={techLogos} />
+        </div>
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 md:hidden">
+          {techLogos.map((tool) => (
             <div
-              key={tool.slug}
+              key={tool.href}
               className="group flex flex-col items-center justify-center gap-3 border-t border-outline-variant px-3 py-5"
             >
               <img
-                src={`/tech/${tool.file}.svg`}
+                src={tool.src}
                 alt=""
                 width={40}
                 height={40}
