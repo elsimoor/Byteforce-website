@@ -89,11 +89,52 @@ export function TechUniverse({ logos }: { logos: TechLogo[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const lock = useRef(false);
+  const aimRef = useRef<number | null>(null);
+  const selectedRef = useRef<number | null>(null);
   const rings = useMemo(() => place(logos), [logos]);
   const [selected, setSelected] = useState<number | null>(null);
+  const [aim, setAim] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
   const [transform, setTransform] = useState<string>();
   const logo = selected === null ? null : logos[selected];
+  selectedRef.current = selected;
+
+  function applyRate(rate: number) {
+    const root = rootRef.current;
+    if (!root) return;
+    root.querySelectorAll<HTMLElement>("[data-orbit]").forEach((node) => {
+      node.getAnimations().forEach((animation) => {
+        animation.playbackRate = rate;
+      });
+    });
+  }
+
+  function nearestPlanet(x: number, y: number) {
+    const root = rootRef.current;
+    if (!root) return null;
+    let best: { index: number; dist: number } | null = null;
+    root.querySelectorAll<HTMLButtonElement>("button[data-index]").forEach((button) => {
+      const index = Number(button.dataset.index);
+      const boxes = [button.getBoundingClientRect()];
+      const label = button.querySelector("span:last-of-type");
+      if (label) boxes.push(label.getBoundingClientRect());
+      for (const rect of boxes) {
+        const dist = Math.hypot(x - (rect.left + rect.width / 2), y - (rect.top + rect.height / 2));
+        const reach = Math.hypot(rect.width, rect.height) / 2 + 4;
+        if (dist <= reach && (!best || dist < best.dist)) best = { index, dist };
+      }
+    });
+    return best?.index ?? null;
+  }
+
+  function aimAt(index: number | null) {
+    if (aimRef.current === index) return;
+    aimRef.current = index;
+    setAim(index);
+    if (selectedRef.current !== null) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    applyRate(index === null ? 1 : 0.1);
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -154,6 +195,18 @@ export function TechUniverse({ logos }: { logos: TechLogo[] }) {
   }, []);
 
   useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    root.style.cursor = aim === null || selected !== null ? "" : "pointer";
+    if (selected !== null || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    root.querySelectorAll<HTMLElement>("[data-orbit]").forEach((node) => {
+      node.getAnimations().forEach((animation) => {
+        animation.playbackRate = aim === null ? 1 : 0.1;
+      });
+    });
+  }, [aim, selected]);
+
+  useEffect(() => {
     if (selected === null) return;
     const timer = window.setTimeout(() => setPaused(true), 1350);
     const focusTimer = window.setTimeout(() => closeRef.current?.focus(), 700);
@@ -173,8 +226,9 @@ export function TechUniverse({ logos }: { logos: TechLogo[] }) {
   }, [selected]);
 
   function open(index: number) {
-    if (lock.current || selected !== null) return;
+    if (lock.current || selectedRef.current !== null) return;
     lock.current = true;
+    selectedRef.current = index;
     const zoom = narrowScreen()
       ? "scale(1.05) rotateX(12deg) rotateZ(-4deg) translateY(-10px)"
       : "scale(1.18) rotateX(12deg) rotateZ(-4deg) translateY(-18px)";
@@ -187,31 +241,52 @@ export function TechUniverse({ logos }: { logos: TechLogo[] }) {
 
   function close() {
     lock.current = false;
+    aimRef.current = null;
+    selectedRef.current = null;
+    setAim(null);
+    applyRate(1);
     setPaused(false);
     setTransform(undefined);
     setSelected(null);
   }
 
-  function onPointerMove(event: React.PointerEvent<HTMLElement>) {
-    if (selected !== null || window.matchMedia("(pointer: coarse), (prefers-reduced-motion: reduce)").matches) return;
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    const scale = narrowScreen() ? "scale(0.78) " : "";
-    setTransform(
-      `${scale}rotateX(${58 - y * 10}deg) rotateZ(${-16 + x * 12}deg) translate3d(${x * 18}px, ${y * 10}px, 0)`,
-    );
-  }
+  const aimAtRef = useRef(aimAt);
+  const openRef = useRef(open);
+  const nearestRef = useRef(nearestPlanet);
+  aimAtRef.current = aimAt;
+  openRef.current = open;
+  nearestRef.current = nearestPlanet;
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    function move(event: PointerEvent) {
+      if (selectedRef.current !== null) return;
+      aimAtRef.current(nearestRef.current(event.clientX, event.clientY));
+    }
+    function up(event: PointerEvent) {
+      if (event.button !== 0) return;
+      const index = nearestRef.current(event.clientX, event.clientY);
+      if (index !== null) openRef.current(index);
+    }
+    function leave() {
+      if (selectedRef.current === null) aimAtRef.current(null);
+    }
+    root.addEventListener("pointermove", move, true);
+    root.addEventListener("pointerup", up);
+    root.addEventListener("pointerleave", leave);
+    return () => {
+      root.removeEventListener("pointermove", move, true);
+      root.removeEventListener("pointerup", up);
+      root.removeEventListener("pointerleave", leave);
+    };
+  }, []);
 
   return (
     <section
       ref={rootRef}
       className={`${styles.universe}${selected !== null ? ` ${styles.focused}` : ""}${paused ? ` ${styles.paused}` : ""}`}
       aria-label="Univers des outils"
-      onPointerMove={onPointerMove}
-      onPointerLeave={() => {
-        if (selected === null) setTransform(undefined);
-      }}
     >
       <canvas ref={canvasRef} className={styles.canvas} aria-hidden="true" />
       <div className={styles.vignette} aria-hidden="true" />
@@ -224,19 +299,24 @@ export function TechUniverse({ logos }: { logos: TechLogo[] }) {
           {rings.map((ring, ringIndex) => (
             <div
               key={ringClass[ringIndex]}
+              data-orbit=""
               className={`${styles.ring} ${ringClass[ringIndex]}${
                 selected === null ? "" : ring.some((item) => item.index === selected) ? ` ${styles.selectedRing}` : ` ${styles.dim}`
               }`}
             >
               {ring.map((item) => (
-                <div key={item.href} className={styles.planet} style={{ left: item.left, top: item.top }}>
+                <div key={item.href} data-orbit="" className={styles.planet} style={{ left: item.left, top: item.top }}>
                   <button
                     type="button"
-                    className={`${styles.node}${item.index === selected ? ` ${styles.selectedNode}` : ""}`}
+                    className={`${styles.node}${item.index === selected ? ` ${styles.selectedNode}` : ""}${item.index === aim ? ` ${styles.hot}` : ""}`}
                     data-tone={item.tone}
+                    data-index={item.index}
                     aria-label={item.name}
                     aria-pressed={item.index === selected}
-                    onClick={() => open(item.index)}
+                    onClick={(event) => {
+                      if (event.detail !== 0) return;
+                      open(item.index);
+                    }}
                   >
                     <span className={styles.plate}>
                       <img className={styles.logo} src={item.src} alt="" width={18} height={18} />
