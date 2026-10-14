@@ -10,6 +10,96 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { technologies } from "@/lib/tech-articles";
 
+const offers = [
+  {
+    href: "/developpement-logiciel-sur-mesure-maroc",
+    title: "Logiciel",
+    kicker: "Outils métier",
+    text: "Parcours, opérations et données",
+    mark: "logiciel",
+  },
+  {
+    href: "/developpement-saas-maroc",
+    title: "SaaS",
+    kicker: "Produits à plusieurs comptes",
+    text: "Tableaux, facturation, droits",
+    mark: "saas",
+  },
+  {
+    href: "/insights/intelligence-artificielle-entreprise-maroc",
+    title: "IA",
+    kicker: "Dans le produit",
+    text: "Une règle d'abord, un modèle seulement si elle ne suffit pas",
+    mark: "ia",
+  },
+  {
+    href: "/application-web-sur-mesure-maroc",
+    title: "Plateformes",
+    kicker: "Portails et places de marché",
+    text: "Clients, partenaires, équipes",
+    mark: "plateforme",
+  },
+] as const;
+
+const offerFrame = [
+  "border-outline-variant py-5 sm:pr-6 lg:border-r",
+  "border-t border-outline-variant py-5 sm:border-t-0 sm:pl-6 lg:border-r lg:pr-6",
+  "border-t border-outline-variant py-5 lg:border-t-0 lg:border-r lg:px-6",
+  "border-t border-outline-variant py-5 sm:pl-6 lg:border-t-0 lg:pl-6",
+];
+
+function OfferMark({ name }: { name: (typeof offers)[number]["mark"] }) {
+  const common = {
+    viewBox: "0 0 160 64",
+    className: "mb-4 h-14 w-full",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.5,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+  if (name === "logiciel") {
+    return (
+      <svg {...common}>
+        <rect x="28" y="8" width="104" height="14" />
+        <rect x="28" y="26" width="104" height="14" />
+        <rect x="28" y="44" width="104" height="14" />
+        <path d="M38 15h36M38 33h28M38 51h44" />
+      </svg>
+    );
+  }
+  if (name === "saas") {
+    return (
+      <svg {...common}>
+        <rect x="14" y="12" width="54" height="40" />
+        <rect x="92" y="12" width="54" height="40" />
+        <path d="M24 26h34M24 36h22M102 26h34M102 36h22" />
+        <path d="M68 32h24" strokeDasharray="3 3" />
+      </svg>
+    );
+  }
+  if (name === "ia") {
+    return (
+      <svg {...common}>
+        <rect x="12" y="14" width="72" height="36" />
+        <path d="M22 28h52M22 40h32" />
+        <path d="M84 32h16" strokeDasharray="3 3" />
+        <rect x="104" y="14" width="44" height="36" strokeDasharray="4 3" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common}>
+      <circle cx="36" cy="22" r="8" />
+      <circle cx="80" cy="22" r="8" />
+      <circle cx="124" cy="22" r="8" />
+      <path d="M44 22h28M88 22h28" />
+      <rect x="20" y="40" width="120" height="14" />
+    </svg>
+  );
+}
+
 export function StudioHome() {
   return (
     <div className="flex flex-col w-full text-on-surface">
@@ -59,7 +149,7 @@ export function StudioHome() {
           </div>
           <div className="lg:col-span-6 w-full min-w-0">
             <a
-              href="/realisations"
+              href="/realisations/coco-inbox"
               className="block border border-outline-variant bg-surface-container-lowest"
             >
               <span className="relative block aspect-[16/10] w-full overflow-hidden">
@@ -88,50 +178,22 @@ export function StudioHome() {
           </div>
         </div>
         <div className="mt-16 grid grid-cols-1 border-t border-outline-variant sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col border-outline-variant py-5 sm:pr-6 lg:border-r">
-            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
-              Logiciel
-            </span>
-            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Outils métier
-            </span>
-            <span className="text-[15px] sm:text-sm text-on-surface-variant">
-              Parcours, opérations et données
-            </span>
-          </div>
-          <div className="flex flex-col border-t border-outline-variant py-5 sm:border-t-0 sm:pl-6 lg:border-r lg:pr-6">
-            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
-              SaaS
-            </span>
-            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Produits à plusieurs comptes
-            </span>
-            <span className="text-[15px] sm:text-sm text-on-surface-variant">
-              Tableaux, facturation, droits
-            </span>
-          </div>
-          <div className="flex flex-col border-t border-outline-variant py-5 lg:border-t-0 lg:border-r lg:px-6">
-            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
-              IA
-            </span>
-            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Dans le produit
-            </span>
-            <span className="text-[15px] sm:text-sm text-on-surface-variant">
-              Une règle d&apos;abord, un modèle seulement si elle ne suffit pas
-            </span>
-          </div>
-          <div className="flex flex-col border-t border-outline-variant py-5 sm:pl-6 lg:border-t-0 lg:pl-6">
-            <span className="text-2xl font-headline font-bold text-on-surface lg:text-3xl">
-              Plateformes
-            </span>
-            <span className="text-[15px] sm:text-sm font-mono uppercase tracking-wider text-on-surface font-semibold mt-1">
-              Portails et places de marché
-            </span>
-            <span className="text-[15px] sm:text-sm text-on-surface-variant">
-              Clients, partenaires, équipes
-            </span>
-          </div>
+          {offers.map((offer, index) => (
+            <Link
+              key={offer.href}
+              href={offer.href}
+              className={`group flex flex-col text-on-surface ${offerFrame[index]}`}
+            >
+              <OfferMark name={offer.mark} />
+              <span className="text-2xl font-headline font-bold underline decoration-transparent underline-offset-4 group-hover:decoration-current lg:text-3xl">
+                {offer.title}
+              </span>
+              <span className="mt-1 text-[15px] font-mono font-semibold uppercase tracking-wider sm:text-sm">
+                {offer.kicker}
+              </span>
+              <span className="text-[15px] text-on-surface-variant sm:text-sm">{offer.text}</span>
+            </Link>
+          ))}
         </div>
       </section>
       <section className="w-full bg-surface py-20 lg:py-28">
