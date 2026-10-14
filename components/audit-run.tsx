@@ -231,13 +231,24 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
           </button>
         ) : null}
       </div>
-      <ol className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-b border-line pb-4 text-sm" aria-label="Parties de l'audit">
+      <ol className="mt-8 flex flex-wrap gap-2 border-b border-line pb-4" aria-label="Parties de l'audit">
         {passage.map((chapter) => {
-          const seen = steps.some((step) => step.chapter === chapter);
-          const active = steps.some((step) => step.chapter === chapter && step.state === "running");
+          const items = listed.filter((step) => step.chapter === chapter);
+          const running = items.some((step) => step.state === "running");
+          const settledItems = items.filter((step) => step.state !== "running");
+          const loading = running || (!done && settledItems.length === 0);
+          const value = dimensionScore(shown, chapter);
+          const marker = loading ? "(...)" : value !== null ? `(${value})` : settledItems.length ? `(${settledItems.length})` : "";
           return (
-            <li key={chapter} className={active ? "audit-live" : seen ? "" : "text-mute"}>
-              {chapter}
+            <li key={chapter}>
+              <a
+                href={`#audit-${chapter}`}
+                className={`audit-jump${loading ? " audit-live" : ""}`}
+                aria-label={loading ? `${chapter}, en cours` : value !== null ? `${chapter}, ${value} sur 100` : chapter}
+              >
+                {chapter}
+                {marker ? <span aria-hidden="true"> {marker}</span> : null}
+              </a>
             </li>
           );
         })}
@@ -247,7 +258,7 @@ export function AuditRun({ url, pick = true }: { url: string; pick?: boolean }) 
 
       {visible.map((chapter, index) => (
         <section key={chapter} className="mt-14" aria-labelledby={`audit-${chapter}`}>
-          <h2 id={`audit-${chapter}`} className="audit-step display text-4xl md:text-5xl">
+          <h2 id={`audit-${chapter}`} className="audit-step display scroll-mt-28 text-4xl md:text-5xl">
             {chapter}
           </h2>
           <ol className="mt-6 border-t border-line">
