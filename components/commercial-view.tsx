@@ -43,6 +43,7 @@ export function CommercialView({ page }: { page: MoneyPage }) {
           url,
           author: {
             "@type": "Person",
+            "@id": `${site.url}/walid-moultamiss#person`,
             name: "Walid Moultamiss",
             url: `${site.url}/walid-moultamiss`,
             image: `${site.url}/walid-moultamiss-byte-force-maroc.png`,

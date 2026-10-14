@@ -56,15 +56,20 @@ export default function WalidPage() {
   const person = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "@id": `${site.url}/walid-moultamiss#profile`,
     url: `${site.url}/walid-moultamiss`,
-    inLanguage: ["fr", "en"],
-    author: {
+    name: "Walid Moultamiss",
+    inLanguage: "fr",
+    mainEntity: {
       "@type": "Person",
+      "@id": `${site.url}/walid-moultamiss#person`,
       name: "Walid Moultamiss",
-      jobTitle: "Full-Stack Software Engineer",
+      identifier: "walid-moultamiss",
+      jobTitle: "Ingénieur logiciel full-stack",
       description:
-        "Full-Stack Software Engineer with 4+ years of experience. Master's studies in computer science at Heriot-Watt University. Lead of Byte Force in Casablanca.",
+        "Ingénieur logiciel full-stack, à Casablanca. Plus de 4 ans d'expérience. Il a fondé Byte Force, dont le bureau est au Technopark.",
       url: `${site.url}/walid-moultamiss`,
+      image: `${site.url}/walid-moultamiss-byte-force-maroc.png`,
       email: site.email,
       telephone: site.phone,
       worksFor: { "@id": `${site.url}/#business` },

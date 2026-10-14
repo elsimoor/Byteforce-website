@@ -92,6 +92,7 @@ export function OrganizationJsonLd() {
         },
         founder: {
           "@type": "Person",
+          "@id": `${site.url}/walid-moultamiss#person`,
           name: "Walid Moultamiss",
           url: `${site.url}/walid-moultamiss`,
         },
