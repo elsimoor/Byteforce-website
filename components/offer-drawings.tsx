@@ -338,6 +338,155 @@ function PageForm() {
   );
 }
 
+const serviceMarks = [
+  "creation-site-web",
+  "applications-mobiles",
+  "logiciel-sur-mesure",
+  "referencement-seo",
+  "hebergement",
+  "design-graphique",
+  "api-backend",
+  "maintenance",
+  "audit-correction",
+  "plugins-wordpress",
+] as const;
+
+export function ServiceMark({ name }: { name: (typeof serviceMarks)[number] | string }) {
+  return (
+    <svg viewBox="0 0 168 72" className="mb-4 h-16 w-40 text-secondary" aria-hidden="true" {...frame}>
+      {name === "creation-site-web" ? <SiteMark /> : null}
+      {name === "applications-mobiles" ? <AppMark /> : null}
+      {name === "logiciel-sur-mesure" ? <LogicielMark /> : null}
+      {name === "referencement-seo" ? <SeoMark /> : null}
+      {name === "hebergement" ? <HostMark /> : null}
+      {name === "design-graphique" ? <DesignMark /> : null}
+      {name === "api-backend" ? <ApiMark /> : null}
+      {name === "maintenance" ? <KeepMark /> : null}
+      {name === "audit-correction" ? <AuditMark /> : null}
+      {name === "plugins-wordpress" ? <PluginMark /> : null}
+    </svg>
+  );
+}
+
+function SiteMark() {
+  return (
+    <g>
+      <rect x="6" y="12" width="40" height="40" fill="var(--color-surface-container-lowest)" />
+      <path d="M14 24h24M14 32h16" />
+      <WindowFrame x={56} y={6} w={104} h={60} />
+      <path d="M70 32h72" />
+      <rect x="70" y="42" width="72" height="12" rx="3" fill="var(--color-surface-container)" />
+    </g>
+  );
+}
+
+function AppMark() {
+  return (
+    <g>
+      <rect x="64" y="4" width="32" height="64" rx="6" fill="var(--color-surface-container-lowest)" />
+      <path d="M72 16h16M72 28h16M72 40h10" />
+      <path d="M74 56h12" />
+      <Person x={118} y={22} />
+    </g>
+  );
+}
+
+function LogicielMark() {
+  return (
+    <g>
+      <WindowFrame x={8} y={6} w={152} h={60} />
+      <rect x="18" y="28" width="36" height="30" rx="3" fill="var(--color-surface-container)" />
+      <path d="M24 36h24M24 44h16" />
+      <rect x="64" y="30" width="10" height="22" fill="currentColor" opacity="0.28" />
+      <rect x="80" y="22" width="10" height="30" fill="currentColor" opacity="0.45" />
+      <rect x="96" y="36" width="10" height="16" fill="currentColor" opacity="0.28" />
+      <path d="M64 58l20-10 16 6 28-14" />
+    </g>
+  );
+}
+
+function SeoMark() {
+  return (
+    <g>
+      <rect x="8" y="14" width="36" height="36" fill="var(--color-surface-container)" />
+      <path d="M16 26h20M16 34h14" />
+      <path d="M48 32h18" strokeDasharray="3 3" />
+      <WindowFrame x={70} y={8} w={88} h={56} />
+      <path d="M84 36c12-10 20-4 28 2 8 6 16-8 28-12" />
+    </g>
+  );
+}
+
+function HostMark() {
+  return (
+    <g>
+      <rect x="8" y="16" width="48" height="40" rx="6" fill="var(--color-surface-container)" />
+      <path d="M16 30h32M16 40h22" />
+      <path d="M60 36h16" />
+      <path d="M72 30l8 6-8 6" fill="currentColor" stroke="none" />
+      <WindowFrame x={86} y={8} w={74} h={56} />
+    </g>
+  );
+}
+
+function DesignMark() {
+  return (
+    <g>
+      <rect x="10" y="10" width="52" height="52" fill="var(--color-surface-container-lowest)" />
+      <rect x="20" y="20" width="32" height="22" fill="var(--color-surface-container)" />
+      <path d="M20 50h32" />
+      <WindowFrame x={78} y={8} w={80} h={56} />
+      <path d="M92 36h52M92 48h32" />
+    </g>
+  );
+}
+
+function ApiMark() {
+  return (
+    <g>
+      <WindowFrame x={4} y={12} w={64} h={48} />
+      <path d="M16 36h40" />
+      <path d="M72 36h20" strokeDasharray="3 3" />
+      <WindowFrame x={96} y={12} w={64} h={48} />
+      <path d="M108 36h40" />
+    </g>
+  );
+}
+
+function KeepMark() {
+  return (
+    <g>
+      <WindowFrame x={8} y={8} w={100} h={56} />
+      <path d="M22 36h48" />
+      <circle cx="132" cy="36" r="18" fill="var(--color-surface-container-lowest)" />
+      <circle cx="132" cy="36" r="6" fill="currentColor" />
+    </g>
+  );
+}
+
+function AuditMark() {
+  return (
+    <g>
+      <WindowFrame x={8} y={6} w={108} h={60} />
+      <path d="M22 32h28M22 44h20" />
+      <path d="M62 34l6 6 14-16" />
+      <circle cx="142" cy="36" r="16" />
+      <path d="M132 46l20-20" />
+    </g>
+  );
+}
+
+function PluginMark() {
+  return (
+    <g>
+      <WindowFrame x={8} y={8} w={100} h={56} />
+      <path d="M22 36h52" />
+      <rect x="116" y="22" width="36" height="28" rx="4" fill="var(--color-surface-container)" />
+      <path d="M108 36h8" strokeDasharray="2 2" />
+    </g>
+  );
+}
+
 function Party({ x, y, label, cart = false }: { x: number; y: number; label: string; cart?: boolean }) {
   return (
     <g>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ServiceMark } from "@/components/offer-drawings";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { services } from "@/lib/content";
 import { SiteIndex } from "@/components/site-index";
@@ -32,10 +33,13 @@ export default function ServicesPage() {
           <li key={service.slug} className="border-b border-line">
             <Link
               href={service.href ?? `/services/${service.slug}`}
-              className="index-row grid items-baseline gap-4 px-6 py-8 md:grid-cols-12 md:px-12 md:py-12"
+              className="index-row grid items-start gap-4 px-6 py-8 md:grid-cols-12 md:px-12 md:py-12"
             >
               <span className="text-sm text-mute md:col-span-1">{String(index + 1).padStart(2, "0")}</span>
-              <span className="display text-4xl md:col-span-6 md:text-6xl">{service.menu}</span>
+              <span className="md:col-span-6">
+                <ServiceMark name={service.slug} />
+                <span className="display block text-4xl md:text-6xl">{service.menu}</span>
+              </span>
               <span className="text-sm text-mute md:col-span-5">{service.summary}</span>
             </Link>
           </li>
