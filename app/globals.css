@@ -337,6 +337,27 @@ textarea.field {
   }
 }
 
+.home-hero-copy {
+  position: relative;
+  z-index: 1;
+  margin: -3.5rem 0.75rem 0.75rem;
+  padding: 1.35rem 1.2rem 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+}
+
+@media (min-width: 768px) {
+  .home-hero {
+    min-height: 46rem;
+  }
+
+  .home-hero-copy {
+    width: min(72rem, calc(100% - 4rem));
+    margin: 2rem auto;
+    padding: 2.25rem 2.25rem 2rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-slice > span {
     animation: none;

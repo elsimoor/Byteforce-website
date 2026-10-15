@@ -1,4 +1,5 @@
 import { AuditForm } from "@/components/audit-form";
+import { HeroSlices } from "@/components/hero-slices";
 import { EmailText, MailLink } from "@/components/mail-link";
 import { StepDrawing } from "@/components/step-drawing";
 import { Icon } from "@/components/icon";
@@ -98,7 +99,9 @@ export function StudioHome() {
   return (
     <div className="flex flex-col w-full text-on-surface">
       {/* 1. HERO SECTION */}
-      <section className="mx-auto w-full max-w-7xl px-6 pb-16 pt-10 lg:px-12 lg:pb-20 lg:pt-16">
+      <header className="studio-hero home-hero">
+        <HeroSlices src="/studio/technopark.png" />
+        <div className="home-hero-copy">
         <p className="font-mono text-[15px] font-bold uppercase tracking-[0.14em] text-on-surface sm:text-sm">
           Studio logiciel · Casablanca
         </p>
@@ -138,7 +141,10 @@ export function StudioHome() {
             <AuditForm variant="studio" />
           </div>
         </div>
-        <ul className="mt-14 grid grid-cols-1 gap-px border border-outline-variant bg-outline-variant sm:grid-cols-3">
+        </div>
+      </header>
+      <section className="mx-auto w-full max-w-7xl px-6 pb-16 pt-12 lg:px-12 lg:pb-20">
+        <ul className="grid grid-cols-1 gap-px border border-outline-variant bg-outline-variant sm:grid-cols-3">
           {(
             [
               {
