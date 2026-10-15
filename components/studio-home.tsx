@@ -42,6 +42,51 @@ const offers = [
   },
 ] as const;
 
+const built = [
+  {
+    href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier",
+    icon: "strategy",
+    title: "Logiciel métier",
+    text: "Des plateformes autour des parcours, des opérations et des données de l'entreprise.",
+    note: "Quand les outils ne collent pas au travail",
+  },
+  {
+    href: "/developpement-saas-maroc",
+    icon: "dashboard",
+    title: "Plateformes SaaS",
+    text: "Produits à plusieurs comptes : abonnements, tableaux, droits et facturation.",
+    note: "Pour lancer un produit à plusieurs comptes",
+  },
+  {
+    href: "/developpement-logiciel-sur-mesure-maroc/crm",
+    icon: "group",
+    title: "CRM et gestion",
+    text: "CRM, clients, pipeline commercial, opérations et administration interne.",
+    note: "Quand le tableur ne suffit plus",
+  },
+  {
+    href: "/developpement-logiciel-sur-mesure-maroc/automatisation",
+    icon: "smart_toy",
+    title: "Automatisation dans le produit",
+    text: "Une tâche répétée devient une règle stable. Un modèle n'est ajouté que si la règle ne peut pas porter le geste.",
+    note: "Quand le produit doit retirer du travail manuel",
+  },
+  {
+    href: "/application-web-sur-mesure-maroc",
+    icon: "devices",
+    title: "Applications web et mobile",
+    text: "Applications pour les clients, les employés, les partenaires ou l'équipe interne.",
+    note: "Clients, employés ou partenaires",
+  },
+  {
+    href: "/application-web-sur-mesure-maroc",
+    icon: "hub",
+    title: "Plateformes et portails",
+    text: "Places de marché, portails clients, réservation et annuaires.",
+    note: "Places de marché, portails, réservation",
+  },
+] as const;
+
 const offerFrame = [
   "border-outline-variant py-5 sm:pr-6 lg:border-r",
   "border-t border-outline-variant py-5 sm:border-t-0 sm:pl-6 lg:border-r lg:pr-6",
@@ -323,138 +368,25 @@ export function StudioHome() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* 01 Product Strategy */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    01
+            {built.map((item, index) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6 text-on-surface"
+              >
+                <span>
+                  <span className="mb-6 flex items-center justify-between">
+                    <span className="font-mono text-sm font-bold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                    <Icon name={item.icon} />
                   </span>
-                  <div className="text-on-surface">
-                    <Icon name="strategy" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Logiciel métier
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Des plateformes autour des parcours, des opérations et des données de l&apos;entreprise.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Quand les outils ne collent pas au travail
-              </div>
-            </div>
-            {/* 02 UX / UI Design */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    02
+                  <span className="mb-2 block text-xl font-headline font-bold underline decoration-transparent underline-offset-4 group-hover:decoration-current">
+                    {item.title}
                   </span>
-                  <div className="text-on-surface">
-                    <Icon name="dashboard" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Plateformes SaaS
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Produits à plusieurs comptes : abonnements, tableaux, droits et facturation.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Pour lancer un produit à plusieurs comptes
-              </div>
-            </div>
-            {/* 03 Web Applications */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    03
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="group" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  CRM et gestion
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  CRM, clients, pipeline commercial, opérations et administration interne.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Quand le tableur ne suffit plus
-              </div>
-            </div>
-            {/* 04 Mobile Applications */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    04
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="smart_toy" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Automatisation dans le produit
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Une tâche répétée devient une règle stable. Un modèle n&apos;est ajouté que si la règle ne peut pas porter le geste.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Quand le produit doit retirer du travail manuel
-              </div>
-            </div>
-            {/* 05 AI & Automation */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    05
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="devices" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Applications web et mobile
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Applications pour les clients, les employés, les partenaires ou l&apos;équipe interne.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Clients, employés ou partenaires
-              </div>
-            </div>
-            {/* 06 Infrastructure & DevOps */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    06
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="hub" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Plateformes et portails
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Places de marché, portails clients, réservation et annuaires.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Places de marché, portails, réservation
-              </div>
-            </div>
+                  <span className="block text-sm leading-relaxed text-on-surface-variant">{item.text}</span>
+                </span>
+                <span className="mt-6 pt-4 font-mono text-[15px] text-outline sm:text-sm">{item.note}</span>
+              </Link>
+            ))}
             <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
               <div>
                 <div className="flex items-center justify-between mb-6">
