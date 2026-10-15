@@ -102,15 +102,15 @@ export function StudioHome() {
       <header className="studio-hero home-hero">
         <HeroSlices src="/studio/technopark.png" />
         <div className="home-hero-copy">
-        <p className="font-mono text-[15px] font-bold uppercase tracking-[0.14em] text-on-surface sm:text-sm">
+        <p className="font-mono text-[15px] font-bold uppercase tracking-[0.14em] text-white sm:text-sm">
           Studio logiciel · Casablanca
         </p>
-        <h1 className="mt-4 max-w-[12ch] font-headline text-[clamp(3.1rem,7vw,6.25rem)] font-black leading-[0.92] tracking-[-0.03em] text-on-surface">
+        <h1 className="mt-4 max-w-[12ch] font-headline text-[clamp(3.1rem,7vw,6.25rem)] font-black leading-[0.92] tracking-[-0.03em] text-white">
           Développement logiciel sur mesure, à Casablanca.
         </h1>
         <div className="mt-10 grid items-start gap-10 border-t border-outline-variant pt-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="max-w-xl text-xl leading-relaxed text-on-surface-variant">
+            <p className="max-w-xl text-xl leading-relaxed text-white/80">
               Byte Force conçoit le logiciel, l&apos;application ou le site, le corrige quand il casse, et remet le code au client. Un humain et une machine doivent pouvoir trouver l&apos;offre, la comprendre, et écrire.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -122,22 +122,22 @@ export function StudioHome() {
                 <Icon name="arrow_forward" className="text-base" />
               </a>
               <a
-                className="inline-flex items-center gap-2 text-sm font-semibold text-on-surface underline decoration-outline-variant underline-offset-4 hover:decoration-primary"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white"
                 href="/realisations"
               >
                 Voir les travaux
               </a>
             </div>
-            <p className="mt-5 text-sm text-on-surface-variant">
+            <p className="mt-5 text-sm text-white/80">
               Réponse sous un jour ouvré. On peut aussi écrire sur{" "}
-              <a href="https://wa.me/212666650696" className="font-semibold text-primary">
+              <a href="https://wa.me/212666650696" className="font-semibold text-white">
                 WhatsApp
               </a>{" "}
-              ou <MailLink className="font-semibold text-primary" />.
+              ou <MailLink className="font-semibold text-white" />.
             </p>
           </div>
-          <div className="lg:col-span-5 lg:border-l lg:border-outline-variant lg:pl-10">
-            <p className="font-mono text-[15px] font-bold uppercase tracking-[0.12em] text-on-surface sm:text-sm">Ou un site déjà en ligne</p>
+          <div className="lg:col-span-5 lg:border-l lg:border-white/25 lg:pl-10">
+            <p className="font-mono text-[15px] font-bold uppercase tracking-[0.12em] text-white sm:text-sm">Ou un site déjà en ligne</p>
             <AuditForm variant="studio" />
           </div>
         </div>
