@@ -236,6 +236,95 @@ function Depot() {
   );
 }
 
+const builds = ["architecture", "serveur", "base", "infra", "branchements", "securite"] as const;
+
+export function BuildMark({ name }: { name: (typeof builds)[number] }) {
+  return (
+    <svg viewBox="0 0 220 112" className="mb-4 h-24 w-full text-secondary" aria-hidden="true" {...frame}>
+      {name === "architecture" ? <Architecture /> : null}
+      {name === "serveur" ? <Serveur /> : null}
+      {name === "base" ? <Base /> : null}
+      {name === "infra" ? <Infra /> : null}
+      {name === "branchements" ? <Branchements /> : null}
+      {name === "securite" ? <Securite /> : null}
+    </svg>
+  );
+}
+
+function Architecture() {
+  return (
+    <g>
+      <rect x="28" y="16" width="164" height="28" rx="6" fill="var(--color-surface-container)" />
+      <rect x="44" y="52" width="132" height="22" rx="6" fill="var(--color-surface-container-lowest)" />
+      <rect x="60" y="82" width="100" height="18" rx="6" strokeDasharray="4 3" />
+      <path d="M110 44v8M110 74v8" />
+    </g>
+  );
+}
+
+function Serveur() {
+  return (
+    <g>
+      <rect x="16" y="28" width="64" height="56" rx="6" fill="var(--color-surface-container)" />
+      <path d="M28 46h40M28 60h28M28 74h34" />
+      <path d="M88 56h24" />
+      <path d="M106 50l8 6-8 6" fill="currentColor" stroke="none" />
+      <WindowFrame x={124} y={18} w={80} h={76} />
+      <path d="M138 48h52M138 64h36" />
+    </g>
+  );
+}
+
+function Base() {
+  return (
+    <g>
+      <WindowFrame x={12} y={14} w={110} h={84} />
+      <path d="M26 42h82M26 58h82M26 74h82M58 36v52" opacity="0.8" />
+      <rect x="136" y="28" width="68" height="56" rx="6" fill="var(--color-surface-container)" />
+      <path d="M148 46h44M148 60h32M148 74h40" />
+    </g>
+  );
+}
+
+function Infra() {
+  return (
+    <g>
+      <rect x="16" y="36" width="52" height="40" rx="6" fill="var(--color-surface-container)" />
+      <path d="M28 54h28M28 66h18" />
+      <path d="M76 56h22" />
+      <rect x="104" y="44" width="36" height="24" rx="12" fill="var(--color-surface-container-lowest)" />
+      <path d="M148 56h18" />
+      <circle cx="184" cy="56" r="16" />
+      <circle cx="184" cy="56" r="6" />
+    </g>
+  );
+}
+
+function Branchements() {
+  return (
+    <g>
+      <WindowFrame x={16} y={28} w={88} h={64} />
+      <path d="M104 48h28M104 60h36M104 72h24" strokeDasharray="3 3" />
+      <circle cx="168" cy="36" r="10" fill="var(--color-surface-container)" />
+      <circle cx="188" cy="60" r="10" fill="var(--color-surface-container)" />
+      <circle cx="168" cy="86" r="10" fill="var(--color-surface-container)" />
+    </g>
+  );
+}
+
+function Securite() {
+  return (
+    <g>
+      <Person x={48} y={36} />
+      <path d="M72 58h24" />
+      <WindowFrame x={100} y={16} w={100} h={80} />
+      <rect x="128" y="48" width="44" height="28" rx="4" fill="var(--color-surface-container)" />
+      <path d="M142 48v-8a8 8 0 0 1 16 0v8" />
+      <circle cx="150" cy="62" r="3" fill="currentColor" />
+    </g>
+  );
+}
+
 function PageForm() {
   return (
     <g>

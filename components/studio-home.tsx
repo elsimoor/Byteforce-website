@@ -9,7 +9,7 @@ import { studioSections } from "@/lib/studio-sections";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { technologies } from "@/lib/tech-articles";
-import { HalfMark, OfferFlows, OfferMark } from "@/components/offer-drawings";
+import { BuildMark, HalfMark, OfferFlows, OfferMark } from "@/components/offer-drawings";
 
 const offers = [
   {
@@ -804,138 +804,26 @@ export function StudioHome() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* 01 Product Strategy */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    01
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="strategy" />
-                  </div>
+            {(
+              [
+                ["architecture", "01", "Architecture", "Des systèmes qui peuvent suivre le métier.", "Des systèmes qui changent"],
+                ["serveur", "02", "Serveur et API", "Des API fiables, la logique métier et le traitement des données.", "API • Logique • Données"],
+                ["base", "03", "Base et fichiers", "Des modèles de données faits pour l'usage réel.", "Modèles • Dossiers • Usage"],
+                ["infra", "04", "Infrastructure", "Hébergement, mise en ligne, sécurité et surveillance.", "Hébergement • Mise en ligne • Surveillance"],
+                ["branchements", "05", "Branchements", "Paiements, API, outils de communication et services externes.", "Paiements • API • Outils"],
+                ["securite", "06", "Sécurité et accès", "Authentification, droits, et données tenues.", "Accès • Droits • Données"],
+              ] as const
+            ).map(([mark, num, title, text, foot]) => (
+              <div key={mark} className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
+                <div>
+                  <BuildMark name={mark} />
+                  <span className="font-mono text-sm font-bold text-primary">{num}</span>
+                  <h3 className="mb-2 mt-2 font-headline text-xl font-bold text-on-surface">{title}</h3>
+                  <p className="text-sm leading-relaxed text-on-surface-variant">{text}</p>
                 </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Architecture
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Des systèmes qui peuvent suivre le métier.
-                </p>
+                <div className="mt-6 pt-4 font-mono text-[15px] text-outline sm:text-sm">{foot}</div>
               </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Des systèmes qui changent
-              </div>
-            </div>
-            {/* 02 UX / UI Design */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    02
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="palette" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Serveur et API
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Des API fiables, la logique métier et le traitement des données.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                API • Logique • Données
-              </div>
-            </div>
-            {/* 03 Web Applications */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    03
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="terminal" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Base et fichiers
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Des modèles de données faits pour l&apos;usage réel.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Modèles • Dossiers • Usage
-              </div>
-            </div>
-            {/* 04 Mobile Applications */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    04
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="smartphone" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Infrastructure
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Hébergement, mise en ligne, sécurité et surveillance.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Hébergement • Mise en ligne • Surveillance
-              </div>
-            </div>
-            {/* 05 AI & Automation */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    05
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="smart_toy" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Branchements
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Paiements, API, outils de communication et services externes.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Paiements • API • Outils
-              </div>
-            </div>
-            {/* 06 Infrastructure & DevOps */}
-            <div className="flex min-w-0 flex-col justify-between border-t border-outline-variant pt-6">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-sm font-bold text-primary">
-                    06
-                  </span>
-                  <div className="text-on-surface">
-                    <Icon name="cloud_sync" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
-                  Sécurité et accès
-                </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Authentification, droits, et données tenues.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 text-[15px] sm:text-sm font-mono text-outline">
-                Accès • Droits • Données
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
