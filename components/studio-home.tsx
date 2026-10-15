@@ -98,20 +98,16 @@ export function StudioHome() {
   return (
     <div className="flex flex-col w-full text-on-surface">
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-16 lg:pt-16 lg:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-end">
-          <div className="lg:col-span-6 flex min-w-0 flex-col">
-            <p className="font-mono text-[15px] font-bold tracking-[0.14em] uppercase text-on-surface sm:text-sm">
-              Studio logiciel · Casablanca
-            </p>
-            <h1 className="mt-5 max-w-[11em] font-headline text-[2.35rem] font-black leading-[1.05] tracking-tight text-on-surface sm:max-w-none sm:text-5xl lg:text-[4.15rem]">
-              Développement
-              <span className="lg:inline"> </span>
-              <span className="block lg:inline">logiciel</span>
-              <span className="block">sur mesure,</span>
-              <span className="block">à Casablanca.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-xl leading-relaxed text-on-surface-variant">
+      <section className="mx-auto w-full max-w-7xl px-6 pb-16 pt-10 lg:px-12 lg:pb-20 lg:pt-16">
+        <p className="font-mono text-[15px] font-bold uppercase tracking-[0.14em] text-on-surface sm:text-sm">
+          Studio logiciel · Casablanca
+        </p>
+        <h1 className="mt-4 max-w-[12ch] font-headline text-[clamp(3.1rem,7vw,6.25rem)] font-black leading-[0.92] tracking-[-0.03em] text-on-surface">
+          Développement logiciel sur mesure, à Casablanca.
+        </h1>
+        <div className="mt-10 grid items-start gap-10 border-t border-outline-variant pt-8 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="max-w-xl text-xl leading-relaxed text-on-surface-variant">
               Byte Force conçoit le logiciel, l&apos;application ou le site, le corrige quand il casse, et remet le code au client. Un humain et une machine doivent pouvoir trouver l&apos;offre, la comprendre, et écrire.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -129,11 +125,7 @@ export function StudioHome() {
                 Voir les travaux
               </a>
             </div>
-            <div className="mt-8 max-w-xl">
-              <p className="font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">Ou un site déjà en ligne</p>
-              <AuditForm variant="studio" />
-            </div>
-            <p className="mt-4 text-sm text-on-surface-variant">
+            <p className="mt-5 text-sm text-on-surface-variant">
               Réponse sous un jour ouvré. On peut aussi écrire sur{" "}
               <a href="https://wa.me/212666650696" className="font-semibold text-primary">
                 WhatsApp
@@ -141,36 +133,67 @@ export function StudioHome() {
               ou <MailLink className="font-semibold text-primary" />.
             </p>
           </div>
-          <div className="lg:col-span-6 w-full min-w-0">
-            <a
-              href="/realisations/coco-inbox"
-              className="block border border-outline-variant bg-surface-container-lowest"
-            >
-              <span className="relative block aspect-[16/10] w-full overflow-hidden">
-                <ResponsiveImg
-                  src="/work/coco-inbox.jpg"
-                  alt="Coco Inbox, produit en ligne pour l'email temporaire, les fichiers chiffrés et les notes."
-                  width={400}
-                  height={250}
-                  priority
-                  fetchPriority="high"
-                  sizes="(min-width: 1024px) 46vw, 100vw"
-                  className="absolute inset-0 h-full w-full object-cover object-top"
-                />
-              </span>
-              <span className="flex items-end justify-between gap-4 border-t border-outline-variant px-4 py-3">
-                <span>
-                  <span className="block font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase sm:text-sm">
-                    Produit en ligne
-                  </span>
-                  <span className="block font-headline text-lg font-bold text-on-surface">Coco Inbox</span>
-                  <span className="block text-sm text-on-surface-variant">Montréal · en ligne depuis 2024</span>
-                </span>
-                <span className="text-sm font-bold text-primary">La fiche</span>
-              </span>
-            </a>
+          <div className="lg:col-span-5 lg:border-l lg:border-outline-variant lg:pl-10">
+            <p className="font-mono text-[15px] font-bold uppercase tracking-[0.12em] text-on-surface sm:text-sm">Ou un site déjà en ligne</p>
+            <AuditForm variant="studio" />
           </div>
         </div>
+        <ul className="mt-14 grid grid-cols-1 gap-px border border-outline-variant bg-outline-variant sm:grid-cols-3">
+          {(
+            [
+              {
+                href: "/realisations/crm-cocoinbox",
+                src: "/work/crm.cocoinbox.webp",
+                alt: "CRM Cocoinbox : la boîte, les fiches, et les colonnes du pipeline.",
+                title: "CRM Cocoinbox",
+                place: "Montréal · 2026",
+                position: "object-left-top",
+              },
+              {
+                href: "/realisations/booking-proche-de-moi",
+                src: "/work/booking.prochedemoi.webp",
+                alt: "Tableau de réservation Proche de moi, à Lille.",
+                title: "Réservation Proche de moi",
+                place: "Lille · 2026",
+                position: "object-left-top",
+              },
+              {
+                href: "/realisations/tourispeak",
+                src: "/work/tourispeak-app-1.webp",
+                alt: "Application Tourispeak : les visites, sur le téléphone.",
+                title: "Tourispeak",
+                place: "Montréal · 2024",
+                position: "object-top",
+              },
+            ] as const
+          ).map((work) => (
+            <li key={work.href} className="bg-surface">
+              <a href={work.href} className="group block">
+                <span className="relative block h-44 overflow-hidden bg-surface-container-lowest sm:h-52">
+                  <ResponsiveImg
+                    src={work.src}
+                    alt={work.alt}
+                    width={640}
+                    height={400}
+                    priority={work.href.endsWith("crm-cocoinbox")}
+                    fetchPriority={work.href.endsWith("crm-cocoinbox") ? "high" : "auto"}
+                    sizes="(min-width: 1024px) 30vw, 100vw"
+                    className={`absolute inset-0 h-full w-full object-cover ${work.position}`}
+                  />
+                </span>
+                <span className="flex items-end justify-between gap-3 border-t border-outline-variant px-4 py-3">
+                  <span>
+                    <span className="block font-headline text-base font-bold text-on-surface underline decoration-transparent underline-offset-4 group-hover:decoration-current">
+                      {work.title}
+                    </span>
+                    <span className="block text-sm text-on-surface-variant">{work.place}</span>
+                  </span>
+                  <span className="text-sm font-bold text-primary">La fiche</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
         <div className="mt-16 grid grid-cols-1 border-t border-outline-variant sm:grid-cols-2 lg:grid-cols-4">
           {offers.map((offer, index) => (
             <Link
