@@ -1,0 +1,237 @@
+.card {
+  --tc-blue: #2f6bf0;
+  --tc-indigo: #4338ee;
+  --tc-navy: #0f1535;
+  --tc-muted: #6b7fa8;
+  --tc-border: #e4e9f4;
+  --tc-chip: #eef1fc;
+  --tc-globe: 1070px;
+
+  position: relative;
+  width: 100%;
+  max-width: 1564px;
+  height: 650px;
+  margin-inline: auto;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fdfdff 0%, #fafbff 100%);
+  border: 1px solid var(--color-line, var(--tc-border));
+  border-radius: 30px;
+}
+
+.content {
+  position: absolute;
+  top: 46px;
+  left: 54px;
+  z-index: 2;
+  width: min(700px, calc(100% - 108px));
+}
+
+.eyebrow {
+  margin: 0;
+}
+
+.title {
+  margin: 0.25rem 0 0;
+}
+
+.description {
+  max-width: 42rem;
+  margin: 0.5rem 0 0;
+}
+
+.list {
+  display: grid;
+  gap: 18px;
+  width: 560px;
+  max-width: 100%;
+  margin: 38px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  transform: translateX(4px);
+}
+
+.link:focus-visible {
+  border-radius: 18px;
+  outline: 2px solid var(--tc-blue);
+  outline-offset: 4px;
+}
+
+.iconBox {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 57px;
+  height: 57px;
+  border-radius: 17px;
+  background: var(--tc-chip);
+  color: var(--tc-indigo);
+}
+
+.iconBox svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.label {
+  flex: 1;
+}
+
+.arrow {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--tc-navy);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+
+.link:hover .arrow,
+.link:focus-visible .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Globe ---------- */
+.globeHit {
+  position: absolute;
+  top: 12px;
+  right: -298px;
+  width: var(--tc-globe);
+  height: var(--tc-globe);
+}
+
+.globe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* fallback sphere, visible until the texture is ready (or if WebGL fails) */
+  background: radial-gradient(circle at 40% 40%, #1b3a8a, #0a1a4a 70%);
+}
+
+.globeTip {
+  position: absolute;
+  top: 38%;
+  right: 8%;
+  z-index: 5;
+  display: grid;
+  gap: 0.2rem;
+  width: max-content;
+  max-width: 14rem;
+  padding: 0.8rem 1rem;
+  background: var(--color-surface, #f4f6ff);
+  border: 1px solid var(--color-line, #c5cce0);
+  color: var(--color-on-surface, #1d1b20);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.globeTip::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem -2rem;
+}
+
+.globeHit:hover ~ .globeTip,
+.globeTip:hover,
+.globeTip:focus-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.globeAsk {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.globeCta {
+  color: var(--color-primary, #000dbf);
+  font-weight: 700;
+}
+
+.globe canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.globe[data-ready="true"] {
+  background: none;
+}
+
+.globe[data-ready="true"] canvas {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    --tc-globe: 560px;
+    height: auto;
+    min-height: 650px;
+    padding-bottom: 300px;
+  }
+
+  .content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin: 40px 28px 0;
+  }
+
+  .globeHit {
+    top: auto;
+    right: -120px;
+    bottom: -300px;
+  }
+
+  .globeTip {
+    top: auto;
+    right: 8%;
+    bottom: 4.5rem;
+  }
+}
+
+@media (hover: none) {
+  .globeTip {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .arrow,
+  .globe canvas {
+    transition: none;
+  }
+}
