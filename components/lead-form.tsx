@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import posthog from "posthog-js";
 import { recordLead } from "@/lib/actions";
 import { services } from "@/lib/content";
+import { writeLeadReceipt } from "@/lib/lead-receipt";
 import { budgets, contactDraft, OU_EN_EST_KEY, readStored } from "@/lib/ou-en-est";
 import { site } from "@/lib/site";
 import { TurnstileCheck } from "@/components/turnstile-check";
@@ -73,11 +75,12 @@ export function LeadForm({
   const [budget, setBudget] = useState(initial?.budget && budgets.includes(initial.budget as (typeof budgets)[number]) ? initial.budget : "");
   const [message, setMessage] = useState(initial?.message ?? "");
   const [fromList, setFromList] = useState(Boolean(initial?.service || initial?.message));
+  const router = useRouter();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const draftRef = useRef<Draft | null>(null);
   const tokenRef = useRef("");
   const [turnstileToken, setTurnstileToken] = useState("");
-  const [status, setStatus] = useState<"choice" | "saved">("choice");
+  const [status, setStatus] = useState<"choice" | "saving" | "failed">("choice");
 
   function setToken(token: string) {
     tokenRef.current = token;
@@ -112,16 +115,27 @@ export function LeadForm({
     dialogRef.current?.showModal();
   }
 
-  function choose(channel: "email" | "whatsapp") {
+  async function choose(channel: "email" | "whatsapp") {
     const draft = draftRef.current;
     const turnstile = tokenRef.current;
-    if (!draft || !turnstile || status === "saved") return;
+    if (!draft || !turnstile || status === "saving") return;
     const lead = { ...draft, city, country, pageUrl: window.location.href, turnstile };
     if (posthogEnabled) posthog.capture("lead_channel_selected", { channel });
-    void recordLead(lead);
     if (channel === "whatsapp") {
+      void recordLead(lead);
       window.open(whatsappUrl(projectText(draft)), "_blank", "noopener,noreferrer");
       closeChoice();
+      return;
+    }
+    setStatus("saving");
+    try {
+      const result = await recordLead(lead);
+      if (!result?.ok) {
+        setStatus("failed");
+        return;
+      }
+    } catch {
+      setStatus("failed");
       return;
     }
     if (posthogEnabled) {
@@ -131,7 +145,8 @@ export function LeadForm({
         has_budget_selected: Boolean(draft.budget),
       });
     }
-    setStatus("saved");
+    writeLeadReceipt(draft);
+    router.push("/contact/merci");
   }
 
   return (
@@ -193,20 +208,25 @@ export function LeadForm({
         ref={dialogRef}
         aria-labelledby="send-choice-title"
         className="m-auto w-[min(28rem,calc(100%-2rem))] border border-outline-variant bg-surface-container-lowest p-8 text-on-surface backdrop:bg-inverse-surface/40"
+        onCancel={(event) => {
+          if (status === "saving") event.preventDefault();
+        }}
         onClose={() => setStatus("choice")}
       >
         <h2 id="send-choice-title" className="font-headline text-2xl font-bold tracking-tight">
-          {status === "saved" ? "On vous répond bientôt." : "Comment envoyer la demande ?"}
+          Comment envoyer la demande ?
         </h2>
         <p className="mt-3 text-sm text-on-surface-variant">
-          {status === "saved"
-            ? "La réponse part sous un jour ouvré."
-            : "L'email envoie la demande. WhatsApp ouvre le message déjà rédigé."}
+          {status === "failed"
+            ? "L'envoi n'a pas abouti. Réessayez, ou ouvrez WhatsApp."
+            : status === "saving"
+              ? "Envoi de la demande."
+              : "L'email envoie la demande. WhatsApp ouvre le message déjà rédigé."}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          {status === "saved" ? (
-            <button type="button" className="btn" onClick={closeChoice}>
-              Fermer
+          {status === "saving" ? (
+            <button type="button" className="btn" disabled>
+              Envoi…
             </button>
           ) : (
             <>
