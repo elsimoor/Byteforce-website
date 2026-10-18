@@ -12,6 +12,7 @@ import { site } from "@/lib/site";
 import { technologies } from "@/lib/tech-articles";
 import { BuildMark, HalfMark, OfferFlows, OfferMark } from "@/components/offer-drawings";
 import { TechnologyCard } from "@/globe component/TechnologyCard";
+import { WorldClocks } from "@/components/world-clocks";
 
 const homeFaqs: [string, string][] = [
   ["Qu'est-ce qu'un logiciel sur mesure ?", "Un logiciel écrit pour les rôles et les règles d'une entreprise, plutôt qu'un produit du marché que l'équipe doit contourner."],
@@ -236,7 +237,10 @@ export function StudioHome() {
         {/* <OfferFlows /> */}
       </section>
       <section className="w-full bg-surface py-20 lg:py-28">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <WorldClocks />
+        </div>
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 items-start gap-12 px-6 lg:grid-cols-12 lg:px-12">
           <div className="lg:col-span-5">
             <span className="font-mono text-[15px] font-bold uppercase tracking-[0.12em] text-on-surface sm:text-sm">Le studio</span>
             <h2 className="mt-2 font-headline text-3xl font-bold tracking-tight text-on-surface lg:text-4xl">
