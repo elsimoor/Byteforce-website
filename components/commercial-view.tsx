@@ -27,10 +27,6 @@ export function CommercialView({ page }: { page: MoneyPage }) {
   const crumbs = crumbsFor(page, moneyPages);
   const children = childrenOf(page, moneyPages);
   const area = page.path.includes("france") ? "FR" : "MA";
-  const geo =
-    page.path === "developpement-logiciel-maroc" ||
-    page.path === "developpement-logiciel-casablanca" ||
-    page.path === "developpement-logiciel-france";
   const mainEntity =
     page.schema === "article"
       ? {
@@ -85,34 +81,6 @@ export function CommercialView({ page }: { page: MoneyPage }) {
           acceptedAnswer: { "@type": "Answer", text: item.a },
         })),
       },
-      ...(geo
-        ? [
-            {
-              "@type": ["ProfessionalService", "LocalBusiness"],
-              name: site.name,
-              url,
-              description: page.description,
-              email: site.email,
-              telephone: site.phone,
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: site.street,
-                addressLocality: site.city,
-                postalCode: site.postal,
-                addressCountry: site.country,
-              },
-              areaServed:
-                page.path === "developpement-logiciel-maroc"
-                  ? ["Casablanca", "Rabat", "Marrakech", "Tanger", "Fès", "Safi"].map((name) => ({
-                      "@type": "City",
-                      name,
-                    }))
-                  : page.path === "developpement-logiciel-france"
-                    ? { "@type": "Country", name: "France" }
-                    : { "@type": "City", name: "Casablanca" },
-            },
-          ]
-        : []),
     ],
   };
 

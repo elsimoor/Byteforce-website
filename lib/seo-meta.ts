@@ -11,7 +11,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Byte Force conçoit des logiciels sur mesure au Maroc : CRM, ERP, automatisation, applications métier. Réponse sous un jour ouvré.",
   },
   "/developpement-logiciel-sur-mesure-maroc/crm": {
-    title: "CRM sur mesure au Maroc · Pipeline, devis, relances",
+    title: "CRM sur mesure au Maroc · Byte Force",
     description:
       "CRM sur mesure adapté à votre processus commercial. Pipeline, devis, relances. Studio logiciel à Casablanca.",
   },
@@ -26,7 +26,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Un CRM conçu pour votre métier, pas un formulaire générique. Champs, workflow et tableaux de bord adaptés à votre processus.",
   },
   "/developpement-logiciel-sur-mesure-maroc/erp": {
-    title: "ERP sur mesure au Maroc · Achats, stocks, ventes",
+    title: "ERP sur mesure au Maroc · Byte Force",
     description:
       "ERP sur mesure au Maroc : achats, stocks, production et ventes dans un seul logiciel, sans les modules inutiles.",
   },
@@ -60,7 +60,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Lancez votre SaaS au Maroc : première version selon le périmètre, comptes isolés, hébergement au nom du client. Studio à Casablanca.",
   },
   "/developpement-application-mobile-maroc": {
-    title: "Développement d'application mobile au Maroc",
+    title: "Développement d'application mobile au Maroc · Byte Force",
     description:
       "Application mobile sur mesure au Maroc : iOS, Android, ou une base commune. Du design à la publication. Réponse sous un jour ouvré.",
   },
@@ -70,7 +70,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Application web sur mesure pour entreprises marocaines. Tableaux de bord, portails clients, outils internes. Livraison par périmètre.",
   },
   "/services": {
-    title: "Services · Développement logiciel Casablanca",
+    title: "Services logiciel à Casablanca · Byte Force",
     description:
       "Tous les services de Byte Force : création web, applications mobiles, API, design, SEO, hébergement, maintenance et WordPress.",
   },
@@ -104,11 +104,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Référencement naturel à Casablanca. Audit SEO, base technique, pages et contenu. Pas de promesse de position.",
   },
   "/services/plugins-wordpress": {
-    title: "Développement de plugin WordPress au Maroc",
+    title: "Développement de plugin WordPress au Maroc · Byte Force",
     description: "Plugin WordPress sur mesure au Maroc. Extensions pour un geste précis, intégrations, site déjà en ligne.",
   },
   "/solutions/logiciel-entreprise": {
-    title: "Logiciel pour entreprise · Solution sur mesure",
+    title: "Logiciel pour entreprise · Byte Force",
     description: "Logiciel sur mesure pour entreprise : remplacez les outils multiples par un système adapté à votre organisation.",
   },
   "/solutions/logiciel-pme": {
@@ -132,7 +132,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Votre fichier Excel fait trop d'onglets et tout le monde y touche ? Il est temps de passer à un logiciel métier.",
   },
   "/realisations": {
-    title: "Réalisations · Projets logiciel à Casablanca",
+    title: "Réalisations logiciel à Casablanca · Byte Force",
     description:
       "Réalisations Byte Force à Casablanca : logiciels, CRM, sites et applications déjà livrés au Maroc, en France et à Montréal.",
   },

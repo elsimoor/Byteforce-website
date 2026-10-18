@@ -13,6 +13,20 @@ import { technologies } from "@/lib/tech-articles";
 import { BuildMark, HalfMark, OfferFlows, OfferMark } from "@/components/offer-drawings";
 import { TechnologyCard } from "@/globe component/TechnologyCard";
 
+const homeFaqs: [string, string][] = [
+  ["Qu'est-ce qu'un logiciel sur mesure ?", "Un logiciel écrit pour les rôles et les règles d'une entreprise, plutôt qu'un produit du marché que l'équipe doit contourner."],
+  ["Combien coûte un logiciel sur mesure au Maroc ?", "Il n'y a pas de grille publique. Le montant suit les écrans, les rôles et les branchements. Le premier échange de trente minutes est gratuit."],
+  ["Combien de temps prend le développement ?", "Un audit tient en quelques jours. Une première version tient souvent en plusieurs semaines. La date se pose quand le périmètre est écrit."],
+  ["Et si quelqu'un d'autre a déjà écrit le code ?", "On peut le lire, corriger ce qui bloque, ou continuer dessus. On le dit si une réécriture est le chemin honnête."],
+  ["Pouvez-vous travailler avec la pile déjà en place ?", "Oui, quand elle convient au produit. Sinon, on le dit avant de construire."],
+  ["Restez-vous après la mise en ligne ?", "Oui. Suivi, Suivi plus et Priorité couvrent la surveillance, les copies, les correctifs et, sur les forfaits plus hauts, une réponse plus rapide."],
+  ["Comment se passent les paiements ?", "Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré."],
+  ["Et si le périmètre change ?", "Le changement est écrit et accepté avant d'être construit."],
+  ["À qui appartient le résultat ?", "Le code, le dépôt et les comptes d'hébergement vous reviennent à la remise."],
+  ["En combien de temps répondez-vous ?", "Sous un jour ouvré. Une panne critique en Priorité est traitée en 4 heures."],
+  ["Le premier échange est-il gratuit ?", "Oui. Trente minutes, pour voir si le problème est un que l'on doit prendre."],
+];
+
 const offers = [
   {
     href: "/developpement-logiciel-sur-mesure-maroc",
@@ -538,9 +552,10 @@ export function StudioHome() {
         <TechnologyCard />
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
           {technologies.map((tool) => (
-            <div
+            <a
               key={tool.slug}
-              className="group flex flex-col items-center justify-center gap-3 border-t border-outline-variant px-3 py-5"
+              href={`/insights/${tool.slug}`}
+              className="group flex flex-col items-center justify-center gap-3 border-t border-outline-variant px-3 py-5 text-on-surface"
             >
               <img
                 src={`/tech/${tool.file}.svg`}
@@ -553,7 +568,7 @@ export function StudioHome() {
               <span className="text-center text-[15px] sm:text-sm font-semibold text-on-surface">
                 {tool.name}
               </span>
-            </div>
+            </a>
           ))}
         </div>
         <p className="mt-8 text-sm">
@@ -795,13 +810,7 @@ export function StudioHome() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              mainEntity: [
-                ["Et si quelqu'un d'autre a déjà écrit le code ?", "On peut le lire, corriger ce qui bloque, ou continuer dessus. On le dit si une réécriture est le chemin honnête."],
-                ["Pouvez-vous travailler avec la pile déjà en place ?", "Oui, quand elle convient au produit. Sinon, on le dit avant de construire."],
-                ["Restez-vous après la mise en ligne ?", "Oui. Suivi, Suivi plus et Priorité couvrent la surveillance, les copies, les correctifs et, sur les forfaits plus hauts, une réponse plus rapide."],
-                ["Comment se passent les paiements ?", "Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré."],
-                ["Et si le périmètre change ?", "Le changement est écrit et accepté avant d'être construit."],
-              ].map(([name, text]) => ({
+              mainEntity: homeFaqs.map(([name, text]) => ({
                 "@type": "Question",
                 name,
                 acceptedAnswer: { "@type": "Answer", text },
@@ -810,56 +819,12 @@ export function StudioHome() {
           }}
         />
         <dl className="mt-10 max-w-3xl divide-y divide-outline-variant/40">
-          <div className="py-6">
-            <dt className="font-headline font-bold">Qu&apos;est-ce qu&apos;un logiciel sur mesure ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">
-              Un logiciel écrit pour les rôles et les règles d&apos;une entreprise, plutôt qu&apos;un produit du marché que l&apos;équipe doit contourner.
-            </dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Combien coûte un logiciel sur mesure au Maroc ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">
-              Il n&apos;y a pas de grille publique. Le montant suit les écrans, les rôles et les branchements. Le premier échange de trente minutes est gratuit.
-            </dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Combien de temps prend le développement ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">
-              Un audit tient en quelques jours. Une première version tient souvent en plusieurs semaines. La date se pose quand le périmètre est écrit.
-            </dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Et si quelqu&apos;un d&apos;autre a déjà écrit le code ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">On peut le lire, corriger ce qui bloque, ou continuer dessus. On le dit si une réécriture est le chemin honnête.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Pouvez-vous travailler avec la pile déjà en place ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Oui, quand elle convient au produit. Sinon, on le dit avant de construire.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Restez-vous après la mise en ligne ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Oui. Suivi, Suivi plus et Priorité couvrent la surveillance, les copies, les correctifs et, sur les forfaits plus hauts, une réponse plus rapide.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Comment se passent les paiements ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Et si le périmètre change ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Le changement est écrit et accepté avant d&apos;être construit.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">À qui appartient le résultat ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Le code, le dépôt et les comptes d&apos;hébergement vous reviennent à la remise.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">En combien de temps répondez-vous ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Sous un jour ouvré. Une panne critique en Priorité est traitée en 4 heures.</dd>
-          </div>
-          <div className="py-6">
-            <dt className="font-headline font-bold">Le premier échange est-il gratuit ?</dt>
-            <dd className="mt-2 text-sm text-on-surface-variant">Oui. Trente minutes, pour voir si le problème est un que l&apos;on doit prendre.</dd>
-          </div>
+          {homeFaqs.map(([question, answer]) => (
+            <div key={question} className="py-6">
+              <dt className="font-headline font-bold">{question}</dt>
+              <dd className="mt-2 text-sm text-on-surface-variant">{answer}</dd>
+            </div>
+          ))}
         </dl>
       </section>
       {/* 10. FINAL CTA / CONVERSION SECTION */}

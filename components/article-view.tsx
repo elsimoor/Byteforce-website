@@ -8,6 +8,12 @@ import type { Article } from "@/lib/articles";
 import { categoryOf, relatedArticles } from "@/lib/insight-categories";
 import { site } from "@/lib/site";
 
+function formatArticleDate(iso: string) {
+  const date = new Date(`${iso}T12:00:00Z`);
+  if (Number.isNaN(date.getTime())) return iso;
+  return new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "UTC" }).format(date);
+}
+
 function IllustratedSlot({ slug, heading, lang }: { slug: string; heading: string; lang: "fr" | "en" }) {
   if (slug === "cloudflare-devant-le-site") return <CloudflareSlot heading={heading} lang={lang} />;
   if (slug === "contrat-avant-le-code") return <ContratSlot heading={heading} lang={lang} />;
@@ -91,7 +97,7 @@ export function ArticleView({ article }: { article: Article }) {
           "@type": "Organization",
           name: site.name,
           url: site.url,
-          logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
+          logo: { "@type": "ImageObject", url: `${site.url}/logo.png`, width: 360, height: 360 },
         },
       },
     ],
@@ -104,7 +110,7 @@ export function ArticleView({ article }: { article: Article }) {
         <p className="text-sm text-mute">
           <Link href="/insights">Décisions</Link>
           {" · "}
-          <time dateTime={article.date}>8 octobre 2026</time>
+          <time dateTime={article.date}>{formatArticleDate(article.date)}</time>
         </p>
         <h1 className="display mt-6 max-w-[18ch] text-[clamp(2.6rem,6vw,5.5rem)]">{article.h1}</h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed">

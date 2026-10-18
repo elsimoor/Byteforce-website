@@ -5,7 +5,7 @@ const image = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "Byte Force, Casablanca",
+  alt: "Byte Force, développement logiciel sur mesure à Casablanca",
 };
 
 export function openGraph(path: string, title: string, description: string): NonNullable<Metadata["openGraph"]> {

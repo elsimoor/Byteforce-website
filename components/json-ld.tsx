@@ -29,7 +29,12 @@ export function OrganizationJsonLd() {
         email: site.email,
         telephone: site.phone,
         image: `${site.url}/logo.png`,
-        logo: `${site.url}/logo.png`,
+        logo: {
+          "@type": "ImageObject",
+          url: `${site.url}/logo.png`,
+          width: 360,
+          height: 360,
+        },
         address: {
           "@type": "PostalAddress",
           "@id": `${site.url}/#address`,
@@ -81,8 +86,7 @@ export function OrganizationJsonLd() {
           { "@type": "City", name: "Fès" },
           { "@type": "City", name: "Safi" },
           { "@type": "City", name: "Lille" },
-          { "@type": "Country", name: "France" },
-          { "@type": "Country", name: "Canada" },
+          { "@type": "City", name: "Montréal" },
         ],
         openingHoursSpecification: {
           "@type": "OpeningHoursSpecification",
