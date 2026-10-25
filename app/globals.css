@@ -52,20 +52,53 @@ body {
   overscroll-behavior: none;
 }
 
-main:not([data-home]) {
+main:not([data-home]):not([data-landing]) {
   width: min(80rem, 100%);
   margin-inline: auto;
 }
 
-main:not([data-home]) h1.display {
+main:not([data-home]):not([data-landing]) h1.display {
   font-size: clamp(2.4rem, 4.2vw, 4.15rem);
   max-width: 18ch;
 }
 
-main:not([data-home]) h1.studio-lead {
+main:not([data-home]):not([data-landing]) h1.studio-lead {
   font-size: clamp(2.15rem, 3.2vw, 3.05rem);
   max-width: 14em;
   line-height: 1.04;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-scroll {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.2deg); }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 7s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.04); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
 }
 
 ::selection {
