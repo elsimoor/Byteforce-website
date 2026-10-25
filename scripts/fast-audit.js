@@ -4,6 +4,7 @@ const path = require('path');
 async function run() {
   const baseUrl = 'http://localhost:3000';
 
+
   // 1. Core pages & Required landing pages to audit via HTTP
   const priorityRoutes = [
     '/',
@@ -45,12 +46,12 @@ async function run() {
 
       // Meta description
       const descMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i) ||
-                        html.match(/<meta[^>]*content=["']([^"']*)["'][^>]*name=["']description["']/i);
+        html.match(/<meta[^>]*content=["']([^"']*)["'][^>]*name=["']description["']/i);
       const description = descMatch ? descMatch[1].trim() : '';
 
       // Canonical
       const canMatch = html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["']/i) ||
-                       html.match(/<link[^>]*href=["']([^"']*)["'][^>]*rel=["']canonical["']/i);
+        html.match(/<link[^>]*href=["']([^"']*)["'][^>]*rel=["']canonical["']/i);
       const canonical = canMatch ? canMatch[1] : '';
 
       // Hreflang
@@ -153,7 +154,7 @@ async function run() {
   while ((match = metaRegex.exec(seoMetaCode)) !== null) {
     const [_, urlPath, title, desc] = match;
     allSeoEntries.push({ urlPath, title, desc, titleLen: title.length, descLen: desc.length });
-    
+
     // Check duplicates
     if (titleMap.has(title)) {
       metaViolations.push({ type: 'DUPLICATE_TITLE', title, url1: titleMap.get(title), url2: urlPath });
