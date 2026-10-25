@@ -143,3 +143,67 @@ export function BreadcrumbJsonLd({ items }: { items: { name: string; path: strin
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />;
 }
+
+export function FaqJsonLd({ faqs }: { faqs: { q: string; a: string }[] }) {
+  if (!faqs || faqs.length === 0) return null;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />;
+}
+
+export function ServiceJsonLd({
+  name,
+  description,
+  path,
+  serviceType,
+  priceRange,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  serviceType?: string;
+  priceRange?: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    serviceType: serviceType || name,
+    url: `${site.url}${path}`,
+    provider: {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": `${site.url}/#business`,
+      name: site.name,
+      telephone: site.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: `${site.street}, ${site.locality}`,
+        addressLocality: site.city,
+        addressCountry: site.country,
+      },
+    },
+    areaServed: [
+      { "@type": "Country", name: "Maroc" },
+      { "@type": "City", name: "Casablanca" },
+      { "@type": "City", name: "Marrakech" },
+      { "@type": "City", name: "Rabat" },
+      { "@type": "City", name: "Tanger" },
+      { "@type": "City", name: "Agadir" },
+      { "@type": "City", name: "Fès" },
+    ],
+    ...(priceRange ? { priceRange } : {}),
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />;
+}
+

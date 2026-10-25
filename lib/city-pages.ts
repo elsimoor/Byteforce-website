@@ -267,12 +267,12 @@ export const cityPages: CityPage[] = [
     country: "Maroc",
     pillar: { href: "/developpement-logiciel-maroc", label: "Développement logiciel au Maroc" },
     pillarCrumb: "Développement logiciel au Maroc",
-    title: "Développement logiciel à Fès · Byte Force",
+    title: "Création site web à Fès | BYTE FORCE",
     description:
-      "Développement logiciel à Fès. Digitalisation des PME, artisanat et commerce. Studio à Casablanca, projets pour Fès.",
-    h1: "Développement logiciel à Fès",
-    keyword: "développement logiciel Fès",
-    lede: "Byte Force conçoit un logiciel ou un site pour une entreprise à Fès, depuis Casablanca. Aucun projet du catalogue n'est publié à Fès. La page décrit le travail possible, pas un client inventé.",
+      "Création de site web et logiciel sur mesure à Fès : vitrine, e-commerce et gestion pour PME et artisans. Code garanti, devis gratuit en 24h.",
+    h1: "Création de site web et développement logiciel à Fès",
+    keyword: "création site web fès",
+    lede: "Byte Force conçoit des sites internet professionnels, boutiques en ligne et logiciels métier pour les entreprises et artisans de Fès et de la région Fès-Meknès, depuis son studio au Technopark.",
     sections: [
       {
         heading: "Fès et le numérique",
@@ -306,6 +306,57 @@ export const cityPages: CityPage[] = [
       { href: "/services/creation-site-web", label: "Création de site" },
       { href: "/developpement-logiciel-sur-mesure-maroc/logiciel-metier", label: "Logiciel métier" },
       { href: "/developpement-logiciel-sur-mesure-maroc/crm", label: "CRM sur mesure" },
+    ],
+    studies: [],
+  },
+  {
+    slug: "agadir",
+    city: "Agadir",
+    country: "Maroc",
+    pillar: { href: "/developpement-logiciel-maroc", label: "Développement logiciel au Maroc" },
+    pillarCrumb: "Développement logiciel au Maroc",
+    title: "Création site web & WordPress à Agadir | BYTE FORCE",
+    description:
+      "Agence web et développement WordPress à Agadir et Souss-Massa : sites vitrines, e-commerce, CRM et applications. Devis gratuit en 24h.",
+    h1: "Création de site web et développement WordPress à Agadir",
+    keyword: "création site wordpress agadir",
+    lede: "Byte Force accompagne les entreprises d'Agadir, Taghazout et du Souss-Massa dans la création de sites WordPress performants, l'optimisation SEO locale et le développement de logiciels métier sur mesure depuis son studio au Technopark.",
+    sections: [
+      {
+        heading: "Le web et le digital à Agadir et dans le Souss",
+        paragraphs: [
+          "Agadir et la région Souss-Massa combinent tourisme balnéaire, surf camps (Taghazout), agroalimentaire, coopératives d'argan et export. Ces entreprises ont besoin de sites web rapides, visibles sur Google au Maroc et à l'international, capables de convertir un visiteur en client ou en réservation sans friction.",
+          "Nous concevons des sites WordPress sur mesure, sans thèmes lourds ni extensions inutiles : chargement en moins de 1,5 seconde, design responsive adapté aux touristes comme aux acheteurs B2B, et intégration multilingue (français, anglais, arabe).",
+        ],
+      },
+      {
+        heading: "Besoins fréquents à Agadir",
+        paragraphs: [
+          "Création de site vitrine et catalogue pour présenter des produits du terroir, hôtels, riads et activités touristiques.",
+          "Développement WooCommerce ou boutique sur mesure avec paiement en dirhams (CMI) et devises internationales (Stripe / PayPal).",
+          "Logiciel de gestion de réservations, planning de cours de surf ou suivi de commandes agroalimentaires pour remplacer les messages WhatsApp et les tableurs dispersés.",
+        ],
+      },
+      {
+        heading: "Services pour les entreprises d'Agadir",
+        paragraphs: [
+          "Création et refonte de site WordPress : architecture propre, sécurité renforcée, sauvegardes automatiques.",
+          "Référencement naturel (SEO) local et national pour ranker sur Agadir, le Maroc et l'Europe.",
+          "Développement logiciel et CRM sur mesure pour automatiser la gestion commerciale.",
+        ],
+      },
+      {
+        heading: "Collaboration fluide à distance",
+        paragraphs: [
+          "Tous les échanges se font en visioconférence (Google Meet, WhatsApp) aux horaires du Maroc (9h-19h). Le code source, le nom de domaine et l'hébergement restent à 100% votre propriété exclusive.",
+          contact,
+        ],
+      },
+    ],
+    services: [
+      { href: "/agence-wordpress-maroc", label: "Agence WordPress Maroc" },
+      { href: "/services/creation-site-web", label: "Création de site web" },
+      { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
     ],
     studies: [],
   },

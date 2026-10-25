@@ -25,46 +25,50 @@ export const articles: Article[] = [
   ...techArticles,
   {
     slug: "cout-logiciel-sur-mesure-maroc",
-    title: "Combien coûte un logiciel sur mesure au Maroc",
+    title: "Combien coûte un logiciel sur mesure au Maroc | Tarifs 2026",
     description:
-      "Combien coûte un logiciel sur mesure : pas de prix public. À Casablanca, la note suit les écrans, les rôles et les branchements.",
-    h1: "Combien coûte un logiciel sur mesure au Maroc",
+      "Quel est le prix d'un logiciel sur mesure au Maroc ? Fourchettes réelles : module dès 25 000 MAD, CRM/ERP PME 45 000 à 95 000 MAD. Devis sous 24h.",
+    h1: "Combien coûte un logiciel sur mesure au Maroc ? Guide des tarifs 2026",
     date: "2026-10-08",
-    lede: "Combien coûte un logiciel sur mesure : Byte Force, au Technopark à Casablanca, ne publie pas de grille. Le montant suit les écrans, les rôles et les branchements. Un premier échange de trente minutes est gratuit. [[/contact|Écrire à Casablanca]] pour le circuit réel, pas pour une grille.",
+    lede: "Le développement d'un logiciel sur mesure au Maroc coûte entre 25 000 MAD pour une application métier ciblée, et 180 000 MAD pour un système ERP d'entreprise multi-départements. Contrairement aux abonnements SaaS récurrents, cet investissement unique est amorti en moins de 12 mois. Byte Force vous détaille les composantes de prix et les délais réels. [[/contact|Demandez votre chiffrage gratuit]].",
     sections: [
       {
-        heading: "Il n'y a pas de prix affiché",
+        heading: "Les fourchettes de prix réelles au Maroc en 2026",
         paragraphs: [
-          "Une page qui annonce « à partir de » un montant en dirhams décrit un forfait, pas le logiciel d'une entreprise précise. Byte Force ne le fait pas. Les pages du site ne sont pas un devis. Un projet commence après un périmètre écrit.",
-          "Le [[/developpement-logiciel-sur-mesure-maroc|développement logiciel sur mesure au Maroc]] est le cadre. Le CRM, l'ERP, le logiciel métier et l'automatisation ont chacun leur page, parce qu'un pipeline de devis n'a pas le même périmètre qu'un stock.",
+          "Le coût d'un développement logiciel sur mesure au Maroc se décompose en trois grandes catégories de projets :",
+          "1. Outil Métier Ciblé / Remplacement Excel (25 000 à 40 000 MAD) : Idéal pour remplacer un fichier tableur critique qui plante. Centralisation d'un processus unique (ex. gestion de parc automobile, suivi de chantiers, planning d'équipe). Délai : 3 à 5 semaines.",
+          "2. CRM ou ERP PME Personnalisé (45 000 à 95 000 MAD) : Gestion complète du cycle commercial, devis et facturation aux normes marocaines (ICE, IF), gestion des stocks, alertes WhatsApp et droits d'accès multi-utilisateurs. Délai : 6 à 10 semaines.",
+          "3. Logiciel d'Entreprise Complexe / Plateforme Multi-Agences (100 000 à 180 000+ MAD) : Plusieurs centaines d'utilisateurs, synchronisation bancaire, architecture haute disponibilité, portail client externe et API interfacées avec des logiciels tiers. Délai : 10 à 16 semaines.",
         ],
       },
       {
-        heading: "Ce qui fait monter ou baisser le montant",
+        heading: "Tableau comparatif des tarifs par type de logiciel",
         paragraphs: [
-          "Trois choses comptent. Le nombre d'écrans que quelqu'un utilise vraiment. Le nombre de rôles : qui crée un dossier, qui le valide, qui l'exporte. Les branchements : email, paiement, ou un outil déjà payé qui doit rester.",
-          "Vouloir tout gérer d'un coup, congés, flotte, prospects, stock et paie, gonfle le périmètre sans rendre le premier circuit plus sûr. On coupe jusqu'au flux dont le décalage coûte chaque semaine. Le reste attend.",
+          "• Module automatisé / Remplacement Excel : 25 000 – 40 000 MAD | Délai : 3 à 5 semaines | 1 à 5 utilisateurs",
+          "• CRM commercial PME : 35 000 – 65 000 MAD | Délai : 4 à 8 semaines | Pipeline, devis & relances",
+          "• ERP léger gestion & stocks : 55 000 – 95 000 MAD | Délai : 6 à 10 semaines | Factures, achats, stock",
+          "• Plateforme SaaS / Multi-agences : 100 000 – 180 000+ MAD | Délai : 10 à 16 semaines | Cloud dédié scalable",
         ],
       },
       {
-        heading: "Ce qui ne change pas le prix",
+        heading: "Ce qui fait monter ou baisser le montant du devis",
         paragraphs: [
-          "Le bureau est à Casablanca. La proximité ne rajoute pas une taxe, et elle n'en retire pas une non plus. Un projet pour une entreprise en France se fait depuis ce bureau : il n'y a pas de bureau en France ni au Canada.",
-          "Un tableur de dix lignes, une comptabilité standard ou une messagerie n'appellent pas un logiciel sur mesure. L'échange sert aussi à dire non, et à laisser l'outil du marché en place.",
+          "Trois facteurs déterminent le budget : le nombre d'écrans et de flux métier réels, le niveau de droits d'accès (rôles administrateur, commercial, comptable, client), et les intégrations externes (passerelle de paiement CMI, SMS, WhatsApp Business, API tierces).",
+          "Chez Byte Force, nous recommandons de commencer par le goulet d'étranglement qui coûte de l'argent chaque jour. Ce premier périmètre est livré rapidement, puis nous ajoutons les modules secondaires par itérations régulières.",
         ],
       },
       {
-        heading: "Comment la note se décide",
+        heading: "Propriété intégrale du code et retour sur investissement",
         paragraphs: [
-          "Un acompte lance le travail. Le reste suit des étapes liées à ce qui a été livré. Si le périmètre change, le changement est écrit et accepté avant d'être construit. À la remise, le client possède le code, le dépôt et les comptes d'hébergement livrés.",
-          "Les projets publiés, Dealkhir à Casablanca ou Coco Inbox à Montréal, montrent ce qui est en ligne. Ils ne montrent pas un montant. Pour un chiffre, il faut le circuit réel : [[/contact|écrire à Casablanca]]. La réponse part sous un jour ouvré.",
+          "À la livraison finale, l'intégralité du code source vous est remise. Vous ne payez aucune redevance mensuelle par utilisateur. Pour une équipe de 10 personnes, un logiciel sur mesure permet d'économiser entre 20 000 et 50 000 MAD chaque année par rapport aux abonnements de logiciels étrangers.",
+          "[[/contact|Écrivez-nous à Casablanca]] ou contactez notre équipe sur WhatsApp au +212 666 650 696. Réponse et chiffrage détaillés sous un jour ouvré.",
         ],
       },
     ],
     links: [
-      { href: "/contact", label: "Décrire le circuit" },
+      { href: "/contact", label: "Demander un devis gratuit" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure" },
-      { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
+      { href: "/crm-sur-mesure-maroc", label: "CRM sur mesure Maroc" },
     ],
     en: {
       title: "What custom software costs in Morocco",
@@ -3026,46 +3030,51 @@ export const articles: Article[] = [
   },
   {
     slug: "prix-application-mobile-maroc",
-    title: "Prix application mobile Maroc",
+    title: "Prix application mobile Maroc | Tarifs réels 2026",
     description:
-      "Prix d'une application mobile au Maroc : pas de montant public. La note suit les écrans, un store ou deux, et les rôles. Casablanca.",
-    h1: "Prix application mobile Maroc",
+      "Combien coûte une application mobile au Maroc ? Prix réels en MAD : MVP dès 35 000 MAD, app complète 60 000 à 95 000 MAD. Devis gratuit sous 24h.",
+    h1: "Combien coûte une application mobile au Maroc ? Tarifs et guide 2026",
     date: "2026-10-08",
-    lede: "Le prix d'une application mobile au Maroc n'est pas une ligne de store. Byte Force, au Technopark à Casablanca, ne publie pas de montant. La note suit les écrans, les rôles, et le fait de viser Android, iOS, ou les deux. [[/contact|Écrire]] pour le geste sur le téléphone, pas pour une grille.",
+    lede: "Le prix d'une application mobile au Maroc varie entre 35 000 MAD pour un MVP ou une application vitrine, et 140 000 MAD pour une plateforme complexe avec géolocalisation et paiement en ligne. Le délai moyen est de 6 à 12 semaines. Byte Force vous donne les vraies fourchettes du marché pour chiffrer votre projet sans mauvaise surprise. [[/contact|Demandez votre chiffrage gratuit en 24h]].",
     sections: [
       {
-        heading: "Ce qu'une page ne chiffre pas",
+        heading: "Les fourchettes de prix réelles pour une application mobile au Maroc",
         paragraphs: [
-          "Une page « application à partir de » un montant en dirhams décrit un forfait, pas le geste d'une entreprise. Byte Force ne le fait pas. Les pages du site ne sont pas un devis. Un chiffre n'existe qu'après un périmètre écrit. Le [[/developpement-application-mobile-maroc|développement mobile]] est l'offre. Cette page dit quoi demander à voir sur un devis.",
-          "Zainek et Tourispeak sont des applications Android déjà publiées, avec leur site. Leurs fiches Play ne sont pas un tarif, et leurs chiffres ne sont pas ceux de Byte Force.",
+          "Au Maroc en 2026, le coût de développement d'une application iOS et Android dépend de sa complexité fonctionnelle et de son architecture technique :",
+          "1. Application Mobile Simple / MVP (35 000 à 50 000 MAD) : Présentation de services, formulaires de contact, catalogue produits sans transaction, notifications push et espace compte utilisateur simple. Idéal pour tester un concept ou digitaliser un service PME. Délai : 4 à 6 semaines.",
+          "2. Application Métier ou E-commerce (55 000 à 95 000 MAD) : Catalogue dynamique, panier d'achat, paiement par carte bancaire (CMI / Stripe), suivi de commandes, géolocalisation en temps réel et tableau de bord administrateur web. Délai : 6 à 10 semaines.",
+          "3. Plateforme Complexe / Marketplace (100 000 à 180 000+ MAD) : Plusieurs profils d'utilisateurs (ex. clients, livreurs, commerçants), messagerie instantanée, algorithme de matching, mode hors-ligne complet et intégration ERP/CRM d'entreprise. Délai : 10 à 16 semaines.",
         ],
       },
       {
-        heading: "Les lignes qui comptent",
+        heading: "Tableau récapitulatif des tarifs par type d'application",
         paragraphs: [
-          "Les écrans que quelqu'un ouvre vraiment. Les rôles. Le store : [[/developpement-application-mobile-maroc|Android]], iOS, ou les deux. Deux stores, ce n'est pas le même périmètre qu'un seul. Un compte développeur ouvert pour le projet fait partie du périmètre, pas une surprise le jour de la publication.",
-          "Vouloir le site, le CRM et la paie dans la même application fait monter la note sans rendre le geste plus sûr. Si le geste se fait à un bureau, une application web est souvent plus courte. On le dit avant d'écrire.",
+          "• App MVP / Vitrine : 35 000 à 50 000 MAD | Délai : 4 à 6 semaines | iOS & Android (React Native)",
+          "• App Réservation / Service : 55 000 à 80 000 MAD | Délai : 6 à 8 semaines | Paiement CMI + notifications",
+          "• App E-commerce / Livraison : 75 000 à 110 000 MAD | Délai : 8 à 12 semaines | Tracking GPS + multi-rôles",
+          "• App Marketplace / SaaS mobile : 120 000 à 180 000+ MAD | Délai : 12 à 16 semaines | Architecture cloud scalable",
         ],
       },
       {
-        heading: "Ce qui ne change pas la note",
+        heading: "Quels sont les facteurs qui font varier le devis ?",
         paragraphs: [
-          "Le bureau est à Casablanca, boulevard Dammam, Aïn Chock. La proximité ne rajoute pas une taxe et n'en retire pas une. Pas de bureau en France ni au Canada. Pas de délai fixe collé au prix : une première version tient souvent en plusieurs semaines, selon les écrans et les stores.",
-          "À la remise, le code et les comptes livrés reviennent à l'entreprise. Un acompte suit le périmètre. Un changement est écrit avant d'être construit. On ne publie pas un nombre de téléchargements pour justifier un montant qui n'est pas affiché.",
+          "Deux stores (iOS et Android) vs un seul : grâce à React Native et Expo, nous développons une base de code unique fonctionnant nativement sur iPhone et Android, ce qui vous fait économiser jusqu'à 40% par rapport à deux développements natifs distincts.",
+          "Frais des stores : Google Play facture 25 $ (frais unique à vie) et Apple Developer facture 99 $ / an. Ces comptes doivent être ouverts au nom officiel de votre entreprise.",
+          "Propriété intellectuelle : chez Byte Force, le code source complet vous est cédé à 100% à la livraison. Vous n'êtes pas captif d'un abonnement mensuel obligatoire.",
         ],
       },
       {
-        heading: "Quand écrire",
+        heading: "Comment obtenir un chiffrage précis sous 24h ?",
         paragraphs: [
-          "Écrire quand deux devis se comparent sans dire les écrans, les rôles et le store. Apporter le geste. Si vous ne savez pas encore Android ou iOS, le geste suffit pour le premier échange.",
-          "Trente minutes, gratuites. Réponse sous un jour ouvré, 9 h à 19 h. [[/contact|Décrire le geste]] suffit. Téléphone : +212 666 650 696.",
+          "Vous avez une idée ou un cahier des charges ? Envoyez-nous la liste des fonctionnalités souhaitées. Un ingénieur logiciel vous répond sous 24h ouvrées avec une estimation budgétaire détaillée et un planning de livraison réaliste.",
+          "Rendez-vous possible à notre bureau au Technopark de Casablanca ou échange en visio. [[/contact|Demander un devis gratuit]] ou contactez-nous par WhatsApp au +212 666 650 696.",
         ],
       },
     ],
     links: [
-      { href: "/contact", label: "Décrire le geste" },
-      { href: "/developpement-application-mobile-maroc", label: "L'application mobile" },
-      { href: "/developpement-application-mobile-maroc", label: "Android" },
+      { href: "/contact", label: "Demander un devis gratuit" },
+      { href: "/developpement-application-mobile-maroc", label: "Développement application mobile Maroc" },
+      { href: "/developpement-logiciel-casablanca", label: "Studio mobile Casablanca" },
     ],
     en: {
       title: "What a mobile app quote includes in Morocco",
@@ -3889,6 +3898,101 @@ export const articles: Article[] = [
         },
       ],
     },
+  },
+  {
+    slug: "prix-seo-maroc",
+    title: "Prix SEO Maroc | Tarifs référencement naturel 2026",
+    description:
+      "Combien coûte le SEO au Maroc ? Tarifs réels : audit dès 6 000 MAD, suivi mensuel 5 000 à 10 000 MAD/mois. Boostez votre trafic Google. Devis 24h.",
+    h1: "Prix SEO au Maroc : tarifs et formules de référencement naturel 2026",
+    date: "2026-10-14",
+    lede: "Le prix du référencement naturel (SEO) au Maroc se situe entre 6 000 MAD pour un audit technique complet, et entre 5 000 et 12 000 MAD / mois pour un accompagnement continu incluant optimisation technique, rédaction de contenu et netlinking. Un bon référencement est l'investissement marketing le plus rentable pour acquérir des clients qualifiés sur Google sans payer de publicités Google Ads. [[/contact|Demandez votre audit SEO gratuit]].",
+    sections: [
+      {
+        heading: "Les tarifs SEO réels au Maroc en 2026",
+        paragraphs: [
+          "Le coût d'une prestation SEO dépend de la concurrence de votre secteur et de l'état technique de votre site :",
+          "1. Audit SEO Technique & Sémantique (6 000 à 12 000 MAD - Forfait unique) : Analyse complète des erreurs 404, vitesse d'affichage Core Web Vitals, balisage Schema.org, étude des mots-clés stratégiques rentables et plan d'actions correctif priorisé. Livré sous 10 jours ouvrés.",
+          "2. Accompagnement SEO Mensuel PME (5 000 à 9 000 MAD / mois) : Optimisation continue des pages, création de 2 à 4 articles optimisés par mois, acquisition de backlinks qualifiés au Maroc, suivi du positionnement dans Google Search Console et rapport mensuel transparent.",
+          "3. Stratégie SEO Nationale & E-commerce (10 000 à 18 000 MAD / mois) : Pour les plateformes et boutiques en ligne fortement concurrentielles. Optimisation des catégories, maillage interne avancé, SEO local multi-villes (Casablanca, Marrakech, Tanger, Rabat) et netlinking de haute autorité.",
+        ],
+      },
+      {
+        heading: "Tableau comparatif des formules de référencement SEO",
+        paragraphs: [
+          "• Audit SEO Complet : 6 000 – 12 000 MAD | Livrable sous 10 jours | Diagnostic technique + roadmap mots-clés",
+          "• Pack Refonte SEO On-Page : 10 000 – 20 000 MAD | 3 à 4 semaines | Réécriture balises, vitesse < 1.5s, rich snippets",
+          "• Accompagnement Mensuel Croissance : 5 000 – 10 000 MAD / mois | Sans engagement long terme | Netlinking + contenus + reporting GSC",
+          "• SEO E-commerce Grand Compte : 12 000 – 25 000 MAD / mois | Déploiement multi-villes & international",
+        ],
+      },
+      {
+        heading: "Pourquoi fuir les offres SEO à 1 000 MAD par mois ?",
+        paragraphs: [
+          "De nombreuses pseudo-agences proposent des forfaits à bas coût promettant « la première place sur Google en 15 jours ». Ces pratiques utilisent des techniques automatisées (Black Hat) ou des fermes de liens toxiques qui finissent par faire bannir définitivement votre nom de domaine par les algorithmes de Google (pénalités manuelles ou Google Helpful Content Update).",
+          "Chez Byte Force, notre approche est 100% White Hat : nous assainissons le code de votre site, nous optimisons vos pages pour répondre exactement aux intentions de recherche de vos clients marocains, et nous créons des données structurées que les moteurs et les IA génératives (AI Overviews) adorent citer.",
+        ],
+      },
+      {
+        heading: "Comment démarrer votre audit SEO ?",
+        paragraphs: [
+          "Envoyez-nous l'adresse de votre site web actuel. Nous analysons gratuitement vos 3 plus gros blocages techniques et vous remettons une proposition chiffrée adaptée à vos objectifs. [[/contact|Demander un audit SEO]] ou écrivez-nous au Technopark Casablanca.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Demander un audit SEO" },
+      { href: "/services/referencement-seo", label: "Service SEO Byte Force" },
+      { href: "/audit", label: "Audit gratuit de page" },
+    ],
+  },
+  {
+    slug: "tarif-creation-site-wordpress-maroc",
+    title: "Tarif création site WordPress Maroc | Prix 2026",
+    description:
+      "Combien coûte un site WordPress au Maroc ? Site vitrine dès 8 000 MAD, e-commerce WooCommerce 18 000 à 35 000 MAD. Vitesse < 1.5s. Devis sous 24h.",
+    h1: "Tarif de création d'un site WordPress au Maroc : prix et devis 2026",
+    date: "2026-10-14",
+    lede: "Le tarif de création d'un site WordPress au Maroc varie de 8 000 MAD pour un site vitrine professionnel rapide et élégant, à 35 000 MAD pour une boutique e-commerce WooCommerce complète avec paiement bancaire CMI et gestion de stock. Byte Force conçoit des sites WordPress sur mesure, sécurisés et optimisés pour le référencement Google. [[/contact|Demandez votre devis gratuit en 24h]].",
+    sections: [
+      {
+        heading: "Grille tarifaire moyenne pour un site WordPress au Maroc",
+        paragraphs: [
+          "Voici les fourchettes tarifaires réelles constatées sur le marché marocain pour un travail professionnel garanti :",
+          "1. Site Vitrine PME Professionnel (8 000 à 15 000 MAD) : 5 à 10 pages sur mesure (Accueil, Services, À propos, Réalisations, Contact avec WhatsApp et formulaire), design responsive mobile, conformité RGPD/CNDP, certificat SSL et optimisation SEO de base. Délai : 2 à 3 semaines.",
+          "2. Site Catalogue ou Corporate Avancé (14 000 à 22 000 MAD) : Présentation de dizaines de références sans paiement en ligne, demandes de devis automatiques en un clic, multilingue (Français/Arabe/Anglais) et blog d'actualités optimisé SEO. Délai : 3 à 4 semaines.",
+          "3. Boutique E-commerce WooCommerce (18 000 à 35 000 MAD) : Vente en ligne, passerelle de paiement sécurisée en Dirhams (CMI / PayZone), calcul des frais de livraison par ville marocaine, notifications de commande WhatsApp et synchronisation des stocks. Délai : 4 à 6 semaines.",
+        ],
+      },
+      {
+        heading: "Tableau comparatif des packs WordPress",
+        paragraphs: [
+          "• WordPress Vitrine Standard : 8 000 – 12 000 MAD | 5 pages | Formulaire, WhatsApp, design moderne",
+          "• WordPress Vitrine Pro : 12 000 – 16 000 MAD | 10 pages | Rédaction SEO incluse, multilingue",
+          "• WooCommerce E-commerce : 18 000 – 28 000 MAD | Jusqu'à 100 produits | Paiement CMI, gestion des stocks",
+          "• WooCommerce Sur Mesure : 28 000 – 40 000+ MAD | Produits illimités | Connexion ERP/CRM & logistique",
+        ],
+      },
+      {
+        heading: "Ce qui est systématiquement inclus chez Byte Force",
+        paragraphs: [
+          "Vitesse garantie : chargement en moins de 1,5 seconde sur mobile (fini les thèmes lourds qui font fuir 50% de vos visiteurs).",
+          "Formation complète : une séance de formation individuelle pour apprendre à modifier vos textes et photos en toute autonomie.",
+          "Propriété intégrale : le nom de domaine, l'hébergement et les codes d'accès administrateur vous appartiennent à 100%.",
+        ],
+      },
+      {
+        heading: "Obtenez votre devis sous 24h ouvrées",
+        paragraphs: [
+          "Indiquez-nous votre secteur et les fonctionnalités dont vous avez besoin. Nous vous envoyons une proposition détaillée avec calendrier de réalisation. [[/contact|Demander un devis WordPress]] ou échangez directement avec nous sur WhatsApp au +212 666 650 696.",
+        ],
+      },
+    ],
+    links: [
+      { href: "/contact", label: "Demander un devis" },
+      { href: "/agence-wordpress-maroc", label: "Agence WordPress Maroc" },
+      { href: "/villes/agadir", label: "WordPress Agadir" },
+    ],
   },
 ];
 

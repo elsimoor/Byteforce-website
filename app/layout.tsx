@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { OrganizationJsonLd } from "@/components/json-ld";
+import { StickyMobileCta } from "@/components/sticky-mobile-cta";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -25,13 +26,20 @@ const jetbrains = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Byte Force · Sites, applications et logiciels à Casablanca",
-    template: "%s · Byte Force",
+    default: "Développement logiciel sur mesure Maroc · Byte Force",
+    template: "%s | BYTE FORCE",
   },
   description: site.description,
+  alternates: {
+    canonical: site.url,
+    languages: {
+      "fr-MA": site.url,
+      fr: site.url,
+    },
+  },
   openGraph: {
     type: "website",
-    locale: "fr_FR",
+    locale: "fr_MA",
     siteName: site.name,
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Byte Force, Casablanca" }],
   },
@@ -52,7 +60,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${publicSans.variable} ${jetbrains.variable}`}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased pb-16 md:pb-0">
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -71,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </div>
         <Footer />
+        <StickyMobileCta />
       </body>
     </html>
   );

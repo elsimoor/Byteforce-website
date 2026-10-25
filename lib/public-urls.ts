@@ -28,6 +28,12 @@ const staticPaths = [
   "/ai/contact",
   "/ai/faq",
   "/solutions",
+  "/developpement-logiciel-sur-mesure-maroc",
+  "/crm-sur-mesure-maroc",
+  "/developpement-saas-maroc",
+  "/agence-wordpress-maroc",
+  "/developpement-application-mobile-maroc",
+  "/integration-ia-automatisation-entreprise-maroc",
   "/mentions-legales",
   "/confidentialite",
   "/conditions",
@@ -45,8 +51,7 @@ export function publicEntries() {
   for (const page of moneyPages) set(`/${page.path}`, "2026-10-12");
   for (const city of cityPages) set(`/villes/${city.slug}`, "2026-10-12");
   for (const category of insightCategories) set(`/insights/category/${category.slug}`, "2026-10-12");
-  set("/geo-location", "2026-10-12");
-  for (const row of geoKeywords()) set(`/${row.path}`, "2026-10-12");
+
   for (const project of projects) {
     const year = Number(project.year);
     set(`/realisations/${project.slug}`, Number.isFinite(year) ? `${project.year}-01-01` : "2026-10-08");

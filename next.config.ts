@@ -25,7 +25,6 @@ const nextConfig: NextConfig = {
         destination: "/developpement-application-mobile-maroc",
         permanent: true,
       },
-      { source: "/crm-sur-mesure-maroc", destination: "/developpement-logiciel-sur-mesure-maroc/crm", permanent: true },
       { source: "/erp-sur-mesure-maroc", destination: "/developpement-logiciel-sur-mesure-maroc/erp", permanent: true },
       {
         source: "/logiciel-metier-sur-mesure-maroc",
