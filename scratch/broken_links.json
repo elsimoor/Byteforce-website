@@ -1,0 +1,1012 @@
+[
+  {
+    "from": "/",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services",
+    "target": "/services/logiciel-sur-mesure",
+    "anchor": "Nos logiciels→"
+  },
+  {
+    "from": "/services",
+    "target": "/services/md",
+    "anchor": "📄 Version texte en markdown"
+  },
+  {
+    "from": "/services",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/how-we-write",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/walid-moultamiss",
+    "target": "/walid_moultamiss%20CV%20Fr.pdf",
+    "anchor": "CV en français (PDF)"
+  },
+  {
+    "from": "/walid-moultamiss",
+    "target": "/walid_moultamiss%20CV%20Eng.pdf",
+    "anchor": "CV in English (PDF)"
+  },
+  {
+    "from": "/walid-moultamiss",
+    "target": "/walid_moultamiss%20CV%20Eng.pdf",
+    "anchor": "Download the English CV"
+  },
+  {
+    "from": "/walid-moultamiss",
+    "target": "/walid_moultamiss%20CV%20Fr.pdf",
+    "anchor": "Télécharger le CV français"
+  },
+  {
+    "from": "/walid-moultamiss",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/checklists/comprendre-le-travail",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/checklists/dessiner-le-produit",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/checklists/construire-le-produit",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/checklists/lancer-le-produit",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/checklists/ameliorer-le-produit",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/ai",
+    "target": "/audit/json",
+    "anchor": "/audit/json"
+  },
+  {
+    "from": "/ai",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/ai/services",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/ai/work",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/ai/contact",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/ai/faq",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/crm-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-saas-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/agence-wordpress-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-application-mobile-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/integration-ia-automatisation-entreprise-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/mentions-legales",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/confidentialite",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/conditions",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/plan-du-site",
+    "target": "/geo-location",
+    "anchor": "Pages par lieu"
+  },
+  {
+    "from": "/plan-du-site",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/creation-site-web",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/referencement-seo",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/hebergement",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/design-graphique",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/api-backend",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/maintenance",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/audit-correction",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/services/plugins-wordpress",
+    "target": "/plugin-downloader.zip",
+    "anchor": "Télécharger Plugin Downloader"
+  },
+  {
+    "from": "/services/plugins-wordpress",
+    "target": "/pdm-connect.zip",
+    "anchor": "Télécharger PDM Connect"
+  },
+  {
+    "from": "/services/plugins-wordpress",
+    "target": "/pdm-ecommerce.zip",
+    "anchor": "Télécharger PDM Ecommerce"
+  },
+  {
+    "from": "/services/plugins-wordpress",
+    "target": "/pdm-optimize-media.zip",
+    "anchor": "Télécharger PDM Optimize Media"
+  },
+  {
+    "from": "/services/plugins-wordpress",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/crm",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/crm/logiciel-crm-personnalise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/erp",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/erp/erp-personnalise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/erp/logiciel-gestion-entreprise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/logiciel-metier",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-sur-mesure-maroc/automatisation",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/application-web-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions/remplacer-excel",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions/remplacer-saas",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions/automatisation-entreprise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions/moderniser-application",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions/logiciel-pme",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/solutions/logiciel-entreprise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-casablanca",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-france",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/developpement-logiciel-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/casablanca",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/marrakech",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/tanger",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/safi",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/rabat",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/fes",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/agadir",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/lille",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/roubaix",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/nord",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/marcq-en-baroeul",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/villes/montreal",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/logiciel-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/crm",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/saas",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/applications-mobiles",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/applications-web",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/pile",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/intelligence-artificielle",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/category/processus",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/escapade-florale",
+    "target": "/categories/e-commerce",
+    "anchor": "E-Commerce"
+  },
+  {
+    "from": "/realisations/escapade-florale",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/nu-lille",
+    "target": "/categories/e-commerce",
+    "anchor": "E-Commerce"
+  },
+  {
+    "from": "/realisations/nu-lille",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/meubles-de-septentrion",
+    "target": "/categories/e-commerce",
+    "anchor": "E-Commerce"
+  },
+  {
+    "from": "/realisations/meubles-de-septentrion",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/re-proche-de-moi",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/re-proche-de-moi",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/ambulances-valcq",
+    "target": "/categories/vitrine",
+    "anchor": "Vitrine"
+  },
+  {
+    "from": "/realisations/ambulances-valcq",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/les-hauts-paysages",
+    "target": "/categories/vitrine",
+    "anchor": "Vitrine"
+  },
+  {
+    "from": "/realisations/les-hauts-paysages",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/dealkhir",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/dealkhir",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/coco-inbox",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/coco-inbox",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/uas",
+    "target": "/categories/e-commerce",
+    "anchor": "E-Commerce"
+  },
+  {
+    "from": "/realisations/uas",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/tourispeak",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/tourispeak",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/zainek",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/zainek",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/agency-wonderland",
+    "target": "/categories/vitrine",
+    "anchor": "Vitrine"
+  },
+  {
+    "from": "/realisations/agency-wonderland",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/snapchat-collect",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/snapchat-collect",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/crm-cocoinbox",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/crm-cocoinbox",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/booking-proche-de-moi",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/booking-proche-de-moi",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/infinitebridge",
+    "target": "/categories/vitrine",
+    "anchor": "Vitrine"
+  },
+  {
+    "from": "/realisations/infinitebridge",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/palais-mehdi",
+    "target": "/categories/vitrine",
+    "anchor": "Vitrine"
+  },
+  {
+    "from": "/realisations/palais-mehdi",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/realisations/yoursmile",
+    "target": "/categories/plate-forme",
+    "anchor": "Plate-forme"
+  },
+  {
+    "from": "/realisations/yoursmile",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/nextjs-dans-les-produits",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/react-pour-l-interface",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/typescript-dans-le-code",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/wordpress-quand-le-site-existe",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/nodejs-pour-le-serveur",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/graphql-pour-l-api",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/postgresql-pour-les-enregistrements",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/mongodb-pour-les-documents",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/redis-pour-un-etat-rapide",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/firebase-si-l-auth-est-la",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/cloudflare-devant-le-site",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/vercel-pour-publier",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/ovhcloud-pour-l-hebergement",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/modele-apres-la-regle",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/expo-pour-le-telephone",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/power-bi-si-l-outil-est-la",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/clarity-sur-une-page",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/posthog-pour-les-evenements",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/mailgun-pour-l-envoi",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/mailchimp-pour-la-liste",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/hostinger-pour-l-hebergement",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/namecheap-pour-le-domaine",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/nindohost-pour-l-hebergement",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/cout-logiciel-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/delai-logiciel-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/qui-possede-le-code",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/apres-la-livraison",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/site-web-ou-logiciel",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/site-lisible-par-une-machine",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/rouvrir-l-application",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/tester-le-parcours",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/quatre-lectures-a-cent",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/premiere-version-utile",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/logiciel-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/developpement-logiciel-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/prix-logiciel-sur-mesure-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/logiciel-metier-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/quand-creer-un-logiciel-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/logiciel-personnalise-ou-standard",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/avantages-logiciel-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/developpement-logiciel-entreprise-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/agence-developpement-logiciel-casablanca",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/crm-personnalise-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/creation-crm-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/cout-crm-personnalise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/crm-ou-excel",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/remplacer-excel-par-un-crm",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/quand-utiliser-un-crm",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/crm-pme-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/logiciel-gestion-clients-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/crm-personnalise-ou-salesforce",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/comment-choisir-un-crm",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/creation-saas-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/developpement-saas-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/cout-creation-saas",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/comment-creer-un-saas",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/mvp-saas-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/developpement-application-saas",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/saas-sur-mesure-ou-standard",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/idee-saas-entreprise-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/developpement-application-mobile-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/prix-application-mobile-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/cout-application-mobile",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/developpement-application-web-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/application-mobile-sur-mesure",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/application-web-ou-mobile",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/cout-application-web",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/creer-une-application-pour-son-entreprise",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/intelligence-artificielle-entreprise-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/automatisation-entreprise-avec-ia",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/contrat-avant-le-code",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/prix-seo-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/insights/tarif-creation-site-wordpress-maroc",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio/ou-lon-travaille",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio/ce-que-vous-gardez",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio/deja-en-ligne",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio/apres-la-mise-en-ligne",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio/comment-commencer",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/studio/qui-le-dirige",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  },
+  {
+    "from": "/ou-en-est-le-projet",
+    "target": "/geo-location",
+    "anchor": "Lieux"
+  }
+]

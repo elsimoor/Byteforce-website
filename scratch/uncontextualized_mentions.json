@@ -1,0 +1,1244 @@
+[
+  {
+    "file": "app\\ai\\faq\\page.tsx",
+    "line": 8,
+    "word": "crm",
+    "text": "const description = \"Réponses courtes et vérifiables : métier, lieu, SaaS, CRM, automatisation, et ce que le site ne ven"
+  },
+  {
+    "file": "app\\ai\\faq\\page.tsx",
+    "line": 17,
+    "word": "erp",
+    "text": "a: \"Des logiciels sur mesure, des applications web, des SaaS, des CRM et des ERP quand le périmètre le demande, des site"
+  },
+  {
+    "file": "app\\ai\\faq\\page.tsx",
+    "line": 17,
+    "word": "crm",
+    "text": "a: \"Des logiciels sur mesure, des applications web, des SaaS, des CRM et des ERP quand le périmètre le demande, des site"
+  },
+  {
+    "file": "app\\ai\\page.tsx",
+    "line": 31,
+    "word": "erp",
+    "text": "Le cœur du travail est le logiciel d'entreprise : application, métier, automatisation, SaaS, CRM et ERP quand le périmèt"
+  },
+  {
+    "file": "app\\ai\\page.tsx",
+    "line": 31,
+    "word": "crm",
+    "text": "Le cœur du travail est le logiciel d'entreprise : application, métier, automatisation, SaaS, CRM et ERP quand le périmèt"
+  },
+  {
+    "file": "app\\ai\\services\\page.tsx",
+    "line": 35,
+    "word": "erp",
+    "text": "Les pages plus précises, CRM, ERP, SaaS, automatisation, sont liées depuis <Link href=\"/services\">/services</Link>. Byte"
+  },
+  {
+    "file": "app\\ai\\services\\page.tsx",
+    "line": 35,
+    "word": "crm",
+    "text": "Les pages plus précises, CRM, ERP, SaaS, automatisation, sont liées depuis <Link href=\"/services\">/services</Link>. Byte"
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 50,
+    "word": "crm",
+    "text": "\"Intégration WhatsApp Business : envoyez vos propositions commerciales et recevez des confirmations directement dans le "
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 63,
+    "word": "crm",
+    "text": "title: \"Comparatif : CRM sur mesure Byte Force vs Abonnements SaaS\","
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 64,
+    "word": "salesforce",
+    "text": "headers: [\"Fonctionnalité\", \"CRM Byte Force\", \"HubSpot / Salesforce / Zoho\"],"
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 64,
+    "word": "crm",
+    "text": "headers: [\"Fonctionnalité\", \"CRM Byte Force\", \"HubSpot / Salesforce / Zoho\"],"
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 90,
+    "word": "crm",
+    "text": "q: \"Combien de temps faut-il pour déployer un CRM sur mesure ?\","
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 98,
+    "word": "erp",
+    "text": "q: \"Peut-on connecter le CRM à notre logiciel de facturation ou ERP ?\","
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 98,
+    "word": "crm",
+    "text": "q: \"Peut-on connecter le CRM à notre logiciel de facturation ou ERP ?\","
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 106,
+    "word": "crm",
+    "text": "{ href: \"/insights/crm-ou-excel\", label: \"Guide CRM vs Excel\" },"
+  },
+  {
+    "file": "app\\developpement-logiciel-sur-mesure-maroc\\page.tsx",
+    "line": 48,
+    "word": "crm",
+    "text": "\"CRM commercial sur mesure : gestion de pipeline, devis en dirhams, relances WhatsApp et suivi commercial.\","
+  },
+  {
+    "file": "app\\developpement-logiciel-sur-mesure-maroc\\page.tsx",
+    "line": 49,
+    "word": "erp",
+    "text": "\"ERP léger et logiciel de gestion PME : achats, stocks d'entrepôt, livraisons, facturation conforme DGI et comptabilité."
+  },
+  {
+    "file": "app\\integration-ia-automatisation-entreprise-maroc\\page.tsx",
+    "line": 36,
+    "word": "erp",
+    "text": "\"Extraction intelligente de documents : lecture automatique de factures, bons de livraison et cartes grises pour saisie "
+  },
+  {
+    "file": "app\\integration-ia-automatisation-entreprise-maroc\\page.tsx",
+    "line": 38,
+    "word": "crm",
+    "text": "\"Automatisation des flux entre logiciels (API) : synchronisation instantanée entre votre site web, votre CRM, vos passer"
+  },
+  {
+    "file": "app\\integration-ia-automatisation-entreprise-maroc\\page.tsx",
+    "line": 93,
+    "word": "erp",
+    "text": "a: \"Non. Nous construisons des connecteurs qui se branchent directement sur vos outils existants (Excel, ERP, messagerie"
+  },
+  {
+    "file": "app\\integration-ia-automatisation-entreprise-maroc\\page.tsx",
+    "line": 93,
+    "word": "crm",
+    "text": "a: \"Non. Nous construisons des connecteurs qui se branchent directement sur vos outils existants (Excel, ERP, messagerie"
+  },
+  {
+    "file": "app\\llms.txt\\route.ts",
+    "line": 78,
+    "word": "crm",
+    "text": "`- [CRM ou Excel, pour une entreprise](${origin}/insights/crm-ou-excel) : le fichier suffit tant qu'une seule personne l"
+  },
+  {
+    "file": "app\\studio\\page.tsx",
+    "line": 27,
+    "word": "cocoinbox",
+    "text": "{ slug: \"crm-cocoinbox\", slot: \"studio-slot-b\" },"
+  },
+  {
+    "file": "app\\studio\\page.tsx",
+    "line": 27,
+    "word": "crm",
+    "text": "{ slug: \"crm-cocoinbox\", slot: \"studio-slot-b\" },"
+  },
+  {
+    "file": "app\\walid-moultamiss\\page.tsx",
+    "line": 43,
+    "word": "cocoinbox",
+    "text": "title: \"Ingénieur logiciel, Cocoinbox\","
+  },
+  {
+    "file": "app\\walid-moultamiss\\page.tsx",
+    "line": 45,
+    "word": "crm",
+    "text": "text: \"Plateforme et CRM : email, notes et fichiers, avec un accent sur la confidentialité. Next.js, Node.js, GraphQL et"
+  },
+  {
+    "file": "app\\walid-moultamiss\\page.tsx",
+    "line": 124,
+    "word": "crm",
+    "text": "Le texte suit le CV. Walid Moultamiss conçoit des logiciels, des CRM, des sites et des applications, puis"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 48,
+    "word": "crm",
+    "text": "\"• CRM commercial PME : 35 000 – 65 000 MAD | Délai : 4 à 8 semaines | Pipeline, devis & relances\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 49,
+    "word": "erp",
+    "text": "\"• ERP léger gestion & stocks : 55 000 – 95 000 MAD | Délai : 6 à 10 semaines | Factures, achats, stock\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 84,
+    "word": "erp",
+    "text": "\"Custom software development in Morocco is the frame. CRM, ERP, trade software and automation each have their own page, "
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 84,
+    "word": "crm",
+    "text": "\"Custom software development in Morocco is the frame. CRM, ERP, trade software and automation each have their own page, "
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 157,
+    "word": "crm",
+    "text": "\"Un périmètre qui change après avoir été accepté. Une validation qui attend des semaines. Plusieurs branchements découve"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1504,
+    "word": "crm",
+    "text": "\"À la remise, le client possède le code, le dépôt et l'hébergement livré. Le CRM n'est pas un login que l'éditeur ferme."
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1531,
+    "word": "crm",
+    "text": "\"A custom CRM makes sense when the cycle does not fit the vendor's stages: a quote waiting for an internal approval, a f"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1545,
+    "word": "crm",
+    "text": "\"At handover, the client owns the code, the repository and the delivered hosting. The CRM is not a login a vendor closes"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1560,
+    "word": "crm",
+    "text": "slug: \"creation-crm-sur-mesure\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1612,
+    "word": "crm",
+    "text": "\"Before creation, the steps a file really crosses are written down. Who creates it, who moves it, who follows up, who ex"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1613,
+    "word": "crm",
+    "text": "\"One sheet is enough. A fifty-page specification delays the work. The first thirty minutes check whether the list is a C"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1641,
+    "word": "crm",
+    "text": "slug: \"cout-crm-personnalise\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1650,
+    "word": "crm",
+    "text": "heading: \"Il n'y a pas de tarif de CRM\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1691,
+    "word": "crm",
+    "text": "heading: \"There is no CRM tariff\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1693,
+    "word": "crm",
+    "text": "\"A CRM « from » so many dirhams per user describes a vendor's subscription, or a package. Byte Force publishes neither. "
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1694,
+    "word": "crm",
+    "text": "\"Comparing two custom CRMs without those steps is comparing two words. The CRM page says what gets built. This page says"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1722,
+    "word": "crm",
+    "text": "slug: \"crm-ou-excel\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1738,
+    "word": "crm",
+    "text": "heading: \"Ce que le CRM ne doit pas reprendre\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1774,
+    "word": "crm",
+    "text": "\"Excel wins for a short list, kept by one person, with no approval and no forgotten follow-up. Copying it into a CRM wou"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1779,
+    "word": "crm",
+    "text": "heading: \"What the CRM should not copy\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1789,
+    "word": "crm",
+    "text": "\"A deposit after a written scope. A change written before it is built. The CRM page remains the offer. This page only he"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1803,
+    "word": "crm",
+    "text": "slug: \"remplacer-excel-par-un-crm\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1855,
+    "word": "crm",
+    "text": "\"The file is replaced when the follow-up, the quote or the status live in different versions. A colour, a tab named fina"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1856,
+    "word": "crm",
+    "text": "\"A ten-line workbook kept by one person is not replaced. Accounting is not replaced either because the pipeline is broke"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1884,
+    "word": "crm",
+    "text": "slug: \"quand-utiliser-un-crm\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1909,
+    "word": "crm",
+    "text": "\"Si le cycle est propre à l'entreprise, le code, le dépôt et l'hébergement livré lui reviennent. Un acompte après un pér"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1910,
+    "word": "crm",
+    "text": "\"On ne publie pas un taux de relance, un nombre de fiches, ou une note. Ces chiffres ne sont pas des faits du studio. Le"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1916,
+    "word": "crm",
+    "text": "\"Écrire quand vous pouvez raconter la dernière relance perdue. Si vous ne pouvez pas, le CRM est en avance. Si vous pouv"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1936,
+    "word": "crm",
+    "text": "\"The moment is here when a customer waits for an answer nobody can find, or when two people announce two different steps"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1950,
+    "word": "crm",
+    "text": "\"If the cycle belongs to the company, the code, the repository and the delivered hosting return to it. A deposit after a"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 1957,
+    "word": "crm",
+    "text": "\"Write when you can tell the story of the last follow-up that was lost. If you cannot, the CRM is early. If you can, bri"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2017,
+    "word": "crm",
+    "text": "\"An SME does not have to open payroll, stock and marketing automation to follow ten quotes. Software for an SME starts f"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2078,
+    "word": "crm",
+    "text": "\"Écrire avec un exemple de fiche, même incomplet. Dire qui la modifie. Si la fiche est un cycle commercial, on partira d"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2098,
+    "word": "crm",
+    "text": "\"Managing clients, here, means finding the file: where it stands, who must act, what was promised. If that file is a cyc"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2119,
+    "word": "crm",
+    "text": "\"Write with an example of a record, even an incomplete one. Say who changes it. If the record is a commercial cycle, the"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2127,
+    "word": "salesforce",
+    "text": "slug: \"crm-personnalise-ou-salesforce\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2127,
+    "word": "crm",
+    "text": "slug: \"crm-personnalise-ou-salesforce\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2153,
+    "word": "salesforce",
+    "text": "\"On ne promet pas de « migrer Salesforce ». S'il y a un export utile, il porte les dossiers décidés. On n'annonce pas un"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2179,
+    "word": "salesforce",
+    "text": "\"Salesforce, like another CRM already on sale, is enough when the planned stages are the real stages: a lead, a quote, a"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2179,
+    "word": "crm",
+    "text": "\"Salesforce, like another CRM already on sale, is enough when the planned stages are the real stages: a lead, a quote, a"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2180,
+    "word": "crm",
+    "text": "\"A custom CRM starts when the file has a step the standard screen does not have, and the team patches it in a file besid"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2194,
+    "word": "salesforce",
+    "text": "\"There is no promise to « migrate Salesforce ». If an export is useful, it carries the files that were decided. A switch"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2208,
+    "word": "crm",
+    "text": "slug: \"comment-choisir-un-crm\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2260,
+    "word": "crm",
+    "text": "\"The list is short. Who creates the file. Which steps it crosses. Who follows up. Which tool already paid for must stay."
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2976,
+    "word": "crm",
+    "text": "\"Pas une place dans le store comme résultat. Pas un nombre de téléchargements. Pas une application qui fait le site, le "
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3017,
+    "word": "crm",
+    "text": "\"Not a store ranking as a result. Not a download count. Not an app that is also the site, the CRM and payroll. The first"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3046,
+    "word": "erp",
+    "text": "\"3. Plateforme Complexe / Marketplace (100 000 à 180 000+ MAD) : Plusieurs profils d'utilisateurs (ex. clients, livreurs"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3046,
+    "word": "crm",
+    "text": "\"3. Plateforme Complexe / Marketplace (100 000 à 180 000+ MAD) : Plusieurs profils d'utilisateurs (ex. clients, livreurs"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3097,
+    "word": "crm",
+    "text": "\"Wanting the site, the CRM and payroll in the same app raises the amount without making the action safer. If the action "
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3474,
+    "word": "crm",
+    "text": "\"Le nombre d'écrans vraiment ouverts. Les rôles : qui crée, qui valide, qui exporte. Les branchements : email, paiement,"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3522,
+    "word": "crm",
+    "text": "\"The number of screens really opened. The roles: who creates, who approves, who exports. The connections: email, payment"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3973,
+    "word": "erp",
+    "text": "\"• WooCommerce Sur Mesure : 28 000 – 40 000+ MAD | Produits illimités | Connexion ERP/CRM & logistique\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 3973,
+    "word": "crm",
+    "text": "\"• WooCommerce Sur Mesure : 28 000 – 40 000+ MAD | Produits illimités | Connexion ERP/CRM & logistique\","
+  },
+  {
+    "file": "lib\\case-dossier.ts",
+    "line": 65,
+    "word": "erp",
+    "text": "\"Une campagne qui arrive d'un côté doit ressortir au bon endroit, sans être recopiée à la main. Ce n'est pas un ERP. Le "
+  },
+  {
+    "file": "lib\\case-dossier.ts",
+    "line": 279,
+    "word": "crm",
+    "text": "\"Le tableau est en ligne. La fiche ne le présente pas comme le CRM des commerçants, ni comme un outil de caisse. C'est l"
+  },
+  {
+    "file": "lib\\city-pages.ts",
+    "line": 294,
+    "word": "crm",
+    "text": "\"La création de site pour une vitrine ou une boutique. Le logiciel métier pour l'atelier ou le commerce. Le CRM sur mesu"
+  },
+  {
+    "file": "lib\\city-pages.ts",
+    "line": 546,
+    "word": "cocoinbox",
+    "text": "\"Coco Inbox est un produit d'email temporaire, de fichiers chiffrés et de notes, cocoinbox.com, en 2024. Le CRM Cocoinbo"
+  },
+  {
+    "file": "lib\\city-pages.ts",
+    "line": 546,
+    "word": "crm",
+    "text": "\"Coco Inbox est un produit d'email temporaire, de fichiers chiffrés et de notes, cocoinbox.com, en 2024. Le CRM Cocoinbo"
+  },
+  {
+    "file": "lib\\cocoinbox.ts",
+    "line": 53,
+    "word": "cocoinbox",
+    "text": "console.error(`Cocoinbox lead rejected (${response.status}) ${detail}`);"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 336,
+    "word": "erp",
+    "text": "\"Un site qui envoie une demande vers l'outil qui la traite. Une application mobile qui lit le même état que le back-offi"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 336,
+    "word": "crm",
+    "text": "\"Un site qui envoie une demande vers l'outil qui la traite. Une application mobile qui lit le même état que le back-offi"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 706,
+    "word": "cocoinbox",
+    "text": "url: \"https://www.cocoinbox.com/\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 815,
+    "word": "cocoinbox",
+    "text": "slug: \"crm-cocoinbox\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 815,
+    "word": "crm",
+    "text": "slug: \"crm-cocoinbox\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 816,
+    "word": "cocoinbox",
+    "text": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 816,
+    "word": "crm",
+    "text": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 822,
+    "word": "cocoinbox",
+    "text": "\"CRM Cocoinbox : le courrier prépare le dossier, le pipeline et les relances. Produit en ligne depuis Montréal, année 20"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 822,
+    "word": "crm",
+    "text": "\"CRM Cocoinbox : le courrier prépare le dossier, le pipeline et les relances. Produit en ligne depuis Montréal, année 20"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 823,
+    "word": "cocoinbox",
+    "text": "url: \"https://crm.cocoinbox.com/\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 823,
+    "word": "crm",
+    "text": "url: \"https://crm.cocoinbox.com/\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 826,
+    "word": "crm",
+    "text": "solution: \"Une page publique pour ce CRM. La capture montre la boîte, les fiches, et les colonnes Nouveau, Qualifié, Dev"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 827,
+    "word": "cocoinbox",
+    "text": "result: \"crm.cocoinbox.com est en ligne. L'année affichée est 2026. La ville est Montréal, comme Coco Inbox. Les montant"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 827,
+    "word": "crm",
+    "text": "result: \"crm.cocoinbox.com est en ligne. L'année affichée est 2026. La ville est Montréal, comme Coco Inbox. Les montant"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 828,
+    "word": "cocoinbox",
+    "text": "shot: \"/work/crm.cocoinbox.webp\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 828,
+    "word": "crm",
+    "text": "shot: \"/work/crm.cocoinbox.webp\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 94,
+    "word": "crm",
+    "text": "crm: {"
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 95,
+    "word": "crm",
+    "text": "slug: \"crm\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 101,
+    "word": "cocoinbox",
+    "text": "href: \"/realisations/crm-cocoinbox\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 101,
+    "word": "crm",
+    "text": "href: \"/realisations/crm-cocoinbox\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 102,
+    "word": "cocoinbox",
+    "text": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 102,
+    "word": "crm",
+    "text": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 103,
+    "word": "crm",
+    "text": "note: \"Page publique du CRM : boîte, fiches, colonnes. En ligne depuis Montréal, 2026.\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 119,
+    "word": "crm",
+    "text": "\"Ce qui n'est pas un CRM et ne sera pas glissé dans le même écran.\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 187,
+    "word": "erp",
+    "text": "\"Le lien vers le CRM, l'ERP ou l'automatisation si c'est le vrai sujet.\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 187,
+    "word": "crm",
+    "text": "\"Le lien vers le CRM, l'ERP ou l'automatisation si c'est le vrai sujet.\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 214,
+    "word": "erp",
+    "text": "erp: {"
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 215,
+    "word": "erp",
+    "text": "slug: \"erp\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 234,
+    "word": "erp",
+    "text": "\"Le renvoi vers l'ERP déjà publié sur le site si le sujet est national.\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 354,
+    "word": "erp",
+    "text": "\"Le renvoi vers le CRM ou l'ERP si c'est le vrai outil.\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 354,
+    "word": "crm",
+    "text": "\"Le renvoi vers le CRM ou l'ERP si c'est le vrai outil.\","
+  },
+  {
+    "file": "lib\\insight-categories.ts",
+    "line": 36,
+    "word": "crm",
+    "text": "slug: \"crm\","
+  },
+  {
+    "file": "lib\\insight-categories.ts",
+    "line": 37,
+    "word": "crm",
+    "text": "title: \"CRM · Décisions\","
+  },
+  {
+    "file": "lib\\insight-categories.ts",
+    "line": 38,
+    "word": "salesforce",
+    "text": "description: \"Décisions sur le CRM sur mesure : Excel, Salesforce, coût, et le moment où le fichier ne suffit plus.\","
+  },
+  {
+    "file": "lib\\insight-categories.ts",
+    "line": 38,
+    "word": "crm",
+    "text": "description: \"Décisions sur le CRM sur mesure : Excel, Salesforce, coût, et le moment où le fichier ne suffit plus.\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 29,
+    "word": "erp",
+    "text": "\"Le parent de cette page est le cadre. Les sujets précis ont leur propre page, parce qu'un CRM n'est pas un ERP et qu'un"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 29,
+    "word": "crm",
+    "text": "\"Le parent de cette page est le cadre. Les sujets précis ont leur propre page, parce qu'un CRM n'est pas un ERP et qu'un"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 81,
+    "word": "cocoinbox",
+    "text": "{ href: \"/realisations/crm-cocoinbox\", label: \"CRM Cocoinbox\" },"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 81,
+    "word": "crm",
+    "text": "{ href: \"/realisations/crm-cocoinbox\", label: \"CRM Cocoinbox\" },"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 89,
+    "word": "crm",
+    "text": "keyword: \"CRM sur mesure\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 99,
+    "word": "crm",
+    "text": "h: \"Ce qu'un CRM doit retenir\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 101,
+    "word": "crm",
+    "text": "\"Le minimum utile n'est pas « une base clients ». C'est l'état d'une affaire : qui a parlé, quel devis est sorti, quelle"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 115,
+    "word": "crm",
+    "text": "\"Le catalogue public ne contient pas de CRM commercial livré à un client nommé. Dealkhir et Coco Inbox sont d'autres pro"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 120,
+    "word": "erp",
+    "text": "{ q: \"Quelle différence entre un CRM et un ERP ?\", a: \"Le CRM suit la relation et la vente. L'ERP suit les ressources : "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 120,
+    "word": "crm",
+    "text": "{ q: \"Quelle différence entre un CRM et un ERP ?\", a: \"Le CRM suit la relation et la vente. L'ERP suit les ressources : "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 122,
+    "word": "crm",
+    "text": "{ q: \"Combien coûte un CRM sur mesure ?\", a: \"Il n'y a pas de prix affiché. Le montant suit le nombre d'étapes, de rôles"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 136,
+    "word": "crm",
+    "text": "keyword: \"remplacer Excel par un CRM\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 137,
+    "word": "crm",
+    "text": "title: \"Remplacer Excel par un CRM\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 140,
+    "word": "crm",
+    "text": "h1: \"Remplacer Excel par un CRM\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 143,
+    "word": "crm",
+    "text": "lede: \"Remplacer Excel par un CRM consiste à sortir le suivi commercial d'un tableur partagé pour le mettre dans un logi"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 158,
+    "word": "crm",
+    "text": "\"Un calcul ponctuel, une liste tenue par une seule personne, un export que l'on retravaille : Excel gagne. Le CRM ne rem"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 165,
+    "word": "crm",
+    "text": "\"Reprendre les colonnes telles quelles produit un Excel avec un login. On commence par les états d'une affaire : nouveau"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 186,
+    "word": "crm",
+    "text": "keyword: \"logiciel CRM personnalisé\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 187,
+    "word": "crm",
+    "text": "title: \"CRM personnalisé pour une entreprise\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 189,
+    "word": "crm",
+    "text": "\"Un CRM personnalisé reprend les étapes, les documents et les droits de l'entreprise. Pas les étapes d'un éditeur renomm"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 190,
+    "word": "crm",
+    "text": "h1: \"CRM personnalisé pour une entreprise\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 193,
+    "word": "crm",
+    "text": "lede: \"Un CRM personnalisé est un logiciel dont les étapes, les documents et les droits sont ceux de l'entreprise. « Per"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 199,
+    "word": "crm",
+    "text": "\"Les permissions suivent la même logique. Un commercial voit ses affaires. Un responsable voit l'équipe. La comptabilité"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 205,
+    "word": "salesforce",
+    "text": "\"On n'écrit pas un clone de Salesforce avec moins de boutons. On écrit le parcours qui manque. Si quatre-vingt-dix pour "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 205,
+    "word": "crm",
+    "text": "\"On n'écrit pas un clone de Salesforce avec moins de boutons. On écrit le parcours qui manque. Si quatre-vingt-dix pour "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 225,
+    "word": "erp",
+    "text": "keyword: \"ERP sur mesure\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 226,
+    "word": "erp",
+    "text": "title: \"ERP sur mesure : achats, stocks, ventes\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 228,
+    "word": "erp",
+    "text": "\"Un ERP sur mesure relie achats, stocks, ventes et production selon l'entreprise. Byte Force évite l'usine à gaz dès la "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 229,
+    "word": "erp",
+    "text": "h1: \"ERP sur mesure\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 250,
+    "word": "erp",
+    "text": "\"Aucun projet du catalogue public n'est un ERP. Le dire évite de vendre Dealkhir ou Coco Inbox pour ce qu'ils ne sont pa"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 255,
+    "word": "erp",
+    "text": "{ q: \"Faut-il un ERP complet pour démarrer ?\", a: \"Non. Un flux réel, livré, vaut mieux que six modules maquettes. La su"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 256,
+    "word": "erp",
+    "text": "{ q: \"Quelle différence avec un logiciel métier ?\", a: \"Le logiciel métier couvre un métier. L'ERP couvre plusieurs fonc"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 257,
+    "word": "erp",
+    "text": "{ q: \"Les données comptables sont-elles incluses ?\", a: \"La comptabilité légale reste souvent dans l'outil du cabinet. L"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 270,
+    "word": "erp",
+    "text": "keyword: \"ERP personnalisé\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 271,
+    "word": "erp",
+    "text": "title: \"ERP personnalisé, sans les modules inutiles\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 273,
+    "word": "erp",
+    "text": "\"L'ERP personnalisé code les règles d'achat, de stock et de validation de l'entreprise. Les modules qui ne servent pas r"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 274,
+    "word": "erp",
+    "text": "h1: \"ERP personnalisé, sans les modules inutiles\","
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 277,
+    "word": "erp",
+    "text": "lede: \"Un ERP personnalisé reprend les règles de gestion de l'entreprise : qui valide un achat, comment un stock est rés"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 288,
+    "word": "erp",
+    "text": "\"Si aucune règle de ce genre n'existe, un ERP du marché paramétré suffit. Byte Force le dit pendant le cadrage, avant d'"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 299,
+    "word": "erp",
+    "text": "{ q: \"Peut-on personnaliser un ERP déjà acheté ?\", a: \"Parfois, par paramétrage ou par un développement chez l'éditeur. "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 316,
+    "word": "crm",
+    "text": "\"Le logiciel de gestion relie commandes, stocks et achats dans un seul état. Distinct d'un outil métier étroit et d'un C"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 320,
+    "word": "erp",
+    "text": "lede: \"Un logiciel de gestion d'entreprise donne un seul état des commandes, des stocks et des achats. Les équipes disen"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 370,
+    "word": "crm",
+    "text": "\"La paie, le site vitrine et le CRM complet n'entrent pas dans la première version d'un logiciel métier. Chaque ajout di"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 375,
+    "word": "erp",
+    "text": "{ q: \"Avez-vous déjà livré un logiciel métier public ?\", a: \"Le catalogue montre des plateformes (Dealkhir, Proche de mo"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 394,
+    "word": "erp",
+    "text": "\"Suivi des dossiers, des pièces et des états d'un métier, sans devenir un ERP. Pour une équipe qui pilote encore à la fe"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 537,
+    "word": "erp",
+    "text": "{ q: \"Est-ce le même projet qu'un ERP ?\", a: \"Non. L'automatisation peut tenir en un flux. L'ERP relie plusieurs ressour"
+  },
+  {
+    "file": "lib\\money\\solutions.ts",
+    "line": 316,
+    "word": "crm",
+    "text": "\"CRM, mail, paiement, tableau : les faire se parler sans tout remplacer. Erreurs et reprises incluses.\","
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 48,
+    "word": "crm",
+    "text": "\"Le projet est classé plateforme, et le service lié est le logiciel sur mesure, parce que le parcours n'est pas une simp"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 74,
+    "word": "cocoinbox",
+    "text": "\"Coco Inbox est un produit publié en 2024 à Montréal. Il couvre l'email temporaire, les fichiers chiffrés et les notes s"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 76,
+    "word": "cocoinbox",
+    "text": "\"Ce n'est pas le CRM, pas une boîte mail d'entreprise, et pas un outil de prospection. Le CRM est une autre adresse, crm"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 76,
+    "word": "crm",
+    "text": "\"Ce n'est pas le CRM, pas une boîte mail d'entreprise, et pas un outil de prospection. Le CRM est une autre adresse, crm"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 78,
+    "word": "cocoinbox",
+    "text": "\"Montréal, 2024, cocoinbox.com : ce sont les trois faits stables. Le produit se consulte sans page intérieure listée dan"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 117,
+    "word": "cocoinbox",
+    "text": "\"CRM Cocoinbox est une page publique à part de Coco Inbox. L'adresse est crm.cocoinbox.com. L'année affichée est 2026. L"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 117,
+    "word": "crm",
+    "text": "\"CRM Cocoinbox est une page publique à part de Coco Inbox. L'adresse est crm.cocoinbox.com. L'année affichée est 2026. L"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 177,
+    "word": "cocoinbox",
+    "text": "\"/realisations/crm-cocoinbox\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 177,
+    "word": "crm",
+    "text": "\"/realisations/crm-cocoinbox\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 178,
+    "word": "cocoinbox",
+    "text": "title: \"CRM Cocoinbox · Dossiers depuis le courrier\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 178,
+    "word": "crm",
+    "text": "title: \"CRM Cocoinbox · Dossiers depuis le courrier\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 179,
+    "word": "cocoinbox",
+    "text": "description: \"CRM sur mesure pour Cocoinbox à Montréal. Dossiers clients créés depuis le courrier entrant.\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 179,
+    "word": "crm",
+    "text": "description: \"CRM sur mesure pour Cocoinbox à Montréal. Dossiers clients créés depuis le courrier entrant.\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 422,
+    "word": "crm",
+    "text": "\"/insights/quand-utiliser-un-crm\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 423,
+    "word": "crm",
+    "text": "title: \"Quand utiliser un CRM · Byte Force\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 424,
+    "word": "crm",
+    "text": "description: \"Quand un CRM devient utile : relances oubliées, dossiers dispersés, un fichier que deux personnes écrasent"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 426,
+    "word": "crm",
+    "text": "\"/insights/comment-choisir-un-crm\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 427,
+    "word": "crm",
+    "text": "title: \"Comment choisir un CRM pour son entreprise\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 435,
+    "word": "crm",
+    "text": "title: \"CRM vs Excel · Quelle solution choisir\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 436,
+    "word": "crm",
+    "text": "description: \"CRM ou Excel pour les clients ? Le fichier suffit tant qu'une seule personne l'écrit.\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 438,
+    "word": "crm",
+    "text": "\"/insights/remplacer-excel-par-un-crm\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 439,
+    "word": "crm",
+    "text": "title: \"Remplacer Excel par un CRM · Guide migration\","
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 281,
+    "word": "cocoinbox",
+    "text": "\"On ne colle pas Mailgun sur Coco Inbox, le CRM Cocoinbox, ou YourSmile. Leurs pages disent le parcours. Elles ne disent"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 281,
+    "word": "crm",
+    "text": "\"On ne colle pas Mailgun sur Coco Inbox, le CRM Cocoinbox, ou YourSmile. Leurs pages disent le parcours. Elles ne disent"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 311,
+    "word": "cocoinbox",
+    "text": "\"Mailgun is not pinned on Coco Inbox, the Cocoinbox CRM, or YourSmile. Their pages say the path. They do not say the mai"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 311,
+    "word": "crm",
+    "text": "\"Mailgun is not pinned on Coco Inbox, the Cocoinbox CRM, or YourSmile. Their pages say the path. They do not say the mai"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 467,
+    "word": "cocoinbox",
+    "text": "\"Les adresses publiées, yoursmile.ma, infinitebridge.ma, booking.palais-mehdi.com, booking.prochedemoi.fr, crm.cocoinbox"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 467,
+    "word": "crm",
+    "text": "\"Les adresses publiées, yoursmile.ma, infinitebridge.ma, booking.palais-mehdi.com, booking.prochedemoi.fr, crm.cocoinbox"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 497,
+    "word": "cocoinbox",
+    "text": "\"The published addresses, yoursmile.ma, infinitebridge.ma, booking.palais-mehdi.com, booking.prochedemoi.fr, crm.cocoinb"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 497,
+    "word": "crm",
+    "text": "\"The published addresses, yoursmile.ma, infinitebridge.ma, booking.palais-mehdi.com, booking.prochedemoi.fr, crm.cocoinb"
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 416,
+    "word": "crm",
+    "text": "\"The orthodontic CRM, January to July 2025, at YourSmile Run in Morocco: paths for administration, dentists and the back"
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 498,
+    "word": "crm",
+    "text": "\"The orthodontic CRM at YourSmile Run, Morocco, January to July 2025: administration, dentists, back office, access righ"
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 538,
+    "word": "crm",
+    "text": "\"[[/realisations/coco-inbox|Coco Inbox]] et le CRM orthodontique sont donc décrits avec MongoDB. Les ranger sous Postgre"
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 580,
+    "word": "crm",
+    "text": "\"Coco Inbox and the orthodontic CRM are therefore described with MongoDB. Filing them under PostgreSQL would be false. T"
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 666,
+    "word": "crm",
+    "text": "heading: \"The orthodontic CRM\","
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 783,
+    "word": "crm",
+    "text": "\"Les comptes de Coco Inbox et du CRM orthodontique sont décrits avec Node.js, GraphQL et les droits d'accès. La fiche ne"
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 791,
+    "word": "crm",
+    "text": "\"On ne propose pas Firebase comme identité par défaut d'un logiciel neuf. Les droits d'un CRM déjà livré ont été écrits "
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 825,
+    "word": "crm",
+    "text": "\"Accounts on Coco Inbox and the orthodontic CRM are described with Node.js, GraphQL and access rights. The profile does "
+  },
+  {
+    "file": "lib\\tech-articles.ts",
+    "line": 833,
+    "word": "crm",
+    "text": "\"Firebase is not the default identity of a new piece of software. Rights in a CRM already delivered were written in the "
+  }
+]

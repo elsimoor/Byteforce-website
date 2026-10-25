@@ -1,0 +1,422 @@
+[
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 30,
+    "term": "salesforce",
+    "content": "h2: \"Pourquoi les CRM standards (Salesforce, HubSpot, Zoho) échouent-ils au Maroc ?\","
+  },
+  {
+    "file": "app\\crm-sur-mesure-maroc\\page.tsx",
+    "line": 64,
+    "term": "salesforce",
+    "content": "headers: [\"Fonctionnalité\", \"CRM Byte Force\", \"HubSpot / Salesforce / Zoho\"],"
+  },
+  {
+    "file": "app\\developpement-logiciel-sur-mesure-maroc\\page.tsx",
+    "line": 32,
+    "term": "salesforce",
+    "content": "\"Au Maroc, de nombreuses entreprises démarrent leur gestion sur des tableurs Excel ou souscrivent à "
+  },
+  {
+    "file": "app\\llms.txt\\route.ts",
+    "line": 83,
+    "term": "salesforce",
+    "content": "`- [CRM personnalisé ou Salesforce](${origin}/insights/crm-personnalise-ou-salesforce) : garder le m"
+  },
+  {
+    "file": "app\\studio\\page.tsx",
+    "line": 27,
+    "term": "cocoinbox",
+    "content": "{ slug: \"crm-cocoinbox\", slot: \"studio-slot-b\" },"
+  },
+  {
+    "file": "app\\walid-moultamiss\\page.tsx",
+    "line": 43,
+    "term": "cocoinbox",
+    "content": "title: \"Ingénieur logiciel, Cocoinbox\","
+  },
+  {
+    "file": "app\\walid-moultamiss\\page.tsx",
+    "line": 166,
+    "term": "cocoinbox",
+    "content": "at YourSmile Run in Morocco. Through 2024 he worked on the Cocoinbox platform and CRM from Canada. F"
+  },
+  {
+    "file": "lib\\actions.ts",
+    "line": 7,
+    "term": "cocoinbox",
+    "content": "import { pushLeadToCocoinbox } from \"@/lib/cocoinbox\";"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2127,
+    "term": "salesforce",
+    "content": "slug: \"crm-personnalise-ou-salesforce\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2128,
+    "term": "salesforce",
+    "content": "title: \"CRM personnalisé vs Salesforce\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2130,
+    "term": "salesforce",
+    "content": "\"CRM personnalisé vs Salesforce : garder l'outil du marché si le cycle rentre dedans. Sinon, l'écrir"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2131,
+    "term": "salesforce",
+    "content": "h1: \"CRM personnalisé vs Salesforce\","
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2133,
+    "term": "salesforce",
+    "content": "lede: \"CRM personnalisé vs Salesforce : on garde l'outil du marché si le cycle de l'entreprise rentr"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2138,
+    "term": "salesforce",
+    "content": "\"Salesforce, comme un autre CRM déjà vendu, suffit quand les étapes prévues sont les étapes réelles "
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2153,
+    "term": "salesforce",
+    "content": "\"On ne promet pas de « migrer Salesforce ». S'il y a un export utile, il porte les dossiers décidés."
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2174,
+    "term": "salesforce",
+    "content": "lede: \"A custom CRM or Salesforce: keep the market tool if the company's cycle fits its stages. Writ"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2179,
+    "term": "salesforce",
+    "content": "\"Salesforce, like another CRM already on sale, is enough when the planned stages are the real stages"
+  },
+  {
+    "file": "lib\\articles.ts",
+    "line": 2194,
+    "term": "salesforce",
+    "content": "\"There is no promise to « migrate Salesforce ». If an export is useful, it carries the files that we"
+  },
+  {
+    "file": "lib\\city-pages.ts",
+    "line": 541,
+    "term": "cocoinbox",
+    "content": "lede: \"Byte Force a publié des produits pour Montréal depuis Casablanca : Coco Inbox, le CRM Cocoinb"
+  },
+  {
+    "file": "lib\\city-pages.ts",
+    "line": 546,
+    "term": "cocoinbox",
+    "content": "\"Coco Inbox est un produit d'email temporaire, de fichiers chiffrés et de notes, cocoinbox.com, en 2"
+  },
+  {
+    "file": "lib\\city-pages.ts",
+    "line": 570,
+    "term": "cocoinbox",
+    "content": "studies: [\"coco-inbox\", \"crm-cocoinbox\", \"tourispeak\"],"
+  },
+  {
+    "file": "lib\\cocoinbox.ts",
+    "line": 53,
+    "term": "cocoinbox",
+    "content": "console.error(`Cocoinbox lead rejected (${response.status}) ${detail}`);"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 706,
+    "term": "cocoinbox",
+    "content": "url: \"https://www.cocoinbox.com/\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 815,
+    "term": "cocoinbox",
+    "content": "slug: \"crm-cocoinbox\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 816,
+    "term": "cocoinbox",
+    "content": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 822,
+    "term": "cocoinbox",
+    "content": "\"CRM Cocoinbox : le courrier prépare le dossier, le pipeline et les relances. Produit en ligne depui"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 823,
+    "term": "cocoinbox",
+    "content": "url: \"https://crm.cocoinbox.com/\","
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 827,
+    "term": "cocoinbox",
+    "content": "result: \"crm.cocoinbox.com est en ligne. L'année affichée est 2026. La ville est Montréal, comme Coc"
+  },
+  {
+    "file": "lib\\content.ts",
+    "line": 828,
+    "term": "cocoinbox",
+    "content": "shot: \"/work/crm.cocoinbox.webp\","
+  },
+  {
+    "file": "lib\\geo\\places.ts",
+    "line": 148,
+    "term": "cocoinbox",
+    "content": "\"Trois fiches portent Montréal. Coco Inbox, produit pour l'email temporaire, les fichiers chiffrés e"
+  },
+  {
+    "file": "lib\\geo\\places.ts",
+    "line": 157,
+    "term": "cocoinbox",
+    "content": "\"Le catalogue ne distingue pas un projet « ville de Québec ». Les fiches canadiennes publiques sont "
+  },
+  {
+    "file": "lib\\geo\\places.ts",
+    "line": 175,
+    "term": "cocoinbox",
+    "content": "\"Le catalogue ne nomme pas Toronto. Coco Inbox, Tourispeak et CRM Cocoinbox sont à Montréal. On ne l"
+  },
+  {
+    "file": "lib\\geo\\places.ts",
+    "line": 201,
+    "term": "cocoinbox",
+    "content": "\"Byte Force n'a pas de bureau au Canada. Le studio est au Technopark, à Casablanca. Les projets cana"
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 101,
+    "term": "cocoinbox",
+    "content": "href: \"/realisations/crm-cocoinbox\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 102,
+    "term": "cocoinbox",
+    "content": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "lib\\geo\\services.ts",
+    "line": 108,
+    "term": "cocoinbox",
+    "content": "\"Le catalogue public a une page pour ce type d'outil : [[/realisations/crm-cocoinbox|CRM Cocoinbox]]"
+  },
+  {
+    "file": "lib\\insight-categories.ts",
+    "line": 38,
+    "term": "salesforce",
+    "content": "description: \"Décisions sur le CRM sur mesure : Excel, Salesforce, coût, et le moment où le fichier "
+  },
+  {
+    "file": "lib\\insight-categories.ts",
+    "line": 44,
+    "term": "salesforce",
+    "content": "\"crm-personnalise-ou-salesforce\","
+  },
+  {
+    "file": "lib\\money\\places.ts",
+    "line": 184,
+    "term": "cocoinbox",
+    "content": "\"Montréal n'est pas en France. C'est le marché francophone du catalogue en dehors du Maroc et de la "
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 81,
+    "term": "cocoinbox",
+    "content": "{ href: \"/realisations/crm-cocoinbox\", label: \"CRM Cocoinbox\" },"
+  },
+  {
+    "file": "lib\\money\\software.ts",
+    "line": 205,
+    "term": "salesforce",
+    "content": "\"On n'écrit pas un clone de Salesforce avec moins de boutons. On écrit le parcours qui manque. Si qu"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 16,
+    "term": "cocoinbox",
+    "content": "\"crm-cocoinbox\": \"CRM Cocoinbox : dossiers depuis le courrier, à Montréal\","
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 74,
+    "term": "cocoinbox",
+    "content": "\"Coco Inbox est un produit publié en 2024 à Montréal. Il couvre l'email temporaire, les fichiers chi"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 76,
+    "term": "cocoinbox",
+    "content": "\"Ce n'est pas le CRM, pas une boîte mail d'entreprise, et pas un outil de prospection. Le CRM est un"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 78,
+    "term": "cocoinbox",
+    "content": "\"Montréal, 2024, cocoinbox.com : ce sont les trois faits stables. Le produit se consulte sans page i"
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 116,
+    "term": "cocoinbox",
+    "content": "\"crm-cocoinbox\": ["
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 117,
+    "term": "cocoinbox",
+    "content": "\"CRM Cocoinbox est une page publique à part de Coco Inbox. L'adresse est crm.cocoinbox.com. L'année "
+  },
+  {
+    "file": "lib\\project-notes.ts",
+    "line": 119,
+    "term": "cocoinbox",
+    "content": "\"Coco Inbox, sur cocoinbox.com, reste l'email temporaire, les fichiers chiffrés et les notes. Cette "
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 177,
+    "term": "cocoinbox",
+    "content": "\"/realisations/crm-cocoinbox\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 178,
+    "term": "cocoinbox",
+    "content": "title: \"CRM Cocoinbox · Dossiers depuis le courrier\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 179,
+    "term": "cocoinbox",
+    "content": "description: \"CRM sur mesure pour Cocoinbox à Montréal. Dossiers clients créés depuis le courrier en"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 358,
+    "term": "salesforce",
+    "content": "\"/insights/crm-personnalise-ou-salesforce\": {"
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 359,
+    "term": "salesforce",
+    "content": "title: \"CRM sur mesure vs Salesforce au Maroc | BYTE FORCE\","
+  },
+  {
+    "file": "lib\\seo-meta.ts",
+    "line": 361,
+    "term": "salesforce",
+    "content": "\"Salesforce ou CRM sur mesure pour une entreprise au Maroc ? Comparatif coût, adoption commerciale e"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 281,
+    "term": "cocoinbox",
+    "content": "\"On ne colle pas Mailgun sur Coco Inbox, le CRM Cocoinbox, ou YourSmile. Leurs pages disent le parco"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 311,
+    "term": "cocoinbox",
+    "content": "\"Mailgun is not pinned on Coco Inbox, the Cocoinbox CRM, or YourSmile. Their pages say the path. The"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 467,
+    "term": "cocoinbox",
+    "content": "\"Les adresses publiées, yoursmile.ma, infinitebridge.ma, booking.palais-mehdi.com, booking.prochedem"
+  },
+  {
+    "file": "lib\\stack-tools.ts",
+    "line": 497,
+    "term": "cocoinbox",
+    "content": "\"The published addresses, yoursmile.ma, infinitebridge.ma, booking.palais-mehdi.com, booking.proched"
+  },
+  {
+    "file": "lib\\studio-sections.ts",
+    "line": 403,
+    "term": "cocoinbox",
+    "content": "\"Ensuite le CV indique Cocoinbox, au Canada en télétravail, de janvier à décembre 2024 : une platefo"
+  },
+  {
+    "file": "components\\home\\landing.tsx",
+    "line": 8,
+    "term": "cocoinbox",
+    "content": "Cocoinbox,"
+  },
+  {
+    "file": "components\\home\\landing.tsx",
+    "line": 162,
+    "term": "cocoinbox",
+    "content": "<h3 className=\"text-2xl font-medium tracking-tight\">Cocoinbox</h3>"
+  },
+  {
+    "file": "components\\home\\landing.tsx",
+    "line": 169,
+    "term": "cocoinbox",
+    "content": "<Cocoinbox />"
+  },
+  {
+    "file": "components\\home\\screens.tsx",
+    "line": 281,
+    "term": "cocoinbox",
+    "content": "export function Cocoinbox() {"
+  },
+  {
+    "file": "components\\home\\screens.tsx",
+    "line": 283,
+    "term": "cocoinbox",
+    "content": "<Frame title=\"cocoinbox / inbox\">"
+  },
+  {
+    "file": "components\\studio-home.tsx",
+    "line": 167,
+    "term": "cocoinbox",
+    "content": "href: \"/realisations/crm-cocoinbox\","
+  },
+  {
+    "file": "components\\studio-home.tsx",
+    "line": 168,
+    "term": "cocoinbox",
+    "content": "src: \"/work/crm.cocoinbox.webp\","
+  },
+  {
+    "file": "components\\studio-home.tsx",
+    "line": 169,
+    "term": "cocoinbox",
+    "content": "alt: \"CRM Cocoinbox : la boîte, les fiches, et les colonnes du pipeline.\","
+  },
+  {
+    "file": "components\\studio-home.tsx",
+    "line": 170,
+    "term": "cocoinbox",
+    "content": "title: \"CRM Cocoinbox\","
+  },
+  {
+    "file": "components\\studio-home.tsx",
+    "line": 200,
+    "term": "cocoinbox",
+    "content": "priority={work.href.endsWith(\"crm-cocoinbox\")}"
+  },
+  {
+    "file": "components\\studio-home.tsx",
+    "line": 201,
+    "term": "cocoinbox",
+    "content": "fetchPriority={work.href.endsWith(\"crm-cocoinbox\") ? \"high\" : \"auto\"}"
+  }
+]
