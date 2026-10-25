@@ -7,7 +7,8 @@
     "start": "next start",
     "seo-capture": "node tools/seo-capture/server.mjs",
     "zip-folder": "node tools/zip-folder/server.mjs",
-    "check-live": "node tools/check-live.mjs"
+    "check-live": "node tools/check-live.mjs",
+    "push": "git add . && git commit -m \"commit push\" && git push"
   },
   "dependencies": {
     "@opentelemetry/api-logs": "^0.223.0",

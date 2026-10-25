@@ -52,7 +52,7 @@ body {
   overscroll-behavior: none;
 }
 
-main:not([data-home]):not([data-landing]) {
+main:not([data-home]):not([data-landing]):not([data-studio]) {
   width: min(80rem, 100%);
   margin-inline: auto;
 }
