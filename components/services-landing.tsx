@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { Service } from "@/lib/content";
+import { ServiceMark } from "@/components/offer-drawings";
 import { Dashboard, CrmPanel, MobileApp, ProcheDeMoi } from "@/components/home/screens";
 
 const testimonials = [
@@ -722,78 +723,186 @@ export function ServicesLanding({
         </div>
       </section>
 
-      {/* 8. COMPLETE SERVICE CATALOG & SPECIALIZED ENTRY PAGES (Full SEO Link Preservation) */}
-      <section className="border-t border-slate-200/90 bg-white px-6 py-20 md:px-12 md:py-28 lg:px-16" id="catalogue">
+      {/* 8. COMPLETE SERVICE CATALOG & SPECIALIZED ENTRY PAGES (Modern Landing Page Design) */}
+      <section className="border-t border-slate-200/80 bg-slate-50/70 px-6 py-24 md:px-12 md:py-32 lg:px-16" id="catalogue">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <span className="font-mono text-xs font-semibold tracking-wider text-primary uppercase">
-              Catalogue Exhaustif
+          {/* Section Header */}
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wider text-slate-700 uppercase shadow-sm">
+              <span>Catalogue des Services</span>
+              <span className="text-primary">✦</span>
             </span>
-            <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl md:text-5xl">
               Ce que l&apos;on construit au quotidien
             </h2>
-            <p className="mt-3 text-sm text-slate-600">
-              Chaque service ci-dessous dispose de sa page détaillée et d&apos;une documentation complète.
+            <p className="mt-4 text-base text-slate-600 md:text-lg">
+              Explorez nos 10 domaines d&apos;expertise logicielle, pensés pour convertir chaque visite en opportunité et
+              automatiser vos opérations.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {servicesList.map((service, index) => (
-              <Link
-                key={service.slug}
-                href={service.href ?? `/services/${service.slug}`}
-                className="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/50 p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-white hover:shadow-md"
-              >
-                <div>
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span className="font-mono font-bold text-primary">0{index + 1}</span>
-                    <span className="transition-transform group-hover:translate-x-1">↗</span>
+          {/* 10 Services in AI-Generated Photographic Cards */}
+          <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {servicesList.map((service, index) => {
+              const bgImages = [
+                { src: "/tech-bg-1.jpg", accent: "from-blue-600/30 to-indigo-600/20" },
+                { src: "/services-hero-torus.jpg", accent: "from-purple-600/30 to-violet-600/20" },
+                { src: "/services-bento-ribbon.jpg", accent: "from-indigo-600/30 to-blue-600/20" },
+                { src: "/tech-bg-1.jpg", accent: "from-cyan-600/30 to-blue-600/20" },
+                { src: "/services-hero-torus.jpg", accent: "from-indigo-600/30 to-purple-600/20" },
+                { src: "/services-bento-ribbon.jpg", accent: "from-violet-600/30 to-pink-600/20" },
+                { src: "/tech-bg-1.jpg", accent: "from-purple-600/30 to-cyan-600/20" },
+                { src: "/services-hero-torus.jpg", accent: "from-amber-600/30 to-purple-600/20" },
+                { src: "/services-bento-ribbon.jpg", accent: "from-red-600/30 to-indigo-600/20" },
+                { src: "/tech-bg-1.jpg", accent: "from-emerald-600/30 to-cyan-600/20" },
+              ];
+              const visual = bgImages[index % bgImages.length];
+
+              return (
+                <Link
+                  key={service.slug}
+                  href={service.href ?? `/services/${service.slug}`}
+                  className="group relative flex min-h-[380px] flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-slate-950 p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:border-indigo-400/50 hover:shadow-2xl md:p-10"
+                >
+                  {/* Photo background */}
+                  <Image
+                    src={visual.src}
+                    alt={service.menu}
+                    fill
+                    className="object-cover opacity-55 transition-transform duration-700 ease-out group-hover:scale-105 group-hover:opacity-70"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+
+                  {/* Gradient & ambient glow overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/30 transition-opacity duration-300 group-hover:from-slate-950/90 group-hover:via-slate-950/65" />
+                  <div
+                    className={`pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-gradient-to-br ${visual.accent} blur-3xl transition-all duration-500 group-hover:scale-125`}
+                  />
+
+                  {/* Card Header */}
+                  <div className="relative z-10 flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold rounded-full border border-white/15 bg-white/10 px-3.5 py-1 text-white backdrop-blur-md">
+                      Service {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur-md transition-all duration-300 group-hover:border-white group-hover:bg-white group-hover:text-slate-950 group-hover:translate-x-0.5">
+                      <svg className="h-4 w-4" viewBox="0 0 16 16" fill="currentColor">
+                        <path fillRule="evenodd" d="M1 8a.75.75 0 0 1 .75-.75h9.793L7.77 3.47a.75.75 0 0 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06-1.06l3.773-3.72H1.75A.75.75 0 0 1 1 8z" clipRule="evenodd" />
+                      </svg>
+                    </span>
                   </div>
-                  <h3 className="mt-3 text-lg font-bold tracking-tight text-slate-900 group-hover:text-primary">
-                    {service.menu}
-                  </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">{service.summary}</p>
-                </div>
-                <div className="mt-6 flex items-center gap-1.5 text-xs font-medium text-primary">
-                  <span>Consulter l&apos;offre</span>
-                  <span>→</span>
-                </div>
-              </Link>
-            ))}
+
+                  {/* Card Bottom Body */}
+                  <div className="relative z-10 mt-16">
+                    <h3 className="text-3xl font-extrabold tracking-tight text-white transition-colors duration-300 group-hover:text-indigo-200 md:text-4xl">
+                      {service.menu}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-300 line-clamp-3 md:line-clamp-none">
+                      {service.summary}
+                    </p>
+
+                    <div className="mt-6 flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-white/90 group-hover:text-white">
+                      <span>Consulter l&apos;offre</span>
+                      <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
-          {/* Specialized Entry Pages */}
-          <div className="mt-16 rounded-3xl border border-slate-200/90 bg-slate-50 p-8">
-            <h3 className="text-xl font-bold tracking-tight text-slate-900">
-              Pour un projet précis ou par zone géographique
-            </h3>
-            <p className="mt-1 text-xs text-slate-600">
-              Pages dédiées selon votre pays d&apos;implantation ou votre secteur d&apos;activité.
-            </p>
+          {/* Pour un projet précis (Categorized Entry Pages) */}
+          <div className="mt-24">
+            <div className="flex flex-col justify-between gap-4 border-b border-slate-200 pb-6 md:flex-row md:items-end">
+              <div>
+                <span className="font-mono text-xs font-semibold tracking-wider text-primary uppercase">
+                  Parcours Ciblés
+                </span>
+                <h3 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+                  Pour un projet précis & besoins spécifiques
+                </h3>
+                <p className="mt-1 text-sm text-slate-600">
+                  Accédez directement aux pages rédigées pour votre problématique métier ou votre implantation.
+                </p>
+              </div>
+            </div>
 
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {entryPagesList.slice(0, 12).map((page) => (
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {entryPagesList.map((page) => (
                 <Link
                   key={page.path}
                   href={`/${page.path}`}
-                  className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs transition-colors hover:border-primary hover:text-primary"
+                  className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
                 >
-                  <span className="block font-semibold text-slate-900">{page.h1}</span>
-                  <span className="mt-0.5 block text-[11px] text-slate-500">{page.group}</span>
+                  <div>
+                    <span className="inline-block rounded-md bg-slate-100 px-2.5 py-0.5 font-mono text-[10px] font-bold text-slate-600 uppercase transition-colors group-hover:bg-indigo-50 group-hover:text-indigo-700">
+                      {page.group}
+                    </span>
+                    <span className="mt-3 block text-sm font-bold text-slate-900 transition-colors group-hover:text-primary">
+                      {page.h1}
+                    </span>
+                  </div>
+                  <span className="mt-4 flex items-center gap-1.5 text-xs font-medium text-primary">
+                    <span>Consulter la page</span>
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </span>
                 </Link>
               ))}
             </div>
+          </div>
 
-            <div className="mt-6 flex flex-wrap gap-4 text-xs font-medium text-primary">
-              <Link href="/developpement-logiciel-maroc" className="hover:underline">
-                → Développement logiciel au Maroc
-              </Link>
-              <Link href="/developpement-logiciel-france" className="hover:underline">
-                → Développement logiciel pour la France
-              </Link>
-              <Link href="/services/md" className="text-slate-500 hover:text-slate-900">
-                → Documentation Markdown
-              </Link>
+          {/* Studio Notes & Trust Highlights Card */}
+          <div className="mt-16 rounded-3xl border border-slate-200/90 bg-white p-8 shadow-sm md:p-10">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-6">
+                <span className="font-mono text-xs font-semibold tracking-wider text-primary uppercase">
+                  Engagement & Transparence
+                </span>
+                <h4 className="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+                  ByteForce construit ces offres depuis Casablanca
+                </h4>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  Un site. Une application. Un logiciel sur mesure. Un plugin WordPress. Le référencement naturel.
+                  L&apos;hébergement cloud. La maintenance applicative. Aucun prix n&apos;est affiché publiquement car le
+                  montant s&apos;adapte précisément à ce qui doit être construit.
+                </p>
+                <div className="mt-4 flex items-center gap-4 text-xs font-mono text-slate-500">
+                  <span>📍 Technopark Casablanca</span>
+                  <span>•</span>
+                  <span>⚡ Réponse sous 24h ouvrées</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2.5 lg:col-span-6">
+                <Link
+                  href="/developpement-logiciel-maroc"
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-xs font-semibold text-slate-800 transition-colors hover:border-primary hover:bg-white hover:text-primary"
+                >
+                  <span>🇲🇦 Développement logiciel au Maroc</span>
+                  <span>→</span>
+                </Link>
+                <Link
+                  href="/developpement-logiciel-france"
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-xs font-semibold text-slate-800 transition-colors hover:border-primary hover:bg-white hover:text-primary"
+                >
+                  <span>🇫🇷 Développement logiciel pour la France</span>
+                  <span>→</span>
+                </Link>
+                <Link
+                  href="/checklists/comprendre-le-travail"
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-xs font-semibold text-slate-800 transition-colors hover:border-primary hover:bg-white hover:text-primary"
+                >
+                  <span>📋 Checklist préalable : Comprendre le travail</span>
+                  <span>→</span>
+                </Link>
+                <div className="flex items-center justify-between pt-2 text-xs font-medium text-slate-500">
+                  <Link href="/services/md" className="hover:text-primary hover:underline">
+                    📄 Version texte en markdown
+                  </Link>
+                  <Link href="/" className="hover:text-primary hover:underline">
+                    🏛️ Accueil du studio ByteForce
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
