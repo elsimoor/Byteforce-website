@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { GeoGlobeHub } from "@/components/geo-globe-hub";
 import { GeoView } from "@/components/geo-view";
 import { geoKeywords } from "@/lib/geo/keywords";
 import { geoDirectory, getGeoPage } from "@/lib/geo/pages";
@@ -49,43 +50,16 @@ export default async function GeoLocationPage({ params }: Props) {
 function GeoIndex() {
   const groups = geoDirectory();
   return (
-    <main className="px-6 py-16 md:px-12 md:py-24">
-      <h1 className="display max-w-[16ch] text-[clamp(2.6rem,6vw,5rem)]">Pages par lieu</h1>
-      <p className="mt-8 max-w-2xl text-lg leading-relaxed">
-        Chaque ligne du fichier de mots-clés a une page. Le studio est à Casablanca, Technopark, boulevard Dammam,
-        Aïn Chock. Il n&apos;y a pas de bureau dans les autres villes. Pour écrire : le{" "}
-        <Link href="/contact" className="font-semibold text-primary">
-          contact
-        </Link>
-        .
-      </p>
-      {groups.map((group) => (
-        <section key={group.name} className="mt-16 border-t border-line pt-10">
-          <h2 className="display text-4xl">{group.name}</h2>
-          <p className="mt-3 text-sm">
-            <Link href={group.parent.href} className="border-b border-line">
-              {group.parent.label}
-            </Link>
-          </p>
-          {group.countries.map((country) => (
-            <div key={country.country} className="mt-8">
-              <h3 className="text-sm uppercase tracking-wide text-mute">{country.country}</h3>
-              {country.places.map((place) => (
-                <div key={place.city} className="mt-4">
-                  <h4 className="text-lg">{place.city}</h4>
-                  <ul className="mt-2">
-                    {place.pages.map((item) => (
-                      <li key={item.href} className="border-t border-line py-2 text-sm">
-                        <Link href={item.href}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          ))}
-        </section>
-      ))}
+    <main data-studio className="w-full bg-[#0c0a09] px-4 py-8 sm:px-6 lg:px-8 text-stone-100 min-h-screen">
+      <div className="mx-auto max-w-[1360px]">
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Accueil", path: "/" },
+            { name: "Géo-localisation", path: "/geo-location" },
+          ]}
+        />
+        <GeoGlobeHub groups={groups} />
+      </div>
     </main>
   );
 }
