@@ -50,7 +50,7 @@ export default async function GeoLocationPage({ params }: Props) {
 function GeoIndex() {
   const groups = geoDirectory();
   return (
-    <main data-studio className="w-full bg-[#0c0a09] px-4 py-8 sm:px-6 lg:px-8 text-stone-100 min-h-screen">
+    <main data-studio className="w-full bg-[#050826] px-4 py-8 sm:px-6 lg:px-8 text-slate-100 min-h-screen selection:bg-blue-600 selection:text-white">
       <div className="mx-auto max-w-[1360px]">
         <BreadcrumbJsonLd
           items={[

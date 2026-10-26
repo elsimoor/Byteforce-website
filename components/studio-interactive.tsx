@@ -68,7 +68,7 @@ export function StudioHeroHeadline({
         <motion.span className="block" variants={lineVariants}>
           {line2}{" "}
           {accentWord && (
-            <span className="font-serif italic font-normal text-amber-400">
+            <span className="font-serif italic font-normal text-blue-400">
               {accentWord}
             </span>
           )}
@@ -213,8 +213,8 @@ export function StudioCatalogueList({ items }: { items: CatalogueItem[] }) {
               transition={{ duration: 0.2, ease: EASE }}
               className="pointer-events-none absolute z-50 hidden md:block"
             >
-              <div className="w-[280px] overflow-hidden rounded-xl border border-stone-300/80 bg-stone-900 p-1.5 shadow-2xl">
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg bg-stone-800">
+              <div className="w-[280px] overflow-hidden rounded-xl border border-blue-400/40 bg-[#070b33] p-1.5 shadow-2xl">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg bg-[#0d1245]">
                   <Image
                     src={activeShot}
                     alt={activeTitle}
@@ -223,7 +223,7 @@ export function StudioCatalogueList({ items }: { items: CatalogueItem[] }) {
                     className="object-cover object-top"
                   />
                 </div>
-                <div className="px-2 py-1 text-center font-mono text-[10px] text-stone-300 truncate">
+                <div className="px-2 py-1 text-center font-mono text-[10px] text-blue-200 truncate">
                   {activeTitle}
                 </div>
               </div>
@@ -232,7 +232,7 @@ export function StudioCatalogueList({ items }: { items: CatalogueItem[] }) {
         </AnimatePresence>
       )}
 
-      <ul className="divide-y divide-stone-800/80">
+      <ul className="divide-y divide-blue-950/80">
         {items.map((project, idx) => (
           <li
             key={project.slug}
@@ -245,29 +245,29 @@ export function StudioCatalogueList({ items }: { items: CatalogueItem[] }) {
             onMouseLeave={() => {
               setActiveShot(null);
             }}
-            className="group py-3.5 transition-colors duration-150 hover:bg-stone-900/40"
+            className="group py-3.5 transition-colors duration-150 hover:bg-blue-950/30"
           >
             <Link
               href={`/realisations/${project.slug}`}
-              className="flex items-baseline justify-between gap-4 text-sm text-stone-300 group-hover:text-amber-300 transition-colors"
+              className="flex items-baseline justify-between gap-4 text-sm text-slate-300 group-hover:text-blue-300 transition-colors"
             >
               <div className="flex items-baseline gap-3">
-                <span className="font-mono text-[11px] text-stone-600 group-hover:text-amber-500/80 transition-colors">
+                <span className="font-mono text-[11px] text-slate-500 group-hover:text-blue-400 transition-colors">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
                 <span className="font-medium text-white group-hover:translate-x-1 transition-transform duration-200">
                   {project.title}
                 </span>
-                <span className="hidden sm:inline font-mono text-[11px] text-stone-500">
+                <span className="hidden sm:inline font-mono text-[11px] text-slate-400">
                   · {project.category}
                 </span>
               </div>
 
               <div className="flex items-center gap-3 shrink-0">
-                <span className="font-mono text-xs text-stone-500">
+                <span className="font-mono text-xs text-slate-400">
                   {project.city} · {project.year}
                 </span>
-                <span className="font-mono text-xs text-amber-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200">
+                <span className="font-mono text-xs text-blue-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200">
                   →
                 </span>
               </div>
