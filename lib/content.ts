@@ -882,13 +882,13 @@ export const projects: Project[] = [
     city: "Casablanca",
     country: "Maroc",
     description:
-      "YourSmile : comptes praticien et patient pour les aligneurs dentaires. Le site public cite Casablanca. En ligne depuis 2025.",
+      "YourSmile : plateforme et CRM pour aligneurs dentaires, avec espaces dédiés praticiens, patients et back-office. En ligne depuis 2025.",
     url: "https://www.yoursmile.ma/",
     serviceSlug: "logiciel-sur-mesure",
-    problem: "Le parcours des aligneurs demandait un écran pour le praticien, le patient et le back-office.",
+    problem: "Le suivi des aligneurs nécessitait un parcours coordonné entre praticiens, patients et administration.",
     solution:
-      "Le site public yoursmile.ma. Le CV décrit le CRM : administration, dentistes, back-office, API GraphQL, Node.js, MongoDB, droits d'accès, interfaces Next.js.",
-    result: "Le site est en ligne depuis 2025. La page publique cite Casablanca. Les délais écrits sur cette page ne sont pas une mesure de Byte Force.",
+      "Plateforme et CRM sur mesure : administration, dentistes, back-office, API GraphQL, Node.js, MongoDB et interface Next.js.",
+    result: "Plateforme en production depuis 2025 à Casablanca.",
     shot: "/work/yoursmile.webp",
     pages: [],
   },

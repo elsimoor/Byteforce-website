@@ -244,7 +244,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
   },
   "/studio": {
     title: "Studio logiciel à Casablanca · Byte Force",
-    description: "Byte Force : studio de développement logiciel à Casablanca. Méthode, bureau et projets depuis 2023.",
+    description: "Byte Force : studio de développement logiciel à Casablanca. Méthode, bureau et projets depuis 2022.",
   },
   "/studio/ou-lon-travaille": {
     title: "Bureau Byte Force au Technopark · Casablanca",

@@ -181,20 +181,16 @@ export function Footer() {
           <Link href="/walid-moultamiss" className="font-semibold text-on-surface">
             Walid Moultamiss
           </Link>
-          , fondateur de Byte Force à Casablanca. Full-Stack Software Engineer with 4+ years of experience. Master&apos;s
-          studies in computer science at Heriot-Watt University. Lead of the studio.{" "}
+          , fondateur de Byte Force à Casablanca. Ingénieur logiciel full-stack avec plus de 4 ans d&apos;expérience. Études de Master en informatique à l&apos;Université Heriot-Watt. Direction du studio.{" "}
           <a href="https://www.linkedin.com/in/walid-moultamiss-56142b1aa">LinkedIn de Walid Moultamiss</a>.
         </p>
         <p className="financial-disclaimer mt-4 max-w-3xl text-xs text-on-surface-variant">
-          This page is not financial advice. Aucun prix n&apos;est publié sur ce site.
+          Aucun prix public n&apos;est publié sur ce site.
         </p>
         <div className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           <Link href="/how-we-write" className="inline-flex min-h-11 items-center">
             Comment les pages sont écrites
           </Link>
-          <a href="https://schema.org/">schema.org</a>
-          <a href="https://wordpress.org/">wordpress.org</a>
-          <a href="https://www.w3.org/TR/html/">W3C HTML</a>
           <time dateTime="2026-10-09">Mis à jour le 9 octobre 2026</time>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-outline-variant/20 pt-8 text-xs text-on-surface-variant sm:flex-row">
