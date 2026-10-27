@@ -23,7 +23,7 @@ export async function GET() {
       lastmod: "2026-10-12",
     },
     {
-      loc: `${site.url}/outils-sitemap.xml`,
+      loc: `${site.url}/tools-sitemap.xml`,
       lastmod: "2026-10-27",
     },
   ];

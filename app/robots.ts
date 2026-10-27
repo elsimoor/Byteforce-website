@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
       `${site.url}/insights-sitemap.xml`,
       `${site.url}/villes-sitemap.xml`,
       `${site.url}/geo-location-sitemap.xml`,
-      `${site.url}/outils-sitemap.xml`,
+      `${site.url}/tools-sitemap.xml`,
     ],
   };
 }

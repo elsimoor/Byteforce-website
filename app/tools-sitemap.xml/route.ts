@@ -35,6 +35,14 @@ export async function GET() {
       loc: `${site.url}/outils/claude-artifact-to-markdown`,
       lastmod: today,
     },
+    {
+      loc: `${site.url}/audit`,
+      lastmod: today,
+    },
+    {
+      loc: `${site.url}/ou-en-est-le-projet`,
+      lastmod: today,
+    },
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
