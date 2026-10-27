@@ -3,13 +3,13 @@ import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "Développement application mobile Maroc | iOS & Android",
+  title: "Développement Application Mobile Maroc : iOS, Android & Devis 24h",
   description:
     "Création d'applications mobiles sur mesure au Maroc (iOS & Android). Design UX moderne, publication sur les stores et code source cédé. Devis sous 24h.",
   alternates: { canonical: "/developpement-application-mobile-maroc" },
   openGraph: openGraph(
     "/developpement-application-mobile-maroc",
-    "Développement application mobile Maroc | iOS & Android",
+    "Développement Application Mobile Maroc : iOS, Android & Devis 24h",
     "Création d'applications mobiles sur mesure au Maroc (iOS & Android). Design UX moderne, publication sur les stores et code source cédé. Devis sous 24h."
   ),
 };

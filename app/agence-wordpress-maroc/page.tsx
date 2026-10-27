@@ -3,13 +3,13 @@ import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "Agence WordPress Maroc | Création Site Pro & WooCommerce",
+  title: "Agence WordPress Maroc : Sites Pro Rapides (<1.5s) & WooCommerce",
   description:
     "Agence WordPress au Maroc : sites vitrines, e-commerce WooCommerce et plugins sur mesure. Chargement en < 1.5s, SEO inclus. Devis gratuit sous 24h.",
   alternates: { canonical: "/agence-wordpress-maroc" },
   openGraph: openGraph(
     "/agence-wordpress-maroc",
-    "Agence WordPress Maroc | Création Site Pro & WooCommerce",
+    "Agence WordPress Maroc : Sites Pro Rapides (<1.5s) & WooCommerce",
     "Agence WordPress au Maroc : sites vitrines, e-commerce WooCommerce et plugins sur mesure. Chargement en < 1.5s, SEO inclus. Devis gratuit sous 24h."
   ),
 };

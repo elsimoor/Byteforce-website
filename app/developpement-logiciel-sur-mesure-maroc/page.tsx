@@ -3,13 +3,13 @@ import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "Développement logiciel sur mesure Maroc | BYTE FORCE",
+  title: "Développement Logiciel Sur Mesure Maroc : Devis Gratuit 24h",
   description:
     "Développement de logiciels métier et CRM sur mesure au Maroc. Automatisez vos flux, éliminez Excel et réduisez vos coûts. Devis gratuit en 24h.",
   alternates: { canonical: "/developpement-logiciel-sur-mesure-maroc" },
   openGraph: openGraph(
     "/developpement-logiciel-sur-mesure-maroc",
-    "Développement logiciel sur mesure Maroc | BYTE FORCE",
+    "Développement Logiciel Sur Mesure Maroc : Devis Gratuit 24h",
     "Développement de logiciels métier et CRM sur mesure au Maroc. Automatisez vos flux, éliminez Excel et réduisez vos coûts. Devis gratuit en 24h."
   ),
 };

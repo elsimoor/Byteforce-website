@@ -3,14 +3,14 @@ import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "CRM sur mesure Maroc | Logiciel commercial personnalisé",
+  title: "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",
   description:
-    "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis sous 24h.",
+    "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis gratuit sous 24h.",
   alternates: { canonical: "/crm-sur-mesure-maroc" },
   openGraph: openGraph(
     "/crm-sur-mesure-maroc",
-    "CRM sur mesure Maroc | Logiciel commercial personnalisé",
-    "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis sous 24h."
+    "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",
+    "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis gratuit sous 24h."
   ),
 };
 

@@ -3,13 +3,13 @@ import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "Développement SaaS Maroc | Création Logiciel Scalable",
+  title: "Développement SaaS & MVP au Maroc : De l'Idée au Lancement Cloud",
   description:
     "Développement de plateformes SaaS et logiciels cloud au Maroc : architecture multi-tenant, abonnements CMI/Stripe et code remis. Devis sous 24h.",
   alternates: { canonical: "/developpement-saas-maroc" },
   openGraph: openGraph(
     "/developpement-saas-maroc",
-    "Développement SaaS Maroc | Création Logiciel Scalable",
+    "Développement SaaS & MVP au Maroc : De l'Idée au Lancement Cloud",
     "Développement de plateformes SaaS et logiciels cloud au Maroc : architecture multi-tenant, abonnements CMI/Stripe et code remis. Devis sous 24h."
   ),
 };

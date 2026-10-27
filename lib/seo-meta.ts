@@ -6,12 +6,12 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Logiciels métier, CRM et applications sur mesure au Maroc. Amorti dès 6 mois, code 100% à vous, livraison agile. Demandez votre devis gratuit en 24h.",
   },
   "/developpement-logiciel-sur-mesure-maroc": {
-    title: "Logiciel sur mesure Maroc & Casablanca | BYTE FORCE",
+    title: "Développement Logiciel Sur Mesure Maroc : Devis Gratuit 24h",
     description:
       "Développement de logiciels sur mesure au Maroc. Automatisez vos processus, éliminez Excel et réduisez vos coûts. Obtenez un devis gratuit en 24h.",
   },
   "/crm-sur-mesure-maroc": {
-    title: "CRM sur mesure Maroc : PME & Ventes | BYTE FORCE",
+    title: "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",
     description:
       "CRM personnalisé pour entreprises au Maroc : pipeline, relances WhatsApp et devis en dirhams. 0 abonnement par utilisateur. Devis gratuit en 24h.",
   },

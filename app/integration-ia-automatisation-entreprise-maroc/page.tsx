@@ -3,13 +3,13 @@ import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "Intégration IA & Automatisation Entreprise Maroc | BYTE FORCE",
+  title: "Intégration IA & Automatisation Entreprise Maroc : Devis sous 24h",
   description:
     "Intégration d'intelligence artificielle et automatisation de processus pour entreprises au Maroc : traitement de factures, WhatsApp IA et CRM. Devis 24h.",
   alternates: { canonical: "/integration-ia-automatisation-entreprise-maroc" },
   openGraph: openGraph(
     "/integration-ia-automatisation-entreprise-maroc",
-    "Intégration IA & Automatisation Entreprise Maroc | BYTE FORCE",
+    "Intégration IA & Automatisation Entreprise Maroc : Devis sous 24h",
     "Intégration d'intelligence artificielle et automatisation de processus pour entreprises au Maroc : traitement de factures, WhatsApp IA et CRM. Devis 24h."
   ),
 };
