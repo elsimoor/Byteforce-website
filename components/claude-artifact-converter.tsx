@@ -2,19 +2,61 @@
 
 import { useState, useId } from "react";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { ClaudeLogo } from "@/components/ou-en-est-marks";
 
-function htmlToMarkdown(html: string): string {
-  if (!html) return "";
+function isSafeUrl(url?: string): boolean {
+  if (!url) return false;
+  try {
+    if (url.startsWith("/") || url.startsWith("#") || url.startsWith("./") || url.startsWith("../")) {
+      return true;
+    }
+    const parsed = new URL(url);
+    return ["http:", "https:", "mailto:", "tel:"].includes(parsed.protocol);
+  } catch {
+    return false;
+  }
+}
 
-  // If input doesn't look like HTML, return as-is
-  if (!/<[a-z][\s\S]*>/i.test(html)) {
-    return html.trim();
+function isProbablyHtml(content: string): boolean {
+  if (!content) return false;
+  const trimmed = content.trim();
+
+  // Clear HTML documents
+  if (/^<!DOCTYPE/i.test(trimmed) || /<html[\s>]/i.test(trimmed) || /<body[\s>]/i.test(trimmed)) {
+    return true;
   }
 
-  let text = html;
+  // Count HTML block tags
+  const htmlTagCount = (content.match(/<\/?(?:div|p|h[1-6]|table|tr|td|th|ul|ol|li|pre|code|blockquote|section|article)[\s>]/gi) || []).length;
 
-  // Remove doctype, head, style, script, svg
+  // Count Markdown structural markers
+  const mdHeadingCount = (content.match(/^#{1,6}\s+/gm) || []).length;
+  const mdListCount = (content.match(/^[\s]*[-*+]\s+/gm) || []).length;
+  const mdTableCount = (content.match(/^\|.+\|$/gm) || []).length;
+  const mdCodeBlockCount = (content.match(/^```/gm) || []).length;
+  const mdScore = mdHeadingCount * 2 + mdListCount + mdTableCount + mdCodeBlockCount * 2;
+
+  // If Markdown elements dominate or no HTML structural tags exist, treat as Markdown
+  if (mdScore >= 2 && mdScore >= htmlTagCount) {
+    return false;
+  }
+
+  return htmlTagCount >= 2;
+}
+
+function htmlToMarkdown(input: string): string {
+  if (!input) return "";
+
+  // If input is already Markdown, preserve it untouched
+  if (!isProbablyHtml(input)) {
+    return input.trim();
+  }
+
+  let text = input;
+
+  // Remove doctype, head, style, script, svg, nav, footer
   text = text.replace(/<!DOCTYPE[\s\S]*?>/gi, "");
   text = text.replace(/<head[\s\S]*?<\/head>/gi, "");
   text = text.replace(/<style[\s\S]*?<\/style>/gi, "");
@@ -106,39 +148,60 @@ function htmlToMarkdown(html: string): string {
     .replace(/&mdash;/g, "—")
     .replace(/&ndash;/g, "–");
 
-  // Clean consecutive blank lines
   return text.replace(/\n{3,}/g, "\n\n").trim();
 }
 
 const SAMPLE_ARTIFACT = `# Spécifications Techniques : Cluster SEO & Gestion de Paie
 
-## 1. Objectifs Stratégiques
-Ce document définit l'architecture de contenu et les exigences techniques pour positionner la solution sur les requêtes à forte intention d'achat.
+Ce document de référence définit l'architecture de contenu et les exigences techniques pour positionner la solution sur les requêtes à forte intention d'achat.
 
-- **Cible prioritaire** : Dirigeants de TPE et PME cherchant à externaliser la gestion sociale.
-- **Conversion visée** : Demande de devis instantané et prise de rendez-vous en ligne.
-- **Délai de mise en œuvre** : Sprint de 3 semaines avec tests de recette continus.
+## 1. Objectifs Stratégiques & Périmètre
+L'objectif est d'accélérer l'acquisition organique tout en garantissant une conversion fluide vers l'outil de simulation.
 
-## 2. Structure des URLs & Mots-Clés
-| Page | Mot-clé Principal | Volume Mensuel | Intention |
-|---|---|---|---|
-| /gestion-paie-en-ligne | gestion paie en ligne | 4 400 | Commerciale |
-| /externalisation-paie-pme | externalisation paie pme | 1 900 | Transactionnelle |
-| /cout-gestion-paie | cout fiche de paie entreprise | 1 300 | Informationnelle |
-| /changer-prestataire-paie | changer gestionnaire paie | 720 | Décision |
+### 1.1 Cible et Personas
+- **Cible prioritaire** : Dirigeants de TPE et PME (10 à 250 salariés)
+  - Décideurs RH et directeurs administratifs & financiers (DAF)
+  - Entreprises souhaitant internaliser ou changer de prestataire
+- **Enjeux clés** : Conformité légale DSN, gain de temps et *zéro pénalité URSSAF*
+
+### 1.2 Parcours Utilisateur
+1. Découverte de la page spoke ciblée via recherche Google
+2. Consultation du comparatif et calcul des économies
+3. Demande de devis instantané ou prise de rendez-vous en ligne
+
+---
+
+## 2. Structure des URLs & Mots-Clés Cibles
+Le tableau suivant détaille le maillage interne et les intentions de recherche :
+
+| Page / URL | Mot-clé Principal | Volume Mensuel | Intention | Priorité |
+| :--- | :--- | :---: | :---: | ---: |
+| /gestion-paie-en-ligne | gestion paie en ligne | 4 400 | Commerciale | P1 |
+| /externalisation-paie-pme | externalisation paie pme | 1 900 | Transactionnelle | P1 |
+| /cout-gestion-paie | cout fiche de paie entreprise | 1 300 | Informationnelle | P2 |
+| /changer-prestataire-paie | changer gestionnaire paie | 720 | Décision | P2 |
+
+---
 
 ## 3. Données Structurées Schema.org
+Chaque page doit intégrer ce balisage JSON-LD valide :
+
 \`\`\`json
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Zepay Logiciel Paie",
   "applicationCategory": "BusinessApplication",
-  "operatingSystem": "All"
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "11",
+    "priceCurrency": "EUR"
+  }
 }
 \`\`\`
 
-> **Note importante** : Chaque page fille doit lier la page pilier avec une ancre descriptive exacte.`;
+> **Note importante** : Chaque page fille doit lier la page pilier avec une ancre descriptive exacte. Pour en savoir plus, consultez notre [guide d'implémentation SEO](https://byteforce.ma/insights).`;
 
 export function ClaudeArtifactConverter() {
   const [inputText, setInputText] = useState("");
@@ -397,7 +460,7 @@ export function ClaudeArtifactConverter() {
             </div>
           </div>
 
-          {/* Right Column: Live Formatted Preview & Code Output */}
+          {/* Right Column: Live Formatted Preview & Code Output using ReactMarkdown */}
           <div className="lg:sticky lg:top-36 border border-line bg-surface-container-lowest p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-3 gap-2">
               <div className="flex items-center gap-4">
@@ -444,83 +507,176 @@ export function ClaudeArtifactConverter() {
             <div className="mt-4 min-h-[460px] max-h-[720px] overflow-y-auto pr-1">
               {markdownOutput ? (
                 activeTab === "preview" ? (
-                  <div className="space-y-3 text-on-surface text-sm leading-relaxed">
-                    {markdownOutput.split("\n\n").map((chunk, i) => {
-                      const trimmed = chunk.trim();
-                      if (trimmed.startsWith("# ")) {
-                        return (
-                          <h2 key={i} className="font-headline text-2xl font-bold tracking-tight text-on-surface mt-6 mb-2 border-b border-line pb-2">
-                            {trimmed.replace(/^# /, "")}
+                  <div className="text-on-surface">
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        h1: ({ children, ...props }) => (
+                          <h1
+                            className="font-headline text-2xl sm:text-3xl font-extrabold tracking-tight text-on-surface mt-6 mb-4 border-b border-line pb-2.5"
+                            {...props}
+                          >
+                            {children}
+                          </h1>
+                        ),
+                        h2: ({ children, ...props }) => (
+                          <h2
+                            className="font-headline text-xl sm:text-2xl font-bold tracking-tight text-on-surface mt-6 mb-3 border-b border-outline-variant/40 pb-2"
+                            {...props}
+                          >
+                            {children}
                           </h2>
-                        );
-                      }
-                      if (trimmed.startsWith("## ")) {
-                        return (
-                          <h3 key={i} className="font-headline text-xl font-bold tracking-tight text-on-surface mt-5 mb-2">
-                            {trimmed.replace(/^## /, "")}
+                        ),
+                        h3: ({ children, ...props }) => (
+                          <h3
+                            className="font-headline text-lg sm:text-xl font-bold tracking-tight text-on-surface mt-5 mb-2"
+                            {...props}
+                          >
+                            {children}
                           </h3>
-                        );
-                      }
-                      if (trimmed.startsWith("### ")) {
-                        return (
-                          <h4 key={i} className="font-headline text-lg font-bold text-on-surface mt-4 mb-1">
-                            {trimmed.replace(/^### /, "")}
+                        ),
+                        h4: ({ children, ...props }) => (
+                          <h4
+                            className="font-headline text-base sm:text-lg font-bold text-on-surface mt-4 mb-2"
+                            {...props}
+                          >
+                            {children}
                           </h4>
-                        );
-                      }
-                      if (trimmed.startsWith("```")) {
-                        return (
-                          <pre key={i} className="bg-surface-container p-3 font-mono text-xs rounded border border-line text-on-surface overflow-x-auto my-3">
-                            {trimmed.replace(/```[a-z]*\n?/gi, "").trim()}
-                          </pre>
-                        );
-                      }
-                      if (trimmed.startsWith("> ")) {
-                        return (
-                          <blockquote key={i} className="border-l-2 border-primary pl-3 py-1 my-2 text-on-surface-variant italic">
-                            {trimmed.replace(/^> /, "")}
+                        ),
+                        h5: ({ children, ...props }) => (
+                          <h5
+                            className="font-headline text-sm sm:text-base font-bold text-on-surface mt-3 mb-1"
+                            {...props}
+                          >
+                            {children}
+                          </h5>
+                        ),
+                        h6: ({ children, ...props }) => (
+                          <h6
+                            className="font-headline text-xs sm:text-sm font-bold text-outline uppercase tracking-wider mt-3 mb-1"
+                            {...props}
+                          >
+                            {children}
+                          </h6>
+                        ),
+                        p: ({ children, ...props }) => (
+                          <p className="my-3 text-sm leading-relaxed text-on-surface" {...props}>
+                            {children}
+                          </p>
+                        ),
+                        strong: ({ children, ...props }) => (
+                          <strong className="font-bold text-on-surface" {...props}>
+                            {children}
+                          </strong>
+                        ),
+                        em: ({ children, ...props }) => (
+                          <em className="italic text-on-surface" {...props}>
+                            {children}
+                          </em>
+                        ),
+                        ul: ({ children, ...props }) => (
+                          <ul className="my-3 list-disc pl-6 space-y-1 text-sm text-on-surface-variant" {...props}>
+                            {children}
+                          </ul>
+                        ),
+                        ol: ({ children, ...props }) => (
+                          <ol className="my-3 list-decimal pl-6 space-y-1 text-sm text-on-surface-variant" {...props}>
+                            {children}
+                          </ol>
+                        ),
+                        li: ({ children, ...props }) => (
+                          <li className="leading-relaxed pl-1" {...props}>
+                            {children}
+                          </li>
+                        ),
+                        blockquote: ({ children, ...props }) => (
+                          <blockquote
+                            className="my-4 border-l-4 border-primary bg-surface-container-low px-4 py-2.5 text-sm italic text-on-surface-variant"
+                            {...props}
+                          >
+                            {children}
                           </blockquote>
-                        );
-                      }
-                      if (trimmed.startsWith("|")) {
-                        const rows = trimmed.split("\n").filter((r) => !r.includes("---"));
-                        return (
-                          <div key={i} className="overflow-x-auto my-3">
-                            <table className="w-full border-collapse border border-line text-xs">
-                              <tbody>
-                                {rows.map((row, rowIdx) => {
-                                  const cells = row.split("|").filter((_, idx, arr) => idx !== 0 && idx !== arr.length - 1);
-                                  return (
-                                    <tr key={rowIdx} className={rowIdx === 0 ? "bg-surface-container-low font-bold" : ""}>
-                                      {cells.map((cell, cellIdx) => (
-                                        <td key={cellIdx} className="border border-line p-2">
-                                          {cell.trim()}
-                                        </td>
-                                      ))}
-                                    </tr>
-                                  );
-                                })}
-                              </tbody>
+                        ),
+                        hr: () => <hr className="my-6 border-line" />,
+                        a: ({ href, children, ...props }) => {
+                          const safe = isSafeUrl(href);
+                          const isExternal = href?.startsWith("http");
+                          return (
+                            <a
+                              href={safe ? href : "#"}
+                              target={isExternal ? "_blank" : undefined}
+                              rel={isExternal ? "noopener noreferrer" : undefined}
+                              className="text-primary font-medium underline hover:text-primary-container transition-colors"
+                              {...props}
+                            >
+                              {children}
+                            </a>
+                          );
+                        },
+                        table: ({ children, ...props }) => (
+                          <div className="my-5 w-full overflow-x-auto border border-line bg-surface-container-lowest">
+                            <table className="w-full min-w-[540px] border-collapse text-xs sm:text-sm text-left" {...props}>
+                              {children}
                             </table>
                           </div>
-                        );
-                      }
-                      if (trimmed.startsWith("- ")) {
-                        const items = trimmed.split("\n").map((line) => line.replace(/^- /, ""));
-                        return (
-                          <ul key={i} className="list-disc pl-5 space-y-1 text-sm text-on-surface-variant my-2">
-                            {items.map((it, idx) => (
-                              <li key={idx}>{it}</li>
-                            ))}
-                          </ul>
-                        );
-                      }
-                      return (
-                        <p key={i} className="text-sm text-on-surface leading-relaxed">
-                          {trimmed}
-                        </p>
-                      );
-                    })}
+                        ),
+                        thead: ({ children, ...props }) => (
+                          <thead className="border-b border-line bg-surface-container-low font-bold text-on-surface" {...props}>
+                            {children}
+                          </thead>
+                        ),
+                        tbody: ({ children, ...props }) => (
+                          <tbody className="divide-y divide-outline-variant/40 bg-surface-container-lowest" {...props}>
+                            {children}
+                          </tbody>
+                        ),
+                        tr: ({ children, ...props }) => (
+                          <tr className="transition-colors hover:bg-surface-container-low/40" {...props}>
+                            {children}
+                          </tr>
+                        ),
+                        th: ({ children, ...props }) => (
+                          <th className="px-3.5 py-2.5 font-semibold text-on-surface border-r border-line last:border-r-0" {...props}>
+                            {children}
+                          </th>
+                        ),
+                        td: ({ children, ...props }) => (
+                          <td className="px-3.5 py-2.5 text-on-surface-variant border-r border-line last:border-r-0" {...props}>
+                            {children}
+                          </td>
+                        ),
+                        code: ({ className, children, ...props }: any) => {
+                          const match = /language-(\w+)/.exec(className || "");
+                          const isMultiLine = String(children).includes("\n");
+                          if (!match && !isMultiLine) {
+                            return (
+                              <code
+                                className="rounded bg-surface-container px-1.5 py-0.5 font-mono text-[12px] text-primary font-semibold border border-outline-variant/50"
+                                {...props}
+                              >
+                                {children}
+                              </code>
+                            );
+                          }
+                          return (
+                            <div className="my-4 overflow-hidden rounded border border-line bg-surface-container">
+                              {match ? (
+                                <div className="border-b border-line/60 bg-surface-container-high px-3 py-1 font-mono text-[10px] font-bold text-outline uppercase tracking-wider">
+                                  {match[1]}
+                                </div>
+                              ) : null}
+                              <pre className="overflow-x-auto p-4 font-mono text-xs leading-relaxed text-on-surface">
+                                <code className={className} {...props}>
+                                  {children}
+                                </code>
+                              </pre>
+                            </div>
+                          );
+                        },
+                      }}
+                    >
+                      {markdownOutput}
+                    </ReactMarkdown>
                   </div>
                 ) : (
                   <pre className="whitespace-pre-wrap font-mono text-xs text-on-surface bg-surface-container-low p-4 border border-outline-variant/60 max-h-[660px] overflow-auto">
@@ -542,18 +698,18 @@ export function ClaudeArtifactConverter() {
         <div className="mt-16 border-t border-outline-variant/40 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-on-surface-variant">
           <div>
             <h3 className="font-headline font-bold text-base text-on-surface mb-2">
-              Comment fonctionne la conversion ?
+              Comment fonctionne le rendu Markdown ?
             </h3>
             <p>
-              La conversion s&apos;arrête à ce que vous collez. Elle extrait le texte structuré, rétablit les titres, les listes à puces, les tableaux comparatifs et les blocs de code en syntaxe Markdown standard (Gfm).
+              Le moteur analyse l&apos;arbre syntaxique Markdown (AST) complet : titres H1 à H6, tableaux GitHub Flavored Markdown (GFM), listes imbriquées, blocs de code, citations et liens avec validation stricte des protocoles de sécurité.
             </p>
           </div>
           <div>
             <h3 className="font-headline font-bold text-base text-on-surface mb-2">
-              Compatibilité universelle
+              Compatibilité universelle & Confidentialité
             </h3>
             <p>
-              Le fichier .md résultant est lisible par tous les éditeurs modernes : Obsidian, Notion, VS Code, GitHub ou directement par les modèles d&apos;IA (Claude, ChatGPT) pour réinjecter des briefs ou spécifications.
+              Le fichier .md généré conserve son balisage d&apos;origine intact, compatible avec Obsidian, Notion, VS Code, GitHub ou pour alimenter d&apos;autres contextes d&apos;IA. L&apos;exécution est 100% locale à votre navigateur.
             </p>
           </div>
         </div>
