@@ -11,6 +11,14 @@ export async function GET() {
       lastmod: "2026-10-13",
     },
     {
+      loc: `${site.url}/insights-sitemap.xml`,
+      lastmod: "2026-10-12",
+    },
+    {
+      loc: `${site.url}/villes-sitemap.xml`,
+      lastmod: "2026-10-12",
+    },
+    {
       loc: `${site.url}/geo-location-sitemap.xml`,
       lastmod: "2026-10-12",
     },

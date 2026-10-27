@@ -15,6 +15,8 @@ function escapeXml(unsafe: string) {
       case "&":
         return "&amp;";
       case "'":
+        return "&apos;";
+      case '"':
         return "&quot;";
       default:
         return c;
@@ -23,10 +25,18 @@ function escapeXml(unsafe: string) {
 }
 
 export async function GET() {
-  const entries = publicEntries().map((entry) => ({
-    loc: entry.path === "/" ? `${site.url}/` : `${site.url}${entry.path}`,
-    lastmod: entry.lastModified,
-  }));
+  const entries = publicEntries()
+    .filter(
+      (entry) =>
+        entry.path !== "/insights" &&
+        !entry.path.startsWith("/insights/") &&
+        entry.path !== "/villes" &&
+        !entry.path.startsWith("/villes/")
+    )
+    .map((entry) => ({
+      loc: entry.path === "/" ? `${site.url}/` : `${site.url}${entry.path}`,
+      lastmod: entry.lastModified,
+    }));
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

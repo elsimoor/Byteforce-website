@@ -14,6 +14,8 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: [
       `${site.url}/sitemap.xml`,
       `${site.url}/pages-sitemap.xml`,
+      `${site.url}/insights-sitemap.xml`,
+      `${site.url}/villes-sitemap.xml`,
       `${site.url}/geo-location-sitemap.xml`,
     ],
   };
