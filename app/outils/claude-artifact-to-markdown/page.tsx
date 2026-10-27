@@ -45,7 +45,7 @@ export default function ClaudeArtifactToMdPage() {
   };
 
   return (
-    <article>
+    <article className="w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

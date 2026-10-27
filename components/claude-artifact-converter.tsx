@@ -227,305 +227,337 @@ export function ClaudeArtifactConverter() {
   };
 
   return (
-    <>
-      {/* Sticky Sub-Header bar like /ou-en-est-le-projet */}
+    <div className="w-full">
+      {/* Sticky Sub-Header bar spanning full max-w-7xl width */}
       <div className="sticky top-20 z-40 border-b border-outline-variant/40 bg-surface/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-6 py-3 md:px-12">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-12 py-3">
           <p className="font-mono text-[11px] font-bold tracking-[0.16em] text-primary uppercase">
-            Outil · Convertisseur Markdown
+            Outil · Convertisseur Claude vers MD
           </p>
           <p className="font-mono text-[11px] text-outline">
-            {wordsCount > 0 ? `${wordsCount} mots · ` : ""}100% sur cet appareil
+            {wordsCount > 0 ? `${wordsCount} mots détectés · ` : ""}100% sur cet appareil
           </p>
         </div>
       </div>
 
-      {/* Main Form Container */}
-      <div className="mx-auto max-w-3xl px-6 py-12 md:px-12 md:py-16">
+      {/* Main Wide Container */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 py-12 md:py-16">
         <p className="text-sm text-outline">
           <Link href="/outils" className="hover:text-primary transition-colors">
             ← Outils gratuits
           </Link>
         </p>
 
-        <h1 className="display mt-4 max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">
-          Artifact Claude vers MD.
-        </h1>
-
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-on-surface">
-          Convertit le texte, les tableaux ou le HTML d&apos;un artefact Claude en fichier Markdown (.md) propre et prêt à télécharger. Le traitement s&apos;exécute sur votre navigateur : rien n&apos;est enregistré sur un serveur.
-        </p>
-
-        {/* Input Text Box */}
-        <fieldset className="mt-10 border border-line bg-surface-container-lowest p-6">
-          <div className="flex items-center justify-between gap-4">
-            <legend className="font-headline text-xl font-bold tracking-tight text-on-surface">
-              Coller l&apos;artefact Claude
-            </legend>
+        {/* Wide Header */}
+        <div className="mt-4 flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-outline-variant/50 pb-8">
+          <div>
+            <h1 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">
+              Artifact Claude vers MD.
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-on-surface">
+              Convertit le texte, les tableaux ou le HTML d&apos;un artefact Claude en fichier Markdown (.md) propre et prêt à télécharger. Le traitement s&apos;exécute sur votre navigateur : rien n&apos;est enregistré sur un serveur.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
             <button
               type="button"
               onClick={handleLoadSample}
-              className="font-mono text-[11px] text-primary underline hover:text-primary-container"
+              className="btn-line min-h-12"
             >
               Charger un exemple
             </button>
-          </div>
-
-          <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-outline uppercase">
-            Texte brut, markdown ou HTML copié depuis la fenêtre Claude
-          </p>
-
-          <textarea
-            id={inputId}
-            className="field mt-4 font-mono text-sm leading-relaxed"
-            rows={9}
-            style={{ height: "auto", minHeight: "220px" }}
-            placeholder="Collez ici le texte ou le code de votre artefact Claude..."
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-          />
-
-          {inputText ? (
-            <div className="mt-3 flex items-center justify-between">
-              <span className="font-mono text-xs text-outline">
-                {wordsCount} mots détectés
-              </span>
-              <button
-                type="button"
-                onClick={() => setInputText("")}
-                className="font-mono text-xs text-outline hover:text-on-surface"
-              >
-                Effacer le texte
-              </button>
-            </div>
-          ) : null}
-        </fieldset>
-
-        {/* Optional Public URL Import */}
-        <div className="mt-8 border border-line bg-surface-container-lowest p-6">
-          <div className="flex items-center gap-2">
-            <ClaudeLogo />
-            <p className="font-headline text-base font-bold tracking-tight text-on-surface">
-              Ou importer depuis une URL Claude publique
-            </p>
-          </div>
-          <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
-            Si votre artefact est publié avec un lien public. Pour les artefacts privés sous session, utilisez directement le copier-coller ci-dessus.
-          </p>
-
-          <form onSubmit={handleFetchUrl} className="mt-4 flex flex-col sm:flex-row gap-3">
-            <input
-              id={urlId}
-              type="url"
-              className="field flex-1"
-              placeholder="https://claude.ai/artifact/..."
-              value={urlInput}
-              onChange={(e) => setUrlInput(e.target.value)}
-            />
             <button
-              type="submit"
-              className="btn-line shrink-0 min-h-12"
-              disabled={isLoadingUrl || !urlInput.trim()}
+              type="button"
+              onClick={handleDownload}
+              disabled={!markdownOutput}
+              className="btn min-h-12 px-6"
             >
-              {isLoadingUrl ? "Lecture..." : "Importer"}
+              Télécharger .md
             </button>
-          </form>
-
-          {urlError ? (
-            <p className="mt-3 text-sm text-error" role="alert">
-              {urlError}
-            </p>
-          ) : null}
+          </div>
         </div>
 
-        {/* Export and Action Panel */}
-        <div className="mt-8 border border-line bg-surface-container-lowest p-6">
-          <p className="font-headline text-lg font-bold tracking-tight text-on-surface">
-            Téléchargement & Exportation
-          </p>
+        {/* Side-by-side Workstation Layout on Large Screens */}
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Left Column: Input and Configuration */}
+          <div className="space-y-6">
+            {/* Direct Paste Box */}
+            <fieldset className="border border-line bg-surface-container-lowest p-6 sm:p-8">
+              <div className="flex items-center justify-between gap-4">
+                <legend className="font-headline text-xl font-bold tracking-tight text-on-surface">
+                  1. Coller l&apos;artefact Claude
+                </legend>
+                {inputText ? (
+                  <button
+                    type="button"
+                    onClick={() => setInputText("")}
+                    className="font-mono text-xs text-outline hover:text-on-surface"
+                  >
+                    Effacer le texte
+                  </button>
+                ) : null}
+              </div>
 
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
-            <div>
-              <label htmlFor={filenameId} className="block text-sm text-on-surface-variant mb-1 font-medium">
-                Nom du fichier de sortie
-              </label>
-              <div className="flex items-center">
+              <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-outline uppercase">
+                Texte brut, markdown ou HTML copié depuis la fenêtre Claude
+              </p>
+
+              <textarea
+                id={inputId}
+                className="field mt-4 font-mono text-xs sm:text-sm leading-relaxed"
+                rows={14}
+                style={{ height: "auto", minHeight: "360px" }}
+                placeholder="Collez ici le texte ou le code de votre artefact Claude..."
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+              />
+            </fieldset>
+
+            {/* File Name & Export Options */}
+            <div className="border border-line bg-surface-container-lowest p-6 sm:p-8">
+              <p className="font-headline text-lg font-bold tracking-tight text-on-surface">
+                2. Nom du fichier de sortie
+              </p>
+
+              <div className="mt-4 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+                <div className="flex-1 flex items-center">
+                  <input
+                    id={filenameId}
+                    type="text"
+                    className="field flex-1"
+                    value={filename}
+                    onChange={(e) => setFilename(e.target.value)}
+                    placeholder="claude-artifact"
+                  />
+                  <span className="ml-2 font-mono text-sm text-outline">.md</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={handleDownload}
+                    disabled={!markdownOutput}
+                    className="btn min-h-12 flex-1 sm:flex-none px-5"
+                  >
+                    Télécharger .md
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleCopy}
+                    disabled={!markdownOutput}
+                    className="btn-line min-h-12 px-4"
+                  >
+                    {copied ? "Copié !" : "Copier"}
+                  </button>
+                </div>
+              </div>
+
+              {copied ? (
+                <p className="mt-3 text-sm text-primary font-mono" role="status">
+                  ✓ Markdown copié dans le presse-papiers.
+                </p>
+              ) : null}
+            </div>
+
+            {/* Optional URL Import */}
+            <div className="border border-line bg-surface-container-lowest p-6 sm:p-8">
+              <div className="flex items-center gap-2">
+                <ClaudeLogo />
+                <p className="font-headline text-base font-bold tracking-tight text-on-surface">
+                  Ou importer depuis une URL Claude publique
+                </p>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+                Si votre artefact est publié avec un lien public. Pour les artefacts privés sous session, utilisez directement le copier-coller ci-dessus.
+              </p>
+
+              <form onSubmit={handleFetchUrl} className="mt-4 flex flex-col sm:flex-row gap-3">
                 <input
-                  id={filenameId}
-                  type="text"
-                  className="field"
-                  value={filename}
-                  onChange={(e) => setFilename(e.target.value)}
-                  placeholder="claude-artifact"
+                  id={urlId}
+                  type="url"
+                  className="field flex-1"
+                  placeholder="https://claude.ai/artifact/..."
+                  value={urlInput}
+                  onChange={(e) => setUrlInput(e.target.value)}
                 />
-                <span className="ml-2 font-mono text-sm text-outline">.md</span>
+                <button
+                  type="submit"
+                  className="btn-line shrink-0 min-h-12"
+                  disabled={isLoadingUrl || !urlInput.trim()}
+                >
+                  {isLoadingUrl ? "Lecture..." : "Importer"}
+                </button>
+              </form>
+
+              {urlError ? (
+                <p className="mt-3 text-sm text-error" role="alert">
+                  {urlError}
+                </p>
+              ) : null}
+            </div>
+          </div>
+
+          {/* Right Column: Live Formatted Preview & Code Output */}
+          <div className="lg:sticky lg:top-36 border border-line bg-surface-container-lowest p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-3 gap-2">
+              <div className="flex items-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab("preview")}
+                  className={
+                    activeTab === "preview"
+                      ? "border-b-2 border-primary pb-1 font-semibold text-primary text-sm"
+                      : "pb-1 text-sm text-outline hover:text-on-surface"
+                  }
+                >
+                  Aperçu du rendu
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab("raw")}
+                  className={
+                    activeTab === "raw"
+                      ? "border-b-2 border-primary pb-1 font-semibold text-primary text-sm"
+                      : "pb-1 text-sm text-outline hover:text-on-surface"
+                  }
+                >
+                  Code Markdown brut
+                </button>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <p className="font-mono text-xs text-outline">
+                  {wordsCount} mots · {charsCount} car.
+                </p>
+                {markdownOutput ? (
+                  <button
+                    type="button"
+                    onClick={handleCopy}
+                    className="font-mono text-xs text-primary underline hover:text-primary-container"
+                  >
+                    {copied ? "Copié !" : "Copier"}
+                  </button>
+                ) : null}
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                onClick={handleDownload}
-                disabled={!markdownOutput}
-                className="btn flex-1 min-h-12"
-              >
-                Télécharger .md
-              </button>
-              <button
-                type="button"
-                onClick={handleCopy}
-                disabled={!markdownOutput}
-                className="btn-line min-h-12"
-              >
-                {copied ? "Copié !" : "Copier"}
-              </button>
-            </div>
-          </div>
-
-          {copied ? (
-            <p className="mt-3 text-sm text-primary font-mono" role="status">
-              Le Markdown est copié dans le presse-papiers.
-            </p>
-          ) : null}
-        </div>
-
-        {/* Preview Panel */}
-        <div className="mt-8 border border-line bg-surface-container-lowest p-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-3 gap-2">
-            <div className="flex items-center gap-4">
-              <button
-                type="button"
-                onClick={() => setActiveTab("preview")}
-                className={
-                  activeTab === "preview"
-                    ? "border-b-2 border-primary pb-1 font-semibold text-primary text-sm"
-                    : "pb-1 text-sm text-outline hover:text-on-surface"
-                }
-              >
-                Aperçu du contenu
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveTab("raw")}
-                className={
-                  activeTab === "raw"
-                    ? "border-b-2 border-primary pb-1 font-semibold text-primary text-sm"
-                    : "pb-1 text-sm text-outline hover:text-on-surface"
-                }
-              >
-                Code Markdown brut
-              </button>
-            </div>
-
-            <p className="font-mono text-xs text-outline">
-              {wordsCount} mots · {charsCount} car. · {linesCount} lignes
-            </p>
-          </div>
-
-          <div className="mt-4">
-            {markdownOutput ? (
-              activeTab === "preview" ? (
-                <div className="space-y-3 text-on-surface text-sm leading-relaxed">
-                  {markdownOutput.split("\n\n").map((chunk, i) => {
-                    const trimmed = chunk.trim();
-                    if (trimmed.startsWith("# ")) {
+            <div className="mt-4 min-h-[460px] max-h-[720px] overflow-y-auto pr-1">
+              {markdownOutput ? (
+                activeTab === "preview" ? (
+                  <div className="space-y-3 text-on-surface text-sm leading-relaxed">
+                    {markdownOutput.split("\n\n").map((chunk, i) => {
+                      const trimmed = chunk.trim();
+                      if (trimmed.startsWith("# ")) {
+                        return (
+                          <h2 key={i} className="font-headline text-2xl font-bold tracking-tight text-on-surface mt-6 mb-2 border-b border-line pb-2">
+                            {trimmed.replace(/^# /, "")}
+                          </h2>
+                        );
+                      }
+                      if (trimmed.startsWith("## ")) {
+                        return (
+                          <h3 key={i} className="font-headline text-xl font-bold tracking-tight text-on-surface mt-5 mb-2">
+                            {trimmed.replace(/^## /, "")}
+                          </h3>
+                        );
+                      }
+                      if (trimmed.startsWith("### ")) {
+                        return (
+                          <h4 key={i} className="font-headline text-lg font-bold text-on-surface mt-4 mb-1">
+                            {trimmed.replace(/^### /, "")}
+                          </h4>
+                        );
+                      }
+                      if (trimmed.startsWith("```")) {
+                        return (
+                          <pre key={i} className="bg-surface-container p-3 font-mono text-xs rounded border border-line text-on-surface overflow-x-auto my-3">
+                            {trimmed.replace(/```[a-z]*\n?/gi, "").trim()}
+                          </pre>
+                        );
+                      }
+                      if (trimmed.startsWith("> ")) {
+                        return (
+                          <blockquote key={i} className="border-l-2 border-primary pl-3 py-1 my-2 text-on-surface-variant italic">
+                            {trimmed.replace(/^> /, "")}
+                          </blockquote>
+                        );
+                      }
+                      if (trimmed.startsWith("|")) {
+                        const rows = trimmed.split("\n").filter((r) => !r.includes("---"));
+                        return (
+                          <div key={i} className="overflow-x-auto my-3">
+                            <table className="w-full border-collapse border border-line text-xs">
+                              <tbody>
+                                {rows.map((row, rowIdx) => {
+                                  const cells = row.split("|").filter((_, idx, arr) => idx !== 0 && idx !== arr.length - 1);
+                                  return (
+                                    <tr key={rowIdx} className={rowIdx === 0 ? "bg-surface-container-low font-bold" : ""}>
+                                      {cells.map((cell, cellIdx) => (
+                                        <td key={cellIdx} className="border border-line p-2">
+                                          {cell.trim()}
+                                        </td>
+                                      ))}
+                                    </tr>
+                                  );
+                                })}
+                              </tbody>
+                            </table>
+                          </div>
+                        );
+                      }
+                      if (trimmed.startsWith("- ")) {
+                        const items = trimmed.split("\n").map((line) => line.replace(/^- /, ""));
+                        return (
+                          <ul key={i} className="list-disc pl-5 space-y-1 text-sm text-on-surface-variant my-2">
+                            {items.map((it, idx) => (
+                              <li key={idx}>{it}</li>
+                            ))}
+                          </ul>
+                        );
+                      }
                       return (
-                        <h2 key={i} className="font-headline text-2xl font-bold tracking-tight text-on-surface mt-6 mb-2 border-b border-line pb-2">
-                          {trimmed.replace(/^# /, "")}
-                        </h2>
+                        <p key={i} className="text-sm text-on-surface leading-relaxed">
+                          {trimmed}
+                        </p>
                       );
-                    }
-                    if (trimmed.startsWith("## ")) {
-                      return (
-                        <h3 key={i} className="font-headline text-xl font-bold tracking-tight text-on-surface mt-5 mb-2">
-                          {trimmed.replace(/^## /, "")}
-                        </h3>
-                      );
-                    }
-                    if (trimmed.startsWith("### ")) {
-                      return (
-                        <h4 key={i} className="font-headline text-lg font-bold text-on-surface mt-4 mb-1">
-                          {trimmed.replace(/^### /, "")}
-                        </h4>
-                      );
-                    }
-                    if (trimmed.startsWith("```")) {
-                      return (
-                        <pre key={i} className="bg-surface-container p-3 font-mono text-xs rounded border border-line text-on-surface overflow-x-auto my-3">
-                          {trimmed.replace(/```[a-z]*\n?/gi, "").trim()}
-                        </pre>
-                      );
-                    }
-                    if (trimmed.startsWith("> ")) {
-                      return (
-                        <blockquote key={i} className="border-l-2 border-primary pl-3 py-1 my-2 text-on-surface-variant italic">
-                          {trimmed.replace(/^> /, "")}
-                        </blockquote>
-                      );
-                    }
-                    if (trimmed.startsWith("|")) {
-                      const rows = trimmed.split("\n").filter((r) => !r.includes("---"));
-                      return (
-                        <div key={i} className="overflow-x-auto my-3">
-                          <table className="w-full border-collapse border border-line text-xs">
-                            <tbody>
-                              {rows.map((row, rowIdx) => {
-                                const cells = row.split("|").filter((_, idx, arr) => idx !== 0 && idx !== arr.length - 1);
-                                return (
-                                  <tr key={rowIdx} className={rowIdx === 0 ? "bg-surface-container-low font-bold" : ""}>
-                                    {cells.map((cell, cellIdx) => (
-                                      <td key={cellIdx} className="border border-line p-2">
-                                        {cell.trim()}
-                                      </td>
-                                    ))}
-                                  </tr>
-                                );
-                              })}
-                            </tbody>
-                          </table>
-                        </div>
-                      );
-                    }
-                    if (trimmed.startsWith("- ")) {
-                      const items = trimmed.split("\n").map((line) => line.replace(/^- /, ""));
-                      return (
-                        <ul key={i} className="list-disc pl-5 space-y-1 text-sm text-on-surface-variant my-2">
-                          {items.map((it, idx) => (
-                            <li key={idx}>{it}</li>
-                          ))}
-                        </ul>
-                      );
-                    }
-                    return (
-                      <p key={i} className="text-sm text-on-surface leading-relaxed">
-                        {trimmed}
-                      </p>
-                    );
-                  })}
-                </div>
+                    })}
+                  </div>
+                ) : (
+                  <pre className="whitespace-pre-wrap font-mono text-xs text-on-surface bg-surface-container-low p-4 border border-outline-variant/60 max-h-[660px] overflow-auto">
+                    {markdownOutput}
+                  </pre>
+                )
               ) : (
-                <pre className="whitespace-pre-wrap font-mono text-xs text-on-surface bg-surface-container-low p-4 border border-outline-variant/60 max-h-[500px] overflow-auto">
-                  {markdownOutput}
-                </pre>
-              )
-            ) : (
-              <p className="py-12 text-center text-sm text-outline italic">
-                Collez un texte ci-dessus pour afficher l&apos;aperçu et générer le fichier .md.
-              </p>
-            )}
+                <div className="py-24 text-center">
+                  <p className="text-sm text-outline italic">
+                    Collez votre texte dans la colonne de gauche ou cliquez sur &quot;Charger un exemple&quot; pour voir l&apos;aperçu en direct.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Editorial notes matching ou-en-est & audit */}
-        <div className="mt-14 space-y-4 text-sm leading-relaxed text-on-surface-variant">
-          <p>
-            La conversion s&apos;arrête à ce que vous collez. Elle extrait le texte structuré, rétablit les titres, les listes, les tableaux et les blocs de code en syntaxe Markdown standard.
-          </p>
-          <p>
-            Le fichier .md résultant est lisible par tous les éditeurs modernes : Obsidian, Notion, VS Code, GitHub ou directement par les modèles d&apos;IA (Claude, ChatGPT).
-          </p>
+        {/* Editorial notes across full width */}
+        <div className="mt-16 border-t border-outline-variant/40 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-on-surface-variant">
+          <div>
+            <h3 className="font-headline font-bold text-base text-on-surface mb-2">
+              Comment fonctionne la conversion ?
+            </h3>
+            <p>
+              La conversion s&apos;arrête à ce que vous collez. Elle extrait le texte structuré, rétablit les titres, les listes à puces, les tableaux comparatifs et les blocs de code en syntaxe Markdown standard (Gfm).
+            </p>
+          </div>
+          <div>
+            <h3 className="font-headline font-bold text-base text-on-surface mb-2">
+              Compatibilité universelle
+            </h3>
+            <p>
+              Le fichier .md résultant est lisible par tous les éditeurs modernes : Obsidian, Notion, VS Code, GitHub ou directement par les modèles d&apos;IA (Claude, ChatGPT) pour réinjecter des briefs ou spécifications.
+            </p>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
