@@ -11,6 +11,7 @@ const links = [
   { href: "/solutions", label: "Solutions", match: (path: string) => path.startsWith("/solutions") },
   { href: "/realisations", label: "Réalisations", match: (path: string) => path.startsWith("/realisations") },
   { href: "/insights", label: "Insights", match: (path: string) => path.startsWith("/insights") },
+  { href: "/outils", label: "Outils", match: (path: string) => path.startsWith("/outils") },
   { href: "/studio", label: "Studio", match: (path: string) => path.startsWith("/studio") },
   { href: "/contact", label: "Contact", match: (path: string) => path.startsWith("/contact") },
 ];

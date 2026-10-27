@@ -640,6 +640,14 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     title: "Quatre lectures à 100 sur la page d'accueil",
     description: "Quatre lectures de la page d'accueil : clarté, confiance, action, performance.",
   },
+  "/outils": {
+    title: "ByteForce Free Tools : Outils Gratuits pour Développeurs & Entreprises",
+    description: "Découvrez nos outils gratuits ByteForce : convertisseur Claude Artifact vers Markdown (.md), audit technique SEO instantané et suivi de projet en temps réel.",
+  },
+  "/outils/claude-artifact-to-markdown": {
+    title: "Convertisseur Claude Artifact vers Markdown (.md) Gratuit | ByteForce",
+    description: "Convertissez et téléchargez gratuitement vos artefacts Claude AI en fichiers Markdown (.md) propres. Import par URL ou copier-coller 100% privé sans compte.",
+  },
 };
 
 export function metaFor(path: string, title: string, description: string) {

@@ -22,6 +22,10 @@ export async function GET() {
       loc: `${site.url}/geo-location-sitemap.xml`,
       lastmod: "2026-10-12",
     },
+    {
+      loc: `${site.url}/outils-sitemap.xml`,
+      lastmod: "2026-10-27",
+    },
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>

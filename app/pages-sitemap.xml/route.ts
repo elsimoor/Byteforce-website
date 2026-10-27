@@ -31,7 +31,9 @@ export async function GET() {
         entry.path !== "/insights" &&
         !entry.path.startsWith("/insights/") &&
         entry.path !== "/villes" &&
-        !entry.path.startsWith("/villes/")
+        !entry.path.startsWith("/villes/") &&
+        entry.path !== "/outils" &&
+        !entry.path.startsWith("/outils/")
     )
     .map((entry) => ({
       loc: entry.path === "/" ? `${site.url}/` : `${site.url}${entry.path}`,

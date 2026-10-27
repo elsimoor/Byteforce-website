@@ -74,6 +74,11 @@ export function Footer() {
                 </Link>
               </li>
               <li className="leading-none">
+                <Link href="/outils" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
+                  Outils Gratuits
+                </Link>
+              </li>
+              <li className="leading-none">
                 <Link href="/audit" className="inline-flex min-h-11 items-center text-on-surface-variant transition-colors hover:text-on-surface">
                   Audit gratuit
                 </Link>

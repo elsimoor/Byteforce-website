@@ -38,6 +38,8 @@ const staticPaths = [
   "/confidentialite",
   "/conditions",
   "/plan-du-site",
+  "/outils",
+  "/outils/claude-artifact-to-markdown",
 ];
 
 export function publicEntries() {
