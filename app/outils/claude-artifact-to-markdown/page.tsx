@@ -45,7 +45,7 @@ export default function ClaudeArtifactToMdPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#07090e] text-white">
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -54,11 +54,10 @@ export default function ClaudeArtifactToMdPage() {
         items={[
           { name: "Accueil", path: "/" },
           { name: "Outils Gratuits", path: "/outils" },
-          { name: "Artifact Claude to MD", path: "/outils/claude-artifact-to-markdown" },
+          { name: "Artifact Claude vers MD", path: "/outils/claude-artifact-to-markdown" },
         ]}
       />
-
       <ClaudeArtifactConverter />
-    </main>
+    </article>
   );
 }

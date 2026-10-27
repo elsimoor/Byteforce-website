@@ -2,6 +2,7 @@
 
 import { useState, useId } from "react";
 import Link from "next/link";
+import { ClaudeLogo } from "@/components/ou-en-est-marks";
 
 function htmlToMarkdown(html: string): string {
   if (!html) return "";
@@ -60,84 +61,84 @@ function htmlToMarkdown(html: string): string {
   text = text.replace(/<(?:ul|ol)[^>]*>/gi, "\n");
 
   // Blockquotes
-  text = text.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, q) => {
-    const lines = q.trim().split("\n");
-    return "\n\n" + lines.map((l: string) => `> ${l.trim()}`).join("\n") + "\n\n";
+  text = text.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, content) => {
+    return `\n> ${content.replace(/<[^>]+>/g, "").trim()}\n\n`;
   });
 
   // Tables
-  text = text.replace(/<table[^>]*>([\s\S]*?)<\/table>/gi, (_, tableContent) => {
-    const rows = [...tableContent.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)];
+  text = text.replace(/<table[^>]*>([\s\S]*?)<\/table>/gi, (_, tableHtml) => {
+    const rows = tableHtml.match(/<tr[^>]*>([\s\S]*?)<\/tr>/gi) || [];
     if (!rows.length) return "";
-    
-    let tableMd = "\n\n";
-    rows.forEach((rowMatch, rIndex) => {
-      const cells = [...rowMatch[1].matchAll(/<(?:td|th)[^>]*>([\s\S]*?)<\/(?:td|th)>/gi)].map(c => 
-        c[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
-      );
-      if (cells.length) {
-        tableMd += `| ${cells.join(" | ")} |\n`;
-        if (rIndex === 0) {
-          tableMd += `| ${cells.map(() => "---").join(" | ")} |\n`;
-        }
-      }
+
+    const parsedRows = rows.map((r: string) => {
+      const cells = r.match(/<(?:th|td)[^>]*>([\s\S]*?)<\/(?:th|td)>/gi) || [];
+      return cells.map((c: string) => c.replace(/<[^>]+>/g, "").trim().replace(/\|/g, "-"));
     });
-    return tableMd + "\n";
+
+    if (!parsedRows.length || !parsedRows[0].length) return "";
+
+    const header = `| ${parsedRows[0].join(" | ")} |`;
+    const separator = `| ${parsedRows[0].map(() => "---").join(" | ")} |`;
+    const body = parsedRows
+      .slice(1)
+      .map((row: string[]) => `| ${row.join(" | ")} |`)
+      .join("\n");
+
+    return `\n\n${header}\n${separator}\n${body}\n\n`;
   });
 
-  // Paragraphs & line breaks
-  text = text.replace(/<br\s*\/?>/gi, "\n");
+  // Paragraphs & Breaks
   text = text.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, "\n\n$1\n\n");
-  text = text.replace(/<hr[^>]*>/gi, "\n\n---\n\n");
+  text = text.replace(/<br\s*\/?>/gi, "\n");
+  text = text.replace(/<hr\s*\/?>/gi, "\n\n---\n\n");
 
   // Strip remaining HTML tags
   text = text.replace(/<[^>]+>/g, "");
 
-  // Unescape standard HTML entities
+  // Decode common HTML entities
   text = text
     .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/&amp;/g, "&");
+    .replace(/&mdash;/g, "—")
+    .replace(/&ndash;/g, "–");
 
-  // Clean excessive blank lines
-  text = text.replace(/\n{3,}/g, "\n\n").trim();
-
-  return text;
+  // Clean consecutive blank lines
+  return text.replace(/\n{3,}/g, "\n\n").trim();
 }
 
-const SAMPLE_ARTIFACT = `# Brief SEO — Refonte Stratégique Zepay
+const SAMPLE_ARTIFACT = `# Spécifications Techniques : Cluster SEO & Gestion de Paie
 
-## 1. Objectifs & Enjeux
-- **Cible** : PME de 5 à 150 salariés, cabinets comptables et directions RH en France.
-- **Objectif** : Générer 50 demandes de devis qualifiées par mois dès le trimestre 1.
+## 1. Objectifs Stratégiques
+Ce document définit l'architecture de contenu et les exigences techniques pour positionner la solution sur les requêtes à forte intention d'achat.
 
-## 2. Architecture de contenu (Cluster thématique)
-| Page | Mot-clé cible | Volume | Intention |
-| --- | --- | --- | --- |
-| Pilier : /gestion-paie-en-ligne | gestion paie en ligne | 4 400 | Commerciale |
-| Spoke 1 : /externalisation-paie-pme | externalisation paie pme | 1 900 | Transactionnelle |
-| Spoke 2 : /cout-gestion-paie | cout fiche de paie entreprise | 1 300 | Informationnelle |
-| Spoke 3 : /changer-prestataire-paie | changer gestionnaire paie | 720 | Décision |
+- **Cible prioritaire** : Dirigeants de TPE et PME cherchant à externaliser la gestion sociale.
+- **Conversion visée** : Demande de devis instantané et prise de rendez-vous en ligne.
+- **Délai de mise en œuvre** : Sprint de 3 semaines avec tests de recette continus.
 
-## 3. Spécifications Techniques & Balises
+## 2. Structure des URLs & Mots-Clés
+| Page | Mot-clé Principal | Volume Mensuel | Intention |
+|---|---|---|---|
+| /gestion-paie-en-ligne | gestion paie en ligne | 4 400 | Commerciale |
+| /externalisation-paie-pme | externalisation paie pme | 1 900 | Transactionnelle |
+| /cout-gestion-paie | cout fiche de paie entreprise | 1 300 | Informationnelle |
+| /changer-prestataire-paie | changer gestionnaire paie | 720 | Décision |
+
+## 3. Données Structurées Schema.org
 \`\`\`json
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Zepay Gestion de Paie",
-  "areaServed": "France",
-  "offers": {
-    "@type": "Offer",
-    "price": "11",
-    "priceCurrency": "EUR"
-  }
+  "@type": "SoftwareApplication",
+  "name": "Zepay Logiciel Paie",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All"
 }
 \`\`\`
 
-> **Note importante** : Lier obligatoirement chaque spoke vers la page pilier avec une ancre descriptive exacte.`;
+> **Note importante** : Chaque page fille doit lier la page pilier avec une ancre descriptive exacte.`;
 
 export function ClaudeArtifactConverter() {
   const [inputText, setInputText] = useState("");
@@ -152,7 +153,6 @@ export function ClaudeArtifactConverter() {
   const urlId = useId();
   const filenameId = useId();
 
-  // Convert input into Markdown
   const markdownOutput = htmlToMarkdown(inputText);
 
   const wordsCount = markdownOutput ? markdownOutput.trim().split(/\s+/).filter(Boolean).length : 0;
@@ -179,7 +179,6 @@ export function ClaudeArtifactConverter() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback
       const ta = document.createElement("textarea");
       ta.value = markdownOutput;
       document.body.appendChild(ta);
@@ -201,7 +200,7 @@ export function ClaudeArtifactConverter() {
     try {
       const res = await fetch(`/api/convert/claude-artifact?url=${encodeURIComponent(urlInput.trim())}`);
       const data = await res.json();
-      
+
       if (!res.ok || !data.ok) {
         throw new Error(data.error || "Impossible d'extraire l'artefact depuis cette URL.");
       }
@@ -215,7 +214,7 @@ export function ClaudeArtifactConverter() {
       setUrlError(
         err instanceof Error
           ? err.message
-          : "URL inaccessible. Si l'artefact est privé, copiez son texte directement dans Claude et collez-le ci-dessous."
+          : "URL inaccessible. Si l'artefact est privé, copiez son texte directement dans Claude et collez-le ci-dessus."
       );
     } finally {
       setIsLoadingUrl(false);
@@ -224,292 +223,309 @@ export function ClaudeArtifactConverter() {
 
   const handleLoadSample = () => {
     setInputText(SAMPLE_ARTIFACT);
-    setFilename("brief-seo-zepay");
-  };
-
-  const handleClear = () => {
-    setInputText("");
-    setUrlInput("");
-    setUrlError("");
-    setFilename("claude-artifact");
+    setFilename("specifications-cluster-seo");
   };
 
   return (
-    <div className="w-full space-y-8">
-      {/* 1. Quick Helper & Mode Selection */}
-      <div className="grid gap-6 lg:grid-cols-12">
-        {/* Left: Input Panel */}
-        <div className="flex flex-col gap-5 lg:col-span-6">
-          <div className="flex items-center justify-between border-b border-outline-variant/30 pb-3">
-            <h2 className="text-lg font-bold text-on-surface">1. Coller l&apos;Artefact Claude</h2>
-            <div className="flex items-center gap-2">
+    <>
+      {/* Sticky Sub-Header bar like /ou-en-est-le-projet */}
+      <div className="sticky top-20 z-40 border-b border-outline-variant/40 bg-surface/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-6 py-3 md:px-12">
+          <p className="font-mono text-[11px] font-bold tracking-[0.16em] text-primary uppercase">
+            Outil · Convertisseur Markdown
+          </p>
+          <p className="font-mono text-[11px] text-outline">
+            {wordsCount > 0 ? `${wordsCount} mots · ` : ""}100% sur cet appareil
+          </p>
+        </div>
+      </div>
+
+      {/* Main Form Container */}
+      <div className="mx-auto max-w-3xl px-6 py-12 md:px-12 md:py-16">
+        <p className="text-sm text-outline">
+          <Link href="/outils" className="hover:text-primary transition-colors">
+            ← Outils gratuits
+          </Link>
+        </p>
+
+        <h1 className="display mt-4 max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">
+          Artifact Claude vers MD.
+        </h1>
+
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-on-surface">
+          Convertit le texte, les tableaux ou le HTML d&apos;un artefact Claude en fichier Markdown (.md) propre et prêt à télécharger. Le traitement s&apos;exécute sur votre navigateur : rien n&apos;est enregistré sur un serveur.
+        </p>
+
+        {/* Input Text Box */}
+        <fieldset className="mt-10 border border-line bg-surface-container-lowest p-6">
+          <div className="flex items-center justify-between gap-4">
+            <legend className="font-headline text-xl font-bold tracking-tight text-on-surface">
+              Coller l&apos;artefact Claude
+            </legend>
+            <button
+              type="button"
+              onClick={handleLoadSample}
+              className="font-mono text-[11px] text-primary underline hover:text-primary-container"
+            >
+              Charger un exemple
+            </button>
+          </div>
+
+          <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-outline uppercase">
+            Texte brut, markdown ou HTML copié depuis la fenêtre Claude
+          </p>
+
+          <textarea
+            id={inputId}
+            className="field mt-4 font-mono text-sm leading-relaxed"
+            rows={9}
+            style={{ height: "auto", minHeight: "220px" }}
+            placeholder="Collez ici le texte ou le code de votre artefact Claude..."
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+          />
+
+          {inputText ? (
+            <div className="mt-3 flex items-center justify-between">
+              <span className="font-mono text-xs text-outline">
+                {wordsCount} mots détectés
+              </span>
               <button
                 type="button"
-                onClick={handleLoadSample}
-                className="text-xs font-semibold text-primary hover:underline"
+                onClick={() => setInputText("")}
+                className="font-mono text-xs text-outline hover:text-on-surface"
               >
-                Exemple
-              </button>
-              {inputText && (
-                <>
-                  <span className="text-outline-variant">•</span>
-                  <button
-                    type="button"
-                    onClick={handleClear}
-                    className="text-xs font-semibold text-red-500 hover:underline"
-                  >
-                    Effacer
-                  </button>
-                </>
-              )}
-            </div>
-          </div>
-
-          {/* URL Import bar */}
-          <form onSubmit={handleFetchUrl} className="flex flex-col gap-2">
-            <label htmlFor={urlId} className="text-xs font-mono font-semibold text-on-surface-variant uppercase">
-              Option A : Importer depuis une URL publique Claude
-            </label>
-            <div className="flex gap-2">
-              <input
-                id={urlId}
-                type="url"
-                value={urlInput}
-                onChange={(e) => setUrlInput(e.target.value)}
-                placeholder="https://claude.site/artifacts/... ou lien public"
-                className="h-10 min-w-0 flex-1 rounded-lg border border-outline-variant/60 bg-surface px-3 text-sm text-on-surface outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
-              />
-              <button
-                type="submit"
-                disabled={isLoadingUrl || !urlInput.trim()}
-                className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 font-sans text-xs font-bold text-white transition hover:bg-primary/90 disabled:opacity-50"
-              >
-                {isLoadingUrl ? "Chargement..." : "Importer"}
+                Effacer le texte
               </button>
             </div>
-            {urlError && (
-              <p className="text-xs text-amber-600 bg-amber-50 p-2.5 rounded-lg border border-amber-200/60 leading-relaxed">
-                {urlError}
-              </p>
-            )}
-          </form>
+          ) : null}
+        </fieldset>
 
-          {/* Direct Text / HTML Paste area */}
-          <div className="flex flex-1 flex-col gap-2">
-            <label htmlFor={inputId} className="text-xs font-mono font-semibold text-on-surface-variant uppercase">
-              Option B : Coller directement le texte, HTML ou Code (100% privé)
-            </label>
-            <textarea
-              id={inputId}
-              value={inputText}
-              onChange={(e) => setInputText(e.target.value)}
-              placeholder="Collez ici le contenu copié depuis votre conversation ou artefact Claude.ai (texte, tableaux, HTML, code...)"
-              className="min-h-[380px] w-full flex-1 rounded-xl border border-outline-variant/60 bg-surface p-4 font-mono text-sm leading-relaxed text-on-surface outline-none transition focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-outline"
-            />
-            <p className="text-[11px] text-outline leading-tight">
-              🔒 100% Sécurisé : Vos données sont traitées instantanément dans votre navigateur et ne sont jamais stockées sur nos serveurs.
+        {/* Optional Public URL Import */}
+        <div className="mt-8 border border-line bg-surface-container-lowest p-6">
+          <div className="flex items-center gap-2">
+            <ClaudeLogo />
+            <p className="font-headline text-base font-bold tracking-tight text-on-surface">
+              Ou importer depuis une URL Claude publique
             </p>
           </div>
+          <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+            Si votre artefact est publié avec un lien public. Pour les artefacts privés sous session, utilisez directement le copier-coller ci-dessus.
+          </p>
+
+          <form onSubmit={handleFetchUrl} className="mt-4 flex flex-col sm:flex-row gap-3">
+            <input
+              id={urlId}
+              type="url"
+              className="field flex-1"
+              placeholder="https://claude.ai/artifact/..."
+              value={urlInput}
+              onChange={(e) => setUrlInput(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="btn-line shrink-0 min-h-12"
+              disabled={isLoadingUrl || !urlInput.trim()}
+            >
+              {isLoadingUrl ? "Lecture..." : "Importer"}
+            </button>
+          </form>
+
+          {urlError ? (
+            <p className="mt-3 text-sm text-error" role="alert">
+              {urlError}
+            </p>
+          ) : null}
         </div>
 
-        {/* Right: Output & Download Panel */}
-        <div className="flex flex-col gap-5 lg:col-span-6">
-          <div className="flex items-center justify-between border-b border-outline-variant/30 pb-3">
-            <div className="flex items-center gap-3">
-              <h2 className="text-lg font-bold text-on-surface">2. Résultat Markdown (.md)</h2>
-              <div className="flex rounded-lg bg-surface-variant/40 p-0.5 text-xs font-semibold">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab("preview")}
-                  className={`rounded-md px-2.5 py-1 transition ${
-                    activeTab === "preview"
-                      ? "bg-surface text-primary shadow-xs"
-                      : "text-on-surface-variant hover:text-on-surface"
-                  }`}
-                >
-                  Aperçu
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab("raw")}
-                  className={`rounded-md px-2.5 py-1 transition ${
-                    activeTab === "raw"
-                      ? "bg-surface text-primary shadow-xs"
-                      : "text-on-surface-variant hover:text-on-surface"
-                  }`}
-                >
-                  Code Brut
-                </button>
-              </div>
-            </div>
+        {/* Export and Action Panel */}
+        <div className="mt-8 border border-line bg-surface-container-lowest p-6">
+          <p className="font-headline text-lg font-bold tracking-tight text-on-surface">
+            Téléchargement & Exportation
+          </p>
 
-            {/* Quick Stats */}
-            <div className="hidden sm:flex items-center gap-3 text-xs font-mono text-outline">
-              <span>{wordsCount} mots</span>
-              <span>•</span>
-              <span>{charsCount} car.</span>
-              <span>•</span>
-              <span>{linesCount} lignes</span>
-            </div>
-          </div>
-
-          {/* Filename configuration & actions */}
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-outline-variant/40 bg-surface-container/30 p-3">
-            <div className="flex items-center gap-2">
-              <label htmlFor={filenameId} className="text-xs font-mono text-outline uppercase">
-                Fichier :
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
+            <div>
+              <label htmlFor={filenameId} className="block text-sm text-on-surface-variant mb-1 font-medium">
+                Nom du fichier de sortie
               </label>
               <div className="flex items-center">
                 <input
                   id={filenameId}
                   type="text"
+                  className="field"
                   value={filename}
                   onChange={(e) => setFilename(e.target.value)}
-                  placeholder="nom-du-fichier"
-                  className="h-8 w-44 rounded-md border border-outline-variant/60 bg-surface px-2 text-xs font-mono text-on-surface outline-none focus:border-primary"
+                  placeholder="claude-artifact"
                 />
-                <span className="ml-1 text-xs font-mono text-outline font-bold">.md</span>
+                <span className="ml-2 font-mono text-sm text-outline">.md</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={handleCopy}
-                disabled={!markdownOutput}
-                className="inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-outline-variant/80 bg-surface px-3 font-sans text-xs font-bold text-on-surface transition hover:bg-surface-variant/50 disabled:opacity-40"
-              >
-                {copied ? (
-                  <>
-                    <span className="text-emerald-600">✔</span>
-                    <span className="text-emerald-700">Copié !</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Copier</span>
-                  </>
-                )}
-              </button>
-
+            <div className="flex flex-wrap items-center gap-3">
               <button
                 type="button"
                 onClick={handleDownload}
                 disabled={!markdownOutput}
-                className="inline-flex h-9 items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-4 font-sans text-xs font-bold text-white shadow-sm transition hover:bg-emerald-700 active:scale-95 disabled:opacity-40"
+                className="btn flex-1 min-h-12"
               >
-                <span>Télécharger .md</span>
-                <span aria-hidden="true">↓</span>
+                Télécharger .md
+              </button>
+              <button
+                type="button"
+                onClick={handleCopy}
+                disabled={!markdownOutput}
+                className="btn-line min-h-12"
+              >
+                {copied ? "Copié !" : "Copier"}
               </button>
             </div>
           </div>
 
-          {/* Viewer area */}
-          <div className="min-h-[380px] flex-1 overflow-auto rounded-xl border border-outline-variant/60 bg-surface p-4">
-            {!markdownOutput ? (
-              <div className="flex h-full min-h-[320px] flex-col items-center justify-center text-center text-outline">
-                <svg className="h-10 w-10 text-outline/50 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <p className="text-sm font-semibold text-on-surface-variant">Aucun contenu à convertir</p>
-                <p className="mt-1 text-xs max-w-xs">Collez le texte ou HTML d&apos;un artefact Claude à gauche, ou cliquez sur &quot;Exemple&quot;.</p>
-              </div>
-            ) : activeTab === "raw" ? (
-              <pre className="font-mono text-xs leading-relaxed text-on-surface whitespace-pre-wrap select-all">
-                {markdownOutput}
-              </pre>
+          {copied ? (
+            <p className="mt-3 text-sm text-primary font-mono" role="status">
+              Le Markdown est copié dans le presse-papiers.
+            </p>
+          ) : null}
+        </div>
+
+        {/* Preview Panel */}
+        <div className="mt-8 border border-line bg-surface-container-lowest p-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-3 gap-2">
+            <div className="flex items-center gap-4">
+              <button
+                type="button"
+                onClick={() => setActiveTab("preview")}
+                className={
+                  activeTab === "preview"
+                    ? "border-b-2 border-primary pb-1 font-semibold text-primary text-sm"
+                    : "pb-1 text-sm text-outline hover:text-on-surface"
+                }
+              >
+                Aperçu du contenu
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveTab("raw")}
+                className={
+                  activeTab === "raw"
+                    ? "border-b-2 border-primary pb-1 font-semibold text-primary text-sm"
+                    : "pb-1 text-sm text-outline hover:text-on-surface"
+                }
+              >
+                Code Markdown brut
+              </button>
+            </div>
+
+            <p className="font-mono text-xs text-outline">
+              {wordsCount} mots · {charsCount} car. · {linesCount} lignes
+            </p>
+          </div>
+
+          <div className="mt-4">
+            {markdownOutput ? (
+              activeTab === "preview" ? (
+                <div className="space-y-3 text-on-surface text-sm leading-relaxed">
+                  {markdownOutput.split("\n\n").map((chunk, i) => {
+                    const trimmed = chunk.trim();
+                    if (trimmed.startsWith("# ")) {
+                      return (
+                        <h2 key={i} className="font-headline text-2xl font-bold tracking-tight text-on-surface mt-6 mb-2 border-b border-line pb-2">
+                          {trimmed.replace(/^# /, "")}
+                        </h2>
+                      );
+                    }
+                    if (trimmed.startsWith("## ")) {
+                      return (
+                        <h3 key={i} className="font-headline text-xl font-bold tracking-tight text-on-surface mt-5 mb-2">
+                          {trimmed.replace(/^## /, "")}
+                        </h3>
+                      );
+                    }
+                    if (trimmed.startsWith("### ")) {
+                      return (
+                        <h4 key={i} className="font-headline text-lg font-bold text-on-surface mt-4 mb-1">
+                          {trimmed.replace(/^### /, "")}
+                        </h4>
+                      );
+                    }
+                    if (trimmed.startsWith("```")) {
+                      return (
+                        <pre key={i} className="bg-surface-container p-3 font-mono text-xs rounded border border-line text-on-surface overflow-x-auto my-3">
+                          {trimmed.replace(/```[a-z]*\n?/gi, "").trim()}
+                        </pre>
+                      );
+                    }
+                    if (trimmed.startsWith("> ")) {
+                      return (
+                        <blockquote key={i} className="border-l-2 border-primary pl-3 py-1 my-2 text-on-surface-variant italic">
+                          {trimmed.replace(/^> /, "")}
+                        </blockquote>
+                      );
+                    }
+                    if (trimmed.startsWith("|")) {
+                      const rows = trimmed.split("\n").filter((r) => !r.includes("---"));
+                      return (
+                        <div key={i} className="overflow-x-auto my-3">
+                          <table className="w-full border-collapse border border-line text-xs">
+                            <tbody>
+                              {rows.map((row, rowIdx) => {
+                                const cells = row.split("|").filter((_, idx, arr) => idx !== 0 && idx !== arr.length - 1);
+                                return (
+                                  <tr key={rowIdx} className={rowIdx === 0 ? "bg-surface-container-low font-bold" : ""}>
+                                    {cells.map((cell, cellIdx) => (
+                                      <td key={cellIdx} className="border border-line p-2">
+                                        {cell.trim()}
+                                      </td>
+                                    ))}
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    }
+                    if (trimmed.startsWith("- ")) {
+                      const items = trimmed.split("\n").map((line) => line.replace(/^- /, ""));
+                      return (
+                        <ul key={i} className="list-disc pl-5 space-y-1 text-sm text-on-surface-variant my-2">
+                          {items.map((it, idx) => (
+                            <li key={idx}>{it}</li>
+                          ))}
+                        </ul>
+                      );
+                    }
+                    return (
+                      <p key={i} className="text-sm text-on-surface leading-relaxed">
+                        {trimmed}
+                      </p>
+                    );
+                  })}
+                </div>
+              ) : (
+                <pre className="whitespace-pre-wrap font-mono text-xs text-on-surface bg-surface-container-low p-4 border border-outline-variant/60 max-h-[500px] overflow-auto">
+                  {markdownOutput}
+                </pre>
+              )
             ) : (
-              <div className="prose prose-slate max-w-none text-sm leading-relaxed text-on-surface dark:prose-invert">
-                {/* Clean formatted visual display */}
-                {markdownOutput.split("\n\n").map((block, idx) => {
-                  const trimmed = block.trim();
-                  if (trimmed.startsWith("# ")) {
-                    return <h1 key={idx} className="text-2xl font-bold tracking-tight text-on-surface mt-6 mb-3">{trimmed.replace("# ", "")}</h1>;
-                  }
-                  if (trimmed.startsWith("## ")) {
-                    return <h2 key={idx} className="text-xl font-bold tracking-tight text-on-surface mt-5 mb-2.5">{trimmed.replace("## ", "")}</h2>;
-                  }
-                  if (trimmed.startsWith("### ")) {
-                    return <h3 key={idx} className="text-base font-bold text-on-surface mt-4 mb-2">{trimmed.replace("### ", "")}</h3>;
-                  }
-                  if (trimmed.startsWith("```")) {
-                    return (
-                      <pre key={idx} className="my-3 rounded-lg bg-slate-900 p-3 font-mono text-xs text-slate-100 overflow-x-auto">
-                        <code>{trimmed.replace(/```[a-z]*\n?/gi, "")}</code>
-                      </pre>
-                    );
-                  }
-                  if (trimmed.startsWith("> ")) {
-                    return (
-                      <blockquote key={idx} className="my-3 border-l-3 border-primary bg-primary/5 p-3 rounded-r-lg text-xs italic text-on-surface-variant">
-                        {trimmed.replace(/^>\s*/gm, "")}
-                      </blockquote>
-                    );
-                  }
-                  if (trimmed.startsWith("- ")) {
-                    return (
-                      <ul key={idx} className="my-2 list-disc pl-5 space-y-1 text-xs text-on-surface-variant">
-                        {trimmed.split("\n").map((li, lIdx) => (
-                          <li key={lIdx}>{li.replace(/^- /, "")}</li>
-                        ))}
-                      </ul>
-                    );
-                  }
-                  if (trimmed.startsWith("|")) {
-                    const rows = trimmed.split("\n").filter(r => !r.includes("---"));
-                    return (
-                      <div key={idx} className="my-4 overflow-x-auto">
-                        <table className="w-full text-left text-xs border-collapse border border-outline-variant/40">
-                          <tbody>
-                            {rows.map((row, rIdx) => {
-                              const cells = row.split("|").filter((c, i, a) => i > 0 && i < a.length - 1);
-                              return (
-                                <tr key={rIdx} className={rIdx === 0 ? "bg-surface-variant/40 font-bold" : "border-t border-outline-variant/30"}>
-                                  {cells.map((cell, cIdx) => (
-                                    <td key={cIdx} className="p-2 border-r border-outline-variant/30">{cell.trim()}</td>
-                                  ))}
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      </div>
-                    );
-                  }
-                  return <p key={idx} className="my-2.5 text-xs leading-relaxed text-on-surface-variant">{trimmed}</p>;
-                })}
-              </div>
+              <p className="py-12 text-center text-sm text-outline italic">
+                Collez un texte ci-dessus pour afficher l&apos;aperçu et générer le fichier .md.
+              </p>
             )}
           </div>
         </div>
-      </div>
 
-      {/* 3. Steps Guide */}
-      <div className="rounded-2xl border border-outline-variant/40 bg-surface-container/20 p-6 md:p-8">
-        <h3 className="text-base font-bold text-on-surface">Comment exporter un artefact Claude en fichier Markdown (.md) ?</h3>
-        <div className="mt-4 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-xl border border-outline-variant/30 bg-surface p-4">
-            <span className="font-mono text-xs font-bold text-primary">Étape 1</span>
-            <p className="mt-1 text-sm font-semibold text-on-surface">Copier l&apos;artefact</p>
-            <p className="mt-1 text-xs text-outline leading-relaxed">
-              Dans Claude.ai, ouvrez votre artefact et cliquez sur l&apos;icône &quot;Copy&quot; ou sélectionnez tout le texte (`Ctrl+A` / `Ctrl+C`).
-            </p>
-          </div>
-          <div className="rounded-xl border border-outline-variant/30 bg-surface p-4">
-            <span className="font-mono text-xs font-bold text-primary">Étape 2</span>
-            <p className="mt-1 text-sm font-semibold text-on-surface">Coller dans l&apos;outil</p>
-            <p className="mt-1 text-xs text-outline leading-relaxed">
-              Collez le contenu dans la zone de texte à gauche. L&apos;outil formate automatiquement les titres, tableaux, listes et blocs de code.
-            </p>
-          </div>
-          <div className="rounded-xl border border-outline-variant/30 bg-surface p-4">
-            <span className="font-mono text-xs font-bold text-primary">Étape 3</span>
-            <p className="mt-1 text-sm font-semibold text-on-surface">Télécharger le fichier .md</p>
-            <p className="mt-1 text-xs text-outline leading-relaxed">
-              Personnalisez le nom du fichier si souhaité, puis cliquez sur <strong>Télécharger .md</strong> ou <strong>Copier</strong> pour l&apos;intégrer dans votre projet.
-            </p>
-          </div>
+        {/* Editorial notes matching ou-en-est & audit */}
+        <div className="mt-14 space-y-4 text-sm leading-relaxed text-on-surface-variant">
+          <p>
+            La conversion s&apos;arrête à ce que vous collez. Elle extrait le texte structuré, rétablit les titres, les listes, les tableaux et les blocs de code en syntaxe Markdown standard.
+          </p>
+          <p>
+            Le fichier .md résultant est lisible par tous les éditeurs modernes : Obsidian, Notion, VS Code, GitHub ou directement par les modèles d&apos;IA (Claude, ChatGPT).
+          </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
