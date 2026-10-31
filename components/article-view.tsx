@@ -59,6 +59,7 @@ function Rich({ text }: { text: string }) {
 
 import { ArticleLandingCoutLogiciel } from "@/components/article-landing-cout-logiciel";
 import { ArticleLandingPrixMobile } from "@/components/article-landing-prix-mobile";
+import { ArticleLandingSurMesureVsStandard } from "@/components/article-landing-sur-mesure-vs-standard";
 
 export function ArticleView({ article }: { article: Article }) {
   if (article.slug === "combien-coute-un-logiciel-sur-mesure") {
@@ -66,6 +67,9 @@ export function ArticleView({ article }: { article: Article }) {
   }
   if (article.slug === "prix-application-mobile-maroc") {
     return <ArticleLandingPrixMobile article={article} />;
+  }
+  if (article.slug === "logiciel-sur-mesure-ou-standard") {
+    return <ArticleLandingSurMesureVsStandard article={article} />;
   }
 
   const path = `/insights/${article.slug}`;
