@@ -52,6 +52,7 @@ export const insightCategories: InsightCategory[] = [
       "crm-pme-maroc",
       "crm-ou-excel",
       "remplacer-excel-par-un-crm",
+      "remplacer-excel-par-un-logiciel",
     ],
   },
   {

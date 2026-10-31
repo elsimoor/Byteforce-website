@@ -370,6 +370,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Logiciel standard ou sur mesure au Maroc ? Tableau comparatif, analyse du coût total de possession (TCO) et critères pour faire le bon choix d'entreprise.",
   },
+  "/insights/remplacer-excel-par-un-logiciel": {
+    title: "Remplacer Excel par un Logiciel Sur Mesure : Guide & Méthode PME",
+    description:
+      "Pourquoi et comment remplacer Excel par un logiciel sur mesure au Maroc ? Multi-utilisateurs, droits d'accès, automatisation et plan de migration sans risque.",
+  },
   "/insights/logiciel-metier-sur-mesure": {
     title: "Logiciel métier sur mesure pour PME Maroc | BYTE FORCE",
     description:
