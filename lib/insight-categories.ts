@@ -32,6 +32,7 @@ export const insightCategories: InsightCategory[] = [
       "logiciel-sur-mesure-ou-standard",
       "logiciel-metier-sur-mesure",
       "agence-developpement-logiciel-casablanca",
+      "automatisation-ia-entreprise-maroc",
     ],
   },
   {

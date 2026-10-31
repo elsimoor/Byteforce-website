@@ -385,6 +385,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Les critères indispensables pour choisir votre studio de développement logiciel à Casablanca : références, propriété du code et contrat.",
   },
+  "/insights/automatisation-ia-entreprise-maroc": {
+    title: "Automatisation IA en Entreprise au Maroc : Cas Pratiques & ROI",
+    description:
+      "Comment intégrer l'intelligence artificielle et l'automatisation des processus dans votre entreprise au Maroc ? Cas d'usage réels, OCR, WhatsApp et sécurité.",
+  },
   "/insights/creation-crm-sur-mesure": {
     title: "Créer un CRM sur mesure au Maroc : Guide | BYTE FORCE",
     description:
