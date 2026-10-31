@@ -29,6 +29,7 @@ export const insightCategories: InsightCategory[] = [
       "delai-logiciel-sur-mesure",
       "quand-creer-un-logiciel-sur-mesure",
       "logiciel-personnalise-ou-standard",
+      "logiciel-sur-mesure-ou-standard",
       "logiciel-metier-sur-mesure",
       "agence-developpement-logiciel-casablanca",
     ],

@@ -365,6 +365,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Comparatif logiciel sur mesure vs progiciel du marché : coût total de possession sur 3 ans, flexibilité et retour sur investissement.",
   },
+  "/insights/logiciel-sur-mesure-ou-standard": {
+    title: "Logiciel Standard ou Sur Mesure au Maroc : Comparatif & Choix PME",
+    description:
+      "Logiciel standard ou sur mesure au Maroc ? Tableau comparatif, analyse du coût total de possession (TCO) et critères pour faire le bon choix d'entreprise.",
+  },
   "/insights/logiciel-metier-sur-mesure": {
     title: "Logiciel métier sur mesure pour PME Maroc | BYTE FORCE",
     description:
