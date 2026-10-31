@@ -8,11 +8,11 @@ export async function GET() {
   const sitemaps = [
     {
       loc: `${site.url}/pages-sitemap.xml`,
-      lastmod: "2026-10-13",
+      lastmod: "2026-10-31",
     },
     {
       loc: `${site.url}/insights-sitemap.xml`,
-      lastmod: "2026-10-12",
+      lastmod: "2026-10-31",
     },
     {
       loc: `${site.url}/villes-sitemap.xml`,
