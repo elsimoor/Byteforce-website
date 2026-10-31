@@ -58,10 +58,14 @@ function Rich({ text }: { text: string }) {
 }
 
 import { ArticleLandingCoutLogiciel } from "@/components/article-landing-cout-logiciel";
+import { ArticleLandingPrixMobile } from "@/components/article-landing-prix-mobile";
 
 export function ArticleView({ article }: { article: Article }) {
   if (article.slug === "combien-coute-un-logiciel-sur-mesure") {
     return <ArticleLandingCoutLogiciel article={article} />;
+  }
+  if (article.slug === "prix-application-mobile-maroc") {
+    return <ArticleLandingPrixMobile article={article} />;
   }
 
   const path = `/insights/${article.slug}`;
