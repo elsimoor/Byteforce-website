@@ -66,9 +66,9 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Studio de développement logiciel au Technopark de Casablanca. CRM, ERP, SaaS et plateformes web sur mesure. Obtenez un devis gratuit en 24h.",
   },
   "/developpement-saas-maroc": {
-    title: "Développement SaaS au Maroc | BYTE FORCE",
+    title: "Développement SaaS Maroc : Création de Plateforme Logiciel Cloud",
     description:
-      "Lancez votre logiciel SaaS au Maroc : MVP livré en 6 à 10 semaines, architecture multi-tenant et abonnements CMI/Stripe. Devis gratuit en 24h.",
+      "Développement SaaS au Maroc et MVP à Casablanca : architecture multi-tenant, gestion des abonnements CMI/Stripe et code 100% cédé. Devis sous 24h.",
   },
   "/developpement-application-mobile-maroc": {
     title: "Application mobile Maroc : iOS & Android | BYTE FORCE",
