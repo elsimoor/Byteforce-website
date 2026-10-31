@@ -15,6 +15,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "CRM personnalisé pour entreprises au Maroc : pipeline, relances WhatsApp et devis en dirhams. 0 abonnement par utilisateur. Devis gratuit en 24h.",
   },
+  "/crm/logiciel-crm-personnalise": {
+    title: "CRM Sur Mesure Maroc : Logiciel CRM Personnalisé pour PME",
+    description:
+      "Développement de CRM sur mesure au Maroc et à Casablanca : pipeline commercial, relances WhatsApp, gestion client et 0 abonnement par utilisateur. Devis sous 24h.",
+  },
   "/developpement-logiciel-sur-mesure-maroc/crm": {
     title: "Logiciel CRM sur mesure au Maroc | BYTE FORCE",
     description:
