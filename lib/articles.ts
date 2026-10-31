@@ -3056,17 +3056,29 @@ export const articles: Article[] = [
         ],
       },
       {
-        heading: "Quels sont les facteurs qui font varier le devis ?",
+        heading: "Quels sont les facteurs techniques qui font varier le devis d'une application ?",
         paragraphs: [
-          "Deux stores (iOS et Android) vs un seul : grâce à React Native et Expo, nous développons une base de code unique fonctionnant nativement sur iPhone et Android, ce qui vous fait économiser jusqu'à 40% par rapport à deux développements natifs distincts.",
-          "Frais des stores : Google Play facture 25 $ (frais unique à vie) et Apple Developer facture 99 $ / an. Ces comptes doivent être ouverts au nom officiel de votre entreprise.",
-          "Propriété intellectuelle : chez Byte Force, le code source complet vous est cédé à 100% à la livraison. Vous n'êtes pas captif d'un abonnement mensuel obligatoire.",
+          "Le coût d'un développement d'application mobile dépend de sept composantes fondamentales :",
+          "1. Développement Cross-platform (React Native) vs Deux développements natifs : Grâce à React Native et Expo, nous concevons une base de code unique fonctionnant nativement sur iPhone et Android, réduisant l'investissement initial de près de 40% tout en garantissant des performances 60 FPS.",
+          "2. Complexité du backend et des APIs : Une application mobile nécessite presque toujours un serveur back-end (Node.js, PostgreSQL) pour gérer la base de données, l'authentification et les règles métier.",
+          "3. Design UX/UI et ergonomie : Prototypage haute fidélité dans Figma, respect des guidelines Apple (HIG) et Google (Material Design) pour une adoption instantanée sans manuel.",
+          "4. Intégrations matérielles et tierces : Géolocalisation GPS en temps réel, notifications push ciblées, passerelles de paiement CMI en Dirhams ou interfaçage avec votre ERP/CRM.",
+          "5. Maintenance applicative & mises à jour des stores : Prise en compte des évolutions annuelles d'iOS et d'Android, surveillance de la disponibilité et renouvellement des comptes développeurs (Apple 99 $/an, Google 25 $ à vie).",
         ],
       },
       {
-        heading: "Comment obtenir un chiffrage précis sous 24h ?",
+        heading: "Méthodologie d'estimation et préparation de votre budget mobile",
         paragraphs: [
-          "Vous avez une idée ou un cahier des charges ? Envoyez-nous la liste des fonctionnalités souhaitées. Un ingénieur logiciel vous répond sous 24h ouvrées avec une estimation budgétaire détaillée et un planning de livraison réaliste.",
+          "Pour chiffrer avec précision votre projet sans risquer de dépassement de budget :",
+          "• Définissez votre MVP en isolant le parcours utilisateur principal avant d'ajouter des options complexes.",
+          "• Préparez la liste des données que l'application doit lire et modifier sur le serveur.",
+          "• Prévoyez un budget de maintenance de 15% à 20% par an pour absorber les nouvelles versions des systèmes d'exploitation mobiles.",
+        ],
+      },
+      {
+        heading: "Comment obtenir un chiffrage précis sous 24h ouvrées ?",
+        paragraphs: [
+          "Vous avez une idée ou un cahier des charges d'application mobile ? Envoyez-nous la liste de vos fonctionnalités souhaitées. Un ingénieur logiciel vous répond sous 24h ouvrées avec une estimation budgétaire détaillée et un planning de livraison réaliste.",
           "Rendez-vous possible à notre bureau au Technopark de Casablanca ou échange en visio. [[/contact|Demander un devis gratuit]] ou contactez-nous par WhatsApp au +212 666 650 696.",
         ],
       },
@@ -3074,7 +3086,7 @@ export const articles: Article[] = [
     links: [
       { href: "/contact", label: "Demander un devis gratuit" },
       { href: "/developpement-application-mobile-maroc", label: "Développement application mobile Maroc" },
-      { href: "/developpement-logiciel-casablanca", label: "Studio mobile Casablanca" },
+      { href: "/developpement-application-mobile-casablanca", label: "Agence application mobile Casablanca" },
     ],
     en: {
       title: "What a mobile app quote includes in Morocco",
