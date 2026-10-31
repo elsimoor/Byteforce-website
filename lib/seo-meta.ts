@@ -85,6 +85,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Développement d'applications mobiles iOS et Android au Maroc. Design UX soigné, publication stores et code cédé. Devis gratuit en 24h garanti.",
   },
+  "/developpement-application-mobile-casablanca": {
+    title: "Développement Application Mobile Casablanca : iOS, Android & React Native",
+    description:
+      "Agence de développement d'applications mobiles à Casablanca (Technopark) : iOS, Android et React Native. Applications métier & MVP. Devis gratuit sous 24h.",
+  },
   "/application-web-sur-mesure-maroc": {
     title: "Application web sur mesure Maroc | BYTE FORCE",
     description:

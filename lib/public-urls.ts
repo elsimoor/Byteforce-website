@@ -36,6 +36,7 @@ const staticPaths = [
   "/developpement-erp-maroc",
   "/agence-wordpress-maroc",
   "/developpement-application-mobile-maroc",
+  "/developpement-application-mobile-casablanca",
   "/integration-ia-automatisation-entreprise-maroc",
   "/mentions-legales",
   "/confidentialite",
