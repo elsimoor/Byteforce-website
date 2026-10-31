@@ -24,6 +24,7 @@ export const insightCategories: InsightCategory[] = [
       "avantages-logiciel-sur-mesure",
       "prix-logiciel-sur-mesure-maroc",
       "cout-logiciel-sur-mesure-maroc",
+      "combien-coute-un-logiciel-sur-mesure",
       "prix-seo-maroc",
       "delai-logiciel-sur-mesure",
       "quand-creer-un-logiciel-sur-mesure",

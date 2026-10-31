@@ -345,6 +345,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Quel est le coût d'un logiciel sur mesure au Maroc ? Prix réels : module dès 25 000 MAD, CRM/ERP 45 000 à 95 000 MAD. Devis gratuit sous 24h.",
   },
+  "/insights/combien-coute-un-logiciel-sur-mesure": {
+    title: "Coût Développement Logiciel Sur Mesure : Facteurs de Prix & Budget",
+    description:
+      "Combien coûte un logiciel sur mesure au Maroc ? Facteurs influençant le prix, scénarios de projets (dès 25 000 MAD) et guide pour préparer votre budget.",
+  },
   "/insights/delai-logiciel-sur-mesure": {
     title: "Délai de développement logiciel au Maroc | BYTE FORCE",
     description:
