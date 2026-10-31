@@ -29,6 +29,7 @@ const staticPaths = [
   "/ai/faq",
   "/solutions",
   "/developpement-logiciel-sur-mesure-maroc",
+  "/developpement-logiciel-sur-mesure-casablanca",
   "/crm/logiciel-crm-personnalise",
   "/crm-sur-mesure-maroc",
   "/developpement-saas-maroc",

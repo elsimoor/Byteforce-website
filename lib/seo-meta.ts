@@ -65,6 +65,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Studio de développement logiciel au Technopark de Casablanca. CRM, ERP, SaaS et plateformes web sur mesure. Obtenez un devis gratuit en 24h.",
   },
+  "/developpement-logiciel-sur-mesure-casablanca": {
+    title: "Développement Logiciel Sur Mesure Casablanca : Agence & Studio IT",
+    description:
+      "Agence de développement logiciel sur mesure à Casablanca (Technopark) : ERP, CRM, logiciels métier et remplacement Excel. Code cédé à 100%. Devis sous 24h.",
+  },
   "/developpement-saas-maroc": {
     title: "Développement SaaS Maroc : Création de Plateforme Logiciel Cloud",
     description:
