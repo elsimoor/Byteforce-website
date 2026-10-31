@@ -35,6 +35,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Un CRM conçu à 100% pour vos flux commerciaux au Maroc : rôles, alertes et tableaux de bord sur mesure. Code cédé. Devis gratuit en 24h garanti.",
   },
+  "/developpement-erp-maroc": {
+    title: "Développement ERP Maroc : Logiciel ERP Sur Mesure pour PME",
+    description:
+      "Développement d'ERP sur mesure au Maroc : gestion des stocks, achats, facturation DGI et production. Zéro abonnement par licence. Devis gratuit sous 24h.",
+  },
   "/developpement-logiciel-sur-mesure-maroc/erp": {
     title: "ERP sur mesure Maroc pour PME | BYTE FORCE",
     description:
