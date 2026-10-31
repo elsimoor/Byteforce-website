@@ -44,6 +44,7 @@ export const insightCategories: InsightCategory[] = [
     slugs: [
       "creation-crm-sur-mesure",
       "crm-personnalise-ou-salesforce",
+      "crm-sur-mesure-ou-crm-standard",
       "crm-personnalise-maroc",
       "cout-crm-personnalise",
       "logiciel-gestion-clients-sur-mesure",

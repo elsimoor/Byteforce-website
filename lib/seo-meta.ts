@@ -395,6 +395,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Salesforce ou CRM sur mesure pour une entreprise au Maroc ? Comparatif coût, adoption commerciale et conformité locale. Devis gratuit en 24h.",
   },
+  "/insights/crm-sur-mesure-ou-crm-standard": {
+    title: "CRM Sur Mesure ou CRM Standard : Comparatif & Guide PME Maroc",
+    description:
+      "CRM sur mesure ou CRM standard au Maroc ? Comparatif, limites de HubSpot/Salesforce, WhatsApp, devis en Dirhams et rentabilité pour vos équipes commerciales.",
+  },
   "/insights/crm-personnalise-maroc": {
     title: "CRM personnalisé pour entreprise au Maroc | BYTE FORCE",
     description:
