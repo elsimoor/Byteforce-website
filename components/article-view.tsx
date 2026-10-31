@@ -62,6 +62,7 @@ import { ArticleLandingPrixMobile } from "@/components/article-landing-prix-mobi
 import { ArticleLandingSurMesureVsStandard } from "@/components/article-landing-sur-mesure-vs-standard";
 import { ArticleLandingRemplacerExcel } from "@/components/article-landing-remplacer-excel";
 import { ArticleLandingCreerSaas } from "@/components/article-landing-creer-saas";
+import { ArticleLandingCrmVsStandard } from "@/components/article-landing-crm-vs-standard";
 
 export function ArticleView({ article }: { article: Article }) {
   if (article.slug === "combien-coute-un-logiciel-sur-mesure") {
@@ -78,6 +79,9 @@ export function ArticleView({ article }: { article: Article }) {
   }
   if (article.slug === "comment-creer-un-saas-au-maroc") {
     return <ArticleLandingCreerSaas article={article} />;
+  }
+  if (article.slug === "crm-sur-mesure-ou-crm-standard") {
+    return <ArticleLandingCrmVsStandard article={article} />;
   }
 
   const path = `/insights/${article.slug}`;
