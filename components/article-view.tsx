@@ -57,7 +57,13 @@ function Rich({ text }: { text: string }) {
   );
 }
 
+import { ArticleLandingCoutLogiciel } from "@/components/article-landing-cout-logiciel";
+
 export function ArticleView({ article }: { article: Article }) {
+  if (article.slug === "combien-coute-un-logiciel-sur-mesure") {
+    return <ArticleLandingCoutLogiciel article={article} />;
+  }
+
   const path = `/insights/${article.slug}`;
   const related = relatedArticles(article);
   const category = categoryOf(article.slug);
