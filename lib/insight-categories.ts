@@ -65,6 +65,7 @@ export const insightCategories: InsightCategory[] = [
     slugs: [
       "creation-saas-maroc",
       "comment-creer-un-saas",
+      "comment-creer-un-saas-au-maroc",
       "developpement-saas-sur-mesure",
       "developpement-application-saas",
       "saas-sur-mesure-ou-standard",

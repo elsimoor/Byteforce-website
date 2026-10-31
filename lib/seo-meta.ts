@@ -498,6 +498,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     title: "MVP SaaS au Maroc · Première version utile",
     description: "Première version d'un SaaS au Maroc. Ce qui doit déjà isoler les clients, et ce qui peut attendre.",
   },
+  "/insights/comment-creer-un-saas-au-maroc": {
+    title: "Lancer un SaaS au Maroc : Guide Complet & Architecture MVP",
+    description:
+      "Comment lancer un SaaS au Maroc ? De la validation de l'idée au MVP multi-tenant, paiements CMI/Stripe et passage à l'échelle. Guide pratique ByteForce.",
+  },
   "/insights/cout-creation-saas": {
     title: "Combien coûte la création d'un SaaS · 2026",
     description: "Coût de création d'un SaaS : pas de grille publique. La note suit le geste et l'isolation des clients.",
