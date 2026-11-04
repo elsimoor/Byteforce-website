@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LeadForm } from "@/components/lead-form";
+import { ReferencementSeoPage } from "@/components/referencement-seo/referencement-seo-page";
 import { PluginBreak, PluginFlow, PluginShelf } from "@/components/wordpress-plugin-lab";
 import { getService, projectsForService, services } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
@@ -20,11 +21,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   const path = service.href ?? `/services/${service.slug}`;
   const meta = metaFor(path, `${service.title} · Byte Force`, service.summary);
-  return {
+  const metadata: Metadata = {
     title: { absolute: meta.title },
     description: meta.description,
     alternates: { canonical: path },
     openGraph: openGraph(path, meta.title, meta.description),
+  };
+  if (slug !== "referencement-seo") return metadata;
+  return {
+    ...metadata,
+    alternates: {
+      canonical: path,
+      languages: {
+        "fr-MA": path,
+        fr: path,
+      },
+    },
+    openGraph: { ...openGraph(path, meta.title, meta.description), locale: "fr_MA" },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: ["/opengraph-image"],
+    },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -32,6 +52,7 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+  if (service.slug === "referencement-seo") return <ReferencementSeoPage />;
   const related = projectsForService(service.slug);
   const pluginsPage = service.slug === "plugins-wordpress";
   const path = `/services/${service.slug}`;

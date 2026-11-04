@@ -1,3 +1,5 @@
+import { referencementDescription, referencementTitle } from "./referencement-seo";
+
 /** Absolute titles and descriptions. H1s stay on the page data. */
 export const seoMeta: Record<string, { title: string; description: string }> = {
   "/": {
@@ -131,9 +133,8 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Contrat de maintenance préventive et corrective au Maroc : mises à jour de sécurité, corrections de bugs et support réactif. Devis sous 24h.",
   },
   "/services/referencement-seo": {
-    title: "Agence SEO Casablanca & Maroc : Référencement | BYTE FORCE",
-    description:
-      "Positionnez votre entreprise en 1ère page Google au Maroc. Audit SEO technique, netlinking et optimisation du trafic. Devis gratuit sous 24h.",
+    title: referencementTitle,
+    description: referencementDescription,
   },
   "/services/plugins-wordpress": {
     title: "Développement plugin WordPress Maroc | BYTE FORCE",

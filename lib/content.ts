@@ -1,3 +1,5 @@
+import { referencementFaqs } from "./referencement-seo";
+
 export type Service = {
   slug: string;
   title: string;
@@ -83,7 +85,7 @@ export const services: Service[] = [
     ],
     links: [
       { href: "/contact", label: "Parler d'un site" },
-      { href: "/services/referencement-seo", label: "Référencement naturel" },
+      { href: "/services/referencement-seo", label: "Agence SEO à Casablanca" },
       { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },
       { href: "/application-web-sur-mesure-maroc", label: "Application web" },
       { href: "/realisations", label: "Travaux publiés" },
@@ -131,19 +133,18 @@ export const services: Service[] = [
     slug: "referencement-seo",
     menu: "SEO",
     summary:
-      "Pages construites pour les recherches qui précèdent une demande: service, ville, intention d'achat.",
+      "Référencement web à Casablanca et au Maroc : audit, technique, contenu, liens, SEO local et visibilité dans les réponses IA.",
     problem:
-      "Être en ligne ne suffit pas si Google envoie le prospect chez un concurrent. On vise les requêtes commerciales, une URL par sujet, sans pages qui se font concurrence.",
+      "Google envoie la demande ailleurs quand la page ne répond pas à la requête. On publie une URL par intention, puis on suit les clics dans Search Console.",
     includes: [
-      "Carte de mots-clés et pages cibles",
-      "Titres, meta et contenu de la page",
-      "Maillage interne vers le formulaire",
-      "Suivi des pages publiées et des trous restants",
+      "Audit SEO et lecture de Search Console",
+      "SEO technique, contenu et netlinking",
+      "SEO local et fiche Google Business Profile",
+      "Suivi des réponses IA quand la propriété les affiche",
     ],
-    audience:
-      "Entreprises qui veulent des demandes depuis Google, au Maroc et sur les marchés déjà couverts.",
-    primaryKeyword: "référencement naturel Casablanca",
-    title: "Référencement naturel à Casablanca",
+    audience: "Entreprises au Maroc qui veulent des demandes depuis Google, avec un interlocuteur à Casablanca.",
+    primaryKeyword: "agence SEO Casablanca",
+    title: "Agence SEO à Casablanca",
     sections: [
       {
         heading: "Une URL par intention d'achat",
@@ -160,24 +161,12 @@ export const services: Service[] = [
         ],
       },
     ],
-    faqs: [
-      {
-        q: "Garantissez-vous la première place sur Google ?",
-        a: "Non. Personne ne peut garantir une position. On peut garantir une page claire, indexable, et dédiée à une seule intention.",
-      },
-      {
-        q: "Faut-il déjà un site ?",
-        a: "Un site existant peut être repris. S'il n'y a pas encore de pages utiles au devis, la création du site vient avant le référencement.",
-      },
-      {
-        q: "Comment démarrer ?",
-        a: "Le formulaire demande le nom, l'email et le projet. Réponse sous un jour ouvré, au +212 666 650 696 ou par email.",
-      },
-    ],
+    faqs: referencementFaqs,
     links: [
       { href: "/contact", label: "Parler du référencement" },
       { href: "/services/creation-site-web", label: "Création de site web" },
       { href: "/developpement-logiciel-sur-mesure-maroc", label: "Logiciel sur mesure" },
+      { href: "/developpement-application-mobile-maroc", label: "Application mobile" },
     ],
   },
   {
