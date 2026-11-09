@@ -579,8 +579,11 @@ export const projects: Project[] = [
     result: "Le site est en ligne. Les mentions indiquent Aguesseau Partners RH, 10 rue Louis Vicat, 75015 Paris. L'année du catalogue est 2026.",
     shot: "/work/zepay.png",
     pages: [
+      { label: "Services", href: "https://zepay.fr/services/externalisation-paie" },
       { label: "Tarifs", href: "https://zepay.fr/tarifs" },
-      { label: "Fonctionnement", href: "https://zepay.fr/fonctionnement" },
+      { label: "Comment ça marche", href: "https://zepay.fr/fonctionnement" },
+      { label: "Contact", href: "https://zepay.fr/contact" },
+      { label: "Bulletins", href: "https://zepay.fr/services/bulletins-de-paie" },
     ],
   },
   {
