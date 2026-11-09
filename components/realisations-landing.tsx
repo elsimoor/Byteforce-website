@@ -134,7 +134,7 @@ export function RealisationsLanding({ projects }: { projects: Project[] }) {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/realisations/votre-projet"
               className="flex min-h-[420px] min-w-0 flex-col justify-between gap-5 rounded-[22px] border-2 border-dashed border-[#8E94BE] p-9 no-underline transition duration-200 hover:-translate-y-2 hover:no-underline hover:shadow-[0_24px_48px_rgba(7,10,43,0.08)]"
             >
               <p className="font-mono text-xs tracking-[0.1em] text-[#555B80] uppercase">Prochaine fiche</p>

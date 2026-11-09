@@ -191,6 +191,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description:
       "Découvrez nos projets logiciels, applications et CRM déjà déployés au Maroc et à l'international. Code audité. Demandez votre devis en 24h.",
   },
+  "/realisations/votre-projet": {
+    title: "Votre projet · Devis sous 24 h | BYTE FORCE",
+    description:
+      "Décrivez le besoin, le projet, puis le contact. Site web, application mobile, plateforme, application Windows ou logiciel. Devis sous 24 h depuis Casablanca.",
+  },
   "/realisations/coco-inbox": {
     title: "Coco Inbox · Email temporaire · Montréal",
     description: "Coco Inbox : email temporaire, fichiers chiffrés et notes, pour un produit publié à Montréal.",
