@@ -1,5 +1,8 @@
 /** Public facts only: name, year, city, live URL, and the pages already listed on the fiche. */
 export const projectTitles: Record<string, string> = {
+  zepay: "Zepay : site de paie à Paris",
+  qalq: "Qalq : expertise comptable en ligne, à Paris",
+  aguesseau: "Aguesseau Partners : site du cabinet à Paris",
   "escapade-florale": "Escapade Florale : boutique florale à Lille",
   "nu-lille": "Nu Lille : site gastronomique à Lille",
   "meubles-de-septentrion": "Meubles de Septentrion : boutique de mobilier à Marcq-en-Barœul",
@@ -21,6 +24,24 @@ export const projectTitles: Record<string, string> = {
 };
 
 export const projectNotes: Record<string, string[]> = {
+  zepay: [
+    "Zepay est le site zepay.fr, publié en 2026. Les mentions légales indiquent que Zepay est une marque d'Aguesseau Partners RH, société dont le siège est 10 rue Louis Vicat, 75015 Paris. Cette fiche place donc le projet à Paris.",
+    "Le site présente la paie pour les TPE et PME : bulletins, déclarations, prise de rendez-vous. Deux pages intérieures sont liées : les tarifs, et le fonctionnement. On ne recopie pas ici le prix affiché sur le site, ni un nombre de bulletins. Ces éléments restent sur zepay.fr.",
+    "Le catalogue classe le projet en vitrine. Le service lié est la création de site. Le logiciel de paie nommé dans les conditions du site n'est pas présenté comme un développement Byte Force. La fiche s'arrête au site public.",
+    "Une entreprise qui veut le même type de page décrit ce que le visiteur doit comprendre avant d'écrire, et quelle page intérieure porte le prix ou le rendez-vous. On cadre cela depuis Casablanca. Il n'y a pas de bureau à Paris.",
+  ],
+  qalq: [
+    "Qalq est le site qalq.fr, publié en 2026. La page d'accueil dit que Qalq est la marque en ligne d'Aguesseau Partners. Le cabinet est à Paris, 10 rue Louis Vicat. Cette fiche reprend cette ville. Elle n'invente pas une seconde adresse.",
+    "Deux pages sont liées : le simulateur de rémunération du dirigeant, et les mentions légales. Le site a aussi des pages par forme de société. On ne publie pas ici un tarif, un délai de bilan, ni un nombre de dossiers. Ces phrases, si elles sont publiques, sont sur qalq.fr.",
+    "Le projet est une vitrine. Le service lié est la création de site. On ne le décrit pas comme le logiciel de comptabilité : la page du site nomme l'outil sur lequel le cabinet tient les comptes. Ce nom reste le sien.",
+    "Pour un site du même ordre, le message dit qui signe, ce que le visiteur choisit avant d'écrire, et quelle page doit rester à jour. Le bureau de Byte Force est à Casablanca. La réponse part sous un jour ouvré.",
+  ],
+  aguesseau: [
+    "Aguesseau Partners est le site aguesseau.co, publié en 2026. Le pied de page indique 10, rue Louis Vicat, 75015 Paris, et l'adresse bonjour@aguesseau.co. La version française est servie sous /fr. Le catalogue utilise l'adresse racine donnée pour le projet.",
+    "Deux pages sont liées : le cabinet, et AP Intelligence. Le site sépare aussi le conseil, l'audit et les services financiers. On ne publie pas un nombre de missions, un honoraire, ni un délai de rappel comme un résultat du studio. Le site porte ses propres phrases.",
+    "Le catalogue classe le projet en vitrine. Le service lié est la création de site. Zepay et Qalq sont deux autres sites du même groupe, avec leurs propres fiches. On ne les fusionne pas dans celle-ci.",
+    "Un cabinet qui veut la même lecture décrit ses univers, et la page qui reçoit le rendez-vous. On travaille depuis Casablanca. Il n'y a pas de bureau à Paris, ni de société française à annoncer.",
+  ],
   "escapade-florale": [
     "Escapade Florale est une boutique en ligne de compositions florales, publiée en 2024 à Lille. Le site public est escapadeflorale.enconstru.fr. Depuis cette fiche, deux adresses sont ouvertes : la boutique, et une page produit, le bouquet cœur à cœur.",
     "Le travail livré est un site de vente, classé e-commerce. Un visiteur arrive sur le catalogue, ouvre un produit, et peut passer commande sur le site du fleuriste. Byte Force ne publie pas ici le nombre de commandes, le panier moyen, ni le trafic. Ces chiffres ne sont pas dans le dossier.",

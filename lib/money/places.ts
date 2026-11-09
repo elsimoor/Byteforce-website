@@ -133,7 +133,7 @@ export const placePages: MoneyPage[] = [
     keyword: "développement logiciel France",
     title: "Développement logiciel pour entreprises en France · Byte Force",
     description:
-      "Studio logiciel à Casablanca pour entreprises françaises. Même fuseau horaire, livrables en français. Lille, Nord, Roubaix.",
+      "Studio logiciel à Casablanca pour entreprises françaises. Même fuseau horaire, livrables en français. Paris, Lille, Nord, Roubaix.",
     h1: "Développement logiciel pour une entreprise en France",
     cta: "Décrire le projet, à distance",
     schema: "service",
@@ -152,6 +152,12 @@ export const placePages: MoneyPage[] = [
           "Le fuseau horaire se recouvre. Une question posée le matin en France a une réponse dans la journée, du lundi au vendredi. Le français est la langue de travail du studio, pas une langue ajoutée pour le marché.",
           "Le coût se discute sur un périmètre écrit, pas sur une grille « moins cher de tant ». Byte Force ne publie pas de pourcentage. Deux projets français n'ont pas le même nombre de rôles. Le premier échange dure trente minutes et sert aussi à dire si un outil du marché suffit.",
           "Un déplacement en France est possible quand le métier ne se comprend pas en vidéo. Il se compte en quelques heures de vol. Il n'est pas le mode de travail. Le mode courant est la visio, avec un partage d'écran de la personne qui fait le geste.",
+        ],
+      },
+      {
+        h: "Paris",
+        p: [
+          "Paris a trois sites publiés en 2026 : Zepay, Qalq et Aguesseau Partners. Le cabinet indique le 10, rue Louis Vicat, 75015. Ce n'est pas une adresse de Byte Force. [[/villes/paris|Développement logiciel à Paris]].",
         ],
       },
       {
@@ -187,7 +193,7 @@ export const placePages: MoneyPage[] = [
       {
         h: "Réalisations",
         p: [
-          "[[/realisations/ambulances-valcq|Ambulances Valcq]] à Roubaix. [[/realisations/nu-lille|Nu Lille]] et [[/realisations/escapade-florale|Escapade Florale]] à Lille. [[/realisations/les-hauts-paysages|Les Hauts Paysages]] dans le Nord. [[/realisations/meubles-de-septentrion|Meubles de Septentrion]] à Marcq-en-Barœul. Chacune a son adresse publique. Aucune n'est un témoignage chiffré.",
+          "[[/realisations/zepay|Zepay]], [[/realisations/qalq|Qalq]] et [[/realisations/aguesseau|Aguesseau Partners]] à Paris. [[/realisations/ambulances-valcq|Ambulances Valcq]] à Roubaix. [[/realisations/nu-lille|Nu Lille]] et [[/realisations/escapade-florale|Escapade Florale]] à Lille. [[/realisations/les-hauts-paysages|Les Hauts Paysages]] dans le Nord. [[/realisations/meubles-de-septentrion|Meubles de Septentrion]] à Marcq-en-Barœul. Chacune a son adresse publique. Aucune n'est un témoignage chiffré.",
         ],
       },
       {
@@ -204,6 +210,9 @@ export const placePages: MoneyPage[] = [
       { q: "La maintenance après livraison ?", a: "Oui, à distance : correctifs du périmètre convenu, puis suivi ou devis. Le fuseau permet un échange dans la journée." },
     ],
     proof: [
+      { href: "/realisations/zepay", title: "Zepay", note: "Site de paie, Paris, 2026." },
+      { href: "/realisations/qalq", title: "Qalq", note: "Site d'expertise comptable, Paris, 2026." },
+      { href: "/realisations/aguesseau", title: "Aguesseau Partners", note: "Site du cabinet, Paris 15e, 2026." },
       { href: "/realisations/ambulances-valcq", title: "Ambulances Valcq", note: "Site de transport sanitaire, Roubaix, 2022." },
       { href: "/realisations/nu-lille", title: "Nu Lille", note: "Site gastronomique, Lille, 2023." },
       { href: "/realisations/escapade-florale", title: "Escapade Florale", note: "Boutique florale, Lille, 2024." },
@@ -211,6 +220,7 @@ export const placePages: MoneyPage[] = [
       { href: "/realisations/meubles-de-septentrion", title: "Meubles de Septentrion", note: "Boutique de mobilier, Marcq-en-Barœul, 2023." },
     ],
     links: [
+      { href: "/villes/paris", label: "Paris" },
       { href: "/villes/lille", label: "Lille" },
       { href: "/villes/roubaix", label: "Roubaix" },
       { href: "/villes/nord", label: "Nord" },

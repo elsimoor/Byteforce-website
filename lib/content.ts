@@ -65,7 +65,7 @@ export const services: Service[] = [
         heading: "Ce qui est livré",
         paragraphs: [
           "L'arborescence part des pages utiles au devis, pas d'un menu décoratif. Les textes sont en français. Les titres, la meta, le sitemap et les données structurées font partie de la livraison.",
-          "Escapade Florale et Meubles de Septentrion sont des boutiques en ligne. Nu Lille, Ambulances Valcq et Les Hauts Paysages sont des sites vitrines. UAS est le site e-commerce livré à Casablanca en 2023. Le code et les comptes d'hébergement remis reviennent au client.",
+          "Escapade Florale et Meubles de Septentrion sont des boutiques en ligne. Nu Lille, Ambulances Valcq et Les Hauts Paysages sont des sites vitrines. Zepay, Qalq et Aguesseau Partners sont des sites publiés à Paris en 2026. UAS est le site e-commerce livré à Casablanca en 2023. Le code et les comptes d'hébergement remis reviennent au client.",
         ],
       },
     ],
@@ -563,6 +563,66 @@ export const services: Service[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "zepay",
+    title: "Zepay",
+    category: "Vitrine",
+    year: "2026",
+    city: "Paris",
+    country: "France",
+    description:
+      "Site de Zepay, marque d'Aguesseau Partners RH, pour la paie des TPE et PME. En ligne à Paris depuis 2026.",
+    url: "https://zepay.fr/",
+    serviceSlug: "creation-site-web",
+    problem: "Le service de paie devait se comprendre avant le premier appel : ce qui est compris, et comment prendre rendez-vous.",
+    solution: "Le site zepay.fr, avec les tarifs, le fonctionnement et le contact.",
+    result: "Le site est en ligne. Les mentions indiquent Aguesseau Partners RH, 10 rue Louis Vicat, 75015 Paris. L'année du catalogue est 2026.",
+    shot: "/work/zepay.png",
+    pages: [
+      { label: "Tarifs", href: "https://zepay.fr/tarifs" },
+      { label: "Fonctionnement", href: "https://zepay.fr/fonctionnement" },
+    ],
+  },
+  {
+    slug: "qalq",
+    title: "Qalq",
+    category: "Vitrine",
+    year: "2026",
+    city: "Paris",
+    country: "France",
+    description:
+      "Site de Qalq, marque en ligne d'Aguesseau Partners pour l'expertise comptable. Devis et pages par statut, à Paris, depuis 2026.",
+    url: "https://qalq.fr/",
+    serviceSlug: "creation-site-web",
+    problem: "Un dirigeant devait voir le cabinet, le devis et le statut de sa société avant d'écrire.",
+    solution: "Le site qalq.fr, avec le simulateur de rémunération et les pages par forme de société.",
+    result: "Le site est en ligne depuis 2026. Qalq se présente comme la marque en ligne d'Aguesseau Partners, cabinet à Paris.",
+    shot: "/work/qalq.png",
+    pages: [
+      { label: "Simulateur", href: "https://qalq.fr/simulateur-remuneration-dirigeant.html" },
+      { label: "Mentions légales", href: "https://qalq.fr/mentions-legales.html" },
+    ],
+  },
+  {
+    slug: "aguesseau",
+    title: "Aguesseau Partners",
+    category: "Vitrine",
+    year: "2026",
+    city: "Paris",
+    country: "France",
+    description:
+      "Site du cabinet Aguesseau Partners : conseil, audit et services financiers. Paris 15e, en ligne depuis 2026.",
+    url: "https://aguesseau.co/",
+    serviceSlug: "creation-site-web",
+    problem: "Le cabinet devait présenter ses trois univers, et permettre un rendez-vous, sans mélanger le conseil et l'audit.",
+    solution: "Le site aguesseau.co, avec le cabinet, AP Intelligence, et les pages conseil, audit et finance.",
+    result: "Le site est en ligne. L'adresse publiée est 10, rue Louis Vicat, 75015 Paris. L'année du catalogue est 2026.",
+    shot: "/work/aguesseau.png",
+    pages: [
+      { label: "Le cabinet", href: "https://aguesseau.co/fr/le-cabinet" },
+      { label: "AP Intelligence", href: "https://aguesseau.co/fr/ap-intelligence" },
+    ],
+  },
   {
     slug: "escapade-florale",
     title: "Escapade Florale",

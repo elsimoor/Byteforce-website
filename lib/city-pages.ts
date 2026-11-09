@@ -528,6 +528,48 @@ export const cityPages: CityPage[] = [
     studies: ["meubles-de-septentrion"],
   },
   {
+    slug: "paris",
+    city: "Paris",
+    country: "France",
+    pillar: { href: "/developpement-logiciel-france", label: "Développement logiciel pour la France" },
+    pillarCrumb: "Développement logiciel France",
+    title: "Développement logiciel à Paris · Byte Force",
+    description:
+      "Sites livrés pour des entreprises à Paris : Zepay, Qalq et Aguesseau Partners. Studio à Casablanca, pas de bureau à Paris.",
+    h1: "Développement logiciel à Paris",
+    keyword: "développement logiciel Paris",
+    lede: "Byte Force a publié trois sites pour Paris en 2026, depuis Casablanca : Zepay, Qalq et le cabinet Aguesseau Partners. Il n'y a pas de bureau à Paris, ni de société française.",
+    sections: [
+      {
+        heading: "Ce qui est en ligne à Paris",
+        paragraphs: [
+          "Zepay est le site de paie d'Aguesseau Partners RH, zepay.fr. Qalq est la marque en ligne d'expertise comptable, qalq.fr. Aguesseau Partners est le site du cabinet, aguesseau.co, au 10 rue Louis Vicat, dans le 15e.",
+          "Les trois fiches sont des vitrines. On ne les présente pas comme le logiciel de paie ou le logiciel comptable du cabinet. Le détail vérifiable est sur chaque fiche, et sur le site public.",
+        ],
+      },
+      {
+        heading: "Paris n'est pas une agence",
+        paragraphs: [
+          "Le travail se fait en visio. Le français est la langue du cadrage. Le fuseau se recouvre avec Casablanca. Le contrat et la facture restent ceux de l'entreprise marocaine. On ne laisse pas croire à une équipe installée rue Louis Vicat.",
+          "Lille reste la ville française la plus présente dans le catalogue plus ancien. Paris a ces trois sites, publiés en 2026.",
+        ],
+      },
+      {
+        heading: "Services",
+        paragraphs: [
+          "Un site qui explique l'offre et reçoit une demande. Le logiciel, seulement si le parcours ne tient plus dans la page. On le dit après avoir vu ce que le visiteur doit pouvoir faire.",
+          contact,
+        ],
+      },
+    ],
+    services: [
+      { href: "/services/creation-site-web", label: "Création de site" },
+      { href: "/developpement-logiciel-france", label: "France" },
+      { href: "/developpement-logiciel-casablanca", label: "Le bureau est à Casablanca" },
+    ],
+    studies: ["zepay", "qalq", "aguesseau"],
+  },
+  {
     slug: "montreal",
     city: "Montréal",
     country: "Canada",

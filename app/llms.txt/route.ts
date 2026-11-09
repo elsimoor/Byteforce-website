@@ -38,6 +38,7 @@ export function GET(request: Request) {
     `- [Fès](${origin}/villes/fes)`,
     `- [Safi](${origin}/villes/safi)`,
     `- [Développement logiciel pour une entreprise en France](${origin}/developpement-logiciel-france)`,
+    `- [Paris](${origin}/villes/paris)`,
     `- [Lille](${origin}/villes/lille)`,
     `- [Roubaix](${origin}/villes/roubaix)`,
     `- [Nord](${origin}/villes/nord)`,

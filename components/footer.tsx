@@ -158,6 +158,7 @@ export function Footer() {
             <h2 className="mb-4 font-headline text-xs font-bold tracking-wider text-on-surface uppercase">Villes en France</h2>
             <ul className="space-y-2.5 text-sm">
               {[
+                ["/villes/paris", "Paris"],
                 ["/villes/lille", "Lille"],
                 ["/villes/roubaix", "Roubaix"],
                 ["/villes/nord", "Nord"],

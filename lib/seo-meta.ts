@@ -247,6 +247,18 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     title: "Agency Wonderland · Studio visuel · Marrakech",
     description: "Site pour Agency Wonderland, studio visuel à Marrakech. Présentation du travail.",
   },
+  "/realisations/zepay": {
+    title: "Zepay · Site de paie · Paris",
+    description: "Site de Zepay pour la paie des TPE et PME. Marque d'Aguesseau Partners RH, à Paris.",
+  },
+  "/realisations/qalq": {
+    title: "Qalq · Expertise comptable en ligne · Paris",
+    description: "Site de Qalq, marque en ligne d'Aguesseau Partners. Devis et pages par statut, à Paris.",
+  },
+  "/realisations/aguesseau": {
+    title: "Aguesseau Partners · Cabinet · Paris",
+    description: "Site du cabinet Aguesseau Partners : conseil, audit et services financiers. Paris 15e.",
+  },
   "/realisations/infinitebridge": {
     title: "Infinitebridge · Site public · En ligne depuis 2023",
     description: "Site public pour Infinitebridge, en ligne depuis 2023.",
