@@ -487,6 +487,106 @@ function PluginMark() {
   );
 }
 
+const needMarks = ["site", "mobile", "plateforme", "windows", "boutique", "logiciel"] as const;
+
+export function NeedMark({ name }: { name: (typeof needMarks)[number] }) {
+  return (
+    <svg viewBox="0 0 240 128" className="h-24 w-full" aria-hidden="true" {...frame}>
+      {name === "site" ? <NeedSite /> : null}
+      {name === "mobile" ? <NeedMobile /> : null}
+      {name === "plateforme" ? <NeedPlateforme /> : null}
+      {name === "windows" ? <NeedWindows /> : null}
+      {name === "boutique" ? <NeedBoutique /> : null}
+      {name === "logiciel" ? <NeedLogiciel /> : null}
+    </svg>
+  );
+}
+
+function NeedSite() {
+  return (
+    <g>
+      <Person x={40} y={42} />
+      <path d="M56 54h24" strokeDasharray="3 3" />
+      <WindowFrame x={86} y={10} w={136} h={108} />
+      <path d="M102 40h104" />
+      <path d="M102 56h84" opacity="0.55" />
+      <path d="M102 70h68" opacity="0.55" />
+      <rect x="102" y="88" width="52" height="16" rx="3" fill="currentColor" opacity="0.35" />
+    </g>
+  );
+}
+
+function NeedMobile() {
+  return (
+    <g>
+      <WindowFrame x={72} y={6} w={78} h={116} />
+      <path d="M88 30h46M88 46h34M88 62h46M88 78h28" />
+      <path d="M100 104h22" />
+      <Person x={184} y={48} />
+      <path d="M150 72h16" />
+    </g>
+  );
+}
+
+function NeedPlateforme() {
+  return (
+    <g>
+      <WindowFrame x={18} y={12} w={156} h={100} />
+      <path d="M32 40h128M32 58h128M32 76h128M70 30v70" opacity="0.75" />
+      <WindowFrame x={124} y={40} w={96} h={76} />
+      <circle cx="172" cy="80" r="14" fill="var(--color-surface-container)" />
+      <circle cx="172" cy="80" r="6" />
+      <path d="M172 60v6M172 94v6M152 80h6M186 80h6M158 66l4 4M182 90l4 4M182 66l-4 4M158 90l-4 4" />
+    </g>
+  );
+}
+
+function NeedWindows() {
+  return (
+    <g>
+      <WindowFrame x={36} y={6} w={168} h={92} />
+      <rect x="50" y="28" width="140" height="24" rx="3" fill="var(--color-surface-container)" />
+      <path d="M60 40h72" />
+      <path d="M50 64h140" opacity="0.4" />
+      <path d="M50 78h96" />
+      <path d="M108 98v12" />
+      <path d="M72 114h96" />
+    </g>
+  );
+}
+
+function NeedBoutique() {
+  return (
+    <g>
+      <WindowFrame x={12} y={10} w={156} h={108} />
+      <rect x="28" y="30" width="34" height="34" fill="var(--color-surface-container)" />
+      <rect x="70" y="30" width="34" height="34" />
+      <rect x="112" y="30" width="34" height="34" fill="var(--color-surface-container)" />
+      <rect x="28" y="72" width="34" height="34" />
+      <rect x="70" y="72" width="34" height="34" fill="var(--color-surface-container)" />
+      <rect x="112" y="72" width="34" height="34" />
+      <path d="M188 62h32l-5 18h-22z" />
+      <circle cx="198" cy="88" r="3" fill="currentColor" />
+      <circle cx="210" cy="88" r="3" fill="currentColor" />
+    </g>
+  );
+}
+
+function NeedLogiciel() {
+  return (
+    <g>
+      <WindowFrame x={16} y={8} w={208} h={112} />
+      <rect x="30" y="28" width="46" height="80" rx="3" fill="var(--color-surface-container)" />
+      <path d="M38 42h30M38 54h22M38 66h28M38 78h18" />
+      <rect x="90" y="48" width="14" height="32" fill="currentColor" opacity="0.28" />
+      <rect x="112" y="36" width="14" height="44" fill="currentColor" opacity="0.45" />
+      <rect x="134" y="56" width="14" height="24" fill="currentColor" opacity="0.28" />
+      <rect x="156" y="42" width="14" height="38" fill="currentColor" opacity="0.45" />
+      <path d="M94 100l24-16 20 8 30-22 18 6" />
+    </g>
+  );
+}
+
 function Party({ x, y, label, cart = false }: { x: number; y: number; label: string; cart?: boolean }) {
   return (
     <g>

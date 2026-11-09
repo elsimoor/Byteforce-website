@@ -3,18 +3,19 @@
 import { useRef, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import posthog from "posthog-js";
+import { NeedMark } from "@/components/offer-drawings";
 import { TurnstileCheck } from "@/components/turnstile-check";
 import { recordLead } from "@/lib/actions";
 import { writeLeadReceipt } from "@/lib/lead-receipt";
 import { site } from "@/lib/site";
 
 const needs = [
-  { id: "Site web", line: "Une page que le visiteur comprend avant d'écrire." },
-  { id: "Application mobile", line: "Un geste dans la poche, sur Android ou iOS." },
-  { id: "Plateforme", line: "Plusieurs rôles, un même outil." },
-  { id: "Application Windows", line: "Un logiciel installé sur le poste." },
-  { id: "Boutique en ligne", line: "Un catalogue, un prix, une commande." },
-  { id: "Logiciel sur mesure", line: "Le fichier ou l'outil actuel ne suffit plus." },
+  { id: "Site web", mark: "site", line: "Une page que le visiteur comprend avant d'écrire." },
+  { id: "Application mobile", mark: "mobile", line: "Un geste dans la poche, sur Android ou iOS." },
+  { id: "Plateforme", mark: "plateforme", line: "Plusieurs rôles, un même outil." },
+  { id: "Application Windows", mark: "windows", line: "Un logiciel installé sur le poste." },
+  { id: "Boutique en ligne", mark: "boutique", line: "Un catalogue, un prix, une commande." },
+  { id: "Logiciel sur mesure", mark: "logiciel", line: "Le fichier ou l'outil actuel ne suffit plus." },
 ] as const;
 
 type Need = (typeof needs)[number]["id"];
@@ -151,6 +152,9 @@ export function ProjectBrief() {
                   className={`flex min-h-28 cursor-pointer flex-col justify-between gap-3 rounded-[22px] border-2 p-6 ${on ? "border-[#0A0D2E] bg-[#0A0D2E] text-white" : "border-[#DADFF5] bg-white text-[#0A0D2E]"}`}
                 >
                   <input className="sr-only" type="radio" name="need" value={item.id} checked={on} onChange={() => setNeed(item.id)} required />
+                  <span className={`block rounded-xl px-1 text-secondary ${on ? "bg-white" : ""}`}>
+                    <NeedMark name={item.mark} />
+                  </span>
                   <span className="font-headline text-3xl leading-none font-extrabold tracking-[-0.04em]">{item.id}</span>
                   <span className={`text-base leading-snug ${on ? "text-[#D5D9FF]" : "text-[#2A2E55]"}`}>{item.line}</span>
                 </label>
