@@ -741,6 +741,30 @@ main:not([data-home]) a.border-b {
   outline-offset: 3px;
 }
 
+@keyframes bf-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes bf-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes bf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes bf-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+@keyframes bf-dash {
+  to { stroke-dashoffset: -40; }
+}
+.bf-marquee { animation: bf-marquee 40s linear infinite; }
+.bf-spin { animation: bf-spin 22s linear infinite; }
+.bf-float { animation: bf-float 6s ease-in-out infinite; }
+.bf-ring { transform-box: fill-box; transform-origin: center; animation: bf-ring 2.4s ease-out infinite; }
+.bf-dash { animation: bf-dash 3s linear infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   .illus .flow,
   .illus .travel {
@@ -748,4 +772,9 @@ main:not([data-home]) a.border-b {
     stroke-dasharray: none;
     offset-distance: 62%;
   }
+  .bf-marquee,
+  .bf-spin,
+  .bf-float,
+  .bf-ring,
+  .bf-dash { animation: none; }
 }
