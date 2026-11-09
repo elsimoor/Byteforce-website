@@ -242,16 +242,7 @@ export default async function ProjectPage({ params }: Props) {
 
       <section className="mx-auto w-full max-w-[1264px] px-5 py-6 sm:px-8 lg:px-12 lg:pt-6 lg:pb-18">
         <div className="flex flex-col gap-4 rounded-3xl bg-[#070A2B] px-6 py-8 text-[#EEF0FF] lg:flex-row lg:items-center lg:gap-16 lg:rounded-3xl lg:p-14">
-          <div className="min-w-0 flex-1">
-            <p aria-hidden="true" className="font-headline text-[8.5rem] leading-[0.8] font-extrabold tracking-[-0.06em] text-transparent lg:text-[15rem]" style={{ WebkitTextStroke: "2px #8C93FF" }}>
-              00
-            </p>
-            <p className="mt-2">
-              <span className="rounded-[3px] border border-dashed border-[#B26A00] bg-[#FFF4E0] px-2.5 py-0.5 font-mono text-[11px] tracking-[0.06em] text-[#7A4300] uppercase lg:text-xs">
-                Chiffre mesuré, avec l&apos;accord du client
-              </span>
-            </p>
-          </div>
+          
           <div className="flex min-w-0 flex-1 flex-col gap-4">
             <h2 className="font-headline text-4xl leading-none font-extrabold tracking-[-0.04em] text-white lg:text-[3.5rem]">Le résultat</h2>
             <p className="text-[17px] leading-normal text-[#D5D9FF] lg:text-[21px] lg:leading-relaxed">
