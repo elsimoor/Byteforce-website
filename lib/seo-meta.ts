@@ -712,6 +712,11 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     title: "ByteForce Free Tools : Outils Gratuits pour Développeurs & Entreprises",
     description: "Découvrez nos outils gratuits ByteForce : convertisseur Claude Artifact vers Markdown (.md), audit technique SEO instantané et suivi de projet en temps réel.",
   },
+  "/villes": {
+    title: "Villes · Byte Force à Casablanca",
+    description:
+      "Le seul bureau est à Casablanca, au Technopark. Les autres pages disent où une entreprise peut chercher un studio, au Maroc, en France et à Montréal. Pas d'autre agence.",
+  },
   "/outils/claude-artifact-to-markdown": {
     title: "Convertisseur Claude Artifact vers Markdown (.md) Gratuit | ByteForce",
     description: "Convertissez et téléchargez gratuitement vos artefacts Claude AI en fichiers Markdown (.md) propres. Import par URL ou copier-coller 100% privé sans compte.",

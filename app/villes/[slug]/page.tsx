@@ -38,7 +38,7 @@ export default async function CityPage({ params }: Props) {
     .filter((project) => project !== undefined);
   const crumbs = [
     { name: "Accueil", path: "/" },
-    { name: city.pillarCrumb, path: city.pillar.href },
+    { name: "Villes", path: "/villes" },
     { name: city.city, path },
   ];
   const questions = [
@@ -97,97 +97,125 @@ export default async function CityPage({ params }: Props) {
   };
 
   return (
-    <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
-      <header className="px-6 pb-16 pt-16 md:px-12 md:pt-24">
-        <nav aria-label="Fil d'Ariane" className="flex flex-wrap gap-x-2 text-sm text-mute">
+    <main data-landing className="w-full bg-[#F4F6FC] text-[#14161F]">
+      <article className="mx-auto w-full max-w-[1120px] px-5 py-12 sm:px-8 lg:py-16">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
+        <nav aria-label="Fil d'Ariane" className="flex flex-wrap items-center gap-2.5 font-mono text-[13px] text-[#4B5070]">
           {crumbs.map((crumb, index) => {
             const last = index === crumbs.length - 1;
             return (
-              <span key={crumb.path}>
-                {index > 0 ? " · " : null}
-                {last ? crumb.name : <Link href={crumb.path}>{crumb.name}</Link>}
+              <span key={crumb.path} className="inline-flex items-center gap-2.5">
+                {index > 0 ? <span aria-hidden="true">/</span> : null}
+                {last ? (
+                  <span className="text-[#14161F]">{crumb.name}</span>
+                ) : (
+                  <Link href={crumb.path} className="text-primary underline decoration-primary underline-offset-[3px]">
+                    {crumb.name}
+                  </Link>
+                )}
               </span>
             );
           })}
         </nav>
-        <h1 className="display mt-6 max-w-[16ch] text-[clamp(3rem,7vw,6.4rem)]">{city.h1}</h1>
-        <p className="mt-8 max-w-xl text-lg leading-relaxed">{city.lede}</p>
+        <p className="mt-6 font-mono text-xs tracking-[0.08em] text-primary uppercase">
+          {city.country} · {city.city}
+        </p>
+        <h1 className="mt-3 max-w-[16ch] font-headline text-[clamp(2.5rem,5vw,4.25rem)] leading-[0.98] font-extrabold tracking-[-0.04em]">
+          {city.h1}
+          <span className="text-primary">.</span>
+        </h1>
+        <p className="mt-5 max-w-[40rem] text-lg leading-relaxed text-[#3A3F55]">{city.lede}</p>
         <p className="mt-6">
-          <Link href="/contact" className="border-b border-ink">
+          <Link href="/contact" className="inline-flex min-h-12 items-center rounded-xl bg-primary px-6 text-[15px] font-semibold text-white">
             Écrire pour en parler
           </Link>
         </p>
-      </header>
 
-      {city.sections.map((section) => (
-        <section key={section.heading} className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-          <h2 className="display max-w-[18ch] text-4xl">{section.heading}</h2>
-          <div className="mt-6 max-w-2xl space-y-4 leading-relaxed">
-            {section.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </section>
-      ))}
-
-      <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-        <h2 className="display text-4xl">Pages liées</h2>
-        <ul className="mt-8 max-w-xl space-y-3 text-sm">
-          <li className="border-t border-line pt-3">
-            <Link href={city.pillar.href}>{city.pillar.label}</Link>
-          </li>
-          {city.services.map((service) => (
-            <li key={service.href} className="border-t border-line pt-3">
-              <Link href={service.href}>{service.label}</Link>
-            </li>
+        <div className="mt-12 flex flex-col gap-4">
+          {city.sections.map((section) => (
+            <section key={section.heading} className="rounded-2xl bg-white p-6 shadow-[0_10px_30px_rgba(20,22,31,0.05)] sm:p-8">
+              <h2 className="font-headline text-[1.75rem] font-extrabold tracking-[-0.03em]">{section.heading}</h2>
+              <div className="mt-4 max-w-3xl space-y-4 text-[15px] leading-relaxed text-[#3A3F55]">
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </section>
           ))}
-          <li className="border-t border-line pt-3">
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-        {studies.length > 0 ? (
-          <ul className="mt-12 space-y-6">
-            {studies.map((project) => (
-              <li key={project.slug}>
-                <Link href={`/realisations/${project.slug}`} className="text-2xl">
-                  {project.title}
+        </div>
+
+        <section className="mt-12" aria-labelledby="city-links">
+          <h2 id="city-links" className="font-headline text-[1.75rem] font-extrabold tracking-[-0.03em]">
+            Pages liées
+          </h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            <li>
+              <Link href={city.pillar.href} className="flex min-h-16 items-center rounded-2xl bg-white px-5 py-4 font-semibold shadow-[0_10px_30px_rgba(20,22,31,0.05)]">
+                {city.pillar.label}
+              </Link>
+            </li>
+            {city.services.map((service) => (
+              <li key={service.href}>
+                <Link href={service.href} className="flex min-h-16 items-center rounded-2xl bg-white px-5 py-4 font-semibold shadow-[0_10px_30px_rgba(20,22,31,0.05)]">
+                  {service.label}
                 </Link>
-                <p className="mt-2 text-sm text-mute">{project.description}</p>
               </li>
             ))}
+            <li>
+              <Link href="/contact" className="flex min-h-16 items-center rounded-2xl bg-white px-5 py-4 font-semibold shadow-[0_10px_30px_rgba(20,22,31,0.05)]">
+                Contact
+              </Link>
+            </li>
           </ul>
-        ) : (
-          <p className="mt-12 max-w-xl text-sm text-mute">
-            Aucun projet du catalogue n&apos;est publié à {city.city}. On n&apos;en ajoute pas un pour remplir la page.
-          </p>
-        )}
-      </section>
+        </section>
 
-      <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-        <h2 className="display text-4xl">Questions avant d&apos;écrire</h2>
-        <dl className="mt-10 max-w-3xl">
-          {questions.map((item) => (
-            <div key={item.q} className="border-t border-line py-6">
-              <dt className="text-lg">{item.q}</dt>
-              <dd className="mt-2 text-sm leading-relaxed text-mute">{item.a}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+        <section className="mt-12" aria-labelledby="city-work">
+          <h2 id="city-work" className="font-headline text-[1.75rem] font-extrabold tracking-[-0.03em]">
+            Projets publiés
+          </h2>
+          {studies.length > 0 ? (
+            <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+              {studies.map((project) => (
+                <li key={project.slug}>
+                  <Link href={`/realisations/${project.slug}`} className="block h-full rounded-2xl bg-white p-6 shadow-[0_10px_30px_rgba(20,22,31,0.05)]">
+                    <span className="font-mono text-[11px] tracking-[0.08em] text-[#8B90A5] uppercase">{project.year}</span>
+                    <span className="mt-2 block font-headline text-2xl font-extrabold tracking-[-0.03em]">{project.title}</span>
+                    <span className="mt-2 block text-sm leading-relaxed text-[#5C6278]">{project.description}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-4 max-w-xl rounded-2xl bg-white p-6 text-sm leading-relaxed text-[#5C6278] shadow-[0_10px_30px_rgba(20,22,31,0.05)]">
+              Aucun projet du catalogue n&apos;est publié à {city.city}. On n&apos;en ajoute pas un pour remplir la page.
+            </p>
+          )}
+        </section>
 
-      <section className="grid gap-12 border-t border-line px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
-        <div className="md:col-span-5">
-          <h2 className="display text-5xl">Écrire.</h2>
-          <p className="mt-6 max-w-sm leading-relaxed">
-            Décrivez le projet pour {city.city}. Réponse sous un jour ouvré, à <EmailText /> ou sur{" "}
-            <a href="https://wa.me/212666650696">WhatsApp</a>.
+        <section className="mt-12 rounded-2xl bg-white p-6 shadow-[0_10px_30px_rgba(20,22,31,0.05)] sm:p-8" aria-labelledby="city-questions">
+          <h2 id="city-questions" className="font-headline text-[1.75rem] font-extrabold tracking-[-0.03em]">
+            Questions avant d&apos;écrire
+          </h2>
+          <dl className="mt-4">
+            {questions.map((item) => (
+              <div key={item.q} className="border-t border-[#EEF0F6] py-5 first:border-t-0">
+                <dt className="font-semibold">{item.q}</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-[#5C6278]">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <section className="mt-12 rounded-[28px] bg-white p-6 shadow-[0_24px_60px_rgba(20,22,31,0.08)] sm:p-8">
+          <h2 className="font-headline text-[1.75rem] font-extrabold tracking-[-0.03em]">Décrivez le projet pour {city.city}</h2>
+          <p className="mt-2 max-w-xl text-sm leading-relaxed text-[#5C6278]">
+            Réponse sous un jour ouvré, à <EmailText /> ou sur <a href="https://wa.me/212666650696">WhatsApp</a>. Aucun prix n&apos;est demandé dans ce premier message.
           </p>
-        </div>
-        <div className="md:col-span-6 md:col-start-7">
-          <LeadForm city={city.city} country={city.country} />
-        </div>
-      </section>
+          <div className="mt-6">
+            <LeadForm variant="sheet" city={city.city} country={city.country} />
+          </div>
+        </section>
+      </article>
     </main>
   );
 }

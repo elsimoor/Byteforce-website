@@ -44,6 +44,7 @@ const staticPaths = [
   "/conditions",
   "/plan-du-site",
   "/outils",
+  "/villes",
   "/outils/claude-artifact-to-markdown",
 ];
 

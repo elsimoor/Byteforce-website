@@ -148,6 +148,11 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/villes" className="inline-flex min-h-11 items-center text-on-surface hover:text-primary">
+                  Toutes les villes
+                </Link>
+              </li>
+              <li>
                 <Link href="/developpement-logiciel-maroc" className="inline-flex min-h-11 items-center text-on-surface hover:text-primary">
                   Voir tout le Maroc
                 </Link>
