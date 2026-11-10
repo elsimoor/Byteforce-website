@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { geoKeywords } from "@/lib/geo/keywords";
+import { GEO_LASTMOD } from "@/lib/geo/coverage";
+import { indexableGeoPages } from "@/lib/geo/pages";
 import { site } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -25,14 +26,11 @@ function escapeXml(unsafe: string) {
 }
 
 export async function GET() {
-  const rows = geoKeywords();
-  const date = "2026-10-12";
-
   const entries = [
-    { loc: `${site.url}/geo-location`, lastmod: date },
-    ...rows.map((row) => ({
-      loc: `${site.url}/${row.path}`,
-      lastmod: date,
+    { loc: `${site.url}/geo-location`, lastmod: GEO_LASTMOD },
+    ...indexableGeoPages().map((page) => ({
+      loc: `${site.url}/${page.path}`,
+      lastmod: GEO_LASTMOD,
     })),
   ];
 

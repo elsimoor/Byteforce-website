@@ -1,4 +1,5 @@
 import { BreadcrumbJsonLd, FaqJsonLd, ServiceJsonLd } from "@/components/json-ld";
+import { GeoServiceLinks } from "@/components/geo-service-links";
 import { Faq } from "./faq";
 import { FinalCta } from "./final-cta";
 import { GeoBlock } from "./geo-block";
@@ -33,6 +34,7 @@ export function ReferencementSeoPage() {
       <GeoBlock />
       <LocalSection />
       <Faq />
+      <GeoServiceLinks serviceSlug="seo" />
       <FinalCta />
     </main>
   );

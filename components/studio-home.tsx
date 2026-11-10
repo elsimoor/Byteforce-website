@@ -4,6 +4,7 @@ import { EmailText, MailLink } from "@/components/mail-link";
 import { StepDrawing } from "@/components/step-drawing";
 import { Icon } from "@/components/icon";
 import { ResponsiveImg } from "@/components/responsive-img";
+import { GeoHomeLinks } from "@/components/geo-service-links";
 import { SelectedWork } from "@/components/selected-work";
 import { projects } from "@/lib/content";
 import { studioSections } from "@/lib/studio-sections";
@@ -550,6 +551,7 @@ export function StudioHome() {
           </a>
         </div>
       </section>
+      <GeoHomeLinks />
       <SelectedWork />
       {/* 5. FOUNDATIONAL STACK */}
       <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">

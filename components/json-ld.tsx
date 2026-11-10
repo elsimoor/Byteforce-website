@@ -15,11 +15,6 @@ export function OrganizationJsonLd() {
         description: site.description,
         inLanguage: ["fr", "en"],
         publisher: { "@id": businessId },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${site.url}/recherche?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": ["ProfessionalService", "LocalBusiness"],

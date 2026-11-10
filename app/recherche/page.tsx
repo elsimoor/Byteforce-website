@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/recherche" },
   openGraph: openGraph("/recherche", `${title} · Byte Force`, description),
+  robots: { index: false, follow: true },
 };
 
 type Props = { searchParams: Promise<{ q?: string }> };

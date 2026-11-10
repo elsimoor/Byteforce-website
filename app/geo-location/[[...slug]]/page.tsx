@@ -3,9 +3,7 @@ import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { GeoGlobeHub } from "@/components/geo-globe-hub";
 import { GeoView } from "@/components/geo-view";
-import { LandingRemplacementExcelToulousePrix } from "@/components/landing-remplacement-excel-toulouse-prix";
-import { geoKeywords } from "@/lib/geo/keywords";
-import { geoDirectory, getGeoPage } from "@/lib/geo/pages";
+import { geoDirectory, getGeoPage, indexableGeoPages } from "@/lib/geo/pages";
 import { openGraph } from "@/lib/open-graph";
 
 type Props = { params: Promise<{ slug?: string[] }> };
@@ -13,7 +11,7 @@ type Props = { params: Promise<{ slug?: string[] }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [{ slug: [] as string[] }, ...geoKeywords().map((row) => ({ slug: row.path.split("/").slice(1) }))];
+  return [{ slug: [] as string[] }, ...indexableGeoPages().map((page) => ({ slug: page.path.split("/").slice(1) }))];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -27,20 +25,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       alternates: { canonical: "/geo-location" },
       openGraph: openGraph("/geo-location", title, description),
-    };
-  }
-
-  const joinedSlug = slug.join("/");
-  if (joinedSlug === "remplacement-excel/fr/toulouse/prix") {
-    const title = "Prix Remplacement Excel à Toulouse : Tarifs 2026 & Simulateur Web App | ByteForce";
-    const description =
-      "Combien coûte le remplacement d'Excel par un logiciel sur-mesure à Toulouse ? De 3 500 € à 15 000 €. Grille tarifaire 2026, calculateur de prix immédiat et audit gratuit de vos fichiers.";
-    return {
-      title: { absolute: title },
-      description,
-      alternates: { canonical: "/geo-location/remplacement-excel/fr/toulouse/prix" },
-      openGraph: openGraph("/geo-location/remplacement-excel/fr/toulouse/prix", title, description),
-      robots: { index: true, follow: true },
     };
   }
 
@@ -60,11 +44,6 @@ export default async function GeoLocationPage({ params }: Props) {
   if (!slug?.length) return <GeoIndex />;
   const page = getGeoPage(["geo-location", ...slug].join("/"));
   if (!page) notFound();
-
-  const joinedSlug = slug.join("/");
-  if (joinedSlug === "remplacement-excel/fr/toulouse/prix") {
-    return <LandingRemplacementExcelToulousePrix page={page} />;
-  }
 
   return <GeoView page={page} />;
 }

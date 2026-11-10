@@ -113,7 +113,7 @@ async function run() {
     { name: "/pages-sitemap.xml", minCount: 50, maxCount: 120, checkFilter: true },
     { name: "/insights-sitemap.xml", minCount: 30, maxCount: 100 },
     { name: "/villes-sitemap.xml", minCount: 10, maxCount: 80 },
-    { name: "/geo-location-sitemap.xml", minCount: 2000, maxCount: 3000 },
+    { name: "/geo-location-sitemap.xml", minCount: 200, maxCount: 220 },
   ];
 
   for (const item of childSitemaps) {

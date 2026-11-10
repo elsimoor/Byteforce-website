@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { LeadForm } from "@/components/lead-form";
 import { ReferencementSeoPage } from "@/components/referencement-seo/referencement-seo-page";
 import { PluginBreak, PluginFlow, PluginShelf } from "@/components/wordpress-plugin-lab";
+import { GeoServiceLinks } from "@/components/geo-service-links";
+import { contentSlugToGeo } from "@/lib/geo/coverage";
 import { getService, projectsForService, services } from "@/lib/content";
 import { openGraph } from "@/lib/open-graph";
 import { metaFor } from "@/lib/seo-meta";
@@ -245,6 +247,7 @@ export default async function ServicePage({ params }: Props) {
           ))}
         </section>
       ) : null}
+      {contentSlugToGeo[slug] ? <GeoServiceLinks serviceSlug={contentSlugToGeo[slug]} /> : null}
     </main>
   );
 }
