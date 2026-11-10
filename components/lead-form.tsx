@@ -18,6 +18,7 @@ type Draft = {
   service: string;
   budget: string;
   message: string;
+  current_site: string;
   company_website: string;
 };
 
@@ -32,6 +33,7 @@ function readDraft(form: HTMLFormElement): Draft {
     service: value("service"),
     budget: value("budget"),
     message: value("message"),
+    current_site: value("current_site"),
     company_website: value("company_website"),
   };
 }
@@ -47,6 +49,7 @@ function projectText(draft: Draft) {
   if (draft.company) lines.push(`Société: ${draft.company}`);
   if (draft.service) lines.push(`Offre: ${draft.service}`);
   if (draft.budget) lines.push(`Budget: ${draft.budget}`);
+  if (draft.current_site) lines.push(`Site actuel: ${draft.current_site}`);
   lines.push("", "Projet:", draft.message);
   return lines.join("\n");
 }
@@ -65,10 +68,12 @@ export function LeadForm({
   city = "Casablanca",
   country = "Maroc",
   initial,
+  variant = "editorial",
 }: {
   city?: string;
   country?: string;
   initial?: { service?: string; budget?: string; message?: string };
+  variant?: "editorial" | "sheet";
 }) {
   const knownServices = new Set(services.map((service) => service.title));
   const [service, setService] = useState(initial?.service && knownServices.has(initial.service) ? initial.service : "");
@@ -119,7 +124,8 @@ export function LeadForm({
     const draft = draftRef.current;
     const turnstile = tokenRef.current;
     if (!draft || !turnstile || status === "saving") return;
-    const lead = { ...draft, city, country, pageUrl: window.location.href, turnstile };
+    const message = draft.current_site ? `${draft.message}\n\nSite actuel: ${draft.current_site}` : draft.message;
+    const lead = { ...draft, message, city, country, pageUrl: window.location.href, turnstile };
     if (posthogEnabled) posthog.capture("lead_channel_selected", { channel });
     if (channel === "whatsapp") {
       void recordLead(lead);
@@ -149,58 +155,97 @@ export function LeadForm({
     router.push("/contact/merci");
   }
 
+  const sheet = variant === "sheet";
+  const fieldClass = sheet
+    ? "h-12 w-full rounded-xl border border-[#E4E7F2] bg-white px-4 text-[15px] text-[#14161F] outline-none placeholder:text-[#9AA0B5] focus:border-primary"
+    : "field";
+  const labelClass = sheet ? "grid gap-1.5 text-sm font-medium text-[#14161F]" : "grid gap-1 text-sm";
+  const serviceField = (
+    <label className={labelClass}>
+      Offre
+      <select name="service" className={fieldClass} value={service} onChange={(event) => setService(event.target.value)}>
+        <option value="">Choisir</option>
+        {services.map((item) => (
+          <option key={item.slug} value={item.title}>
+            {item.title}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+  const budgetField = (
+    <label className={labelClass}>
+      Budget
+      <select name="budget" className={fieldClass} value={budget} onChange={(event) => setBudget(event.target.value)}>
+        <option value="">Pas encore défini</option>
+        {budgets.map((item) => (
+          <option key={item}>{item}</option>
+        ))}
+      </select>
+    </label>
+  );
+
   return (
     <>
-      <form method="post" onSubmit={openChoice} className="grid gap-8">
-        <div className="grid gap-8 md:grid-cols-2">
-          <label className="grid gap-1 text-sm">
+      <form method="post" onSubmit={openChoice} className={sheet ? "grid gap-4" : "grid gap-8"}>
+        <div className={sheet ? "grid gap-4 sm:grid-cols-2" : "grid gap-8 md:grid-cols-2"}>
+          <label className={labelClass}>
             Nom
-            <input name="name" required autoComplete="name" className="field" />
+            <input name="name" required autoComplete="name" className={fieldClass} />
           </label>
-          <label className="grid gap-1 text-sm">
+          <label className={labelClass}>
             Email
-            <input name="email" type="email" required autoComplete="email" className="field" />
+            <input name="email" type="email" required autoComplete="email" className={fieldClass} />
           </label>
-          <label className="grid gap-1 text-sm">
+          <label className={labelClass}>
             Téléphone
-            <input name="phone" autoComplete="tel" className="field" />
+            <input name="phone" autoComplete="tel" className={fieldClass} />
           </label>
-          <label className="grid gap-1 text-sm">
+          <label className={labelClass}>
             Société
-            <input name="company" autoComplete="organization" className="field" />
+            <input name="company" autoComplete="organization" className={fieldClass} />
           </label>
         </div>
         {fromList ? <p className="text-sm text-on-surface-variant">Ces champs reprennent la liste du projet.</p> : null}
-        <label className="grid gap-1 text-sm">
-          Offre
-          <select name="service" className="field" value={service} onChange={(event) => setService(event.target.value)}>
-            <option value="">Choisir</option>
-            {services.map((service) => (
-              <option key={service.slug} value={service.title}>
-                {service.title}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="grid gap-1 text-sm">
-          Budget
-          <select name="budget" className="field" value={budget} onChange={(event) => setBudget(event.target.value)}>
-            <option value="">Pas encore défini</option>
-            {budgets.map((item) => (
-              <option key={item}>{item}</option>
-            ))}
-          </select>
-        </label>
-        <label className="grid gap-1 text-sm">
+        {sheet ? (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {serviceField}
+            {budgetField}
+          </div>
+        ) : (
+          <>
+            {serviceField}
+            {budgetField}
+          </>
+        )}
+        {sheet ? (
+          <label className={labelClass}>
+            Site actuel
+            <input name="current_site" inputMode="url" autoCapitalize="off" spellCheck={false} placeholder="https://" className={fieldClass} />
+          </label>
+        ) : null}
+        <label className={labelClass}>
           Projet
-          <textarea name="message" required rows={message.length > 180 ? 8 : 4} className="field" value={message} onChange={(event) => setMessage(event.target.value)} />
+          <textarea
+            name="message"
+            required
+            rows={message.length > 180 ? 8 : 4}
+            placeholder={sheet ? "Ce qui existe déjà, et ce qui doit changer." : undefined}
+            className={sheet ? `${fieldClass} h-auto py-3` : "field"}
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+          />
         </label>
         <label className="absolute -left-[9999px]" aria-hidden="true">
           Site
           <input name="company_website" tabIndex={-1} autoComplete="off" />
         </label>
         <TurnstileCheck onToken={setToken} />
-        <button type="submit" disabled={!turnstileToken} className="btn justify-self-start">
+        <button
+          type="submit"
+          disabled={!turnstileToken}
+          className={sheet ? "min-h-12 w-full rounded-xl bg-primary text-[15px] font-semibold text-white disabled:opacity-40" : "btn justify-self-start"}
+        >
           Envoyer la demande
         </button>
       </form>
