@@ -58,6 +58,15 @@ export default async function AuditPage({ searchParams }: Props) {
     }
   }
 
+  if (target) {
+    return (
+      <article className="w-full bg-[#F4F6FC] text-[#14161F]">
+        <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Audit", path: "/audit" }]} />
+        <AuditRun url={target} />
+      </article>
+    );
+  }
+
   return (
     <article className="w-full bg-surface text-[#0B0B1A]">
       <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Audit", path: "/audit" }]} />
@@ -172,12 +181,6 @@ export default async function AuditPage({ searchParams }: Props) {
           </div>
         </div>
       </section>
-
-      {target ? (
-        <section className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-8 lg:px-10">
-          <AuditRun url={target} />
-        </section>
-      ) : null}
 
       <section className="mx-auto flex w-full max-w-[1200px] flex-col gap-9 px-5 pt-16 pb-6 sm:px-8 lg:px-10 lg:pt-20">
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-3">

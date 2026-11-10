@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import posthog from "posthog-js";
-import { MailLink } from "@/components/mail-link";
 import { SitemapPick } from "@/components/sitemap-pick";
-import { dimensionScore, layerScore, machineLayers, machineNote, machineScore, overallScore, priorities, scoreLabel, takeaways } from "@/lib/audit/score";
+import { startAudit } from "@/lib/actions";
+import { dimensionScore, layerScore, machineLayers, machineNote, machineScore, overallScore, priorities, scoreLabel } from "@/lib/audit/score";
 import { markAudit, readAudit, writeAudit } from "@/lib/audit/saved";
 import { site } from "@/lib/site";
 import type { AuditStep } from "@/lib/site-audit";
@@ -28,7 +28,46 @@ const unread = [
   "Le compte DNS et le compte qui publie ne sont pas ouverts.",
 ];
 
-function RollingScore({ value, live }: { value: number; live: boolean }) {
+function hostOf(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+function scoreTone(value: number | null) {
+  if (value === null) return { text: "#4A4F63", bar: "#C9CEE0" };
+  if (value >= 90) return { text: "#17613A", bar: "#1E7A46" };
+  if (value >= 60) return { text: "#7A4500", bar: "#B26A00" };
+  return { text: "#9B1C15", bar: "#B3261E" };
+}
+
+function dotClass(state: AuditStep["state"]) {
+  if (state === "fail") return "bg-[#B3261E]";
+  if (state === "warn") return "bg-[#B26A00]";
+  if (state === "pass") return "bg-[#1E7A46]";
+  return "bg-[#C9CEE0]";
+}
+
+function Pill({ tone, children }: { tone: "bad" | "wait" | "ok" | "neutral"; children: ReactNode }) {
+  const tones = {
+    bad: "bg-[#FDECEC] text-[#9B1C15]",
+    wait: "bg-[#FFF4E5] text-[#7A4500]",
+    ok: "bg-[#E7F6EE] text-[#17613A]",
+    neutral: "bg-[#EEF0F6] text-[#4A4F63]",
+  };
+  return <span className={`inline-flex items-center rounded-full px-3 py-1 text-[13px] font-semibold ${tones[tone]}`}>{children}</span>;
+}
+
+function pillTone(state: AuditStep["state"]): "bad" | "wait" | "ok" | "neutral" {
+  if (state === "fail") return "bad";
+  if (state === "warn") return "wait";
+  if (state === "pass") return "ok";
+  return "neutral";
+}
+
+function ScoreRing({ value, live }: { value: number; live: boolean }) {
   const [shown, setShown] = useState(value);
   const shownRef = useRef(value);
 
@@ -51,9 +90,16 @@ function RollingScore({ value, live }: { value: number; live: boolean }) {
   }, [value]);
 
   return (
-    <p className={`display text-[clamp(5.5rem,12vw,8.5rem)] leading-none tabular-nums text-primary ${live ? "audit-live" : ""}`} aria-hidden="true">
-      {shown}
-    </p>
+    <div
+      className="flex h-44 w-44 shrink-0 items-center justify-center rounded-full"
+      style={{ background: `conic-gradient(var(--color-primary) 0 ${shown}%, #E2E5F0 ${shown}% 100%)` }}
+      aria-hidden="true"
+    >
+      <div className="flex h-[8.75rem] w-[8.75rem] flex-col items-center justify-center rounded-full bg-white">
+        <span className={`font-headline text-[3.5rem] leading-none font-extrabold tabular-nums ${live ? "audit-live" : ""}`}>{shown}</span>
+        <span className="text-[13px] text-[#4A4F63]">sur 100</span>
+      </div>
+    </div>
   );
 }
 
@@ -62,51 +108,29 @@ function chapterValue(steps: AuditStep[], chapter: (typeof passage)[number]) {
   return dimensionScore(steps, chapter);
 }
 
-function chapterStanding(steps: AuditStep[], chapter: (typeof passage)[number], done: boolean) {
-  const items = steps.filter((step) => step.chapter === chapter);
-  if (items.some((step) => step.state === "running") || (!done && items.length === 0)) return "En cours";
-  if (items.some((step) => step.state === "fail")) return "À corriger";
-  if (items.some((step) => step.state === "warn")) return "À revoir";
-  return "Tenu";
-}
-
-function unit(seed: number) {
-  const value = Math.sin(seed) * 43758.5453;
-  return value - Math.floor(value);
-}
-
-function AuditMorph({ seed }: { seed: string }) {
-  const base = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 17);
-  return (
-    <div className="mt-8 flex items-center gap-4" role="status" aria-label="Lecture en cours">
-      {[0, 1, 2].map((index) => {
-        const salt = base * 13 + index * 97;
-        const duration = 2.2 + unit(salt + 1) * 1.9;
-        return (
-          <span
-            key={index}
-            aria-hidden="true"
-            className="audit-morph-dot"
-            style={{
-              ["--morph-dur" as string]: `${duration.toFixed(2)}s`,
-              ["--morph-delay" as string]: `${(-unit(salt + 2) * duration).toFixed(2)}s`,
-            }}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
-export function AuditRun({ url, pick = true, children }: { url: string; pick?: boolean; children?: ReactNode }) {
+export function AuditRun({
+  url,
+  pick = true,
+  embedded = false,
+  children,
+}: {
+  url: string;
+  pick?: boolean;
+  embedded?: boolean;
+  children?: ReactNode;
+}) {
   const [steps, setSteps] = useState<AuditStep[]>([]);
   const [done, setDone] = useState(false);
   const [error, setError] = useState("");
   const [burstUrl, setBurstUrl] = useState(url);
   const [session, setSession] = useState(0);
+  const [openChapters, setOpenChapters] = useState<Record<string, boolean>>({});
+  const [exportNote, setExportNote] = useState("");
   if (burstUrl !== url) {
     setBurstUrl(url);
     setSession(0);
+    setOpenChapters({});
+    setExportNote("");
   }
 
   useEffect(() => {
@@ -193,7 +217,6 @@ export function AuditRun({ url, pick = true, children }: { url: string; pick?: b
 
   const settled = steps.filter((step) => step.state !== "running");
   const shown = settled.filter((step) => step.id !== "suite");
-  const open = shown.filter((step) => step.state === "warn" || step.state === "fail");
   const warned = shown.filter((step) => step.state === "warn").length;
   const failed = shown.filter((step) => step.state === "fail").length;
   const blocked = shown.filter((step) => step.state === "fail");
@@ -201,299 +224,276 @@ export function AuditRun({ url, pick = true, children }: { url: string; pick?: b
   const listed = steps.filter((step) => step.id !== "suite");
   const score = overallScore(shown);
   const nextSteps = priorities(shown);
-  const headlines = takeaways(shown);
   const live = !done && !error;
+  const host = hostOf(url);
+  const allOpen = passage.every((chapter) => openChapters[chapter]);
+  const chapters = done
+    ? [...passage].sort((left, right) => {
+        const leftScore = chapterValue(shown, left);
+        const rightScore = chapterValue(shown, right);
+        if (leftScore === null && rightScore === null) return 0;
+        if (leftScore === null) return 1;
+        if (rightScore === null) return -1;
+        return leftScore - rightScore;
+      })
+    : [...passage];
+
+  function exportCsv() {
+    const rows = [["Catégorie", "Point", "Statut", "Constat", "À faire"]];
+    for (const chapter of passage) {
+      for (const step of shown.filter((item) => item.chapter === chapter)) {
+        rows.push([chapter, step.label, mark(step.state), step.detail, step.action]);
+      }
+    }
+    const csv = rows.map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(",")).join("\n");
+    const blob = new Blob([`\uFEFF${csv}`], { type: "text/csv;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `audit-${host}.csv`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+    setExportNote(`Rapport exporté : audit-${host}.csv`);
+  }
 
   return (
-    <div>
-      <div className={children ? "grid items-start gap-12 lg:grid-cols-12" : "flex justify-end"}>
-        {children ? <div className="lg:col-span-7">{children}</div> : null}
-        <aside className={children ? "order-first lg:order-none lg:col-span-5" : "max-w-md"} aria-label="Score de la lecture">
-          <p className="break-all font-mono text-xs tracking-wide text-mute">{url}</p>
-          <p className="mt-2 font-mono text-xs tracking-wide text-mute">{live ? "Lecture en cours" : "Lecture publique"}</p>
-          <div className="mt-4 flex items-end gap-3">
-            <RollingScore value={score} live={live} />
-            <p className="mb-3 font-mono text-sm text-mute">/ 100</p>
-          </div>
-          <p className="sr-only">{live ? "Score en cours de calcul" : `Score ${score} sur 100`}</p>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed">{live ? "Le nombre suit les parties déjà lues." : scoreLabel(score)}</p>
-          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <li className="flex items-center gap-2">
-              <span className="h-2 w-2 bg-error" aria-hidden="true" />
-              {failed} à corriger
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="h-2 w-2 bg-wait" aria-hidden="true" />
-              {warned} à revoir
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="h-2 w-2 bg-line" aria-hidden="true" />
-              {unread.length} hors lecture
-            </li>
-          </ul>
-          <p className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
-            {done ? (
-              <button type="button" onClick={reread} className="border-b border-ink pb-0.5">
-                Relire
-              </button>
-            ) : null}
-            {done ? (
-              <a href={`/audit/json?url=${encodeURIComponent(url)}`} className="border-b border-ink pb-0.5">
-                Lire le JSON
-              </a>
-            ) : null}
-          </p>
-          {error ? (
-            <p className="mt-6 text-sm" role="alert">
-              {error}
+    <div className={embedded ? "pt-8" : "mx-auto w-full max-w-[1200px] px-5 py-12 text-[#14161F] sm:px-8 lg:px-10 lg:py-14"}>
+      {children}
+      <p className="font-mono text-xs tracking-[0.05em] text-primary uppercase">Audit gratuit</p>
+      <div className="mt-4 grid items-stretch gap-6 [grid-template-columns:repeat(auto-fit,minmax(20rem,1fr))]">
+        <section className="flex flex-wrap items-center gap-8 rounded-2xl border border-[#E2E5F0] bg-white p-7" aria-label="Score de la lecture">
+          <ScoreRing value={score} live={live} />
+          <div className="min-w-[15rem] flex-1">
+            <p className="text-sm text-[#4A4F63]">
+              {host} · {live ? "lecture en cours" : "lecture publique"}
             </p>
-          ) : null}
-        </aside>
+            <h1 className="mt-1.5 font-headline text-[2rem] leading-[1.1] font-extrabold tracking-[-0.03em] sm:text-4xl">
+              {live ? "Lecture en cours" : scoreLabel(score)}
+            </h1>
+            <p className="sr-only">{live ? "Score en cours de calcul" : `Score ${score} sur 100`}</p>
+            <div className="mt-4 flex flex-wrap gap-2.5">
+              <Pill tone="bad">{failed} à corriger</Pill>
+              <Pill tone="wait">{warned} à revoir</Pill>
+              <Pill tone="neutral">{unread.length} hors lecture</Pill>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-5 text-sm font-semibold">
+              {done ? (
+                <button type="button" onClick={reread} className="text-[#14161F]">
+                  Relire
+                </button>
+              ) : null}
+              {done ? (
+                <a href={`/audit/json?url=${encodeURIComponent(url)}`} className="rounded-[10px] border border-[#C9CEE0] px-3.5 py-1.5">
+                  Lire le JSON
+                </a>
+              ) : null}
+            </div>
+            {error ? (
+              <p className="mt-4 text-sm" role="alert">
+                {error}
+              </p>
+            ) : null}
+          </div>
+        </section>
+
+        {embedded ? null : (
+          <form action={startAudit} method="POST" className="flex flex-col justify-center gap-3.5 rounded-2xl border border-[#E2E5F0] bg-white p-7">
+            <label htmlFor="audit-url" className="font-mono text-xs tracking-[0.05em] text-[#4A4F63] uppercase">
+              Adresse du site
+            </label>
+            <input
+              id="audit-url"
+              name="url"
+              type="text"
+              required
+              defaultValue={url}
+              autoComplete="url"
+              autoCapitalize="off"
+              spellCheck={false}
+              inputMode="url"
+              className="w-full rounded-[10px] border border-[#C9CEE0] px-4 py-3.5 text-base text-[#14161F] outline-none focus:border-primary"
+            />
+            <button type="submit" className="min-h-12 rounded-[10px] bg-primary px-5 py-3.5 text-base font-semibold text-white">
+              Auditer gratuitement
+            </button>
+            <p className="text-sm text-[#4A4F63]">Gratuit, sans compte. On lit la page d&apos;accueil : titre, description, indexation, images, mobile.</p>
+          </form>
+        )}
       </div>
 
-      <section className="mt-20" aria-labelledby="audit-results">
-        <p className="font-mono text-xs tracking-wide text-mute">Les résultats</p>
-        <h2 id="audit-results" className="display mt-3 max-w-[16ch] text-4xl md:text-5xl">
-          Ce qui bloque, ce qui peut attendre, ce qui n&apos;a pas été lu.
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <article className="border border-line border-t-2 border-t-error p-6">
-            <h3 className="text-lg text-error">Ce qui bloque</h3>
-            <ul className="mt-4">
-              {blocked.length ? (
-                blocked.map((step) => (
-                  <li key={step.id} className="flex items-baseline justify-between gap-4 border-t border-line py-3 text-sm">
-                    <span>{step.label}</span>
-                    <span className="shrink-0 font-mono text-xs text-mute">{step.dimension}</span>
-                  </li>
-                ))
-              ) : (
-                <li className="border-t border-line py-3 text-sm text-mute">{live ? "Pas encore." : "Rien qui bloque."}</li>
-              )}
-            </ul>
-          </article>
-          <article className="border border-line border-t-2 border-t-wait p-6">
-            <h3 className="text-lg text-wait">Ce qui peut attendre</h3>
-            <ul className="mt-4">
-              {waiting.length ? (
-                waiting.map((step) => (
-                  <li key={step.id} className="flex items-baseline justify-between gap-4 border-t border-line py-3 text-sm">
-                    <span>{step.label}</span>
-                    <span className="shrink-0 font-mono text-xs text-mute">{step.dimension}</span>
-                  </li>
-                ))
-              ) : (
-                <li className="border-t border-line py-3 text-sm text-mute">{live ? "Pas encore." : "Rien à remettre."}</li>
-              )}
-            </ul>
-          </article>
-          <article className="border border-line p-6">
-            <h3 className="text-lg">Ce qui n&apos;a pas été lu</h3>
-            <ul className="mt-4">
-              {unread.map((line) => (
-                <li key={line} className="border-t border-line py-3 text-sm leading-relaxed">
-                  {line}
+      <h2 className="mt-14 font-headline text-[2rem] font-extrabold tracking-[-0.03em]">Ce qui bloque, ce qui peut attendre</h2>
+      <div className="mt-5 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))]">
+        <article className="rounded-2xl border border-[#E2E5F0] border-t-4 border-t-[#B3261E] bg-white p-6">
+          <h3 className="text-[17px] font-semibold text-[#9B1C15]">Ce qui bloque · {blocked.length}</h3>
+          <ul className="mt-3">
+            {blocked.length ? (
+              blocked.map((step) => (
+                <li key={step.id} className="flex items-center gap-3 border-t border-[#EEF0F6] py-3 first:border-t-0">
+                  <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#B3261E]" aria-hidden="true" />
+                  <span className="min-w-0 flex-1 font-semibold">{step.label}</span>
+                  <span className="shrink-0 font-mono text-[11px] tracking-[0.04em] text-[#4A4F63] uppercase">{step.dimension}</span>
                 </li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section className="mt-16" aria-labelledby="audit-lectures">
-        <h2 id="audit-lectures" className="font-mono text-xs tracking-wide text-mute">
-          Sept lectures
-        </h2>
-        <ol className="mt-4 flex flex-wrap gap-x-5 gap-y-3" aria-label="Parties de l'audit">
-          {passage.map((chapter) => {
-            const items = listed.filter((step) => step.chapter === chapter);
-            const running = items.some((step) => step.state === "running");
-            const settledItems = items.filter((step) => step.state !== "running");
-            const loading = running || (!done && settledItems.length === 0);
-            const value = chapterValue(shown, chapter);
-            const marker = loading ? "(...)" : value !== null ? `(${value})` : "";
-            return (
-              <li key={chapter}>
-                <a
-                  href={`#audit-${chapter}`}
-                  className={`border-b border-ink pb-0.5 text-sm${loading ? " audit-live" : ""}`}
-                  aria-label={loading ? `${chapter}, en cours` : value !== null ? `${chapter}, ${value} sur 100` : chapter}
-                >
-                  {chapter}
-                  {marker ? <span aria-hidden="true"> {marker}</span> : null}
-                </a>
+              ))
+            ) : (
+              <li className="pt-3 text-sm text-[#4A4F63]">{live ? "Pas encore." : "Rien qui bloque."}</li>
+            )}
+          </ul>
+        </article>
+        <article className="rounded-2xl border border-[#E2E5F0] border-t-4 border-t-[#B26A00] bg-white p-6">
+          <h3 className="text-[17px] font-semibold text-[#7A4500]">Ce qui peut attendre · {waiting.length}</h3>
+          <p className="mt-3 text-sm leading-8 text-[#4A4F63]">{waiting.length ? waiting.map((step) => step.label).join(" · ") : live ? "Pas encore." : "Rien à remettre."}</p>
+        </article>
+        <article className="rounded-2xl border border-[#E2E5F0] border-t-4 border-t-[#C9CEE0] bg-white p-6">
+          <h3 className="text-[17px] font-semibold">Ce qui n&apos;a pas été lu · {unread.length}</h3>
+          <ul className="mt-3 flex flex-col gap-2">
+            {unread.map((line) => (
+              <li key={line} className="text-sm leading-relaxed text-[#4A4F63]">
+                {line}
               </li>
-            );
-          })}
-        </ol>
-      </section>
+            ))}
+          </ul>
+        </article>
+      </div>
 
-      <section className="mt-16" aria-labelledby="audit-detail">
-        <h2 id="audit-detail" className="display text-4xl md:text-5xl">
-          Le détail, par catégorie.
-        </h2>
-        {live && listed.length === 0 ? <AuditMorph seed={url} /> : null}
-        <div className="mt-10 flex flex-col gap-6">
-          {passage.map((chapter) => {
-            const value = chapterValue(shown, chapter);
-            const standing = chapterStanding(listed, chapter, done);
-            const blurb =
-              chapter === "Machine"
-                ? machineNote(shown)
-                : listed.find((step) => step.chapter === chapter && (step.state === "fail" || step.state === "warn"))?.detail ||
-                  "Sur 100, à partir des points de cette partie.";
-            const wide = chapter === "Machine";
-            return (
-              <article key={chapter} className={`border border-line p-6 md:p-8${wide ? " md:col-span-2" : ""}`}>
-                <div className="flex items-baseline justify-between gap-4">
-                  <h3 id={`audit-${chapter}`} className="scroll-mt-28 text-2xl">
-                    {chapter}
-                  </h3>
-                  <p className={`font-mono text-xs ${standing === "À corriger" ? "text-error" : standing === "À revoir" ? "text-wait" : standing === "En cours" ? "audit-live text-mute" : "text-mute"}`}>{standing}</p>
+      <h2 className="mt-14 font-headline text-[2rem] font-extrabold tracking-[-0.03em]">Les 5 prochaines actions</h2>
+      <div className="mt-5 rounded-2xl border border-[#E2E5F0] bg-white px-6 py-2 sm:px-7">
+        {nextSteps.length ? (
+          <ol>
+            {nextSteps.map((step, index) => (
+              <li key={step.id} className="flex flex-wrap items-center gap-4 border-t border-[#EEF0F6] py-4 first:border-t-0">
+                <span className="w-8 font-headline text-[1.375rem] font-extrabold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                <div className="min-w-[12rem] flex-1">
+                  <p className="font-semibold">{step.label}</p>
+                  <p className="mt-1 text-sm text-[#4A4F63]">{step.action || step.detail}</p>
                 </div>
-                <p className={`display mt-6 text-6xl tabular-nums leading-none ${standing === "À corriger" ? "text-error" : standing === "À revoir" ? "text-wait" : ""}`}>
-                  {value === null ? <span className="text-mute">—</span> : value}
-                  <span className="text-[0.35em] text-mute"> /100</span>
-                </p>
-                <p className="mt-4 max-w-xl text-sm leading-relaxed text-mute">{blurb}</p>
-                {chapter === "Machine" && done ? (
-                  <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                    {machineLayers.map((layer) => {
-                      const layerValue = layerScore(shown, layer.prefix);
-                      if (layerValue === null) return null;
-                      return (
-                        <li key={layer.id} className="flex items-baseline justify-between gap-4 border-t border-line pt-3 text-sm">
-                          <span>{layer.label}</span>
-                          <span className="font-mono">{layerValue}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                ) : null}
-                <ol className="mt-6 border-t border-line">
-                  {listed
-                    .filter((step) => step.chapter === chapter)
-                    .map((step) => (
-                      <li key={step.id} className="grid grid-cols-[5.5rem_1fr] gap-4 border-b border-line py-5 md:grid-cols-[7rem_1fr]">
-                        <span className={`pt-1 font-mono text-xs tracking-wide ${step.state === "fail" ? "text-error" : step.state === "warn" ? "text-wait" : step.state === "running" ? "audit-live text-mute" : "text-mute"}`}>
-                          {mark(step.state)}
-                        </span>
-                        <div>
-                          <p className="text-lg tracking-tight">{step.label}</p>
-                          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-mute">{step.detail || "En cours."}</p>
-                          {step.state !== "running" && step.why ? <p className="mt-3 max-w-2xl text-sm leading-relaxed">{step.why}</p> : null}
-                          {step.state !== "running" && step.impact !== "aucun" ? (
-                            <p className="mt-3 font-mono text-xs text-mute">
-                              Impact {step.impact}
-                              {step.action ? ` · ${step.effort}` : ""}
+                <Pill tone={step.impact === "élevé" ? "bad" : step.impact === "moyen" ? "wait" : "neutral"}>
+                  Impact {step.impact} · {step.effort}
+                </Pill>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="py-5 text-sm text-[#4A4F63]">{live ? "Pas encore." : "Rien à ouvrir dans cet ordre."}</p>
+        )}
+      </div>
+
+      <div className="mt-14 flex flex-wrap items-center justify-between gap-4">
+        <h2 className="font-headline text-[2rem] font-extrabold tracking-[-0.03em]">Le détail, par catégorie</h2>
+        <div className="flex flex-wrap gap-3">
+          <button
+            type="button"
+            onClick={() => setOpenChapters(allOpen ? {} : Object.fromEntries(passage.map((chapter) => [chapter, true])))}
+            className="rounded-[10px] border border-[#C9CEE0] bg-white px-4 py-2.5 text-sm font-semibold"
+          >
+            {allOpen ? "Tout replier" : "Tout déplier"}
+          </button>
+          <button type="button" onClick={exportCsv} disabled={!done || !shown.length} className="rounded-[10px] bg-primary px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-40">
+            Exporter le rapport (CSV)
+          </button>
+        </div>
+      </div>
+      <p className="mt-2 min-h-6 text-sm text-[#1E7A46]" role="status">
+        {exportNote}
+      </p>
+
+      <div className="flex flex-col gap-4">
+        {chapters.map((chapter) => {
+          const value = chapterValue(shown, chapter);
+          const tone = scoreTone(live ? null : value);
+          const items = listed.filter((step) => step.chapter === chapter);
+          const fails = items.filter((step) => step.state === "fail").length;
+          const warns = items.filter((step) => step.state === "warn").length;
+          const open = Boolean(openChapters[chapter]);
+          const running = items.some((step) => step.state === "running") || (!done && items.length === 0);
+          const standing = running ? "En cours" : fails ? `${fails} à corriger` : warns ? `${warns} à revoir` : value === null ? "Non noté" : "Tenu";
+          const standingTone = running || value === null ? "neutral" : fails ? "bad" : warns ? "wait" : "ok";
+          return (
+            <article key={chapter} className="overflow-hidden rounded-2xl border border-[#E2E5F0] bg-white">
+              <h3 className="m-0">
+                <button
+                  type="button"
+                  aria-expanded={open}
+                  aria-controls={`audit-${chapter}`}
+                  onClick={() => setOpenChapters((current) => ({ ...current, [chapter]: !current[chapter] }))}
+                  className="flex w-full flex-wrap items-center gap-5 px-6 py-6 text-left sm:px-7"
+                >
+                  <span className="w-20 font-headline text-[2.5rem] leading-none font-extrabold tabular-nums" style={{ color: tone.text }}>
+                    {live || value === null ? "—" : value}
+                  </span>
+                  <span className="min-w-[12rem] flex-1">
+                    <span className="block font-headline text-[1.375rem] font-extrabold">{chapter}</span>
+                    <span className="mt-1 block text-sm text-[#4A4F63]">
+                      {items.filter((step) => step.state !== "running").length} points lus · cliquer pour {open ? "replier" : "déplier"}
+                    </span>
+                    <span className="mt-3 block h-1.5 overflow-hidden rounded-full bg-[#EEF0F6]" aria-hidden="true">
+                      <span className="block h-full rounded-full" style={{ width: `${live || value === null ? 0 : value}%`, background: tone.bar }} />
+                    </span>
+                  </span>
+                  <Pill tone={standingTone}>{standing}</Pill>
+                  <span className="w-6 text-center text-[1.375rem] text-[#4A4F63]" aria-hidden="true">
+                    {open ? "−" : "+"}
+                  </span>
+                </button>
+              </h3>
+              {open ? (
+                <div id={`audit-${chapter}`} className="border-t border-[#EEF0F6] px-6 pb-2 sm:px-7">
+                  {chapter === "Machine" ? <p className="pt-4 text-sm text-[#4A4F63]">{machineNote(shown)}</p> : null}
+                  {chapter === "Machine" && done ? (
+                    <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                      {machineLayers.map((layer) => {
+                        const layerValue = layerScore(shown, layer.prefix);
+                        if (layerValue === null) return null;
+                        return (
+                          <li key={layer.id} className="flex items-baseline justify-between gap-4 border-t border-[#EEF0F6] pt-2 text-sm">
+                            <span>{layer.label}</span>
+                            <span className="font-mono">{layerValue}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : null}
+                  <ul>
+                    {items.map((step) => (
+                      <li key={step.id} className="flex flex-wrap items-start gap-3 border-t border-[#EEF0F6] py-4">
+                        <span className={`mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ${dotClass(step.state)}`} aria-hidden="true" />
+                        <div className="min-w-[12rem] flex-1">
+                          <p className="font-semibold">{step.label}</p>
+                          <p className="mt-1 text-sm leading-relaxed text-[#4A4F63]">{step.detail || "En cours."}</p>
+                          {step.state !== "running" && step.why ? <p className="mt-2 text-sm leading-relaxed">{step.why}</p> : null}
+                          {step.state !== "running" && step.action ? (
+                            <p className="mt-2 text-sm">
+                              <b>À faire :</b> {step.action}
                             </p>
                           ) : null}
-                          {step.action ? <p className="mt-2 max-w-2xl text-sm">À faire : {step.action}</p> : null}
                         </div>
+                        <Pill tone={pillTone(step.state)}>{mark(step.state)}</Pill>
                       </li>
                     ))}
-                </ol>
-              </article>
-            );
-          })}
+                  </ul>
+                </div>
+              ) : null}
+            </article>
+          );
+        })}
+      </div>
+
+      {pick && !error ? <SitemapPick origin={url} /> : null}
+
+      <section className="mt-14 mb-6 flex flex-wrap items-center justify-between gap-8 rounded-2xl bg-[#14161F] px-7 py-10 text-white sm:px-10" aria-labelledby="audit-cta">
+        <div className="max-w-[38rem]">
+          <h2 id="audit-cta" className="font-headline text-[2rem] font-extrabold tracking-[-0.03em]">
+            Parlons de ce que la page a montré.
+          </h2>
+          <p className="mt-3 text-base leading-relaxed text-[#D5D8E6]">
+            Réponse sous un jour ouvré, du lundi au vendredi, de 9 h à 19 h. Le premier échange de trente minutes est gratuit.
+          </p>
         </div>
-      </section>
-
-      {done && shown.length > 0 ? (
-        <>
-          <section className="mt-20" aria-labelledby="audit-reading">
-            <p className="font-mono text-xs tracking-wide text-mute">Ce que dit cette lecture</p>
-            <h2 id="audit-reading" className="display mt-3 max-w-[14ch] text-4xl md:text-5xl">
-              Une lecture, pas un devis.
-            </h2>
-            <ol className="mt-8 max-w-3xl">
-              {headlines.map((item, index) => (
-                <li key={item.dimension} className="grid grid-cols-[3rem_1fr] gap-4 border-t border-line py-5">
-                  <span className="font-mono text-sm text-mute">{String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <p className="text-lg">{item.dimension}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-mute">{item.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </section>
-
-          {nextSteps.length ? (
-            <section className="mt-20" aria-labelledby="audit-next">
-              <h2 id="audit-next" className="display max-w-[14ch] text-4xl md:text-5xl">
-                Les 5 prochaines actions
-              </h2>
-              <ol className="mt-8 max-w-3xl">
-                {nextSteps.map((step, index) => (
-                  <li key={step.id} className="grid grid-cols-[3rem_1fr] gap-4 border-t border-line py-5">
-                    <span className="font-mono text-sm text-mute">{String(index + 1).padStart(2, "0")}</span>
-                    <div>
-                      <p className="text-lg">{step.label}</p>
-                      <p className="mt-2 text-sm leading-relaxed text-mute">{step.action || step.detail}</p>
-                      <p className="mt-2 font-mono text-xs text-mute">
-                        Impact {step.impact} · effort {step.effort}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </section>
-          ) : null}
-
-          <section className="mt-20" aria-labelledby="audit-with-us">
-            <h2 id="audit-with-us" className="display max-w-[14ch] text-4xl md:text-5xl">
-              Ce que le travail change.
-            </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed">
-              {open.length
-                ? `Les ${open.length} point${open.length > 1 ? "s" : ""} ouverts entrent dans le chantier, pas dans un second rapport.`
-                : "Ce passage ne bloque pas. La suite est le produit, pas un autre diagnostic."}
-            </p>
-            <ul className="mt-10 grid gap-8 md:grid-cols-3">
-              <li className="border-t border-line pt-4">
-                <p className="text-lg">La page qui demande</p>
-                <p className="mt-3 text-sm leading-relaxed text-mute">
-                  Textes en français, formulaire, titres, meta, sitemap et données structurées. Livrés avec le site, pas en option.
-                </p>
-              </li>
-              <li className="border-t border-line pt-4">
-                <p className="text-lg">Le code à vous</p>
-                <p className="mt-3 text-sm leading-relaxed text-mute">
-                  À la remise, le client possède le code, le dépôt et les comptes d&apos;hébergement livrés. Un acompte lance le travail. Le reste suit les étapes livrées.
-                </p>
-              </li>
-              <li className="border-t border-line pt-4">
-                <p className="text-lg">Quelqu&apos;un après</p>
-                <p className="mt-3 text-sm leading-relaxed text-mute">
-                  Les défauts du périmètre convenu sont corrigés avec la livraison. Ensuite un correctif devisé, ou Care, Care Plus, Priority. Pas de prix public.
-                </p>
-              </li>
-            </ul>
-          </section>
-          {pick ? <SitemapPick origin={url} /> : null}
-        </>
-      ) : null}
-
-      <section className="mt-20 border border-line px-6 py-12 md:px-12" aria-labelledby="audit-cta">
-        <div className="grid items-end gap-10 lg:grid-cols-[1.4fr_auto]">
-          <div>
-            <h2 id="audit-cta" className="display max-w-[16ch] text-4xl md:text-5xl">
-              Parlons de ce que la page a montré.
-            </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed">
-              Écrire sert à dire l&apos;adresse, ce qui bloque, et depuis quand. Réponse sous un jour ouvré, du lundi au vendredi, de 9 h à 19 h. Le premier échange de trente minutes est gratuit.
-            </p>
-          </div>
-          <div className="flex flex-col items-start gap-4">
-            <a href="/contact" className="btn">
-              Parler d&apos;un projet
-            </a>
-            <a href={`https://wa.me/${site.phone.replace("+", "")}`} className="border-b border-ink pb-0.5 text-sm">
-              WhatsApp
-            </a>
-            <MailLink className="border-b border-ink pb-0.5 text-sm" />
-          </div>
+        <div className="flex min-w-[14rem] flex-col items-stretch gap-3">
+          <a href="/contact" className="rounded-[10px] bg-white px-6 py-3.5 text-center font-semibold text-[#14161F]">
+            Parler d&apos;un projet
+          </a>
+          <a href={`mailto:${site.email}`} className="text-center text-sm text-white">
+            {site.email}
+          </a>
         </div>
       </section>
     </div>

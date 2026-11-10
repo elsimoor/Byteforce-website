@@ -150,7 +150,7 @@ export function AuditTabs({ lotId }: { lotId: string }) {
       <div id="audit-tab-panel" role="tabpanel" aria-labelledby={active ? tabDomId(active.url) : undefined} className="relative z-0 bg-paper px-6 pb-16 md:px-10">
         {tabs.map((tab) => (
           <div key={tab.url} hidden={tab.url !== active?.url}>
-            <AuditRun url={tab.url} pick={false} />
+            <AuditRun url={tab.url} pick={false} embedded />
           </div>
         ))}
       </div>
