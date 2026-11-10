@@ -99,10 +99,10 @@ export default function OutilsHubPage() {
             <h1 className="font-headline text-[clamp(3.25rem,8.8vw,8rem)] leading-[0.95] font-extrabold tracking-[-0.045em]">
               Outils gratuits<span className="text-primary">.</span>
             </h1>
-            <p className="max-w-[640px] text-lg text-[#2A2E4A]">
+            <p className="max-w-[30rem] text-lg text-[#2A2E4A]">
               Trois utilitaires rapides, sans inscription et sans publicité. Le traitement s&apos;exécute directement sur votre appareil. À aucun moment vos documents, vos codes sources ou vos données ne sont conservés sur nos serveurs.
             </p>
-            <ul className="flex flex-wrap gap-x-6 gap-y-2.5 font-mono text-[13px]">
+            <ul className="flex max-w-[30rem] flex-wrap gap-x-6 gap-y-2.5 font-mono text-[13px]">
               {["Aucun compte requis", "Traitement in-browser", "Confidentialité 100% garantie"].map((item) => (
                 <li key={item} className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 bg-primary" />
