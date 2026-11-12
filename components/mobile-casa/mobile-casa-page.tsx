@@ -5,6 +5,7 @@ import Link from "next/link";
 import posthog from "posthog-js";
 import { TurnstileCheck } from "@/components/turnstile-check";
 import { startCrmCanadaMotion } from "@/components/crm-canada/motion";
+import { PlantPhones } from "@/components/mobile-example/plant-phones";
 import "@/components/crm-canada/crm-canada.css";
 
 const posthogEnabled = Boolean(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST);
@@ -76,78 +77,7 @@ export function MobileCasaPage({ faqs, offers, cities }: { faqs: Faq[]; offers: 
               </span>
             </div>
           </div>
-          <div>
-            <div className="mock" data-build="box" data-by="Produit">
-              <div className="mock-top">
-                <div className="tabs">
-                  <span>Geste</span>
-                  <span className="on">Écrans</span>
-                  <span>Hors ligne</span>
-                  <span>Build</span>
-                </div>
-                <span className="chip">EXEMPLE</span>
-              </div>
-              <div className="board">
-                <div className="col">
-                  <h4>
-                    <i style={{ background: "#8B5CF6" }} />
-                    À cadrer<span>2</span>
-                  </h4>
-                  <div className="lead" style={{ ["--n" as string]: 0 }}>
-                    <b>Dossier A</b>
-                    <small>Geste reçu</small>
-                  </div>
-                  <div className="lead" style={{ ["--n" as string]: 1 }}>
-                    <b>Dossier B</b>
-                    <small>Hors première version</small>
-                    <span className="tag">Relance</span>
-                  </div>
-                </div>
-                <div className="col">
-                  <h4>
-                    <i style={{ background: "#3B82F6" }} />
-                    Écrans<span>1</span>
-                  </h4>
-                  <div className="lead" style={{ ["--n" as string]: 2 }}>
-                    <b>Dossier C</b>
-                    <small>Parcours noté</small>
-                  </div>
-                </div>
-                <div className="col">
-                  <h4>
-                    <i style={{ background: "#F59E0B" }} />
-                    Hors ligne<span>2</span>
-                  </h4>
-                  <div className="lead" style={{ ["--n" as string]: 3 }}>
-                    <b>Dossier D</b>
-                    <small>Photo sur place</small>
-                  </div>
-                  <div className="lead" style={{ ["--n" as string]: 4 }}>
-                    <b>Dossier E</b>
-                    <small>Réseau coupé</small>
-                    <span className="tag">Relance</span>
-                  </div>
-                </div>
-                <div className="col">
-                  <h4>
-                    <i style={{ background: "#10B981" }} />
-                    Build<span>1</span>
-                  </h4>
-                  <div className="lead" style={{ ["--n" as string]: 5 }}>
-                    <b>Dossier F</b>
-                    <small>Compte de test</small>
-                  </div>
-                </div>
-              </div>
-              <div className="mock-foot">
-                <span>Pas un store</span>
-                <strong>Aucun téléchargement affiché</strong>
-              </div>
-            </div>
-            <p className="cap" data-build="box">
-              ÉCRAN D’EXEMPLE · DONNÉES FICTIVES
-            </p>
-          </div>
+          <PlantPhones />
         </div>
       </section>
 
@@ -202,7 +132,7 @@ export function MobileCasaPage({ faqs, offers, cities }: { faqs: Faq[]; offers: 
                 Lire l’offre Maroc <span>↗</span>
               </Link>
             </div>
-            <p data-build="text">Les dossiers de l’écran d’exemple sont fictifs. Ils ne sont pas un client, ni un nombre de téléchargements.</p>
+            <p data-build="text">Les plantes de l’écran d’exemple sont fictives. Elles ne sont pas un client, ni un nombre de téléchargements.</p>
           </div>
         </div>
       </section>
