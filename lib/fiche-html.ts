@@ -14,7 +14,7 @@ function esc(value: string) {
 export function ficheHtml(options: { title: string; description: string; path: string; markdown: string }) {
   const origin = site.url.replace(/\/$/, "");
   const url = `${origin}${options.path}`;
-  const image = `${origin}/opengraph-image`;
+  const image = `${origin}/opengraph-image.jpg`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",

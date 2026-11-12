@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: meta.title,
       description: meta.description,
-      images: ["/opengraph-image"],
+      images: ["/opengraph-image.jpg"],
     },
     robots: { index: true, follow: true },
   };

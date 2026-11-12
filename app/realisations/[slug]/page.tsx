@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }: Props) {
         dateModified: project.year,
         url: pageUrl,
         mainEntityOfPage: pageUrl,
-        image: project.shot ? `${site.url}${project.shot}` : `${site.url}/opengraph-image`,
+        image: project.shot ? `${site.url}${project.shot}` : `${site.url}/opengraph-image.jpg`,
         author: { "@id": `${site.url}/#business` },
         publisher: { "@id": `${site.url}/#business` },
         about: { "@type": "CreativeWork", name: project.title, url: project.url },
