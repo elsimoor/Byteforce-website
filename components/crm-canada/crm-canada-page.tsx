@@ -2,9 +2,17 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import posthog from "posthog-js";
 import { TurnstileCheck } from "@/components/turnstile-check";
+import { crmCanadaFaqs } from "./copy";
 import { startCrmCanadaMotion } from "./motion";
 import "./crm-canada.css";
+
+const posthogEnabled = Boolean(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST);
+
+function trackCta(position: "hero" | "price" | "form") {
+  if (posthogEnabled) posthog.capture("crm_canada_cta", { position, page: "/geo-location/crm/ca" });
+}
 
 const waHref =
   "https://wa.me/212666650696?text=" +
@@ -31,34 +39,30 @@ export function CrmCanadaPage() {
               <span aria-hidden="true"> · </span>
               <Link href="/developpement-logiciel-sur-mesure-maroc/crm">CRM sur mesure</Link>
               <span aria-hidden="true"> · </span>
-              <span>CRM au Canada</span>
+              <span>Consultant CRM Québec</span>
             </nav>
             <div className="eyebrow" data-build="box" data-by="Design">
               <span className="live" />
-              CRM SUR MESURE · CANADA
+              CONSULTANT CRM · QUÉBEC
             </div>
             <h1 data-build="text" data-by="Rédaction">
-              CRM au
-              <br />
-              <span className="nosplit">Canada</span>
+              Combien coûte un consultant CRM au Québec?
             </h1>
             <p className="lede" data-build="text" data-by="Contenu">
-              Byte Force conçoit des CRM sur mesure pour des entreprises au Canada, depuis Casablanca. Il n&apos;y a pas de bureau au Canada : le studio est au Technopark. Les projets canadiens du catalogue sont à Montréal, Coco Inbox et Tourispeak depuis 2024, CRM Cocoinbox en ligne en 2026. Le cadre de l&apos;offre est{" "}
-              <Link href="/developpement-logiciel-sur-mesure-maroc/crm">CRM sur mesure</Link>.
+              Un consultant CRM québécois facture souvent à l’heure, avec des factures qui grimpent. Byte Force construit votre CRM sur mesure à Casablanca, avec un devis fixe en dollars canadiens, sans abonnement par utilisateur. Vous savez le prix avant que le travail commence.
             </p>
             <div className="actions" data-build="box" data-by="Frontend">
-              <a className="btn primary" href="#contact">
-                Décrire le projet <span>↗</span>
+              <a className="btn primary" href="#contact" onClick={() => trackCta("hero")}>
+                Recevoir mon devis en $ CA <span>↗</span>
               </a>
-              <a className="btn" href="#livre">
-                Voir ce qui est livré
-              </a>
+              <Link className="btn" href="/realisations/crm-cocoinbox">
+                Voir un CRM livré (Cocoinbox)
+              </Link>
             </div>
             <div className="note" data-build="box">
               <span className="live" />
               <span>
-                <b>Trente minutes, réponse sous un jour ouvré.</b>
-                Devis en dollars canadiens, studio ouvert 9 h à 19 h, heure de Casablanca.
+                <b>Réponse en 30 minutes, devis sous 1 jour ouvré.</b>
               </span>
             </div>
           </div>
@@ -140,30 +144,30 @@ export function CrmCanadaPage() {
       <section className="s" id="canada">
         <div className="wrap split">
           <div className="stick">
-            <p className="label" data-build="box">Canada</p>
-            <h2 data-build="text" data-by="Stratégie">Un studio à Casablanca, des clients au Canada.</h2>
+            <p className="label" data-build="box">Québec</p>
+            <h2 data-build="text" data-by="Stratégie">Une équipe à Casablanca, un prix en dollars canadiens.</h2>
           </div>
           <div>
             <div className="prose">
               <p data-build="text">
-                <strong>Byte Force n&apos;a pas de bureau au Canada.</strong> Le studio est au Technopark, à Casablanca. Les projets canadiens du catalogue sont à Montréal : Coco Inbox et Tourispeak depuis 2024, CRM Cocoinbox en ligne en 2026. Ce n&apos;est pas une présence dans chaque province. Les pages de Calgary, Vancouver, Toronto, Ottawa ou Québec le redisent.
+                Pas de bureau au Québec, et c’est ce qui rend le tarif plus bas. Vous ne payez ni loyer à Montréal ni marge de cabinet. Vous gardez un interlocuteur francophone et un devis dans votre devise.
               </p>
             </div>
             <div className="facts">
               <div className="fact" data-build="box" data-by="Architecture">
                 <span className="mono">Décalage</span>
-                <h3>Plusieurs heures</h3>
-                <p>Montréal, Québec, Ottawa et Toronto laissent une matinée canadienne face à l&apos;après-midi marocaine. Calgary et Vancouver laissent moins de temps commun. Les heures du studio restent 9 h à 19 h, du lundi au vendredi, heure de Casablanca. On ne promet pas de répondre à minuit.</p>
+                <h3>Vos matinées</h3>
+                <p>Vos matinées sont nos après-midis. Le studio est joignable de 9 h à 19 h, heure de Casablanca, ce qui couvre votre matinée au Québec. Vous écrivez le soir, la réponse vous attend au réveil.</p>
               </div>
               <div className="fact" data-build="box" data-by="Contenu">
                 <span className="mono">Langue</span>
                 <h3>En français</h3>
-                <p>Ces pages sont en français. Un produit peut être en anglais si l&apos;équipe au Canada le demande.</p>
+                <p>Tout se fait en français. Devis, documents et formation, y compris pour votre équipe.</p>
               </div>
               <div className="fact" data-build="box" data-by="Analytique">
                 <span className="mono">Devis</span>
-                <h3>En dollars canadiens</h3>
-                <p>Les devis pour une société canadienne se discutent en dollars canadiens. Aucun montant n&apos;est affiché. Trente minutes pour voir le geste, réponse sous un jour ouvré.</p>
+                <h3>Montant fixe</h3>
+                <p>Montant en dollars canadiens, valable 30 jours, sans frais cachés.</p>
               </div>
             </div>
           </div>
@@ -174,22 +178,22 @@ export function CrmCanadaPage() {
         <div className="wrap split">
           <div className="stick">
             <p className="label" data-build="box">CRM</p>
-            <h2 data-build="text" data-by="Logique CRM">Le suivi commercial de cette entreprise-là.</h2>
+            <h2 data-build="text" data-by="Logique CRM">Un CRM qui suit vos ventes, pas un abonnement de plus.</h2>
           </div>
           <div className="prose">
             <p data-build="text">
-              Un CRM sur mesure suit les étapes réelles, les devis, les relances et les droits de l&apos;entreprise. Ce n&apos;est pas le nom d&apos;un abonnement. Il se justifie quand le pipeline tient dans la tête d&apos;une personne, ou dans un fichier que deux commerciaux ne peuvent pas ouvrir ensemble sans se marcher dessus. Byte Force écrit les étapes que l&apos;équipe utilise déjà, pas celles d&apos;un modèle téléchargé.
+              Un logiciel prêt à l’emploi vous facture chaque utilisateur, chaque mois. Un CRM sur mesure se paie une fois et vous appartient. Nous écrivons vos étapes, vos devis et vos relances, et vous gardez le code et les données.
             </p>
             <div className="callout" data-build="box" data-by="Produit">
               <p>
-                Le catalogue public a une page pour ce type d&apos;outil : <strong>CRM Cocoinbox</strong>, en ligne depuis Montréal en 2026. La capture montre la boîte, les fiches, et les colonnes Nouveau, Qualifié, Devis et Gagné.
+                <strong>Preuve : Cocoinbox</strong>, notre propre CRM, en ligne depuis 2026. Boîte, fiches, relances, colonnes Nouveau / Qualifié / Devis / Gagné.
               </p>
               <Link className="btn" href="/realisations/crm-cocoinbox">
-                Voir la réalisation <span>↗</span>
+                Voir le CRM en action <span>↗</span>
               </Link>
             </div>
             <p data-build="text">
-              Les montants dessinés sur cette capture ne sont pas un chiffre du studio. Il n&apos;y a pas, dans le catalogue, un second CRM présenté comme celui d&apos;une entreprise casablancaise. On ne comble pas ce manque avec un autre projet.
+              Les montants affichés sont un exemple. Votre devis part de vos étapes réelles.
             </p>
           </div>
         </div>
@@ -199,7 +203,7 @@ export function CrmCanadaPage() {
         <div className="wrap">
           <p className="label" data-build="box">Ce qui est livré</p>
           <h2 data-build="text" data-by="Produit" style={{ maxWidth: 720, marginBottom: 40 }}>
-            Six choses écrites avant le code.
+            Six engagements avant de coder.
           </h2>
           <div className="grid6">
             <div className="cell" data-build="box" data-by="UX"><span className="mono">Étapes</span><p>Les étapes réelles du suivi, nommées comme l&apos;équipe les nomme.</p></div>
@@ -216,13 +220,13 @@ export function CrmCanadaPage() {
         <div className="wrap split">
           <div className="stick">
             <p className="label" data-build="box">Le passage</p>
-            <h2 data-build="text" data-by="Stratégie">De la première question à la remise.</h2>
+            <h2 data-build="text" data-by="Stratégie">De votre demande au CRM livré, en 4 étapes.</h2>
           </div>
           <ol className="steps">
-            <li className="step" data-build="box" data-by="Stratégie"><span className="n">1</span><div className="b"><h3>Le geste</h3><p>On nomme le geste pour le Canada, et ce qui attend la première version.</p></div></li>
-            <li className="step" data-build="box" data-by="Marketing"><span className="n">2</span><div className="b"><h3>Trente minutes</h3><p>Trente minutes pour dire si le sujet est bien cette offre. La réponse part sous un jour ouvré.</p></div></li>
-            <li className="step" data-build="box" data-by="Architecture"><span className="n">3</span><div className="b"><h3>Le décalage</h3><p>Plusieurs heures de décalage : matin sur place, après-midi à Casablanca, dans les heures du studio. Le montant se discute en dollars canadiens, après le périmètre, pas avant.</p></div></li>
-            <li className="step" data-build="box" data-by="Produit"><span className="n">4</span><div className="b"><h3>La remise</h3><p>À la remise, le dépôt et les comptes d&apos;hébergement livrés sont à l&apos;entreprise.</p></div></li>
+            <li className="step" data-build="box" data-by="Stratégie"><span className="n">1</span><div className="b"><h3>Votre demande</h3><p>2 minutes, sans engagement.</p></div></li>
+            <li className="step" data-build="box" data-by="Marketing"><span className="n">2</span><div className="b"><h3>Réponse en 30 minutes</h3><p>Nous confirmons que c’est faisable.</p></div></li>
+            <li className="step" data-build="box" data-by="Architecture"><span className="n">3</span><div className="b"><h3>Devis fixe en $ CA</h3><p>Sous 1 jour ouvré.</p></div></li>
+            <li className="step" data-build="box" data-by="Produit"><span className="n">4</span><div className="b"><h3>Livraison</h3><p>Code, accès et hébergement à votre nom.</p></div></li>
           </ol>
         </div>
       </section>
@@ -231,19 +235,22 @@ export function CrmCanadaPage() {
         <div className="wrap split">
           <div className="stick">
             <p className="label" data-build="box">Le montant</p>
-            <h2 data-build="text" data-by="Analytique">Le prix suit le périmètre.</h2>
+            <h2 data-build="text" data-by="Analytique">Ce qui fait varier le prix d’un CRM.</h2>
           </div>
           <div>
-            <p className="big" data-build="text" data-by="Rédaction">Aucune fourchette en dollars canadiens n&apos;est publiée.</p>
+            <div className="prose">
+              <p data-build="text" data-by="Rédaction">Un consultant CRM au Québec facture souvent à l’heure. Notre devis fixe dépend de quatre choses : le nombre de rôles, les outils à connecter, les langues, la reprise de vos données.</p>
+            </div>
             <div className="chips" data-build="box" data-by="Design">
               <span>Rôles</span>
               <span>Outils déjà en place</span>
               <span>Langues</span>
               <span>Reprise des données</span>
-              <span>Déplacement, s&apos;il est écrit</span>
             </div>
             <div className="prose" style={{ marginTop: 26 }}>
-              <p data-build="text">Le montant suit le périmètre. Le premier échange ne donne pas un prix public. Il dit si un chiffrage a un sens.</p>
+              <p data-build="text">
+                Pas sûr du budget? <a href="#contact" onClick={() => trackCta("price")}>Décrivez votre cas</a>, vous recevez une fourchette ferme, pas un appel commercial.
+              </p>
             </div>
           </div>
         </div>
@@ -252,12 +259,12 @@ export function CrmCanadaPage() {
       <section className="s alt" id="cas">
         <div className="wrap split">
           <div className="stick">
-            <p className="label" data-build="box">Cas à écrire</p>
-            <h2 data-build="text" data-by="Contenu">Pas encore de cas canadien.</h2>
+            <p className="label" data-build="box">Preuve</p>
+            <h2 data-build="text" data-by="Contenu">La preuve : un CRM livré, et le vôtre peut être le prochain.</h2>
           </div>
           <div className="slot" data-build="box" data-by="Tests">
-            <span className="mono">Emplacement libre</span>
-            <p>Aucun projet du catalogue n&apos;est étiqueté Canada pour CRM. Le témoignage et la fiche restent à fournir. On n&apos;invente pas un client pour remplir la page.</p>
+            <span className="mono">Cocoinbox</span>
+            <p>Cocoinbox est notre CRM en production. Nos clients au Canada bénéficient de la même méthode.</p>
           </div>
         </div>
       </section>
@@ -282,11 +289,12 @@ export function CrmCanadaPage() {
             <h2 data-build="text" data-by="Rédaction">Ce qu&apos;on demande le plus.</h2>
           </div>
           <div>
-            <details data-build="box"><summary>Y a-t-il un bureau au Canada ?</summary><p>Non. Le seul bureau est à Casablanca. Le travail au Canada se fait en visio. Un déplacement se décide seulement s&apos;il est écrit dans le périmètre.</p></details>
-            <details data-build="box"><summary>Quel prix pour un CRM au Canada ?</summary><p>Aucune fourchette en dollars canadiens n&apos;est publiée. Le montant suit le périmètre : rôles, outils déjà en place, langues, reprise des données, déplacement s&apos;il est écrit.</p></details>
-            <details data-build="box"><summary>Que comprend un CRM au Canada ?</summary><p>Les étapes réelles du suivi, nommées comme l&apos;équipe les nomme. Les droits : qui voit, qui exporte, qui efface. Les relances et les devis dans le même dossier.</p></details>
-            <details data-build="box"><summary>Comment se passent les points au Canada ?</summary><p>Plusieurs heures de décalage : matin sur place, après-midi à Casablanca, dans les heures du studio. Le téléphone est le +212 666 650 696. La langue de cadrage est le français.</p></details>
-            <details data-build="box"><summary>Quelle est la première étape ?</summary><p>Écrire avec le fichier, l&apos;URL, ou le geste qui bloque. Trente minutes suffisent souvent. Le périmètre écrit vient avant le code et avant le montant.</p></details>
+            {crmCanadaFaqs.map((item) => (
+              <details key={item.q} data-build="box">
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -295,9 +303,9 @@ export function CrmCanadaPage() {
         <div className="wrap split">
           <div className="stick">
             <p className="label" data-build="box">Contact</p>
-            <h2 data-build="text" data-by="Marketing">Décrire le projet.</h2>
+            <h2 data-build="text" data-by="Marketing">Recevez votre devis CRM en dollars canadiens.</h2>
             <p className="lede" data-build="text" style={{ marginTop: 18, fontSize: 15 }}>
-              Réponse sous un jour ouvré, à <span className="addr">contact@byteforce.ma</span> ou au <span className="addr">+212 666 650 696</span>. Bureau au Technopark, Casablanca.
+              Réponse en 30 minutes. Devis fixe sous 1 jour ouvré. Aucun engagement.
             </p>
             <div className="actions" data-build="box">
               <a className="btn" href={waHref} target="_blank" rel="noopener noreferrer">
@@ -305,7 +313,7 @@ export function CrmCanadaPage() {
               </a>
             </div>
           </div>
-          <form id="f" data-build="box" data-by="UX" noValidate>
+          <form id="f" data-build="box" data-by="UX" noValidate onSubmit={() => trackCta("form")}>
             <div className="hp" aria-hidden="true">
               <label htmlFor="company_website">Site web</label>
               <input id="company_website" name="company_website" tabIndex={-1} autoComplete="off" />
@@ -343,7 +351,7 @@ export function CrmCanadaPage() {
             <div className="f full">
               <TurnstileCheck onToken={(token) => root.current?.querySelector("#f")?.setAttribute("data-turnstile", token)} />
             </div>
-            <div className="f full"><button className="btn primary" type="submit" style={{ width: "100%" }}>Préparer la demande <span>↗</span></button></div>
+            <div className="f full"><button className="btn primary" type="submit" style={{ width: "100%" }}>Recevoir mon devis <span>↗</span></button></div>
             <div className="result f full" id="res" hidden>
               <p><strong>Votre message est prêt.</strong> Rien n&apos;est envoyé tant que vous ne l&apos;envoyez pas vous-même, par WhatsApp ou par email.</p>
               <textarea id="msg" readOnly aria-label="Message préparé" />

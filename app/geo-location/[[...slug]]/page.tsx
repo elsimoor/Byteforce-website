@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { GeoGlobeHub } from "@/components/geo-globe-hub";
+import { crmCanadaFaqs, crmCanadaMeta } from "@/components/crm-canada/copy";
 import { CrmCanadaPage } from "@/components/crm-canada/crm-canada-page";
 import { GeoView } from "@/components/geo-view";
 import { geoDirectory, getGeoPage, indexableGeoPages } from "@/lib/geo/pages";
@@ -32,6 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const page = getGeoPage(["geo-location", ...slug].join("/"));
   if (!page) return {};
+  if (page.path === "geo-location/crm/ca") {
+    return {
+      title: { absolute: crmCanadaMeta.title },
+      description: crmCanadaMeta.description,
+      alternates: { canonical: `/${page.path}` },
+      openGraph: openGraph(`/${page.path}`, crmCanadaMeta.title, crmCanadaMeta.description),
+      robots: { index: true, follow: true },
+    };
+  }
   return {
     title: { absolute: page.title },
     description: page.description,
@@ -63,16 +73,16 @@ export default async function GeoLocationPage({ params }: Props) {
         },
         {
           "@type": "Service",
-          name: page.h1,
+          name: crmCanadaMeta.h1,
           url,
-          description: page.description,
+          description: crmCanadaMeta.description,
           provider: { "@id": `${site.url}/#business` },
           areaServed: { "@type": "Country", name: "Canada" },
           inLanguage: "fr",
         },
         {
           "@type": "FAQPage",
-          mainEntity: page.faqs.map((item) => ({
+          mainEntity: crmCanadaFaqs.map((item) => ({
             "@type": "Question",
             name: item.q,
             acceptedAnswer: { "@type": "Answer", text: item.a },

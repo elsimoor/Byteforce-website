@@ -134,8 +134,8 @@ main.crm-canada .live {
 main.crm-canada h1 {
   margin: 26px 0 22px;
   max-width: none;
-  font-size: clamp(52px, 8.4vw, 112px);
-  line-height: 1;
+  font-size: clamp(36px, 4.4vw, 64px);
+  line-height: 1.02;
   letter-spacing: -0.045em;
   font-weight: 800;
   text-wrap: balance;
@@ -990,7 +990,7 @@ main.crm-canada .wa svg {
   }
 
   main.crm-canada h1 {
-    font-size: clamp(44px, 14vw, 72px);
+    font-size: clamp(32px, 8.5vw, 44px);
   }
 
   main.crm-canada .wa {
