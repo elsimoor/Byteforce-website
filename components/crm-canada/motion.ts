@@ -136,8 +136,9 @@ export function startCrmCanadaMotion(root: HTMLElement) {
   }
 
   const items = [...root.querySelectorAll<BuildEl>("[data-build]")];
-  const layer = root.querySelector<HTMLElement>("#layer");
-  if (!layer) return () => undefined;
+  const layerEl = root.querySelector<HTMLElement>("#layer");
+  if (!layerEl) return () => undefined;
+  const layer: HTMLElement = layerEl;
 
   function split(el: BuildEl) {
     if (el.dataset.split === "1") return [...el.querySelectorAll<HTMLElement>(".w")];
