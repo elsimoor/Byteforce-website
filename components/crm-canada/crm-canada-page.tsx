@@ -28,7 +28,7 @@ export function CrmCanadaPage() {
   }, []);
 
   return (
-    <main ref={root} className="crm-canada" data-landing>
+    <main ref={root} className="cursor-page" data-landing>
       <section className="hero">
         <div className="wrap">
           <div>

@@ -56,7 +56,23 @@ const agents = [
   ["Automatisation", "#4F46E5"],
 ] as const;
 
-export function startCrmCanadaMotion(root: HTMLElement) {
+type MotionCopy = {
+  intro: string;
+  subject: string;
+  country: string;
+  city: string;
+  pageUrl: string;
+};
+
+const canadaCopy: MotionCopy = {
+  intro: "Bonjour Byte Force, je souhaite décrire un projet (CRM au Canada).",
+  subject: "Projet CRM au Canada",
+  country: "Canada",
+  city: "Canada",
+  pageUrl: "https://byteforce.ma/geo-location/crm/ca",
+};
+
+export function startCrmCanadaMotion(root: HTMLElement, copy: MotionCopy = canadaCopy) {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const fx = !reduce;
   if (fx) root.classList.add("fx");
@@ -73,7 +89,7 @@ export function startCrmCanadaMotion(root: HTMLElement) {
       return;
     }
     const text = [
-      "Bonjour Byte Force, je souhaite décrire un projet (CRM au Canada).",
+      copy.intro,
       "",
       `Nom : ${value("nom")}`,
       `Société : ${value("soc") || "-"}`,
@@ -89,7 +105,7 @@ export function startCrmCanadaMotion(root: HTMLElement) {
     const wa = root.querySelector<HTMLAnchorElement>("#wa");
     const mail = root.querySelector<HTMLAnchorElement>("#ml");
     if (wa) wa.href = `https://wa.me/212666650696?text=${encodeURIComponent(text)}`;
-    if (mail) mail.href = `mailto:contact@byteforce.ma?subject=${encodeURIComponent("Projet CRM au Canada")}&body=${encodeURIComponent(text)}`;
+    if (mail) mail.href = `mailto:contact@byteforce.ma?subject=${encodeURIComponent(copy.subject)}&body=${encodeURIComponent(text)}`;
     result.hidden = false;
     result.scrollIntoView({ block: "nearest", behavior: "smooth" });
     void recordLead({
@@ -101,9 +117,9 @@ export function startCrmCanadaMotion(root: HTMLElement) {
       budget: value("type"),
       message: value("projet"),
       company_website: value("company_website"),
-      country: "Canada",
-      city: "Canada",
-      pageUrl: "https://byteforce.ma/geo-location/crm/ca",
+      country: copy.country,
+      city: copy.city,
+      pageUrl: copy.pageUrl,
       turnstile: form.dataset.turnstile ?? "",
     });
   };

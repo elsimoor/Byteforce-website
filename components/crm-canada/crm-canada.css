@@ -1,4 +1,4 @@
-main.crm-canada {
+main.cursor-page {
   --bg: #ffffff;
   --surface: #f6f6f8;
   --card: #ffffff;
@@ -21,24 +21,24 @@ main.crm-canada {
   overflow-x: hidden;
 }
 
-body main.crm-canada a:not(.btn):not([class]) {
+body main.cursor-page a:not(.btn):not([class]) {
   color: inherit;
   font-weight: inherit;
   text-decoration: none;
 }
 
-main.crm-canada .wrap {
+main.cursor-page .wrap {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 
-main.crm-canada .mono {
+main.cursor-page .mono {
   font-family: var(--mono);
 }
 
-main.crm-canada .btn {
+main.cursor-page .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -58,36 +58,36 @@ main.crm-canada .btn {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-main.crm-canada .btn.primary {
+main.cursor-page .btn.primary {
   background: var(--brand);
   color: var(--on-brand);
   border-color: transparent;
 }
 
-main.crm-canada .btn.primary:hover {
+main.cursor-page .btn.primary:hover {
   transform: translateY(-2px);
 }
 
-main.crm-canada .btn.sm {
+main.cursor-page .btn.sm {
   min-height: 40px;
   padding: 0 16px;
 }
 
-main.crm-canada .hero {
+main.cursor-page .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   padding-block: 56px 72px;
 }
 
-main.crm-canada .hero .wrap {
+main.cursor-page .hero .wrap {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 56px;
   align-items: center;
 }
 
-main.crm-canada .crumbs {
+main.cursor-page .crumbs {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 10px;
@@ -98,16 +98,16 @@ main.crm-canada .crumbs {
   color: var(--muted);
 }
 
-main.crm-canada .crumbs a {
+main.cursor-page .crumbs a {
   color: var(--brand);
   font-weight: 500;
 }
 
-main.crm-canada .crumbs a:hover {
+main.cursor-page .crumbs a:hover {
   text-decoration: underline;
 }
 
-main.crm-canada .eyebrow {
+main.cursor-page .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -122,7 +122,7 @@ main.crm-canada .eyebrow {
   color: var(--muted);
 }
 
-main.crm-canada .live {
+main.cursor-page .live {
   width: 7px;
   height: 7px;
   flex: none;
@@ -131,7 +131,7 @@ main.crm-canada .live {
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 22%, transparent);
 }
 
-main.crm-canada h1 {
+main.cursor-page h1 {
   margin: 26px 0 22px;
   max-width: none;
   font-size: clamp(36px, 4.4vw, 64px);
@@ -141,7 +141,7 @@ main.crm-canada h1 {
   text-wrap: balance;
 }
 
-main.crm-canada .lede {
+main.cursor-page .lede {
   max-width: 520px;
   margin: 0;
   font-size: 17px;
@@ -149,23 +149,23 @@ main.crm-canada .lede {
   color: #2e2e34;
 }
 
-main.crm-canada .lede a,
-main.crm-canada .prose a,
-main.crm-canada .fine a {
+main.cursor-page .lede a,
+main.cursor-page .prose a,
+main.cursor-page .fine a {
   color: var(--brand);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-main.crm-canada .actions {
+main.cursor-page .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 30px;
 }
 
-main.crm-canada .note {
+main.cursor-page .note {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -174,13 +174,13 @@ main.crm-canada .note {
   color: var(--muted);
 }
 
-main.crm-canada .note b {
+main.cursor-page .note b {
   display: block;
   color: var(--ink);
   font-weight: 600;
 }
 
-main.crm-canada .mock {
+main.cursor-page .mock {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -188,8 +188,8 @@ main.crm-canada .mock {
   box-shadow: 0 30px 80px var(--shadow), 0 4px 14px color-mix(in srgb, var(--shadow) 40%, transparent);
 }
 
-main.crm-canada .mock-top,
-main.crm-canada .mock-foot {
+main.cursor-page .mock-top,
+main.cursor-page .mock-foot {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,7 +197,7 @@ main.crm-canada .mock-foot {
   flex-wrap: wrap;
 }
 
-main.crm-canada .tabs {
+main.cursor-page .tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -205,18 +205,18 @@ main.crm-canada .tabs {
   font-weight: 600;
 }
 
-main.crm-canada .tabs span {
+main.cursor-page .tabs span {
   padding: 6px 11px;
   border-radius: 7px;
   color: var(--muted);
 }
 
-main.crm-canada .tabs .on {
+main.cursor-page .tabs .on {
   background: var(--brand-soft);
   color: var(--brand);
 }
 
-main.crm-canada .chip {
+main.cursor-page .chip {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -226,21 +226,21 @@ main.crm-canada .chip {
   color: var(--muted);
 }
 
-main.crm-canada .board {
+main.cursor-page .board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
   gap: 10px;
   margin-top: 18px;
 }
 
-main.crm-canada .col {
+main.cursor-page .col {
   min-width: 0;
   background: var(--surface);
   border-radius: 11px;
   padding: 10px;
 }
 
-main.crm-canada .col h4 {
+main.cursor-page .col h4 {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -249,20 +249,20 @@ main.crm-canada .col h4 {
   font-weight: 700;
 }
 
-main.crm-canada .col h4 i {
+main.cursor-page .col h4 i {
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
 
-main.crm-canada .col h4 span {
+main.cursor-page .col h4 span {
   margin-left: auto;
   font-family: var(--mono);
   color: var(--muted);
   font-weight: 500;
 }
 
-main.crm-canada .lead {
+main.cursor-page .lead {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -270,13 +270,13 @@ main.crm-canada .lead {
   margin-top: 8px;
 }
 
-main.crm-canada .lead b {
+main.cursor-page .lead b {
   display: block;
   font-size: 11px;
   font-weight: 600;
 }
 
-main.crm-canada .lead small {
+main.cursor-page .lead small {
   display: block;
   margin-top: 3px;
   font-size: 10px;
@@ -284,7 +284,7 @@ main.crm-canada .lead small {
   line-height: 1.4;
 }
 
-main.crm-canada .tag {
+main.cursor-page .tag {
   display: inline-block;
   margin-top: 8px;
   font-family: var(--mono);
@@ -295,7 +295,7 @@ main.crm-canada .tag {
   color: var(--brand);
 }
 
-main.crm-canada .mock-foot {
+main.cursor-page .mock-foot {
   margin-top: 16px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
@@ -303,12 +303,12 @@ main.crm-canada .mock-foot {
   color: var(--muted);
 }
 
-main.crm-canada .mock-foot strong {
+main.cursor-page .mock-foot strong {
   color: var(--brand);
   font-weight: 600;
 }
 
-main.crm-canada.fx .is-in .lead {
+main.cursor-page.fx .is-in .lead {
   animation: crm-rise 0.6s both;
   animation-delay: calc(var(--n, 0) * 150ms + 450ms);
 }
@@ -318,7 +318,7 @@ main.crm-canada.fx .is-in .lead {
   to { opacity: 1; transform: none; }
 }
 
-main.crm-canada .cap {
+main.cursor-page .cap {
   margin: 12px 2px 0;
   font-family: var(--mono);
   font-size: 10px;
@@ -326,22 +326,22 @@ main.crm-canada .cap {
   color: var(--muted);
 }
 
-main.crm-canada section.s {
+main.cursor-page section.s {
   padding-block: 84px;
   border-top: 1px solid var(--line);
 }
 
-main.crm-canada section.s.alt {
+main.cursor-page section.s.alt {
   background: var(--surface);
 }
 
-main.crm-canada .split {
+main.cursor-page .split {
   display: grid;
   grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
   gap: 56px;
 }
 
-main.crm-canada .label {
+main.cursor-page .label {
   margin: 0 0 14px;
   font-family: var(--mono);
   font-size: 11px;
@@ -350,7 +350,7 @@ main.crm-canada .label {
   color: var(--brand);
 }
 
-main.crm-canada h2 {
+main.cursor-page h2 {
   margin: 0;
   font-size: clamp(30px, 4vw, 46px);
   line-height: 1.04;
@@ -359,68 +359,68 @@ main.crm-canada h2 {
   text-wrap: balance;
 }
 
-main.crm-canada .stick {
+main.cursor-page .stick {
   position: sticky;
   top: 96px;
   align-self: start;
 }
 
-main.crm-canada .prose {
+main.cursor-page .prose {
   display: flex;
   flex-direction: column;
   gap: 18px;
   max-width: 680px;
 }
 
-main.crm-canada .prose p {
+main.cursor-page .prose p {
   margin: 0;
   font-size: 17px;
   line-height: 1.75;
   color: #34343a;
 }
 
-main.crm-canada .prose p strong {
+main.cursor-page .prose p strong {
   color: var(--ink);
   font-weight: 600;
 }
 
-main.crm-canada .facts {
+main.cursor-page .facts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 14px;
   margin-top: 30px;
 }
 
-main.crm-canada .fact,
-main.crm-canada .step .b,
-main.crm-canada .slot,
-main.crm-canada .city,
-main.crm-canada form {
+main.cursor-page .fact,
+main.cursor-page .step .b,
+main.cursor-page .slot,
+main.cursor-page .city,
+main.cursor-page form {
   background: var(--card);
 }
 
-main.crm-canada .fact {
+main.cursor-page .fact {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 22px;
 }
 
-main.crm-canada .fact h3,
-main.crm-canada .step h3 {
+main.cursor-page .fact h3,
+main.cursor-page .step h3 {
   margin: 0 0 10px;
   font-size: 17px;
   letter-spacing: -0.02em;
 }
 
-main.crm-canada .fact p,
-main.crm-canada .step p {
+main.cursor-page .fact p,
+main.cursor-page .step p {
   margin: 0;
   font-size: 14.5px;
   line-height: 1.7;
   color: var(--muted);
 }
 
-main.crm-canada .fact .mono {
+main.cursor-page .fact .mono {
   display: block;
   margin-bottom: 12px;
   font-size: 10px;
@@ -429,7 +429,7 @@ main.crm-canada .fact .mono {
   color: var(--brand);
 }
 
-main.crm-canada .callout {
+main.cursor-page .callout {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -441,7 +441,7 @@ main.crm-canada .callout {
   background: var(--brand-soft);
 }
 
-main.crm-canada .callout p {
+main.cursor-page .callout p {
   max-width: 460px;
   margin: 0;
   font-size: 14.5px;
@@ -449,7 +449,7 @@ main.crm-canada .callout p {
   color: var(--ink);
 }
 
-main.crm-canada .grid6 {
+main.cursor-page .grid6 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
@@ -459,14 +459,14 @@ main.crm-canada .grid6 {
   background: var(--line);
 }
 
-main.crm-canada .cell {
+main.cursor-page .cell {
   min-height: 150px;
   padding: 26px 24px;
   background: var(--card);
 }
 
-main.crm-canada .cell .mono,
-main.crm-canada .slot .mono {
+main.cursor-page .cell .mono,
+main.cursor-page .slot .mono {
   display: block;
   margin-bottom: 14px;
   font-size: 10px;
@@ -475,7 +475,7 @@ main.crm-canada .slot .mono {
   color: var(--brand);
 }
 
-main.crm-canada .cell p {
+main.cursor-page .cell p {
   margin: 0;
   font-size: 16px;
   line-height: 1.55;
@@ -483,7 +483,7 @@ main.crm-canada .cell p {
   letter-spacing: -0.01em;
 }
 
-main.crm-canada .steps {
+main.cursor-page .steps {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -493,7 +493,7 @@ main.crm-canada .steps {
   list-style: none;
 }
 
-main.crm-canada .steps::before {
+main.cursor-page .steps::before {
   content: "";
   position: absolute;
   top: 20px;
@@ -503,14 +503,14 @@ main.crm-canada .steps::before {
   background: var(--line);
 }
 
-main.crm-canada .step {
+main.cursor-page .step {
   display: grid;
   grid-template-columns: 40px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
 }
 
-main.crm-canada .step .n {
+main.cursor-page .step .n {
   position: relative;
   z-index: 1;
   display: grid;
@@ -526,22 +526,22 @@ main.crm-canada .step .n {
   font-weight: 600;
 }
 
-main.crm-canada .step .b {
+main.cursor-page .step .b {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 20px 22px;
 }
 
-main.crm-canada .step h3 {
+main.cursor-page .step h3 {
   margin-bottom: 6px;
   font-size: 18px;
 }
 
-main.crm-canada .step p {
+main.cursor-page .step p {
   font-size: 15px;
 }
 
-main.crm-canada .big {
+main.cursor-page .big {
   max-width: 700px;
   margin: 0;
   font-size: clamp(26px, 3.4vw, 38px);
@@ -551,14 +551,14 @@ main.crm-canada .big {
   text-wrap: balance;
 }
 
-main.crm-canada .chips {
+main.cursor-page .chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 22px;
 }
 
-main.crm-canada .chips span {
+main.cursor-page .chips span {
   padding: 8px 14px;
   border: 1px solid var(--line);
   border-radius: 99px;
@@ -567,7 +567,7 @@ main.crm-canada .chips span {
   font-weight: 500;
 }
 
-main.crm-canada .slot {
+main.cursor-page .slot {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -576,25 +576,25 @@ main.crm-canada .slot {
   border-radius: 16px;
 }
 
-main.crm-canada .slot .mono {
+main.cursor-page .slot .mono {
   margin: 0;
   color: var(--muted);
 }
 
-main.crm-canada .slot p {
+main.cursor-page .slot p {
   max-width: 620px;
   margin: 0;
   font-size: 17px;
   line-height: 1.7;
 }
 
-main.crm-canada .cities {
+main.cursor-page .cities {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
 }
 
-main.crm-canada .city {
+main.cursor-page .city {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -607,24 +607,24 @@ main.crm-canada .city {
   transition: border-color 0.2s, transform 0.2s;
 }
 
-main.crm-canada .city:hover {
+main.cursor-page .city:hover {
   border-color: var(--brand);
   transform: translateY(-2px);
 }
 
-main.crm-canada .city span {
+main.cursor-page .city span {
   color: var(--brand);
 }
 
-main.crm-canada details {
+main.cursor-page details {
   border-bottom: 1px solid var(--line);
 }
 
-main.crm-canada details:first-of-type {
+main.cursor-page details:first-of-type {
   border-top: 1px solid var(--line);
 }
 
-main.crm-canada summary {
+main.cursor-page summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -637,11 +637,11 @@ main.crm-canada summary {
   cursor: pointer;
 }
 
-main.crm-canada summary::-webkit-details-marker {
+main.cursor-page summary::-webkit-details-marker {
   display: none;
 }
 
-main.crm-canada summary::after {
+main.cursor-page summary::after {
   content: "+";
   flex-shrink: 0;
   color: var(--brand);
@@ -650,11 +650,11 @@ main.crm-canada summary::after {
   transition: transform 0.25s;
 }
 
-main.crm-canada details[open] summary::after {
+main.cursor-page details[open] summary::after {
   transform: rotate(45deg);
 }
 
-main.crm-canada details p {
+main.cursor-page details p {
   max-width: 640px;
   margin: 0 0 24px;
   color: var(--muted);
@@ -662,7 +662,7 @@ main.crm-canada details p {
   line-height: 1.75;
 }
 
-main.crm-canada form {
+main.cursor-page form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
@@ -671,30 +671,30 @@ main.crm-canada form {
   border-radius: 18px;
 }
 
-main.crm-canada .f {
+main.cursor-page .f {
   display: flex;
   flex-direction: column;
   gap: 7px;
   min-width: 0;
 }
 
-main.crm-canada .f.full {
+main.cursor-page .f.full {
   grid-column: 1 / -1;
 }
 
-main.crm-canada label {
+main.cursor-page label {
   font-size: 12.5px;
   font-weight: 600;
 }
 
-main.crm-canada label i {
+main.cursor-page label i {
   color: var(--brand);
   font-style: normal;
 }
 
-main.crm-canada input,
-main.crm-canada select,
-main.crm-canada textarea {
+main.cursor-page input,
+main.cursor-page select,
+main.cursor-page textarea {
   width: 100%;
   min-width: 0;
   padding: 12px 13px;
@@ -706,19 +706,19 @@ main.crm-canada textarea {
   font-size: 15px;
 }
 
-main.crm-canada textarea {
+main.cursor-page textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-main.crm-canada .hp {
+main.cursor-page .hp {
   position: absolute;
   left: -9999px;
   height: 0;
   overflow: hidden;
 }
 
-main.crm-canada .result {
+main.cursor-page .result {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -727,48 +727,48 @@ main.crm-canada .result {
   background: var(--brand-soft);
 }
 
-main.crm-canada .result p {
+main.cursor-page .result p {
   margin: 0;
   font-size: 14.5px;
   line-height: 1.65;
 }
 
-main.crm-canada .result textarea {
+main.cursor-page .result textarea {
   min-height: 170px;
   font-family: var(--mono);
   font-size: 12.5px;
 }
 
-main.crm-canada .row {
+main.cursor-page .row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
 
-main.crm-canada .addr {
+main.cursor-page .addr {
   font-family: var(--mono);
   font-size: 13px;
   user-select: all;
 }
 
-main.crm-canada.fx [data-build="box"]:not(.is-in) {
+main.cursor-page.fx [data-build="box"]:not(.is-in) {
   opacity: 0;
   transform: translateY(18px) scale(0.985);
 }
 
-main.crm-canada.fx [data-build="box"] {
+main.cursor-page.fx [data-build="box"] {
   transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-main.crm-canada.fx [data-build="text"] .w {
+main.cursor-page.fx [data-build="text"] .w {
   display: inline-block;
   opacity: 0;
   transform: translateY(0.4em);
   filter: blur(3px);
 }
 
-main.crm-canada.fx [data-build="text"].is-in .w {
+main.cursor-page.fx [data-build="text"].is-in .w {
   opacity: 1;
   transform: none;
   filter: none;
@@ -776,12 +776,12 @@ main.crm-canada.fx [data-build="text"].is-in .w {
   transition-delay: calc(var(--k, 0) * 1ms);
 }
 
-main.crm-canada.fx .now,
-main.crm-canada.fx .now .w {
+main.cursor-page.fx .now,
+main.cursor-page.fx .now .w {
   transition: none !important;
 }
 
-main.crm-canada .layer {
+main.cursor-page .layer {
   position: fixed;
   z-index: 48;
   inset: 0;
@@ -789,12 +789,12 @@ main.crm-canada .layer {
   pointer-events: none;
 }
 
-main.crm-canada:not(.fx) .layer,
-main.crm-canada:not(.fx) .dock {
+main.cursor-page:not(.fx) .layer,
+main.cursor-page:not(.fx) .dock {
   display: none;
 }
 
-main.crm-canada .cur {
+main.cursor-page .cur {
   position: absolute;
   top: 0;
   left: 0;
@@ -805,12 +805,12 @@ main.crm-canada .cur {
   transition: opacity 0.28s;
 }
 
-main.crm-canada .cur svg {
+main.cursor-page .cur svg {
   flex-shrink: 0;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
 }
 
-main.crm-canada .cur .nm {
+main.cursor-page .cur .nm {
   margin-top: 17px;
   padding: 3px 8px;
   border-radius: 6px;
@@ -823,7 +823,7 @@ main.crm-canada .cur .nm {
   transition: opacity 0.3s, transform 0.3s;
 }
 
-main.crm-canada .sel {
+main.cursor-page .sel {
   position: absolute;
   top: 0;
   left: 0;
@@ -833,11 +833,11 @@ main.crm-canada .sel {
   transition: opacity 0.35s;
 }
 
-main.crm-canada .sel.out {
+main.cursor-page .sel.out {
   opacity: 0;
 }
 
-main.crm-canada .sel i {
+main.cursor-page .sel i {
   position: absolute;
   width: 8px;
   height: 8px;
@@ -846,12 +846,12 @@ main.crm-canada .sel i {
   background: #fff;
 }
 
-main.crm-canada .sel i:nth-child(1) { left: -5px; top: -5px; }
-main.crm-canada .sel i:nth-child(2) { right: -5px; top: -5px; }
-main.crm-canada .sel i:nth-child(3) { left: -5px; bottom: -5px; }
-main.crm-canada .sel i:nth-child(4) { right: -5px; bottom: -5px; }
+main.cursor-page .sel i:nth-child(1) { left: -5px; top: -5px; }
+main.cursor-page .sel i:nth-child(2) { right: -5px; top: -5px; }
+main.cursor-page .sel i:nth-child(3) { left: -5px; bottom: -5px; }
+main.cursor-page .sel i:nth-child(4) { right: -5px; bottom: -5px; }
 
-main.crm-canada .dock {
+main.cursor-page .dock {
   position: fixed;
   z-index: 45;
   right: 0;
@@ -878,21 +878,21 @@ main.crm-canada .dock {
   transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s 0.45s;
 }
 
-main.crm-canada .dock.on {
+main.cursor-page .dock.on {
   visibility: visible;
   opacity: 1;
   transform: none;
   transition-delay: 0s;
 }
 
-main.crm-canada .dslot {
+main.cursor-page .dslot {
   display: block;
   width: 20px;
   height: 24px;
   flex-shrink: 0;
 }
 
-main.crm-canada .dock.boom {
+main.cursor-page .dock.boom {
   visibility: visible;
   animation: crm-boom 0.48s ease-out both;
 }
@@ -902,25 +902,25 @@ main.crm-canada .dock.boom {
   100% { opacity: 0; transform: scale(1.3); }
 }
 
-main.crm-canada .layer.docked .nm {
+main.cursor-page .layer.docked .nm {
   opacity: 0;
   transform: scaleX(0.5);
 }
 
-main.crm-canada .cur svg path {
+main.cursor-page .cur svg path {
   transition: fill 0.4s, stroke 0.4s;
 }
 
-main.crm-canada .layer.docked .cur.cur-main svg path {
+main.cursor-page .layer.docked .cur.cur-main svg path {
   fill: #fff;
   stroke: var(--brand);
 }
 
-main.crm-canada .layer.docked .cur.cur-wa svg path {
+main.cursor-page .layer.docked .cur.cur-wa svg path {
   stroke: var(--wa);
 }
 
-main.crm-canada .wa {
+main.cursor-page .wa {
   position: fixed;
   z-index: 45;
   right: max(16px, env(safe-area-inset-right, 0px));
@@ -939,78 +939,78 @@ main.crm-canada .wa {
   box-shadow: 0 12px 30px rgba(14, 159, 120, 0.35);
 }
 
-main.crm-canada .wa svg {
+main.cursor-page .wa svg {
   width: 24px;
   height: 24px;
   fill: #fff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  main.crm-canada:not(.fx) [data-build] {
+  main.cursor-page:not(.fx) [data-build] {
     opacity: 0;
   }
 }
 
 @media (max-width: 980px) {
-  main.crm-canada .hero .wrap,
-  main.crm-canada .split {
+  main.cursor-page .hero .wrap,
+  main.cursor-page .split {
     grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
 
-  main.crm-canada .stick {
+  main.cursor-page .stick {
     position: static;
   }
 
-  main.crm-canada .grid6 {
+  main.cursor-page .grid6 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 560px) {
-  main.crm-canada .hero {
+  main.cursor-page .hero {
     padding-block: 36px 52px;
   }
 
-  main.crm-canada section.s {
+  main.cursor-page section.s {
     padding-block: 60px;
   }
 
-  main.crm-canada .grid6,
-  main.crm-canada form {
+  main.cursor-page .grid6,
+  main.cursor-page form {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  main.crm-canada form {
+  main.cursor-page form {
     padding: 18px;
   }
 
-  main.crm-canada .mock {
+  main.cursor-page .mock {
     padding: 14px;
   }
 
-  main.crm-canada h1 {
+  main.cursor-page h1 {
     font-size: clamp(32px, 8.5vw, 44px);
   }
 
-  main.crm-canada .wa {
+  main.cursor-page .wa {
     display: none;
   }
 
-  main.crm-canada .dock {
+  main.cursor-page .dock {
     font-size: 14px;
   }
 
-  main.crm-canada .cur .nm {
+  main.cursor-page .cur .nm {
     padding: 2px 6px;
     font-size: 9px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  main.crm-canada .lead,
-  main.crm-canada .dock,
-  main.crm-canada [data-build] {
+  main.cursor-page .lead,
+  main.cursor-page .dock,
+  main.cursor-page [data-build] {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -1018,6 +1018,6 @@ main.crm-canada .wa svg {
   }
 }
 
-body:has(main.crm-canada) aside[aria-label="Contact rapide mobile"] {
+body:has(main.cursor-page) aside[aria-label="Contact rapide mobile"] {
   display: none;
 }
