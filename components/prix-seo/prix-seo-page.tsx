@@ -3,10 +3,15 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import posthog from "posthog-js";
+import { BrowserFrame } from "@/components/referencement-seo/browser-frame";
+import shotStyles from "@/components/referencement-seo/landing.module.css";
 import { TurnstileCheck } from "@/components/turnstile-check";
 import { startCrmCanadaMotion } from "@/components/crm-canada/motion";
+import { generativeShot, performanceShot } from "@/lib/referencement-seo";
 import { prixSeoFaqs } from "./copy";
 import "@/components/crm-canada/crm-canada.css";
+
+const shots = [performanceShot, generativeShot];
 
 const posthogEnabled = Boolean(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST);
 const waHref =
@@ -19,6 +24,7 @@ function trackCta(position: "hero" | "price" | "form") {
 
 export function PrixSeoPage() {
   const root = useRef<HTMLElement>(null);
+  const dialogs = useRef<Array<HTMLDialogElement | null>>([]);
 
   useEffect(() => {
     const node = root.current;
@@ -194,6 +200,49 @@ export function PrixSeoPage() {
               <Link className="btn" href="/services/referencement-seo">
                 Lire l’offre SEO <span>↗</span>
               </Link>
+            </div>
+            <div style={{ display: "grid", gap: 28, marginTop: 28 }}>
+              {shots.map((item, index) => (
+                <figure key={item.src} data-build="box" data-by="Analytique" style={{ margin: 0 }}>
+                  <button
+                    type="button"
+                    onClick={() => dialogs.current[index]?.showModal()}
+                    aria-haspopup="dialog"
+                    aria-label={`Agrandir la capture ${item.label}`}
+                    style={{ display: "block", width: "100%", padding: 0, border: 0, background: "none", textAlign: "left", cursor: "pointer" }}
+                  >
+                    <BrowserFrame src={item.src} alt={item.alt} width={item.width} height={item.height} label={item.label} />
+                    <span className="btn sm" style={{ marginTop: 12 }}>
+                      Agrandir la capture
+                    </span>
+                  </button>
+                  <figcaption style={{ marginTop: 12 }}>
+                    <p data-build="text">{item.caption}</p>
+                  </figcaption>
+                  <dialog
+                    ref={(node) => {
+                      dialogs.current[index] = node;
+                    }}
+                    className={shotStyles.lightbox}
+                    aria-labelledby={`capture-${index}`}
+                    onClick={(event) => {
+                      if (event.target === dialogs.current[index]) dialogs.current[index]?.close();
+                    }}
+                  >
+                    <div style={{ background: "#fff" }}>
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "12px 16px", borderBottom: "1px solid var(--line)" }}>
+                        <p id={`capture-${index}`} className="mono" style={{ margin: 0 }}>
+                          {item.label}
+                        </p>
+                        <button type="button" className="btn sm" onClick={() => dialogs.current[index]?.close()}>
+                          Fermer
+                        </button>
+                      </div>
+                      <BrowserFrame src={item.src} alt={item.alt} width={item.width} height={item.height} label={item.label} sizes="(min-width: 1024px) 1080px, 100vw" />
+                    </div>
+                  </dialog>
+                </figure>
+              ))}
             </div>
             <p data-build="text">
               Les dossiers de l’écran d’exemple sont fictifs. Le comparatif du même guide ajoute une refonte on-page de 10 000 à 20 000 MAD, un accompagnement croissance de 5 000 à 10 000 MAD par mois, et un SEO e-commerce de 12 000 à 25 000 MAD par mois.
