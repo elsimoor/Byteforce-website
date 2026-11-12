@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { LeadForm } from "@/components/lead-form";
 import type { GeoPage } from "@/lib/geo/pages";
@@ -21,7 +22,7 @@ function Rich({ text }: { text: string }) {
   );
 }
 
-export function GeoView({ page }: { page: GeoPage }) {
+export function GeoView({ page, hero }: { page: GeoPage; hero?: ReactNode }) {
   const url = `${site.url}/${page.path}`;
   const area =
     page.level === "City"
@@ -61,9 +62,10 @@ export function GeoView({ page }: { page: GeoPage }) {
   };
 
   return (
-    <main>
+    <main data-landing={hero ? true : undefined}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
-      <header className="px-6 pb-16 pt-16 md:px-12 md:pt-24">
+      {hero}
+      {hero ? null : <header className="px-6 pb-16 pt-16 md:px-12 md:pt-24">
         <nav aria-label="Fil d'Ariane" className="flex flex-wrap gap-x-2 text-sm text-mute">
           {page.crumbs.map((crumb, index) => {
             const last = index === page.crumbs.length - 1;
@@ -82,10 +84,10 @@ export function GeoView({ page }: { page: GeoPage }) {
         <Link href="/contact" className="btn mt-8">
           {page.cta}
         </Link>
-      </header>
+      </header>}
 
       {page.blocks.map((block) => (
-        <section key={block.h} className="border-t border-line px-6 py-16 md:px-12 md:py-24">
+        <section id={block.h === "Ce qui est livré" ? "livre" : undefined} key={block.h} className="border-t border-line px-6 py-16 md:px-12 md:py-24">
           <h2 className="display max-w-[22ch] text-4xl">{block.h}</h2>
           {block.p?.map((paragraph) => (
             <p key={paragraph.slice(0, 80)} className="mt-6 max-w-2xl text-lg leading-relaxed">
@@ -165,7 +167,7 @@ export function GeoView({ page }: { page: GeoPage }) {
         </dl>
       </section>
 
-      <section className="grid gap-12 border-t border-line px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
+      <section id="contact" className="grid gap-12 border-t border-line px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
         <div className="md:col-span-5">
           <h2 className="display text-5xl">{page.cta}</h2>
           <p className="mt-6 max-w-sm leading-relaxed">

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { GeoGlobeHub } from "@/components/geo-globe-hub";
 import { GeoView } from "@/components/geo-view";
+import { LiveCrmHero } from "@/components/LiveCrmHero/LiveCrmHero";
 import { geoDirectory, getGeoPage, indexableGeoPages } from "@/lib/geo/pages";
 import { openGraph } from "@/lib/open-graph";
 
@@ -45,7 +46,8 @@ export default async function GeoLocationPage({ params }: Props) {
   const page = getGeoPage(["geo-location", ...slug].join("/"));
   if (!page) notFound();
 
-  return <GeoView page={page} />;
+  const hero = page.path === "geo-location/crm/ca" ? <LiveCrmHero /> : null;
+  return <GeoView page={page} hero={hero} />;
 }
 
 function GeoIndex() {
