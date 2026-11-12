@@ -8,9 +8,9 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Logiciels métier, CRM et applications sur mesure au Maroc. Amorti dès 6 mois, code 100% à vous, livraison agile. Demandez votre devis gratuit en 24h.",
   },
   "/developpement-logiciel-sur-mesure-maroc": {
-    title: "Développement logiciel sur mesure Maroc : combien ça coûte?",
+    title: "Développement logiciel sur mesure Maroc",
     description:
-      "Combien coûte un développement logiciel sur mesure au Maroc : dès 25 000 MAD, 45 000 à 95 000 MAD pour un CRM ou un ERP PME. Devis fixe sous 1 jour ouvré.",
+      "Développement de logiciel sur mesure au Maroc, depuis Casablanca : CRM, ERP et outil métier. Le code reste à vous. Devis sous 1 jour ouvré.",
   },
   "/crm-sur-mesure-maroc": {
     title: "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",

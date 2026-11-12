@@ -47,10 +47,11 @@ export function LogicielMarocPage() {
               DÉVELOPPEMENT LOGICIEL · MAROC
             </div>
             <h1 data-build="text" data-by="Rédaction">
-              Combien coûte un développement logiciel sur mesure au Maroc?
+              Développement logiciel sur mesure au Maroc
             </h1>
             <p className="lede" data-build="text" data-by="Contenu">
-              Un outil métier ciblé démarre à 25 000 MAD. Un CRM ou un ERP pour une PME se situe entre 45 000 et 95 000 MAD. Byte Force le construit à Casablanca, avec un devis fixe en dirhams, sans abonnement par utilisateur. Vous savez le prix avant que le travail commence.
+              Byte Force écrit le logiciel autour du processus réel, depuis le Technopark à Casablanca. Le code, les accès et les données restent à l’entreprise. Pas d’abonnement par utilisateur. Les fourchettes sont sur{" "}
+              <Link href="/insights/cout-logiciel-sur-mesure-maroc">combien coûte un logiciel sur mesure au Maroc</Link>.
             </p>
             <div className="actions" data-build="box" data-by="Frontend">
               <a className="btn primary" href="#contact" onClick={() => trackCta("hero")}>
@@ -194,8 +195,8 @@ export function LogicielMarocPage() {
               </Link>
             </div>
             <p data-build="text">
-              Les dossiers affichés sur l’écran d’exemple sont fictifs. Votre devis part de vos flux réels. Le détail des fourchettes est sur le{" "}
-              <Link href="/insights/prix-logiciel-sur-mesure-maroc">guide des prix d’un logiciel sur mesure</Link>.
+              Les dossiers affichés sur l’écran d’exemple sont fictifs. Votre devis part de vos flux réels. Les fourchettes et les délais sont sur{" "}
+              <Link href="/insights/cout-logiciel-sur-mesure-maroc">combien coûte un logiciel sur mesure au Maroc</Link>.
             </p>
           </div>
         </div>
@@ -228,7 +229,7 @@ export function LogicielMarocPage() {
             <li className="step" data-build="box" data-by="Stratégie"><span className="n">1</span><div className="b"><h3>Votre demande</h3><p>2 minutes, sans engagement. Le fichier, l’URL, ou le flux qui bloque.</p></div></li>
             <li className="step" data-build="box" data-by="Marketing"><span className="n">2</span><div className="b"><h3>Réponse en 30 minutes</h3><p>Nous confirmons que le sujet est bien un logiciel sur mesure.</p></div></li>
             <li className="step" data-build="box" data-by="Architecture"><span className="n">3</span><div className="b"><h3>Devis fixe en MAD</h3><p>Sous 1 jour ouvré, avant le code.</p></div></li>
-            <li className="step" data-build="box" data-by="Produit"><span className="n">4</span><div className="b"><h3>Livraison</h3><p>Code, accès et hébergement à votre nom. Première version en 4 à 6 semaines.</p></div></li>
+            <li className="step" data-build="box" data-by="Produit"><span className="n">4</span><div className="b"><h3>Livraison</h3><p>Code, accès et hébergement à votre nom.</p></div></li>
           </ol>
         </div>
       </section>
@@ -237,12 +238,14 @@ export function LogicielMarocPage() {
         <div className="wrap split">
           <div className="stick">
             <p className="label" data-build="box">Le montant</p>
-            <h2 data-build="text" data-by="Analytique">Ce qui fait varier le prix d’un logiciel sur mesure.</h2>
+            <h2 data-build="text" data-by="Analytique">Le prix est sur une seule page.</h2>
           </div>
           <div>
             <div className="prose">
               <p data-build="text" data-by="Rédaction">
-                Un développement logiciel sur mesure au Maroc démarre à 25 000 MAD pour un outil métier ciblé. Un CRM ou un ERP pour PME se situe entre 45 000 MAD et 95 000 MAD. Le devis fixe dépend de quatre choses : le nombre de rôles, les outils à connecter, les langues, la reprise de vos données.
+                Cette page décrit le logiciel. Les fourchettes, les délais et ce qui fait varier le devis sont sur{" "}
+                <Link href="/insights/cout-logiciel-sur-mesure-maroc">combien coûte un logiciel sur mesure au Maroc</Link>.
+                Le devis fixe dépend ensuite de quatre choses : le nombre de rôles, les outils à connecter, les langues, la reprise de vos données.
               </p>
             </div>
             <div className="chips" data-build="box" data-by="Design">
@@ -272,7 +275,7 @@ export function LogicielMarocPage() {
             <Link className="city" data-build="box" data-by="Frontend" href="/developpement-saas-maroc">SaaS <span>↗</span></Link>
             <Link className="city" data-build="box" data-by="UX" href="/developpement-application-mobile-maroc">Application mobile <span>↗</span></Link>
             <Link className="city" data-build="box" data-by="Automatisation" href="/solutions/remplacer-excel">Remplacer Excel <span>↗</span></Link>
-            <Link className="city" data-build="box" data-by="Analytique" href="/insights/prix-logiciel-sur-mesure-maroc">Guide des prix <span>↗</span></Link>
+            <Link className="city" data-build="box" data-by="Analytique" href="/insights/cout-logiciel-sur-mesure-maroc">Combien ça coûte <span>↗</span></Link>
           </div>
         </div>
       </section>
