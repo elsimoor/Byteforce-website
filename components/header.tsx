@@ -59,7 +59,9 @@ function SearchBand({ onClose }: { onClose: () => void }) {
 export function Header() {
   const path = usePathname() ?? "";
   const [searchOpen, setSearchOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const searchButton = useRef<HTMLButtonElement>(null);
+  const menuButton = useRef<HTMLButtonElement>(null);
 
   useLayoutEffect(() => {
     if (path === "/") document.documentElement.dataset.brand = "logo";
@@ -68,6 +70,7 @@ export function Header() {
 
   useEffect(() => {
     setSearchOpen(false);
+    setMenuOpen(false);
   }, [path]);
 
   useEffect(() => {
@@ -84,6 +87,20 @@ export function Header() {
     };
   }, [searchOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen]);
+
   function closeSearch() {
     setSearchOpen(false);
     searchButton.current?.focus();
@@ -91,7 +108,7 @@ export function Header() {
 
   return (
     <>
-    <header className={searchOpen ? "fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface" : "fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md"}>
+    <header className={searchOpen || menuOpen ? "fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface" : "fixed top-0 right-0 left-0 z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md"}>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 lg:px-12">
         <Link href="/" className="flex min-h-11 items-center gap-3">
           <img src="/logo.webp" alt="Byte Force" width={44} height={44} fetchPriority="high" className="h-11 w-11 object-cover" />
@@ -116,19 +133,20 @@ export function Header() {
             );
           })}
         </nav>
-        <details className="relative md:hidden">
-          <summary className="flex h-11 cursor-pointer list-none items-center px-3 font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase [&::-webkit-details-marker]:hidden">
-            Menu
-          </summary>
-          <nav className="absolute right-0 top-12 z-50 w-56 border border-outline-variant bg-surface py-2" aria-label="Principal">
-            {links.map((link) => (
-              <Link key={link.href} href={link.href} className="flex min-h-11 items-center px-4 text-sm text-on-surface">
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </details>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          <button
+            ref={menuButton}
+            type="button"
+            aria-expanded={menuOpen}
+            aria-controls="site-menu"
+            className="flex h-11 items-center px-3 font-mono text-[15px] font-bold tracking-[0.12em] text-on-surface uppercase md:hidden"
+            onClick={() => {
+              setSearchOpen(false);
+              setMenuOpen((open) => !open);
+            }}
+          >
+            {menuOpen ? "Fermer" : "Menu"}
+          </button>
           <Link
             href="/contact"
             className="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 font-sans text-xs font-bold text-white shadow-sm transition hover:bg-primary/90 active:scale-95"
@@ -142,7 +160,11 @@ export function Header() {
             aria-expanded={searchOpen}
             aria-controls="site-search"
             className="flex h-11 w-11 items-center justify-center border border-outline-variant/40 text-on-surface"
-            onClick={() => (searchOpen ? closeSearch() : setSearchOpen(true))}
+            onClick={() => {
+              setMenuOpen(false);
+              if (searchOpen) closeSearch();
+              else setSearchOpen(true);
+            }}
           >
             <Icon name="search" className="text-[20px]" />
           </button>
@@ -158,6 +180,43 @@ export function Header() {
         </div>
       </div>
       {searchOpen ? <SearchBand onClose={closeSearch} /> : null}
+      {menuOpen ? (
+        <nav
+          id="site-menu"
+          aria-label="Principal"
+          className="fixed inset-x-0 top-20 bottom-0 z-50 flex flex-col bg-surface md:hidden"
+        >
+          <div className="flex-1 overflow-y-auto px-5">
+            {links
+              .filter((link) => link.href !== "/contact")
+              .map((link) => {
+                const active = link.match(path);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-current={active ? "page" : undefined}
+                    className={
+                      active
+                        ? "flex min-h-16 items-center border-b border-outline-variant/30 font-headline text-[1.7rem] font-semibold tracking-tight text-primary"
+                        : "flex min-h-16 items-center border-b border-outline-variant/30 font-headline text-[1.7rem] font-semibold tracking-tight text-on-surface"
+                    }
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+          </div>
+          <div className="px-5 pt-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+            <Link
+              href="/contact"
+              className="flex min-h-14 items-center justify-center rounded-lg bg-primary text-base font-bold text-white"
+            >
+              Devis gratuit
+            </Link>
+          </div>
+        </nav>
+      ) : null}
     </header>
     {searchOpen ? (
       <button type="button" aria-label="Fermer la recherche" className="search-shade" onClick={closeSearch} />
