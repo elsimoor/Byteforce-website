@@ -439,9 +439,9 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Quel est le coût d'une application mobile au Maroc ? Prix réels en MAD : MVP dès 35 000 MAD, app complète 60 000 à 95 000 MAD. Devis en 24h.",
   },
   "/insights/prix-seo-maroc": {
-    title: "Prix SEO Maroc : Tarifs référencement 2026 | BYTE FORCE",
+    title: "Prix SEO Maroc : combien ça coûte ? | Byte Force",
     description:
-      "Combien coûte le SEO au Maroc ? Tarifs réels : audit dès 6 000 MAD, suivi mensuel 5 000 à 10 000 MAD/mois. Boostez votre trafic. Devis 24h.",
+      "Combien coûte le SEO au Maroc : audit 6 000 à 12 000 MAD, suivi PME 5 000 à 9 000 MAD par mois. Casablanca. Devis sous 1 jour ouvré.",
   },
   "/insights/tarif-creation-site-wordpress-maroc": {
     title: "Tarif création site WordPress Maroc 2026 | BYTE FORCE",
