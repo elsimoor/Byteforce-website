@@ -4,7 +4,10 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { GeoGlobeHub } from "@/components/geo-globe-hub";
 import { crmCanadaFaqs, crmCanadaMeta } from "@/components/crm-canada/copy";
 import { CrmCanadaPage } from "@/components/crm-canada/crm-canada-page";
+import { MobileCasaPage } from "@/components/mobile-casa/mobile-casa-page";
+import { MobileFrancePage } from "@/components/mobile-fr/mobile-fr-page";
 import { GeoView } from "@/components/geo-view";
+import type { GeoPage } from "@/lib/geo/pages";
 import { geoDirectory, getGeoPage, indexableGeoPages } from "@/lib/geo/pages";
 import { openGraph } from "@/lib/open-graph";
 import { ldJson, site } from "@/lib/site";
@@ -98,7 +101,65 @@ export default async function GeoLocationPage({ params }: Props) {
     );
   }
 
+  if (page.path === "geo-location/applications-mobiles/ma/casablanca") {
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(geoSchema(page)) }} />
+        <MobileCasaPage faqs={page.faqs} offers={page.links} cities={page.cities} />
+      </>
+    );
+  }
+
+  if (page.path === "geo-location/applications-mobiles/fr") {
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(geoSchema(page)) }} />
+        <MobileFrancePage faqs={page.faqs} offers={page.links} cities={page.cities} />
+      </>
+    );
+  }
+
   return <GeoView page={page} />;
+}
+
+function geoSchema(page: GeoPage) {
+  const url = `${site.url}/${page.path}`;
+  const area =
+    page.level === "City"
+      ? { "@type": "City", name: page.areaName, containedInPlace: { "@type": "Country", name: page.areaCountry } }
+      : { "@type": "Country", name: page.areaCountry };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: page.crumbs.map((crumb, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: crumb.label,
+          item: crumb.href === "/" ? `${site.url}/` : `${site.url}${crumb.href}`,
+        })),
+      },
+      {
+        "@type": "Service",
+        name: page.h1,
+        serviceType: page.keyword,
+        url,
+        description: page.description,
+        provider: { "@id": `${site.url}/#business` },
+        areaServed: area,
+        inLanguage: "fr",
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: page.faqs.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
+      },
+    ],
+  };
 }
 
 function GeoIndex() {
