@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { GeoGlobeHub } from "@/components/geo-globe-hub";
+import { CrmCanadaPage } from "@/components/crm-canada/crm-canada-page";
 import { GeoView } from "@/components/geo-view";
-import { LiveCrmHero } from "@/components/LiveCrmHero/LiveCrmHero";
 import { geoDirectory, getGeoPage, indexableGeoPages } from "@/lib/geo/pages";
 import { openGraph } from "@/lib/open-graph";
+import { ldJson, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug?: string[] }> };
 
@@ -46,8 +47,48 @@ export default async function GeoLocationPage({ params }: Props) {
   const page = getGeoPage(["geo-location", ...slug].join("/"));
   if (!page) notFound();
 
-  const hero = page.path === "geo-location/crm/ca" ? <LiveCrmHero /> : null;
-  return <GeoView page={page} hero={hero} />;
+  if (page.path === "geo-location/crm/ca") {
+    const url = `${site.url}/${page.path}`;
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: page.crumbs.map((crumb, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: crumb.label,
+            item: crumb.href === "/" ? `${site.url}/` : `${site.url}${crumb.href}`,
+          })),
+        },
+        {
+          "@type": "Service",
+          name: page.h1,
+          url,
+          description: page.description,
+          provider: { "@id": `${site.url}/#business` },
+          areaServed: { "@type": "Country", name: "Canada" },
+          inLanguage: "fr",
+        },
+        {
+          "@type": "FAQPage",
+          mainEntity: page.faqs.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        },
+      ],
+    };
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
+        <CrmCanadaPage />
+      </>
+    );
+  }
+
+  return <GeoView page={page} />;
 }
 
 function GeoIndex() {
