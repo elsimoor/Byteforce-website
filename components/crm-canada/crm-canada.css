@@ -783,7 +783,7 @@ main.crm-canada.fx .now .w {
 
 main.crm-canada .layer {
   position: fixed;
-  z-index: 40;
+  z-index: 48;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
@@ -914,6 +914,10 @@ main.crm-canada .cur svg path {
 main.crm-canada .layer.docked .cur.cur-main svg path {
   fill: #fff;
   stroke: var(--brand);
+}
+
+main.crm-canada .layer.docked .cur.cur-wa svg path {
+  stroke: var(--wa);
 }
 
 main.crm-canada .wa {
