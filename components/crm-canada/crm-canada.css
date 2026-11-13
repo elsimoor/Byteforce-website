@@ -1235,6 +1235,132 @@ main.cursor-page .wa svg {
   }
 }
 
+main.cursor-page .decide {
+  position: relative;
+}
+
+main.cursor-page .decide-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+main.cursor-page .decide-card {
+  position: relative;
+  min-width: 0;
+  padding: 12px 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+main.cursor-page .decide-agent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+main.cursor-page .decide-agent svg {
+  width: 16px;
+  height: 20px;
+  flex: none;
+}
+
+main.cursor-page .decide-card b {
+  display: block;
+  font-size: 13px;
+}
+
+main.cursor-page .decide-card small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+main.cursor-page .decide-card em {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+main.cursor-page .decide-runner {
+  position: absolute;
+  z-index: 2;
+  top: -6px;
+  left: 12%;
+  width: 22px;
+  height: 26px;
+  pointer-events: none;
+}
+
+main.cursor-page .decide-runner svg {
+  width: 22px;
+  height: 26px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main.cursor-page .decide-runner {
+    animation: decide-run 4.8s ease-in-out infinite;
+  }
+
+  main.cursor-page .decide-card em {
+    animation: decide-stamp 4.8s ease-in-out infinite;
+  }
+
+  main.cursor-page .decide-card:nth-child(2) em {
+    animation-delay: 1.6s;
+  }
+
+  main.cursor-page .decide-card:nth-child(3) em {
+    animation-delay: 3.2s;
+  }
+
+  main.cursor-page .decide-agent {
+    animation: decide-bob 4.8s ease-in-out infinite;
+  }
+
+  main.cursor-page .decide-card:nth-child(2) .decide-agent {
+    animation-delay: 1.6s;
+  }
+
+  main.cursor-page .decide-card:nth-child(3) .decide-agent {
+    animation-delay: 3.2s;
+  }
+}
+
+@keyframes decide-run {
+  0%, 18% { left: 10%; }
+  33%, 51% { left: 43%; }
+  66%, 84% { left: 76%; }
+  100% { left: 10%; }
+}
+
+@keyframes decide-stamp {
+  0%, 12% { opacity: 0.28; transform: translateY(4px) scale(0.96); }
+  22%, 38% { opacity: 1; transform: none; }
+  52%, 100% { opacity: 0.28; transform: translateY(4px) scale(0.96); }
+}
+
+@keyframes decide-bob {
+  0%, 12% { transform: translateY(0); }
+  22% { transform: translateY(-6px); }
+  34%, 100% { transform: translateY(0); }
+}
+
 @media (max-width: 980px) {
   main.cursor-page .hero .wrap,
   main.cursor-page .split {
@@ -1280,6 +1406,14 @@ main.cursor-page .wa svg {
 
   main.cursor-page .device-title {
     font-size: 15px;
+  }
+
+  main.cursor-page .decide-board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  main.cursor-page .decide-runner {
+    display: none;
   }
 
   main.cursor-page h1 {
