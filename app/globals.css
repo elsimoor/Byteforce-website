@@ -765,6 +765,27 @@ main:not([data-home]) a.border-b {
 .bf-ring { transform-box: fill-box; transform-origin: center; animation: bf-ring 2.4s ease-out infinite; }
 .bf-dash { animation: bf-dash 3s linear infinite; }
 
+@keyframes fist-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-2.5deg); }
+}
+@keyframes fist-orbit {
+  to { stroke-dashoffset: -48; }
+}
+@keyframes fist-spark {
+  0%, 100% { opacity: 0.15; }
+  45% { opacity: 1; }
+}
+.fist-bob {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fist-bob 3.2s ease-in-out infinite;
+}
+.fist-orbit {
+  animation: fist-orbit 7s linear infinite;
+}
+.fist-spark { animation: fist-spark 2.1s ease-in-out infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   .illus .flow,
   .illus .travel {
@@ -776,5 +797,8 @@ main:not([data-home]) a.border-b {
   .bf-spin,
   .bf-float,
   .bf-ring,
-  .bf-dash { animation: none; }
+  .bf-dash,
+  .fist-bob,
+  .fist-orbit,
+  .fist-spark { animation: none; }
 }
