@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <clipPath id="canvas-clip">
+      <rect x="0" y="0" width="400" height="400" rx="28" />
+    </clipPath>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="75%" stop-color="#f4f7ff" />
+      <stop offset="100%" stop-color="#e3ebff" />
+    </radialGradient>
+
+    <linearGradient id="fist-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1434d6" />
+      <stop offset="100%" stop-color="#081b8a" />
+    </linearGradient>
+
+    <style>
+      .binary-text {
+        font-family: 'Arial Black', 'Impact', system-ui, sans-serif;
+        font-weight: 900;
+        fill: #0d26b5;
+        user-select: none;
+      }
+      .stream-up { animation: driftUp 9s linear infinite; }
+      .stream-down { animation: driftDown 11s linear infinite; }
+      .stream-up-slow { animation: driftUp 14s linear infinite; }
+      .mascot-group {
+        transform-origin: 200px 215px;
+        animation: mascotFloat 3.6s ease-in-out infinite;
+      }
+      .orbit-cw { transform-origin: 200px 200px; animation: spinCW 18s linear infinite; }
+      .orbit-ccw { transform-origin: 200px 200px; animation: spinCCW 24s linear infinite; }
+      .pulse-ring { transform-origin: 200px 200px; animation: pulseRing 3.6s ease-out infinite; }
+      .sparkle { animation: twinkle 2.4s ease-in-out infinite alternate; }
+
+      @keyframes driftUp { 0% { transform: translateY(0px); } 100% { transform: translateY(-160px); } }
+      @keyframes driftDown { 0% { transform: translateY(-160px); } 100% { transform: translateY(0px); } }
+      @keyframes mascotFloat {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-9px) scale(1.025); }
+      }
+      @keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+      @keyframes pulseRing {
+        0% { transform: scale(0.82); opacity: 0.65; }
+        100% { transform: scale(1.32); opacity: 0; }
+      }
+      @keyframes twinkle {
+        0% { opacity: 0.25; transform: scale(0.85); }
+        100% { opacity: 1; transform: scale(1.15); }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#canvas-clip)">
+    <rect width="400" height="400" fill="url(#bg-grad)" />
+
+    <g transform="rotate(-14 200 200)" opacity="0.92">
+      <g class="stream-up" font-size="64">
+        <text x="-10" y="50" class="binary-text">1</text>
+        <text x="-10" y="130" class="binary-text">0</text>
+        <text x="-10" y="210" class="binary-text">1</text>
+        <text x="-10" y="290" class="binary-text">1</text>
+        <text x="-10" y="370" class="binary-text">0</text>
+        <text x="-10" y="450" class="binary-text">1</text>
+        <text x="-10" y="530" class="binary-text">0</text>
+      </g>
+      <g class="stream-down" font-size="68">
+        <text x="58" y="30" class="binary-text">0</text>
+        <text x="58" y="110" class="binary-text">1</text>
+        <text x="58" y="190" class="binary-text">0</text>
+        <text x="58" y="270" class="binary-text">1</text>
+        <text x="58" y="350" class="binary-text">0</text>
+        <text x="58" y="430" class="binary-text">1</text>
+        <text x="58" y="510" class="binary-text">0</text>
+      </g>
+      <g class="stream-up-slow" font-size="62">
+        <text x="135" y="70" class="binary-text">1</text>
+        <text x="135" y="150" class="binary-text">1</text>
+        <text x="135" y="230" class="binary-text">0</text>
+        <text x="135" y="310" class="binary-text">0</text>
+        <text x="135" y="390" class="binary-text">1</text>
+        <text x="135" y="470" class="binary-text">1</text>
+        <text x="135" y="550" class="binary-text">0</text>
+      </g>
+      <g class="stream-down" font-size="68">
+        <text x="215" y="45" class="binary-text">0</text>
+        <text x="215" y="125" class="binary-text">0</text>
+        <text x="215" y="205" class="binary-text">1</text>
+        <text x="215" y="285" class="binary-text">0</text>
+        <text x="215" y="365" class="binary-text">1</text>
+        <text x="215" y="445" class="binary-text">0</text>
+        <text x="215" y="525" class="binary-text">1</text>
+      </g>
+      <g class="stream-up" font-size="64">
+        <text x="295" y="60" class="binary-text">1</text>
+        <text x="295" y="140" class="binary-text">0</text>
+        <text x="295" y="220" class="binary-text">1</text>
+        <text x="295" y="300" class="binary-text">0</text>
+        <text x="295" y="380" class="binary-text">1</text>
+        <text x="295" y="460" class="binary-text">0</text>
+        <text x="295" y="540" class="binary-text">1</text>
+      </g>
+      <g class="stream-down" font-size="66">
+        <text x="365" y="20" class="binary-text">0</text>
+        <text x="365" y="100" class="binary-text">1</text>
+        <text x="365" y="180" class="binary-text">0</text>
+        <text x="365" y="260" class="binary-text">1</text>
+        <text x="365" y="340" class="binary-text">0</text>
+        <text x="365" y="420" class="binary-text">1</text>
+        <text x="365" y="500" class="binary-text">0</text>
+      </g>
+    </g>
+
+    <circle cx="200" cy="200" r="142" fill="none" stroke="#3b82f6" stroke-width="2.5" class="pulse-ring" />
+
+    <g class="orbit-cw">
+      <circle cx="200" cy="200" r="154" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="28 16 6 16" opacity="0.9" />
+      <circle cx="200" cy="46" r="6" fill="#0d26b5" stroke="#ffffff" stroke-width="2.5" />
+      <circle cx="354" cy="200" r="5" fill="#3b82f6" stroke="#ffffff" stroke-width="2" />
+    </g>
+
+    <g class="orbit-ccw">
+      <circle cx="200" cy="200" r="174" fill="none" stroke="#0d26b5" stroke-width="2" stroke-dasharray="10 14" opacity="0.45" />
+      <rect x="195" y="21" width="10" height="10" rx="2" fill="#0d26b5" stroke="#ffffff" stroke-width="2" />
+      <circle cx="26" cy="200" r="5" fill="#0d26b5" stroke="#ffffff" stroke-width="2" />
+    </g>
+
+    <g filter="url(#glow)">
+      <path d="M74 96 L78 106 L88 110 L78 114 L74 124 L70 114 L60 110 L70 106 Z" fill="#ffffff" stroke="#0d26b5" stroke-width="1.5" class="sparkle" />
+      <path d="M326 84 L329 92 L337 95 L329 98 L326 106 L323 98 L315 95 L323 92 Z" fill="#ffffff" stroke="#0d26b5" stroke-width="1.5" class="sparkle" style="animation-delay: 0.8s;" />
+      <path d="M318 296 L321 304 L329 307 L321 310 L318 318 L315 310 L307 307 L315 304 Z" fill="#ffffff" stroke="#0d26b5" stroke-width="1.5" class="sparkle" style="animation-delay: 1.4s;" />
+    </g>
+
+    <!-- Raised fist traced from the reference -->
+    <g class="mascot-group">
+      <!-- White halo -->
+      <path d="M282.1 96.4 L274.7 98.1 L270.1 102.6 L256.9 159.1 L256.9 166.5 L259.4 171.9 L268.9 178.5 L281.3 178.5 L290.8 169.8 L298.6 145.5 L304.4 108.4 L300.2 102.2 Z M253.2 86.9 L236.3 83.6 L229.3 88.2 L215.7 141.8 L211.1 135.6 L136.1 104.2 L126.6 103.8 L122.0 107.1 L117.9 115.4 L101.4 162.0 L96.1 181.4 L97.3 187.2 L121.2 229.6 L152.6 272.9 L160.4 286.6 L160.4 334.0 L153.8 399.6 L287.9 399.6 L283.3 294.4 L280.0 289.4 L290.3 278.7 L294.9 268.8 L298.2 253.6 L300.2 225.9 L299.8 187.2 L303.9 151.3 L303.1 145.1 L299.0 148.0 L298.6 157.5 L294.9 170.2 L287.9 178.9 L281.7 182.2 L266.8 181.8 L261.5 178.9 L254.4 170.2 L251.2 171.1 L246.6 177.7 L240.0 181.8 L223.5 181.8 L213.2 174.0 L208.7 164.1 L200.8 168.6 L188.9 169.8 L188.9 174.0 L205.8 185.5 L212.8 195.0 L186.8 176.0 L168.2 166.9 L197.1 164.9 L208.7 156.6 L215.3 145.1 L213.6 165.3 L216.9 172.7 L227.6 178.9 L237.5 178.5 L243.3 174.8 L251.6 160.3 L265.6 99.7 L263.1 91.9 Z M193.4 72.5 L187.2 78.7 L178.6 116.6 L213.2 131.1 L215.3 128.6 L221.9 97.6 L222.3 82.8 L214.4 76.6 L204.1 73.3 Z M156.3 61.3 L150.9 63.8 L147.2 69.2 L138.9 99.3 L141.8 102.2 L172.8 115.0 L179.4 94.3 L182.7 72.5 L177.3 67.1 Z" fill="#ffffff" stroke="#ffffff" stroke-width="44" stroke-linejoin="round" fill-rule="evenodd" />
+      <!-- Blue fist -->
+      <path d="M282.1 96.4 L274.7 98.1 L270.1 102.6 L256.9 159.1 L256.9 166.5 L259.4 171.9 L268.9 178.5 L281.3 178.5 L290.8 169.8 L298.6 145.5 L304.4 108.4 L300.2 102.2 Z M253.2 86.9 L236.3 83.6 L229.3 88.2 L215.7 141.8 L211.1 135.6 L136.1 104.2 L126.6 103.8 L122.0 107.1 L117.9 115.4 L101.4 162.0 L96.1 181.4 L97.3 187.2 L121.2 229.6 L152.6 272.9 L160.4 286.6 L160.4 334.0 L153.8 399.6 L287.9 399.6 L283.3 294.4 L280.0 289.4 L290.3 278.7 L294.9 268.8 L298.2 253.6 L300.2 225.9 L299.8 187.2 L303.9 151.3 L303.1 145.1 L299.0 148.0 L298.6 157.5 L294.9 170.2 L287.9 178.9 L281.7 182.2 L266.8 181.8 L261.5 178.9 L254.4 170.2 L251.2 171.1 L246.6 177.7 L240.0 181.8 L223.5 181.8 L213.2 174.0 L208.7 164.1 L200.8 168.6 L188.9 169.8 L188.9 174.0 L205.8 185.5 L212.8 195.0 L186.8 176.0 L168.2 166.9 L197.1 164.9 L208.7 156.6 L215.3 145.1 L213.6 165.3 L216.9 172.7 L227.6 178.9 L237.5 178.5 L243.3 174.8 L251.6 160.3 L265.6 99.7 L263.1 91.9 Z M193.4 72.5 L187.2 78.7 L178.6 116.6 L213.2 131.1 L215.3 128.6 L221.9 97.6 L222.3 82.8 L214.4 76.6 L204.1 73.3 Z M156.3 61.3 L150.9 63.8 L147.2 69.2 L138.9 99.3 L141.8 102.2 L172.8 115.0 L179.4 94.3 L182.7 72.5 L177.3 67.1 Z" fill="url(#fist-grad)" fill-rule="evenodd" />
+    </g>
+  </g>
+</svg>

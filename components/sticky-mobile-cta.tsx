@@ -52,7 +52,7 @@ export function StickyMobileCta() {
         >
           <svg viewBox="0 0 64 64" className="h-14 w-14" aria-hidden="true">
             <g className="fist-bob">
-              <image href="/byteforce-fist.png" x="0" y="0" width="64" height="64" />
+              <image href="/byteforce-fist-v2.svg" x="0" y="0" width="64" height="64" />
             </g>
             <circle className="fist-orbit" cx="32" cy="32" r="29" fill="none" stroke="#2F5BFF" strokeWidth="1.15" strokeDasharray="2 4.5" strokeLinecap="round" />
             <path className="fist-spark" d="M46 12.2 46.7 14.6 49.1 15.3 46.7 16 46 18.4 45.3 16 42.9 15.3 45.3 14.6Z" fill="#fff" />
