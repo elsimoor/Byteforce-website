@@ -5,6 +5,9 @@ import { MailLink } from "@/components/mail-link";
 import { openGraph } from "@/lib/open-graph";
 import { seoMeta } from "@/lib/seo-meta";
 import { site } from "@/lib/site";
+import Image from "next/image";
+
+
 
 const contactMeta = seoMeta["/contact"];
 
@@ -50,6 +53,8 @@ const lines = [
   ["03", "Ce qui doit changer", "Qui fait l'action aujourd'hui, où elle se passe, ce qui bloque."],
 ];
 
+
+
 export default async function ContactPage({ searchParams }: Props) {
   const query = await searchParams;
 
@@ -59,7 +64,7 @@ export default async function ContactPage({ searchParams }: Props) {
         <BreadcrumbJsonLd items={[{ name: "Accueil", path: "/" }, { name: "Contact", path: "/contact" }]} />
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,32rem)] lg:gap-14">
           <div className="min-w-0">
-            <p className="font-mono text-xs tracking-[0.08em] text-primary uppercase">Contact · Devis gratuit sous 24 h</p>
+            
             <h1 className="mt-4 max-w-[12ch] font-headline text-[clamp(2.75rem,5vw,3.75rem)] leading-[1.02] font-extrabold tracking-[-0.04em]">
               Contactez-nous.
             </h1>

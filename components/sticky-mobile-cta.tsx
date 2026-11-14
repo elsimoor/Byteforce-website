@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { site } from "@/lib/site";
+import Image from "next/image";
 
 export function StickyMobileCta() {
   const whatsappUrl = `https://wa.me/${site.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
@@ -45,21 +46,7 @@ export function StickyMobileCta() {
         aria-label="WhatsApp direct"
         className="fixed bottom-6 right-6 z-40 hidden items-center gap-3 md:flex"
       >
-        <Link
-          href="/contact"
-          aria-label="Contact"
-          className="grid h-14 w-14 shrink-0 place-items-center rounded-[18px] shadow-[0_8px_30px_rgba(37,99,235,0.28)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(37,99,235,0.4)]"
-        >
-          <svg viewBox="0 0 64 64" className="h-14 w-14" aria-hidden="true">
-            <g className="fist-bob">
-              <image href="/byteforce-fist-v2.svg" x="0" y="0" width="64" height="64" />
-            </g>
-            <circle className="fist-orbit" cx="32" cy="32" r="29" fill="none" stroke="#2F5BFF" strokeWidth="1.15" strokeDasharray="2 4.5" strokeLinecap="round" />
-            <path className="fist-spark" d="M46 12.2 46.7 14.6 49.1 15.3 46.7 16 46 18.4 45.3 16 42.9 15.3 45.3 14.6Z" fill="#fff" />
-            <path className="fist-spark" d="M54 34 54.55 35.7 56.2 36.25 54.55 36.8 54 38.5 53.45 36.8 51.8 36.25 53.45 35.7Z" fill="#7AA2FF" style={{ animationDelay: "0.7s" }} />
-            <path className="fist-spark" d="M16 44 16.6 45.8 18.4 46.4 16.6 47 16 48.8 15.4 47 13.6 46.4 15.4 45.8Z" fill="#fff" style={{ animationDelay: "1.3s" }} />
-          </svg>
-        </Link>
+        
         <a
           href={whatsappUrl}
           target="_blank"
