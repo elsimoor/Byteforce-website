@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ApplicationWebPage } from "@/components/application-web/application-web-page";
 import { AutomatisationEntreprisePage } from "@/components/automatisation-entreprise/automatisation-entreprise-page";
 import { automatisationFaqs } from "@/components/automatisation-entreprise/copy";
 import { CommercialView } from "@/components/commercial-view";
@@ -35,6 +36,7 @@ export default async function MoneyRoute({ params }: Props) {
   const page = getMoneyPage(slug.join("/"));
   if (!page) notFound();
   if (page.path === "solutions/automatisation-entreprise") return <AutomatisationRoute page={page} />;
+  if (page.path === "application-web-sur-mesure-maroc") return <ApplicationWebPage page={page} />;
   return <CommercialView page={page} />;
 }
 
