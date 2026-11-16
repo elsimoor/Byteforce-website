@@ -1,8 +1,7 @@
-import type { ReactNode } from "react";
 import Link from "next/link";
 import { LeadForm } from "@/components/lead-form";
-import type { GeoPage } from "@/lib/geo/pages";
 import { EmailText } from "@/components/mail-link";
+import type { GeoBlock, GeoPage } from "@/lib/geo/pages";
 import { ldJson, site } from "@/lib/site";
 
 function Rich({ text }: { text: string }) {
@@ -13,7 +12,7 @@ function Rich({ text }: { text: string }) {
         const match = /^\[\[([^|\]]+)\|([^\]]+)\]\]$/.exec(bit);
         if (!match) return <span key={index}>{bit}</span>;
         return (
-          <Link key={index} href={match[1]} className="font-semibold text-primary">
+          <Link key={index} href={match[1]} className="font-semibold text-[#1D2BD1]">
             {match[2]}
           </Link>
         );
@@ -22,7 +21,69 @@ function Rich({ text }: { text: string }) {
   );
 }
 
-export function GeoView({ page, hero }: { page: GeoPage; hero?: ReactNode }) {
+function Arrow() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M7 17L17 7M8 7h9v9" />
+    </svg>
+  );
+}
+
+function block(page: GeoPage, heading: string): GeoBlock | undefined {
+  return page.blocks.find((item) => item.h === heading);
+}
+
+function Screen({ keyword }: { keyword: string }) {
+  const bars = ["38%", "58%", "46%", "82%", "68%", "96%", "74%"];
+  return (
+    <div className="relative w-full max-w-[520px] overflow-hidden rounded-[28px] border border-[#D5D9F2] bg-[#EEF0FF] shadow-[0_24px_60px_rgba(29,43,209,0.14)]">
+      <div className="px-4 pb-3 pt-4">
+        <div className="overflow-hidden rounded-t-xl bg-[#1B1F2A] p-2.5">
+          <div className="flex h-[220px] overflow-hidden bg-[#F3F8F6] font-sans text-[#0B2B26]">
+            <div className="flex w-[34%] flex-none flex-col gap-1 bg-[#0B3B33] p-3 text-[11px] text-[#CFE8E1]">
+              <p className="mb-2 truncate text-sm font-semibold text-white">{keyword}</p>
+              <p className="rounded-md bg-[#14584C] px-2 py-1.5 text-white">Tableau</p>
+              <p className="px-2 py-1.5">Dossiers</p>
+              <p className="px-2 py-1.5">Étapes</p>
+            </div>
+            <div className="flex min-w-0 flex-1 flex-col gap-2 p-3">
+              <p className="text-sm font-semibold">Exemple</p>
+              <div className="rounded-lg border border-[#E1ECE8] bg-white p-2">
+                <p className="mb-2 text-[10px] text-[#4E6F68]">Mouvements fictifs</p>
+                <div className="flex h-16 items-end gap-1.5">
+                  {bars.map((height, index) => (
+                    <span
+                      key={height}
+                      className="flex-1 origin-bottom rounded-t bg-[#0F8F78]"
+                      style={{
+                        height,
+                        animation: "bfGrow 0.6s ease both",
+                        animationDelay: `${index * 0.08}s`,
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="overflow-hidden rounded-lg border border-[#E1ECE8] bg-white text-[11px]">
+                {["Dossier A", "Dossier B", "Dossier C"].map((name) => (
+                  <p key={name} className="flex justify-between border-t border-[#E1ECE8] px-2 py-1.5 first:border-t-0">
+                    <span className="font-medium">{name}</span>
+                    <span className="text-[#4E6F68]">Fictif</span>
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-2.5 rounded-b-xl bg-[#AEB4C8]" />
+      </div>
+      <p className="px-4 pb-4 text-center font-mono text-[11px] uppercase tracking-[0.1em] text-[#4A4D6A]">Écran d&apos;exemple · données fictives</p>
+      <style>{`@keyframes bfGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}`}</style>
+    </div>
+  );
+}
+
+export function GeoView({ page }: { page: GeoPage }) {
   const url = `${site.url}/${page.path}`;
   const area =
     page.level === "City"
@@ -37,18 +98,16 @@ export function GeoView({ page, hero }: { page: GeoPage; hero?: ReactNode }) {
           "@type": "ListItem",
           position: index + 1,
           name: crumb.label,
-          item: crumb.href === "/" ? `${site.url}/` : `${site.url}${crumb.href}`,
+          item: crumb.href.startsWith("http") ? crumb.href : `${site.url}${crumb.href === "/" ? "/" : crumb.href}`,
         })),
       },
       {
         "@type": "Service",
-        name: page.h1,
-        serviceType: page.keyword,
+        name: page.keyword,
+        serviceType: page.h1,
         url,
-        description: page.description,
-        provider: { "@id": `${site.url}/#business` },
         areaServed: area,
-        inLanguage: "fr",
+        provider: { "@type": "Organization", name: site.name, url: site.url },
       },
       {
         "@type": "FAQPage",
@@ -60,129 +119,263 @@ export function GeoView({ page, hero }: { page: GeoPage; hero?: ReactNode }) {
       },
     ],
   };
+  const place = block(page, page.areaName);
+  const serviceBlock = page.blocks.find((item) => item.p && item.h !== page.areaName && item.h !== "Le montant" && item.h !== "Cas à écrire");
+  const delivered = block(page, "Ce qui est livré");
+  const steps = block(page, "Le passage");
+  const price = block(page, "Le montant");
+  const missing = block(page, "Cas à écrire");
+  const stepTitles = ["Le geste", "Trente minutes", "Le montant", "La remise"];
+  const offerLinks = page.links.filter((item) => item.href !== "/contact" && item.href !== "/geo-location");
+  const whatsapp = `https://wa.me/${site.phone.replace(/[^0-9]/g, "")}`;
 
   return (
-    <main data-landing={hero ? true : undefined}>
+    <main className="bg-[#F5F6FF] text-[#0E1030]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(schema) }} />
-      {hero}
-      {hero ? null : <header className="px-6 pb-16 pt-16 md:px-12 md:pt-24">
-        <nav aria-label="Fil d'Ariane" className="flex flex-wrap gap-x-2 text-sm text-mute">
-          {page.crumbs.map((crumb, index) => {
-            const last = index === page.crumbs.length - 1;
-            return (
-              <span key={crumb.href}>
-                {index > 0 ? " · " : null}
-                {last ? crumb.label : <Link href={crumb.href}>{crumb.label}</Link>}
-              </span>
-            );
-          })}
-        </nav>
-        <h1 className="display mt-6 max-w-[22ch] text-[clamp(2.2rem,5vw,4.6rem)]">{page.h1}</h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed">
-          <Rich text={page.lede} />
-        </p>
-        <Link href="/contact" className="btn mt-8">
-          {page.cta}
-        </Link>
-      </header>}
 
-      {page.blocks.map((block) => (
-        <section id={block.h === "Ce qui est livré" ? "livre" : undefined} key={block.h} className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-          <h2 className="display max-w-[22ch] text-4xl">{block.h}</h2>
-          {block.p?.map((paragraph) => (
-            <p key={paragraph.slice(0, 80)} className="mt-6 max-w-2xl text-lg leading-relaxed">
-              <Rich text={paragraph} />
-            </p>
-          ))}
-          {block.items ? (
-            <ul className="mt-8 max-w-2xl">
-              {block.items.map((item) => (
-                <li key={item.slice(0, 80)} className="border-t border-line py-4 text-sm leading-relaxed">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </section>
-      ))}
-
-      {page.proof.length > 0 ? (
-        <section className="border-t border-line">
-          <div className="px-6 py-16 md:px-12">
-            <h2 className="display text-4xl">Dans le catalogue</h2>
-            <p className="mt-4 max-w-xl text-sm text-mute">Projets publiés, avec la ville écrite sur la fiche. Pas un bureau local.</p>
-          </div>
-          {page.proof.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="index-row flex items-baseline justify-between gap-6 border-t border-line px-6 py-8 md:px-12"
-            >
-              <span className="display text-3xl md:text-5xl">{item.title}</span>
-              <span className="max-w-sm text-right text-sm text-mute">{item.note}</span>
+      <section className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-14 px-6 pb-24 pt-10">
+        <div className="min-w-0 flex-[1_1_420px]">
+          <nav aria-label="Fil d'Ariane" className="mb-6 flex flex-wrap gap-x-2 text-sm text-[#4A4D6A]">
+            {page.crumbs.map((crumb, index) => {
+              const last = index === page.crumbs.length - 1;
+              return (
+                <span key={crumb.href}>
+                  {index > 0 ? <span className="mr-2">/</span> : null}
+                  {last ? crumb.label : <Link href={crumb.href}>{crumb.label}</Link>}
+                </span>
+              );
+            })}
+          </nav>
+          <p className="mb-5 inline-flex items-center gap-2.5 rounded-full bg-[#E6E8FF] px-3 py-1.5 font-mono text-xs uppercase tracking-[0.1em] text-[#1A24A8]">
+            <span className="size-2 rounded-full bg-[#1D2BD1]" />
+            {page.eyebrow}
+          </p>
+          <h1 className="mb-6 max-w-[16ch] text-[clamp(2.5rem,5.2vw,4.25rem)] font-bold leading-[1.04] tracking-[-0.035em]">{page.h1}</h1>
+          <p className="mb-8 max-w-[560px] text-lg leading-relaxed text-[#3A3D60]">
+            <Rich text={page.lede} />
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="#contact" className="inline-flex min-h-12 items-center gap-2 rounded-[10px] bg-[#1D2BD1] px-6 font-semibold text-white">
+              {page.cta} <Arrow />
+            </a>
+            <Link href={page.links[0]?.href ?? "/contact"} className="inline-flex min-h-12 items-center rounded-[10px] border border-[#C5C9EA] bg-white px-6 font-semibold">
+              Voir l&apos;offre
             </Link>
-          ))}
-        </section>
-      ) : null}
-
-      {page.related.length > 0 ? (
-        <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-          <h2 className="display text-4xl">Autres recherches, même lieu</h2>
-          <ul className="mt-8 max-w-2xl">
-            {page.related.map((item) => (
-              <li key={item.href} className="border-t border-line py-4">
-                <Link href={item.href} className="text-lg">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-
-      {page.cities.length > 0 ? (
-        <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-          <h2 className="display text-4xl">Villes</h2>
-          <ul className="mt-8 flex flex-wrap gap-3">
-            {page.cities.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="border-b border-line py-2 text-sm">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-
-      <section className="border-t border-line px-6 py-16 md:px-12 md:py-24">
-        <h2 className="display text-4xl">Questions</h2>
-        <dl className="mt-10 max-w-3xl">
-          {page.faqs.map((item) => (
-            <div key={item.q} className="border-t border-line py-6">
-              <dt className="text-lg">{item.q}</dt>
-              <dd className="mt-2 text-sm leading-relaxed text-mute">{item.a}</dd>
-            </div>
-          ))}
-        </dl>
+          </div>
+          <p className="mt-7 flex items-center gap-2.5 text-sm text-[#4A4D6A]">
+            <span className="size-2 rounded-full bg-[#1D2BD1]" />
+            <span><strong className="font-semibold text-[#0E1030]">Trente minutes pour cadrer.</strong> Réponse sous un jour ouvré.</span>
+          </p>
+        </div>
+        <div className="flex min-w-0 flex-[1_1_420px] justify-center">
+          <Screen keyword={page.eyebrow} />
+        </div>
       </section>
 
-      <section id="contact" className="grid gap-12 border-t border-line px-6 py-16 md:grid-cols-12 md:px-12 md:py-24">
-        <div className="md:col-span-5">
-          <h2 className="display text-5xl">{page.cta}</h2>
-          <p className="mt-6 max-w-sm leading-relaxed">
-            Réponse sous un jour ouvré, à <EmailText />. Bureau au Technopark, Casablanca.
-          </p>
-          <nav aria-label="Pages liées" className="mt-8 flex flex-col gap-2 text-sm">
-            {page.links.map((item) => (
-              <Link key={item.href + item.label} href={item.href} className="border-b border-line py-2">
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+      {place ? (
+        <section className="border-t border-[#E3E6F8] bg-white py-24">
+          <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+            <div className="max-w-[400px] flex-[1_1_300px]">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">{page.areaName}</p>
+              <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">Le bureau reste à Casablanca.</h2>
+            </div>
+            <div className="min-w-0 flex-[999_1_560px]">
+              {place.p?.slice(0, 1).map((paragraph) => (
+                <p key={paragraph.slice(0, 40)} className="mb-8 max-w-[640px] text-lg leading-relaxed text-[#3A3D60]">
+                  <Rich text={paragraph} />
+                </p>
+              ))}
+              <div className="flex flex-wrap gap-4">
+                <article className="min-w-[240px] flex-1 rounded-2xl border border-[#E3E6F8] bg-[#F5F6FF] p-6">
+                  <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#1D2BD1]">Bureau</p>
+                  <h3 className="mb-2 text-lg">Technopark</h3>
+                  <p className="text-[15px] leading-relaxed text-[#3A3D60]">Boulevard Dammam, Aïn Chock, 20001 Casablanca. Sur rendez-vous, en semaine, de 9 h à 19 h.</p>
+                </article>
+                <article className="min-w-[240px] flex-1 rounded-2xl border border-[#E3E6F8] bg-[#F5F6FF] p-6">
+                  <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#1D2BD1]">Cette page</p>
+                  <h3 className="mb-2 text-lg">{page.areaName}</h3>
+                  <p className="text-[15px] leading-relaxed text-[#3A3D60]">{page.keyword}. Le travail se discute depuis le bureau de Casablanca.</p>
+                </article>
+                <article className="min-w-[240px] flex-1 rounded-2xl border border-[#E3E6F8] bg-[#F5F6FF] p-6">
+                  <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#1D2BD1]">Premier échange</p>
+                  <h3 className="mb-2 text-lg">Trente minutes</h3>
+                  <p className="text-[15px] leading-relaxed text-[#3A3D60]">Le contact se fait par le formulaire. Le devis vient après le périmètre.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {serviceBlock ? (
+        <section className="border-t border-[#E3E6F8] py-24">
+          <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+            <div className="max-w-[400px] flex-[1_1_300px]">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Offre</p>
+              <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">{serviceBlock.h}</h2>
+            </div>
+            <div className="min-w-0 flex-[999_1_560px]">
+              {serviceBlock.p?.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)} className="mb-5 max-w-[680px] text-lg leading-relaxed text-[#3A3D60]">
+                  <Rich text={paragraph} />
+                </p>
+              ))}
+              {offerLinks.length > 0 ? (
+                <div className="mt-6 rounded-2xl bg-[#E6E8FF] p-7">
+                  <p className="mb-4 text-[15px] leading-relaxed text-[#1A1F6B]">Les pages déjà publiées pour cette offre. Celle-ci dit comment on en parle pour {page.areaName}.</p>
+                  <div className="flex flex-wrap gap-2.5">
+                    {offerLinks.map((item) => (
+                      <Link key={item.href + item.label} href={item.href} className="inline-flex min-h-11 items-center gap-2 rounded-[10px] bg-white px-4 text-sm font-semibold">
+                        {item.label} <Arrow />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {delivered?.items ? (
+        <section className="border-t border-[#E3E6F8] bg-white py-24">
+          <div className="mx-auto max-w-[1200px] px-6">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Ce qui est livré</p>
+            <h2 className="mb-12 max-w-[760px] text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">Écrit avant le code, pour {page.areaName}.</h2>
+            <div className="flex flex-wrap gap-4">
+              {delivered.items.map((item, index) => (
+                <article key={item.slice(0, 48)} className="min-w-[280px] flex-[1_1_320px] rounded-2xl border border-[#E3E6F8] bg-[#F5F6FF] p-7">
+                  <p className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.12em] text-[#1D2BD1]">{String(index + 1).padStart(2, "0")}</p>
+                  <p className="text-base leading-relaxed text-[#2B2E52]">{item}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {steps?.items ? (
+        <section className="border-t border-[#E3E6F8] py-24">
+          <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+            <div className="max-w-[400px] flex-[1_1_300px]">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Le passage</p>
+              <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">Du geste à la remise, en {steps.items.length} étapes.</h2>
+            </div>
+            <ol className="flex min-w-0 flex-[999_1_560px] flex-col gap-3.5">
+              {steps.items.map((item, index) => (
+                <li key={item.slice(0, 40)} className="flex gap-5 rounded-2xl border border-[#E3E6F8] bg-white p-6">
+                  <span className="flex size-9 flex-none items-center justify-center rounded-full bg-[#1D2BD1] text-sm font-bold text-white">{index + 1}</span>
+                  <div>
+                    <h3 className="mb-1 text-lg">{stepTitles[index] ?? `Étape ${index + 1}`}</h3>
+                    <p className="text-[15px] leading-relaxed text-[#3A3D60]">{item}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ) : null}
+
+      {price?.p ? (
+        <section className="bg-[#0E1030] py-24 text-white">
+          <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+            <div className="max-w-[400px] flex-[1_1_300px]">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#AEB4FF]">Le montant</p>
+              <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">{price.p[0]?.split(". ")[0]}.</h2>
+            </div>
+            <div className="min-w-0 flex-[999_1_560px]">
+              {[price.p[0]?.split(". ").slice(1).join(". "), ...price.p.slice(1)].filter(Boolean).map((paragraph) => (
+                <p key={paragraph.slice(0, 40)} className="mb-5 max-w-[640px] text-lg leading-relaxed text-[#D5D8F5]">{paragraph}</p>
+              ))}
+              <a href="#contact" className="inline-flex min-h-12 items-center gap-2 rounded-[10px] bg-white px-6 font-semibold text-[#0E1030]">
+                Demander un cadrage <Arrow />
+              </a>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className="py-24">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Dans le catalogue</p>
+          <h2 className="mb-3 max-w-[760px] text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">
+            {page.proof.length ? `Projets publiés, liés à ${page.areaName}.` : `Pas encore de fiche pour ${page.keyword}.`}
+          </h2>
+          <p className="mb-10 text-base text-[#4A4D6A]">La ville est écrite sur la fiche. Ce n&apos;est pas un bureau local.</p>
+          {page.proof.length ? (
+            <div className="flex flex-wrap gap-4">
+              {page.proof.map((item) => (
+                <Link key={item.href} href={item.href} className="flex min-h-[220px] min-w-[280px] flex-1 flex-col justify-between gap-10 rounded-2xl border border-[#D5D9F2] bg-white p-7">
+                  <div>
+                    <h3 className="mb-2 text-2xl tracking-[-0.02em]">{item.title}</h3>
+                    <p className="text-[15px] leading-relaxed text-[#3A3D60]">{item.note}</p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#1D2BD1]">Voir la fiche <Arrow /></span>
+                </Link>
+              ))}
+            </div>
+          ) : missing?.p ? (
+            missing.p.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="max-w-[640px] text-lg leading-relaxed text-[#3A3D60]">{paragraph}</p>
+            ))
+          ) : null}
         </div>
-        <div className="md:col-span-6 md:col-start-7">
-          <LeadForm />
+      </section>
+
+      {page.cities.length > 0 ? (
+        <section className="border-t border-[#E3E6F8] bg-white py-24">
+          <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+            <div className="max-w-[400px] flex-[1_1_300px]">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Villes</p>
+              <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">La même offre, pour un autre lieu.</h2>
+            </div>
+            <div className="flex min-w-0 flex-[999_1_560px] flex-wrap content-start gap-3">
+              {page.cities.map((item) => (
+                <Link key={item.href} href={item.href} className="inline-flex min-h-16 min-w-[200px] flex-1 items-center justify-between rounded-[14px] border border-[#E3E6F8] bg-[#F5F6FF] px-5 font-semibold">
+                  {item.label} <Arrow />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className="border-t border-[#E3E6F8] py-24">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+          <div className="max-w-[400px] flex-[1_1_300px]">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Questions</p>
+            <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">Ce qu&apos;on nous demande le plus.</h2>
+          </div>
+          <div className="min-w-0 flex-[999_1_560px] border-t border-[#C5C9EA]">
+            {page.faqs.map((item) => (
+              <details key={item.q} className="group border-b border-[#C5C9EA]">
+                <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 py-5 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <span className="text-2xl text-[#1D2BD1] group-open:hidden" aria-hidden="true">+</span>
+                  <span className="hidden text-2xl text-[#1D2BD1] group-open:inline" aria-hidden="true">–</span>
+                </summary>
+                <p className="mb-6 max-w-[640px] text-base leading-relaxed text-[#3A3D60]">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="border-t border-[#E3E6F8] bg-white py-24">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap gap-x-16 gap-y-10 px-6">
+          <div className="max-w-[400px] flex-[1_1_300px]">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-[#1D2BD1]">Contact</p>
+            <h2 className="mb-5 text-[clamp(1.875rem,3.4vw,2.75rem)] font-bold leading-[1.1] tracking-[-0.03em]">{page.cta}</h2>
+            <p className="mb-7 text-base leading-relaxed text-[#3A3D60]">
+              Réponse sous un jour ouvré, à <EmailText />. Bureau au Technopark, Casablanca. Sujet : {page.keyword}.
+            </p>
+            <a href={whatsapp} className="inline-flex min-h-12 items-center gap-2 rounded-[10px] border border-[#C5C9EA] bg-[#F5F6FF] px-5 font-semibold">
+              Écrire sur WhatsApp <Arrow />
+            </a>
+          </div>
+          <div className="min-w-0 flex-[999_1_560px] rounded-[20px] border border-[#E3E6F8] bg-[#F5F6FF] p-8">
+            <LeadForm variant="sheet" />
+          </div>
         </div>
       </section>
     </main>

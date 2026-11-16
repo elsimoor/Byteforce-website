@@ -22,6 +22,7 @@ export type GeoPage = {
   crumbs: GeoLink[];
   areaName: string;
   areaCountry: string;
+  eyebrow: string;
   level: "City" | "Country";
   words: number;
 };
@@ -70,7 +71,7 @@ function build(target: Target): GeoPage {
   const path = pathFor(target);
   const h1 = `${target.service.name} ${place.prep}`;
   const title = `${h1} | Byte Force`;
-  const description = `${h1}. Studio à Casablanca, devis en ${target.country.currency}. Trente minutes, réponse sous un jour ouvré.`;
+  const description = `${h1}. Byte Force en parle depuis Casablanca. Le devis se discute en ${target.country.currencyLabel}, après le périmètre. Réponse sous un jour ouvré.`;
   const proof = localProof(target, place.label);
   const siblings = target.country.cities
     .filter((city) => city.slug !== target.city?.slug)
@@ -85,7 +86,7 @@ function build(target: Target): GeoPage {
     target.service.parent,
   ];
   if (target.city) crumbs.push({ href: countryHref, label: target.country.name });
-  crumbs.push({ href: `/${path}`, label: h1 });
+  crumbs.push({ href: `/${path}`, label: place.label });
 
   const links: GeoLink[] = [
     target.service.parent,
@@ -132,11 +133,11 @@ function build(target: Target): GeoPage {
           : `Non. Le seul bureau est à Casablanca. Le travail ${place.prep} se fait en visio. Un déplacement se décide seulement s'il est écrit dans le périmètre.`,
     },
     {
-      q: `Quel prix pour ${target.service.short} ${place.prep} ?`,
+      q: `Prix ${target.service.short} ${place.prep} ?`,
       a: range,
     },
     {
-      q: `Que comprend ${target.service.short} ${place.prep} ?`,
+      q: `Que comprend ${h1} ?`,
       a: target.service.includes.slice(0, 3).join(" "),
     },
     {
@@ -170,6 +171,7 @@ function build(target: Target): GeoPage {
     crumbs,
     areaName: place.label,
     areaCountry: target.country.name,
+    eyebrow: `${target.service.short.charAt(0).toUpperCase()}${target.service.short.slice(1)} · ${place.label}`,
     level: target.city ? "City" : "Country",
     words,
   };
