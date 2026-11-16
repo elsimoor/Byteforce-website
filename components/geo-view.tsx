@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GeoHeroStage } from "@/components/geo-hero-stage";
 import { LeadForm } from "@/components/lead-form";
 import { EmailText } from "@/components/mail-link";
 import type { GeoBlock, GeoPage } from "@/lib/geo/pages";
@@ -31,56 +32,6 @@ function Arrow() {
 
 function block(page: GeoPage, heading: string): GeoBlock | undefined {
   return page.blocks.find((item) => item.h === heading);
-}
-
-function Screen({ keyword }: { keyword: string }) {
-  const bars = ["38%", "58%", "46%", "82%", "68%", "96%", "74%"];
-  return (
-    <div className="relative w-full max-w-[520px] overflow-hidden rounded-[28px] border border-[#D5D9F2] bg-[#EEF0FF] shadow-[0_24px_60px_rgba(29,43,209,0.14)]">
-      <div className="px-4 pb-3 pt-4">
-        <div className="overflow-hidden rounded-t-xl bg-[#1B1F2A] p-2.5">
-          <div className="flex h-[220px] overflow-hidden bg-[#F3F8F6] font-sans text-[#0B2B26]">
-            <div className="flex w-[34%] flex-none flex-col gap-1 bg-[#0B3B33] p-3 text-[11px] text-[#CFE8E1]">
-              <p className="mb-2 truncate text-sm font-semibold text-white">{keyword}</p>
-              <p className="rounded-md bg-[#14584C] px-2 py-1.5 text-white">Tableau</p>
-              <p className="px-2 py-1.5">Dossiers</p>
-              <p className="px-2 py-1.5">Étapes</p>
-            </div>
-            <div className="flex min-w-0 flex-1 flex-col gap-2 p-3">
-              <p className="text-sm font-semibold">Exemple</p>
-              <div className="rounded-lg border border-[#E1ECE8] bg-white p-2">
-                <p className="mb-2 text-[10px] text-[#4E6F68]">Mouvements fictifs</p>
-                <div className="flex h-16 items-end gap-1.5">
-                  {bars.map((height, index) => (
-                    <span
-                      key={height}
-                      className="flex-1 origin-bottom rounded-t bg-[#0F8F78]"
-                      style={{
-                        height,
-                        animation: "bfGrow 0.6s ease both",
-                        animationDelay: `${index * 0.08}s`,
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-              <div className="overflow-hidden rounded-lg border border-[#E1ECE8] bg-white text-[11px]">
-                {["Dossier A", "Dossier B", "Dossier C"].map((name) => (
-                  <p key={name} className="flex justify-between border-t border-[#E1ECE8] px-2 py-1.5 first:border-t-0">
-                    <span className="font-medium">{name}</span>
-                    <span className="text-[#4E6F68]">Fictif</span>
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="h-2.5 rounded-b-xl bg-[#AEB4C8]" />
-      </div>
-      <p className="px-4 pb-4 text-center font-mono text-[11px] uppercase tracking-[0.1em] text-[#4A4D6A]">Écran d&apos;exemple · données fictives</p>
-      <style>{`@keyframes bfGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}`}</style>
-    </div>
-  );
 }
 
 export function GeoView({ page }: { page: GeoPage }) {
@@ -167,9 +118,7 @@ export function GeoView({ page }: { page: GeoPage }) {
             <span><strong className="font-semibold text-[#0E1030]">Trente minutes pour cadrer.</strong> Réponse sous un jour ouvré.</span>
           </p>
         </div>
-        <div className="flex min-w-0 flex-[1_1_420px] justify-center">
-          <Screen keyword={page.eyebrow} />
-        </div>
+        <GeoHeroStage />
       </section>
 
       {place ? (
