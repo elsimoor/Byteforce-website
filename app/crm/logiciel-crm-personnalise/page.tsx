@@ -3,14 +3,14 @@ import { LandingCrmPage } from "@/components/landing-crm-page";
 import { openGraph } from "@/lib/open-graph";
 
 export const metadata: Metadata = {
-  title: "CRM Sur Mesure Maroc : Logiciel CRM Personnalisé pour PME",
+  title: "Logiciel CRM personnalisé pour une PME au Maroc",
   description:
-    "Développement de CRM sur mesure au Maroc et à Casablanca : pipeline commercial, relances WhatsApp, gestion client et 0 abonnement par utilisateur. Devis sous 24h.",
+    "Un CRM personnalisé reprend les étapes, les droits et les relances de l'entreprise. Pour le cadre général, voir le CRM sur mesure au Maroc. Devis sous 24h.",
   alternates: { canonical: "/crm/logiciel-crm-personnalise" },
   openGraph: openGraph(
     "/crm/logiciel-crm-personnalise",
-    "CRM Sur Mesure Maroc : Logiciel CRM Personnalisé pour PME",
-    "Développement de CRM sur mesure au Maroc et à Casablanca : pipeline commercial, relances WhatsApp, gestion client et 0 abonnement par utilisateur. Devis sous 24h."
+    "Logiciel CRM personnalisé pour une PME au Maroc",
+    "Un CRM personnalisé reprend les étapes, les droits et les relances de l'entreprise. Pour le cadre général, voir le CRM sur mesure au Maroc. Devis sous 24h."
   ),
 };
 

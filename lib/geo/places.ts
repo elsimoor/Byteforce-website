@@ -83,7 +83,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Lille est la ville de France la plus présente dans le catalogue public. Byte Force n'y a pas de bureau : le studio reste à Casablanca. Le travail avec une équipe lilloise se fait en visio, avec le fichier partagé avant l'appel. Un déplacement se décide au cas par cas, il n'est pas une permanence sur place.",
       "Les fiches lilloises sont publiées : Escapade Florale, boutique florale, 2024 ; Nu Lille, site d'une expérience gastronomique, 2023 ; Proche de moi, recherche, carte et fiches, 2024 ; Réservation Proche de moi, connexion de l'établissement, en ligne en 2026. D'autres fiches du Nord sont à Marcq-en-Barœul et à Roubaix, pas dans Lille même. On garde la ville écrite sur chaque fiche.",
-      "Le décalage avec Casablanca est d'une heure une partie de l'année, nul le reste. Français, euros, réponse sous un jour ouvré, de 9 h à 19 h heure du bureau. Le téléphone est le +212 666 650 696.",
+      "Le décalage avec Casablanca est d'une heure une partie de l'année, nul le reste. Français, euros, réponse sous un jour ouvré, de 9 h à 19 h heure du bureau. Le contact se fait par le formulaire.",
     ],
   },
   "France|Marseille": {
@@ -101,7 +101,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Lyon mêle industrie, services et des sièges qui pilotent des sites ailleurs. Byte Force n'y a pas de bureau. Le studio est à Casablanca. On travaille en visio. Un déplacement à Lyon se décide seulement si le geste doit être vu dans l'atelier ou l'agence, et il est chiffré à part du code.",
       "Le catalogue public ne contient pas de projet étiqueté Lyon. Les réalisations françaises nommées sont à Lille, dans le Nord, à Marcq-en-Barœul et à Roubaix. On ne les attribue pas à Lyon.",
-      "Le décalage horaire avec l'Europe est d'une heure une partie de l'année, nul le reste. Les points tiennent dans la journée française. Langue de cadrage : français. Devise : l'euro pour une société en France. Téléphone +212 666 650 696, lundi au vendredi, 9 h–19 h.",
+      "Le décalage horaire avec l'Europe est d'une heure une partie de l'année, nul le reste. Les points tiennent dans la journée française. Langue de cadrage : français. Devise : l'euro pour une société en France. Contact par le formulaire, lundi au vendredi, 9 h–19 h.",
     ],
   },
   "France|Bordeaux": {
@@ -119,7 +119,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Nantes est traité depuis Casablanca, en visio. Il n'y a pas de bureau sur place, ni de permanence. Un déplacement dans l'Ouest se décide si le métier ne passe pas l'écran, et seulement après l'avoir écrit. Le reste du travail, le code et les points, se fait dans les heures du studio.",
       "Le catalogue ne nomme pas Nantes. On n'emprunte pas une fiche lilloise pour cette page. Si un projet nantais est publié plus tard, il sera ajouté avec sa ville réelle. En attendant, la page ne fabrique pas de preuve.",
-      "Décalage d'une heure avec Casablanca une partie de l'année, nul le reste. Cadrage en français. Devis en euros pour une société française. Contact au +212 666 650 696 ou par le formulaire. Réponse sous un jour ouvré.",
+      "Décalage d'une heure avec Casablanca une partie de l'année, nul le reste. Cadrage en français. Devis en euros pour une société française. Contact par le formulaire. Réponse sous un jour ouvré.",
     ],
   },
   "France|Toulouse": {
@@ -137,7 +137,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Byte Force travaille avec des entreprises en France depuis Casablanca. Il n'y a pas de bureau en France. Le décalage est d'une heure une partie de l'année, nul le reste, donc les points tiennent dans la journée française. Les heures du studio sont 9 h–19 h, lundi au vendredi, heure de Casablanca.",
       "Les projets français du catalogue sont localisés : Lille (Escapade Florale, Nu Lille, Proche de moi, Réservation Proche de moi), Marcq-en-Barœul (Meubles de Septentrion), Roubaix (Ambulances Valcq), le Nord (Les Hauts Paysages). Snapchat Collect mentionne Marseille. Cette liste n'est pas la France entière. Les pages de ville ne doivent pas être lues comme des agences.",
-      "Le cadrage est en français. Une société en France se discute en euros. Aucun prix n'est publié : le montant suit le périmètre. Trente minutes pour commencer, réponse sous un jour ouvré, au +212 666 650 696.",
+      "Le cadrage est en français. Une société en France se discute en euros. Aucun prix n'est publié : le montant suit le périmètre. Trente minutes pour commencer, réponse sous un jour ouvré, par le formulaire.",
     ],
   },
   "Canada|Montréal": {
@@ -155,7 +155,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Québec, la ville, se cadre en français depuis Casablanca. Il n'y a pas de bureau sur place. La visio est le mode de travail. Le décalage est de plusieurs heures, du même ordre que Montréal : matin à Québec, après-midi au Maroc. On ne promet pas une présence locale.",
       "Le catalogue ne distingue pas un projet « ville de Québec ». Les fiches canadiennes publiques sont à Montréal : Coco Inbox, Tourispeak, CRM Cocoinbox. On ne les reclasse pas à Québec. Si le sujet est le produit déjà en ligne à Montréal, la fiche reste à Montréal.",
-      "Dollars canadiens pour une société au Canada. Trente minutes pour le premier échange. Téléphone +212 666 650 696, réponse sous un jour ouvré, lundi au vendredi. L'interface peut être en français, puisque la recherche l'est.",
+      "Dollars canadiens pour une société au Canada. Trente minutes pour le premier échange. Contact par le formulaire, réponse sous un jour ouvré, lundi au vendredi. L'interface peut être en français, puisque la recherche l'est.",
     ],
   },
   "Canada|Ottawa": {
@@ -173,7 +173,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Toronto est en grande partie anglophone. Cette page existe parce que la recherche est en français : elle s'adresse à une équipe qui cherche dans cette langue, pas à toute la ville. Byte Force n'y a pas de bureau. Les rendez-vous sont en visio. Le matin à Toronto correspond à l'après-midi à Casablanca. On reste dans les heures du studio, 9 h–19 h.",
       "Le catalogue ne nomme pas Toronto. Coco Inbox, Tourispeak et CRM Cocoinbox sont à Montréal. On ne les transporte pas en Ontario. Un logiciel pour une équipe de Toronto peut avoir une interface en anglais : on l'écrit au cadrage, puisque le français de cette page est la langue de la recherche, pas forcément celle des écrans.",
-      "Devise : le dollar canadien pour une société au Canada. Pas de grille de prix. Trente minutes, puis un périmètre. Réponse sous un jour ouvré au +212 666 650 696 ou par le formulaire.",
+      "Devise : le dollar canadien pour une société au Canada. Pas de grille de prix. Trente minutes, puis un périmètre. Réponse sous un jour ouvré par le formulaire.",
     ],
   },
   "Canada|Calgary": {
@@ -191,7 +191,7 @@ export const geoPlaces: Record<string, GeoPlace> = {
     paragraphs: [
       "Vancouver a le décalage le plus large des villes de cette liste avec Casablanca. Byte Force n'y a pas de bureau. Les points en visio tiennent dans une fenêtre courte : fin de matinée côté Pacifique, fin de journée au Maroc, et encore seulement quand les heures se croisent. On le vérifie avant de promettre un rythme de réunions. Le code, lui, n'a pas besoin de cette fenêtre.",
       "Le catalogue ne contient pas de projet à Vancouver. Montréal porte les fiches canadiennes publiques. On ne les déplace pas sur la côte Ouest. Il n'y a pas de client inventé pour remplir la page.",
-      "La recherche est en français. L'interface peut être en anglais si l'équipe le demande : on l'écrit, on ne le devine pas. Devise : dollar canadien. Contact +212 666 650 696. Premier échange de trente minutes, réponse sous un jour ouvré.",
+      "La recherche est en français. L'interface peut être en anglais si l'équipe le demande : on l'écrit, on ne le devine pas. Devise : dollar canadien. Contact par le formulaire. Premier échange de trente minutes, réponse sous un jour ouvré.",
     ],
   },
   "Canada|Canada": {

@@ -34,7 +34,7 @@ export const geoServices: Record<string, GeoService> = {
       "Le catalogue public montre deux applications Android, et aucune application iOS vérifiée. [[/realisations/zainek|Zainek]] sert à trouver un salon, un coiffeur ou un nail artist et à demander un rendez-vous. Le site est en ligne, l'application est sur le Play Store, et la fiche publique indique une mise à jour le 30 août 2026. [[/realisations/tourispeak|Tourispeak]] est un réseau pour le tourisme, avec des visites audio, publié depuis Montréal en 2024, avec une application Android. Ces fiches prouvent un type de livraison. Elles ne prouvent pas une équipe dans chaque ville de cette liste.",
       "Le cadrage tient en un geste principal. On écrit qui ouvre l'application, ce qu'elle doit permettre hors ligne, quelles données restent sur le téléphone, et ce qui doit remonter au logiciel déjà en place. Un deuxième geste attend la première version utilisée. C'est le moyen le plus simple de ne pas faire payer deux produits. Les langues de l'interface, le mode sombre, et les rôles se décident dans ce même texte, pas dans une option ajoutée après la revue du store.",
       "La livraison comprend les écrans du geste, le branchement à l'API s'il y en a une, les comptes de test, et une build que l'entreprise peut soumettre. La maintenance après mise en ligne, les évolutions, et le rejet éventuel d'une revue de store se traitent comme une suite, pas comme une surprise cachée dans le premier devis. On ne promet pas un nombre de téléchargements, ni une place dans un classement.",
-      "Le cadre national de cette offre est la page [[/developpement-application-mobile-maroc|développement d'application mobile au Maroc]]. Cette page-ci existe pour une recherche locale. Le bureau, lui, est unique : Technopark, boulevard Dammam, Aïn Chock, Casablanca. Le téléphone est le +212 666 650 696.",
+      "Le cadre national de cette offre est la page [[/developpement-application-mobile-maroc|développement d'application mobile au Maroc]]. Cette page-ci existe pour une recherche locale. Le bureau, lui, est unique : Technopark, boulevard Dammam, Aïn Chock, Casablanca. Le contact se fait par le formulaire du site.",
     ],
     includes: [
       "Un geste principal écrit, avec ce qui est hors de la première version.",
@@ -57,7 +57,7 @@ export const geoServices: Record<string, GeoService> = {
       "L'audit sépare trois familles de constats. Ce qui empêche un client de finir une action. Ce qui met des données ou un compte en risque. Ce qui ralentit l'équipe sans être visible du public. On n'aligne pas ces trois familles dans un même tableau de notes. Une faille d'accès passe avant un titre de page. Un formulaire qui n'envoie rien passe avant une préférence de police.",
       "Le rapport dit aussi ce qui va. Un système moche mais sauvegardé et compris par l'équipe n'a pas le même besoin qu'un écran neuf dont personne ne sait où est le dépôt. Byte Force ne recommande pas de tout réécrire pour remplacer un constat. La réécriture est une autre offre, décidée seulement si le correctif coûte plus cher que le maintien.",
       "Rien dans le catalogue public n'est présenté comme un audit livré à un client. Cette page ne emprunte pas une réalisation pour faire croire le contraire. Le travail d'audit se juge sur le rapport : constats, preuves, ordre. Pas sur une capture d'un autre projet.",
-      "La suite possible est une correction, une [[/services/maintenance|maintenance]], ou une [[/solutions/moderniser-application|modernisation]]. On le dit dans le rapport, avec ce qui peut attendre. Le contact pour ouvrir l'audit est le même que pour le reste du studio : formulaire, ou +212 666 650 696, en semaine de 9 h à 19 h.",
+      "La suite possible est une correction, une [[/services/maintenance|maintenance]], ou une [[/solutions/moderniser-application|modernisation]]. On le dit dans le rapport, avec ce qui peut attendre. Le contact pour ouvrir l'audit est le même que pour le reste du studio : formulaire, en semaine de 9 h à 19 h.",
     ],
     includes: [
       "La liste de ce qui a été lu : URL, dépôt, hébergement, formulaires, droits.",
@@ -200,7 +200,7 @@ export const geoServices: Record<string, GeoService> = {
       "Le catalogue public ne marque pas les sites comme « faits avec WordPress » sur leurs fiches. On ne les reclasse pas ici pour remplir la page. Un site vitrine ou une boutique se cadre sur [[/services/creation-site-web|création de site]] si le moteur n'est pas encore choisi. WordPress est le choix quand l'édition par l'équipe est le critère, pas quand il faut un nom connu dans la proposition.",
       "La livraison comprend le thème ou le plugin cadré, les comptes d'édition, les mises à jour expliquées, et ce qui ne doit pas être ajouté comme extension. Trop de plugins est une dette. On retire ceux qui font double emploi. Les formulaires sont testés jusqu'à l'email reçu, pas seulement jusqu'au message de succès à l'écran.",
       "L'hébergement et le nom de domaine restent au nom de l'entreprise. La [[/services/maintenance|maintenance]] après mise en ligne est une suite, avec les mises à jour de WordPress et des plugins. Elle n'est pas silencieuse dans le premier échange : un site WordPress non tenu se casse.",
-      "Le bureau est à Casablanca. Le travail sur un site ailleurs se fait en visio, avec un accès d'administration temporaire. Cet accès est retiré quand le site est remis. Le téléphone du studio est le +212 666 650 696.",
+      "Le bureau est à Casablanca. Le travail sur un site ailleurs se fait en visio, avec un accès d'administration temporaire. Cet accès est retiré quand le site est remis. Le contact se fait par le formulaire du site.",
     ],
     includes: [
       "Le choix WordPress justifié par l'édition, la boutique, ou un plugin, pas par habitude.",
@@ -246,7 +246,7 @@ export const geoServices: Record<string, GeoService> = {
       "La page [[/services/hebergement|hébergement]] est le cadre du service. Cette page locale répond à une recherche qui ajoute une ville ou un pays. L'emplacement du bureau, Casablanca, n'est pas l'emplacement du serveur. Le serveur est choisi pour la latence des utilisateurs et pour la loi qui s'applique aux données, pas pour être « dans la ville du mot-clé ». On le dit clairement, pour ne pas laisser croire à une salle machine à Calgary, à Paris ou à Agadir.",
       "Les sauvegardes sont une question de restauration, pas de pastille verte. On écrit qui peut restaurer, sur quelle période, et si la restauration a été essayée. Un backup jamais restauré n'est pas un backup. Les accès de production sont limités. L'environnement de test ne contient pas une copie non dite des données clients.",
       "L'hébergement peut accompagner un site, une application ou un logiciel déjà cadrés sur leurs pages. Seul, il ne répare pas un processus. Si la demande est en réalité une création ou une reprise de code, on renvoie vers cette offre au lieu d'héberger un système que personne ne sait modifier.",
-      "Le contact est le formulaire du site, ou le +212 666 650 696, du lundi au vendredi, de 9 h à 19 h. Le premier échange sert à savoir ce qui est en ligne, à quel nom, et ce qui doit le rester.",
+      "Le contact est le formulaire du site, du lundi au vendredi, de 9 h à 19 h. Le premier échange sert à savoir ce qui est en ligne, à quel nom, et ce qui doit le rester.",
     ],
     includes: [
       "Les comptes d'hébergement et le domaine au nom de l'entreprise.",
@@ -298,7 +298,7 @@ export const geoServices: Record<string, GeoService> = {
       "On distingue la correction, la mise à jour, et l'évolution. Une correction remet un geste qui marchait. Une mise à jour applique les versions prévues, après une vérification sur un environnement qui n'est pas la production nue. Une évolution est un nouveau geste : elle se chiffre à part, pour ne pas manger le temps qui devait servir aux mises à jour.",
       "Les formulaires sont revus jusqu'à la boîte qui reçoit. Une page qui affiche « message envoyé » et une boîte vide est un incident, pas un détail. Les sauvegardes sont celles de l'[[/services/hebergement|hébergement]], avec une restauration possible. On ne promet pas un délai d'intervention en minutes. On promet une réponse en jour ouvré, dans les heures du bureau, de 9 h à 19 h.",
       "Le catalogue ne classe pas un projet comme « sous maintenance ». On ne le laisse pas croire. Un site du catalogue prouve une mise en ligne, pas un contrat de tenue. Si le site n'a plus de dépôt, la première tâche est de le retrouver ou de le reconstruire assez pour pouvoir le tenir. C'est un constat, pas une vente automatique de refonte.",
-      "Pour ouvrir la maintenance, le formulaire du [[/contact|contact]] suffit : l'URL, qui a le compte, et ce qui casse. Le téléphone est le +212 666 650 696.",
+      "Pour ouvrir la maintenance, le formulaire du [[/contact|contact]] suffit : l'URL, qui a le compte, et ce qui casse. Le contact se fait par le formulaire du site.",
     ],
     includes: [
       "L'URL, le dépôt, et les comptes réellement accessibles.",
@@ -344,7 +344,7 @@ export const geoServices: Record<string, GeoService> = {
       "Le premier geste est d'ouvrir le fichier ensemble. On note les onglets utilisés cette semaine, pas ceux de 2019. On note qui a la dernière version. À Casablanca, ça peut se faire au Technopark, le fichier sur la table. Ailleurs, on le reçoit avant la visio. Un cadrage sans le fichier décrit un autre métier.",
       "La reprise des lignes est un travail, pas une option. Les doublons, les cellules vides, les dates en texte sont dites avant l'import. On peut livrer d'abord la saisie des nouveaux dossiers, et importer l'historique après, quand il est nettoyé. Promettre les deux le même jour est la cause classique d'un outil que l'équipe n'ouvre pas.",
       "Il n'y a pas, dans le catalogue, un avant-après chiffré de remplacement de tableur. On n'en invente pas. Le résultat utile est que l'équipe arrête d'envoyer le fichier. C'est observable. Ce n'est pas un pourcentage.",
-      "Aucun prix n'est publié. Un fichier de cinquante lignes et un fichier qui est le seul système de l'entreprise ne sont pas le même projet. Trente minutes avec le fichier suffisent souvent à le dire. Contact au +212 666 650 696, ou par le formulaire.",
+      "Aucun prix n'est publié. Un fichier de cinquante lignes et un fichier qui est le seul système de l'entreprise ne sont pas le même projet. Trente minutes avec le fichier suffisent souvent à le dire. Contact par le formulaire.",
     ],
     includes: [
       "Le fichier réel, pas un modèle.",
@@ -435,7 +435,7 @@ export const geoServices: Record<string, GeoService> = {
       "Le catalogue a des sites et des outils web publiés. [[/realisations/uas|UAS]] est un e-commerce aéronautique en ligne à Casablanca. [[/realisations/palais-mehdi|Palais Mehdi]] est une réservation à Marrakech, avec dates, adultes, enfants, puis les disponibilités, en ligne en 2026. [[/realisations/escapade-florale|Escapade Florale]] est une boutique florale en ligne à Lille depuis 2024. D'autres fiches existent à Lille, dans le Nord, et au Maroc. On ne les transforme pas en agences locales. Ce sont des mises en ligne, avec une ville écrite sur la fiche.",
       "Une application web se cadre comme un logiciel qui n'a pas besoin d'être installé : les rôles, la première version, les données. Un site se cadre par les pages, la demande, et ce que l'équipe pourra modifier seule. Dans les deux cas, le domaine et l'hébergement livrés sont à l'entreprise. Les formulaires sont testés jusqu'à la réception.",
       "Le mobile du navigateur fait partie du travail. Une application installée est une autre offre, [[/developpement-application-mobile-maroc|l'application mobile]], seulement si le hors-ligne, le store ou une notification fiable sont nécessaires. On ne pousse pas un store pour un site.",
-      "Aucun prix de page n'est affiché. Un site de quelques pages et une application avec des dossiers ne se chiffrent pas ensemble. Trente minutes pour trancher. Réponse sous un jour ouvré. Téléphone +212 666 650 696.",
+      "Aucun prix de page n'est affiché. Un site de quelques pages et une application avec des dossiers ne se chiffrent pas ensemble. Trente minutes pour trancher. Réponse sous un jour ouvré. Contact par le formulaire.",
     ],
     includes: [
       "La distinction site / application web, écrite avant le devis.",

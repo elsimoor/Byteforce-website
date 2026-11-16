@@ -171,7 +171,7 @@ export function GeoView({ page, hero }: { page: GeoPage; hero?: ReactNode }) {
         <div className="md:col-span-5">
           <h2 className="display text-5xl">{page.cta}</h2>
           <p className="mt-6 max-w-sm leading-relaxed">
-            Réponse sous un jour ouvré, à <EmailText /> ou au {site.phoneDisplay}. Bureau au Technopark, Casablanca.
+            Réponse sous un jour ouvré, à <EmailText />. Bureau au Technopark, Casablanca.
           </p>
           <nav aria-label="Pages liées" className="mt-8 flex flex-col gap-2 text-sm">
             {page.links.map((item) => (

@@ -141,7 +141,7 @@ function build(target: Target): GeoPage {
     },
     {
       q: `Comment se passent les points ${place.prep} ?`,
-      a: `${target.country.hours} Le téléphone est le +212 666 650 696. La langue de cadrage est le français.`,
+      a: `${target.country.hours} Le contact se fait par le formulaire du site. La langue de cadrage est le français. Le numéro affiché sur le site est un téléphone, pas un montant.`,
     },
     {
       q: "Quelle est la première étape ?",

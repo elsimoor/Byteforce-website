@@ -53,6 +53,13 @@ export default function CrmSurMesureMarocPage() {
             ],
           },
           {
+            h2: "CRM pour une PME : clients, équipe et relances",
+            p: [
+              "Une PME a besoin d'un état par affaire, pas du catalogue d'un éditeur. Le commercial voit ses clients. La direction voit l'équipe. Une relance part parce qu'un devis n'a pas de réponse, pas parce qu'un robot écrit à la place des gens.",
+              "Le passage depuis Excel se décide quand le classeur est devenu la mémoire commerciale. Le cadre de ce passage est la page remplacer Excel par un CRM. Le premier échange sert aussi à dire quand Excel doit rester.",
+            ],
+          },
+          {
             h2: "De la feuille Excel au CRM en moins d'un mois",
             p: [
               "La transition depuis vos fichiers Excel existants est fluide et sans interruption de votre activité commerciale. Nous prenons en charge la déduplication et l'importation de vos bases contacts, puis nous formons vos équipes lors d'un atelier pratique d'une demi-journée à Casablanca ou en visio.",
@@ -101,7 +108,8 @@ export default function CrmSurMesureMarocPage() {
         ]}
         relatedLinks={[
           { href: "/developpement-logiciel-sur-mesure-maroc", label: "Développement logiciel sur mesure Maroc" },
-          { href: "/solutions/remplacer-excel", label: "Remplacer Excel par un CRM" },
+          { href: "/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel", label: "Remplacer Excel par un CRM" },
+          { href: "/crm/logiciel-crm-personnalise", label: "Quand le cycle ne rentre pas dans un CRM standard" },
           { href: "/insights/cout-crm-personnalise", label: "Combien coûte un CRM sur mesure" },
           { href: "/insights/crm-ou-excel", label: "Guide CRM vs Excel" },
         ]}

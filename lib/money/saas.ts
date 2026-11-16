@@ -24,6 +24,13 @@ export const saasPages: MoneyPage[] = [
         ],
       },
       {
+        h: "L'architecture minimale",
+        p: [
+          "Un compte, un geste, une cloison entre les clients. L'invitation, l'arrêt d'un compte et la facturation se décident dans le périmètre. On ne publie pas de grille, ni un délai fixe. Le guide [[/insights/comment-creer-un-saas-au-maroc|comment créer un SaaS au Maroc]] et [[/insights/creation-saas-maroc|la création d'un SaaS]] racontent le même sujet. Ils ne remplacent pas cette page.",
+          "[[/insights/comment-creer-un-saas|Comment créer un SaaS]] reste un article. Le devis se fait ici, depuis Casablanca, quand le geste du premier client est nommable.",
+        ],
+      },
+      {
         h: "Ce que Coco Inbox montre, et ne montre pas",
         p: [
           "Coco Inbox est un produit publié : email temporaire, fichiers chiffrés, notes, en ligne depuis Montréal en 2024. C'est la preuve qu'un produit peut sortir et tenir. Ce n'est pas la preuve d'un SaaS de facturation ou d'un outil RH. On ne lui prête pas ces fonctions.",
@@ -45,6 +52,9 @@ export const saasPages: MoneyPage[] = [
       { href: "/services/hebergement", label: "Hébergement" },
       { href: "/realisations/coco-inbox", label: "Coco Inbox" },
       { href: "/realisations/yoursmile", label: "YourSmile" },
+      { href: "/insights/comment-creer-un-saas-au-maroc", label: "Comment créer un SaaS au Maroc" },
+      { href: "/insights/creation-saas-maroc", label: "Création d'un SaaS" },
+      { href: "/insights/comment-creer-un-saas", label: "Comment créer un SaaS" },
       { href: "/insights/category/saas", label: "Décisions SaaS" },
       contact,
     ],

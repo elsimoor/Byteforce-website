@@ -102,7 +102,7 @@ export function LandingCrmPage() {
               </div>
 
               <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
-                CRM sur mesure au Maroc : le logiciel de vente taillé pour votre cycle commercial.
+                Logiciel CRM personnalisé : les étapes de vente que l'éditeur ne porte pas.
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">

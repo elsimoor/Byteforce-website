@@ -26,6 +26,16 @@ export const mobilePages: MoneyPage[] = [
         ],
       },
       {
+        h: "Ce qui entre dans le projet",
+        items: [
+          "iOS quand les utilisateurs sont sur iPhone, Android quand le parc est Android, une base commune quand les deux stores sont exigés.",
+          "L'écran et le parcours du geste dehors. Le design se décide avec ce geste, pas après la revue du store.",
+          "Le serveur et l'[[/services/api-backend|API]] quand l'application doit lire un logiciel déjà en place.",
+          "La fiche du store et la build. Les comptes développeur restent au client.",
+          "Le montant suit le nombre de plateformes, le hors-ligne et les branchements. Aucun prix n'est affiché. Le détail est sur [[/insights/cout-application-mobile|combien coûte une application mobile]].",
+        ],
+      },
+      {
         h: "Ce que le catalogue ne montre pas",
         p: [
           "Deux applications Android sont publiques : [[/realisations/zainek|Zainek]], pour réserver un salon, et [[/realisations/tourispeak|Tourispeak]], pour des visites audio. Les fiches Play et les captures sont sur ces pages. Il n'y a pas d'application iOS vérifiée dans le catalogue. Le travail mobile se décide sur le geste, pas sur une capture seule.",
@@ -36,12 +46,15 @@ export const mobilePages: MoneyPage[] = [
       { q: "Application web ou application installée ?", a: "Installée si le hors-ligne, les notifications fiables ou un capteur sont nécessaires. Web si l'équipe a du réseau et qu'un lien suffit à ouvrir l'outil." },
       { q: "Qui publie sur les stores ?", a: "Les comptes développeur sont au client. Byte Force peut préparer la fiche et la build. Le compte ne reste pas au nom du studio." },
       { q: "Combien de temps ?", a: "Plus long qu'une page web dès qu'il y a revue des stores et deux plateformes. On le chiffre après avoir choisi un seul geste principal." },
+      { q: "Peut-on le faire à Casablanca ?", a: "Oui. Le bureau est au Technopark. L'équipe casablancaise peut voir le parcours avant qu'il soit trop tard pour changer l'ordre des écrans. La page locale ne remplace pas celle-ci." },
     ],
     proof: [
       { href: "/realisations/zainek", title: "Zainek", note: "Application Android et site pour un rendez-vous beauté. Fiche Play mise à jour le 30 août 2026." },
       { href: "/realisations/tourispeak", title: "Tourispeak", note: "Application Android de visites audio, en plus du site. Montréal, 2024." },
     ],
     links: [
+      { href: "/geo-location/applications-mobiles/ma/casablanca", label: "Application mobile à Casablanca" },
+      { href: "/services/api-backend", label: "API" },
       { href: "/application-web-sur-mesure-maroc", label: "Rester dans le navigateur" },
       { href: "/services/design-graphique", label: "Design" },
       { href: "/realisations/tourispeak", label: "Tourispeak" },

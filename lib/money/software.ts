@@ -63,6 +63,8 @@ export const softwarePages: MoneyPage[] = [
       { q: "Travaillez-vous avec des entreprises en dehors de Casablanca ?", a: "Oui. Le bureau est au Technopark. Les projets se font aussi pour d'autres villes du Maroc, et pour des entreprises en France et au Canada, en visio. Il n'y a pas d'autre bureau." },
       { q: "Proposez-vous de la maintenance après la livraison ?", a: "Les défauts du périmètre convenu sont corrigés avec la livraison. Ensuite, un correctif devisé ou un suivi. La page maintenance décrit le suivi." },
       { q: "Combien de temps faut-il ?", a: "Un audit tient en quelques jours. Une première version tient souvent en plusieurs semaines. Le délai suit le nombre de rôles et de branchements, pas une promesse fixe." },
+      { q: "CRM, ERP ou application métier ?", a: "CRM pour la vente et les relances. ERP pour les achats, les stocks et la production. Application métier quand un seul geste ne rentre dans aucun des deux. On choisit après avoir vu le travail." },
+      { q: "Qu'est-ce qui fait le prix ?", a: "Les rôles, les écrans, les langues, la reprise des données et les API déjà en place. Aucun montant n'est affiché. Un échange de trente minutes est gratuit." },
     ],
     proof: [
       { href: "/realisations/dealkhir", title: "Dealkhir", note: "Plateforme pour les organisations et les dons, en ligne à Casablanca depuis 2024." },
@@ -70,6 +72,8 @@ export const softwarePages: MoneyPage[] = [
       { href: "/realisations/coco-inbox", title: "Coco Inbox", note: "Produit publié : email temporaire, fichiers chiffrés, notes. Montréal, 2024." },
     ],
     links: [
+      { href: "/crm-sur-mesure-maroc", label: "CRM sur mesure au Maroc" },
+      { href: "/developpement-logiciel-sur-mesure-maroc/crm/remplacer-excel", label: "Remplacer Excel par un CRM" },
       { href: "/solutions/remplacer-excel", label: "Remplacer Excel" },
       { href: "/solutions/remplacer-saas", label: "Remplacer un SaaS" },
       { href: "/developpement-logiciel-casablanca", label: "Depuis Casablanca" },

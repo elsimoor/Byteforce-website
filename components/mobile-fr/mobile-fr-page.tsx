@@ -105,7 +105,7 @@ export function MobileFrancePage({ faqs, offers, cities }: { faqs: Faq[]; offers
               <div className="fact" data-build="box" data-by="Analytique">
                 <span className="mono">Échange</span>
                 <h3>En euros</h3>
-                <p>Cadrage en français. Aucun prix n’est publié. Trente minutes pour commencer, réponse sous un jour ouvré, au +212 666 650 696.</p>
+                <p>Cadrage en français. Aucun prix n’est publié. Trente minutes pour commencer, réponse sous un jour ouvré, par le formulaire.</p>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export function MobileFrancePage({ faqs, offers, cities }: { faqs: Faq[]; offers
             <p className="label" data-build="box">Contact</p>
             <h2 data-build="text" data-by="Marketing">Décrire le projet.</h2>
             <p className="lede" data-build="text" style={{ marginTop: 18, fontSize: 15 }}>
-              Réponse sous un jour ouvré, à contact@byteforce.ma ou au +212 666 650 696. Le bureau reste à Casablanca.
+              Réponse sous un jour ouvré, à contact@byteforce.ma. Le bureau reste à Casablanca.
             </p>
             <div className="actions" data-build="box">
               <a className="btn" href={waHref} target="_blank" rel="noopener noreferrer">
