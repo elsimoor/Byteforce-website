@@ -1,0 +1,14 @@
+{
+  "timezone": "Africa/Casablanca",
+  "schedule": "19:00",
+  "rule": "One calendar date per run. If that date is already in completed, stop and wait for the next date. Do not catch up missed dates in the same run.",
+  "completed": {
+    "2026-11-19": {
+      "day": 1,
+      "focus": "Baseline & safeguards",
+      "finishedAt": "2026-11-18T19:10:00+01:00",
+      "report": "automated-90days/2026-11-19.md",
+      "note": "Done on the evening of 18 November, before the scheduled 19:00 run on 19 November."
+    }
+  }
+}
