@@ -131,7 +131,7 @@ export const placePages: MoneyPage[] = [
     group: "Lieu",
     crumb: "France",
     keyword: "développement logiciel France",
-    title: "Développement logiciel pour entreprises en France · Byte Force",
+    title: "Développement logiciel France · Byte Force",
     description:
       "Studio logiciel à Casablanca pour entreprises françaises. Même fuseau horaire, livrables en français. Paris, Lille, Nord, Roubaix.",
     h1: "Développement logiciel pour une entreprise en France",

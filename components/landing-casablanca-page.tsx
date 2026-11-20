@@ -47,7 +47,7 @@ export function LandingCasablancaPage() {
         items={[
           { name: "Accueil", path: "/" },
           { name: "Villes", path: "/villes" },
-          { name: "Casablanca", path: "/maroc/casablanca" },
+          { name: "Casablanca", path: "/villes/casablanca" },
           { name: "Logiciel Sur Mesure", path: "/developpement-logiciel-sur-mesure-casablanca" },
         ]}
       />
@@ -77,7 +77,7 @@ export function LandingCasablancaPage() {
               Accueil
             </Link>
             <span>/</span>
-            <Link href="/maroc/casablanca" className="transition-colors hover:text-white">
+            <Link href="/villes/casablanca" className="transition-colors hover:text-white">
               Casablanca
             </Link>
             <span>/</span>
@@ -795,7 +795,7 @@ export function LandingCasablancaPage() {
           <span className="font-mono text-xs font-bold uppercase text-slate-400">Pages & Villes Liées</span>
           <div className="mt-4 flex flex-wrap gap-3">
             {[
-              { href: "/maroc/casablanca", label: "Agence Digitale Casablanca" },
+              { href: "/villes/casablanca", label: "Agence Digitale Casablanca" },
               { href: "/crm/logiciel-crm-personnalise", label: "Logiciel CRM Sur Mesure" },
               { href: "/developpement-saas-maroc", label: "Développement SaaS Maroc" },
               { href: "/developpement-erp-maroc", label: "Développement ERP Maroc" },

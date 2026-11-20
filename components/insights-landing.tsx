@@ -76,6 +76,10 @@ export function InsightsLanding({
       {/* 1. CINEMATIC FEATURED HERO (Horizone style top banner) */}
       <section className="px-4 pt-6 md:px-8 md:pt-10 lg:px-12">
         <div className="mx-auto max-w-7xl">
+          <header className="pb-6">
+            <h1 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">Décider avant de construire</h1>
+            <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-600">Guides et ressources du studio, écrits à Casablanca.</p>
+          </header>
           <div className="relative min-h-[460px] overflow-hidden rounded-3xl bg-slate-950 p-8 shadow-2xl md:min-h-[520px] md:p-14 lg:p-16">
             {/* Background Image */}
             <Image
@@ -104,9 +108,9 @@ export function InsightsLanding({
 
               {/* Title & Excerpt */}
               <Link href={`/insights/${activeFeatured.slug}`} className="group mt-4 block max-w-3xl">
-                <h1 className="text-3xl font-extrabold tracking-tight text-white transition-colors duration-200 group-hover:text-blue-300 sm:text-4xl md:text-5xl lg:text-[3.2rem] lg:leading-[1.1]">
+                <h2 className="text-3xl font-extrabold tracking-tight text-white transition-colors duration-200 group-hover:text-blue-300 sm:text-4xl md:text-5xl lg:text-[3.2rem] lg:leading-[1.1]">
                   {activeFeatured.h1}
-                </h1>
+                </h2>
                 <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
                   {activeFeatured.description}
                 </p>

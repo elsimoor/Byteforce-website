@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   if (!slug?.length) {
-    const title = "Pages par lieu";
+    const title = "Développement logiciel par ville · Byte Force";
     const description =
       "Toutes les pages Byte Force par service, pays et ville. Le bureau est à Casablanca. Chaque recherche du fichier a son URL.";
     return {

@@ -216,6 +216,9 @@ export function Footer() {
             <Link href="/llms.txt" className="hover:text-on-surface">
               llms.txt
             </Link>
+            <Link href="/llms-full.txt" className="hover:text-on-surface">
+              llms-full.txt
+            </Link>
             <Link href="/conditions" className="hover:text-on-surface">
               Conditions
             </Link>

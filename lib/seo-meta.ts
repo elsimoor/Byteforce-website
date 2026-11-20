@@ -13,7 +13,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Développement de logiciel sur mesure au Maroc, depuis Casablanca : CRM, ERP et outil métier. Le code reste à vous. Devis sous 1 jour ouvré.",
   },
   "/crm-sur-mesure-maroc": {
-    title: "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",
+    title: "CRM sur mesure Maroc · Prix et démo · Byte Force",
     description:
       "CRM personnalisé pour entreprises au Maroc : pipeline, relances WhatsApp et devis en dirhams. 0 abonnement par utilisateur. Devis gratuit en 24h.",
   },
@@ -23,7 +23,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Un CRM personnalisé reprend les étapes, les droits et les relances de l'entreprise. Le cadre général est le CRM sur mesure au Maroc. Devis sous 24h.",
   },
   "/developpement-logiciel-sur-mesure-maroc/crm": {
-    title: "Logiciel CRM sur mesure au Maroc | BYTE FORCE",
+    title: "CRM sur mesure Maroc · Prix et démo · Byte Force",
     description:
       "Créez votre CRM personnalisé au Maroc : suivi commercial, devis et relances automatiques. Équipe basée à Casablanca. Devis gratuit sous 24h.",
   },
@@ -38,7 +38,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Un CRM conçu à 100% pour vos flux commerciaux au Maroc : rôles, alertes et tableaux de bord sur mesure. Code cédé. Devis gratuit en 24h garanti.",
   },
   "/developpement-erp-maroc": {
-    title: "Développement ERP Maroc : Logiciel ERP Sur Mesure pour PME",
+    title: "ERP sur mesure Maroc · Byte Force",
     description:
       "Développement d'ERP sur mesure au Maroc : gestion des stocks, achats, facturation DGI et production. Zéro abonnement par licence. Devis gratuit sous 24h.",
   },
@@ -73,22 +73,22 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Studio de développement logiciel au Technopark de Casablanca. CRM, ERP, SaaS et plateformes web sur mesure. Obtenez un devis gratuit en 24h.",
   },
   "/developpement-logiciel-sur-mesure-casablanca": {
-    title: "Développement Logiciel Sur Mesure Casablanca : Agence & Studio IT",
+    title: "Logiciel sur mesure Casablanca · Byte Force",
     description:
       "Agence de développement logiciel sur mesure à Casablanca (Technopark) : ERP, CRM, logiciels métier et remplacement Excel. Code cédé à 100%. Devis sous 24h.",
   },
   "/developpement-saas-maroc": {
-    title: "Développement SaaS Maroc : Création de Plateforme Logiciel Cloud",
+    title: "Développement SaaS au Maroc · Byte Force",
     description:
       "Développement SaaS au Maroc et MVP à Casablanca : architecture multi-tenant, gestion des abonnements CMI/Stripe et code 100% cédé. Devis sous 24h.",
   },
   "/developpement-application-mobile-maroc": {
-    title: "Application mobile Maroc : iOS & Android | BYTE FORCE",
+    title: "Application mobile au Maroc · Byte Force",
     description:
       "Développement d'applications mobiles iOS et Android au Maroc. Design UX soigné, publication stores et code cédé. Devis gratuit en 24h garanti.",
   },
   "/developpement-application-mobile-casablanca": {
-    title: "Développement Application Mobile Casablanca : iOS, Android & React Native",
+    title: "Application mobile Casablanca · Byte Force",
     description:
       "Agence de développement d'applications mobiles à Casablanca (Technopark) : iOS, Android et React Native. Applications métier & MVP. Devis gratuit sous 24h.",
   },
@@ -142,12 +142,12 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Développement d'extensions WordPress et passerelles CMI sur mesure au Maroc. Code propre, sécurisé et garanti. Obtenez un devis gratuit en 24h.",
   },
   "/agence-wordpress-maroc": {
-    title: "Agence WordPress Maroc & WooCommerce | BYTE FORCE",
+    title: "Agence WordPress Maroc · Byte Force",
     description:
       "Création et refonte de sites WordPress au Maroc. Vitesse < 1.5s, WooCommerce avec paiement CMI et SEO inclus. Obtenez un devis gratuit en 24h.",
   },
   "/integration-ia-automatisation-entreprise-maroc": {
-    title: "Intégration IA entreprise au Maroc | BYTE FORCE",
+    title: "IA et automatisation entreprise Maroc · Byte Force",
     description:
       "Automatisez vos processus d'entreprise avec l'IA au Maroc : traitement factures, WhatsApp IA et connecteurs ERP. Devis gratuit en 24h garanti.",
   },
@@ -192,7 +192,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Découvrez nos projets logiciels, applications et CRM déjà déployés au Maroc et à l'international. Code audité. Demandez votre devis en 24h.",
   },
   "/realisations/votre-projet": {
-    title: "Votre projet · Devis sous 24 h | BYTE FORCE",
+    title: "Votre projet · Réalisations · Byte Force",
     description:
       "Décrivez le besoin, le projet, puis le contact. Site web, application mobile, plateforme, application Windows ou logiciel. Devis sous 24 h depuis Casablanca.",
   },
@@ -364,7 +364,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Quel est le coût d'un logiciel sur mesure au Maroc ? Prix réels : module dès 25 000 MAD, CRM/ERP 45 000 à 95 000 MAD. Devis gratuit sous 24h.",
   },
   "/insights/combien-coute-un-logiciel-sur-mesure": {
-    title: "Coût Développement Logiciel Sur Mesure : Facteurs de Prix & Budget",
+    title: "Coût d'un logiciel sur mesure · Byte Force",
     description:
       "Combien coûte un logiciel sur mesure au Maroc ? Facteurs influençant le prix, scénarios de projets (dès 25 000 MAD) et guide pour préparer votre budget.",
   },
@@ -384,12 +384,12 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Comparatif logiciel sur mesure vs progiciel du marché : coût total de possession sur 3 ans, flexibilité et retour sur investissement.",
   },
   "/insights/logiciel-sur-mesure-ou-standard": {
-    title: "Logiciel Standard ou Sur Mesure au Maroc : Comparatif & Choix PME",
+    title: "Logiciel sur mesure ou standard · Byte Force",
     description:
       "Logiciel standard ou sur mesure au Maroc ? Tableau comparatif, analyse du coût total de possession (TCO) et critères pour faire le bon choix d'entreprise.",
   },
   "/insights/remplacer-excel-par-un-logiciel": {
-    title: "Remplacer Excel par un Logiciel Sur Mesure : Guide & Méthode PME",
+    title: "Remplacer Excel par un logiciel · Byte Force",
     description:
       "Pourquoi et comment remplacer Excel par un logiciel sur mesure au Maroc ? Multi-utilisateurs, droits d'accès, automatisation et plan de migration sans risque.",
   },
@@ -404,7 +404,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Les critères indispensables pour choisir votre studio de développement logiciel à Casablanca : références, propriété du code et contrat.",
   },
   "/insights/automatisation-ia-entreprise-maroc": {
-    title: "Automatisation IA en Entreprise au Maroc : Cas Pratiques & ROI",
+    title: "Automatisation IA entreprise Maroc · Byte Force",
     description:
       "Comment intégrer l'intelligence artificielle et l'automatisation des processus dans votre entreprise au Maroc ? Cas d'usage réels, OCR, WhatsApp et sécurité.",
   },
@@ -419,7 +419,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Salesforce ou CRM sur mesure pour une entreprise au Maroc ? Comparatif coût, adoption commerciale et conformité locale. Devis gratuit en 24h.",
   },
   "/insights/crm-sur-mesure-ou-crm-standard": {
-    title: "CRM Sur Mesure ou CRM Standard : Comparatif & Guide PME Maroc",
+    title: "CRM sur mesure ou standard · Byte Force",
     description:
       "CRM sur mesure ou CRM standard au Maroc ? Comparatif, limites de HubSpot/Salesforce, WhatsApp, devis en Dirhams et rentabilité pour vos équipes commerciales.",
   },
@@ -436,7 +436,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
   "/insights/prix-application-mobile-maroc": {
     title: "Prix application mobile Maroc : Tarifs 2026 | BYTE FORCE",
     description:
-      "Quel est le coût d'une application mobile au Maroc ? Prix réels en MAD : MVP dès 35 000 MAD, app complète 60 000 à 95 000 MAD. Devis en 24h.",
+      "Prix d'une application mobile au Maroc en 2026 : fourchettes en MAD par type d'app, du MVP à l'application complète.",
   },
   "/insights/prix-seo-maroc": {
     title: "Prix SEO Maroc : combien ça coûte ? | Byte Force",
@@ -483,7 +483,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Logiciel de gestion clients adapté au métier. Suivi, historique, relances et ce que l'équipe voit vraiment.",
   },
   "/insights/quand-utiliser-un-crm": {
-    title: "Quand utiliser un CRM · Byte Force",
+    title: "Quand un CRM devient utile à l'équipe · Byte Force",
     description: "Quand un CRM devient utile : relances oubliées, dossiers dispersés, un fichier que deux personnes écrasent.",
   },
   "/insights/comment-choisir-un-crm": {
@@ -491,7 +491,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Choisir un CRM par le cycle réel, pas par le nombre de modules. Marché ou sur mesure.",
   },
   "/insights/crm-pme-maroc": {
-    title: "CRM pour PME au Maroc · Byte Force",
+    title: "CRM pour une PME au Maroc · Byte Force",
     description: "CRM pour une PME au Maroc. Quelques étapes réelles, pas la suite d'un groupe.",
   },
   "/insights/crm-ou-excel": {
@@ -507,7 +507,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Créer un SaaS au Maroc : plusieurs clients, des données isolées, une première version qui s'utilise.",
   },
   "/insights/comment-creer-un-saas": {
-    title: "Comment créer un SaaS · Les étapes",
+    title: "Comment créer un SaaS au Maroc · Byte Force",
     description: "Créer un SaaS : nommer le geste, isoler les clients, livrer une version ouvrable.",
   },
   "/insights/developpement-saas-sur-mesure": {
@@ -546,7 +546,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
   "/insights/cout-application-mobile": {
     title: "Combien coûte une application mobile Maroc | BYTE FORCE",
     description:
-      "Quel est le coût d'une application mobile au Maroc ? Prix réels en MAD : MVP dès 35 000 MAD, app complète 60 000 à 95 000 MAD. Devis en 24h.",
+      "Les facteurs qui déterminent le coût d'une application mobile : complexité, design, plateformes, intégrations et maintenance.",
   },
   "/insights/creer-une-application-pour-son-entreprise": {
     title: "Créer une application pour son entreprise · Guide",
@@ -617,7 +617,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Firebase si l'authentification est déjà en place. Sinon, on part des rôles.",
   },
   "/insights/expo-pour-le-telephone": {
-    title: "Expo pour le téléphone · Byte Force",
+    title: "Expo pour publier sur téléphone · Byte Force",
     description: "Expo pour publier sur le téléphone quand le geste est le même sur iOS et Android.",
   },
   "/insights/wordpress-quand-le-site-existe": {
@@ -681,7 +681,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "L'intelligence artificielle dans une entreprise au Maroc commence par une règle, pas par un modèle.",
   },
   "/insights/contrat-avant-le-code": {
-    title: "Le contrat avant le code · Byte Force",
+    title: "Contrat avant le code d'un logiciel · Byte Force",
     description: "Le contrat avant le code : propriété, paiement, périmètre, et ce qui est remis.",
   },
   "/insights/premiere-version-utile": {
@@ -709,7 +709,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
     description: "Quatre lectures de la page d'accueil : clarté, confiance, action, performance.",
   },
   "/outils": {
-    title: "ByteForce Free Tools : Outils Gratuits pour Développeurs & Entreprises",
+    title: "Outils gratuits pour développeurs · Byte Force",
     description: "Découvrez nos outils gratuits ByteForce : convertisseur Claude Artifact vers Markdown (.md), audit technique SEO instantané et suivi de projet en temps réel.",
   },
   "/villes": {
@@ -718,7 +718,7 @@ export const seoMeta: Record<string, { title: string; description: string }> = {
       "Le seul bureau est à Casablanca, au Technopark. Les autres pages disent où une entreprise peut chercher un studio, au Maroc, en France et à Montréal. Pas d'autre agence.",
   },
   "/outils/claude-artifact-to-markdown": {
-    title: "Convertisseur Claude Artifact vers Markdown (.md) Gratuit | ByteForce",
+    title: "Convertisseur Claude Artifact → Markdown · Byte Force",
     description: "Convertissez et téléchargez gratuitement vos artefacts Claude AI en fichiers Markdown (.md) propres. Import par URL ou copier-coller 100% privé sans compte.",
   },
 };

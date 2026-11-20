@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
+const title = "Agence WordPress Maroc · Byte Force";
+const description =
+  "Agence WordPress au Maroc : sites vitrines, e-commerce WooCommerce et plugins sur mesure. Chargement en < 1.5s, SEO inclus. Devis gratuit sous 24h.";
+
 export const metadata: Metadata = {
-  title: "Agence WordPress Maroc : Sites Pro Rapides (<1.5s) & WooCommerce",
-  description:
-    "Agence WordPress au Maroc : sites vitrines, e-commerce WooCommerce et plugins sur mesure. Chargement en < 1.5s, SEO inclus. Devis gratuit sous 24h.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/agence-wordpress-maroc" },
-  openGraph: openGraph(
-    "/agence-wordpress-maroc",
-    "Agence WordPress Maroc : Sites Pro Rapides (<1.5s) & WooCommerce",
-    "Agence WordPress au Maroc : sites vitrines, e-commerce WooCommerce et plugins sur mesure. Chargement en < 1.5s, SEO inclus. Devis gratuit sous 24h."
-  ),
+  openGraph: openGraph("/agence-wordpress-maroc", title, description),
 };
 
 export default function AgenceWordpressMarocPage() {

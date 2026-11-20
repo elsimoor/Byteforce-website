@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
+const crmTitle = "CRM sur mesure Maroc · Prix et démo · Byte Force";
+const crmDescription =
+  "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis gratuit sous 24h.";
+const crmCanonical = "/developpement-logiciel-sur-mesure-maroc/crm";
+
 export const metadata: Metadata = {
-  title: "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",
-  description:
-    "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis gratuit sous 24h.",
-  alternates: { canonical: "/crm-sur-mesure-maroc" },
-  openGraph: openGraph(
-    "/crm-sur-mesure-maroc",
-    "CRM Sur Mesure Maroc : Prix, Démo & 0 Licence par Utilisateur",
-    "CRM sur mesure au Maroc pour PME : suivi commercial, devis, relances et WhatsApp. 0 abonnement par utilisateur, code 100% à vous. Devis gratuit sous 24h."
-  ),
+  title: { absolute: crmTitle },
+  description: crmDescription,
+  alternates: { canonical: crmCanonical },
+  openGraph: openGraph(crmCanonical, crmTitle, crmDescription),
 };
 
 export default function CrmSurMesureMarocPage() {
   return (
     <main data-landing className="w-full">
       <SeoLandingView
-        path="/crm-sur-mesure-maroc"
+        path="/developpement-logiciel-sur-mesure-maroc/crm"
         badge="CRM & Gestion Commerciale"
         h1="CRM sur mesure au Maroc : logiciel commercial personnalisé"
         directAnswerSnippet="Un CRM sur mesure au Maroc coûte généralement entre 30 000 MAD et 80 000 MAD en investissement fixe, sans aucun abonnement par utilisateur. Conçu pour le cycle de vente marocain, il centralise vos prospects, automatise la génération de devis en dirhams, planifie les relances et intègre les alertes WhatsApp pour décupler les conversions de vos commerciaux."

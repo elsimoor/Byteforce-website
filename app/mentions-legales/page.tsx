@@ -3,12 +3,12 @@ import { openGraph } from "@/lib/open-graph";
 import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
-const title = "Mentions légales";
+const title = "Mentions légales du site · Byte Force";
 const description =
   "Éditeur, contact et hébergement du site Byte Force. Le bureau est à Casablanca, au Technopark, boulevard Dammam, Aïn Chock.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/mentions-legales" },
   openGraph: openGraph("/mentions-legales", title, description),

@@ -15,6 +15,8 @@ export function GET(request: Request) {
     `${site.name} est un studio logiciel à ${site.city}, ${site.countryLabel}.`,
     "Il conçoit des logiciels, des applications et des sites qu'un humain et une machine peuvent trouver, comprendre, et utiliser pour écrire.",
     "",
+    `Version complète : [llms-full.txt](${origin}/llms-full.txt).`,
+    "",
     "## Ce que nous faisons",
     ...services.map((service) => `- ${service.title} : ${service.summary}`),
     "",

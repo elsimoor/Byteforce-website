@@ -53,7 +53,7 @@ export function LandingMobilePage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Accueil", path: "/" },
-          { name: "Casablanca", path: "/maroc/casablanca" },
+          { name: "Casablanca", path: "/villes/casablanca" },
           { name: "Application Mobile", path: "/developpement-application-mobile-casablanca" },
         ]}
       />
@@ -83,7 +83,7 @@ export function LandingMobilePage() {
               Accueil
             </Link>
             <span>/</span>
-            <Link href="/maroc/casablanca" className="transition-colors hover:text-white">
+            <Link href="/villes/casablanca" className="transition-colors hover:text-white">
               Casablanca
             </Link>
             <span>/</span>
@@ -816,7 +816,7 @@ export function LandingMobilePage() {
           <span className="font-mono text-xs font-bold uppercase text-slate-400">Pages Liées</span>
           <div className="mt-4 flex flex-wrap gap-3">
             {[
-              { href: "/maroc/casablanca", label: "Agence Digitale Casablanca" },
+              { href: "/villes/casablanca", label: "Agence Digitale Casablanca" },
               { href: "/developpement-application-mobile-maroc", label: "Application Mobile Maroc" },
               { href: "/crm/logiciel-crm-personnalise", label: "Logiciel CRM Sur Mesure" },
               { href: "/developpement-saas-maroc", label: "Développement SaaS Maroc" },

@@ -5,6 +5,23 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { articlesIn, getInsightCategory, insightCategories } from "@/lib/insight-categories";
 import { openGraph } from "@/lib/open-graph";
 
+function Rich({ text }: { text: string }) {
+  const bits = text.split(/(\[\[[^\]]+\]\])/g);
+  return (
+    <>
+      {bits.map((bit, index) => {
+        const match = /^\[\[([^|\]]+)\|([^\]]+)\]\]$/.exec(bit);
+        if (!match) return <span key={index}>{bit}</span>;
+        return (
+          <Link key={index} href={match[1]} className="border-b border-ink">
+            {match[2]}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
+
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
@@ -48,6 +65,11 @@ export default async function InsightCategoryPage({ params }: Props) {
         </nav>
         <h1 className="display mt-6 max-w-[16ch] text-[clamp(2.6rem,6vw,5rem)]">{category.h1}</h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed">{category.lede}</p>
+        {category.notes?.map((note) => (
+          <p key={note.slice(0, 40)} className="mt-6 max-w-2xl text-lg leading-relaxed">
+            <Rich text={note} />
+          </p>
+        ))}
         <p className="mt-6">
           <Link href={category.offer.href} className="border-b border-ink">
             {category.offer.label}

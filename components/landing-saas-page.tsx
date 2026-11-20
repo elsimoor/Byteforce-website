@@ -901,7 +901,7 @@ CREATE POLICY tenant_isolation_policy ON organizations
               { href: "/developpement-erp-maroc", label: "Développement ERP Maroc" },
               { href: "/insights/comment-creer-un-saas-au-maroc", label: "Guide : Créer un SaaS au Maroc" },
               { href: "/insights/combien-coute-un-logiciel-sur-mesure", label: "Prix d'un logiciel sur mesure" },
-              { href: "/maroc/casablanca", label: "Développeur Logiciel Casablanca" },
+              { href: "/villes/casablanca", label: "Développeur Logiciel Casablanca" },
             ].map((link) => (
               <Link
                 key={link.href}

@@ -133,7 +133,7 @@ export function OuEnEst() {
       <div className="mx-auto max-w-3xl px-6 py-12 md:px-12 md:py-16">
         {step === 1 ? (
           <>
-            <h1 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">Où en est le travail.</h1>
+            <h2 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">Où en est le travail.</h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed">
               Cinq écrans. Les réponses restent sur cet appareil. À la fin, la liste dit ce qu&apos;il reste, et le message de contact est déjà écrit.
             </p>
@@ -174,7 +174,7 @@ export function OuEnEst() {
 
         {step === 2 ? (
           <>
-            <h1 className="display max-w-[16ch] text-[clamp(2.6rem,6vw,4.6rem)]">Ce qui tient déjà.</h1>
+            <h2 className="display max-w-[16ch] text-[clamp(2.6rem,6vw,4.6rem)]">Ce qui tient déjà.</h2>
             <fieldset className="mt-12 max-w-xl">
               <legend className="font-headline text-2xl font-bold tracking-tight">Quels points sont déjà vrais ?</legend>
               <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-outline uppercase">Plusieurs choix</p>
@@ -214,7 +214,7 @@ export function OuEnEst() {
 
         {step === 3 ? (
           <>
-            <h1 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">Ce qui doit avancer.</h1>
+            <h2 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">Ce qui doit avancer.</h2>
             <fieldset className="mt-12 max-w-xl">
               <legend className="font-headline text-2xl font-bold tracking-tight">Quelle est la suite ?</legend>
               <p className="mt-2 font-mono text-[11px] tracking-[0.14em] text-outline uppercase">Un seul choix</p>
@@ -267,7 +267,7 @@ export function OuEnEst() {
 
         {step === 4 ? (
           <>
-            <h1 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">La tâche, en une phrase.</h1>
+            <h2 className="display max-w-[14ch] text-[clamp(2.6rem,6vw,4.6rem)]">La tâche, en une phrase.</h2>
             <label className="mt-12 block max-w-xl">
               <span className="font-headline text-2xl font-bold tracking-tight">Qu&apos;est-ce qui doit changer ?</span>
               <textarea
@@ -299,7 +299,7 @@ export function OuEnEst() {
         {step === 5 ? (
           <>
             <p className="font-mono text-[11px] font-bold tracking-[0.16em] text-primary uppercase">Où vous en êtes</p>
-            <h1 className="display mt-3 max-w-[12ch] text-[clamp(2.6rem,6vw,4.6rem)]">Ce qu&apos;il reste.</h1>
+            <h2 className="display mt-3 max-w-[12ch] text-[clamp(2.6rem,6vw,4.6rem)]">Ce qu&apos;il reste.</h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed">{placeSentence(answers)}</p>
             <p className="mt-4 max-w-xl leading-relaxed">
               {openCount === 0

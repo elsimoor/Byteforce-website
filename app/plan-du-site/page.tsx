@@ -4,7 +4,7 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { publicEntries } from "@/lib/public-urls";
 import { openGraph } from "@/lib/open-graph";
 
-const title = "Plan du site · Byte Force";
+const title = "Plan du site · toutes les pages · Byte Force";
 const description =
   "Liste des pages Byte Force : services, solutions, réalisations, villes et insights. Le bureau est à Casablanca.";
 

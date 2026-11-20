@@ -66,12 +66,43 @@ function localProof(target: Target, placeLabel: string): GeoProof[] {
   return [...fromCatalogue, ...extra.map(({ href, title, note }) => ({ href, title, note }))];
 }
 
+const shortGeoTitle: Record<string, (prep: string) => string> = {
+  erp: (prep) => `ERP sur mesure ${prep} · Byte Force`,
+  crm: (prep) => `CRM sur mesure ${prep} · Byte Force`,
+  saas: (prep) => `Développement SaaS ${prep} · Byte Force`,
+  seo: (prep) => `Référencement SEO ${prep} · Byte Force`,
+  "design-ui-ux": (prep) => `Design UI/UX ${prep} · Byte Force`,
+  "hebergement-cloud": (prep) => `Hébergement cloud ${prep} · Byte Force`,
+  "audit-technique": (prep) => `Audit technique ${prep} · Byte Force`,
+  "integration-api": (prep) => `Intégration API ${prep} · Byte Force`,
+  "remplacement-excel": (prep) => `Remplacement Excel ${prep} · Byte Force`,
+  "automatisation-des-processus": (prep) => `Automatisation ${prep} · Byte Force`,
+  "refonte-d-applications": (prep) => `Refonte d'applications ${prep} · Byte Force`,
+  "maintenance-de-site-web": (prep) => `Maintenance web ${prep} · Byte Force`,
+  "developpement-wordpress": (prep) => `Développement WordPress ${prep} · Byte Force`,
+  "sites-web-et-applications-web": (prep) => `Sites web et applications ${prep} · Byte Force`,
+  "applications-mobiles": (prep) => `Applications mobiles ${prep} · Byte Force`,
+  "developpement-logiciel-sur-mesure": (prep) => `Logiciel sur mesure ${prep} · Byte Force`,
+};
+
+function geoTitle(slug: string, prep: string, keyword: string) {
+  const current = `${keyword} | Byte Force`;
+  if (current.length >= 30) return current;
+  const next = shortGeoTitle[slug]?.(prep);
+  if (!next || next.length >= 60) return current;
+  return next;
+}
+
 function build(target: Target): GeoPage {
   const place = placeFor(target);
   const path = pathFor(target);
-  const h1 = `${target.service.name} ${place.prep}`;
-  const title = `${h1} | Byte Force`;
-  const description = `${h1}. Byte Force en parle depuis Casablanca. Le devis se discute en ${target.country.currencyLabel}, après le périmètre. Réponse sous un jour ouvré.`;
+  const keyword = `${target.service.name} ${place.prep}`;
+  const h1 =
+    target.service.slug === "developpement-logiciel-sur-mesure" && !target.city && target.country.code === "ma"
+      ? "Développement logiciel sur mesure : nos villes au Maroc"
+      : keyword;
+  const title = geoTitle(target.service.slug, place.prep, keyword);
+  const description = `${keyword}. Byte Force en parle depuis Casablanca. Le devis se discute en ${target.country.currencyLabel}, après le périmètre. Réponse sous un jour ouvré.`;
   const proof = localProof(target, place.label);
   const siblings = target.country.cities
     .filter((city) => city.slug !== target.city?.slug)
@@ -137,7 +168,7 @@ function build(target: Target): GeoPage {
       a: range,
     },
     {
-      q: `Que comprend ${h1} ?`,
+      q: `Que comprend ${keyword} ?`,
       a: target.service.includes.slice(0, 3).join(" "),
     },
     {
@@ -156,7 +187,7 @@ function build(target: Target): GeoPage {
 
   return {
     path,
-    keyword: h1,
+    keyword,
     title,
     description,
     h1,

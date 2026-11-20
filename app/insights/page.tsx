@@ -7,16 +7,15 @@ import { openGraph } from "@/lib/open-graph";
 import { InsightsLanding } from "@/components/insights-landing";
 import { SiteIndex } from "@/components/site-index";
 
+const title = "Insights · Guides logiciel sur mesure · Byte Force";
+const description =
+  "Analyses franches, retours d'expérience et guides d'architecture logicielle par Byte Force à Casablanca : remplacer Excel, quitter un SaaS, automatiser ou moderniser.";
+
 export const metadata: Metadata = {
-  title: "Décider avant de construire · Insights & Ingénierie",
-  description:
-    "Analyses franches, retours d'expérience et guides d'architecture logicielle par Byte Force à Casablanca : remplacer Excel, quitter un SaaS, automatiser ou moderniser.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/insights" },
-  openGraph: openGraph(
-    "/insights",
-    "Décider avant de construire · Insights & Ingénierie",
-    "Analyses franches, retours d'expérience et guides d'architecture logicielle par Byte Force à Casablanca : remplacer Excel, quitter un SaaS, automatiser ou moderniser.",
-  ),
+  openGraph: openGraph("/insights", title, description),
 };
 
 export default function InsightsPage() {

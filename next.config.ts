@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/maroc/casablanca",
+        destination: "/villes/casablanca",
+        permanent: true,
+      },
+      {
         source: "/services/logiciel-sur-mesure",
         destination: "/developpement-logiciel-sur-mesure-maroc",
         permanent: true,

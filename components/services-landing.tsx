@@ -427,7 +427,7 @@ export function ServicesLanding({
               </p>
               <div className="mt-6 border-t border-slate-100 pt-4">
                 <Link
-                  href="/services/logiciel-sur-mesure"
+                  href="/developpement-logiciel-sur-mesure-maroc"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
                 >
                   <span>Nos logiciels</span>

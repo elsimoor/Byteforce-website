@@ -3,7 +3,7 @@ import { EmailText } from "@/components/mail-link";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Confidentialité",
+  title: { absolute: "Politique de confidentialité · Byte Force" },
   description: "Comment Byte Force traite les messages envoyés par le formulaire de contact.",
   alternates: { canonical: "/confidentialite" },
 };

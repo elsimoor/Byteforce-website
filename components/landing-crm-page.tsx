@@ -967,7 +967,7 @@ export function LandingCrmPage() {
               { href: "/solutions/remplacer-excel", label: "Remplacer Excel en Entreprise" },
               { href: "/insights/crm-sur-mesure-ou-crm-standard", label: "CRM Sur Mesure vs CRM Standard" },
               { href: "/insights/combien-coute-un-logiciel-sur-mesure", label: "Prix d'un logiciel sur mesure" },
-              { href: "/maroc/casablanca", label: "Agence Logiciel Casablanca" },
+              { href: "/villes/casablanca", label: "Agence Logiciel Casablanca" },
             ].map((link) => (
               <Link
                 key={link.href}

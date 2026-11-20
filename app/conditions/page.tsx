@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { EmailText } from "@/components/mail-link";
 
 export const metadata: Metadata = {
-  title: "Conditions",
+  title: { absolute: "Conditions générales · Byte Force" },
   description: "Comment une mission Byte Force commence, comment le périmètre change, et à qui appartient le code.",
   alternates: { canonical: "/conditions" },
 };

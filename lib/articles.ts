@@ -315,7 +315,7 @@ export const articles: Article[] = [
       {
         heading: "Ce qu'une personne voit, et ce qu'une machine peut citer",
         paragraphs: [
-          "Une page peut être claire pour quelqu'un qui la lit, et rester opaque pour un outil qui doit répondre : que fait cette entreprise, où est-elle, comment lui écrire. Autoriser un robot ne veut pas dire qu'il recommandera le site. Un fichier llms.txt n'est pas non plus un facteur de classement.",
+          "Une page peut être claire pour quelqu'un qui la lit, et rester opaque pour un outil qui doit répondre : que fait cette entreprise, où est-elle, comment lui écrire. Autoriser un robot ne veut pas dire qu'il recommandera le site. Un fichier llms.txt n'est pas non plus un facteur de classement. La fiche courte est [[/llms.txt|llms.txt]]. La version longue, avec les offres, les travaux et les décisions, est [[/llms-full.txt|llms-full.txt]].",
           "Le passage utile tient en cinq questions. Est-ce qu'on peut découvrir la page. Est-ce qu'on peut identifier l'entreprise. Est-ce qu'on peut répondre sans deviner. Est-ce qu'on a un fait pour la recommander, sans inventer d'avis. Est-ce qu'on peut agir : formulaire, téléphone, email.",
         ],
       },
@@ -353,7 +353,7 @@ export const articles: Article[] = [
         {
           heading: "What a person sees, and what a machine can cite",
           paragraphs: [
-            "A page can be clear to someone reading it and still be opaque to a tool that must answer what the company does, where it is, and how to write. Allowing a bot does not mean it will recommend the site. An llms.txt file is not a Google ranking factor either.",
+            "A page can be clear to someone reading it and still be opaque to a tool that must answer what the company does, where it is, and how to write. Allowing a bot does not mean it will recommend the site. An llms.txt file is not a Google ranking factor either. The short fiche is [[/llms.txt|llms.txt]]. The long version, with the offers, the work and the decisions, is [[/llms-full.txt|llms-full.txt]].",
             "The useful pass is five questions. Can the page be discovered. Can the company be identified. Can the questions be answered without guessing. Is there a real fact to recommend it, with no invented review. Can someone act: a form, a phone number, an email.",
           ],
         },

@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import { SeoLandingView } from "@/components/seo-landing-view";
 import { openGraph } from "@/lib/open-graph";
 
+const title = "Application mobile au Maroc · Byte Force";
+const description =
+  "Création d'applications mobiles sur mesure au Maroc (iOS & Android). Design UX moderne, publication sur les stores et code source cédé. Devis sous 24h.";
+
 export const metadata: Metadata = {
-  title: "Développement Application Mobile Maroc : iOS, Android & Devis 24h",
-  description:
-    "Création d'applications mobiles sur mesure au Maroc (iOS & Android). Design UX moderne, publication sur les stores et code source cédé. Devis sous 24h.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/developpement-application-mobile-maroc" },
-  openGraph: openGraph(
-    "/developpement-application-mobile-maroc",
-    "Développement Application Mobile Maroc : iOS, Android & Devis 24h",
-    "Création d'applications mobiles sur mesure au Maroc (iOS & Android). Design UX moderne, publication sur les stores et code source cédé. Devis sous 24h."
-  ),
+  openGraph: openGraph("/developpement-application-mobile-maroc", title, description),
 };
 
 export default function DeveloppementApplicationMobileMarocPage() {
