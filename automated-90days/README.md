@@ -5,5 +5,6 @@ Morocco time. One row of `calendar.csv` per date. If that date is already listed
 | Date | Day | Focus | Report |
 | --- | --- | --- | --- |
 | 2026-11-19 | 1 | Baseline and safeguards | [2026-11-19.md](2026-11-19.md) |
+| 2026-11-20 | 2 | URL inventory | [2026-11-20.md](2026-11-20.md) |
 
-The 19 November task was finished on the evening of 18 November. The 19:00 run on 19 November should skip it.
+19 November was finished on the evening of 18 November. 20 November is the URL inventory. The next open date is 21 November.

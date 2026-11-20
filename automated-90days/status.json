@@ -9,6 +9,12 @@
       "finishedAt": "2026-11-18T19:10:00+01:00",
       "report": "automated-90days/2026-11-19.md",
       "note": "Done on the evening of 18 November, before the scheduled 19:00 run on 19 November."
+    },
+    "2026-11-20": {
+      "day": 2,
+      "focus": "URL inventory",
+      "finishedAt": "2026-11-20T19:54:00+01:00",
+      "report": "automated-90days/2026-11-20.md"
     }
   }
 }
